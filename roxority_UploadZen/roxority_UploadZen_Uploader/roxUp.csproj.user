@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>C:\Users\roxor\Documents\Visual Studio 2010\Projects\roxority_UploadZen\roxority_UploadZen\12\Template\layouts\roxority_UploadZen\help\app\</PublishUrlHistory>
+    <InstallUrlHistory>http://roxwinvm/_layouts/roxority_UploadZen/help/app/</InstallUrlHistory>
+    <SupportUrlHistory>http://roxority.com/uploadzen-support/</SupportUrlHistory>
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

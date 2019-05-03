@@ -1,0 +1,164 @@
+﻿<h3>
+	Über URL-Einstellungsparameter</h3>
+<p>
+	(Falls Sie Informationen über URL-basierte Filterung benötigen, wechseln Sie zu
+	<a href="?doc=url_query_string_filters">Seitenaufruffilter</a>.)
+</p>
+<p>
+	Wenn das <i>Webpart- und Filtereinstellungen durch URL-Parameter überschreiben</i>-Kontrollfeld
+	aktiviert ist, wird jede Webpart- oder Filtereinstellung durch den entsprechenden
+	URL-Abfragezeichenfolge-Parameterwert überschrieben, wenn in der URL des Webpartseitenaufrufs
+	vorhanden. Die gültigen Parameternamen und -werte lauten wie folgt.</p>
+<div class="rox-info">
+	<b>Hinweis:</b> die URL-Überschreibung einer <i>Webparteinstellung</i> betrifft
+	<i>alle</i> <b>FilterZen</b> Filter-Webparts auf der aktuellen Webpartseite, deren
+	<i>Webpart- und Filtereinstellungen durch URL-Parameter überschreiben</i>-Einstellung
+	aktiviert wurde. die URL-Überschreibung einer <i>Filtereinstellung</i> betrifft
+	<i>alle</i> dynamisch generierten und manuell angelegten Filter in <i>allen</i>
+	<b>FilterZen</b> Filter-Webparts auf der aktuellen Webpartseite, deren <i>Webpart- und
+		Filtereinstellungen durch URL-Parameter überschreiben</i>-Einstellung aktiviert
+	wurde.</div>
+<h3>
+	Überschreibbare Webparteinstellungen</h3>
+<ul>
+	<li><b>filter_ApplyToolbarStylings</b> — überschreibt die <a href="?doc=advanced#s2">
+		SharePoint-Toolbar-Stylings anwenden</a>-Einstellung. &#39;1&#39; aktiviert die
+		Einstellung, &#39;0&#39; deaktiviert sie.</li>
+	<li><b>filter_AutoRepost</b> — überschreibt die <a href="?doc=advanced#s2">Bei Benutzereingabe
+		die Seite zur Neufilterung sofort neu laden</a>-Einstellung. &#39;1&#39; aktiviert
+		die Einstellung, &#39;0&#39; deaktiviert sie.</li>
+	<li><b>filter_DebugMode</b> — überschreibt die <a href="?doc=advanced#s4">Diagnosemodus</a>-Einstellung.
+		&#39;1&#39; entspricht <i>Aktuell gesendete Filterwerte immer anzeigen</i>, &#39;0&#39;
+		entspricht <i>Diese nur im Webpart-Bearbeitungsmodus anzeigen</i>.</li>
+	<li><b>filter_DynamicInteractiveFilters</b> — überschreibt die <a href="?doc=advanced#s3">
+		dynamische Generierung temporärer interaktiver Filter</a>. &#39;0&#39; <i>
+		deaktiviert</i> die Einstellung, &#39;1&#39; entspricht <i>voranstellen</i> und &#39;2&#39; entspricht
+		<i>hintanstellen</i>.</li>
+	<li><b>filter_HtmlMode</b> — überschreibt die <i>Benutzersteuerelement zur manuellen Neufilterung anzuzeigen</i>-Einstellung. 
+		&#39;0&#39; <i>
+		deaktiviert</i> die Einstellung, &#39;1&#39; entspricht <i>voranstellen</i> und &#39;2&#39; entspricht
+		<i>hintanstellen</i>.</li>
+	<li><b>filter_RememberFilterValues</b> — überschreibt die <a href="?doc=advanced#s2">
+		Remember filter values last used for each user</a> setting. &#39;1&#39; aktiviert
+		die Einstellung, &#39;0&#39; deaktiviert sie.</li>
+	<li><b>filter_SuppressUnknownFilters</b> — überschreibt die <a href="?doc=advanced#s0">
+		Suppress (never send) &#39;unknown&#39; filter names</a> setting. &#39;1&#39; aktiviert
+		die Einstellung, &#39;0&#39; deaktiviert sie.</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: alle Filtertypen</h3>
+<ul>
+	<li><b>filter_FallbackValue</b> &mdash; overrides the <i>If empty, always fall back
+		to this filter value</i> setting (use any text value).</li>
+	<li><b>filter_SendEmpty</b> &mdash; overrides the <i>Send filter value even if empty</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_SuppressMode</b> — overrides the <i>Always suppress certain filter values</i>
+		setting.<br />
+		(Use &#39;0&#39; for <i>Don&#39;t suppress any filter values</i>,<br />
+		&#39;1&#39; for <i>Suppress (send Empty) no filter values except...</i>,<br />
+		&#39;2&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>,<br />
+		&#39;3&#39; for <i>Suppress (send Empty) all filter values except...</i><br />
+		or &#39;4&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>)</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Auswahl-, Datums-, Listen-Lookup-, Text- und
+	Benutzerfilter</h3>
+<ul>
+	<li><b>filter_DefaultIfEmpty</b> &mdash; overrides the <i>Use default value if user
+		input empty</i> or the <i>Allow picking the empty filter value</i> setting, depending
+		on filter type (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_IsInteractive</b> &mdash; overrides the <i>Allow users to enter / pick
+		a filter value</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_Label</b> &mdash; overrides the <i>filter caption label</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Auswahl, Listen-Lookup- und Benutzerfilter</h3>
+<ul>
+	<li><b>filter_PostFilter</b> &mdash; overrides the <i>Pre-filtering &mdash; only offer
+		pickable choices that also exist in a List column</i> setting (use &#39;1&#39; or
+		&#39;0&#39;).</li>
+	<li><b>filter_PostFilterFieldName</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		List View URL</i> setting (use any text value).</li>
+	<li><b>filter_PostFilterListViewUrl</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		Column name</i> setting (use any text value).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Auswahlfilter</h3>
+<ul>
+	<li><b>filter_DefaultChoiceIndex</b> &mdash; overrides the <i>default filter value</i>
+		setting (use -1 for <i>Empty</i>, or the 0-based index of the value in the <i>valid
+			choices</i> setting).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Datumsfilter</h3>
+<ul>
+	<li><b>filter_AbsoluteDefaultValue</b> &mdash; overrides the <i>default date filter
+		value</i> setting (use 3155378975999999999 for <i>Today</i>, 0 for <i>Empty</i>,
+		or any other long integer number representing the Ticks of the desired date value).</li>
+	<li><b>filter_RelativeOffset</b> — overrides the <i>add days</i> setting.</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Listen-Lookupfilter</h3>
+<ul>
+	<li><b>filter_ListUrl</b> &mdash; overrides the <i>View URL of the lookup List</i> setting
+		(use any text value).</li>
+	<li><b>filter_RemoveDuplicateTitles</b> &mdash; overrides the <i>Remove display duplicates</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_RemoveDuplicateValues</b> &mdash; overrides the <i>Remove duplicate values</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Listen-Lookup- und Benutzerfilter</h3>
+<ul>
+	<li><b>filter_DisplayFieldName</b> &mdash; overrides the <i>display Column</i> setting
+		(use any text value).</li>
+	<li><b>filter_FilterCaml</b> &mdash; overrides the <i>optional custom CAML query</i>
+		setting (use any text value).</li>
+	<li><b>filter_ItemID</b> &mdash; overrides the <i>default filter value</i> setting (use
+		0 for <i>Empty</i>, -1 for <i>the current user or Empty</i>, -2 for <i>the first item
+			after pre-filtering and sorting</i>, -3 for <i>the last item after pre-filtering and
+				sorting</i> or an integer number value representing the desired List item
+		ID).</li>
+	<li><b>filter_ItemSorting</b> — overrides the <i>sorting of available choices</i> setting
+		(use:<br />
+		0 = as specified by List View or CAML,<br />
+		1 = by display column, ascending,<br />
+		2 = by display column, descending,<br />
+		3 = by display frequency, ascending,<br />
+		4 = by display frequency, descending,<br />
+		5 = by value column, ascending,<br />
+		6 = by value column, descending,<br />
+		7 = by value frequency, ascending,<br />
+		8 = by value frequency, descending).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Listen-Lookup, Seitenspalten- und Benutzerfilter</h3>
+<ul>
+	<li><b>filter_StripID</b> &mdash; overrides the <i>Strip internal ID;# prefixes from
+		filter values</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ValueFieldName</b> &mdash; overrides the <i>value Column</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Seitenaufruffilter</h3>
+<ul>
+	<li><b>filter_CatchAll</b> &mdash; overrides the <i>Advanced catch-all</i> setting (use
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ParameterName</b> &mdash; overrides the <i>request (form or URL) parameter
+		name</i> setting (use any text value).</li>
+	<li><b>filter_RequestMode</b> &mdash; overrides the <i>Look for the specified parameter
+		in</i> setting (use &#39;0&#39; for <i>URL query string</i>, &#39;1&#39; for <i>Posted
+			form data</i>, &#39;2&#39; for <i>Both, plus cookies and server variables</i>,
+		or 3 for <i>URL path fragment</i>).</li>
+	<li><b>filter_SendNull</b> &mdash; overrides the <i>Use the Empty filter value if missing</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_SubParameterName</b> &mdash; overrides the <i>sub-parameter name</i> setting
+		(use any text value).</li>
+</ul>
+<h3>
+	Überschreibbare Filtereinstellungen: Textfilter</h3>
+<ul>
+	<li><b>filter_DefaultValue</b> &mdash; overrides the <i>default filter value</i> setting
+		(use any text value).</li>
+</ul>

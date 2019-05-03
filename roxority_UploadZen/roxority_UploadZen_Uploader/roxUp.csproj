@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7B43789-4915-4CC4-802A-3DC675893589}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxUp</RootNamespace>
+    <AssemblyName>roxUp</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <DelaySign>false</DelaySign>
+    <ExcludedPermissions>
+    </ExcludedPermissions>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>roxicon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>C:\Users\roxor\Documents\Visual Studio 2010\Projects\roxority_UploadZen\roxority_UploadZen\12\Template\layouts\roxority_UploadZen\help\app\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://roxwinvm/_layouts/roxority_UploadZen/help/app/</InstallUrl>
+    <SupportUrl>http://roxority.com/uploadzen-support/</SupportUrl>
+    <ProductName>roxority UploadZen</ProductName>
+    <PublisherName>roxority.com</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>2.5.1.3</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AESCRYPTO NET_2_0 NET_3_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>AESCRYPTO NET_2_0 NET_3_0</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>77DCB17DCC071E7FF78C63BE8288A5148DF68A1A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>roxUp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Crc32.cs">
+      <Link>Ionic.Zlib\Crc32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Deflate.cs">
+      <Link>Ionic.Zlib\Deflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Events.cs">
+      <Link>Ionic.Zlib\Events.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Exceptions.cs">
+      <Link>Ionic.Zlib\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Inflate.cs">
+      <Link>Ionic.Zlib\Inflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\InfTree.cs">
+      <Link>Ionic.Zlib\InfTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Shared.cs">
+      <Link>Ionic.Zlib\Shared.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Tree.cs">
+      <Link>Ionic.Zlib\Tree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\WinZipAes.cs">
+      <Link>Ionic.Zlib\WinZipAes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipConstants.cs">
+      <Link>Ionic.Zlib\ZipConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipCrypto.cs">
+      <Link>Ionic.Zlib\ZipCrypto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipDirEntry.cs">
+      <Link>Ionic.Zlib\ZipDirEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipEntry.cs">
+      <Link>Ionic.Zlib\ZipEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipFile.cs">
+      <Link>Ionic.Zlib\ZipFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Zlib.cs">
+      <Link>Ionic.Zlib\Zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibCodec.cs">
+      <Link>Ionic.Zlib\ZlibCodec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibConstants.cs">
+      <Link>Ionic.Zlib\ZlibConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibStream.cs">
+      <Link>Ionic.Zlib\ZlibStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.Shared.cs">
+      <Link>roxority.Shared.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageControl.Designer.cs">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MetaDataProviders.cs" />
+    <Compile Include="MultiExplorerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultiExplorerControl.designer.cs">
+      <DependentUpon>MultiExplorerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LoginForm.de.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.de.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageControl.de.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageControl.resx">
+      <DependentUpon>MessageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiExplorerControl.de.resx">
+      <DependentUpon>MultiExplorerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiExplorerControl.resx">
+      <DependentUpon>MultiExplorerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZipForm.de.resx">
+      <DependentUpon>ZipForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZipForm.resx">
+      <DependentUpon>ZipForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="roxUp_TemporaryKey.pfx" />
+    <None Include="Web References\roxority_UploadZen\Files.wsdl" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Web References\roxority_UploadZen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WssAuthentication\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WssLists\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WssSiteData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="ZipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZipForm.Designer.cs">
+      <DependentUpon>ZipForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://roxority/_layouts/roxority_UploadZen/Files.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\roxority_UploadZen\</RelPath>
+      <UpdateFromURL>http://roxority/_layouts/roxority_UploadZen/Files.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>roxority_UploadZen_Uploader_roxority_UploadZen_Files</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://roxserver/_vti_bin/Authentication.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WssAuthentication\</RelPath>
+      <UpdateFromURL>http://roxserver/_vti_bin/Authentication.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>roxUp_WssAuthentication_Authentication</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://roxority/_vti_bin/Lists.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WssLists\</RelPath>
+      <UpdateFromURL>http://roxority/_vti_bin/Lists.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>roxUp_WssLists_Lists</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://roxserver/_vti_bin/SiteData.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WssSiteData\</RelPath>
+      <UpdateFromURL>http://roxserver/_vti_bin/SiteData.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>roxUp_WssSiteData_SiteData</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\roxority_UploadZen\Files.disco" />
+    <None Include="Web References\roxority_UploadZen\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WssLists\Lists.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WssLists\Lists.disco" />
+    <None Include="Web References\WssLists\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WssSiteData\SiteData.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WssSiteData\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WssSiteData\SiteData.disco" />
+    <None Include="Web References\WssSiteData\_sFPUrl.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sListMetadata.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sListWithTime.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sProperty.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sSiteMetadata.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sWebMetadata.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssSiteData\_sWebWithTime.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WssAuthentication\Authentication.disco" />
+    <None Include="Web References\WssAuthentication\Authentication.wsdl" />
+    <None Include="Web References\WssAuthentication\AuthenticationMode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssAuthentication\LoginResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WssAuthentication\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sts_list_genericlist16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UPFOLDER.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOLDER.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServiceNotInstalled.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\STSICON.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERUSR.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REFRESH.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDITGRID.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleRightArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleLeftArrowHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openfolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PropertiesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishPlanHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter2HS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightsRestrictedHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICSTP.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEBPART.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICJPEG.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICDOCX.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICMASTER.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\willkommen.html" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveToFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECKIN.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHECKOUT.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ICZIP.GIF" />
+    <Content Include="Resources\Web.png" />
+    <Content Include="roxicon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="BeforePublish">
+    <CreateItem Include="%(SerializationAssembly.FullPath)" Condition="'%(Extension)' == '.dll'">
+      <Output TaskParameter="Include" ItemName="_SGenDllsRelatedToCurrentDll" />
+    </CreateItem>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

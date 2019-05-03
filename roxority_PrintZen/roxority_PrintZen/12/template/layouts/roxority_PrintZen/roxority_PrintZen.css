@@ -1,0 +1,63 @@
+﻿div#s4-ribbonrow, div#s4-titlerow, .s4-notdlg
+{
+display: none !important;
+}
+.ms-cal-monthitem a:link
+{
+text-decoration: none !important;
+}
+th *, th
+{
+font-weight: bold !important;
+}
+th
+{
+border-bottom: 1px dotted #c0c0c0;
+}
+tr.ms-WPHeader, table.ms-menutoolbar, table.ms-bottompaging, input.ms-ButtonHeightWidth
+{
+display: none;
+}
+div.rox-prz-toolbar
+{
+color: InfoText;
+background-color: InfoBackground;
+padding: 8px;
+border: 1px solid #c0c0c0;
+margin-bottom: 16px;
+white-space: nowrap;
+font-size: 10px;
+}
+div.rox-prz-toolbar button
+{
+background: buttonface url('/_layouts/images/roxority_PrintZen/printer16.png') no-repeat left center;
+color: ButtonText;
+}
+div.rox-prz-toolbar span
+{
+display: inline-block;
+white-space: nowrap;
+}
+.ms-WPBody th A, .ms-WPBody th A:active, .ms-WPBody th A:hover, .ms-WPBody th A:link, .ms-WPBody th A:visited
+{
+color: #003759 !important;
+}
+td.ms-formlabel, td.ms-formbody
+{
+padding: 4px;
+}
+.ms-bodyareaframe, td.ms-bodyareaframe
+{
+	border-left: 0px none red !important;
+	border-right: 0px none red !important;
+	border-top: 0px none red !important;
+	border-bottom: 0px none red !important;
+}
+
+@media print 
+{
+div.rox-prz-toolbar, .rox-userprofile-paging, .rox-userprofile-switcher
+{
+display: none;
+}
+}

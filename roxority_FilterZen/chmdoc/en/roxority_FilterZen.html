@@ -1,0 +1,3704 @@
+<html>
+	<head>
+		<title>ROXORITY FilterZen  Product Documentation</title><script type="text/javascript" language="JavaScript"> alert('For printing purposes only. Links have been disabled.\nNur zum Ausdrucken geeignet. Links wurden deaktiviert.'); </script>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<!--script type="text/javascript" language="JavaScript" src="jQuery.js"></script-->
+		<!--script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script-->
+		<!--script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<b style="font-style: italic; text-decoration: underline;" class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script-->
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #ffffff;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #ffffff;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"></div>
+	
+<h1>Introduction</h1><p>
+	The <strong>FilterZen</strong> Filter Web Part lets you to filter other SharePoint
+	Web Parts, such as <i>List View Web Parts</i> and <i>Data View Web Parts</i>, using
+	a comprehensive range of filtering methods.</p>
+<p>
+	Being a Web Part, you can add <b>FilterZen</b>&#39;s versatile filtering tools to
+	all kinds of SharePoint pages, including but not limited to:</p>
+<ul>
+	<li>Web Part Pages that you create yourself from the <i>Create</i> page (or by clicking
+		<i>New</i> in a Document Library with the Web Part Page document template)</li>
+	<li><b>All</b> (built-in <i>and</i> custom) List Views and Document Library Views</li>
+	<li>List Forms (<i>New</i>, <i>Edit</i>, <i>Display</i> &mdash; adding Web Parts to
+		those forms cannot be done from the browser, but can be done from other page design
+		tools such as <i>SharePoint Designer</i>)</li>
+	<li>Home pages in all web site templates</li>
+	<li>Search Results pages in Microsoft Office SharePoint Server</li>
+	<li>Pages and tabs in Document and Meeting Workspace web sites</li>
+	<li>All pages in Blog and Wiki web sites</li>
+</ul>
+<p>
+	The <strong>FilterZen</strong> Filter Web Part lets you to filter &quot;everything
+	that&#39;s filterable&quot;:</p>
+<ul>
+	<li><b>Lists</b>, including built-in lists such as <i>Announcements</i>, <i>Calendars</i>,
+		<i>Links</i>, <i>Tasks</i> and of course your own <i>Custom Lists</i></li>
+	<li><b>Document Libraries</b>, including <i>Shared Documents</i>, <i>Form Libraries</i>,
+		<i>Wiki Page Libraries</i>, <i>Picture Libraries</i> and any other document library</li>
+	<li><b>XML / XSLT-based Data Views</b> (those were typically created in <i>SharePoint
+		Designer</i> or manually developed in XSLT and are most-often bound to list data)</li>
+	<li><b>Other Web Parts:</b> FilterZen integrates into the <i>Web Part Connections</i>
+		infrastructure, so whenever any given Web Part can receive filters via <i>Connections</i>,
+		FilterZen can send them.</li>
+</ul>
+<p>
+	The <strong>FilterZen</strong> Filter Web Part lets you set up the following kinds
+	of filters:</p>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="text_filters.html">Text Filters</b><br />
+		&mdash; you specify a text filter value directly, or let users enter one.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="choice_filters.html">Choice Filters</b><br />
+		&mdash; you specify a set of filter values to let users pick one from.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="date_filters.html">Date Filters</b><br />
+		&mdash; you specify an absolute or relative date filter value, or let users enter
+		or pick one.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="list_lookup_filters.html">List Lookup Filters</b><br />
+		&mdash; you specify a List lookup to determine a filter value dynamically, or let
+		users pick one.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Lookup Filters</b><br />
+		&mdash; you specify a user filter value directly, or let users pick one.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="page_field_filters.html">Page Column Filters</b><br />
+		&mdash; determine a filter value dynamically from column values associated with
+		the Web Part Page.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="url_query_string_filters.html">Page Request / URL Filters</b><br />
+		&mdash; determine a filter value dynamically from posted form data or the Web Part
+		Page URL.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="sql_data_lookup_filters.html">SQL Data Lookup Filters</b><br />
+		&mdash; you specify an SQL database or ADO.NET data source lookup to determine a
+		filter value dynamically, or let users pick one.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="bcs_bdc_business_data_catalog_filters.html">BCS/BDC Lookup Filters</b><br />
+		&mdash; you specify Business Data Connectivity (BCS/BDC) external content type /
+		data source lookup to determine a filter value dynamically, or let users pick one.</li>
+</ul>
+<div class="rox-info">
+	<b>Have a filtering need that FilterZen cannot help you accomplish?</b>
+	<p>
+		If your specific filtering needs cannot be met by <b>FilterZen</b>&#39;s built-in
+		filtering methods, please let us know in the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/filterzen-forum/">
+			FilterZen discussion forum</b> or by <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/contact/">writing
+				us directly</b> &mdash; we&#39;re happy to help.</p>
+</div>
+<h1 style="page-break-before: always;">Solution Installation and Feature Activation</h1><h3>
+	1. The FilterZen Setup Package<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The <b>FilterZen</b> setup package (the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.s3.amazonaws.com/roxority_FilterZen.zip">roxority_FilterZen.zip</b> file) is a zipped
+	archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> - A graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling <b>FilterZen</b> to and from a SharePoint
+		server farm, to be run <i>by a farm administrator user</i> on the primary SharePoint farm or
+		web front-end server.</li>
+	<li><b>docs</b> - A folder containing this product documentation in Microsoft Compiled HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<div class="rox-info">
+	Extract the setup package to any file-system folder. Do not just run <b>Deploy.exe</b>
+	directly from inside the setup archive &mdash; it needs to run from a file system
+	directory that also contains all the supporting files from the setup archive.</div>
+<h3>
+	2. Installing the FilterZen Solution Package<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Run <b>Deploy.exe</b> and when the <i>Welcome</i> screen is displayed, click <i>Next</i>
+	to start a series of system checks. To proceed with the installation, all system
+	checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy <b>FilterZen</b>
+	to. You can also de-select those Site Collections you <i>do not</i> want 
+	the setup
+	wizard, upon successful deployment, to <i>activate</i> the Web Part Feature immediately for you on. (Even when <b>FilterZen</b> is deployed in a Web Application, before
+	you can add and start using the <b>FilterZen</b> Filter Web Part on Web Part
+	Pages inside a web site, the <b>FilterZen Filter Web Part</b> <i>Feature</i>
+	needs to be <i>activated</i> for the parent Site Collection, as described in the
+	<i>Feature Activation</i> section below. For now, the setup wizard performs these activations for you.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup02.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start using the <b>FilterZen</b> Filter Web Part on Web Part Pages inside the previously selected 
+	Site
+	Collections immediately.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The <b>FilterZen</b> Filter Web Part is a <i>SharePoint Site Collection-scoped Feature</i>, which needs to be
+	&#39;activated&#39; on each Site Collection it is to be used in.</p>
+<ol>
+	<li>Start from the Web Part Page you want to use the Web Part on. Select <i>Site Settings</i>
+		from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root web&#39;s <i>Site Settings</i>
+		page now displayed, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page should contain a row titled <b>FilterZen Filter
+		Web Part</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to make the Web Part available
+				to all web sites, Web Part galleries and Web Part Pages inside this site collection;
+				or click the <i>Deactivate</i> button to disable the Web Part throughout this site
+				collection.<ul><li>Note: if you do deactivate the Site Collection Feature, existing 
+					<b>FilterZen</b> Web Parts will continue to work: the feature 
+				activation status only controls whether the Web Part is available inside your 
+				Site Web Part Galleries.</li></ul>
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>FilterZen</b> solution package was not
+				yet deployed to this web application. On the <i>System Settings</i> page (<i>Operations</i> 
+				in SharePoint 2007) in the <i>Central
+					Administration</i>, click <i>Manage Farm Solutions</i> (<i>Solution management</i> 
+				in SharePoint 2007). On the <i>Solution Management</i> page, click <b>roxority_filterzen_xiv.wsp</b> 
+				(<i>roxority_filterzen_xii.wsp</i> in SharePoint 2007)
+				to open the <i>Solution Properties</i> page. Click <i>Deploy Solution</i>, then
+				select this Site Collection&#39;s parent web application and click <i>OK</i>.
+				(The deployment is delegated to a background job scheduled to run either at the
+				date and time specified, or as soon as possible. Once started, it may take this
+				job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h1 style="page-break-before: always;">Walkthrough: using FilterZen</h1><h3>1. It&#39;s a Web Part<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	Filtering data, information, Lists, Libraries and other Web Parts with <b>FilterZen</b> 
+	always involves using the <b>FilterZen</b> Filter Web Part. It is the sole mechanism to 
+	define filters and connect them to your data.</p>
+<p>
+	That however does not necessarily imply that you can use <b>FilterZen</b> &quot;only on Web 
+	Part Pages&quot;. Technically and strictly speaking, it does &mdash; but more pages in 
+	SharePoint are Web Part Pages than you might know. In addition to the Web Part 
+	Pages you create yourself from the <i>Create</i> page (or by clicking <i>New</i> in a Document Library 
+	with the Web Part Page document template), all of the following types of 
+	SharePoint pages are actually Web Part Pages, so you can can customize their 
+	appearance and behavior by adding Web Parts to then:</p>
+<ul>
+	<li><b>All</b> (out-of-the-box <i>and</i> custom) List Views and Document Library Views</li>
+	<li>List Forms (<i>New</i>, <i>Edit</i>, <i>Display</i> &mdash; adding Web Parts to those forms cannot be done 
+		from the browser, but is possible from <i>SharePoint Designer</i>)</li>
+	<li>Home pages in most web site templates</li>
+	<li>Search Results pages in Microsoft Office SharePoint Server</li>
+	<li>Pages and tabs in Document and Meeting Workspace web sites</li>
+	<li>All pages in Blog and Wiki web sites</li>
+</ul>
+<p>
+	In all these places, you can use <b>FilterZen</b> to filter the information displayed.
+	After you have <b style="font-style: italic; text-decoration: underline;" href="setup.html">installed the <b>FilterZen</b> solution package and activated the site collection feature</b>, 
+	you can add the <b>FilterZen</b> Filter Web Part to any Web Part Page in the accustomed way. After having
+	switched to page Edit Mode from the <i>Site Actions</i> menu and having clicked the <i>Add Web
+		Part</i> button in the Web Part Zone of your choice, you will find it in the
+	<i>Add Web Parts</i> dialog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 387px;" src="help/res/wpdialog.png" title="" />
+</p>
+<p>
+	(If the Web Part is not available in the <i>Add Web Parts</i> dialog, 
+	(re)activate
+	the <b>FilterZen Filter Web Part</b> Feature under <i>Site Collection
+		Features</i>, as described in the last section of the <b style="font-style: italic; text-decoration: underline;" href="setup.html">Solution Installation &amp; Feature Activation</b> chapter.</p>
+<p>
+	Add a <b>FilterZen</b> Filter Web Part to the Web Part Page that contains the 
+	<i>List View</i> or <i>Data View</i> web
+	part that you want to filter. (A <i>List View</i> Web Part is automatically created by SharePoint every
+	time you add a list or document library to a Web Part zone using the <i>Add Web Parts</i>
+	dialog or other page editing tools such as <i>SharePoint Designer</i>.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 135px;" src="help/res/wp_01.png" title="" />
+</p>
+<h3>2. Connect the Web Part<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	The Web Part points out to you that it is not 'connected'. By 'connecting' the Web Part, you tell it which Web Parts
+	should receive the filters you will set up shortly. Connect it to to the 
+	<i>List View</i> or <i>Data View</i>
+	Web Parts on your Web Part Page that you want to filter by using the <i>Edit / Connections</i> Web Part menu:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 239px;" src="help/res/wp_02.png" title="" />
+</p>
+<div class="rox-info">
+This notification, and 
+	other output produced by the <b>FilterZen</b> Filter Web Part is only ever rendered in 
+	Edit Mode by default, so that the Filter Web Part is invisible to page visitors 
+	(unless you have set up dynamically generated or manually created <b style="font-style: italic; text-decoration: underline;" href="?doc=general#s5">interactive 
+	filters</b>).</div>
+<p>
+	After connecting the <b>FilterZen</b> Filter Web Part to at least one other Web Part, 
+	its appearance
+	changes to display relevant contextual status information and potentially 
+	helpful hints about your filters and its connections &mdash; again, only in Edit mode by default, keeping the Filter Web Part invisible to your visitors.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 440px;" src="help/res/wp_04.png" title="" />
+</p>
+<h3>3. Set up your filter(s)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Once you have the <b>FilterZen</b> Filter Web 
+	Part <i>connected</i> to other Web Parts and have set up and enabled at least 
+	one filter for it, it will send them <i>filters</i>, each composed of a filter 
+	<i>name</i> and a 
+	filter <i>value</i>, whenever the Web Part Page is rendered, by 
+	determining the filter names and values from the context and logic provided by 
+	your individual filters. When 
+	connecting to <i>List View</i> or <i>Data View</i> Web Parts, the filter name ultimately 
+	corresponds to a Column name.</p>
+<p>
+	In this walk-through, we will filter a <i>
+	Tasks</i> List View to only display tasks assigned to the current user that are 
+	due &#39;tomorrow&#39;. To start, choose <i>Modify</i> in the <i>edit</i> Web Part 
+	menu. In the Web Part tool pane, in the <i>All Filters</i> section, select the type of 
+	filter you want to add to the Filter Web Part &mdash; to implement the filtering requirement outlined 
+	above, we will need both a <b style="font-style: italic; text-decoration: underline;" href="date_filters.html">Date Filter</b> and a <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filter</b> &mdash; and click the <img align="top" src="collapseplus.gif" />
+	<i>Add this new filter</i> icon. So start by selecting <i>Date Filter</i> and 
+	clicking the &#39;+&#39; icon:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 220px;" src="help/res/wp_03.png" title="" />
+</p>
+<p>This will bring up the embedded <b style="font-style: italic; text-decoration: underline;" href="date_filters.html">Date Filter</b> editor right in 
+	the Web Part tool pane. Below, we have already set up the filter as this example requires it. 
+	This setup will filter the <i>Due Date</i> column (with the internal name <i>DueDate</i>) to 
+	only yield values representing &#39;tomorrow&#39;:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 412px;" src="help/res/wp_05.png" title="" />
+</p>
+<p>By saving the <i>DueDate</i> filter and then applying the Web Part modifications, the connected Web Part 
+	will be filtered accordingly already. Repeat the same steps as above, 
+	but this time select the <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filter</b> type before clicking the &#39;+&#39; icon, 
+	to create the required user filter. The following set up will filter the
+	<i>Assigned To</i> column (with the internal name <i>AssignedTo</i>) by the 
+	current user:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/wp_06.png" title="" />
+</p>
+<p>The only settings that are relevant to this very example are the <i>Column / filter 
+	name</i> setting at the top, and the <i>default filter value</i> setting just below. 
+	You may ignore the other <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filter</b> settings (hidden from the above screenshot) for now, they are explained in the <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filters</b> chapter.</p>
+<p>Once all filters and Web Part modifications have been saved, your connected Web Parts 
+	will again be filtered as specified.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/wp_07.png" title="" />
+</p>
+<h1 style="page-break-before: always;">General Filter Settings</h1><p>
+	The following settings apply across all filter types.</p>
+<h3>
+	Column / Filter Name<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	This name is the name used to identify a filter among other filters in your FilterZen
+	Filter Web Part. It is also the filter name sent to connected Web Parts.</p>
+<p>
+	Different kinds of Web Parts may vary in their requirements for filter names. When
+	connected to a <i>List View</i> Web Part (or a <i>Data View</i> Web Part whose data
+	source is a SharePoint list or document library), those out-of-the-box, filter-receiving
+	SharePoint Web Parts <i>require</i> the <b>FilterZen</b> Filter Web Part to send
+	filter names that correspond <i>exactly</i> to <b>internal</b> Column names (which
+	<i>never</i> change once a Column has been created) rather than their current display
+	names (<b>Column titles</b>, which <i>can</i> be changed by end-users at any time).</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	The <i>internal name</i> of a Column is set when a it is first created, and it never
+	changes, even though the <i>Column title</i> might be changed repeatedly from SharePoint&#39;s
+	<i>Edit Column</i> page later on. The patterns for internal names vary: for some
+	built-in Columns from SharePoint&#39;s out-of-the-box List definitions there are
+	internal names such as <i>AssignedTo</i> for the <i>Tasks</i> List&#39;s &quot;Assigned
+	To&quot; Column, or <i>_ModerationComments</i> for any List&#39;s &quot;Approver
+	Comments&quot; Column. A user-created Column with an initial title of &quot;Test-Link&quot;
+	will get an internal name of <i>Test_x002d_Link</i>.</div>
+<p>
+	<b>FilterZen</b> cannot change this requirement (to send filter names corresponding
+	<i>exactly</i> to internal Colum names) &mdash; it was built right into SharePoint.
+	You therefore need to specify filter names corresponding to the internal Column
+	names.</p>
+<p>
+	To make this as easy as possible for you, we built a useful tool right into the
+	Web Part&#39;s configuration tool pane that empowers you to instantly figure out
+	the proper filter name to use for the Column you want to filter, that is, its <i>internal
+		Column name</i>. Once you expand this tool by clicking the <i>Filtering List Data</i>
+	link, you can immediately select the list you are filtering to see all its Columns.
+	Now select the Column and you will see its internal name. Just copy and paste it
+	into the <i>Column / filter name</i> text box, or click the <i>Use as filter name</i>
+	link:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	If you are filtering a <i>Data View</i> Web Part sourcing its data from a list in
+	<i>another</i> web site or site collection, just enter the web site&#39;s URL in
+	the tool&#39;s text box and click <i>OK</i> to be able to locate the list in the
+	drop-down box.</p>
+<h3>
+	Enabling and Disabling Filters<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	The <b>FilterZen</b> Filter Web Part only ever sends those of your filters that
+	are marked <i>enabled</i>. Tick or untick the <i>This filter is enabled</i> check
+	box to enable or disable a filter. You need to enter a <b style="font-style: italic; text-decoration: underline;" href="#s0">filter name</b>
+	before you can enable a filter, because a filter name is required to send a filter
+	to conencted Web Parts.</p>
+<h3>
+	Default Filter Value<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	All filter types that optionally support an <b style="font-style: italic; text-decoration: underline;" href="#s5">interactive mode</b> (i.e.
+	all filter types except <b style="font-style: italic; text-decoration: underline;" href="page_field_filters.html">Page Column Filter</b> and <b style="font-style: italic; text-decoration: underline;" href="url_query_string_filters.html">Page Request / URL Filter</b>)
+	also have a setting to set a default filter value, even though they vary in their
+	semantics and user interface depending on the filter type. The default filter value
+	is the filter value initially sent, and in <b style="font-style: italic; text-decoration: underline;" href="#s5">interactive mode</b>, also
+	the one initially presented to end users, which they may then change.</p>
+<h3>
+	About "Empty" Filter Values<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	For each filter you create, you need to decide which approach to dealing with empty
+	filter values is optimal given the particular filtering context:</p>
+<ul>
+	<li><i>Empty = Empty or None</i> &mdash; if you <b>do</b> send empty filter values,
+		and a filter value is empty, the resulting behaviour of the filter receiver should
+		be to show only items where the specified Column has no value.</li>
+	<li><i>Empty = All (no filtering)</i> &mdash; if you <b>do not</b> send empty filter
+		values, and a filter value is empty, the filter will not be sent, usually resulting
+		in no filtering being applied to the specified Column and thus showing all items
+		as far as that Column is concerned.</li>
+</ul>
+<p>
+	Every filter type provides the <i>Send filter value even if empty</i> check box
+	to control this setting.</p>
+<h3>
+	Fallback Filter Value<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	All filter types, including the non-<b style="font-style: italic; text-decoration: underline;" href="#s5">interactive</b> ones, let you
+	specify an optional <i>fallback filter value</i> that will only ever be sent if
+	the filter value is <b style="font-style: italic; text-decoration: underline;" href="#s3">empty</b>.</p>
+<h3>
+	&quot;Interactive&quot; Filters<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>
+	All filters except <b style="font-style: italic; text-decoration: underline;" href="page_field_filters.html">Page Column Filters</b> and <b style="font-style: italic; text-decoration: underline;" href="url_query_string_filters.html">Page Request / URL Filters</b> offer
+	an optional interactive mode that you can turn on or off via the <i>Allow users to enter/pick
+		a filter value</i> check box. In interactive mode, the <b>FilterZen</b> Filter
+	Web Part will render into the Web Part Page a visible, interactive user interface
+	control for changing the filter value of each interactive filter. This user interface
+	control will be a single-line text box for <b style="font-style: italic; text-decoration: underline;" href="text_filters.html">Text Filters</b>, a date picker for
+	<b style="font-style: italic; text-decoration: underline;" href="date_filters.html">Date Filters</b>, and a drop-down list for <b style="font-style: italic; text-decoration: underline;" href="choice_filters.html">Choice Filters</b>,
+	<b style="font-style: italic; text-decoration: underline;" href="list_lookup_filters.html">List Lookup Filters</b>, <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filters</b>, <b style="font-style: italic; text-decoration: underline;" href="sql_data_lookup_filters.html">SQL Data Filters</b> and <b style="font-style: italic; text-decoration: underline;" href="bcs_bdc_business_data_catalog_filters.html">BDC Filters</b>. You can optionally specify a label text in the <i>filter label</i>
+	text box, which will then be prepended to the filtering user interface control by
+	the <b>FilterZen</b> Filter Web Part, to let your users know what this control is
+	actually for. There are also additional Web Part settings for <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s2">further 
+	customizing the appearance and behavior of all interactive filtering user 
+	controls</b>.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/adv_04.png"
+		title="" />
+</p>
+<h3>Pre-Filtering of Choice, List Lookup, SQL Data, BDC and User Filters<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>
+	Tick the <i>Pre-filtering &mdash; only offer pickable choices that also exist in a List column</i> check box 
+	in a <b style="font-style: italic; text-decoration: underline;" href="choice_filters.html">Choice Filter</b>, <b style="font-style: italic; text-decoration: underline;" href="list_lookup_filters.html">List Lookup Filter</b>, <b style="font-style: italic; text-decoration: underline;" href="sql_data_lookup_filters.html">SQL Data Filter</b>, <b style="font-style: italic; text-decoration: underline;" href="bcs_bdc_business_data_catalog_filters.html">BDC Filter</b> or <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filter</b> editor to be able to enter 
+	a List View URL and an internal Column name both used to eliminate from the 
+	drop-down list of available choices all those that do not exist as exact values 
+	in the specified List Column.</p>
+<h3>Locking out specific filter values<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>In the drop-down list labelled <i>Always suppress certain filter values</i>, select an item other than <i>
+	Don&#39;t suppress any filter values</i> to show a multi-line text box allowing 
+	you to enter specific filter values. Your drop-down choice then controls whether 
+	the filter values entered are the only ones allowed to be sent (<i>Suppress all 
+	filter values except...</i>), or the only ones that should never be sent (<i>Suppress 
+	no filter values except...</i>).</p><h1 style="page-break-before: always;">Text Filters</h1><p>
+	Text filters are the simplest of all filter types. In addition to the <b style="font-style: italic; text-decoration: underline;" href="general.html">
+		general filter settings</b> they share with all other filter types, text filters
+	let you enter any filter value to send into the text box labelled <i>default filter
+		value</i>. Using a text filter, you can filter all column types, including lookup,
+	date, user and numeric columns. By enabling <b style="font-style: italic; text-decoration: underline;" href="general.html#s5">interactive mode</b>,
+	you can let your users enter their own filter values in a text box rendered right
+	into the <b>FilterZen</b> Filter Web Part.
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_text.png" title="" /></p>
+<h1 style="page-break-before: always;">Choice Filters</h1><p>Create a choice filter to let users pick a filter value from a drop-down list limited to 
+	a static set of choices pre-defined by you. (Note: to offer available choices <i>dynamically</i> based on list data, use a <b style="font-style: italic; text-decoration: underline;" href="list_lookup_filters.html">List Lookup Filter</b> instead.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_choice.png" title="" /></p>
+<h1 style="page-break-before: always;">Date Filters</h1><p>
+	Create a date filter to let users enter or pick a date filter value, or to send
+	a filter value that is always based on the current date. You may also optionally
+	specify a number of days to always add to or subtract from the date filter value
+	just before sending it, so as to easily accomplish relative date-filtering concepts
+	such as <i>yesterday</i> / <i>tomorrow</i>, <i>one week ago</i> / <i>next week</i>
+	etc.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_date.png" title="" /></p>
+<h3>Special Date Values<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<ul>
+<li><b>today</b> &mdash; this filter value always returns the current date</li>
+<li><b>lastmonth_firstday</b> &mdash; this filter value always returns the first day of 
+	the last month</li>
+<li><b>lastmonth_lastday</b> &mdash; this filter value always returns the last day of the 
+	last month</li>
+<li><b>thismonth_firstday</b> &mdash; this filter value always returns the first day of 
+	the current month</li>
+<li><b>thismonth_lastday</b> &mdash; this filter value always returns the last day of the 
+	current month</li>
+<li><b>nextmonth_firstday</b> &mdash; this filter value always returns the first day of 
+	the next month</li>
+<li><b>nextmonth_lastday</b> &mdash; this filter value always returns the last day of the 
+	next month</li>
+</ul>
+<h3>
+	Valid Date Locales<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<table>
+	<tr>
+		<th>
+			<p>
+				Language (Country)</p>
+		</th>
+		<th>
+			<p>
+				Short name</p>
+		</th>
+		<th>
+			&nbsp;</th>
+		<th>
+			<p>
+				Numeric locale ID</p>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Afrikaans</p>
+		</td>
+		<td>
+			<p>
+				af</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1078</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Albanian</p>
+		</td>
+		<td>
+			<p>
+				sq</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1052</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - United Arab Emirates</p>
+		</td>
+		<td>
+			<p>
+				ar-ae</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				14337</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Bahrain</p>
+		</td>
+		<td>
+			<p>
+				ar-bh</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				15361</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Algeria</p>
+		</td>
+		<td>
+			<p>
+				ar-dz</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5121</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Egypt</p>
+		</td>
+		<td>
+			<p>
+				ar-eg</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3073</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Iraq</p>
+		</td>
+		<td>
+			<p>
+				ar-iq</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2049</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Jordan</p>
+		</td>
+		<td>
+			<p>
+				ar-jo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				11265</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Kuwait</p>
+		</td>
+		<td>
+			<p>
+				ar-kw</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				13313</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Lebanon</p>
+		</td>
+		<td>
+			<p>
+				ar-lb</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				12289</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Libya</p>
+		</td>
+		<td>
+			<p>
+				ar-ly</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4097</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Morocco</p>
+		</td>
+		<td>
+			<p>
+				ar-ma</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				6145</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Oman</p>
+		</td>
+		<td>
+			<p>
+				ar-om</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				8193</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Qatar</p>
+		</td>
+		<td>
+			<p>
+				ar-qa</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				16385</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Saudi Arabia</p>
+		</td>
+		<td>
+			<p>
+				ar-sa</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1025</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Syria</p>
+		</td>
+		<td>
+			<p>
+				ar-sy</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				10241</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Tunisia</p>
+		</td>
+		<td>
+			<p>
+				ar-tn</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				7169</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Arabic - Yemen</p>
+		</td>
+		<td>
+			<p>
+				ar-ye</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				9217</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Armenian</p>
+		</td>
+		<td>
+			<p>
+				hy</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1067</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Azeri - Latin</p>
+		</td>
+		<td>
+			<p>
+				az-az</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1068</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Azeri - Cyrillic</p>
+		</td>
+		<td>
+			<p>
+				az-az</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2092</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Basque</p>
+		</td>
+		<td>
+			<p>
+				eu</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1069</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Belarusian</p>
+		</td>
+		<td>
+			<p>
+				be</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1059</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Bulgarian</p>
+		</td>
+		<td>
+			<p>
+				bg</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1026</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Catalan</p>
+		</td>
+		<td>
+			<p>
+				ca</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1027</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Chinese - China</p>
+		</td>
+		<td>
+			<p>
+				zh-cn</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2052</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Chinese - Hong Kong SAR</p>
+		</td>
+		<td>
+			<p>
+				zh-hk</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3076</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Chinese - Macau SAR</p>
+		</td>
+		<td>
+			<p>
+				zh-mo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5124</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Chinese - Singapore</p>
+		</td>
+		<td>
+			<p>
+				zh-sg</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4100</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Chinese - Taiwan</p>
+		</td>
+		<td>
+			<p>
+				zh-tw</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1028</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Croatian</p>
+		</td>
+		<td>
+			<p>
+				hr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1050</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Czech</p>
+		</td>
+		<td>
+			<p>
+				cs</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1029</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Danish</p>
+		</td>
+		<td>
+			<p>
+				da</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1030</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Dutch - Netherlands</p>
+		</td>
+		<td>
+			<p>
+				nl-nl</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1043</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Dutch - Belgium</p>
+		</td>
+		<td>
+			<p>
+				nl-be</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2067</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Australia</p>
+		</td>
+		<td>
+			<p>
+				en-au</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3081</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Belize</p>
+		</td>
+		<td>
+			<p>
+				en-bz</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				10249</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Canada</p>
+		</td>
+		<td>
+			<p>
+				en-ca</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4105</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Caribbean</p>
+		</td>
+		<td>
+			<p>
+				en-cb</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				9225</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Ireland</p>
+		</td>
+		<td>
+			<p>
+				en-ie</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				6153</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Jamaica</p>
+		</td>
+		<td>
+			<p>
+				en-jm</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				8201</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - New Zealand</p>
+		</td>
+		<td>
+			<p>
+				en-nz</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5129</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Phillippines</p>
+		</td>
+		<td>
+			<p>
+				en-ph</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				13321</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Southern Africa</p>
+		</td>
+		<td>
+			<p>
+				en-za</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				7177</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Trinidad</p>
+		</td>
+		<td>
+			<p>
+				en-tt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				11273</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - Great Britain</p>
+		</td>
+		<td>
+			<p>
+				en-gb</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2057</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				English - United States</p>
+		</td>
+		<td>
+			<p>
+				en-us</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1033</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Estonian</p>
+		</td>
+		<td>
+			<p>
+				et</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1061</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Farsi</p>
+		</td>
+		<td>
+			<p>
+				fa</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1065</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Finnish</p>
+		</td>
+		<td>
+			<p>
+				fi</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1035</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Faroese</p>
+		</td>
+		<td>
+			<p>
+				fo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1080</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				French - France</p>
+		</td>
+		<td>
+			<p>
+				fr-fr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1036</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				French - Belgium</p>
+		</td>
+		<td>
+			<p>
+				fr-be</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2060</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				French - Canada</p>
+		</td>
+		<td>
+			<p>
+				fr-ca</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3084</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				French - Luxembourg</p>
+		</td>
+		<td>
+			<p>
+				fr-lu</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5132</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				French - Switzerland</p>
+		</td>
+		<td>
+			<p>
+				fr-ch</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4108</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Gaelic - Ireland</p>
+		</td>
+		<td>
+			<p>
+				gd-ie</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2108</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Gaelic - Scotland</p>
+		</td>
+		<td>
+			<p>
+				gd</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1084</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				German - Germany</p>
+		</td>
+		<td>
+			<p>
+				de-de</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1031</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				German - Austria</p>
+		</td>
+		<td>
+			<p>
+				de-at</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3079</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				German - Liechtenstein</p>
+		</td>
+		<td>
+			<p>
+				de-li</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5127</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				German - Luxembourg</p>
+		</td>
+		<td>
+			<p>
+				de-lu</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4103</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				German - Switzerland</p>
+		</td>
+		<td>
+			<p>
+				de-ch</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2055</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Greek</p>
+		</td>
+		<td>
+			<p>
+				el</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1032</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Hebrew</p>
+		</td>
+		<td>
+			<p>
+				he</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1037</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Hindi</p>
+		</td>
+		<td>
+			<p>
+				hi</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1081</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Hungarian</p>
+		</td>
+		<td>
+			<p>
+				hu</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1038</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Icelandic</p>
+		</td>
+		<td>
+			<p>
+				is</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1039</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Indonesian</p>
+		</td>
+		<td>
+			<p>
+				id</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1057</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Italian - Italy</p>
+		</td>
+		<td>
+			<p>
+				it-it</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1040</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Italian - Switzerland</p>
+		</td>
+		<td>
+			<p>
+				it-ch</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2064</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Japanese</p>
+		</td>
+		<td>
+			<p>
+				ja</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1041</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Korean</p>
+		</td>
+		<td>
+			<p>
+				ko</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1042</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Latvian</p>
+		</td>
+		<td>
+			<p>
+				lv</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1062</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Lithuanian</p>
+		</td>
+		<td>
+			<p>
+				lt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1063</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				F.Y.R.O. Macedonia</p>
+		</td>
+		<td>
+			<p>
+				mk</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1071</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Malay - Malaysia</p>
+		</td>
+		<td>
+			<p>
+				ms-my</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1086</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Malay – Brunei</p>
+		</td>
+		<td>
+			<p>
+				ms-bn</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2110</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Maltese</p>
+		</td>
+		<td>
+			<p>
+				mt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1082</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Marathi</p>
+		</td>
+		<td>
+			<p>
+				mr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1102</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Norwegian - Bokml</p>
+		</td>
+		<td>
+			<p>
+				no-no</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1044</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Norwegian - Nynorsk</p>
+		</td>
+		<td>
+			<p>
+				no-no</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2068</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Polish</p>
+		</td>
+		<td>
+			<p>
+				pl</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1045</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Portuguese - Portugal</p>
+		</td>
+		<td>
+			<p>
+				pt-pt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2070</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Portuguese - Brazil</p>
+		</td>
+		<td>
+			<p>
+				pt-br</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1046</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Raeto-Romance</p>
+		</td>
+		<td>
+			<p>
+				rm</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1047</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Romanian - Romania</p>
+		</td>
+		<td>
+			<p>
+				ro</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1048</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Romanian - Republic of Moldova</p>
+		</td>
+		<td>
+			<p>
+				ro-mo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2072</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Russian</p>
+		</td>
+		<td>
+			<p>
+				ru</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1049</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Russian - Republic of Moldova</p>
+		</td>
+		<td>
+			<p>
+				ru-mo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2073</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Sanskrit</p>
+		</td>
+		<td>
+			<p>
+				sa</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1103</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Serbian - Cyrillic</p>
+		</td>
+		<td>
+			<p>
+				sr-sp</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				3098</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Serbian - Latin</p>
+		</td>
+		<td>
+			<p>
+				sr-sp</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2074</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Setsuana</p>
+		</td>
+		<td>
+			<p>
+				tn</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1074</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Slovenian</p>
+		</td>
+		<td>
+			<p>
+				sl</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1060</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Slovak</p>
+		</td>
+		<td>
+			<p>
+				sk</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1051</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Sorbian</p>
+		</td>
+		<td>
+			<p>
+				sb</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1070</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Spain (Traditional)</p>
+		</td>
+		<td>
+			<p>
+				es-es</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1034</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Argentina</p>
+		</td>
+		<td>
+			<p>
+				es-ar</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				11274</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Bolivia</p>
+		</td>
+		<td>
+			<p>
+				es-bo</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				16394</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Chile</p>
+		</td>
+		<td>
+			<p>
+				es-cl</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				13322</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Colombia</p>
+		</td>
+		<td>
+			<p>
+				es-co</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				9226</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Costa Rica</p>
+		</td>
+		<td>
+			<p>
+				es-cr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				5130</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Dominican Republic</p>
+		</td>
+		<td>
+			<p>
+				es-do</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				7178</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Ecuador</p>
+		</td>
+		<td>
+			<p>
+				es-ec</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				12298</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Guatemala</p>
+		</td>
+		<td>
+			<p>
+				es-gt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				4106</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Honduras</p>
+		</td>
+		<td>
+			<p>
+				es-hn</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				18442</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Mexico</p>
+		</td>
+		<td>
+			<p>
+				es-mx</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2058</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Nicaragua</p>
+		</td>
+		<td>
+			<p>
+				es-ni</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				19466</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Panama</p>
+		</td>
+		<td>
+			<p>
+				es-pa</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				6154</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Peru</p>
+		</td>
+		<td>
+			<p>
+				es-pe</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				10250</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Puerto Rico</p>
+		</td>
+		<td>
+			<p>
+				es-pr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				20490</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Paraguay</p>
+		</td>
+		<td>
+			<p>
+				es-py</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				15370</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - El Salvador</p>
+		</td>
+		<td>
+			<p>
+				es-sv</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				17418</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Uruguay</p>
+		</td>
+		<td>
+			<p>
+				es-uy</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				14346</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Spanish - Venezuela</p>
+		</td>
+		<td>
+			<p>
+				es-ve</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				8202</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Southern Sotho</p>
+		</td>
+		<td>
+			<p>
+				st</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1072</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Swahili</p>
+		</td>
+		<td>
+			<p>
+				sw</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1089</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Swedish - Sweden</p>
+		</td>
+		<td>
+			<p>
+				sv-se</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1053</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Swedish - Finland</p>
+		</td>
+		<td>
+			<p>
+				sv-fi</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2077</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Tamil</p>
+		</td>
+		<td>
+			<p>
+				ta</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1097</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Tatar</p>
+		</td>
+		<td>
+			<p>
+				tt</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1092</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Thai</p>
+		</td>
+		<td>
+			<p>
+				th</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1054</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Turkish</p>
+		</td>
+		<td>
+			<p>
+				tr</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1055</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Tsonga</p>
+		</td>
+		<td>
+			<p>
+				ts</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1073</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Ukrainian</p>
+		</td>
+		<td>
+			<p>
+				uk</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1058</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Urdu</p>
+		</td>
+		<td>
+			<p>
+				ur</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1056</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Uzbek - Cyrillic</p>
+		</td>
+		<td>
+			<p>
+				uz-uz</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				2115</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Uzbek – Latin</p>
+		</td>
+		<td>
+			<p>
+				uz-uz</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1091</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Vietnamese</p>
+		</td>
+		<td>
+			<p>
+				vi</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1066</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Xhosa</p>
+		</td>
+		<td>
+			<p>
+				xh</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1076</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Yiddish</p>
+		</td>
+		<td>
+			<p>
+				yi</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1085</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p>
+				Zulu</p>
+		</td>
+		<td>
+			<p>
+				zu</p>
+		</td>
+		<td>
+			&nbsp;</td>
+		<td>
+			<p>
+				1077</p>
+		</td>
+	</tr>
+</table>
+<h1 style="page-break-before: always;">List Lookup Filters</h1><p>Create a List lookup filter to send filters based on List data. Whether you let 
+	users pick a List item to use in interactive mode, or specify the source item to 
+	use directly, the filter value being sent is always the current, live value of a 
+	Column you chose.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_list_lookup.png" title="" /></p>
+<h3>View URL of the Lookup List<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>Specify the URL of the View used to access the List and retrieve its data. The 
+	View provides initial pre-filtering and sorting. A View URL includes the file 
+	name of the View page (such as <i>AllItems.aspx</i>).</p>
+<p>You can specify a full, absolute URL (those starting with http:// or https:// ). 
+	Also supported are site-relative URLs (those starting with / ), to which the 
+	site collection root web URL will be prepended at run time, and web-relative 
+	URLs (those neither starting with http:// nor https:// nor with / ), to which 
+	the current web URL will be prepended at run time.</p>
+<h3>Value Column and Display Column<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>Specify the internal name of the Column in the lookup List providing the filter 
+	value to be sent. Typically this is also the Column you will want to use for 
+	displaying filter choices, however, you may also optionally specify another 
+	internal name for the display Column.</p>
+
+<h1 style="page-break-before: always;">User Filters</h1><p>Create a user filter to send user filter values. The user filter is internally a 
+	specialized type of List lookup filter that is pre-configured to always use the User 
+	Information List (at /_catalogs/users) of the current Site Collection, and 
+	therefore shares some of the settings and capabilities of List lookup filters.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_user.png" title="" /></p>
+
+<h1 style="page-break-before: always;">Page Column Filters</h1><p>
+	Page column filters only work on Web Part Pages that are stored inside a Document
+	Library. Their filter value is always dynamically derived from the value of any
+	specified Document Library Column associated with the Web Part Page. The page column filter
+	is internally a specialized type of List lookup filter that is pre-configured to
+	always use the Document Library containing the current Web Part Page,
+	and therefore shares some of the settings and capabilities of List lookup filters.
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_page_field.png" title="" /></p>
+<h1 style="page-break-before: always;">URL / Page Request Filters</h1><p>
+		Use page request parameters to derive the filter value from the current Web Part 
+	Page HTTP request context:</p>
+<ul>
+	<li>URL parameters (HTTP GET)</li>
+	<li>Posted form values (HTTP POST)</li>
+	<li>Cookies or Server Variables</li>
+	<li>URL path fragments</li>
+</ul>
+<p>
+	The Page Request / URL Filter is capable of parsing various request parameter formats. 
+	Observe how the Matching URL format example area changes immediately in response 
+	to your changes to see exactly what kind of input the filter expects with the 
+	current setup. (In principle this applies even when using a request mode other 
+	than URL query string.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_url_query_string.png" title="" /></p>
+<h3>
+	Sub-Parameter Bundling<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	If the specified request parameter bundles multiple name-value pairs in a single 
+	parameter value, an individual sub-parameter value can be derived by entering 
+	the sub-parameter name, if the parameter value conforms to the syntax that is 
+	also used by Microsoft Office SharePoint Server <i>Advanced Search</i> forms / results pages
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;value&quot; 
+	name:&quot;value&quot; name:&quot;value&quot;&nbsp;</b> &mdash;</nobr>
+	filters are separated by spaces, names and values are separated by colons and values
+	are <i>always</i> in quotation marks, regardless of the column type).</p>
+
+<h1 style="page-break-before: always;">SQL Data Filters</h1><p>Create a SQL data filter to send filters based on any data stored in 
+	ADO.NET-accessible data sources such as relational databases. Whether you let 
+	users pick a record set to use in interactive mode, or specify the data row to 
+	use directly, the filter value being sent is always the current, live value from 
+	the specified data source.</p>
+<h3>Data Source Connection<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>To connect to your data source, you select the data source provider to use and 
+	specify a connection string. If unsure, your database administrator can help you 
+	with this. The following ADO.NET data source providers can be used out of the 
+	box:</p>
+<ul>
+	<li><b>SQL Server</b> &mdash; the best option for connecting to any <i>Microsoft SQL Server</i> 
+		2000 or higher database (<i>System.Data.SqlClient</i>)</li>
+	<li><b>Oracle</b> &mdash; the best option for connecting to any <i>Oracle</i> 8.1 or higher 
+		database (<i>System.Data.OracleClient</i>)</li>
+	<li><b>ODBC</b> &mdash; the best option for connecting to any database via an <i>Open 
+		Database Connectivity</i> driver (<i>System.Data.Odbc</i>)</li>
+	<li><b>OLE DB</b> &mdash; the best option for connecting to a <i>Jet</i> database (Microsoft 
+		Access) or any other <i>OLEDB</i>-compatible database 
+		(<i>System.Data.OleDb</i>)</li>
+</ul>
+<p>
+	Data source providers can be added and removed on the <i>Configuration</i> 
+	page in the <i>FilterZen Studio</i> at<br />
+	<b>
+	http://farm_url/_layouts/roxority_FilterZen/default.aspx?cfg=cfg</b>.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_sql_data_lookup.png" title="" /></p>
+<h3>SQL Query, Value Column and Display Column<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	For the SQL data filter to obtain filter values from your data source, you need to specify, in SQL (or any other query language dialect supported by your data source provider), the query sent to the data source to fetch a result set of filter values. In order for this filter to work as expected, it is mandatory that the result set of filter values 
+	is guaranteed by your query to always be returned in a consistent sort order, so 
+	in SQL you should add an <i>ORDER BY</i> clause. Per the SQL standard, unless 
+	your query specifies the sort order explicitly, the default sort order of data 
+	rows is undefined and thus may change randomly at any time.</p>
+<p>
+	Your query will need to return a stream of record sets (which your query may 
+	also pre-filter and sort as preferred) with at least one data column. The name of 
+	the column containing the filter value may be identical to the database column 
+	or changed to another name by your query &mdash; however, you need to specify 
+	the result set column name to be used as the <i>value column</i>, i.e. the name 
+	of the column providing the filter value. In interactive mode, if you want to 
+	display to the user another column value than the one sent as the filter value, 
+	specify the name of the <i>display column</i>.</p>
+
+<h1 style="page-break-before: always;">Business Data Connectivity (BCS/BDC) Filters</h1><p>
+	<i>Note: this filter type requires SharePoint <b>2010</b> (any edition, 
+	including Foundation) or 
+	Microsoft Office SharePoint Server <b>2007</b> (Enterprise Edition), with the Business 
+	Data Connectivity (BCS/BDC) features enabled in both scenarios.</i></p>
+<p>
+	Create a Business Data Connectivity (BCS/BDC) filter to send filters based on any data stored
+	in any external data sources integrated into your Business Data Connectivity Service. Whether you
+	let users pick an external data record or entity instance to use in interactive mode, or specify the record
+	to use directly, the filter value being sent is always the current, live value from
+	the specified data source.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_bcs_bdc_business_data_catalog.png" title="" /></p>
+<p>
+	To connect to your data source, 
+	first select the BDC external system and external content type type to
+	use. Now you simply select which column values are displayed to users in interactive
+	mode, and which column values are sent as filter values to connected Web Parts.
+	You may also want to review any of the <b style="font-style: italic; text-decoration: underline;" href="general.html">general filter settings</b>
+	that are naturally also available to your BDC filters.</p>
+<h1 style="page-break-before: always;">FilterZen Web Part Settings</h1><h3>
+	Suppressing 'Unknown' Filters<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	This setting is not necessary nor recommended unless you are using a filter that 
+	determines filter names to be sent dynamically, rather than using a fixed one 
+	you entered for the filter, such as catch-all <i>Page Request / URL Filters</i>.</p>
+<p>
+	Connected Web Parts may or may not inform the FilterZen Filter Web Part about 
+	the names of filterable columns. This information is not always necessarily 
+	complete. For example, when you connect to a List View Web Part with three 
+	visible List Columns, then it will notify the FilterZen Filter Web Part about 
+	these three filterable Columns &mdash; they become &#39;known filter names&#39;. However, you 
+	can still validly use any other Column Name present in the List but not the List 
+	View, and filtering will still work as expected.</p>
+<p>
+	If this setting is activated, filter values will never be sent if the 
+	corresponding filter name is not in the list of &#39;known&#39; filter names. This 
+	setting may work against you because the list of &#39;known&#39; filter names is not 
+	always exhaustive. It may be useful, however, to build a single &quot;catch-all&quot; <i>Page Request 
+	Filter</i> that takes all URL parameters as filter name-value-pairs, but sends only 
+	those that are known, visibly filterable Columns.</p>
+<h3>
+	Overriding Settings from URL Parameters<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	By ticking the <i>Override Web Part and filter settings from URL parameters</i> checkbox, every filter setting or Web Part
+	setting is overridden by the appropriate URL (query string) parameter value, if it exists. See the possible parameter names and values in the <b style="font-style: italic; text-decoration: underline;" href="ref_url_settings.html">reference chapter</b>.
+</p>
+<h3>
+	Interactive Filters<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	All filter types (except <b style="font-style: italic; text-decoration: underline;" href="page_field_filters.html">Page Column Filters</b> and <b style="font-style: italic; text-decoration: underline;" href="url_query_string_filters.html">Page Request / URL Filters</b>) support the so-called
+	<b style="font-style: italic; text-decoration: underline;" href="?doc=general#s5">interactive mode</b> which you enable by ticking the <i>Allow users to enter / 
+	pick a value</i> check box. If interactive mode is enabled for at least one of 
+	your filters, the <b>FilterZen</b> Filter Web Part renders an interactive 
+	filtering user control appropriate for the filter type (date pickers for <b style="font-style: italic; text-decoration: underline;" href="date_filters.html">Date 
+	Filters</b>, drop-down lists for <b style="font-style: italic; text-decoration: underline;" href="choice_filters.html">Choice Filters</b>, <b style="font-style: italic; text-decoration: underline;" href="user_filters.html">User Filters</b>, <b style="font-style: italic; text-decoration: underline;" href="list_lookup_filters.html">List Lookup 
+	Filters</b>, <b style="font-style: italic; text-decoration: underline;" href="sql_data_lookup_filters.html">SQL Data Filters</b> and <b style="font-style: italic; text-decoration: underline;" href="bcs_bdc_business_data_catalog_filters.html">BDC Filters</b>, and text boxes for <b style="font-style: italic; text-decoration: underline;" href="text_filters.html">Text Filters</b> into the Web Part Page, allowing your page 
+	visitors to change the filtering on-the-fly. The appearance of this Web Part 
+	output can be <b style="font-style: italic; text-decoration: underline;" href="ref_css.html">customized via CSS</b>.</p>
+<p>
+	If interactive mode is enabled for at least one of your filters, the following 
+	additional Web Part settings are available:</p>
+<ul>
+	<li><b>Apply SharePoint toolbar stylings</b> &mdash; if ticked, instead of rendering the 
+		filtering user controls with only blank, un-styled <b style="font-style: italic; text-decoration: underline;" href="ref_css.html">CSS rules</b> applied, applies a 
+		set of minimal <b style="font-style: italic; text-decoration: underline;" href="ref_css.html">CSS stylings</b> resulting in a toolbar-like area.</li>
+	<li><b>Remember filter values last used for each user</b> &mdash; if ticked, stores the 
+		last filter value used by a user for each filter in the content database. The 
+		next time the user visits the Web Part Page, the interactive filtering user 
+		controls (and the interactive filters themselves) are pre-initialized with this 
+		filter value. Tick this option only if it adds real value (rather than being 
+		just a nice-to-have convenience that your users could do without just as well), 
+		since it may inflate the content database unduly over time, depending on the 
+		number of users.</li>
+	<li><b>Upon user input, immediately reload the page to re-filter</b> &mdash; if ticked, 
+		causes the Web Part Page to reload itself through a server post-back and apply 
+		the newly specified filter values in the process.</li>
+</ul>
+<p>Interactively input filter values are applied during the next server post-back, 
+	whether the above option is active or not, and regardless of how exactly the 
+	post-back was initiated. You can force such a server post-back by calling the <i>roxRefreshFilters(filterWebPartID)</i> 
+	JavaScript method. Just below the Web Part settings described above, there is 
+	also a text area for you to enter additional HTML mark-up code to be rendered 
+	into the Web Part area, depending on your choice either prepended or appended to 
+	the interactive filtering user controls.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 440px;" src="help/res/adv_02.png"
+		title="" />
+</p>
+<h3>
+	Dynamically Generating Temporary Interactive Filters<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	Want to offer interactive filtering user controls for all your columns without 
+	having to set up all these filters manually?</p>
+<p>
+	You can have the <b>FilterZen</b> Filter Web Part generate the appropriate 
+	interactive filtering user controls for you automatically, on-the-fly during 
+	each Web Part rendering for all 
+	available &#39;known&#39; filter names. This time-saving feauture generates drop-down filtering 
+	lists for choice and lookup Columns (appropriately pre-populated and 
+	pre-filtered), date pickers for date Columns and text boxes for all other Columns. 
+	To activate dynamically generated temporary interactive filters, from the 
+	drop-down list labelled <i>dynamically generated temporary enabled interactive filters for all 
+	&#39;known&#39; filter names if possible</i>, select <i>Prepend</i> or <i>Append</i>.</p>
+<h3>
+	Debug Mode<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	When a filter does not seem to work as expected, it can be helpful to find out which
+	filters exactly the <b>FilterZen</b> Filter Web Part constructs and sends, given its current settings. The <b>FilterZen</b> Filter Web Part will render
+	just that information whenever the page is in edit mode, so on the page that does not result
+	in the filter you want, select <i>Edit Page</i> from the <i>Site Actions</i> menu
+	and you will see all filters produced from the current setup. Also shown are all the filter values that were 
+	<i>not</i> sent, if any, and the reason. Unless the <b>FilterZen</b> Filter Web Part is minimized or hidden, its <i>Debug Mode</i> output
+	looks like this:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 272px;" src="help/res/adv_03.png"
+		title="" />
+</p>
+<h1 style="page-break-before: always;">"How do I...?" Recipes</h1><h3>
+	Online FilterZen How-To Tutorials:<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The following articles from <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/category/filterzen"
+		target="_blank">the FilterZen Blog</b> further describe
+	how to accomplish commonly-requested tasks with FilterZen:</p>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/filterzen-how-to-create-and-set-up-web-parts-programmaticall.html"
+		target="_blank">How To Create and Set Up Filter Web Parts Programmatically</b> &mdash;
+		describes how to programmatically provision Web Parts to Web Part Pages in general,
+		and then specifically how to populate a <b>FilterZen</b> Filter Web Part with Filters
+		and configure both its Filter settings and Web Part settings from C# or other .NET
+		code.</li>
+	<li><b>Value-range filtering</b>, ie. matching data falling in certain intervals:
+		<ul>
+			<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/using-value-range-filtering-and-caml-operators-in-filter-web.html"
+				target="_blank">Using Value-Range Filtering and CAML Operators in Filter Web Parts</b>
+				&mdash; introduces the <b>FilterZen</b> <i>CAML-Filtering</i> mode and how to achieve
+				all kinds of dynamic range filters such as date ranges (&quot;from ... until&quot;),
+				numeric ranges (&quot;between&quot;) or even textual ranges (&quot;A-G&quot;, &quot;H-O&quot;,
+				&quot;P-Z&quot; etc.)</li>
+			<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/advanced-date-range-filtering-in-sharepoint.html"
+				target="_blank">Advanced Date Range Filtering</b> &mdash; builds on the previous article
+				and further elaborates on different techniques for various kinds of end user-facing
+				date filtering controls (such as Month and Year drop-downs in place of Date Pickers).</li>
+			<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/sharepoint-value-range-filtering-the-new-simplified-way.html"
+				target="_blank">SharePoint Value Range Filtering: the New, Simplified Way</b></li>
+			<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/sharepoint-list-filtering-by-date-spans-a-stepwise-tutorial.html"
+				target="_blank">SharePoint List Filtering by Date Spans: a Stepwise Tutorial</b></li>
+			<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/an-upcoming-birthdays-web-part-in-10-minutes.html">
+				An &quot;Upcoming Birthdays&quot; Web Part in 10 minutes</b></li>
+			<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/month-and-year-drop-downs-for-advanced-date-range-filtering.html">
+				Month and Year Drop-Downs for Advanced Date Range Filtering in SharePoint</b></li>
+		</ul>
+	</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/wild-card-search-with-sharepoint-wss-or-moss-filter-web-part.html"
+		target="_blank">Wild-Card Search (&quot;Contains&quot; Filtering) with Filter Web
+		Parts</b> &mdash; describes how the <b>FilterZen</b> <i>CAML-Filtering</i> mode
+		and the <i>Contains</i> operator can be used to achieve wild-card-like filtering
+		against List View, Data Form, Data View and Business Data Connectivity List or Related List Web
+		Parts.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/sharepoint-list-filtering-by-user-group-membership.html"
+		target="_blank">SharePoint List Filtering by User Group Membership</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/list-filtering-highlighting-partial-matches-in-search-result.html"
+		target="_blank">List Filtering: Highlighting Partial Matches in Search Results</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/adding-an-advanced-search-interface-to-any-list-or-web-part.html"
+		target="_blank">Adding an &quot;Advanced Search&quot; interface to any List or Web
+		Part in no time -- with the new on-the-fly Filters</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/simplified-cascading-for-multiple-choice-drop-down-filters.html"
+		target="_blank">Simplified Cascading for Multiple Choice Drop-Down Filters</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/filtering-sharepoint-lists-using-nested-and-or-operator-prec.html"
+		target="_blank">Filtering SharePoint Lists using nested AND / OR operator precedence
+		hierarchies</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/missing-the-list-view-selector-tool-bar-drop-down-menu-in-sh.html"
+		target="_blank">Adding a List View selector drop-down control to your Filter Web
+		Part</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/populating-text-box-filters-with-url-query-string-parameter.html">
+		Populating text box filters with URL query string parameter values</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/exceeded-data-fetch-limit-on-dispform-pages-with-list-view-c.html"
+		target="_blank">Setting up List View Web Part Connections on List Form pages</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/filtering-sql-data-view-web-parts-in-sharepoint.html">
+		Filtering SQL-based Data View Web Parts</b></li>
+</ul>
+<h1 style="page-break-before: always;">FilterZen BCS/BDC Item Builder Web Part</h1><p>
+	<i>Note: this Web Part requires Microsoft Office SharePoint Server <b>2010</b> or 
+	<b>2007</b> Enterprise
+		Edition with the Business Data Connectivity (BCS/BDC) features enabled.</i></p>
+<p>
+	The <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i> Web Part initially
+	serves the same purpose as the built-in Business Data Item Builder Web Part provided
+	by Microsoft Office SharePoint Server Enterprise Edition: to obtain the ID of a
+	Business Data Connectivity (BCS/BDC) entity instance and broadcast that instance
+	to compatible Web Parts. However, the FilterZen BCS/BDC Business Data Item Builder
+	Web Part goes beyond the built-in equivalent Web Part in many ways:</p>
+<h3>
+	Obtaining the External Content Type / Entity Instance ID<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The out-of-the-box Web Part can only ever obtain the required entity instance ID
+	from a pre-defined URL Parameter named <i>ID,</i> whereas the <b>FilterZen</b> Business Data Item 
+	Builder Web Part obtains the required
+	entity instance ID from any connected Web Part. So while you <i>can</i> 
+	&quot;recreate&quot; the original
+	behaviour by connecting the <b>FilterZen</b> Business Data Item Builder Web Part to a 
+	MOSS <i>URL (Query String) Filter Web Part</i>, or a <b>FilterZen</b>
+	Filter Web Part (containing a Page Request / URL Filter), there are now innumerable 
+	additional ways
+	for the item builder to obtain the entity instance ID (including any built-in or custom FilterZen
+	filter types and the out-of-the-box provider Web Parts, for example List Views) 
+	and send all entity instance data to any consumer Web Part.</p>
+<p>
+	Simply choose your preferred entity instance ID provider Web Part from the <i>Connections</i>
+	/ <i>Get BCS/BDC Entity Instance ID From</i> sub-menu.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" src="help/res/bcs_bdc_business_data_item_builder_web_part.png"
+		style="height: 670px;" title="" /></p>
+<h3>
+	Sending the selected Entity Instance to BCS/BDC Web Parts<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Simply select from the <i>Connections</i> / <i>Send Selected Item To</i> sub-menu
+	any <i>Business Data Actions</i> or <i>Business Data Item</i> Web Part to send the
+	entity instance associated with the current entity instance ID. You can only connect
+	to Web Parts that have been pre-configured for a specific Business Data Connectivity
+	application and external content type. For the <b>FilterZen</b> <i>BCS/BDC Business
+		Data Item Builder</i> Web Part to become aware of the Business Data Connectivity
+	application, data type and entity columns to use, you need to make at least one
+	such connection.</p>
+<h3>
+	Sending any Entity Instance Column values to any Web Parts<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Once you have made at least one such connection and the <b>FilterZen</b> <i>BCS/BDC
+		Business Data Item Builder</i> Web Part became aware of the Business Data Connectivity
+	(BCS/BDC) application, data type and entity columns to use, you can now also 
+	send live BCS/BDC column values of the selected entity instance to any kind of 
+	consumer Web Part: simply select from its <i>Connections</i>
+	sub-menu the <b>FilterZen</b> Business Data Item Builder Web Part and follow the 
+	on-screen Connection Properties dialog.</p>
+<h1 style="page-break-before: always;">Configuration Settings</h1><p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>FilterZen Studio</i>, which you can access via Site Settings / FilterZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>FilterZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / FilterZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all FilterZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>FilterZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+<li><i>French</i></li>
+</ul>
+<h3>Hard limit for pickable choices in drop-down filters<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>Interactive drop-down filters (such as Choice, List Lookup, SQL, User and BCS/BDC Filters) use this threshold to limit the number of visibly pickable choices. This is recommended both for usability and performance reasons. To disable the limit (not recommended), set this setting to 0. If you don&#39;t specify a valid integer number, the default value of 150 will be used.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>150</pre>
+<h3>How to deal with &#39;Edit in Datasheet&#39;<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>Datasheet Views don&#39;t support Web Part Connections and instead of simply ignoring these, unfortunately they usually just fail to display. As a result, when a user clicks &#39;Edit in Datasheet&#39; in your FilterZen-connected List View, an error message is displayed in place of the data. You can resolve this by either ticking the <b>On pages with nothing but a single List View, automatically filter it connectionless</b> check-box option in the <i>Advanced Filtering Settings</i> section of the FilterZen Web Part&#39;s settings tool-pane (SharePoint 2010 only) &mdash; or alternatively, if you manually add a new, separate, dedicated (public) <i>Datasheet View</i> to the List, then FilterZen can automatically redirect your users to this separate Datasheet View page when they select &#39;Edit in Datasheet&#39; in any View.<br/><br/>Select the &#39;Auto-redirect&#39; choice to allow this kind of redirection of users to your dedicated Datasheet View when they click &#39;Edit in Datasheet&#39; on a non-Datasheet View. If you select &#39;Ignore&#39;, then &#39;Edit in Datasheet&#39; on a connected List View page may result in the error message: <i>&quot;There is no valid configuration for these connected parts to run in.&quot;</i> (Note: SharePoint 2010 also lets you disable datasheet views on a per-List basis via List Settings / Advanced Settings.)</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>FilterZen Studio</i>:</p>
+<ul>
+<li><i>Ignore problem (displays Microsoft error message)</i></li>
+<li><i>Auto-redirect if dedicated separate Datasheet View exists</i></li>
+</ul>
+<h3>In CAML Direct filtering mode, override List View Web Part folder display only when filters are active (only limited support for this feature in SharePoint 2010)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>The CAML Direct filtering mode allows you to <i>&quot;override the default display of folders&quot;</i> when connected to List View Web Parts. On the <i>Configuration</i> page in the <i>FilterZen Studio</i>, tick this check box to only attempt this override when active filter values have been sent, instead of always.</p>
+<h3>Custom image URL for &quot;Loading...&quot; spinner animation<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>When filters are applied or cleared, FilterZen by default shows a SharePoint-typical animation (the green spinner) to indicate that an operation is in progress. If desired for design customization or branding purposes, you can enter an alternative picture URL to use for this animation. This can be an absolute or a server-relative URL such as /_layouts/images/roxority_FilterZen/k.gif for example.</p>
+<h3>In Text filters&#39; List-based AutoSuggest drop-downs, 1-character entries use BeginsWith instead of Contains<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>When connected to List View Web Parts, Text Filters can be set up to offer end users a <b>"List-based AutoSuggest drop-down, if possible"</b>, providing find-as-you-type suggestions for assisted input completion. This drop-down (always limited to the maximum number of entries configured below) invokes an AJAX search against the connected List for the Column targeted by the Text Filter, and returns values containing the current text box input. For huge datasets, it might be more desirable to only match values that start with (rather than contain) the currently typed in letter as long as only a single one has been typed, so that entering B shows all values starting with B. The drawback to this might be end user confusion because the AutoSuggest drop-down will revert to "contains" logic as soon as more letters are typed. (Note: when the Text Filter has its own filter operator set to <i>Begins with</i>, the AutoSuggest will always use begins-with instead of contains logic.) On the <i>Configuration</i> page in the <i>FilterZen Studio</i>, tick this check box to use begins-with rather than contains for single-letter inputs.</p>
+<h3>Maximum number of choices in Text filters&#39; List-based AutoSuggest drop-downs<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>In an AutoSuggest drop-down, when more than say 20-30 items are displayed, users are much more likely to further refine their text input rather than scan hundreds of choices, and a low limit drastically improves performance of List-based auto-completion drop-downs in Text filters. To customize this, enter an integer number higher than 1, otherwise the default value of 40 will be used as the limit.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>40</pre>
+<h3>End-user instructions for Text Filters&#39; List-based AutoSuggest drop-downs<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>If desired, use this setting to compose an explanatory note for end users, to be displayed at the bottom of all Text Filters&#39; List-based AutoSuggest drop-downs.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>(Showing max. 40 results)</pre>
+<h3>No-Filter Parameter Names (URL / Page Request Filters)<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>When using catch-all URL / Page Request  Filters, optionally specify the request parameter names (one per line) that should never be sent as filters. Including the SharePoint-typical URL parameters in this setting&#39;s default value is recommended.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>ContentTypeId<br/>DisplayMode<br/>FolderCTID<br/>InitialTabId<br/>IsDlg<br/>Paged<br/>PageView<br/>PageFirstRow<br/>RootFolder<br/>SortDir<br/>SortField<br/>Source<br/>View<br/>VisibilityContext<br/>p_ID<br/>p_FSObjType<br/>p_FileLeafRef<br/>p_Title<br/>FilterField1<br/>FilterValue1<br/>FilterField2<br/>FilterValue2<br/>FilterField3<br/>FilterValue3<br/>FilterField4<br/>FilterValue4<br/>FilterField5<br/>FilterValue5<br/>FilterField6<br/>FilterValue6</pre>
+<h3>ADO.NET Database Connection Providers for SQL Data Access<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>Specify the ADO.NET database connection providers that your Database/SQL Data Sources should support (one per line, using the pattern "Provider display name: full provider IDbConnection Type name, full assembly name").</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>SQL Server: System.Data.SqlClient.SqlConnection, System.Data<br/>Oracle: System.Data.OracleClient.OracleConnection, System.Data.OracleClient<br/>ODBC: System.Data.Odbc.OdbcConnection, System.Data<br/>OLE DB: System.Data.OleDb.OleDbConnection, System.Data</pre>
+<h3>Delimiter for indenting nested pickable List Lookup filter choices<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>If you (think you) need this feature, please read or join the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/filterzen-forum/post/1221588">related support forum thread</b>.</p>
+<h3>Never offer the following pages in List View Pickers<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<p>The "List View Picker" filter type lets end users select a different List View to apply to the connected List View Web Part. View pages whose URL paths contain any one of the values specified here (one per line) will NOT be offered for end user selection by this filter type.<br/><br/>combine.aspx refers to the built-in Merge Documents view, repair.aspx to the built-in Relink Documents view, webfldr.aspx to the 2007 Explorer view. These are generally not desirable in a List View Picker context.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>FilterZen Studio</i> to restore the following default value:</p>
+<pre>/forms/combine.aspx<br/>/forms/repair.aspx<br/>/forms/webfldr.aspx</pre>
+<h3>External Filter Types<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<p>Specify the additional or third-party FilterZen filter types to make available to FilterZen Filter Web Parts in this Farm (one per line, using the pattern "full roxority_FilterZen.FilterBase inheritor class type name, full assembly name"). CAUTION: uninstalling an external filter type assembly will break all Filter Web Parts that still use a filter of that type.</p>
+<h3>When remembering filter values, store by name only (and share across FilterZen Web Parts)<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<p>FilterZen Web Parts can be set to <b>&#39;Remember filter values last used for each user&#39;</b>. By default these stored values are unique to the user, the filter name and the FilterZen Web Part storing them. On the <i>Configuration</i> page in the <i>FilterZen Studio</i>, tick this check box to store and restore values only based on the user and filter name instead, which lets you share filter values of the same name between multiple individual FilterZen Web Parts.</p>
+<h3>Storage location for &#39;Remembered filter values last used&#39;<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<p>FilterZen Web Parts can be set to <b>&#39;Remember filter values last used for each user&#39;</b>. By default these values are stored both in the user agent (browser) and in the SharePoint content database, but this configuration settings lets you override that default hybrid storage model. Client-side cookies may be cleared by users or blocked due to corporate security policies. Server-side storage may in rare configurations fail silently due to administrative access restrictions even for elevated code, or with large user bases may inflate the content database over time.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>FilterZen Studio</i>:</p>
+<ul>
+<li><i>Both (recommended)</i></li>
+<li><i>Server-side content database</i></li>
+<li><i>Client-side browser cookies</i></li>
+</ul>
+<h3>Remove Parameters from URL<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<p>Enter the URL Parameters that FilterZen should remove from the URL when in use (if the Web Part&#39;s <i>Override Web Part settings from URL parameters</i> check-box option is ticked), one per line.</p>
+<h3>Enable Web Part Connections menu option &#39;Send single data value to&#39;<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<p>When this option is selected, FilterZen Filter Web Parts will act not only as &#39;filter providers&#39; and &#39;data row providers&#39; but also as &#39;data cell providers&#39;. This is usually not necessary because row providers can always also be used as cell providers and provide a better user experience for the Web Part Page designer. If unsure, <i>don&#39;t</i> select this option.</p>
+<h3>By default, no inclusion of jQuery library v1.6.1 (NOT recommended)<b style="font-style: italic; text-decoration: underline;" name="s17"></b></h3>
+<p>Some FilterZen end user-facing artifacts require (and load into the respective host pages) the jQuery library, version 1.6.1. Embedding jQuery more than once in a single page can cause JavaScript warnings in Internet Explorer with <i>some few</i> jQuery plugins (and only if any are used in your farm at all). On the <i>Configuration</i> page in the <i>FilterZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and independently of FilterZen to prevent FilterZen from loading jQuery too. If you do so, you need to make sure jQuery 1.6.1 or higher is loaded on each page hosting also hosting FilterZen user interface artifacts, or FilterZen will appear broken. This is a global default setting that can be optionally overridden locally where applicable.</p>
+<h1 style="page-break-before: always;">Reference: URL Setting Parameters</h1><h3>
+	About URL-overridable Settings<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	(If you are looking for URL-based filtering, see the chapter on <b style="font-style: italic; text-decoration: underline;" href="url_query_string_filters.html">
+		Page Request / URL Filters</b>.)
+</p>
+<p>
+	When the <i>Override Web Part and filter settings from URL parameters</i> check
+	box is ticked (in Web Part settings), every filter setting or Web Part setting is
+	overridden by the appropriate URL (query string) parameter value, if it exists.
+	See the possible parameter names and values below.</p>
+<div class="rox-info">
+	<b>Note:</b> a URL override of a <i>Web Part setting</i> will affect <i>all</i>
+	<b>FilterZen</b> Filter Web Parts present on the current Web Part Page with the
+	<i>Override Web Part and filter settings from URL parameters</i> option ticked.
+	A URL override of a <i>filter setting</i> will affect <i>all</i> dynamically generated
+	and manually defined filters in <i>all</i> <b>FilterZen</b> Filter Web Parts present
+	on the current Web Part Page with the <i>Override Web Part and filter settings from
+		URL parameters</i> option ticked.</div>
+<h3>
+	Overridable Web Part Settings<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li><b>filter_ApplyToolbarStylings</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s2">
+		Apply SharePoint toolbar styles</b> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_AutoRepost</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s2">Upon user input,
+		immediately reload the page to re-filter</b> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_Cascaded</b> &mdash; override the <i>Limit pickable choices of all drop-down filters to existing values still available after filtering (&#39;cascading filters&#39;, only with CAML Filtering mode enabled)</i> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_DebugMode</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s4">Debug Mode</b>
+		setting. Use a URL parameter value of &#39;1&#39; to <i>always display the currently
+			sent filter values</i>, &#39;0&#39; to <i>only display these in Web Part edit mode</i>.</li>
+	<li><b>filter_DynamicInteractiveFilters</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s3">
+		dynamic generation of temporary, interactive filters</b>. Use a URL parameter value
+		of &#39;0&#39; to deactivate, &#39;1&#39; to prepend or &#39;2&#39; to append <i>dynamically
+			generated, temporary, enabled interactive filters for all <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s0">
+				&#39;known&#39; filter names</b>, if possible</i>.</li>
+	<li><b>filter_HtmlMode</b> &mdash; if interactive filters are present, overrides the
+		<i>rendering of a user interface control for manual re-filtering</i>. Use a URL
+		parameter value of &#39;0&#39; to not embed, &#39;1&#39; to prepend or &#39;2&#39;
+		to append the HTML specified in the Web Part settings to interactive filter controls.</li>
+	<li><b>filter_RememberFilterValues</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s2">
+		Remember filter values last used for each user</b> setting. A URL parameter value
+		of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_SuppressUnknownFilters</b> &mdash; overrides the <b style="font-style: italic; text-decoration: underline;" href="?doc=advanced#s0">
+		Suppress (never send) &#39;unknown&#39; filter names</b> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: All Filter Types<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<ul>
+	<li><b>filter_FallbackValue</b> &mdash; overrides the <i>If empty, always fall back
+		to this filter value</i> setting (use any text value).</li>
+	<li><b>filter_MultiValueSeparator</b> &mdash; overrides the <i>Send multiple values for 
+		the specified filter name</i> setting (use any text value).</li>
+	<li><b>filter_MultiFilterSeparator</b> &mdash; overrides the <i>Send multiple filter 
+		name-value pairs</i> setting (use any text value).</li>
+	<li><b>filter_SendEmpty</b> &mdash; overrides the <i>Send filter value even if empty</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_SuppressMode</b> &mdash; overrides the <i>Always suppress certain filter values</i>
+		setting.<br />
+		(Use &#39;0&#39; for <i>Don&#39;t suppress any filter values</i>,<br />
+		&#39;1&#39; for <i>Suppress (send Empty) no filter values except...</i>,<br />
+		&#39;2&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>,<br />
+		&#39;3&#39; for <i>Suppress (send Empty) all filter values except...</i><br />
+		or &#39;4&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>)</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice, Date, List Lookup, Text, SQL Data, BCS/BDC and User Filters<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li><b>filter_DefaultIfEmpty</b> &mdash; overrides the <i>Use default value if user
+		input empty</i> or the <i>Allow picking the empty filter value</i> setting, depending
+		on filter type (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_IsInteractive</b> &mdash; overrides the <i>Allow users to enter / pick
+		a filter value</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_Label</b> &mdash; overrides the <i>filter caption label</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice, List Lookup, SQL Data, BCS/BDC and User Filters<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<ul>
+	<li><b>filter_PostFilter</b> &mdash; overrides the <i>Pre-filtering &mdash; only offer
+		pickable choices that also exist in a List column</i> setting (use &#39;1&#39; or
+		&#39;0&#39;).</li>
+	<li><b>filter_PostFilterFieldName</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		List View URL</i> setting (use any text value).</li>
+	<li><b>filter_PostFilterListViewUrl</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		Column name</i> setting (use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice Filters<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<ul>
+	<li><b>filter_DefaultChoice</b> &mdash; overrides the <i>default filter value</i>
+		setting (use <i>0478f8f9-fbdc-42f5-99ea-f6e8ec702606</i> for <i>Empty</i>, or any value from your <i>valid
+			choices</i> setting).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Date Filters<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<ul>
+	<li><b>filter_AbsoluteDefaultValue</b> &mdash; overrides the <i>default date filter
+		value</i> setting (use 3155378975999999999 for <i>Today</i>, 0 for <i>Empty</i>,
+		or any other long integer number representing the Ticks of the desired date value).</li>
+	<li><b>filter_RelativeOffset</b> &mdash; overrides the <i>add days</i> setting.</li>
+	<li><b>filter_RelativeOffsetForDefaultOnly</b> &mdash; overrides the <i>only add days when default value</i> setting.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup Filters<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<ul>
+	<li><b>filter_ListUrl</b> &mdash; overrides the <i>View URL of the lookup List</i> setting
+		(use any text value).</li>
+	<li><b>filter_RemoveDuplicateTitles</b> &mdash; overrides the <i>Remove display duplicates</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_RemoveDuplicateValues</b> &mdash; overrides the <i>Remove duplicate values</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup and User Filters<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<ul>
+	<li><b>filter_DisplayFieldName</b> &mdash; overrides the <i>display Column</i> setting
+		(use any text value).</li>
+	<li><b>filter_FilterCaml</b> &mdash; overrides the <i>optional custom CAML query</i>
+		setting (use any text value).</li>
+	<li><b>filter_ItemID</b> &mdash; overrides the <i>default filter value</i> setting (use
+		0 for <i>Empty</i>, -1 for <i>the current user or Empty</i>, -2 for <i>the first item
+			after pre-filtering and sorting</i>, -3 for <i>the last item after pre-filtering and
+				sorting</i> or an integer number value representing the desired List item
+		ID).</li>
+	<li><b>filter_ItemSorting</b> &mdash; overrides the <i>sorting of available choices</i> setting
+		(use:<br />
+		0 = as specified by List View or CAML,<br />
+		1 = by display column, ascending,<br />
+		2 = by display column, descending,<br />
+		3 = by display frequency, ascending,<br />
+		4 = by display frequency, descending,<br />
+		5 = by value column, ascending,<br />
+		6 = by value column, descending,<br />
+		7 = by value frequency, ascending,<br />
+		8 = by value frequency, descending).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup, Page Column and User Filters<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<ul>
+	<li><b>filter_StripID</b> &mdash; overrides the <i>Strip internal ID;# prefixes from
+		filter values</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ValueFieldName</b> &mdash; overrides the <i>value Column</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Page Request / URL Filters<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<ul>
+	<li><b>filter_CatchAll</b> &mdash; overrides the <i>Advanced catch-all</i> setting (use
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ParameterName</b> &mdash; overrides the <i>request (form or URL) parameter
+		name</i> setting (use any text value).</li>
+	<li><b>filter_RequestMode</b> &mdash; overrides the <i>Look for the specified parameter
+		in</i> setting (use &#39;0&#39; for <i>URL query string</i>, &#39;1&#39; for <i>Posted
+			form data</i>, &#39;2&#39; for <i>Both, plus cookies and server variables</i>,
+		or 3 for <i>URL path fragment</i>).</li>
+	<li><b>filter_SubParameterName</b> &mdash; overrides the <i>sub-parameter name</i> setting
+		(use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Page Request and BCS/BDC Filters<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ul>
+	<li><b>filter_SendNull</b> &mdash; overrides the <i>Use the Empty filter value if missing</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: BCS/BDC Filters<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<ul>
+	<li><b>filter_BdcEntity</b> &mdash; overrides the <i>External Content Type</i> setting (use the BCS/BDC external system / application name and the BCS/BDC external content type / data type 
+		name, separated by {C453BF77-8CC4-4e1a-A50E-8A60B293CE94}).</li>
+	<li><b>filter_BdcValueField</b> &mdash; overrides the <i>value field</i> setting (use any text value).</li>
+	<li><b>filter_BdcDisplayField</b> &mdash; overrides the <i>display field</i> setting (use any text value).</li>
+	<li><b>filter_BdcInstanceID</b> &mdash; overrides the <i>default filter value</i> setting (use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: SQL Data Filters<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<ul>
+	<li><b>filter_AdoDataProvider</b> &mdash; overrides the <i>ADO.NET data source 
+		provider</i> setting (use the fully assembly-qualified name of the type 
+		implementing the <i>System.Data.IDbConnection</i> interface).</li>
+	<li><b>filter_AdoConnectionString</b> &mdash; overrides the <i>ADO.NET connection 
+		string</i> setting (use any text value).</li>
+	<li><b>filter_ValueColumnName</b> &mdash; overrides the <i>value column</i> setting (use any text value).</li>
+	<li><b>filter_DisplayColumnName</b> &mdash; overrides the <i>display column</i> setting (use any text value).</li>
+	<li><b>filter_Query</b> &mdash; overrides the <i>query</i> setting (use any text value).</li>
+	<li><b>filter_SqlChoice</b> &mdash; overrides the <i>default filter value</i> setting (use
+		<i>0478f8f9-fbdc-42f5-99ea-f6e8ec702606</i> for <i>Empty</i>, <i>4aea04a6-787a-4135-81a0-195e5946db1f</i> for <i>the first row in the result set</i>, <i>c3bd9af3-8df1-49bd-835b-36f5d64b060c</i> for <i>the 
+		last row in the result set</i> or the <i>value column</i> value of the data row to use.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Text Filters<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<ul>
+	<li><b>filter_DefaultValue</b> &mdash; overrides the <i>default filter value</i> setting
+		(use any text value).</li>
+</ul>
+<h1 style="page-break-before: always;">Reference: CSS Classes</h1><p>
+	When dynamically generated or manually created interactive filters are present,
+	enabled and their filtering user controls are rendered into the <b>FilterZen</b>
+	Filter Web Part, it wraps them in HTML span elements decorated with the CSS class
+	names detailed below, allowing for full customizability of their visual appearance.
+	Unless otherwise noted, these elements are pre-styled in <b style="white-space: nowrap;">
+		/_layouts/roxority_FilterZen/roxority_FilterZen.css</b>.</p>
+<ul>
+	<li><b>span.rox-ifilter-all</b> &mdash; the entire surrounding area of the Web Part
+		output (except in Web Part Page edit mode, where further contextual information
+		is prepended to this element).</li>
+	<li><b>span.rox-ifilter-<i>webpartid</i></b> &mdash; the entire surrounding area of
+		all interactive filter user controls, but excluding <b style="font-style: italic; text-decoration: underline;" href="advanced.html#s2">custom
+			HTML for manual re-filtering</b> (if any), where <i>webpartid</i> is the Web
+		Part ID. Not pre-styled.</li>
+	<li><b>span.rox-ifilter</b> &mdash; the surrounding area of an interactive filter user
+		control and its preceding caption label (if any).</li>
+	<li><b>span.rox-ifilter-label</b> &mdash; the caption label preceding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-control</b> &mdash; the area immediately surrounding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-datetime</b> &mdash; the area immediately surrounding an interactive
+		Date filter user control (inside a <i>span.rox-ifilter-control</i>).</li>
+	<li><b>span.rox-ifilter-button</b> &mdash; the area surrounding custom HTML for manual
+		re-filtering, if any.</li>
+	<li><b>a.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i> links
+		from the predefined <i>Filter link</i> and <i>Filter and Clear All links</i> HTML
+		templates.</li>
+	<li><b>input.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i>
+		buttons from the predefined <i>Filter button</i> and <i>Filter and Clear All buttons</i>
+		HTML templates.</li>
+	<li><b>a.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> link from the
+		predefined <i>Filter and Clear All links</i> HTML template.</li>
+	<li><b>input.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> button from
+		the predefined <i>Filter and Clear All buttons</i> HTML template.</li>
+</ul>
+<h1 style="page-break-before: always;">Release Notes</h1><h3>
+	Version 3.8 (9th August 2010)<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<ul>
+	<li>Added: <i>Filterable Content-by-Query Web Part (CQWP)</i></li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/adding-an-advanced-search-interface-to-any-list-or-web-part.html">
+		&quot;Advanced Search&quot; GUI with interactive, on-the-fly end user filter composition</b></li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/simplified-cascading-for-multiple-choice-drop-down-filters.html"
+		target="_blank">syntax for cascading Choice Filters</b></li>
+	<li>Added: new <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/missing-the-list-view-selector-tool-bar-drop-down-menu-in-sh.html">
+		List View Picker</b> filter type for on-the-fly, on-page List View switching</li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/filtering-sharepoint-lists-using-nested-and-or-operator-prec.html">
+		nested AND/OR operator precedence hierarchies</b> for CAML-based List filtering</li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/list-filtering-highlighting-partial-matches-in-search-result.html">
+		highlighting partial matches in search results</b> for SharePoint List filtering</li>
+	<li>Added: <i>Site Collection User Accounts</i> tool in <i>FilterZen Studio</i></li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/filterzen-forum/post/1175721">
+		syntax for designating a delimiter when using List Lookup Filters targeting single
+		or multi-line text Columns</b></li>
+	<li>Added: <i>Storage location for &quot;Remembered filter values last used&quot;</i>
+		and <i>When remembering filter values, store by name only (and share across FilterZen
+			Web Parts)</i> configuration settings</li>
+	<li>Added: FilterZen now also acts as a first-class <i>IWebPartParameters</i> provider
+		interface</li>
+	<li>Improved: outstanding support for BCS/BDC External Systems, External Content Types,
+		External Lists and External Data Columns</li>
+	<li>Improved: connecting with and sending filter values to Excel Web Access (EWA) Web
+		Parts</li>
+	<li>Fixed: <i>Remember filter values last used</i> option</li>
+</ul>
+<h3>
+	Version 3.7 (16th April 2010)<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li>Added: <i>DIY User Interface Localization</i> tool in <i>FilterZen Studio</i></li>
+	<li>Added: <i>Transfer Wizard</i> (import/export) tool in <i>FilterZen Studio</i></li>
+	<li>Added: new <i>Unique Constraint ('Distinct' emulation)</i> filter type for CAML-based
+		List View / Data View filtering</li>
+	<li>Added: new <i>SharePoint Context Filter</i> type</li>
+</ul>
+<h3>
+	Version 3.6 (26th January 2010)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<ul>
+	<li>Added: number conversion and formatting support for all filter types</li>
+	<li>Fixed: &#39;Clear Filters&#39; did not always work with XSL / Data View Web Parts
+		in some cases</li>
+	<li>Fixed: range filtering produced inconsistent results if both bounding values were
+		equal</li>
+	<li>Fixed: date-range filtering from and until the same date showed values less than
+		that date.</li>
+	<li>Fixed: improved performance for List Lookup Filters on Lists with massive amounts
+		of items (&gt; 2000)</li>
+	<li>Fixed: CAML Filtering mode did not work for custom field types inheriting from Text</li>
+</ul>
+<h3>
+	Version 3.5 (6th December 2009)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li>Added: option to disable folders in connected List View Web Parts</li>
+	<li>Added: placeholder syntax {$SomeFilter$} now also supported for for date filters</li>
+	<li>Added: you can now suppress (on the Web Part Page, Site Collection or Farm level)
+		FilterZen&#39;s inclusion of the jQuery library if this is already being included
+		in your SharePoint pages</li>
+	<li>Added: Binary Toggle (Check Box) Filter type</li>
+	<li>Improved: handling of interactive drop-down List Lookup filters from Multiple Choice
+		Columns</li>
+	<li>Improved: multi-selection drop-down end-user filtering controls</li>
+	<li>Fixed: URL Parameter filters sometimes used the parameter name in place of the filter
+		name</li>
+	<li>Fixed: SQL Data Filter always sent the default filter value regardless of user selection
+		under certain circumstances.</li>
+	<li>Fixed: unticking the &quot;Allow picking the empty filter value&quot; filter setting
+		could not be saved under certain circumstances.</li>
+	<li>Fixed: &quot;Argument data type sql_variant is invalid for argument 1 of like function.&quot;
+		error message when applying the the Contains CAML operator to a Calculated / Computed
+		List Column.</li>
+	<li>Fixed: Filter Web Part produced "Object reference not set" or "An unexpected error
+		has occurred" messages for Anonymous users.</li>
+</ul>
+<h3>
+	Version 3.4 (11th September 2009)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<ul>
+	<li>Added: placeholder syntax {$SomeFilter$}, which lets one filter use the current
+		filter value(s) of another filter in all text-based filter settings</li>
+	<li>Fixed: changing or clearing interactive filters against paged views did not reset
+		the paging</li>
+	<li>Fixed: multi-selection drop-down filter controls did not resize themselves to not
+		exceed the available page size</li>
+	<li>Fixed: Dynamic Interactive Filters represented multi-choice columns as Text Filters
+		instead of Choice Filters</li>
+	<li>Fixed: Page Request / URL Parameter Filters did not send multiple values by default
+		if parameter occurred more than once</li>
+</ul>
+<h3>
+	Version 3.3 (7th September 2009)<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<ul>
+	<li>Added support for cascading filters (limits the pickable choices in all drop-down
+		filter controls to existing values still available after applying the previous filter)</li>
+	<li>Added support for filter groups (allows organizing filters into groups and switching
+		between them from the UI or via connected Web Parts)</li>
+	<li>Substantial user interface and documentation improvements</li>
+	<li>Fixed: CAML Filtering mode did not always work for Data Form Web Parts</li>
+	<li>Fixed: multiple-selection drop-down filter controls did not post back to re-filter
+		automatically although the corresponding Web Part setting was ticked.</li>
+</ul>
+<h3>
+	Version 3.2 (19th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<ul>
+	<li>(28th August 2009) Fixed: date-relative offsets didn't initialize date filtering
+		controls correctly</li>
+	<li>(27th August 2009) Fixed: "Clear Filters" now works with multi-selection filtering
+		controls</li>
+	<li>The CAML Filtering mode (for using filter operators other than <i>Equals</i>) can
+		now be used with the SharePoint Server BCS/BDC Business Data List / Related List
+		Web Parts.</li>
+</ul>
+<h3>
+	Version 3.1 (5th July 2009)<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<ul>
+	<li>(22th July 2009) Fixed: Solution Package generated partially invalid SafeControl
+		entries in web.config, rendering certain Web Parts unusable on WSS-only systems</li>
+	<li>Added formatting and regional options to Date Filters.</li>
+	<li>Added dynamic filter names from request parameters to Page Request / URL Filters:
+		if the filter name has the format '{{foo}}' then the filter name to use will be
+		obtained dynamically from the page request parameter 'foo'.</li>
+</ul>
+<h3>
+	Version 3.0 (19th June 2009)<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<ul>
+	<li>Added full support for multiple filter values</li>
+	<li>Added post-processing option to all filter types to convert resulting filter name-value
+		pairs to multiple filter values or name-value-pairs.</li>
+</ul>
+<h3>
+	Version 2.6 (19th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<ul>
+	<li>Product configuration settings can now be set on the farm level (by farm administrators)
+		and optionally be customized on the site collection level (by site collection root
+		web site administrators).</li>
+	<li>Added documentation for the <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i>
+		Web Part and the <i>BCS/BDC Filter</i> type.</li>
+</ul>
+<h3>
+	Version 2.5 (18th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<ul>
+	<li>Page Request / URL Filters now use the filter name if no parameter name was specified,
+		as was previously indicated by the filter editor user interface</li>
+	<li>Added support for sending single a filter value to compatible &quot;cell consumer&quot;
+		Web Parts (such as Image Web Part)</li>
+	<li>Added support for sending all filter values as a data row to compatible &quot;row
+		consumer&quot; Web Parts</li>
+	<li>Added infrastructure support and API for developing and loading custom <b>FilterZen</b>
+		filter types</li>
+	<li>Added infrastructure support for the Business Data Connectivity Services (BCS/BDC)
+		feature of Microsoft Office SharePoint Server Enterprise Edition:<ul>
+			<li>Added the <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i> Web Part, which
+				like the out-of-the-box <i>Business Data Item Builder</i> Web Part sends a Business
+				Data Connectivity (BCS/BDC) external data record / Entity Instance to any connected
+				Business Data Web Part, but instead of using URL query string parameters obtains
+				the required Entity Instance ID from any connected cell or row provider Web Part.</li>
+			<li>New filter type: BCS/BDC Filter (filter value lookup from any Business Data Connectivity
+				Services (BCS/BDC) external content type, with optional interactive entity instance
+				picker)</li>
+		</ul>
+	</li>
+</ul>
+<h3>
+	Version 2.4 (12th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ul>
+	<li>Bug fixed: Web Part displayed &quot;license user limit exceeded&quot; error message
+		despite unlimited-user licenses</li></ul>
+<h3>
+	Version 2.3 (11th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<ul>
+	<li>New filter type: SQL Data Filter (filter value lookup from any ADO.NET-compatible
+		data source)</li>
+	<li>Bug fixed: Web Part displayed &quot;unhandled exception&quot; error messages in
+		SharePoint Designer</li></ul>
+<h3>
+	Version 2.2 (29th April 2009)<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<ul>
+	<li>Support for programmatically creating and modifying <b>FilterZen</b> Filter Web
+		Parts and filters from code running server-side outside a SharePoint context</li></ul>
+<h3>
+	Version 2.1 (28th April 2009)<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<ul>
+	<li>Support for programmatically creating and modifying <b>FilterZen</b> Filter Web
+		Parts and filters from code running server-side in a SharePoint context</li></ul>
+<h3>
+	Version 2.0 (27th April 2009)<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<ul>
+	<li>New filter types: Choice Filters, Date Filters, List Lookup Filters, Page Column
+		Filters, Text Filters, User Filters</li>
+	<li>New Page Request / URL Filter options:<ul>
+		<li>Get parameter not only from URL query string but also from URL path structure</li>
+		<li>URL pattern preview</li>
+		<li>Farm-wide URL parameter black list (for PageView, DisplayMode, etc.)</li>
+	</ul>
+	</li>
+	<li>Optional, CSS-customizable interactive filters</li>
+	<li>Options to suppress certain filter names or values</li>
+	<li>Option to remember filter values last used for each user</li>
+	<li>Option to override most Web Part or filter settings from URL parameters</li>
+	<li>Option to dynamically generate interactive filters on the fly from known filtered
+		columns</li>
+</ul>
+<h3>
+	Version 1.0 (09th April 2009)<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<ul>
+	<li>Initial Release: <b>FilterZen</b> URL Filter Web Part</li>
+</ul>
+<h1 style="page-break-before: always;">End-User License Agreement (EULA)</h1><h3>
+	END-USER SOFTWARE LICENSE AGREEMENT FOR ROXORITY SOFTWARE PRODUCTS<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	THIS IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE
+	ENTITY) AND ROXORITY LTD. (ROXORITY) FOR ROXORITY SOFTWARE, ASSOCIATED MEDIA AND
+	PRINTED MATERIALS, AND MAY INCLUDE ONLINE OR ELECTRONIC DOCUMENTATION (&quot;SOFTWARE&quot;).
+	BY INSTALLING, COPYING, OR OTHERWISE USING THE ROXORITY SOFTWARE PRODUCT, YOU ARE
+	AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING THE
+	SOFTWARE LICENSE AND DISCLAIMER OF SOFTWARE WARRANTY BELOW. PLEASE READ THIS DOCUMENT
+	CAREFULLY BEFORE USING THE SOFTWARE. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS
+	OF THIS AGREEMENT, YOU MUST NOT INSTALL OR USE THE SOFTWARE.</p>
+<h3>
+	LICENSE GRANT<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	&quot;You&quot; or &quot;your&quot; as used herein means the person or company who is being licensed
+	to use the Software, as defined below. &quot;We,&quot; &quot;us&quot; and &quot;our&quot; as used herein means
+	ROXORITY Ltd.</p>
+<p>
+	The &quot;Software&quot; as referred to herein means the ROXORITY Software &quot;FilterZen&quot;, a
+	product that extends &quot;Microsoft SharePoint&quot; web sites to provide additional capabilities.
+</p>
+<p>
+	We hereby grant you a perpetual, non-exclusive, non-transferable, revocable license
+	to use the Software on your server and client computers.</p>
+<p>
+	The total number of SharePoint &quot;Site Collections&quot; or &quot;server farms&quot; that the Software
+	can be &quot;activated&quot; on (after 45 days of free trial use) shall be limited to the
+	number of licenses which you purchase. For example, if you purchase 4 Site Collection
+	licenses, you may activate the Software on up to 4 SharePoint Site Collections;
+	if you purchase 2 server farm licenses, you may active the Software on unlimited
+	Site Collections within up to 2 server farms.</p>
+<p>
+	Each license is issued to one unique Site Collection or server farm and cannot be
+	transferred to another Site Collection or server farm.
+</p>
+<h3>
+	TITLE<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The Documentation as referred to herein shall mean the written materials that you
+	may receive in connection with the Software. We will remain the sole and exclusive
+	owners of all right, title and interest in and to the Software and the Documentation.</p>
+<h3>
+	ARCHIVAL OR BACKUP COPIES<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	You may copy the Software for back-up and archival purposes only, provided however,
+	that at all times herein, the original and each copy is kept in your possession
+	and that your installation and use of the Software does not exceed that allowed
+	in the &quot;License Grant&quot; section above.</p>
+<h3>
+	THINGS YOU MAY NOT DO<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	You agree and acknowledge that the Software and Documentation are proprietary works
+	that are protected by the copyright laws of various nations. You may only use the
+	Software and Documentation for the purposes and in accordance with the terms of
+	this Agreement. You may not, without limitation:</p>
+<ul>
+	<li>copy the Documentation, </li>
+	<li>copy the Software except to make archival or backup copies as provided above,
+	</li>
+	<li>place the Software onto a server so that it is accessible via a public network such
+		as the Internet, except as provided for above in &quot;LICENSE GRANT,&quot; </li>
+	<li>sublicense, rent, lease or lend any portion of the Software or Documentation.
+	</li>
+</ul>
+<p>
+	You acknowledge that any violation of this paragraph will cause us immediate and
+	irreparable harm and that the damages which we will suffer may be difficult or impossible
+	to measure. Therefore, upon any actual or impending violation of this paragraph,
+	we shall be entitled to the issuance of a restraining order, preliminary and permanent
+	injunction without bond, restraining or enjoining such violation by you, your successors
+	or assignees or any entity or person acting in concert with you. Such remedy shall
+	be additional to and not in limitation of any other remedy which may otherwise be
+	available to us by law.</p>
+<h3>
+	TRANSFERS<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>
+	You may assign all your license to use the Software and Documentation to another
+	person or legal entity (the &quot;Assignee&quot;), provided however, that prior to such assignment,
+	the Assignee undertakes in writing to be bound by your obligations under this Agreement.
+	Any attempt to assign or transfer the license to the Software, the Documentation
+	or this Agreement shall be ineffective, unless the assignment complies with the
+	terms of this paragraph. Upon assignment of your license hereunder, you agree to
+	transfer to the Assignee all of your copies of the Software and Documentation, including
+	all copies of updates and prior versions of the Software and Documentation and you
+	further agree and that you will retain no copies, including, without limitation,
+	electronic copies stored on computer discs or drives.</p>
+<h3>
+	DISCLAIMER OF WARRANTY<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>
+	Except as otherwise provided herein, we warrant that the Software is free from defects
+	in material and workmanship and will perform substantially in accordance with the
+	Software documentation under normal use for one hundred eighty (180) days after
+	the receipt of the Software. If you notify us within such one hundred eighty (180)
+	day period of any claimed defect in the Software, we will at our sole option and
+	expense, and as you sole remedy, either repair or replace the defective Software.
+	Or, if we cannot repair or replace the Software then we will accept the return of
+	the Software at our expense and refund the purchase price of the Software.
+</p>
+<p>
+	EXCEPT AS STATED HEREIN, THE SOFTWARE AND SERVICES OFFERED BY US ARE PROVIDED ON
+	AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY OTHER KIND, EXPRESS,
+	IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE,
+	NONINFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT
+	WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, RELIABLE, SECURE OR ERROR-FREE
+	AND EXPRESSLY DISCLAIM ANY WARRANTIES AS TO THE MATERIALS CONTAINED THEREIN, THE
+	SERVERS USED OR THE GOODS OR SERVICES OFFERED BY US.</p>
+<h3>
+	EXCLUSION OF CERTAIN DAMAGES<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>
+	IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS,
+	LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE
+	OR THE INABILITY TO USE THE SOFTWARE (EVEN IF A PARTY OR AN AUTHORIZED DEALER OR
+	DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR FOR ANY CLAIM
+	BY ANY OTHER PARTY. EXCLUDED FROM THE ABOVE LIMITATION OF LIABILITY IS LIABILITY
+	FOR INDEMNIFICATION AS STATED HEREIN AND DAMAGES CAUSED BY THE GROSS NEGLIGENCE
+	OR WILLFUL MISCONDUCT OF A PARTY.</p>
+<h3>
+	TERM AND TERMINATION<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>
+	This Agreement takes effect upon your acceptance of the terms of this Agreement
+	and remains effective until terminated by either party in accordance with this Agreement.
+	You may terminate this Agreement at any time by destroying all copies of the Software
+	and Documentation in your possession and giving us prompt notice of same. This Agreement
+	will automatically terminate if you fail to comply with any term or condition of
+	this Agreement. Upon termination of this Agreement, you warrant and represent that
+	you will immediately destroy all copies of the Software and Documentation or other
+	materials provided to you hereunder, if any, that are still in your possession and
+	provide us prompt written assurance of same.</p>
+<h3>
+	CONFIDENTIALITY<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>
+	Non-disclosure. You agree and acknowledge that the Software, its algorithms, protocols
+	or interfaces, and the Documentation constitute proprietary and confidential information
+	that belong to us (the &quot;Confidential Information&quot;). You also understand and agree
+	that misuse and/or unauthorized disclosure of our Confidential Information could
+	adversely affect our business. Accordingly, you agree that at all times you will
+	(a) use and reproduce the Confidential Information only for the purposes of this
+	Agreement and only to the extent necessary for such purpose; (b) restrict disclosure
+	of the Confidential Information to your employees, consultants or independent contractors
+	with a need to know and (c) not disclose the Confidential Information to any third
+	party without our prior written approval. Notwithstanding the foregoing, it shall
+	not be a breach of this Agreement for You to disclose Confidential Information if
+	required to do so under law or in a judicial or other governmental investigation
+	or proceeding, provided however, that You give us prior notice of the disclosure
+	sought and You seek all reasonably available safeguards against widespread dissemination
+	prior to such disclosure.</p>
+<p>
+	Remedies. You acknowledge that any violation of this paragraph may cause us immediate
+	and irreparable harm and that the damages which we will suffer may be difficult
+	or impossible to measure. Therefore, upon any actual or impending violation of this
+	paragraph, we shall be entitled to the issuance of a restraining order, preliminary
+	and permanent injunction without bond, restraining or enjoining such violation by
+	you, your successors or assigns or any entity or person acting in concert with you.
+	Such remedy shall be additional to and not in limitation of any other remedy which
+	may otherwise be available to us by law.</p>
+<h3>
+	INDEMNITY<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>
+	We will at our own expense defend and hold you fully harmless against any action
+	asserted against you (and specifically including costs and reasonable attorneys&#39;
+	fees associated with any such action) to the extent that it is based on a claim
+	that use of the Software and any documentation or other materials being licensed
+	by or provided to you under this Agreement infringes any patent, copyright, license
+	or other proprietary right of any third party. You shall promptly notify us in writing
+	of any such claim. If as a result of any claim of infringement against any patent,
+	copyright, License or other proprietary right of any third party, you are enjoined
+	from using the Software, or if we believe that the Software are likely to become
+	the subject of a claim of infringement, We will at our option and expense will procure
+	the right for you to continue to use the Software, or replace or modify the Software
+	so as to make them non-infringing, or if it cannot do so within a reasonable time
+	period, refund the Software fees paid by you pursuant to the Agreement.
+</p>
+<h3>
+	GENERAL PROVISIONS<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ol>
+	<li>This Agreement constitutes the entire agreement between you and us concerning the
+		Software and Documentation and supersedes any prior or contemporaneous negotiations,
+		discussions, understandings, purchase orders, communications, advertising or representations
+		concerning the subject matter hereof. </li>
+	<li>This Agreement may be modified or amended only in writing signed by you and us.
+	</li>
+	<li>In the event of litigation between you and us concerning the Software or Documentation,
+		the prevailing party in the litigation will be entitled to recover attorneys&#39; fees
+		and expenses from the other party. </li>
+	<li>You agree that the Software will not be shipped, transferred or exported into any
+		country or used in any manner prohibited by any export laws, restrictions or regulations.
+	</li>
+	<li>The failure or delay of of either party to exercise any of its rights under this
+		Agreement or upon any breach of this Agreement shall not be deemed a waiver of those
+		rights or of the breach.</li>
+	<li>If any provision of this Agreement shall be held by a court of competent jurisdiction
+		to be contrary to law that provision will be enforced to the maximum extent permissible
+		and the remaining provisions of this Agreement will remain in full force and effect.</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"></div>
+</body>
+</html>

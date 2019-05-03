@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29763A96-DE03-4B81-9858-50B9A08E2BCE}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>roxority_PeopleZen</RootNamespace>
+    <AssemblyName>roxority_PeopleZen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PEOPLEZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>PEOPLEZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupToolPart.cs">
+      <Link>RollupToolPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupWebPart.cs">
+      <Link>RollupWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>roxority.SharePoint\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>roxority.SharePoint\JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>roxority.SharePoint\ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.cs">
+      <Link>roxority.SharePoint\roxority.Data.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.Server.cs">
+      <Link>roxority.SharePoint\roxority.Data.Server.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="roxority_UserListWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="12\Template\features\roxority_UserListWebPart\roxority_UserListWebPart\roxority_UserListWebPart.webpart">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="12\Template\layouts\roxority_PeopleZen\adpic2010\PicImportADtoSP2010.exe.config" />
+    <None Include="12\Template\layouts\roxority_PeopleZen\schemas.tl.json" />
+    <None Include="Properties\roxority.snk" />
+    <None Include="WSPBuilder.exe.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="12\Resources\roxority_PeopleZen.de.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="12\Resources\roxority_PeopleZen.resx">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_DataFieldFormats.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\ItemEditor.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_FieldFormats.tc.ascx" />
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_Localizer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_DataSources.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_SiteUsers.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\controltemplates\roxority_PeopleZen\Tool_Transfer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\features\roxority_PeopleZen_AdminLinks\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\Template\features\roxority_UserListWebPart\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\Template\features\roxority_UserListWebPart\roxority_UserListWebPart\roxority_UserListWebPart.xml" />
+    <Content Include="12\Template\features\roxority_PeopleZen_AdminLinks\SiteAdminLinks.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\Template\images\roxority_PeopleZen\b.gif" />
+    <Content Include="12\Template\images\roxority_PeopleZen\itdisc.gif" />
+    <Content Include="12\Template\images\roxority_PeopleZen\k.gif" />
+    <Content Include="12\Template\images\roxority_PeopleZen\l.gif" />
+    <Content Include="12\Template\images\roxority_PeopleZen\NO_PIC.GIF" />
+    <Content Include="12\Template\images\roxority_PeopleZen\PERSON.GIF" />
+    <Content Include="12\Template\images\roxority_PeopleZen\roxority_PeopleZen.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <None Include="12\Template\layouts\roxority_PeopleZen\adpic2010\PicImportADtoSP2010.exe" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\de\farm_site_config.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\de\itemref_DataFieldFormats.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\de\itemref_DataSources.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\farm_site_config.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\itemref_DataFieldFormats.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\itemref_DataSources.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint-server-farm-solution-package-wsp-installation.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\web_part_user_profile_data_sources.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\de\eula.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint-staff-directory-print-friendly-view-phone-listing-user-profiles-web-part.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_alphabetical_index.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_configure_connection_dialog.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_display_style.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_filtering_search.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_get_filter_values_from.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_quick_filter_tabs.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_web_part_user_profile_properties.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\web_part_user_profile_properties.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\user_profiles_web_part_misc.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_filtering_tabbing_search.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_im_ocs_presence.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_misc.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_paging.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint_user_profiles_web_part_sorting_grouping.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\user_profiles_web_part_display_style.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\user_profiles_web_part_sorting_grouping.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\user_profiles_web_part_filtering_tabbing_search.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\user_profiles_web_part_paging.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\bgtmp.tlhr.jpg" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\ie6.tl.css" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\bgtmp.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\choicebrowse.gif" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\completeallwftasks.gif" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\ContentAreaBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\ContentAreaShadow.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\ewr200l.gif" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\favicon.ico" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\af.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ar.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\az.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\be.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\bg.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ca.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\cs.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\da.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\de.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\dv.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\el.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\en.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\es.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\et.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\eu.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\fa.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\fi.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\fo.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\fr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\gl.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\gu.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\he.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\hi.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\hr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\hu.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\hy.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\id.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\is.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\it.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ja.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ka.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\kk.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\kn.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ko.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\kok.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ky.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\lt.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\lv.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\mk.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\mn.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\mr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ms.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\nl.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\no.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\pa.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\pl.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\pt.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ro.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ru.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sa.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sk.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sl.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sq.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sv.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\sw.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\syr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ta.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\te.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\th.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\tr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\tt.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\uk.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\ur.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\uz.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\flag\vi.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\FooterBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\HeaderBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\ie6.gif" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\LSTPEND.GIF" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\PageTitleBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\ProdNavGrad.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\RightNavActive.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\RightNavBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\RightNavBottomShadow.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\RightNavSection.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\RightNavTopShadow.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\star.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\TabBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\TabHoverBackground.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\TopNavActive.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\TopNavHover.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\img\VerticalShadow.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\help.tlhr.css" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\roxlogo.tlhr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\roxority.tlhr.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint-people-web-part-user-profiles-table-list-view.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\jQuery.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\jsapi.tl.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\json2.tl.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\magpop.css" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\magpop.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\mash.tl.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\Template\layouts\roxority_PeopleZen\roxority.tl.css" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\roxority.tl.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\RollupZen.tl.css" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\RollupZen.tl.js" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\roxsite.tl.css" />
+    <Content Include="Cache.txt" />
+    <Content Include="12\Template\images\roxority_PeopleZen\feature.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\ref_css.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\ref_url_settings.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\eula.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\intro.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\release_notes.html" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\setup06.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\setup07.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint-moss-people-user-profiles-web-part-settings.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\sharepoint-moss-people-web-part-user-profiles.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\res\wpdialog.png" />
+    <Content Include="12\Template\layouts\roxority_PeopleZen\help\setup.html" />
+    <Content Include="solutionid.txt" />
+    <Content Include="_14\template\features\roxority_PeopleZen_AdminLinks\SiteAdminLinks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>del "$(TargetDir)ssocli.dll"
+"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" CopyFiles $(SolutionName)</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

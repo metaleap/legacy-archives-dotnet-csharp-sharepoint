@@ -1,0 +1,158 @@
+<p>Die folgenden Einstellungen k&ouml;nnen f&uuml;r jede Datenquelle durch administrative Benutzer auf der Seite <b>Datenquellen</b> in Ihrem <i>PeopleZen Studio</i> vorgenommen werden; via Websiteeinstellungen / PeopleZen Studio / Datenquellen:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">Register &quot;Allgemein&quot;:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name dieser Datenquelle</h3>
+<p><b>(Texteingabefeld)</b></p><p>Dieser Name wird &uuml;blicherweise Endanwendern nirgends angezeigt, hilft Ihnen aber gegebenenfalls, die &Uuml;bersicht zu behalten.</p>
+<h3>Verbindungsanbieter</h3>
+<p><b>(Auswahl eines Datenquellen-Verbindungsanbieters)</b></p><p>W&auml;hlen Sie aus, welche Art von Datenverbindung von dieser Datenquelle verwendet wird. <b>Wenn Sie diese Einstellung &auml;ndern, m&uuml;ssen alle anderen Einstellungen auf den anderen Registerkarten &uuml;berpr&uuml;ft (und viele neu gesetzt) werden.</b></p>
+<ul>
+<li><b>Farm-Benutzerprofile</b><br/>&mdash; <i>(SPS 2010: Dienstanwendung / MOSS 2007: Gemeinsame Dienste)</i></li>
+<li><b>Site-Benutzerkonten (Personen und Gruppen)</b><br/>&mdash; <i>auf Websitesammlungs- oder Websiteebene</i></li>
+<li><b>Active Directory</b><br/>&mdash; <i>(oder andere LDAP-kompatible Verzeichnisdienste)</i></li>
+<li><b>Datenbank</b><br/>&mdash; <i>(SQL Server, Oracle und andere OLEDB-, ODBC- oder ADO.NET-kompatible Datenquellen)</i></li>
+</ul>
+<h3>Sicherheitskontext f&#252;r Datenquellenkonsumenten</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie aus, welchen Sicherheitskontext Konsumenten dieser Datenquelle (z.B. PeopleZen-Webparts, Nachschlagespalten etc.) beim Zugriff auf diese Datenquelle etablieren sollten.</p>
+<ul>
+<li><b>Aktueller Benutzer ABER bei Zugriffsverweigerung auf Elevation ausweichen</b><br/>&mdash; <i>empfohlen</i></li>
+<li><b>NUR aktueller Benutzer</b><br/>&mdash; <i>l&#228;uft im Berechtigungskontext des aufrufenden Benutzers</i></li>
+<li><b>NUR Elevation</b><br/>&mdash; <i>l&#228;uft im Berechtigungskontext der aktuellen IIS-Anwendungspool-Identit&#228;t</i></li>
+<li><b>Impersonieren</b><br/>&mdash; <i>l&#228;uft im Berechtigungskontext eines angegebenen Benutzernamens</i></li>
+</ul>
+<h3>Folgenden Benutzer impersonieren</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie einen vollqualifizierten Windows-Anmeldenamen (im Format ihredomaene\benutzer123) f&uuml;r die Impersonierung an.</p>
+<h3>Kennwort f&#252;r impersonierten Benutzer</h3>
+<p><b>(Texteingabefeld)</b></p><p>Das Passwort wird verschl&uuml;sselt gespeichert.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserProfiles"><a href="#" onclick="roxTogDocTab('t__UserProfiles');">Register &quot;Farm-Benutzerprofile&quot;:</a></h4><span class="rox-doctab rox-doctab-t__UserProfiles">
+<h3>Benutzernamen ausschlie&#223;en</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie optional die Muster jener Benutzernamen an (eines pro Zeile), die von der Anzeige in allen PeopleZen-Webparts immer ausgeschlossen werden sollen (z.B. Dienstkonten). Sie k&ouml;nnen pro Zeile ein Sternchen (*) entweder am Anfang ("endet auf"), am Ende ("beginnt mit") oder an beiden Enden ("enth&auml;lt") angeben. Die Gro&szlig;- und Kleinschreibung dieser Einstellung spielt keine Rolle.<br/><br/><b>Wichtig:</b> die in dieser Einstellung definierten Muster werden mit dem (im <i>Datenfelder</i>-Tab angegebenen) <b>Anmeldename-Datenfeld</b> abgeglichen.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Dom&#228;ne aus (im Name/Titel-Spezialfeld angezeigten) Nutzernamen entfernen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Benutzernamen werden normalerweise je nach Ihrer <b>Name/Titel-Datenfeld/er</b>-Einstellung (im <i>Datenfelder</i>-Tab) angezeigt. F&uuml;r einige von dieser Datenquelle zur&uuml;ckgegebene Benutzer wurde u.U. (noch) kein Anzeigename (z.B. Kombination Vor- und Nachname) definiert und hier wird ggf. deren vollqualifizierter Dom&auml;nenkontenname (<b>firmendomaene\benutzer123</b>) angezeigt. Kreuzen Sie diese Option an, um den Dom&auml;nenanteil eines jeden (im Name/Titel-Spezialfeld angezeigten) Benutzernamens immer von der Darstellung auszuschlie&szlig;en.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserAccounts"><a href="#" onclick="roxTogDocTab('t__UserAccounts');">Register &quot;Site-Benutzerkonten (Personen und Gruppen)&quot;:</a></h4><span class="rox-doctab rox-doctab-t__UserAccounts">
+<h3>Benutzernamen ausschlie&#223;en</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie optional die Muster jener Benutzernamen an (eines pro Zeile), die von der Anzeige in allen PeopleZen-Webparts immer ausgeschlossen werden sollen (z.B. Dienstkonten). Sie k&ouml;nnen pro Zeile ein Sternchen (*) entweder am Anfang ("endet auf"), am Ende ("beginnt mit") oder an beiden Enden ("enth&auml;lt") angeben. Die Gro&szlig;- und Kleinschreibung dieser Einstellung spielt keine Rolle.<br/><br/><b>Wichtig:</b> die in dieser Einstellung definierten Muster werden mit dem (im <i>Datenfelder</i>-Tab angegebenen) <b>Anmeldename-Datenfeld</b> abgeglichen.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Dom&#228;ne aus (im Name/Titel-Spezialfeld angezeigten) Nutzernamen entfernen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Benutzernamen werden normalerweise je nach Ihrer <b>Name/Titel-Datenfeld/er</b>-Einstellung (im <i>Datenfelder</i>-Tab) angezeigt. F&uuml;r einige von dieser Datenquelle zur&uuml;ckgegebene Benutzer wurde u.U. (noch) kein Anzeigename (z.B. Kombination Vor- und Nachname) definiert und hier wird ggf. deren vollqualifizierter Dom&auml;nenkontenname (<b>firmendomaene\benutzer123</b>) angezeigt. Kreuzen Sie diese Option an, um den Dom&auml;nenanteil eines jeden (im Name/Titel-Spezialfeld angezeigten) Benutzernamens immer von der Darstellung auszuschlie&szlig;en.</p>
+<h3>Benutzerkonten aufz&#228;hlen</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie aus, ob und welche Benutzerkonten zur&uuml;ckgegeben werden sollen.</p>
+<ul>
+<li><b>Alle</b><br/>&mdash; <i>Mitglieder der aktuellen Website und Besucher, die authentifizierte Dom&#228;nengruppenmitglieder sind</i></li>
+<li><b>Websitesammlungs-Benutzerkonten</b><br/>&mdash; <i>Benutzerkonten, die zur aktuellen Websitesammlung geh&#246;ren</i></li>
+<li><b>Website-Benutzerkonten</b><br/>&mdash; <i>Benutzerkonten, denen in dieser Website explizit Berechtigungen erteilt wurden</i></li>
+<li><b>Keine</b><br/>&mdash; <i>es werden keine Benutzerkonten zur&#252;ckgegeben</i></li>
+</ul>
+<h3>Benutzergruppen aufz&#228;hlen</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie aus, ob und welche Benutzergruppen zur&uuml;ckgegeben werden sollen.</p>
+<ul>
+<li><b>Keine</b><br/>&mdash; <i>es werden keine Benutzergruppen zur&#252;ckgegeben</i></li>
+<li><b>Websitegruppen</b><br/>&mdash; <i>alle Benutzergruppen der aktuellen Website werden zur&#252;ckgegeben</i></li>
+<li><b>Websitesammlungsgruppen</b><br/>&mdash; <i>alle Benutzergruppen der aktuellen Websitesammlung werden zur&#252;ckgegeben</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Directory"><a href="#" onclick="roxTogDocTab('t__Directory');">Register &quot;Active Directory&quot;:</a></h4><span class="rox-doctab rox-doctab-t__Directory">
+<h3>Benutzernamen ausschlie&#223;en</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie optional die Muster jener Benutzernamen an (eines pro Zeile), die von der Anzeige in allen PeopleZen-Webparts immer ausgeschlossen werden sollen (z.B. Dienstkonten). Sie k&ouml;nnen pro Zeile ein Sternchen (*) entweder am Anfang ("endet auf"), am Ende ("beginnt mit") oder an beiden Enden ("enth&auml;lt") angeben. Die Gro&szlig;- und Kleinschreibung dieser Einstellung spielt keine Rolle.<br/><br/><b>Wichtig:</b> die in dieser Einstellung definierten Muster werden mit dem (im <i>Datenfelder</i>-Tab angegebenen) <b>Anmeldename-Datenfeld</b> abgeglichen.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Dom&#228;ne aus (im Name/Titel-Spezialfeld angezeigten) Nutzernamen entfernen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Benutzernamen werden normalerweise je nach Ihrer <b>Name/Titel-Datenfeld/er</b>-Einstellung (im <i>Datenfelder</i>-Tab) angezeigt. F&uuml;r einige von dieser Datenquelle zur&uuml;ckgegebene Benutzer wurde u.U. (noch) kein Anzeigename (z.B. Kombination Vor- und Nachname) definiert und hier wird ggf. deren vollqualifizierter Dom&auml;nenkontenname (<b>firmendomaene\benutzer123</b>) angezeigt. Kreuzen Sie diese Option an, um den Dom&auml;nenanteil eines jeden (im Name/Titel-Spezialfeld angezeigten) Benutzernamens immer von der Darstellung auszuschlie&szlig;en.</p>
+<h3>Verbindungs-URL (erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Die LDAP/ADSI-Verbindungszeichenfolge, die von dieser Datenquelle zur Verbindung mit Ihrem Verzeichnisdienst verwendet wird.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>LDAP://OU=Departments,DC=global,DC=local</pre>
+<h3>Suchabfrage f&#252;r Verzeichnisdienst-seitige Vorfilterung (falls erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Eine optionale LDAP/ADSI-Abfrage, anhand derer die vom Verzeichnisdienst an diese Datenquelle zur&uuml;ckgegebene Ergebnismenge vorgefiltert wird. (Ist hier eine Filterabfrage definiert, f&uuml;hrt diese Datenquelle beim Verzeichnisdienst eine Suche durch und zeigt deren Ergebnisse an; andernfalls werden einfach alle Verzeichniseintr&auml;ge abgerufen und angezeigt.)</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>(&amp;(objectCategory=person)(objectClass=user))</pre>
+<h3>Suchbereich f&#252;r Verzeichnisdienst-seitige Vorfilterung (falls erforderlich)</h3>
+<p>Geben Sie den Suchbereich an, der bei Aufruf der (durch die hier&uuml;ber angegebene Suchabfrage definierten) Verzeichnissuche verwendet werden soll.</p>
+<ul>
+<li>Subtree</li>
+<li>Base</li>
+<li>OneLevel</li>
+</ul>
+<h3>Authentifizierungsmodus</h3>
+<p>W&auml;hlen Sie aus, wie sich diese Datenquelle gegen&uuml;ber dem oben angegebenen Verzeichnisdienst selbst authentifizieren soll.</p>
+<ul>
+<li><b>Standard (o. keine)</b><br/>&mdash; <i>verwendet Standardauthentifizierung (einfache Bindung)</i></li>
+<li><b>Sicher</b><br/>&mdash; <i>fordert die sichere Authentifizierung &#252;ber NTLM oder Kerberos an</i></li>
+<li><b>Verschl&#252;sselt</b><br/>&mdash; <i>eine kryptografische Signatur, die den Absender kennzeichnet</i></li>
+<li><b>Anonym</b><br/>&mdash; <i>es wird keine Authentifizierung durchgef&#252;hrt</i></li>
+<li><b>Delegiert</b><br/>&mdash; <i>Sicherheitskontext des Benutzers wird delegiert</i></li>
+</ul>
+<h3>Benutzername f&#252;r Verzeichnisdienstauthentifizierung (falls erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Falls Sie unter <i>Authentifizierungsmodus</i> oben <b>Sicher</b> ausgew&auml;hlt haben, k&ouml;nnen Sie hier optional einen vollqualifizierten Benutzernamen zur Anmeldung dieser Datenquelle am Verzeichnisdienst angeben. Falls Sie diese Angabe freilassen, verwendet der <i>Sicher</i>-Authentifizierungsmodus den aktuellen Sicherheitskontext; falls nicht, m&uuml;ssen Sie auch (hierunter) ein Anmeldekennwort angeben.</p>
+<h3>Kennwort f&#252;r Verzeichnisdienstauthentifizierung (falls erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Falls Sie unter <i>Authentifizierungsmodus</i> oben <b>Sicher</b> ausgew&auml;hlt haben, k&ouml;nnen Sie hier optional das Kennwort zur Anmeldung des hier&uuml;ber angegebenen Benutzers am Verzeichnisdienst angeben. Falls Sie diese Angabe freilassen, verwendet der <i>Sicher</i>-Authentifizierungsmodus den aktuellen Sicherheitskontext; falls nicht, m&uuml;ssen Sie auch hier&uuml;ber ein einen Benutzernamen angeben.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Ado"><a href="#" onclick="roxTogDocTab('t__Ado');">Register &quot;Datenbank&quot;:</a></h4><span class="rox-doctab rox-doctab-t__Ado">
+<h3>Benutzernamen ausschlie&#223;en</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie optional die Muster jener Benutzernamen an (eines pro Zeile), die von der Anzeige in allen PeopleZen-Webparts immer ausgeschlossen werden sollen (z.B. Dienstkonten). Sie k&ouml;nnen pro Zeile ein Sternchen (*) entweder am Anfang ("endet auf"), am Ende ("beginnt mit") oder an beiden Enden ("enth&auml;lt") angeben. Die Gro&szlig;- und Kleinschreibung dieser Einstellung spielt keine Rolle.<br/><br/><b>Wichtig:</b> die in dieser Einstellung definierten Muster werden mit dem (im <i>Datenfelder</i>-Tab angegebenen) <b>Anmeldename-Datenfeld</b> abgeglichen.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Dom&#228;ne aus (im Name/Titel-Spezialfeld angezeigten) Nutzernamen entfernen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Benutzernamen werden normalerweise je nach Ihrer <b>Name/Titel-Datenfeld/er</b>-Einstellung (im <i>Datenfelder</i>-Tab) angezeigt. F&uuml;r einige von dieser Datenquelle zur&uuml;ckgegebene Benutzer wurde u.U. (noch) kein Anzeigename (z.B. Kombination Vor- und Nachname) definiert und hier wird ggf. deren vollqualifizierter Dom&auml;nenkontenname (<b>firmendomaene\benutzer123</b>) angezeigt. Kreuzen Sie diese Option an, um den Dom&auml;nenanteil eines jeden (im Name/Titel-Spezialfeld angezeigten) Benutzernamens immer von der Darstellung auszuschlie&szlig;en.</p>
+<h3>ADO.NET-Datenbankverbindungsanbieter</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option aus einer konfigurierbaren Menge)</b></p><p>W&auml;hlen Sie den von dieser Datenquelle zu verwendenden ADO.NET-Datenbankverbindungsanbieter aus. Sie k&ouml;nnen die hier verf&uuml;gbaren Optionen bei Bedarf &uuml;ber die Konfigurationseinstellung <a target="_blank" href="?cfg=cfg#cfg_DataProviders">ADO.NET-Datenbankverbindungsanbieter f&uuml;r SQL-Datenzugriff</a> erweitern oder einschr&auml;nken.</p>
+<p>Das Dropdown-Men&uuml; bietet eine Menge an Optionen zur Auswahl an, welche ihrerseits auf der Konfiguration-Seite im PeopleZen-Studio angepa&szlig;t werden kann.</p>
+<h3>ADO.NET-Datenbankverbindungszeichenfolge (erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die ADO.NET-Datenbankverbindungszeichenfolge (inklusive Anmeldeinformationen, falls erforderlich) an, die von dieser Datenquelle zur Verbindung mit Ihrer Datenbank verwendet wird. Falls Sie ein Kennwort angeben, es aber verstecken (und verschl&uuml;sselt speichern) wollen, geben Sie an Stelle des Kennworts den Platzhalter <b>{$ROXPWD$}</b> an und geben Sie das Kennwort dann im Feld hierunter an.</p>
+<h3>ADO.NET-Datenbankverbindungskennwort (falls erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Falls in obiger Einstellung der Platzhalter <b>{$ROXPWD$}</b> eingef&uuml;gt wurde, kann hier das korrespondierende Kennwort angegeben werden. Dieses wird verschl&uuml;sselt gespeichert.</p>
+<h3>ADO.NET-Datenabfrage (erforderlich)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Abfrage an, welche an die obig angegebene Datenbank gesendet wird, um die Ergebnismenge abzurufen, die von dieser Datenquelle zur&uuml;ckgegeben werden soll. Die Abfrage formulieren Sie in SQL oder einer beliebigen anderen Abfragesprache, die vom ausgew&auml;hlten ADO.NET-Datenbankverbindungsanbieter unterst&uuml;tzt bzw. erfordert wird.<br/><br/><b>Wichtig:</b> falls Sie f&uuml;r diese ADO.NET-Datenquelle Caching aktiviert haben (im Caching-Register), <i>m&uuml;ssen</i> Sie in dieser Abfrage <b>zwingend eine immer konsistente Sortierreihenfolge der rohen Ergebnismenge sicherstellen</b>, z.B. durch eine ORDER BY-Klausel oder ein &Auml;quivalent.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-u"><a href="#" onclick="roxTogDocTab('u');">Register &quot;Caching&quot;:</a></h4><span class="rox-doctab rox-doctab-u">
+<h3>Datenquellen-Caching im Server-RAM</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>Wird Caching aktiviert, erstellt PeopleZen beim ersten Aufruf dieser Datenquelle (nachdem ein Webfrontend-Server zur&uuml;ckgesetzt wurde) immer einen vollen Cache <b>aller</b> Datens&auml;tze im Server-RAM.<br/><br/>
+<b>Achtung:</b> bei aktiviertem Caching werden mitunter "veraltete" Daten angezeigt. Datensatz&auml;nderungen werden nicht in Echtzeit, sondern <b>verz&ouml;gert</b> wiedergegeben (siehe <i>Aktualisierungsrate f&uuml;r Cache</i> hierunter bei aktiviertem Caching). Vollst&auml;ndig neue Datens&auml;tze werden ebenfalls nicht bis zum n&auml;chsten Server-Reset aufgegriffen, au&szlig;er Sie kreuzen die Option <i>Cache regelm&auml;&szlig;ig komplett neu aufbauen</i> (hierunter bei aktiviertem Caching) an.<br/><br/>
+Falls diese Datenquelle den Verbindungsanbieter <b>Datenbank</b> verwendet und Sie f&uuml;r sie Caching aktiviert haben, <i>m&uuml;ssen</i> Sie die Hinweise der <b>ADO.NET-Datenabfrage</b>-Einstellung (im <b>Datenbank</b>-Register) sowie deren aktuellen Wert untersuchen und sicherstellen, da&szlig; Ihre Abfrage immer und zu jeder Zeit eine konsistente Sortierreihenfolge der Ergebnismenge garantiert.</p>
+<ul>
+<li><b>Volles Caching</b><br/>&mdash; <i>Daten werden aus (ggf. etwas veralteter) RAM-Kopie ALLER Backend-Datens&#228;tze gelesen</i></li>
+<li><b>Kein Caching (empfohlen)</b><br/>&mdash; <i>jede Anfrage verbindet sich mit dem Backend-Speicher dieser Datenquelle</i></li>
+</ul>
+<h3>Aktualisierungsrate f&#252;r Cache</h3>
+<p><b>(Texteingabefeld)</b></p><p>Nachdem ein Webfrontend-Server zur&uuml;ckgesetzt wurde, erstellt PeopleZen beim ersten Aufruf dieser Datenquelle immer einen vollen Cache <b>aller</b> Datens&auml;tze im Server-RAM.<br/><br/>
+Bei jedem darauf folgenden Aufruf aktualisiert PeopleZen immer nur eine begrenzte Anzahl an Datens&auml;tzen im Cache, um Performance mit Korrektheit der angezeigten Informationen auszubalancieren.<br/><br/>
+Geben Sie hier die Anzahl der pro Aufruf zu aktualisierenden Datens&auml;tze an. Eine h&ouml;here Zahl (z.B. ca. 40 oder mehr) stellt Daten&auml;nderungen eher dar bei reduzierter PeopleZen-Geschwindigkeit, und umgekehrt stellt ein geringerer Wert Daten&auml;nderungen erst sehr viel sp&auml;ter fest bzw. dar, bei verbesserter Geschwindigkeit.<br/><br/>
+Geben Sie 0 an, um gecachte Datens&auml;tze nie w&auml;hrend der Datensatzabfrage durch Endanwender zu aktualisieren. Geben Sie keine g&uuml;ltige Ganzzahl gr&ouml;&szlig;er gleich 0 ein, so wird der Standardwert 10 verwendet.</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>10</pre>
+<h3>Aktuell angezeigte Cache-Datens&#228;tze immer bei Abruf aktualisieren</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Aktualisiert immer die aktuell abgerufenen Datens&auml;tze (gerade vor deren Anzeige, ABER *nach* Filterung/Gruppierung/Sortierung!), bei jedem einzelnen Datensatzabruf durch Endanwender; dies jedoch mit m&ouml;glicherweise sp&uuml;rbaren Performanceeinbu&szlig;en bei h&ouml;heren Paging-Seitengr&ouml;&szlig;en.</p>
+<h3>Cache regelm&#228;&#223;ig komplett neu aufbauen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p><b>In Produktivsystemen normalerweise weder erforderlich noch empfehlenswert, au&szlig;er es finden "h&auml;ufige" (&gt;1x pro Tag) L&ouml;schungen und Neuerstellungen von Datens&auml;tzen im Backend-Speicher dieser Datenquelle statt.</b><br/><br/>Nachdem ein Webfrontend-Server zur&uuml;ckgesetzt wurde, erstellt PeopleZen beim ersten Aufruf dieser Datenquelle immer einen vollen Cache aller Datens&auml;tze im Server-RAM.<br/><br/>
+Die Datens&auml;tze im Cache werden zwar periodisch aktualisiert wie oben angegeben; komplett neue Datens&auml;tze oder L&ouml;schungen werden jedoch bis zum n&auml;chsten Server-Reset hier nicht mit einbezogen, es sei denn:<br/><br/>
+Aktivieren Sie diese Option, um bei jedem n-ten Webpart-Aufruf den Cache wie nach einem Server-Reset komplett neu aufzubauen, wodurch jeder n-te Webpart-Aufruf stark verlangsamt wird, aber auch seit dem letzten Cacheaufbau neu hinzugef&uuml;gte Datens&auml;tze mit einbezogen werden (n = Gesamtanzahl der Datens&auml;tze geteilt durch oben angegebene Aktualisierungsrate).</p>
+<h3>Den Cache beim n&#228;chsten Klick auf &quot;Alle speichern&quot; leeren</h3>
+<p>Leert beim n&auml;chsten Klick auf "Alle speichern" den Cache dieser Datenquelle (nur auf dem empfangenden WFE-Server), um &Auml;nderungen an Backend-Daten oder Datenfeldvorlagen sofort aufzugreifen.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-w"><a href="#" onclick="roxTogDocTab('w');">Register &quot;Datenfelder&quot;:</a></h4><span class="rox-doctab rox-doctab-w">
+<h3>Standard-Datenfelder (f&#252;r neue Datenquellenkonsumenten und Vorschau)</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>Geben Sie die Felder an, die standardm&auml;&szlig;ig in der Datenquellenvorschau sowie in neuen, noch unkonfigurierten Datenquellenkonsumenten  (z.B. PeopleZen-Webparts, Lookupfilter, Nachschlagespalten etc.) angezeigt werden.<br/><br/>Jede Zeile enth&auml;lt einen internen Feldnamen. Die angegebenen Felder werden von Datenquellenkonsumenten in dieser Reihenfolge dargestellt. Hinweis: dies ist eine Standardvorlage und kann f&uuml;r jeden Datenquellenkonsumenten noch einmal individuell umkonfiguriert werden. &Auml;nderungen wirken sich nicht auf bestehende, sondern nur auf k&uuml;nftig neu erstellte Datenquellenkonsumenten (sowie die Datenquellenvorschau) aus.<br/><br/>Um den Anzeigenamen eines Feldes individuell zu &uuml;berschreiben, geben Sie Ihren eigenen Anzeigenamen in derselben Zeile direkt nach dem internen Feldnamen an, getrennt durch einen Doppelpunkt [:].<br/><br/>Sie k&ouml;nnen nur von dieser Datenquelle bereitgestellte Originalfelder angeben (siehe obige Dropdown-Liste) &mdash; jegliche hierunter definierte Spezialfelder k&ouml;nnen hier <b>nicht</b> eingebunden werden (aber der Datenquellenkonsument wird diese dennoch je nach seiner Konfiguration einzusetzen wissen).</p>
+<h3>Name/Titel-Datenfeld/er</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>Titel / Name</p>
+<h3>Bild-Datenfeld/er</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>Foto / Symbol / Bild (URL)</p>
+<h3>Link-URL-Datenfeld/er</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>URL f&uuml;r Verlinkung von Name/Titel bzw. Bild</p>
+<h3>Datenfeld/er f&#252;r IM/OCS-Pr&#228;senz / E-Mail-Adresse</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>E-Mail-Adresse (z.B. f&uuml;r IM/OCS-Pr&auml;senzindikator)</p>
+<h3>Anmeldename-Datenfeld/er</h3>
+<p><b>(Auswahl von Datenfeldern)</b></p><p>voller Benutzername / Dom&auml;nenkontenname (domainname\username)</p>
+<h3>Feldzuordnungen f&#252;r vCard 3.0- / Outlook-Export</h3>
+<p><b>(Texteingabefeld)</b></p><p><b>F&uuml;r fortgeschrittene Anwender!</b> F&uuml;r Anpassungen konsultieren Sie gerne unser Softwaresupportforum.<br/><br/>Enth&auml;lt die Vorlage f&uuml;r den gesamten Dateiinhalt eines vCard 3.0-Benutzerprofilexports (au&szlig;er der BEGIN-, VERSION-, REV- und END-Zeilen). Platzhalter in [eckigen Klammern] geben Feldnamen dieser Datenquelle an und werden beim Export mit deren entsprechenden Feldwerten ersetzt.<br/><br/>In Ihren [eckig geklammerten Platzhaltern] k&ouml;nnen Sie <b>sowohl</b> beliebige von dieser Datenquelle unterst&uuml;tzte Feldnamen, <b>als auch</b> folgende Spezialfeldnamen verwenden:<br/><br/>
+<b>[rox___pt]</b> &mdash; oben angegebene/s Name/Titel-Datenfeld/er<br/>
+<b>[rox___pp]</b> &mdash; oben angegebene/s Bild-Datenfeld/er<br/>
+<b>[rox___pu]</b> &mdash; oben angegebene/s Link-URL-Datenfeld/er<br/>
+<b>[rox___pm]</b> &mdash; oben angegebene/s Datenfeld/er f&uuml;r IM/OCS-Pr&auml;senz / E-Mail-Adresse<br/>
+<b>[rox___pl]</b> &mdash; oben angegebene/s Anmeldename-Datenfeld/er</p>
+<p>Standardwert f&#252;r neue Datenquellen:</p>
+<pre>N:[LastName];[FirstName]<br/>FN:[rox___pt]<br/>ORG:roxority<br/>EMAIL:[rox___pm]<br/>PHOTO;VALUE=URL:[rox___pp]<br/>TEL:[CellPhone]<br/>TITLE:[Title]</pre>
+<h3>Weitere &quot;unbekannte&quot; (aber tats&#228;chlich existierende) Datenfelder</h3>
+<p><b>(Texteingabefeld)</b></p><p>Typically your Data Source connection provider is able to determine all Data Fields known to the Data Source (see the above Data Field selection drop-downs to see this in action). With some Data Sources; however, not all fields that in fact exist at the Data Source backing store are retrieved. Specify those here (using the internal field name rather than display name, title, caption etc.), one per line.</p>
+<h3>Secondary sort-by field name</h3>
+<p><b>(Texteingabefeld)</b></p><p>Primary sorting is defined per Web Part (or other Data Source consumer) and may or may not be set interactively by end users depending on said configuration. When a sort is applied, however, this setting lets you specify a secondary sort-by field (use the internal Data Field name instead of its human-readable or localized caption or title). Secondary sorting defaults to ascending, prefix with a - (minus) character for descending. This setting is ignored for Web Parts (or other Data Source consumers) that enforce a randomized sort order.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-y"><a href="#" onclick="roxTogDocTab('y');">Register &quot;Vorschau&quot;:</a></h4><span class="rox-doctab rox-doctab-y">
+<h3>Vorschau dieser Datenquelle</h3>
+<p><b>(Vorschau der Datenquelle)</b></p><p>Klicken Sie auf obige Schaltfl&auml;che <i>Aktualisieren</i>, um eine dynamische Vorschau dieser Datenquelle mit ihren aktuellen Einstellungen (inkl. noch ungespeicherter &Auml;nderungen) anzuzeigen. Sie k&ouml;nnen die Vorschau mit den oben angebotenen Optionen parameterisieren. Es werden nur die Felder angezeigt, die unter <b>Standard-Datenfelder</b> (im <i>Datenfelder</i>-Reiter) angegeben wurden.<br/><br/><b>Wichtiger Hinweis: dies ist prim&auml;r eine <i>Daten</i>vorschau, keine <i>Design</i>vorschau.</b> Je nach geladenen Standard- oder benutzerdefinierten Stylesheets wird das Look-and-Feel der Datenquellenkonsumenten in Ihren Inhaltswebsites vom oben dargestellten visuellen Design ggf. stark abweichen.</p>
+</span>

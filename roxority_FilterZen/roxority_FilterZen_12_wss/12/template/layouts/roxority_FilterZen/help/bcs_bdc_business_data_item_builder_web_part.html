@@ -1,0 +1,52 @@
+﻿<p>
+	<i>Note: this Web Part requires Microsoft Office SharePoint Server Enterprise
+		Edition with the Business Data Connectivity (BCS/BDC) features enabled.</i></p>
+<p>
+	The <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i> Web Part initially
+	serves the same purpose as the built-in Business Data Item Builder Web Part provided
+	by Microsoft Office SharePoint Server Enterprise Edition: to obtain the ID of a
+	Business Data Connectivity (BCS/BDC) entity instance and broadcast that instance
+	to compatible Web Parts. However, the FilterZen BCS/BDC Business Data Item Builder
+	Web Part goes beyond the built-in equivalent Web Part in many ways:</p>
+<h3>
+	Obtaining the External Content Type / Entity Instance ID</h3>
+<p>
+	The out-of-the-box Web Part can only ever obtain the required entity instance ID
+	from a pre-defined URL Parameter named <i>ID,</i> whereas the <b>FilterZen</b> Business Data Item 
+	Builder Web Part obtains the required
+	entity instance ID from any connected Web Part. So while you <i>can</i> 
+	&quot;recreate&quot; the original
+	behaviour by connecting the <b>FilterZen</b> Business Data Item Builder Web Part to a 
+	MOSS <i>URL (Query String) Filter Web Part</i>, or a <b>FilterZen</b>
+	Filter Web Part (containing a Page Request / URL Filter), there are now innumerable 
+	additional ways
+	for the item builder to obtain the entity instance ID (including any built-in or custom FilterZen
+	filter types and the out-of-the-box provider Web Parts, for example List Views) 
+	and send all entity instance data to any consumer Web Part.</p>
+<p>
+	Simply choose your preferred entity instance ID provider Web Part from the <i>Connections</i>
+	/ <i>Get BCS/BDC Entity Instance ID From</i> sub-menu.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" src="help/res/bcs_bdc_business_data_item_builder_web_part.png"
+		style="height: 670px;" title="" /></p>
+<h3>
+	Sending the selected Entity Instance to BCS/BDC Web Parts</h3>
+<p>
+	Simply select from the <i>Connections</i> / <i>Send Selected Item To</i> sub-menu
+	any <i>Business Data Actions</i> or <i>Business Data Item</i> Web Part to send the
+	entity instance associated with the current entity instance ID. You can only connect
+	to Web Parts that have been pre-configured for a specific Business Data Connectivity
+	application and external content type. For the <b>FilterZen</b> <i>BCS/BDC Business
+		Data Item Builder</i> Web Part to become aware of the Business Data Connectivity
+	application, data type and entity columns to use, you need to make at least one
+	such connection.</p>
+<h3>
+	Sending any Entity Instance Column values to any Web Parts</h3>
+<p>
+	Once you have made at least one such connection and the <b>FilterZen</b> <i>BCS/BDC
+		Business Data Item Builder</i> Web Part became aware of the Business Data Connectivity
+	(BCS/BDC) application, data type and entity columns to use, you can now also 
+	send live BCS/BDC column values of the selected entity instance to any kind of 
+	consumer Web Part: simply select from its <i>Connections</i>
+	sub-menu the <b>FilterZen</b> Business Data Item Builder Web Part and follow the 
+	on-screen Connection Properties dialog.</p>

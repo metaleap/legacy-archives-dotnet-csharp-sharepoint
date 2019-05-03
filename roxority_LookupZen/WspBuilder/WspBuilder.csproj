@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE13138B-F28C-423F-B50C-2FD8DEBB7F49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WspBuilder</RootNamespace>
+    <AssemblyName>WspBuilder</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="setup\docs\eula.de.rtf" />
+    <None Include="setup\docs\eula.rtf" />
+    <None Include="setup\setup.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="setup\releases.html" />
+    <Content Include="solutionid.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="12\" />
+    <Folder Include="gac\" />
+    <Folder Include="setup\de\" />
+    <Folder Include="setup\docs\_html\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" BuildDoc $(SolutionName)
+"C:\Program Files\HTML Help Workshop\hhc.exe" "$(SolutionDir)chmdoc\en\$(SolutionName).hhp"
+\wb\wspbuilder -BuildCAS False -BuildSafeControls False -Excludepaths "$(ProjectDir)setup;$(ProjectDir)bin;$(ProjectDir)obj;$(ProjectDir)Properties" -Excludefiletypes "cs,scc,csproj,user,txt" -WSPName $(SolutionName).wsp -SolutionPath "$(ProjectDir)" -OutputPath "$(ProjectDir)"
+copy "$(ProjectDir)$(SolutionName).wsp" "$(ProjectDir)setup\$(SolutionName).wsp" /Y
+"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" PackFiles $(SolutionName)
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

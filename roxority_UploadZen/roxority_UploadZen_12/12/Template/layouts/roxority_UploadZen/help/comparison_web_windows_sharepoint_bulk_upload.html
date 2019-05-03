@@ -1,0 +1,157 @@
+﻿<p>
+	All UploadZen <a href="?doc=itemref_UploadActions">Upload Actions</a> technically support two uploader modes:</p>
+<ul>
+	<li><a href="?doc=sharepoint_flash_silverlight_clickonce_windows_uploader">Web Uploader</a>
+		&mdash; the default, recommended, &quot;new&quot; uploader mode supporting the widest
+		range of client browsers and operating systems.</li>
+	<li><a href="?doc=uploading_multiple_files">Windows Uploader</a> &mdash; the &quot;old&quot;,
+		deprecated mode included and supported only for legacy UploadZen installations. For new installations,
+		<i>Web Uploader</i> is the recommended mode.</li>
+</ul>
+<table class="roxtable">
+	<thead>
+		<tr>
+			<th>
+				&nbsp;
+			</th>
+			<th>
+				Web Uploader
+			</th>
+			<th>
+				Windows Uploader
+			</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>
+			Summary
+		</td>
+		<td>
+			Primary "future-safe" device-agnostic UploadZen mode&mdash;receives full support, maintenance and future enhancements
+		</td>
+		<td>
+			"Legacy" / Windows-specific UploadZen mode&mdash;stable and works very well upon successful "ClickOnce Deployment".
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported <b>SharePoint versions</b> and editions
+		</td>
+		<td>
+			SharePoint 2013 and 2010 Foundation (SPF) and Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+		<td>
+			SharePoint 2010 Foundation (SPF),<br />SharePoint 2010 Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Client-side <b>plugin requirement</b>
+		</td>
+		<td>
+			None, but utilizes Adobe Flash 10 (or higher) &mdash; <i>or</i> &mdash; Microsoft Silverlight 4 (or higher) if needed and available.
+		</td>
+		<td>
+			Internet Explorer: none<br />Firefox: .NET Framework Assistant
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>operating systems</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Windows only, with .NET Framework 2.0 or higher required
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>web browsers</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Internet Explorer or Firefox
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Automatic check-out / <b>batch check-in</b>
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Overwrite existing files
+		</td>
+		<td>
+			Yes by default, can turn off
+		</td>
+		<td>
+			No by default, can turn on
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Server-side extraction</b> of uploaded ZIP archive files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Client-side zipping</b> of files prior to upload
+		</td>
+		<td>
+			No
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Chunking</b> for large files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Auto-<b>resize images</b> prior to upload
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Show <b>preview thumbnails</b> of upload files
+		</td>
+		<td>
+			No
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,321 @@
+<html>
+<head>
+	<title>FilterZen Readme</title>
+	<style type="text/css">
+		body, all, *, h3
+		{
+			font-family: "Helvetica" , "Arial" , Sans-Serif;
+		}
+		body
+		{
+			line-height: 1.4em;
+			font-size: 14px;
+			color: #202020;
+		}
+		a, a:visited, a:active, a:link, a:hover
+		{
+			text-decoration: underline;
+			color: #aa0000;
+			font-weight: bold;
+		}
+		a:hover
+		{
+			background-color: #aa0000;
+			color: #f0f0f0;
+		}
+		h3
+		{
+			font-size: 18px;
+			letter-spacing: -1px;
+			color: #606060;
+		}
+		h1
+		{
+			border-bottom: 1px solid #EEE;
+			page-break-before: always;
+			padding-top: 48px;
+			color: #AAA;
+			font-weight: normal;
+			font-size: 32px;
+			letter-spacing: -2px;
+		}
+		.rox-info, div#licdiv ul
+		{
+			background-image: url('star.gif');
+		}
+		.rox-header
+		{
+			font-size: 10px;
+			text-align: right;
+			color: #606060;
+		}
+		a#roxlogolink
+		{
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			padding: 0px;
+			margin: 0px;
+			width: 240px;
+			height: 80px;
+			overflow: hidden;
+		}
+		a#roxlogolink:hover
+		{
+			background: none !important;
+		}
+		a#roxlogolink img
+		{
+			display: block;
+			padding: 0px;
+			margin: 0px;
+			width: 240px;
+			height: 80px;
+		}
+		div.roxrelnotes ul
+		{
+			margin-right: 260px;
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		FilterZen Documentation:</h1>
+	<p>
+		You can access the <b>FilterZen</b> product documentation from the following locations:</p>
+	<ul>
+		<li><b>In your SharePoint</b> after solution installation: via <i>Site Settings / FilterZen
+			Studio / Help Topics</i></li>
+		<li><b>Online:</b> at <a target="_blank" href="http://roxority.com/filterzen-documentation/">
+			http://roxority.com/FilterZen-Documentation/</a></li>
+	</ul>
+	<h1>
+		FilterZen Installation:</h1>
+	<p>
+		Run either <b>Inst_2013.exe</b> (for SharePoint 2013) or <b>Inst_2010_2007.exe</b> (for SharePoint 2010 and 2007)
+		<b>exactly</b> as described <a href="http://roxority.com/filterzen-documentation/solution-installation-and-feature-activation.html">in our help topic</a> and also <a href="http://roxority.com/sharepoint-zen/manual-installation-deployment-of-our-sharepoint-wsp-solutio.html">in our blog</a>.</p>
+	<h1>
+		FilterZen License:</h1>
+	<p>
+		See <b>.\docs\EULA.rtf</b> or <a href="http://roxority.com/filterzen-documentation/end-user-license-agreement-eula.html">End-User License Agreement (roxority.com)</a></p>
+	<h1>
+		FilterZen Release Notes</h1>
+	<div class="roxrelnotes">
+		<h3>
+			Version 3.8.1 (13th May 2013)</h3>
+		<ul>
+			<li>By popular request, the <b>Site Settings / FilterZen Studio</b> section of links is now only visible to administrative users.</li>
+			<li>Updated jQuery version to 1.8.3</li>
+		</ul>
+		<h3>
+			Version 3.8 (9th August 2010)</h3>
+		<ul>
+			<li>Added: <i>Filterable Content-by-Query Web Part (CQWP)</i></li>
+			<li>Added: <a target="_blank" href="http://roxority.com/sharepoint-zen/adding-an-advanced-search-interface-to-any-list-or-web-part.html">
+				&quot;Advanced Search&quot; GUI with interactive, on-the-fly end user filter composition</a></li>
+			<li>Added: <a href="http://roxority.com/sharepoint-zen/simplified-cascading-for-multiple-choice-drop-down-filters.html"
+				target="_blank">syntax for cascading Choice Filters</a></li>
+			<li>Added: new <a target="_blank" href="http://roxority.com/sharepoint-zen/missing-the-list-view-selector-tool-bar-drop-down-menu-in-sh.html">
+				List View Picker</a> filter type for on-the-fly, on-page List View switching</li>
+			<li>Added: <a target="_blank" href="http://roxority.com/sharepoint-zen/filtering-sharepoint-lists-using-nested-and-or-operator-prec.html">
+				nested AND/OR operator precedence hierarchies</a> for CAML-based List filtering</li>
+			<li>Added: <a target="_blank" href="http://roxority.com/sharepoint-zen/list-filtering-highlighting-partial-matches-in-search-result.html">
+				highlighting partial matches in search results</a> for SharePoint List filtering</li>
+			<li>Added: <i>Site Collection User Accounts</i> tool in <i>FilterZen Studio</i></li>
+			<li>Added: <a target="_blank" href="http://roxority.com/filterzen-forum/post/1175721">
+				syntax for designating a delimiter when using List Lookup Filters targeting single
+				or multi-line text Columns</a></li>
+			<li>Added: <i>Storage location for &quot;Remembered filter values last used&quot;</i>
+				and <i>When remembering filter values, store by name only (and share across FilterZen
+					Web Parts)</i> configuration settings</li>
+			<li>Added: FilterZen now also acts as a first-class <i>IWebPartParameters</i> provider
+				interface</li>
+			<li>Improved: outstanding support for BCS/BDC External Systems, External Content Types,
+				External Lists and External Data Columns</li>
+			<li>Improved: connecting with and sending filter values to Excel Web Access (EWA) Web
+				Parts</li>
+			<li>Fixed: <i>Remember filter values last used</i> option</li>
+		</ul>
+		<h3>
+			Version 3.7 (16th April 2010)</h3>
+		<ul>
+			<li>Added: <i>DIY User Interface Localization</i> tool in <i>FilterZen Studio</i></li>
+			<li>Added: <i>Transfer Wizard</i> (import/export) tool in <i>FilterZen Studio</i></li>
+			<li>Added: new <i>Unique Constraint ('Distinct' emulation)</i> filter type for CAML-based
+				List View / Data View filtering</li>
+			<li>Added: new <i>SharePoint Context Filter</i> type</li>
+		</ul>
+		<h3>
+			Version 3.6 (26th January 2010)</h3>
+		<ul>
+			<li>Added: number conversion and formatting support for all filter types</li>
+			<li>Fixed: &#39;Clear Filters&#39; did not always work with XSL / Data View Web Parts
+				in some cases</li>
+			<li>Fixed: range filtering produced inconsistent results if both bounding values were
+				equal</li>
+			<li>Fixed: date-range filtering from and until the same date showed values less than
+				that date.</li>
+			<li>Fixed: improved performance for List Lookup Filters on Lists with massive amounts
+				of items (&gt; 2000)</li>
+			<li>Fixed: CAML Filtering mode did not work for custom field types inheriting from Text</li>
+		</ul>
+		<h3>
+			Version 3.5 (6th December 2009)</h3>
+		<ul>
+			<li>Added: option to disable folders in connected List View Web Parts</li>
+			<li>Added: placeholder syntax {$SomeFilter$} now also supported for for date filters</li>
+			<li>Added: you can now suppress (on the Web Part Page, Site Collection or Farm level)
+				FilterZen&#39;s inclusion of the jQuery library if this is already being included
+				in your SharePoint pages</li>
+			<li>Added: Binary Toggle (Check Box) Filter type</li>
+			<li>Improved: handling of interactive drop-down List Lookup filters from Multiple Choice
+				Columns</li>
+			<li>Improved: multi-selection drop-down end-user filtering controls</li>
+			<li>Fixed: URL Parameter filters sometimes used the parameter name in place of the filter
+				name</li>
+			<li>Fixed: SQL Data Filter always sent the default filter value regardless of user selection
+				under certain circumstances.</li>
+			<li>Fixed: unticking the &quot;Allow picking the empty filter value&quot; filter setting
+				could not be saved under certain circumstances.</li>
+			<li>Fixed: &quot;Argument data type sql_variant is invalid for argument 1 of like function.&quot;
+				error message when applying the the Contains CAML operator to a Calculated / Computed
+				List Column.</li>
+			<li>Fixed: Filter Web Part produced "Object reference not set" or "An unexpected error
+				has occurred" messages for Anonymous users.</li>
+		</ul>
+		<h3>
+			Version 3.4 (11th September 2009)</h3>
+		<ul>
+			<li>Added: placeholder syntax {$SomeFilter$}, which lets one filter use the current
+				filter value(s) of another filter in all text-based filter settings</li>
+			<li>Fixed: changing or clearing interactive filters against paged views did not reset
+				the paging</li>
+			<li>Fixed: multi-selection drop-down filter controls did not resize themselves to not
+				exceed the available page size</li>
+			<li>Fixed: Dynamic Interactive Filters represented multi-choice columns as Text Filters
+				instead of Choice Filters</li>
+			<li>Fixed: Page Request / URL Parameter Filters did not send multiple values by default
+				if parameter occurred more than once</li>
+		</ul>
+		<h3>
+			Version 3.3 (7th September 2009)</h3>
+		<ul>
+			<li>Added support for cascading filters (limits the pickable choices in all drop-down
+				filter controls to existing values still available after applying the previous filter)</li>
+			<li>Added support for filter groups (allows organizing filters into groups and switching
+				between them from the UI or via connected Web Parts)</li>
+			<li>Substantial user interface and documentation improvements</li>
+			<li>Fixed: CAML Filtering mode did not always work for Data Form Web Parts</li>
+			<li>Fixed: multiple-selection drop-down filter controls did not post back to re-filter
+				automatically although the corresponding Web Part setting was ticked.</li>
+		</ul>
+		<h3>
+			Version 3.2 (19th August 2009)</h3>
+		<ul>
+			<li>(28th August 2009) Fixed: date-relative offsets didn't initialize date filtering
+				controls correctly</li>
+			<li>(27th August 2009) Fixed: "Clear Filters" now works with multi-selection filtering
+				controls</li>
+			<li>The CAML Filtering mode (for using filter operators other than <i>Equals</i>) can
+				now be used with the SharePoint Server BCS/BDC Business Data List / Related List
+				Web Parts.</li>
+		</ul>
+		<h3>
+			Version 3.1 (5th July 2009)</h3>
+		<ul>
+			<li>(22th July 2009) Fixed: Solution Package generated partially invalid SafeControl
+				entries in web.config, rendering certain Web Parts unusable on WSS-only systems</li>
+			<li>Added formatting and regional options to Date Filters.</li>
+			<li>Added dynamic filter names from request parameters to Page Request / URL Filters:
+				if the filter name has the format '{{foo}}' then the filter name to use will be
+				obtained dynamically from the page request parameter 'foo'.</li>
+		</ul>
+		<h3>
+			Version 3.0 (19th June 2009)</h3>
+		<ul>
+			<li>Added full support for multiple filter values</li>
+			<li>Added post-processing option to all filter types to convert resulting filter name-value
+				pairs to multiple filter values or name-value-pairs.</li>
+		</ul>
+		<h3>
+			Version 2.6 (19th May 2009)</h3>
+		<ul>
+			<li>Product configuration settings can now be set on the farm level (by farm administrators)
+				and optionally be customized on the site collection level (by site collection root
+				web site administrators).</li>
+			<li>Added documentation for the <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i>
+				Web Part and the <i>BCS/BDC Filter</i> type.</li>
+		</ul>
+		<h3>
+			Version 2.5 (18th May 2009)</h3>
+		<ul>
+			<li>Page Request / URL Filters now use the filter name if no parameter name was specified,
+				as was previously indicated by the filter editor user interface</li>
+			<li>Added support for sending single a filter value to compatible &quot;cell consumer&quot;
+				Web Parts (such as Image Web Part)</li>
+			<li>Added support for sending all filter values as a data row to compatible &quot;row
+				consumer&quot; Web Parts</li>
+			<li>Added infrastructure support and API for developing and loading custom <b>FilterZen</b>
+				filter types</li>
+			<li>Added infrastructure support for the Business Data Connectivity Services (BCS/BDC)
+				feature of Microsoft Office SharePoint Server Enterprise Edition:<ul>
+					<li>Added the <b>FilterZen</b> <i>BCS/BDC Business Data Item Builder</i> Web Part, which
+						like the out-of-the-box <i>Business Data Item Builder</i> Web Part sends a Business
+						Data Connectivity (BCS/BDC) external data record / Entity Instance to any connected
+						Business Data Web Part, but instead of using URL query string parameters obtains
+						the required Entity Instance ID from any connected cell or row provider Web Part.</li>
+					<li>New filter type: BCS/BDC Filter (filter value lookup from any Business Data Connectivity
+						Services (BCS/BDC) external content type, with optional interactive entity instance
+						picker)</li>
+				</ul>
+			</li>
+		</ul>
+		<h3>
+			Version 2.4 (12th May 2009)</h3>
+		<ul>
+			<li>Bug fixed: Web Part displayed &quot;license user limit exceeded&quot; error message
+				despite unlimited-user licenses</li></ul>
+		<h3>
+			Version 2.3 (11th May 2009)</h3>
+		<ul>
+			<li>New filter type: SQL Data Filter (filter value lookup from any ADO.NET-compatible
+				data source)</li>
+			<li>Bug fixed: Web Part displayed &quot;unhandled exception&quot; error messages in
+				SharePoint Designer</li></ul>
+		<h3>
+			Version 2.2 (29th April 2009)</h3>
+		<ul>
+			<li>Support for programmatically creating and modifying <b>FilterZen</b> Filter Web
+				Parts and filters from code running server-side outside a SharePoint context</li></ul>
+		<h3>
+			Version 2.1 (28th April 2009)</h3>
+		<ul>
+			<li>Support for programmatically creating and modifying <b>FilterZen</b> Filter Web
+				Parts and filters from code running server-side in a SharePoint context</li></ul>
+		<h3>
+			Version 2.0 (27th April 2009)</h3>
+		<ul>
+			<li>New filter types: Choice Filters, Date Filters, List Lookup Filters, Page Column
+				Filters, Text Filters, User Filters</li>
+			<li>New Page Request / URL Filter options:<ul>
+				<li>Get parameter not only from URL query string but also from URL path structure</li>
+				<li>URL pattern preview</li>
+				<li>Farm-wide URL parameter black list (for PageView, DisplayMode, etc.)</li>
+			</ul>
+			</li>
+			<li>Optional, CSS-customizable interactive filters</li>
+			<li>Options to suppress certain filter names or values</li>
+			<li>Option to remember filter values last used for each user</li>
+			<li>Option to override most Web Part or filter settings from URL parameters</li>
+			<li>Option to dynamically generate interactive filters on the fly from known filtered
+				columns</li>
+		</ul>
+		<h3>
+			Version 1.0 (09th April 2009)</h3>
+		<ul>
+			<li>Initial Release: <b>FilterZen</b> URL Filter Web Part</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,654 @@
+<html>
+	<head>
+		<title>ROXORITY PrintZen  Product Documentation</title><script type="text/javascript" language="JavaScript"> alert('For printing purposes only. Links have been disabled.\nNur zum Ausdrucken geeignet. Links wurden deaktiviert.'); </script>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<!--script type="text/javascript" language="JavaScript" src="jQuery.js"></script-->
+		<!--script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script-->
+		<!--script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<b style="font-style: italic; text-decoration: underline;" class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script-->
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #ffffff;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #ffffff;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"></div>
+	
+<h1>Print-Friendly SharePoint List Views</h1><p>
+	PrintZen gives you print-friendly Views of your Lists, the easy way.</p>
+<h3>
+	How PrintZen commands and views work for SharePoint Lists<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	In <b>SharePoint 2007</b> (WSS 3.0 and MOSS 2007) PrintZen integrates one or more
+	Print commands into the <i>Actions</i> menu of SharePoint List Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/sharepoint-list-data-print-menu-item.png"
+		title="" /></p>
+<p>
+	In <b>SharePoint 2010</b> (Foundation and Server) PrintZen integrates one or more
+	print commands into the <i>View Formats</i>
+	section of the <i>List</i> ribbon tab:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 154px;" src="help/res/sharepoint-list-print-view-ribbon.png"
+		title="" /></p>
+<p>
+	In
+	both <b>SharePoint 2010 and 2007</b>, PrintZen also integrates one or more <i>
+	Print</i> 
+	commands into its own sub-menu within the out-of-box SharePoint <i>Site Actions</i> 
+	menu:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 900px;" src="help/res/sharepoint-web-part-print-view-site-actions.png"
+		title="" /></p>
+<p>
+	Clicking the menu item will open a print-friendly display of the current List View:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 431px;" src="help/res/sharepoint-list-data-print-popup.png"
+		title="" /></p>
+<h3>
+	Defining your Print View<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	To make the above work, you need to tell PrintZen just a few preferences, by specifying
+	for a given print use case (which can then be re-invoked time and again) some so-called
+	<b style="font-style: italic; text-decoration: underline;" href="itemref_PrintActions.html">Print View Definition Settings</b>, such as:</p>
+<ul>
+	<li>the title of the Print menu item,</li>
+	<li>the description of the Print menu item (optional),</li>
+	<li>whether to apply the current paging, sort order, folder selection or filters</li>
+	<li>the types of Lists (or the name of the List) compatible with this print view and
+		<b style="font-style: italic; text-decoration: underline;" href="itemref_PrintActions.html">various other settings</b>.</li>
+</ul>
+<p>
+	To do so, you just need to create at least one rule on the <i>Print Views</i>
+	page available via Site Settings / PrintZen Studio / Print Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/sharepoint-list-data-print-actions.png"
+		title="" /></p>
+<p>
+	On the <i>Print Views</i> page, simply create and save a new rule item to finally
+	define your print view:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 818px;" src="help/res/sharepoint-list-data-print-definition.png"
+		title="" /></p>
+<p>
+	That&#39;s it! This print view you just defined is now available in the <i>Actions</i>
+	menu of the specified Lists, and clicking it will open a print-friendly view exactly
+	to your specifications, fully reflecting all of your <b style="font-style: italic; text-decoration: underline;" href="itemref_PrintActions.html">
+		print view definition settings</b>.
+</p>
+<h3>
+	Designing your own custom Print Views<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Depending on your List printing use-cases, you may prefer to add additional content
+	elements to your Print Views. This can be achieved easily via the <b style="font-style: italic; text-decoration: underline;" href="itemref_PrintActions.html#s13">
+		Web Part Page for Custom Design of Print View</b> option customizable for each
+	of your Print Views. By setting this to a Web Part page URL residing anywhere
+	inside the same SharePoint server farm environment, you can completely customize
+	the Print View as easily as you typically customize any other Web Part page. The
+	below screenshot shows a very simple example of what you can implement here:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 855px;" src="help/res/sharepoint-list-print-view-custom-design-web-part-page.png"
+		title="" /></p>
+<h1 style="page-break-before: always;">Solution Installation</h1><h3>
+	1. The PrintZen Setup Package<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The PrintZen setup package (the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.s3.amazonaws.com/roxority_PrintZen.zip">
+		roxority_PrintZen.zip</b> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> &mdash; a graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling PrintZen to and from a SharePoint
+		server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint farm or web front-end server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>docs</b> &mdash; a folder containing this product documentation in Microsoft
+		Compiled HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing the PrintZen Solution Package<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Run <b>Deploy.exe</b> (under user account credentials added to the <i>Farm Administrators</i>
+	group in <i>Central Administration</i>, on the &quot;primary&quot; SharePoint farm
+	or web front-end server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i>) and when the <i>Welcome</i> screen
+	is displayed, click <i>Next</i> to start a series of system checks. To proceed with
+	the installation, all system checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	PrintZen to. You can also de-select those Site Collections you <i>do not</i> want
+	the setup wizard, upon successful deployment, to <i>activate</i> the <b style="font-style: italic; text-decoration: underline;" href="#s2">PrintZen
+		Menu Integration</b> feature immediately for you on.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup02.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Note:</b> even when PrintZen is deployed in a Web Application, before you can
+	offer your Print Views to Lists a web site, the <b>PrintZen Menu Integration</b>
+	<i>Feature</i> needs to be <i>activated</i> for the parent Site Collection, as described
+	in the <i>Feature Activation</i> section below. For now, the setup wizard performs
+	these activations for you, depending on your selections.</div>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start defining your
+	print-friendly List Views (via Site Settings / PrintZen Studio / Print Views)
+	immediately, as described in the <b style="font-style: italic; text-decoration: underline;" href="intro.html">Print-Friendly SharePoint List
+		Views</b> introductory topic.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The <b>PrintZen Menu Integration</b> feature is a <i>SharePoint Site Collection-scoped
+		Feature</i>, which needs to be &#39;activated&#39; on each Site Collection it
+	is to be used in.</p>
+<ol>
+	<li>Select <i>Site Settings</i> from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root Web <i>Site Settings</i>
+		page now showing, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page (<b>not</b> the <i>Site Features</i> page!)
+		should contain a row titled <b>PrintZen Menu Integration</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to enable your <b style="font-style: italic; text-decoration: underline;" href="itemref_PrintActions.html">
+				Print Views</b> inside this Site Collection; or click the <i>Deactivate</i> button
+				to disable the PrintZen List toolbar menu items and ribbon menu throughout this
+				Site Collection.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>PrintZen</b> solution package was not
+				yet deployed to this Web Application. On the <i>System Settings</i> page (<i>Operations</i>
+				in SharePoint 2007) in the <i>Central Administration</i>, click <i>Manage Farm Solutions</i>
+				(<i>Solution management</i> in SharePoint 2007). On the <i>Solution Management</i>
+				page, click <b>roxority_printzen_xyz.wsp</b> (the <i>xyz</i> part will be different
+				depending on your SharePoint version) to open the <i>Solution Properties</i> page.
+				Click <i>Deploy Solution</i>, then select this Site Collection&#39;s parent web
+				application and click <i>OK</i>. (The deployment is delegated to a background job
+				scheduled to run either at the date and time specified, or as soon as possible.
+				Once started, it may take this job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h1 style="page-break-before: always;">Settings for Print Views</h1><p>The following settings can be customized for each Print View by administrative users on the <b>Print Views</b> page in your <i>PrintZen Studio</i>, accessible via Site Settings / PrintZen Studio / Print Views:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('a');">&quot;Menu Item and Integration&quot; tab:</b></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Print View<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Print View is...<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Print View will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Show PrintZen menu item in the following Lists<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p><b>(Descriptor for a set of SharePoint Lists and Views)</b></p><p>Select in which Lists this Print View will be offered as a menu item to end users (in the SharePoint 2007 "Actions" toolbar menu and in the SharePoint 2010 "View Format" List ribbon group; both only if the "PrintZen Menu Integration" Site Collection feature is activated too and for List Views, only with their Toolbar Type property set to Full or Show, not Summary or None).</p>
+<p>To define the set of Lists, first select either <b>Show in all Lists</b> or <b>Show in no Lists</b>, then click the <b>except...</b> link to describe which Lists to exclude from that selection. You can exclude:
+</p><ul>
+<li>Lists of the selected base types</li>
+<li>Lists of the selected template types</li>
+<li>Lists of the selected base templates</li>
+<li>or Lists with the specified names or IDs.</li>
+</ul><p>
+To define the set of Views, first select either <b>Show in all Views</b> or <b>Show in no Views</b>, then click the <b>except...</b> link to describe which Views to exclude from that selection. You can exclude:
+<ul>
+<li>the default View</li>
+<li>hidden Views</li>
+<li>personal Views</li>
+<li>or Views with the specified names or IDs.</li>
+</ul></p>
+<h3>Availability on View Item Properties (DispForm.aspx) form pages vs. Views<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>By default, the Print View will be offered in the ribbon and tool bar for the Lists selected above, in <i>both</i> the Views selected above <i>and every</i> of its <b>View Item</b> / <b>View Properties</b> (DispForm.aspx) List form pages (if the <b>PrintZen Menu Integration</b> Site Collection feature is activated). This option lets you restrict a Print View to be DispForm-only or View-only (with respect to the ribbon and/or tool bar), if required.</p>
+<ul>
+<li>Available for both, List item display forms and List Views (as selected above)</li>
+<li>Available only for List Views (as selected above), not in List item display forms</li>
+<li>Available only for List item display forms (as selected above), not in List Views</li>
+</ul>
+<h3>PrintZen menu item caption<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the caption to be shown in menus for this Print View. (If you do not specify a caption, the above name for this Print View will be used, or if blank, its internal ID.)</p>
+<p>Default value for new Print Views:</p>
+<pre>$Resources:Tool_PrintActions_DefTitle</pre>
+<h3>PrintZen menu item description<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the description to be shown in menus for this Print View.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-b"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('b');">&quot;Supported Page Modes&quot; tab:</b></h4><span class="rox-doctab rox-doctab-b">
+<h3>Print View page mode for Document Library and List Views<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for List item display forms<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for Calendar Views<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for PeopleZen Web Parts<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for all other Web Parts<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for Web Part zones<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for full page contents<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('c');">&quot;Print View and Contents&quot; tab:</b></h4><span class="rox-doctab rox-doctab-c">
+<h3>This Print View opens<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select how you would like this Print View to be invoked in end user browsers.</p>
+<ul>
+<li><b>in a new pop-up window</b><br/>&mdash; <i>recommended (even for SharePoint 2010)</i></li>
+<li><b>in a modal pop-up overlay IFRAME</b><br/>&mdash; <i>(SharePoint 2010 only, not available in WSS 3.0 / MOSS 2007)</i></li>
+<li>in the current browser tab</li>
+</ul>
+<h3>In the Print View, show a Print Now button and brief instructions<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<p><b>(Check box option)</b></p><p>This will not be included in the printed output, but may prove useful to your end users.<br/><br/>If you selected above that this Print View opens <b>in a modal pop-up overlay IFRAME (SharePoint 2010 only)</b>, then this option <b>cannot be turned off</b> and an info bar with a Print button will <b>always</b> be displayed in the Print View (but never in the final print-out).</p>
+<h3>Show the browser&#39;s printer selection dialog immediately<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this option invokes the Print dialog automatically as soon as this Print View is opened.</p>
+<h3>[List Views with PrintZen page mode] Show current View<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print View only ever includes items included in the <i>currently displayed</i> List View (rather than the default View), applying the View-defined default sort orders and filters (but not currently user-applied live sort order, filters or paging); otherwise, all List items in the default View are displayed, pre-filtered and in the sort order prescribed by that View.</p>
+<h3>[List Views with PrintZen page mode] Apply current sort order<b style="font-style: italic; text-decoration: underline;" name="s17"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, uses the current sort order applied via the Column headers by the end user (if any), rather than the one pre-defined in the View.</p>
+<h3>[List Views with PrintZen page mode] Display folder contents<b style="font-style: italic; text-decoration: underline;" name="s18"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Choose how you want the current folder selected by the end user (if any) to be taken into account.</p>
+<ul>
+<li>Show only the items in the current folder, but no sub-folders</li>
+<li>Show only the items and folders in the current folder</li>
+<li>Show no folders, but all items from all folders and sub-folders</li>
+<li>Show all items, folders and sub-folders in this List</li>
+</ul>
+<h3>[List Views with PrintZen page mode] Apply current paging<b style="font-style: italic; text-decoration: underline;" name="s19"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, uses the current paging position of the end user, if any.</p>
+<h3>[List Views with PrintZen page mode] Apply current filters (FilterZen only)<b style="font-style: italic; text-decoration: underline;" name="s20"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, for List Views this Print Views only ever shows List items included in the filtering currently applied to the selected source List View. (<b>Only</b> supports filters supplied by a currently connected <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/filterzen/">FilterZen Filter Web Part</b>.)</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-d"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('d');">&quot;Custom Design&quot; tab:</b></h4><span class="rox-doctab rox-doctab-d">
+<h3>Web Part page for Custom Design of Print View<b style="font-style: italic; text-decoration: underline;" name="s21"></b></h3>
+<p><b>(Text box)</b></p><p><b>ONLY supported for Print Views using the PrintZen page mode (see <i>Supported Page Modes</i> tab)!</b><br/><br/>By default, the Print View contains nothing but the selected print target(s). To include additional contents, you can create a custom Web Part Page (only the <i>Full Page, Vertical</i> Layout Template is supported) and specify its absolute or relative URL here (for example, <b>/Shared Documents/OurPrintView.aspx</b>). In this case, the print view will attempt to load and include all Web Parts on that page. That page will also need one additional placeholder Web Part of any kind (for example, a Content Editor Web Part, empty or not) with the title set precisely to PRINTZEN_TARGET, to indicate where the print target(s) should be located. This placeholder Web Part will not be included in the print-out, in its place, the print targets will be added instead.<br/><br/>Note: not all Web Parts may display as expected, since the Web Parts will be &quot;temporarily cloned&quot; in a different page context that is not technically a full-fledged Web Part page &mdash; so experiment for yourself. Web Part Connections, for example, are not currently supported.</p>
+<h3>Include Web Part page title bar<b style="font-style: italic; text-decoration: underline;" name="s22"></b></h3>
+<p><b>(Check box option)</b></p><p>By default, PrintZen does not include the Title Bar Web Part that is almost always included in all custom Web Part pages, but very often not customized. Tick this option if you&#39;d like to include the Title Bar of the above Web Part page in this Print View.</p>
+<h3>Show placeholder names with current values<b style="font-style: italic; text-decoration: underline;" name="s23"></b></h3>
+<p><b>(Check box option)</b></p><p>Shows in this Print View all placeholders that you can use for Web Part properties throughout the above custom Web Part page. (Not advisable for end-user printing, but temporarily highly useful while designing your custom Web Part page.)
+<br/><br/>
+Which placeholders are available and their values both greatly depend on the current context of the Web Part being printed. For your general reference, the following placeholders may usually be available, but we advise you to inspect their typical values and availability in your context interactively yourself by ticking this check-box option during the design phase.
+<ul>
+<li>{$PrintZen_WebPart_Title$} &mdash; the title of the Web Part being printed (all modes)</li>
+<li>{$PrintZen_List_Title$} &mdash; the title of the List being printed in List View mode (or the List containing the item properties being printed, in DispForm.aspx mode)</li>
+<li>{$PrintZen_Item_Title$} &mdash; the title of the List item whose properties being printed (if in DispForm.aspx mode)</li>
+<li>{$PrintZen_View_Title$} &mdash; the title of the View being printed (if in List View mode)</li>
+<li>{$PrintZen_Context_Title$} &mdash; the title of the List Item, List and View, or Web Part, depending on mode</li>
+<li>{$PrintZen_PrintAction_<i>xyz</i>$} &mdash; instead of <i>xyz</i>, various placeholders containing most settings of this Print View</li>
+<li>{$PrintZen_QueryString_a$} &mdash; the ID of this Print View</li>
+<li>{$PrintZen_QueryString_l$} &mdash; the ID of the Web Part being printed (in PeopleZen mode) or the ID of the List (in List View and DispForm.aspx modes)</li>
+<li>{$PrintZen_QueryString_View$} &mdash; the View ID (in List View mode), item ID (in DispForm.aspx mode) or the source Web Part page URL (in PeopleZen mode)</li>
+<li>{$PrintZen_TitleBar_Caption$} &mdash; the caption set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Description$} &mdash; the description set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Title$} &mdash; the title set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Image$} &mdash; the image set for the Title Bar Web Part of the Web Part page specified above.</li>
+</ul></p>
+<h3>Add a &quot;ScriptManager&quot; control to the page (NOT recommended)<b style="font-style: italic; text-decoration: underline;" name="s24"></b></h3>
+<p><b>(Check box option)</b></p><p>Under very rare and unlikely circumstances, using certain (non-ROXORITY) 3rd-party Web Parts on your custom design page will result in an error message that a ScriptManager control is required ("The control requires a ScriptManager on the page. The ScriptManager must appear before any controls that need it.").<br/><br/><b>ONLY</b> if you <i>do</i> receive the above error message should you tick this option: because if you tick it when it is not required, this will give your end users <b>another</b> kind of script warning and you&#39;ll want to avoid this.</p>
+</span>
+<h1 style="page-break-before: always;">Settings for Print Launchers</h1><p>The following settings can be customized for each Print Launcher by administrative users on the <b>Print Launchers</b> page in your <i>PrintZen Studio</i>, accessible via Site Settings / PrintZen Studio / Print Launchers:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</b></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Print Launcher<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Print Launcher is...<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Print Launcher will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Print Launcher caption<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the caption for this Print Launcher to be shown in the Site Actions menus that use this Print Launcher. (If you do not specify a caption, the above name for this Print Launcher will be used, or if blank, its internal ID.)</p>
+<p>Default value for new Print Launchers:</p>
+<pre>$Resources:Tool_PrintControls_DefTitle</pre>
+<h3>Print Launcher description<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the description for this Print Launcher to be shown in the Site Actions menus that use this Print Launcher.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('c');">&quot;Availability and Print Commands&quot; tab:</b></h4><span class="rox-doctab rox-doctab-c">
+<h3>Show in &quot;Site Actions&quot; menu (requires activated Site Collection feature)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked (and if the <b>PrintZen Menu Integration</b> Site Collection feature is activated), all available print commands provided by this Print Launcher appear in its own sub-menu (showing the caption and description specified above) inside the SharePoint <i>Site Actions</i> menu.</p>
+<h3>Offer printing of the page content area, if possible<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offer a command to print the content area of the current page, excluding out-of-box page chrome and navigational artifacts such as ribbon, top navigation, quick launch etc.</p>
+<h3>Offer printing of individual Web Parts, if possible<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offers Print commands for each Web Part on the page.</p>
+<h3>Offer printing of individual Web Part zones, if possible<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offers a command to print all Web Parts in a selected zone only.</p>
+</span>
+<h1 style="page-break-before: always;">Configuration Settings</h1><p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>PrintZen Studio</i>, which you can access via Site Settings / PrintZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>PrintZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / PrintZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all PrintZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PrintZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+<li><i>French</i></li>
+</ul>
+<h3>Window Options for Pop-Up Print Views<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>For Print Views that have been set to open in a new pop-up window (rather than the current browser tab), you can customize the options for that pop-up window here. Note that the syntax is JavaScript-imposed, consult our support forum or your in-house web developer / script specialist if unsure about the options or the syntax.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PrintZen Studio</i> to restore the following default value:</p>
+<pre>width=760,height=560,menubar=1,resizable=1,scrollbars=1,status=0,toolbar=0,location=0,directories=0</pre>
+<h3>No default instances of PrintZen configurables on the Site Collection level (NOT recommended!)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>Configurables are lists of items for defining and customizing the behaviors of this software (such as Export Actions in ExportZen, Data Sources and Data Field Templates in PeopleZen, Print Views and Print Launchers in PrintZen, Upload Actions in UploadZen). By default, each Site Collection has its own non-removable default instance that can be customized and to which additional instances can be added. In extensive farm setups (1000s of Site Collections), these default instances may be a hindrance and using only custom farm-level instances may be preferable. Tick this option to never provide the default instance on the Site Collection level.</p>
+<h3>By default, no inclusion of jQuery library (NOT recommended)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>Some PrintZen end user-facing artifacts require (and load into the respective host pages) the jQuery library. Embedding jQuery more than once in a single page can cause JavaScript warnings in Internet Explorer with <i>some few</i> jQuery plugins (and only if any are used in your farm at all). On the <i>Configuration</i> page in the <i>PrintZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and independently of PrintZen to prevent PrintZen from loading jQuery too. If you do so, you need to make sure jQuery is loaded on each page hosting also hosting PrintZen user interface artifacts, or PrintZen will appear broken. This is a global default setting that can be optionally overridden locally where applicable.</p>
+<h1 style="page-break-before: always;">Release Notes</h1><h3>
+	Version 1.3.1 (8th May 2013)<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<ul>
+	<li>By popular request, the <b>Site Settings / PrintZen Studio</b> section of links is now only visible to administrative users.</li>
+	<li>Updated jQuery version to 1.8.3</li>
+</ul>
+<h3>
+	Version 1.3 (18th December 2010)<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li>Added: integration into SharePoint <b>Site Actions</b> menu</li>
+	<li>Added: support for printing selected <b>Web Part zones</b></li>
+	<li>Added: support for printing the <b>full page contents</b></li>
+	<li>Added: support for printing <b>all types of Web Parts</b> (rather than only List Views and PeopleZen)</li>
+</ul>
+<h3>
+	Version 1.2 (26th September 2010)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<ul>
+	<li>Added: support for placeholders in custom Web Part page and Print View title and description</li>
+	<li>Added: support for printing View Item Properties display form (DispForm.aspx) pages</li>
+</ul>
+<h3>
+	Version 1.1 (25th September 2010)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li>Added: <b>PeopleZen</b> integration for <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://SharePoint-Tools.net/PeopleZen/">
+		print-friendly SharePoint staff directories, phone listings, departmental or any
+		other User Profile listings</b></li>
+	<li>Added: <b>Web Part Page for Custom Design of Print View</b> option for Print Views</li>
+</ul>
+<h3>
+	Version 1.0 (21st September 2010)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<ul>
+	<li>Initial release.</li>
+</ul>
+<h1 style="page-break-before: always;">End-User License Agreement (EULA)</h1><h3>
+	END-USER SOFTWARE LICENSE AGREEMENT FOR ROXORITY SOFTWARE PRODUCTS<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	THIS IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE
+	ENTITY) AND ROXORITY LTD. (ROXORITY) FOR ROXORITY SOFTWARE, ASSOCIATED MEDIA AND
+	PRINTED MATERIALS, AND MAY INCLUDE ONLINE OR ELECTRONIC DOCUMENTATION (&quot;SOFTWARE&quot;).
+	BY INSTALLING, COPYING, OR OTHERWISE USING THE ROXORITY SOFTWARE PRODUCT, YOU ARE
+	AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING THE
+	SOFTWARE LICENSE AND DISCLAIMER OF SOFTWARE WARRANTY BELOW. PLEASE READ THIS DOCUMENT
+	CAREFULLY BEFORE USING THE SOFTWARE. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS
+	OF THIS AGREEMENT, YOU MUST NOT INSTALL OR USE THE SOFTWARE.</p>
+<h3>
+	LICENSE GRANT<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	&quot;You&quot; or &quot;your&quot; as used herein means the person or company who is being licensed
+	to use the Software, as defined below. &quot;We,&quot; &quot;us&quot; and &quot;our&quot; as used herein means
+	ROXORITY Ltd.</p>
+<p>
+	The &quot;Software&quot; as referred to herein means the ROXORITY Software &quot;PrintZen&quot;, a
+	product that extends &quot;Microsoft SharePoint&quot; web sites to provide additional capabilities.
+</p>
+<p>
+	We hereby grant you a perpetual, non-exclusive, non-transferable, revocable license
+	to use the Software on your server and client computers.</p>
+<p>
+	The total number of SharePoint &quot;Site Collections&quot; or &quot;server farms&quot; that the Software
+	can be &quot;activated&quot; on (after 45 days of free trial use) shall be limited to the
+	number of licenses which you purchase. For example, if you purchase 4 Site Collection
+	licenses, you may activate the Software on up to 4 SharePoint Site Collections;
+	if you purchase 2 server farm licenses, you may active the Software on unlimited
+	Site Collections within up to 2 server farms.</p>
+<p>
+	Each license is issued to one unique Site Collection or server farm and cannot be
+	transferred to another Site Collection or server farm.
+</p>
+<h3>
+	TITLE<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The Documentation as referred to herein shall mean the written materials that you
+	may receive in connection with the Software. We will remain the sole and exclusive
+	owners of all right, title and interest in and to the Software and the Documentation.</p>
+<h3>
+	ARCHIVAL OR BACKUP COPIES<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	You may copy the Software for back-up and archival purposes only, provided however,
+	that at all times herein, the original and each copy is kept in your possession
+	and that your installation and use of the Software does not exceed that allowed
+	in the &quot;License Grant&quot; section above.</p>
+<h3>
+	THINGS YOU MAY NOT DO<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	You agree and acknowledge that the Software and Documentation are proprietary works
+	that are protected by the copyright laws of various nations. You may only use the
+	Software and Documentation for the purposes and in accordance with the terms of
+	this Agreement. You may not, without limitation:</p>
+<ul>
+	<li>copy the Documentation, </li>
+	<li>copy the Software except to make archival or backup copies as provided above,
+	</li>
+	<li>place the Software onto a server so that it is accessible via a public network such
+		as the Internet, except as provided for above in &quot;LICENSE GRANT,&quot; </li>
+	<li>sublicense, rent, lease or lend any portion of the Software or Documentation.
+	</li>
+</ul>
+<p>
+	You acknowledge that any violation of this paragraph will cause us immediate and
+	irreparable harm and that the damages which we will suffer may be difficult or impossible
+	to measure. Therefore, upon any actual or impending violation of this paragraph,
+	we shall be entitled to the issuance of a restraining order, preliminary and permanent
+	injunction without bond, restraining or enjoining such violation by you, your successors
+	or assignees or any entity or person acting in concert with you. Such remedy shall
+	be additional to and not in limitation of any other remedy which may otherwise be
+	available to us by law.</p>
+<h3>
+	TRANSFERS<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>
+	You may assign all your license to use the Software and Documentation to another
+	person or legal entity (the &quot;Assignee&quot;), provided however, that prior to such assignment,
+	the Assignee undertakes in writing to be bound by your obligations under this Agreement.
+	Any attempt to assign or transfer the license to the Software, the Documentation
+	or this Agreement shall be ineffective, unless the assignment complies with the
+	terms of this paragraph. Upon assignment of your license hereunder, you agree to
+	transfer to the Assignee all of your copies of the Software and Documentation, including
+	all copies of updates and prior versions of the Software and Documentation and you
+	further agree and that you will retain no copies, including, without limitation,
+	electronic copies stored on computer discs or drives.</p>
+<h3>
+	DISCLAIMER OF WARRANTY<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>
+	Except as otherwise provided herein, we warrant that the Software is free from defects
+	in material and workmanship and will perform substantially in accordance with the
+	Software documentation under normal use for one hundred eighty (180) days after
+	the receipt of the Software. If you notify us within such one hundred eighty (180)
+	day period of any claimed defect in the Software, we will at our sole option and
+	expense, and as you sole remedy, either repair or replace the defective Software.
+	Or, if we cannot repair or replace the Software then we will accept the return of
+	the Software at our expense and refund the purchase price of the Software.
+</p>
+<p>
+	EXCEPT AS STATED HEREIN, THE SOFTWARE AND SERVICES OFFERED BY US ARE PROVIDED ON
+	AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY OTHER KIND, EXPRESS,
+	IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE,
+	NONINFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT
+	WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, RELIABLE, SECURE OR ERROR-FREE
+	AND EXPRESSLY DISCLAIM ANY WARRANTIES AS TO THE MATERIALS CONTAINED THEREIN, THE
+	SERVERS USED OR THE GOODS OR SERVICES OFFERED BY US.</p>
+<h3>
+	EXCLUSION OF CERTAIN DAMAGES<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>
+	IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS,
+	LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE
+	OR THE INABILITY TO USE THE SOFTWARE (EVEN IF A PARTY OR AN AUTHORIZED DEALER OR
+	DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR FOR ANY CLAIM
+	BY ANY OTHER PARTY. EXCLUDED FROM THE ABOVE LIMITATION OF LIABILITY IS LIABILITY
+	FOR INDEMNIFICATION AS STATED HEREIN AND DAMAGES CAUSED BY THE GROSS NEGLIGENCE
+	OR WILLFUL MISCONDUCT OF A PARTY.</p>
+<h3>
+	TERM AND TERMINATION<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>
+	This Agreement takes effect upon your acceptance of the terms of this Agreement
+	and remains effective until terminated by either party in accordance with this Agreement.
+	You may terminate this Agreement at any time by destroying all copies of the Software
+	and Documentation in your possession and giving us prompt notice of same. This Agreement
+	will automatically terminate if you fail to comply with any term or condition of
+	this Agreement. Upon termination of this Agreement, you warrant and represent that
+	you will immediately destroy all copies of the Software and Documentation or other
+	materials provided to you hereunder, if any, that are still in your possession and
+	provide us prompt written assurance of same.</p>
+<h3>
+	CONFIDENTIALITY<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>
+	Non-disclosure. You agree and acknowledge that the Software, its algorithms, protocols
+	or interfaces, and the Documentation constitute proprietary and confidential information
+	that belong to us (the &quot;Confidential Information&quot;). You also understand and agree
+	that misuse and/or unauthorized disclosure of our Confidential Information could
+	adversely affect our business. Accordingly, you agree that at all times you will
+	(a) use and reproduce the Confidential Information only for the purposes of this
+	Agreement and only to the extent necessary for such purpose; (b) restrict disclosure
+	of the Confidential Information to your employees, consultants or independent contractors
+	with a need to know and (c) not disclose the Confidential Information to any third
+	party without our prior written approval. Notwithstanding the foregoing, it shall
+	not be a breach of this Agreement for You to disclose Confidential Information if
+	required to do so under law or in a judicial or other governmental investigation
+	or proceeding, provided however, that You give us prior notice of the disclosure
+	sought and You seek all reasonably available safeguards against widespread dissemination
+	prior to such disclosure.</p>
+<p>
+	Remedies. You acknowledge that any violation of this paragraph may cause us immediate
+	and irreparable harm and that the damages which we will suffer may be difficult
+	or impossible to measure. Therefore, upon any actual or impending violation of this
+	paragraph, we shall be entitled to the issuance of a restraining order, preliminary
+	and permanent injunction without bond, restraining or enjoining such violation by
+	you, your successors or assigns or any entity or person acting in concert with you.
+	Such remedy shall be additional to and not in limitation of any other remedy which
+	may otherwise be available to us by law.</p>
+<h3>
+	INDEMNITY<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>
+	We will at our own expense defend and hold you fully harmless against any action
+	asserted against you (and specifically including costs and reasonable attorneys&#39;
+	fees associated with any such action) to the extent that it is based on a claim
+	that use of the Software and any documentation or other materials being licensed
+	by or provided to you under this Agreement infringes any patent, copyright, license
+	or other proprietary right of any third party. You shall promptly notify us in writing
+	of any such claim. If as a result of any claim of infringement against any patent,
+	copyright, License or other proprietary right of any third party, you are enjoined
+	from using the Software, or if we believe that the Software are likely to become
+	the subject of a claim of infringement, We will at our option and expense will procure
+	the right for you to continue to use the Software, or replace or modify the Software
+	so as to make them non-infringing, or if it cannot do so within a reasonable time
+	period, refund the Software fees paid by you pursuant to the Agreement.
+</p>
+<h3>
+	GENERAL PROVISIONS<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ol>
+	<li>This Agreement constitutes the entire agreement between you and us concerning the
+		Software and Documentation and supersedes any prior or contemporaneous negotiations,
+		discussions, understandings, purchase orders, communications, advertising or representations
+		concerning the subject matter hereof. </li>
+	<li>This Agreement may be modified or amended only in writing signed by you and us.
+	</li>
+	<li>In the event of litigation between you and us concerning the Software or Documentation,
+		the prevailing party in the litigation will be entitled to recover attorneys&#39; fees
+		and expenses from the other party. </li>
+	<li>You agree that the Software will not be shipped, transferred or exported into any
+		country or used in any manner prohibited by any export laws, restrictions or regulations.
+	</li>
+	<li>The failure or delay of of either party to exercise any of its rights under this
+		Agreement or upon any breach of this Agreement shall not be deemed a waiver of those
+		rights or of the breach.</li>
+	<li>If any provision of this Agreement shall be held by a court of competent jurisdiction
+		to be contrary to law that provision will be enforced to the maximum extent permissible
+		and the remaining provisions of this Agreement will remain in full force and effect.</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"></div>
+</body>
+</html>

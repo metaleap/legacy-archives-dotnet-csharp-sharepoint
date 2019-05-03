@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="a01a1727-855f-4bca-b0f9-818c0a664777" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction
+		Id="roxorityMenuItem_PrintControls"
+		GroupId="SiteActions"
+		Rights="ViewListItems"
+		Location="Microsoft.SharePoint.StandardMenu"
+		Sequence="200"
+		RequireSiteAdministrator="FALSE"
+		ControlAssembly="roxority_PrintZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01"
+		ControlClass="roxority_PrintZen.PrintZenSiteMenuItem">
+	</CustomAction>
+	<CustomAction
+		Id="roxorityMenuItem_PrintActions"
+		RegistrationType="List"
+		GroupId="ActionsMenu"
+		Rights="ViewListItems"
+		Location="Microsoft.SharePoint.StandardMenu"
+		Sequence="20"
+		ControlAssembly="roxority_PrintZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01"
+		ControlClass="roxority_PrintZen.PrintZenMenuItem">
+	</CustomAction>
+	<CustomAction
+		Id="roxority_PrintActions"
+		RegistrationType="ContentType"
+		Location="DisplayFormToolbar"
+		Rights="ViewListItems"
+		RegistrationId="0x01"
+		ControlAssembly="roxority_PrintZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01"
+		ControlClass="roxority_PrintZen.PrintZenMenuItem">
+	</CustomAction>
+</Elements>

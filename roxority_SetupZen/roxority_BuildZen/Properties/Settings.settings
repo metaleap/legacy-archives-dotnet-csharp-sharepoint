@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="roxority_BuildZen.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ProjectsRootPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\roxor\Documents\Visual Studio 2010\Projects\</Value>
+    </Setting>
+    <Setting Name="Hive12" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Program Files\Common Files\Microsoft Shared\web server extensions\14\</Value>
+    </Setting>
+    <Setting Name="SetupPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\WspBuilder\zup</Value>
+    </Setting>
+    <Setting Name="PublishPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\sharepoint\</Value>
+    </Setting>
+    <Setting Name="PublishCopy" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">*.wsp</Value>
+    </Setting>
+    <Setting Name="Projects" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">roxority_ExportZen,roxority_FilterZen,roxority_PeopleZen,roxority_PrintZen,roxority_SampleZen,roxority_UploadZen,roxority_RollupZen</Value>
+    </Setting>
+    <Setting Name="BuildPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\WspBuilder\wsp</Value>
+    </Setting>
+    <Setting Name="WspBuilderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Program Files (x86)\WSPTools\WSPBuilderExtensions\WSPBuilder.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

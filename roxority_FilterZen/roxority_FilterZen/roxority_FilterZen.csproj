@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{808F307B-65AD-4BC3-9DD7-228DB61FE5FA}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>roxority_FilterZen</RootNamespace>
+    <AssemblyName>roxority_FilterZen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WSS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>WSS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupToolPart.cs">
+      <Link>roxority.SharePoint\RollupToolPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupWebPart.cs">
+      <Link>roxority.SharePoint\RollupWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>roxority.SharePoint\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.Shared.cs">
+      <Link>roxority.SharePoint\roxority.Shared.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>roxority.SharePoint\JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>roxority.SharePoint\ProductPage.cs</Link>
+    </Compile>
+    <None Include="12\template\features\roxority_BdcWebPart\roxority_BdcWebPart\roxority_BdcWebPart.webpart" />
+    <None Include="12\template\features\roxority_Cqwp\roxority_Cqwp\roxority_Cqwp.webpart" />
+    <None Include="12\template\features\roxority_FilterWebPart\roxority_AdapterWebPart\roxority_AdapterWebPart.webpart" />
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.cs">
+      <Link>roxority.SharePoint\roxority.Data.cs</Link>
+    </Compile>
+    <Compile Include="AutoSuggestPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="roxority_AdapterWebPart.cs" />
+    <Compile Include="ServerExtensions\BdcFilter.cs" />
+    <Compile Include="ServerExtensions\roxority_BdcWebPart.cs" />
+    <Compile Include="ServerExtensions\roxority_ContentQueryWebPart.cs" />
+    <Compile Include="FilterBase.cs" />
+    <Compile Include="FilterToolPart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="roxority_FilterWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="12\resources\roxority_FilterZen.de.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="12\resources\roxority_FilterZen.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="12\template\features\roxority_FilterWebPart\roxority_FilterWebPart\roxority_FilterWebPart.webpart" />
+    <None Include="12\template\layouts\roxority_FilterZen\schemas.tl.json" />
+    <None Include="Properties\roxority.snk" />
+    <None Include="WSPBuilder.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BusinessData, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.BusinessData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.sharepoint.portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\microsoft.sharepoint.portal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\template\controltemplates\roxority_FilterZen\ItemEditor.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_FilterZen\Tool_SiteUsers.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_FilterZen\Tool_DataSources.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_FilterZen\Tool_Localizer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_FilterZen\Tool_Transfer.tc.ascx" />
+    <Content Include="12\template\features\roxority_BdcWebPart\feature.xml" />
+    <Content Include="12\template\features\roxority_BdcWebPart\roxority_BdcWebPart\roxority_BdcWebPart.xml" />
+    <Content Include="12\template\features\roxority_Cqwp\feature.xml" />
+    <Content Include="12\template\features\roxority_Cqwp\roxority_Cqwp\roxority_Cqwp.xml" />
+    <Content Include="12\template\features\roxority_FilterWebPart\roxority_AdapterWebPart\roxority_AdapterWebPart.xml" />
+    <Content Include="12\template\features\roxority_FilterWebPart\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_FilterWebPart\roxority_FilterWebPart\roxority_FilterWebPart.xml" />
+    <Content Include="12\template\features\roxority_FilterZen_AdminLinks\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_FilterZen_AdminLinks\SiteAdminLinks.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\images\roxority_FilterZen\add.png" />
+    <Content Include="12\template\images\roxority_FilterZen\k.gif" />
+    <Content Include="12\template\images\roxority_FilterZen\roxority_FilterZen.png" />
+    <Content Include="12\template\images\roxority_FilterZen\remove.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\de\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\sharepoint-server-farm-solution-package-wsp-installation.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\LSTPEND.GIF" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_FilterZen\help\de\eula.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\ie6.tl.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\choicebrowse.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\ewr200l.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\ie6.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen.aspx">
+    </Content>
+    <Content Include="12\template\layouts\roxority_FilterZen\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\help.tlhr.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\roxlogo.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\roxority.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\bgtmp.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\ContentAreaBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\ContentAreaShadow.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\favicon.ico" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\af.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ar.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\az.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\be.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\bg.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ca.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\cs.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\da.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\de.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\dv.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\el.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\en.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\es.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\et.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\eu.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\fa.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\fi.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\fo.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\fr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\gl.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\gu.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\he.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\hi.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\hr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\hu.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\hy.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\id.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\is.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\it.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ja.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ka.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\kk.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\kn.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ko.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\kok.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ky.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\lt.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\lv.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\mk.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\mn.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\mr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ms.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\nl.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\no.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\pa.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\pl.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\pt.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ro.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ru.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sa.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sk.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sl.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sq.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sv.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\sw.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\syr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ta.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\te.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\th.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\tr.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\tt.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\uk.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\ur.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\uz.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\flag\vi.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\FooterBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\HeaderBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\bgtmp.tlhr.jpg" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\PageTitleBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\ProdNavGrad.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\RightNavActive.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\RightNavBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\RightNavBottomShadow.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\RightNavSection.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\RightNavTopShadow.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\star.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\TabBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\TabHoverBackground.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\TopNavActive.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\TopNavHover.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\VerticalShadow.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas\index.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas\jquery.ajaxQueue.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas\jquery.autocomplete.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas\jquery.autocomplete.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqas\jquery.bgiframe.min.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jQuery.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jsapi.tl.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\json2.tl.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\magpop.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\magpop.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\mash.tl.aspx" />
+    <Content Include="12\template\layouts\roxority_FilterZen\RollupZen.tl.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\RollupZen.tl.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\roxority.tl.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\roxority.tl.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\img\completeallwftasks.gif" />
+    <Content Include="12\template\images\roxority_FilterZen\feature.png" />
+    <Content Include="12\template\images\roxority_FilterZen\wp_Filter.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\advanced.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\choice_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\bcs_bdc_business_data_catalog_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\bcs_bdc_business_data_item_builder_web_part.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\how_tos.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\release_notes.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\bcs_bdc_business_data_item_builder_web_part.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_bcs_bdc_business_data_catalog.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_sql_data_lookup.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\sql_data_lookup_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\ref_url_settings.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\ref_css.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_choice.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_date.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_list_lookup.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_page_field.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_text.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_url_query_string.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\filter_user.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_04.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_05.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_06.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_07.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\url_query_string_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\page_field_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\user_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\list_lookup_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\date_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\text_filters.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\general.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\eula.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\adv_01.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\adv_02.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\adv_03.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\adv_04.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\setup06.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\setup07.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wpdialog.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_01.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_02.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\res\wp_03.png" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\setup.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\webpart.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\help\intro.html" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqms\dropdown.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqms\dropdown_active.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqms\dropdown_hover.gif" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqms\jquery.multiSelect.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\jqms\jquery.multiSelect.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\roxority_FilterZen.css" />
+    <Content Include="12\template\layouts\roxority_FilterZen\roxority_FilterZen.js" />
+    <Content Include="12\template\layouts\roxority_FilterZen\roxsite.tl.css" />
+    <Content Include="solutionid.txt" />
+    <Content Include="_14\template\features\roxority_FilterZen_AdminLinks\SiteAdminLinks.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent>del "$(TargetDir)ssocli.dll"
+"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" CopyFiles $(SolutionName)</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio />
+  </ProjectExtensions>
+</Project>

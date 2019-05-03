@@ -1,0 +1,109 @@
+﻿<html>
+<head>
+	<style type="text/css">
+		body
+		{
+			background-color: Window;
+			color: WindowText;
+			font-family: Arial, Helvetica, "Helvetica Neue" , Sans-Serif;
+			font-size: 11px;
+			line-height: 1.8em;
+		}
+		h3
+		{
+			border-bottom: #c0c0a0 1px dotted;
+			margin: 0px !important;
+			padding: 0px !important;
+			font-size: 20px;
+			letter-spacing: -1px;
+			color: #909070;
+			font-weight: normal;
+		}
+		img
+		{
+			margin: 0px 3px 0px 3px;
+			width: 16px !important;
+			height: 16px !important;
+		}
+	</style>
+	<base href="%%BASE_URL%%/_layouts/roxority_UploadZen/help/res/" />
+
+	<script language="JavaScript" type="text/javascript">
+	function ShowDeployNote() {
+		var baseUrl = '%%BASE_URL%%', sep = '://', pos = baseUrl.indexOf(sep), pos2 = baseUrl.lastIndexOf('/');
+		if (pos > 0) {
+			baseUrl = baseUrl.substr(pos + sep.length);
+			if (pos2 > (pos + 2))
+				baseUrl = baseUrl.substr(0, baseUrl.lastIndexOf('/'));
+		}
+		document.getElementById('roxUpDeployHead').innerHTML = 'Cannot access ' + baseUrl + '.';
+		document.getElementById('roxUpDeployPara').innerHTML = 'Deployment may not yet be complete. ' + document.getElementById('roxUpDeployPara').innerHTML;
+		document.getElementById('roxUpDeployNote').style.display = 'block';
+	}
+	var roxUpTimer = setTimeout("ShowDeployNote();", 9000);
+	</script>
+
+</head>
+<body>
+	<p style="display: %%DISPLAY_WELCOME%%;">
+		<a target="_blank" href="http://roxority.com/UploadZen"><img border="0" alt="http://SharePoint-Tools.net/UploadZen/" border="0" height="30" src="roxority.tlhr.png" style="height: 30px !important; width: 90px !important;" width="90" align="right" /></a>
+		<b>Welcome!</b> You have not marked any files for upload yet.</p>
+	<p style="display: %%DISPLAY_SUCCESS%%;">
+		<b style="background-color: #99FF99;">Upload completed!</b> Got more to upload?</p>
+	<div id="roxUpDeployNote" style="padding: 2px; margin: 2px; background-color: InfoBackground;
+		color: InfoText; display: %%DISPLAY_NOTE%%;">
+		<h3 id="roxUpDeployHead">
+			Deployment is not yet complete!</h3>
+		<p id="roxUpDeployPara">
+			Please ask the administrator responsible for this SharePoint server to:</p>
+		<ul>
+			<li>read the <a target="_blank" href="%%BASE_URL%%/_layouts/roxority_UploadZen/default.aspx?doc=clickonce_deployment_checklist">
+				Deployment Checklist</a> fully and perform all the administrative actions described
+				that are <i>required</i> for <b>UploadZen</b> to run correctly for other users.</li>
+			<li>Only <i>after</i> doing so, hide this reminder notice in <a target="_blank" href="%%BASE_URL%%/_layouts/roxority_UploadZen/default.aspx?cfg=cfg#cfg_HideNote">
+				Product Configuration</a>.</li>
+		</ul>
+	</div>
+	<h3>
+		How to upload multiple files:</h3>
+	<ul>
+		<li>Navigate to a directory containing files for upload by clicking the
+			<img src="openfolderHS.png" />
+			<b>Change Folder...</b> button.</li>
+		<li>&quot;Mark for upload&quot; each file to be uploaded by:<ul>
+			<li>either double-clicking the file, or</li>
+			<li>selecting multiple files and clicking the
+				<img src="DoubleRightArrowHS.png" />
+				<b>Mark selected file(s) for upload</b> button.</li>
+		</ul>
+		</li>
+		<li>Repeat the above steps as needed, then once you&#39;re ready to upload, click the
+			<img src="PublishPlanHS.png" />
+			<b>Upload Files</b> button.</li>
+	</ul>
+	<h3>
+		Can't see a file you know is there?</h3>
+	<ul>
+		<li>Open the
+			<img src="filter2HS.png" />
+			<b>File Filters</b> drop-down menu and if a file filter is active, select
+			<img src="deletehs.png" />
+			<b>(No File Filters)</b> to show all files.</li></ul>
+	<h3>
+		How to bulk-upload entire folders:</h3>
+	<ul>
+		<li>Navigate to the directory to be uploaded by clicking the
+			<img src="openfolderHS.png" />
+			<b>Change Folder...</b> button.</li>
+		<li>Now open the
+			<img src="openfolderHS.png" />
+			<b>Change Folder...</b> drop-down menu and drop-down menu and click the <b>Mark entire
+				folder contents for upload</b> menu item.</li>
+		<li>Repeat the above steps as needed, then once you&#39;re ready to upload, click the
+			<img src="PublishPlanHS.png" />
+			<b>Upload Files</b> button.</li>
+	</ul>
+	<script type="text/javascript" language="JavaScript" src="%%BASE_URL%%/_layouts/roxority_UploadZen/help/app/welcome.js">
+	</script>
+</body>
+</html>

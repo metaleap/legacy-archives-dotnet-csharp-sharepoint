@@ -1,0 +1,87 @@
+﻿<h3>1. Hinzufügen des Webparts</h3>
+<p>
+	Nach erfolgreich abgeschlossener <a href="?doc=setup">Installation des FilterZen-Lösungspakets 
+	und Aktivierung des Websitesammlungsfeatures</a>,
+	können Sie das <b>FilterZen URL-Filter</b>-Webpart jeder beliebigen Webpartseite 
+	auf die gewohnte Art und Weise hinzufügen. Nachdem Sie über das <i>
+	Websiteaktionen</i>-Menü in den Seitenentwurfsmodus gewechselt und die <i>Webpart 
+	hinzufügen</i>-Schaltfläche in der Webpartzone Ihrer Wahl angeklickt haben, 
+	finden Sie das Webpart im <i>Webparts hinzufügen</i>-Dialog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 387px;" src="help/de/res/wpdialog.png" title="" />
+</p>
+<p>
+	(Ist das Webpart im <i>Webparts hinzufügen</i>-Dialog nicht verfügbar, 
+	(re-)aktivieren Sie das <b>FilterZen URL-Filter-Webpart</b>-Feature unter <i>
+	Websitesammlungsfeatures</i>, wie im letzten Abschnitt des Kapitels <a href="?doc=setup">
+	Installation der Lösung &amp; Feature-Aktivierung</a> beschrieben.</p>
+<p>
+	Plazieren Sie ein <b>FilterZen URL-Filter</b>-Webpart auf der Webpartseite, die 
+	das zu filternde 
+	<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webpart enthält. (Ein <i>
+	Listenansicht</i>-Webpart wird von SharePoint jedes Mal angelegt, wenn Sie einer 
+	Webpartzone eine Liste oder Dokumentbibliothek über den <i>Webparts hinzufügen</i>-Dialog 
+	oder andere Seitenbearbeitungswerkzeuge wie <i>SharePoint Designer</i> 
+	hinzufügen.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 135px;" src="help/de/res/wp_01.png" title="" />
+</p>
+<h3>2. Verbinden Sie das Webpart</h3>
+<p>
+	Das neu hinzugefügte Webpart weist Sie bereits darauf hin, daß es nicht 'verbunden' 
+	ist. Indem Sie das Webpart 'verbinden', teilen Sie ihm mit, welche Webparts die 
+	URL-Parameterfilter empfangen sollen, die Sie in Kürze einrichten werden. 
+	Verbinden Sie das Webpart mit allen zu filternden 
+	<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts über das <i>
+	Bearbeiten/Verbindungen</i>-Webpartmenü:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 157px;" src="help/de/res/wp_02.png" title="" />
+</p>
+<h3>3. Filterparameter einrichten</h3>
+<p>
+	Sobald andere Webparts mit dem <b>FilterZen URL-Filter</b>-Webpart verbunden 
+	sind, sendet es ihnen bei jedem Seitenaufruf <i>Filter</i>, die jeweils aus 
+	einem Filternamen und einem Filterwert zusammengesetzt sind, indem sowohl 
+	Filternamen als auch -werte aus den URL-Parametern entnommen werden. Verbinden 
+	Sie mit <i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts, muß der 
+	Filtername letztlich einem Spaltennamen entsprechen. Sie müssen also dem <b>FilterZen URL-Filter</b>-Webpart 
+	mitteilen, welche Filternamen in der URL vorkommen (und aus ihr entnommen werden 
+	sollen). Wählen Sie hierzu <i>Webpart bearbeiten</i> im Webpartmenü <i>Bearbeiten</i> 
+	aus und geben Sie nun einfach im <i>URL-Parameter</i>-Textfeld am Anfang des 
+	Webparteinstellungen-Arbeitsbereich alle Filternamen an, genau einen pro Zeile.</p>
+<p>
+	Folgende Abbildung verdeutlicht das Prinzip mit einem <b>FilterZen URL-Filter</b>-Webpart, 
+	das mit einer <i>Aufgaben</i>-Standardliste verbunden wurde: die <i>Priorität</i>- 
+	und <i>Status</i>-Spalten werden per aktueller Ansicht des <i>
+	Aufgaben</i>-Listenwebparts angezeigt. Durch Einrichtung der unten dargestellten URL-Filterparameter 
+	wird die <i>Aufgaben</i>-Listenwebpartansicht immer nach den entsprechenden 
+	Parameterwerten der URL gefiltert, wenn die Webpartseite mit einem <i>priority</i>-Parameter (Groß- 
+	und Kleinschreibung spielt bei Parameternamen und -werten keine Rolle), einen <i>status</i>-Parameter, 
+	oder beiden aufgerufen wird.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 220px;" src="help/de/res/wp_03.png" title="" />
+</p>
+<h3>4. Testen Ihrer Filterparameter</h3>
+<p>
+	Testen Sie verschiedene URL-Kombinationen und deren Effekt auf verbundene
+<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts, wie nachfolgend 
+	demonstriert:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 650px;" src="help/de/res/wplist_01.png" title="" /> 
+	<span>Obige Abbildung: die ungefilterte <i>Aufgaben</i>-Liste</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 334px;" src="help/de/res/wplist_02.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit <i>Status</i>-Spalte gefiltert nach 
+	<i>status</i>-URL-Parameter</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 396px;" src="help/de/res/wplist_03.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit <i>Priorität</i>-Spalte gefiltert nach 
+	<i>priority</i>-URL-Parameter</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 302px;" src="help/de/res/wplist_04.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit beiden Spalten gefiltert nach beiden URL-Parametern</span>
+</p>

@@ -1,0 +1,46 @@
+<p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>PrintZen Studio</i>, which you can access via Site Settings / PrintZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language</h3>
+<p>PrintZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / PrintZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all PrintZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PrintZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+</ul>
+<h3>Window Options for Pop-Up Print Views</h3>
+<p>For Print Views that have been set to open in a new pop-up window (rather than the current browser tab), you can customize the options for that pop-up window here. Note that the syntax is JavaScript-imposed, consult our support forum or your in-house web developer / script specialist if unsure about the options or the syntax.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PrintZen Studio</i> to restore the following default value:</p>
+<pre>width=760,height=560,menubar=1,resizable=1,scrollbars=1,status=0,toolbar=0,location=0,directories=0</pre>
+<h3>Embed additional Cascading Stylesheet (CSS) URLs</h3>
+<p>Your Print Views already DO pick up your SharePoint Site&#39;s "Theme" setting and "custom CSS link" setting. If you need any additional stylesheets loaded in your Print Views, specify them here (as absolute or relative URLs), one per line.</p>
+<h3>File Path to Merge Tool</h3>
+<p>Specify the full file path to your doc2pdf.exe installation or equivalent tool, including the file name. NOTE: in multi-server farm environments, the program file should exist at the exact same path on all farm servers.<br/><br/><b>PrintZenServer.exe will provide NEITHER server-side merging NOR printing unless and until a valid and fully functional doc2pdf.exe or equivalent program file is specified here.</b></p>
+<h3>Stapling</h3>
+<p>Specifies whether, and where, a printer staples a multi-page document.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PrintZen Studio</i>:</p>
+<ul>
+<li><i>None</i></li>
+<li><i>Top left</i></li>
+<li><i>Top right</i></li>
+<li><i>Bottom left</i></li>
+<li><i>Bottom right</i></li>
+<li><i>Saddle stitch</i></li>
+<li><i>Dual left</i></li>
+<li><i>Dual right</i></li>
+<li><i>Dual top</i></li>
+<li><i>Dual bottom</i></li>
+<li><i>Printer default or unspecified</i></li>
+</ul>
+<h3>Duplex</h3>
+<p>Specifies whether a printer uses one-sided printing or some type of two-sided (duplex) printing.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PrintZen Studio</i>:</p>
+<ul>
+<li><i>One-sided</i></li>
+<li><i>Two-sided (long edge)</i></li>
+<li><i>Two-sided (short edge)</i></li>
+<li><i>Printer default or unspecified</i></li>
+</ul>
+<h3>No default instances of PrintZen configurables on the Site Collection level (NOT recommended!)</h3>
+<p>Configurables are lists of items for defining and customizing the behaviors of this software (such as Export Actions in ExportZen, Data Sources and Data Field Templates in PeopleZen, Print Views and Print Launchers in PrintZen, Upload Actions in UploadZen). By default, each Site Collection has its own non-removable default instance that can be customized and to which additional instances can be added. In extensive farm setups (1000s of Site Collections), these default instances may be a hindrance and using only custom farm-level instances may be preferable. Tick this option to never provide the default instance on the Site Collection level.</p>
+<h3>By default, no inclusion of jQuery library v1.8.3 (NOT recommended)</h3>
+<p>Some PrintZen end user-facing artifacts may require, and load into the respective host pages, the jQuery library. Embedding jQuery more than once in a single page can sometimes cause issues. On the <i>Configuration</i> page in the <i>PrintZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and do so independently of PrintZen, to prevent PrintZen from loading jQuery redundantly. If you do so, you need to make sure jQuery (any version higher than 1.4 BUT lower than 1.9) is loaded on each page also hosting PrintZen user interface artifacts, or PrintZen will appear broken. This is a global default setting that may be optionally overridden locally where applicable.</p>

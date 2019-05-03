@@ -1,0 +1,946 @@
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<!--script type="text/javascript" language="JavaScript" src="jQuery.js"></script-->
+		<!--script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script-->
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #ffffff;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #ffffff;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"></div>
+	
+<h1>Einf&uuml;hrung</h1><p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart erm&ouml;glicht das Filtern anderer 
+	SharePoint-Webparts, wie zum Beispiel <i>Listenansicht-Webparts</i> und <i>Datenansicht-Webparts</i>, 
+	anhand der beim Seitenaufruf jeweils &uuml;bergebenen Parameter in der 
+	Webpartseiten-URL.</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	<b>Was sind URL-Parameter?</b>
+	<p>
+		URL-Parameter sind die Name-Wert-Paare in einer URL, die auf das &#39;?&#39; (Fragezeichen) 
+		folgen. Beispielsweise enth&auml;lt die Google-Suche <a href="http://google.com/search?q=roxority&hl=de" target="_blank">http://google.com/search?q=roxority&hl=den</a> zwei URL-Parameter: die Suchanfrage &#39;q&#39; und die Spracheinstellung &#39;hl&#39;. 
+		<span id="urlsample" style="display: none;">Ein weiteres Beispiel: die aktuelle URL dieser Seite (<i style="white-space: nowrap;"
+			id="pageurl">[url]</i>) hat einen URL-Parameter &#39;doc&#39; mit dem Wert
+		&#39;intro&#39;.</span></p>
+	<!--script language="JavaScript" type="text/javascript">
+		if (location.href.indexOf('doc=intro') < 0) location.replace('intro.html');
+		jQuery('#pageurl').text(location.href);
+		jQuery('#urlsample').show(0);
+	</script-->
+
+</div>
+<p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart erm&ouml;glicht das Filtern von:</p>
+<ul>
+	<li><b>Listen</b>, einschlie&szlig;lich vordefinierter Standardlisten wie <i>Ank&uuml;ndigungen</i>, 
+		<i>Kalender</i>,
+		<i>Hyperlinks</i>, <i>Aufgaben</i> sowie nat&uuml;rlich Ihrer eigenen <i>
+		Benutzerdefinierten Listen</i></li>
+	<li><b>Dokumentenbibliotheken</b>, inklusive <i>Freigegebene Dokumente</i>, <i>Formularbibliotheken</i>,
+		<i>Wikiseitenbibliotheken</i>, <i>Bildbibliotheken</i> und beliebige andere 
+		Dokumentenbibliotheken</li>
+	<li><b>Datenansichten</b> (diese werden zumeist mit <i>SharePoint Designer</i> 
+		erstellt und sind f&uuml;r gew&ouml;hnlich an Listendaten gebunden)</li>
+</ul>
+<div class="rox-info">
+	<b>Sie m&ouml;chten Webpartfilter anwenden &mdash; aber nicht anhand von 
+	URL-Parametern?</b>
+	<p>
+		Das <b>FilterZen URL-Filter</b>-Webpart filtert Listen- und Datenansichten immer <i>
+		dynamisch</i>,
+		anhand sich potentiell st&auml;ndig beliebig &auml;ndernder URL-Parameter. Wollen Sie 
+		hingegen einen <i>statischen</i> Filter realisieren, dessen immer gleicher, 
+		fixer Filterwert immer aktiv ist:</p>
+	<ul>
+		<li>w&auml;hlen Sie bei einem <i>Listenansicht</i>-Webpart einfach <i>Bearbeiten</i> im 
+			Webpartmen&uuml; aus und klicken Sie dann auf <i>Aktuelle Ansicht bearbeiten</i> im 
+			Webparteinstellungen-Arbeitsbereich.</li>
+		<li>&ouml;ffnen Sie bei einem <i>Datenansicht</i>-Webpart die Webpartseite in <i>SharePoint Designer</i> 
+			und legen Sie den Filter in den Webparteinstellungen fest.</li>
+	</ul>
+	<p>
+		K&ouml;nnen Sie Ihre spezifischen Filteranforderungen weder mit <b>FilterZen</b>s URL-Parameterfilterung 
+		noch mit den Standard-Filterwebparts von <i>Microsoft Office SharePoint Server</i> (MOSS) umsetzen, lassen 
+		Sie uns das im <a href="http://roxority.com/filterzen-forum/">FilterZen-Diskussionsforum</a> 
+		wissen oder <a href="http://roxority.com/contact/">schreiben Sie uns direkt</a> 
+		&mdash; wir werden gerne versuchen, weiterzuhelfen.</p>
+</div>
+<h1>L&ouml;sungsinstallation und Feature-Aktivierung</h1><h3>
+	1. Das FilterZen-Setuppaket<a name="s0"></a></h3>
+<p>
+	Das <b>FilterZen</b>-Setuppaket (die <a href="http://roxority.com/storage/sharepoint/filterzen/roxority_FilterZen.zip">roxority_FilterZen.zip</a>-Datei) ist ein 
+	ZIP-Archiv und enth&auml;lt:</p>
+<ul>
+	<li><b>setup.exe</b> - Ein Installationsassistent mit graphischer Benutzeroberfl&auml;che (GUI) 
+		zur Installation und Bereitstellung, sowie zur R&uuml;ckstellung und Deinstallation 
+		von <b>FilterZen</b> auf einer SharePoint-Serverfarm, auszuf&uuml;hren durch einen Administrator-Benutzer 
+		auf dem prim&auml;ren SharePoint- Farm- oder Web-Frontend-Server.</li>
+	<li><b>doc</b> - Ein Ordner, der diese Produktdokumentation im Compiled HTML (CHM)- und Portable Document (PDF)-Format enth&auml;lt (Englisch und Deutsch).</li>
+	<li>Zus&auml;tzliche Unterst&uuml;tzungsdateien, die f&uuml;r die korrekte Ausf&uuml;hrung von <b>
+		setup.exe</b> <i>erforderlich</i> sind und nicht modifiziert oder entfernt 
+		werden d&uuml;rfen.</li>
+</ul>
+<div class="rox-info">
+	Extrahieren Sie das Setuppaket in ein beliebiges Dateisystemverzeichnis. F&uuml;hren 
+	Sie <b>setup.exe</b> nicht einfach direkt aus dem Setuppaket heraus aus &mdash; 
+	der Installationsassistent mu&szlig; von einem Dateisystemverzeichnis aus gestartet 
+	werden, welches auch alle anderen Unterst&uuml;tzungsdateien aus dem Setuppaket 
+	enth&auml;lt.</div>
+<h3>
+	2. Installieren des FilterZen-L&ouml;sungspakets<a name="s1"></a></h3>
+<p>
+	F&uuml;hren Sie <b>setup.exe</b> aus und klicken Sie im <i>Willkommen</i>-Fenster 
+	auf <i>Weiter</i>, um eine Reihe an Systemtests zu starten. Damit die 
+	Installation fortgesetzt werden kann, m&uuml;ssen alle Systemtests zu einem positiven 
+	Ergebnis kommen:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup01.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i> und w&auml;hlen Sie im folgenden Assistentenschritt die 
+	Webanwendungen aus, in denen <b>FilterZen</b> bereitgestellt werden soll. 
+	Unterhalb jeder ausgew&auml;hlten Webanwendung k&ouml;nnen Sie optional auch jene 
+	Websitesammlungen <i>abw&auml;hlen</i>, in denen der Installationsassistent das Webpartfeature <i>nicht</i> 
+	unmittelbar nach erfolgter Bereistellung automatisch f&uuml;r Sie <i>aktivieren</i> 
+	soll. (Selbst wenn <b>FilterZen</b> in einer Webanwendung bereitgestellt wurde, 
+	mu&szlig; das <b>FilterZen URL-Filter-Webpart</b>-<i>Feature</i> in einer 
+	Websitesammlung <i>aktiviert</i> werden, bevor das <b>FilterZen URL-Filter</b>-Webpart 
+	auf Webpartseiten einer Website eingesetzt werden kann, wie im Abschnitt <i>Aktivierung 
+	des Websitesammlungsfeatures</i> weiter unten beschrieben. F&uuml;r den aktuellen 
+	Schritt gen&uuml;gt aber die Kenntnis, das der Installationsassistent die 
+	Feature-Aktivierungen f&uuml;r Sie vornimmt, au&szlig;er bei explizit abgew&auml;hlten 
+	Websitesammlungen.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup02.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i>, um die Installation zu starten und warten Sie, 
+	bis die Bereitstellungsvorg&auml;nge und Feature-Aktivierung abgeschlossen wurden. 
+	Dieser Proze&szlig; kann einige Sekunden bis mehrere Minuten in Anspruch nehmen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup03.png"
+		title="" /></p>
+<p>
+	&Uuml;berpr&uuml;fen Sie nach Abschlu&szlig; der Bereitstellungsvorg&auml;nge und 
+	Feature-Aktivierungen das Installationslog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup04.png"
+		title="" /></p>
+<p>
+	Sobald Sie den Installationsassisten erfolgreich abgeschlossen haben, k&ouml;nnen Sie 
+	das <b>FilterZen
+		URL-Filter</b>-Webpart bereits auf Webpartseiten innerhalb der zuvor 
+	angew&auml;hlten Websitesammlungen einsetzen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Aktivierung des Websitesammlungsfeatures<a name="s2"></a></h3>
+<p>
+	Das <b>FilterZen URL-Filter</b>-Webpart ist ein <i>SharePoint-Feature auf 
+	Websitesammlungsebene</i>, welches in jeder Websitesammlung, in der es 
+	eingesetzt werden soll, einmalig
+	&#39;aktiviert&#39; werden mu&szlig;.</p>
+<ol>
+	<li>Beginnen Sie auf der Webpartseite, auf der Sie das Webpart einsetzen wollen. 
+		W&auml;hlen Sie <i>Websiteeinstellungen</i> aus dem <i>Websiteaktionen</i>-Men&uuml; aus. </li>
+	<li>Die <i>Websiteeinstellungen</i>-Seite enth&auml;lt ganz rechts den Abschnitt <i>
+		Websitesammlungsverwaltung</i>. Klicken Sie hier auf <i>Websitesammlungsfeatures</i>. 
+		Falls dieser Link nicht existiert, klicken Sie stattdessen auf <i>Zu 
+		Websiteeinstellungen der obersten Ebene wechseln</i>, 
+		und klicken Sie auf der nun angezeigten <i>Websiteeinstellungen</i>-Seite der 
+		Stammwebsite auf <i>Websiteauflistungsfeatures</i> unterhalb des Abschnitts <i>
+		Websitesammlungsverwaltung</i>. </li>
+	<li>Die <i>Websitesammlungs-Features</i>-Seite sollte einen Eintrag namens <b>FilterZen URL-Filter-Webpart</b> 
+		enthalten.
+		<ul>
+			<li><b>Ist dieser Eintrag vorhanden</b>, dann klicken Sie auf <i>Aktivieren</i>, um das Webpart 
+				allen Websites, Webpartkatalogen und Webpartseiten dieser Websitesammlung zur 
+				Verf&uuml;gung zu stellen; oder klicken Sie auf <i>Deaktivieren</i>, um das Webpart 
+				in der gesamten Websitesammlung umgehend zu deaktivieren.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/de/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li><b>Fehlt dieser Eintrag</b>, wurde das <b>FilterZen</b>-L&ouml;sungspaket in der 
+				&uuml;bergeordneten Webanwendung noch nicht <i>bereitgestellt</i>. Klicken Sie unter <i>
+				Vorg&auml;nge</i> in der <i>Zentraladministration</i> auf <i>L&ouml;sungsverwaltung</i> 
+				(unterhalb des <i>Globale Konfiguration</i>-Abschnitts). Klicken Sie auf der 
+				Seite <i>L&ouml;sungsverwaltung</i> auf <b>roxority_filterzen.wsp</b>, um die Seite 
+				<i>
+				Eigenschaften der L&ouml;sung</i> zu &ouml;ffnen. Klicken Sie auf <i>L&ouml;sung bereitstellen</i>, 
+				w&auml;hlen Sie die der betreffenden Websitesammlung &uuml;bergeordnete Webanwendung aus und 
+				klicken Sie auf <i>OK</i>.
+				(Die Bereitstellung wird an einen Zeitgeberauftrag delegiert, dessen geplanter 
+				Ausf&uuml;hrungszeitpunkt ebenfalls von Ihnen angegeben wurde. Der Abschlu&szlig; der 
+				Bereitstellung kann einige Minuten beanspruchen.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/de/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h1>Durchlauf: Verwenden von FilterZen</h1><h3>1. Hinzuf&uuml;gen des Webparts<a name="s0"></a></h3>
+<p>
+	Nach erfolgreich abgeschlossener <a href="setup.html">Installation des FilterZen-L&ouml;sungspakets 
+	und Aktivierung des Websitesammlungsfeatures</a>,
+	k&ouml;nnen Sie das <b>FilterZen URL-Filter</b>-Webpart jeder beliebigen Webpartseite 
+	auf die gewohnte Art und Weise hinzuf&uuml;gen. Nachdem Sie &uuml;ber das <i>
+	Websiteaktionen</i>-Men&uuml; in den Seitenentwurfsmodus gewechselt und die <i>Webpart 
+	hinzuf&uuml;gen</i>-Schaltfl&auml;che in der Webpartzone Ihrer Wahl angeklickt haben, 
+	finden Sie das Webpart im <i>Webparts hinzuf&uuml;gen</i>-Dialog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 387px;" src="help/de/res/wpdialog.png" title="" />
+</p>
+<p>
+	(Ist das Webpart im <i>Webparts hinzuf&uuml;gen</i>-Dialog nicht verf&uuml;gbar, 
+	(re-)aktivieren Sie das <b>FilterZen URL-Filter-Webpart</b>-Feature unter <i>
+	Websitesammlungsfeatures</i>, wie im letzten Abschnitt des Kapitels <a href="setup.html">
+	Installation der L&ouml;sung &amp; Feature-Aktivierung</a> beschrieben.</p>
+<p>
+	Plazieren Sie ein <b>FilterZen URL-Filter</b>-Webpart auf der Webpartseite, die 
+	das zu filternde 
+	<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webpart enth&auml;lt. (Ein <i>
+	Listenansicht</i>-Webpart wird von SharePoint jedes Mal angelegt, wenn Sie einer 
+	Webpartzone eine Liste oder Dokumentbibliothek &uuml;ber den <i>Webparts hinzuf&uuml;gen</i>-Dialog 
+	oder andere Seitenbearbeitungswerkzeuge wie <i>SharePoint Designer</i> 
+	hinzuf&uuml;gen.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 135px;" src="help/de/res/wp_01.png" title="" />
+</p>
+<h3>2. Verbinden Sie das Webpart<a name="s1"></a></h3>
+<p>
+	Das neu hinzugef&uuml;gte Webpart weist Sie bereits darauf hin, da&szlig; es nicht 'verbunden' 
+	ist. Indem Sie das Webpart 'verbinden', teilen Sie ihm mit, welche Webparts die 
+	URL-Parameterfilter empfangen sollen, die Sie in K&uuml;rze einrichten werden. 
+	Verbinden Sie das Webpart mit allen zu filternden 
+	<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts &uuml;ber das <i>
+	Bearbeiten/Verbindungen</i>-Webpartmen&uuml;:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 157px;" src="help/de/res/wp_02.png" title="" />
+</p>
+<h3>3. Filterparameter einrichten<a name="s2"></a></h3>
+<p>
+	Sobald andere Webparts mit dem <b>FilterZen URL-Filter</b>-Webpart verbunden 
+	sind, sendet es ihnen bei jedem Seitenaufruf <i>Filter</i>, die jeweils aus 
+	einem Filternamen und einem Filterwert zusammengesetzt sind, indem sowohl 
+	Filternamen als auch -werte aus den URL-Parametern entnommen werden. Verbinden 
+	Sie mit <i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts, mu&szlig; der 
+	Filtername letztlich einem Spaltennamen entsprechen. Sie m&uuml;ssen also dem <b>FilterZen URL-Filter</b>-Webpart 
+	mitteilen, welche Filternamen in der URL vorkommen (und aus ihr entnommen werden 
+	sollen). W&auml;hlen Sie hierzu <i>Webpart bearbeiten</i> im Webpartmen&uuml; <i>Bearbeiten</i> 
+	aus und geben Sie nun einfach im <i>URL-Parameter</i>-Textfeld am Anfang des 
+	Webparteinstellungen-Arbeitsbereich alle Filternamen an, genau einen pro Zeile.</p>
+<p>
+	Folgende Abbildung verdeutlicht das Prinzip mit einem <b>FilterZen URL-Filter</b>-Webpart, 
+	das mit einer <i>Aufgaben</i>-Standardliste verbunden wurde: die <i>Priorit&auml;t</i>- 
+	und <i>Status</i>-Spalten werden per aktueller Ansicht des <i>
+	Aufgaben</i>-Listenwebparts angezeigt. Durch Einrichtung der unten dargestellten URL-Filterparameter 
+	wird die <i>Aufgaben</i>-Listenwebpartansicht immer nach den entsprechenden 
+	Parameterwerten der URL gefiltert, wenn die Webpartseite mit einem <i>priority</i>-Parameter (Gro&szlig;- 
+	und Kleinschreibung spielt bei Parameternamen und -werten keine Rolle), einen <i>status</i>-Parameter, 
+	oder beiden aufgerufen wird.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 220px;" src="help/de/res/wp_03.png" title="" />
+</p>
+<h3>4. Testen Ihrer Filterparameter<a name="s3"></a></h3>
+<p>
+	Testen Sie verschiedene URL-Kombinationen und deren Effekt auf verbundene
+<i>Listenansicht</i>- oder <i>Datenansicht</i>-Webparts, wie nachfolgend 
+	demonstriert:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 650px;" src="help/de/res/wplist_01.png" title="" /> 
+	<span>Obige Abbildung: die ungefilterte <i>Aufgaben</i>-Liste</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 334px;" src="help/de/res/wplist_02.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit <i>Status</i>-Spalte gefiltert nach 
+	<i>status</i>-URL-Parameter</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 396px;" src="help/de/res/wplist_03.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit <i>Priorit&auml;t</i>-Spalte gefiltert nach 
+	<i>priority</i>-URL-Parameter</span>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 302px;" src="help/de/res/wplist_04.png" title="" />
+	<span>Obige Abbildung: die <i>Aufgaben</i>-Liste, mit beiden Spalten gefiltert nach beiden URL-Parametern</span>
+</p>
+<h1>Allgemeine Filtereinstellungen</h1><p>
+	The following settings apply across all filter types.</p>
+<h3>
+	Column / Filter Name<a name="s0"></a></h3>
+<p>
+	This name is the name used to identify a filter among other filters in your FilterZen
+	Filter Web Part. It is also the filter name sent to connected Web Parts.</p>
+<p>
+	Different kinds of Web Parts may vary in their requirements for filter names. When
+	connected to a <i>List View</i> Web Part (or a <i>Data View</i> Web Part whose data
+	source is a SharePoint list or document library), those out-of-the-box, filter-receiving
+	SharePoint Web Parts <i>require</i> the <b>FilterZen</b> Filter Web Part to send
+	filter names that correspond <i>exactly</i> to <b>internal</b> Column names (which
+	<i>never</i> change once a Column has been created) rather than their current display
+	names (<b>Column titles</b>, which <i>can</i> be changed by end-users at any time).</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	The <i>internal name</i> of a Column is set when a it is first created, and it never
+	changes, even though the <i>Column title</i> might be changed repeatedly from SharePoint&#39;s
+	<i>Edit Column</i> page later on. The patterns for internal names vary: for some
+	built-in Columns from SharePoint&#39;s out-of-the-box List definitions there are
+	internal names such as <i>AssignedTo</i> for the <i>Tasks</i> List&#39;s &quot;Assigned
+	To&quot; Column, or <i>_ModerationComments</i> for any List&#39;s &quot;Approver
+	Comments&quot; Column. A user-created Column with an initial title of &quot;Test-Link&quot;
+	will get an internal name of <i>Test_x002d_Link</i>.</div>
+<p>
+	<b>FilterZen</b> cannot change this requirement (to send filter names corresponding
+	<i>exactly</i> to internal Colum names) &mdash; it was built right into SharePoint.
+	You therefore need to specify filter names corresponding to the internal Column
+	names.</p>
+<p>
+	To make this as easy as possible for you, we built a useful tool right into the
+	Web Part&#39;s configuration tool pane that empowers you to instantly figure out
+	the proper filter name to use for the Column you want to filter, that is, its <i>internal
+		Column name</i>. Once you expand this tool by clicking the <i>Filtering List Data</i>
+	link, you can immediately select the list you are filtering to see all its Columns.
+	Now select the Column and you will see its internal name. Just copy and paste it
+	into the <i>Column / filter name</i> text box, or click the <i>Use as filter name</i>
+	link:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	If you are filtering a <i>Data View</i> Web Part sourcing its data from a list in
+	<i>another</i> web site or site collection, just enter the web site&#39;s URL in
+	the tool&#39;s text box and click <i>OK</i> to be able to locate the list in the
+	drop-down box.</p>
+<h3>
+	Enabling and Disabling Filters<a name="s1"></a></h3>
+<p>
+	The <b>FilterZen</b> Filter Web Part only ever sends those of your filters that
+	are marked <i>enabled</i>. Tick or untick the <i>This filter is enabled</i> check
+	box to enable or disable a filter. You need to enter a <a href="#s0">filter name</a>
+	before you can enable a filter, because a filter name is required to send a filter
+	to conencted Web Parts.</p>
+<h3>
+	Default Filter Value<a name="s2"></a></h3>
+<p>
+	All filter types that optionally support an <a href="#s5">interactive mode</a> (i.e.
+	all filter types except <a href="page_field_filters.html">Page Column Filter</a> and <a href="url_query_string_filters.html">Page Request Filter</a>)
+	also have a setting to set a default filter value, even though they vary in their
+	semantics and user interface depending on the filter type. The default filter value
+	is the filter value initially sent, and in <a href="#s5">interactive mode</a>, also
+	the one initially presented to end users, which they may then change.</p>
+<h3>
+	About "Empty" Filter Values<a name="s3"></a></h3>
+<p>
+	For each filter you create, you need to decide which approach to dealing with empty
+	filter values is optimal given the particular filtering context:</p>
+<ul>
+	<li><i>Empty = Empty or None</i> &mdash; if you <b>do</b> send empty filter values,
+		and a filter value is empty, the resulting behaviour of the filter receiver should
+		be to show only items where the specified Column has no value.</li>
+	<li><i>Empty = All (no filtering)</i> &mdash; if you <b>do not</b> send empty filter
+		values, and a filter value is empty, the filter will not be sent, usually resulting
+		in no filtering being applied to the specified Column and thus showing all items
+		as far as that Column is concerned.</li>
+</ul>
+<p>
+	Every filter type provides the <i>Send filter value even if empty</i> check box
+	to control this setting.</p>
+<h3>
+	Fallback Filter Value<a name="s4"></a></h3>
+<p>
+	All filter types, including the non-<a href="#s5">interactive</a> ones, let you
+	specify an optional <i>fallback filter value</i> that will only ever be sent if
+	the filter value is <a href="#s3">empty</a>.</p>
+<h3>
+	&quot;Interactive&quot; Filters<a name="s5"></a></h3>
+<p>
+	All filters except <a href="page_field_filters.html">Page Column Filters</a> and <a href="url_query_string_filters.html">Page Request Filters</a> offer
+	an optional interactive mode that you can turn on or off via the <i>Allow users to enter/pick
+		a filter value</i> check box. In interactive mode, the <b>FilterZen</b> Filter
+	Web Part will render into the Web Part Page a visible, interactive user interface
+	control for changing the filter value of each interactive filter. This user interface
+	control will be a single-line text box for <a href="text_filters.html">Text Filters</a>, a date picker for
+	<a href="date_filters.html">Date Filters</a>, and a drop-down list for <a href="choice_filters.html">Choice Filters</a>,
+	<a href="list_lookup_filters.html">List Lookup Filters</a> and <a href="user_filters.html">User Filters</a>. You can optionally specify a label text in the <i>filter label</i>
+	text box, which will then be prepended to the filtering user interface control by
+	the <b>FilterZen</b> Filter Web Part, to let your users know what this control is
+	actually for. There are also additional Web Part settings for <a href="advanced#s2.html">further 
+	customizing the appearance and behavior of all interactive filtering user 
+	controls</a>.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/adv_04.png"
+		title="" />
+</p>
+<h3>Pre-Filtering of Choice, List Lookup and Date Filters<a name="s6"></a></h3>
+<p>
+	Tick the <i>Pre-filtering &mdash; only offer pickable choices that also exist in a List column</i> check box 
+	in a Choice Filter, List Lookup Filter or User Filter editor to be able to enter 
+	a List View URL and an internal Column name both used to eliminate from the 
+	drop-down list of available choices all those that do not exist as exact values 
+	in the specified List Column.</p>
+<h3>Locking out specific filter values<a name="s7"></a></h3>
+<p>In the drop-down list labelled <i>Always suppress certain filter values</i>, select an item other than <i>
+	Don&#39;t suppress any filter values</i> to show a multi-line text box allowing 
+	you to enter specific filter values. Your drop-down choice then controls whether 
+	the filter values entered are the only ones allowed to be sent (<i>Suppress all 
+	filter values except...</i>), or the only ones that should never be sent (<i>Suppress 
+	no filter values except...</i>).</p><h1>Textfilter</h1><p>
+	Text filters are the simplest of all filter types. In addition to the <a href="general.html">
+		general filter settings</a> they share with all other filter types, text filters
+	let you enter any filter value to send into the text box labelled <i>default filter
+		value</i>. Using a text filter, you can filter all column types, including lookup,
+	date, user and numeric columns. By enabling <a href="general.html#s5">interactive mode</a>,
+	you can let your users enter their own filter values in a text box rendered right
+	into the <b>FilterZen</b> Filter Web Part.
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_text.png" title="" /></p>
+<h1>Auswahlfilter</h1><p>Create a choice filter to let users pick a filter value from a drop-down list limited to 
+	a static set of choices pre-defined by you. (Note: to offer available choices <i>dynamically</i> based on list data, use a <a href="list_lookup_filters.html">List Lookup Filter</a> instead.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_choice.png" title="" /></p>
+<h1>Datumsfilter</h1><p>Create a date filter to let users enter or pick a date filter value, or to send a 
+	filter value that is always based on the current date. You may also optionally 
+	specify a number of days to always add to or subtract from the date filter value 
+	just before sending it, so as to easily accomplish relative date-filtering concepts such as
+	<i>yesterday</i> / <i>tomorrow</i>, <i>one week ago</i> / <i>next week</i> etc.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_date.png" title="" /></p>
+<h1>Listen-Lookupfilter</h1><p>Create a List lookup filter to send filters based on List data. Whether you let 
+	users pick a List item to use in interactive mode, or specify the source item to 
+	use directly, the filter value being sent is always the current, live value of a 
+	Column you chose.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_list_lookup.png" title="" /></p>
+<h3>View URL of the Lookup List<a name="s0"></a></h3>
+<p>Specify the URL of the View used to access the List and retrieve its data. The 
+	View provides initial pre-filtering and sorting. A View URL includes the file 
+	name of the View page (such as <i>AllItems.aspx</i>).</p>
+<p>You can specify a full, absolute URL (those starting with http:// or https:// ). 
+	Also supported are site-relative URLs (those starting with / ), to which the 
+	site collection root web URL will be prepended at run time, and web-relative 
+	URLs (those neither starting with http:// nor https:// nor with / ), to which 
+	the current web URL will be prepended at run time.</p>
+<h3>Value Column and Display Column<a name="s1"></a></h3>
+<p>Specify the internal name of the Column in the lookup List providing the filter 
+	value to be sent. Typically this is also the Column you will want to use for 
+	displaying filter choices, however, you may also optionally specify another 
+	internal name for the display Column.</p>
+
+<h1>Benutzerfilter</h1><p>Create a user filter to send user filter values. The user filter is internally a 
+	specialized type of List lookup filter that is pre-configured to always use the User 
+	Information List (at /_catalogs/users) of the current Site Collection, and 
+	therefore shares some of the settings and capabilities of List lookup filters.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_user.png" title="" /></p>
+
+<h1>Seitenspaltenfilter</h1><p>
+	Page column filters only work on Web Part Pages that are stored inside a Document
+	Library. Their filter value is always dynamically derived from the value of any
+	specified Document Library Column associated with the Web Part Page. The page column filter
+	is internally a specialized type of List lookup filter that is pre-configured to
+	always use the Document Library containing the current Web Part Page,
+	and therefore shares some of the settings and capabilities of List lookup filters.
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_page_field.png" title="" /></p>
+<h1>Seitenaufruffilter</h1><p>
+		Use page request parameters to derive the filter value from the current Web Part 
+	Page HTTP request context:</p>
+<ul>
+	<li>URL parameters (HTTP GET)</li>
+	<li>Posted form values (HTTP POST)</li>
+	<li>Cookies or Server Variables</li>
+	<li>URL path fragments</li>
+</ul>
+<p>
+	The page request filter is capable of parsing various request parameter formats. 
+	Observe how the Matching URL format example area changes immediately in response 
+	to your changes to see exactly what kind of input the filter expects with the 
+	current setup. (In principle this applies even when using a request mode other 
+	than URL query string.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_url_query_string.png" title="" /></p>
+<h3>
+	Sub-Parameter Bundling<a name="s0"></a></h3>
+<p>
+	If the specified request parameter bundles multiple name-value pairs in a single 
+	parameter value, an individual sub-parameter value can be derived by entering 
+	the sub-parameter name, if the parameter value conforms to the syntax that is 
+	also used by MOSS Advanced Search forms / results pages
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;value&quot; 
+	name:&quot;value&quot; name:&quot;value&quot;&nbsp;</b> &mdash;</nobr>
+	filters are separated by spaces, names and values are separated by colons and values
+	are <i>always</i> in quotation marks, regardless of the column type).</p>
+
+<h1>FilterZen-Webparteinstellungen</h1><h3>
+	&Uuml;berblick<a name="s0"></a></h3>
+<p>
+	Im Kapitel <a href="webpart.html">Schnelldurchlauf: Verwenden des Webparts</a> 
+	wurde ein einfaches Filterszenario einer
+	<i>Listenansicht</i> nach zwei <i>Aufgaben</i>-Listenspalten,
+	<i>Priorit&auml;t</i> und <i>Status</i>, demonstriert. Bei der Umsetzung 
+	realistischerer und komplexerer Szenarieren helfen Ihnen die folgenden 
+	Funktionen, Optionen und Hinweise weiter:</p>
+<ul>
+	<li><b>Filternamen</b> &mdash; bei Listen m&uuml;ssen <a href="#s1">die internen Spaltennamen, 
+		nicht deren Anzeigenamen (Spaltentitel)</a>, verwendet werden.</li>
+	<li><b>Filternamen</b> &mdash; aus verschiedenen Gr&uuml;nden wollen Sie vielleicht <a href="#s2">
+		den internen Spaltennamen eigene URL-Parameternamen zuordnen</a>.</li>
+	<li><b>Filterdiagnose</b> &mdash; funktionieren Ihre Filter nicht wie erwartet, 
+		nutzen Sie die <a href="#s3">Diagnoseausgabe aller Filter</a>, die der URL 
+		entnommen und an verbundene Webparts gesendet werden.</li>
+	<li><b>Parameterb&uuml;ndlung</b> &mdash; zum Einsatz auf 
+		MOSS-Erweiterte-Suche-Ergebnisseiten oder zur Minimierung der Anzahl der URL-Filterparameter 
+		k&ouml;nnen <a href="#s4">mehrere Filter in einem URL-Parameter geb&uuml;ndelt werden</a>.</li>
+	<li><b>Sammelfilter</b> &mdash; um fortgeschrittenen Anwendern oder Webdesignern 
+		mehr Flexibilit&auml;t zu bieten, lassen Sie <a
+		href="#s5">per Sammelfilter beliebige URL-Parameterfilter abfangen</a>.</li>
+</ul>
+<h3>
+	Interne Listenspaltennamen<a name="s1"></a></h3>
+<p>
+	Wenn Sie ein <i>Listenansicht</i>-Webpart (oder ein <i>Datenansicht</i>-Webpart 
+	mit einer SharePoint-Liste oder -Dokumentbibliothek als Datenquelle) verbinden, 
+	erwarten diese Filter-empfangenden Standardwebparts <i>zwingend</i>, da&szlig; 
+	verbundene Filter-sendende Webparts wie das <b>FilterZen URL-Filter</b>-Webpart 
+	Filternamen senden, die <i>exakt</i> den <b>internen</b> Spaltennamen 
+	entsprechen (welche sich <i>nie mehr</i> &auml;ndern, sobald eine Spalte erzeugt 
+	wurde), statt den aktuellen Anzeigenamen (<b>Spaltentiteln</b>, welche durch 
+	Endanwender jederzeit ge&auml;ndert werden <i>k&ouml;nnen</i>).</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	Der <i>interne Name</i> einer Spalte wird erzeugt, wenn eine Spalte initial 
+	angelegt wird, und ist von nun an unver&auml;nderbar, selbst wenn der <i>Spaltentitel</i> 
+	nachtr&auml;glich wiederholt auf SharePoint&#39;s <i>Spalte &auml;ndern</i>-Seite 
+	ver&auml;ndert werden kann. Die Muster interner Spaltennamen variieren: einige 
+	vordefinierte Spalten in SharePoint&#39;s Standardlistendefinitionen haben 
+	interne Namen wie <i>AssignedTo</i> f&uuml;r die &quot;Zugewiesen an&quot;-Spalte in <i>
+	Aufgaben</i>-Listen, oder <i>_ModerationComments</i> f&uuml;r die &quot;Kommentare 
+	zur Genehmigung&quot;-Spalte in beliebigen Listen. Eine vom Benutzer angelegte eigene Spalte mit einem 
+	initialen Spaltentitel namens &quot;Test-Link&quot; wird hingegen zum Beispiel den 
+	internen Spaltennamen <i>Test_x002d_Link</i> 
+	erhalten.</div>
+<p>
+	<b>FilterZen URL-Filter</b> kann an dieser Anforderung, Filternamen zu senden, 
+	die <i>exakt</i> den internen Spaltennamen entsprechen, nichts &auml;ndern &mdash; 
+	sie wird von SharePoint so vorgegeben. Aufgrund von Einschr&auml;nkungen in der 
+	aktuellen Architektur von Webpartverbindungen kann es noch nicht einmal 
+	ermitteln, welche Listen &uuml;berhaupt von ihm gefiltert werden. Da das <b>FilterZen URL-Filter</b>-Webpart 
+	somit keinen direkten Zugang zu den Filterspalten erhalten kann, kann es auch 
+	nicht anhand von Spaltentiteln, die Sie andernfalls direkt eingeben k&ouml;nnten, die 
+	entsprechenden internen Spaltennamen ermitteln. Daher m&uuml;ssen Sie die internen 
+	Spaltennamen selbst ermitteln und als Filternamen eingeben.</p>
+<p>
+	Um diesen Vorgang so einfach wie m&ouml;glich zu gestalten, haben wir ein 
+	Hilfswerkzeug direkt in den Webparteinstellungen-Arbeitsbereich eingebaut, mit 
+	dem Sie im Handumdrehen den korrekten Filternamen, also den <i>internen 
+	Spaltennamen</i>, f&uuml;r eine zu filternde Listenspalte ermitteln. Sobald Sie 
+	dieses Werkzeug eingeblendet haben durch Klick auf den Verbindung mit Liste</i>-Link, 
+	k&ouml;nnen Sie die Liste ausw&auml;hlen, die Sie filtern, um daraufhin alle ihre Spalten 
+	aufzulisten.
+	W&auml;hlen Sie nun die zu filternde Spalte aus, und es wird Ihnen der interne 
+	Spaltenname angezeigt. Kopieren Sie ihn und f&uuml;gen Sie ihn in das bereits aus dem 
+	Kapitel <a href="webpart.html">Schnelldurchlauf: Verwenden des Webparts</a> bekannte URL-Parameter-Textfeld 
+	ein:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/de/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	Falls Sie ein <i>Datenansicht</i>-Webpart filtern, dessen Daten aus einer Liste 
+	in einer <i>anderen</i> Website oder Websitesammlung gespeist werden, geben Sie 
+	die entsprechende Website-URL in das Textfeld des Hilfswerkzeugs ein und klicken 
+	Sie auf <i>OK</i>, um die Liste im Listenfeld darunter anzuzeigen und ausw&auml;hlen zu 
+	k&ouml;nnen.</p>
+<h3>
+	Parameternamen Spaltennamen zuordnen<a name="s2"></a></h3>
+<p>
+	Anhand der bisherigen Beispiele funktioniert das <b>FilterZen URL-Filter</b>-Webpart 
+	augenscheinlich einfach so, da&szlig; alle seine konfigurierten internen Spaltennamen 
+	in den
+	URL-Parametern eines jeden Webpartseitenaufrufs geortet werden und die 
+	entsprechenden Filter an verbundene Webparts gesendet werden, wenn diese 
+	URL-Parameter vorhanden sind.</p>
+<p>
+	Aus verschiedenen Gr&uuml;nden m&ouml;chten Sie aber vielleicht URL-Parameter verarbeiten, 
+	die
+	<b>andere Namen</b> haben als die zu ihnen geh&ouml;rigen internen Spaltennamen:</p>
+<ul>
+	<li>Die internen Spaltennamen sehen oft obskur und undurchsichtig aus (&quot;abschreckend 
+		technisch und intern&quot;), oder k&ouml;nnen auch einfach zu lang werden. Ihre 
+		Usabilitystrategie oder Informationsarchitektur empfiehlt m&ouml;glicherweise hoch 
+		lesbare URLs mit kurzen, einpr&auml;gsamen Parameternamen.</li>
+	<li>Sie m&ouml;chten Ihre internen Filterdesigns vielleicht abstrahieren oder 
+		nachtr&auml;glich anpassen, ohne den gehabten Aufruf Ihrer Filter durch Anwender oder 
+		Webdesigner &uuml;ber die URL zu &auml;ndern.</li>
+</ul>
+<p>
+	Um einen beliebigen gew&uuml;nschten Parameternamen, wie zum Beispiel <i>T</i>, einem 
+	beliebigen internen Spaltennamen, wie zum Beispiel <i>Title</i> zuzuordnen, 
+	geben Sie statt wie bisher nur eine Textzeile mit dem internen Spaltennamen nun 
+	in das <i>URL-Parameter</i>-Textfeld eine Textzeile ein, die sowohl den 
+	Parameternamen als auch den Spaltennamen enth&auml;lt, verbunden durch einen
+	<nobr style="background: infobackground; color: InfoText; border: solid 1px #ccc;">&nbsp;=&gt;&nbsp;</nobr>
+	&quot;Trennpfeil&quot;:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 316px;" src="help/de/res/adv_02.png"
+		title="" />
+</p>
+<h3>
+	Diagnosemodus<a name="s3"></a></h3>
+<p>
+	Funktioniert ein Filter nicht wie erwartet, ist es hilfreich, herausfinden zu 
+	k&ouml;nnen, welche Filter das <b>FilterZen URL-Filter</b>-Webpart genau anhand der 
+	aktuellen URL und der aktuellen Webparteinstellungen generiert. Das <b>FilterZen URL-Filter</b>-Webpart 
+	erzeugt exakt diese Diagnoseausgabe <i>immer</i>, wenn sich die Webpartseite im 
+	Entwurfsmodus befindet. Wechseln Sie also auf der Seite, die nicht die erwartete 
+	Filterung produziert, einfach mit <i>Seite bearbeiten</i> aus dem <i>
+	Websiteaktionen</i>-Men&uuml; in den Seitenentwurfsmodus und Sie sehen alle Filter, 
+	die anhand der aktuellen URL generiert werden. Das ist umso hilfreicher, je 
+	unlesbarer Ihre URL-Parameter werden, zum Beispiel durch Verwendung der
+	<a href="#s4">Parameterb&uuml;ndlung</a> oder durch Nichtverwendung von <a href="#s2">
+	Parameternamen-Spaltennamen-Zuordnungen</a>. Wenn das <b>FilterZen URL-Filter</b>-Webpart 
+	nicht minimiert oder ausgeblendet wurde, sieht seine <i>Diagnosemodus</i>-Ausgabe 
+	in etwa so aus:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 272px;" src="help/de/res/adv_03.png"
+		title="" />
+</p>
+<h3>
+	Parameterb&uuml;ndlung<a name="s4"></a></h3>
+<p>
+	Sollen alle durch die URL angegebenen Filter in einem einzigen URL-Parameter 
+	enthalten sein, geben Sie einfach den Namen dieses &quot;B&uuml;ndelparameters&quot; im <i>Parameterb&uuml;ndlung</i>-Textfeld 
+	ein. Das <b>FilterZen URL-Filter</b>-Webpart sucht wie gehabt nach den im <i>URL-Parameters</i>-Textfeld 
+	angegebenen Filternamen, wird jetzt aber nur im Parameterwert des angegebenen 
+	B&uuml;ndelparameters suchen und alle anderen URL-Parameter ignorieren.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 410px;" src="help/de/res/adv_04.png"
+		title="" />
+</p>
+<div class="rox-info">
+	Wie obige Abbildung verdeutlicht, k&ouml;nnen Sie zwar &uuml;ber den <i>Namen</i> des 
+	B&uuml;ndelparameters frei entscheiden &mdash; von dessen <i>Wert</i> indes&nbsp;wird 
+	immer jene spezielle, vordefinierte Syntax erwartet, die auch MOSS Erweiterte 
+	Suche-Formulare und -Ergebnisseiten verwenden
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;wert&quot; 
+	name:&quot;wert&quot; name:&quot;wert&quot;&nbsp;</b> &mdash;</nobr> Filter 
+	folgen aufeinander, durch Leerzeichen getrennt, Namen und Werte sind durch 
+	Doppelpunkt getrennt und Werte sind <iimmer</i> in Anf&uuml;hrungszeichen, 
+	unabh&auml;ngig vom tats&auml;chlichen Spaltentyp).</div>
+<h3>
+		URL-Parameter-Sammelfilter<a name="s5"></a></h3>
+<p>
+	Indem Sie ausschlie&szlig;lich ein einzelnes Fragezeichen (&#39;?&#39;) in das <i>URL-Parameter</i>-Textfeld 
+	eingeben (statt wie gehabt Textzeilen mit Parameternamen und interne 
+	Spaltennamen), aktivieren Sie den <b>Sammelmodus</b>. Dieser Modus 
+	ber&uuml;cksichtigt ganz einfach <b>jeden</b> aktuell vorliegenden URL-Parameter und 
+	sendet den entsprechenden Filter an verbundene Webparts, ungeachtet dessen, wie 
+	diese Webparts letztendlich mit diesen Filtern umgehen. Kombiniert mit der
+	<a href="#s4">Parameterb&uuml;ndlung</a> ber&uuml;cksichtigt das Webpart zwar nur den 
+	angegebenen B&uuml;ndelparameter, verwendet aber wiederum <b>jeden</b> darin 
+	enthaltenen Filternamen (statt wie gehabt nur die im <i>URL-Parameter</i>-Textfeld 
+	explizit angegebenen).</p>
+<div class="rox-info" style="background-image: url('exclaim.gif');">
+	Wird die Parameterb&uuml;ndlung <i>nicht</i> verwendet, funktioniert der Sammelmodus 
+	zwar wie beschrieben, wird aber <b>nicht zur Verwendung empfohlen</b>, da SharePoint-eigene URL-Parameter, 
+	die nicht zum Einsatz als Filter bestimmt sind, ebenfalls an verbundene Webparts 
+	gesendet werden (beispielsweise der h&auml;ufig vorkommende 
+	URL-Parameter <i>PageView=Shared</i>), 
+	und <i>Listenansicht</i>- oder <i>Datenansicht</i>-Standardwebparts auch diese 
+	Filter unbesehen anwenden (selbst wenn eine entsprechende Spalte gar nicht 
+	existiert). 
+	Ob mit oder ohne Parameterb&uuml;ndlung &mdash; der Sammelmodus unterst&uuml;tzt keine <a href="#s2">
+	Namenszuordnungen</a>: Namen von URL-Parametern m&uuml;ssen <i>exakt</i> den <a href="#s1">internen 
+	Spaltennamen</a> entsprechen (und zwar <i>in korrekter Gro&szlig;- und Kleinschreibung</i>).</div>
+<h1>Referenz: URL-Einstellungsparameter</h1><h3>About URL-overridable Settings<a name="s0"></a></h3>
+<p>
+	(If you are looking for URL-based filtering, see the chapter on <a href="url_query_string_filters.html">Page Request Filters</a>.)
+</p>
+<p>
+	By ticking the <i>Override Web Part and filter settings from URL parameters</i> checkbox, every filter setting or 
+	Web Part
+	setting is overridden by the appropriate URL (query string) parameter value, if it exists. See the possible parameter names and values below.</p>
+<div class="rox-info">
+	<b>Note:</b> a URL override of a <i>Web Part setting</i> will affect <i>all</i> <b>FilterZen</b> Filter 
+	Web Parts present on the current Web Part Page with the <i>Override Web Part and filter settings from URL parameters</i> option ticked. 
+	A URL override of a <i>filter setting</i> will affect <i>all</i> dynamically 
+	generated and manually defined filters in <i>all</i> <b>FilterZen</b> Filter 
+	Web Parts present on the current Web Part Page with the <i>Override Web Part and filter settings from URL parameters</i> option ticked.</div>
+<h3>Overridable Web Part Settings<a name="s1"></a></h3>
+<ul>
+	<li><b>filter_ApplyToolbarStylings</b> &mdash; overrides the <a href="advanced#s2.html">Apply SharePoint toolbar styles</a> setting. A URL parameter value of 
+		&#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_AutoRepost</b> &mdash; overrides the <a href="advanced#s2.html">Upon user input, immediately reload the page to re-filter</a> setting. A URL parameter value of 
+		&#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_DebugMode</b> &mdash; overrides the <a href="advanced#s4.html">Debug Mode</a> setting. Use a URL parameter value of 
+		&#39;1&#39; to <i>always display the currently sent filter values</i>, &#39;0&#39; to
+		<i>only display these in Web Part edit mode</i>.</li>
+	<li><b>filter_DynamicInteractiveFilters</b> &mdash; overrides the <a href="advanced#s3.html">dynamic generation of temporary, interactive filters</a>. Use a URL parameter value of 
+		&#39;0&#39; to deactivate, &#39;1&#39; to prepend or &#39;2&#39; to append <i>dynamically 
+		generated, temporary, enabled interactive filters for all <a href="advanced#s0.html">&#39;known&#39; filter names</a>, 
+		if possible</i>.</li>
+	<li><b>filter_HtmlMode</b> &mdash; if interactive filters are present, overrides the 
+		<i>rendering of a user interface control for manual re-filtering</i>. Use a URL parameter value of 
+		&#39;0&#39; to not embed, &#39;1&#39; to prepend or &#39;2&#39; to append the HTML specified in the Web 
+		Part settings to interactive filter controls.</li>
+	<li><b>filter_RememberFilterValues</b> &mdash; overrides the <a href="advanced#s2.html">Remember filter values last used for each user</a> setting. A URL parameter value of 
+		&#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_SuppressUnknownFilters</b> &mdash; overrides the <a href="advanced#s0.html">Suppress (never send) 
+		&#39;unknown&#39; filter names</a> setting. A URL parameter value of 
+		&#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+</ul>
+<h3>Overridable Filter Settings: All Filter Types<a name="s2"></a></h3>
+<ul>
+	<li><b>filter_FallbackValue</b> &mdash; overrides the <i>If empty, always fall back to this filter value</i> setting (use any text value).</li>
+	<li><b>filter_SendEmpty</b> &mdash; overrides the <i>Send filter value even if empty</i> setting 
+		(use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>Overridable Filter Settings: Choice, Date, List Lookup, Text and User Filters<a name="s3"></a></h3>
+<ul>
+	<li><b>filter_DefaultIfEmpty</b> &mdash; overrides the <i>Use default value if user input empty</i> or the <i>Allow picking the empty filter value</i> setting, depending
+	on filter type (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_IsInteractive</b> &mdash; overrides the <i>Allow users to enter / pick a filter value</i> setting 
+		(use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_Label</b> &mdash; overrides the <i>filter caption label</i> setting (use any text value).</li>
+</ul>
+<h3>Overridable Filter Settings: Choice, List Lookup and User Filters<a name="s4"></a></h3>
+<ul>
+	<li><b>filter_PostFilter</b> &mdash; overrides the <i>Pre-filtering &mdash; only offer pickable choices that also exist in a List column</i> setting 
+		(use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_PostFilterFieldName</b> &mdash; overrides the <i>Pre-filtering &mdash; List View URL</i> setting (use any text value).</li>
+	<li><b>filter_PostFilterListViewUrl</b> &mdash; overrides the <i>Pre-filtering &mdash; Column name</i> setting (use any text value).</li>
+</ul>
+<h3>Overridable Filter Settings: Choice Filters<a name="s5"></a></h3>
+<ul>
+	<li><b>filter_DefaultChoiceIndex</b> &mdash; overrides the <i>default filter value</i> setting (use -1 for 
+		<i>Empty</i>, or the 0-based index of the value in the <i>valid choices</i> 
+		setting).</li>
+</ul>
+<h3>Overridable Filter Settings: Date Filters<a name="s6"></a></h3>
+<ul>
+	<li><b>filter_AbsoluteDefaultValue</b> &mdash; overrides the <i>default date filter value</i> setting (use 3155378975999999999 for 
+		<i>Today</i>, 0 for <i>Empty</i>, or any other long integer number representing 
+		the Ticks of the desired date value).</li>
+	<li><b>filter_RelativeOffset</b> &mdash; overrides the <i>add days</i> setting.</li>
+</ul>
+<h3>Overridable Filter Settings: List Lookup Filters<a name="s7"></a></h3>
+<ul>
+	<li><b>filter_DisplayFieldName</b> &mdash; overrides the <i>display Column</i> setting (use any text value).</li>
+	<li><b>filter_ListUrl</b> &mdash; overrides the <i>View URL of the lookup List</i> setting (use any text value).</li>
+	<li><b>filter_RemoveDuplicateTitles</b> &mdash; overrides the <i>Remove display duplicates</i> setting (use 
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_RemoveDuplicateValues</b> &mdash; overrides the <i>Remove duplicate values</i> setting (use 
+		&#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>Overridable Filter Settings: List Lookup and User Filters<a name="s8"></a></h3>
+<ul>
+	<li><b>filter_FilterCaml</b> &mdash; overrides the <i>optional custom CAML query</i> setting (use any text value).</li>
+	<li><b>filter_ItemID</b> &mdash; overrides the <i>default filter value</i> setting (use 
+		0 for <i>Empty</i>, -1 for <i>the current user or Empty</i>, -2 for <i>the first item after pre-filtering and sorting</i>, -3 for <i>the last item after pre-filtering and sorting</i> or an integer number value representing the desired List item ID).</li>
+	<li><b>filter_ItemSorting</b> &mdash; overrides the <i>sorting of available choices</i> 
+		setting (use:<br />
+		0 = as specified by List View or CAML,<br />
+		1 = by display column, ascending,<br />
+		2 = by display column, descending,<br />
+		3 = by display frequency, ascending,<br />
+		4 = by display frequency, descending,<br />
+		5 = by value column, ascending,<br />
+		6 = by value column, descending,<br />
+		7 = by value frequency, ascending,<br />
+		8 = by value frequency, descending).</li>
+</ul>
+<h3>Overridable Filter Settings: List Lookup and Page Column Filters<a name="s9"></a></h3>
+<ul>
+	<li><b>filter_ValueFieldName</b> &mdash; overrides the <i>value Column</i> setting (use any text value).</li>
+</ul>
+<h3>Overridable Filter Settings: List Lookup, Page Column and User Filters<a name="s10"></a></h3>
+<ul>
+	<li><b>filter_StripID</b> &mdash; overrides the <i>Strip internal ID;# prefixes from filter values</i> setting (use 
+		&#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>Overridable Filter Settings: Page Request Filters<a name="s11"></a></h3>
+<ul>
+	<li><b>filter_CatchAll</b> &mdash; overrides the <i>Advanced catch-all</i> setting (use 
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ParameterName</b> &mdash; overrides the <i>request (form or URL) parameter name</i> setting (use any text value).</li>
+	<li><b>filter_RequestMode</b> &mdash; overrides the <i>Look for the specified parameter in</i> setting (use 
+		&#39;0&#39; for <i>URL query string</i>, &#39;1&#39; for <i>Posted form data</i>, &#39;2&#39; for <i>Both, 
+		plus cookies and server variables</i>, or 3 for <i>URL path fragment</i>).</li>
+	<li><b>filter_SendNull</b> &mdash; overrides the <i>Use the Empty filter value if missing</i> setting (use 
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_SubParameterName</b> &mdash; overrides the <i>sub-parameter name</i> setting (use any text value).</li>
+</ul>
+<h3>Overridable Filter Settings: Text Filters<a name="s12"></a></h3>
+<ul>
+	<li><b>filter_DefaultValue</b> &mdash; overrides the <i>default filter value</i> setting (use any text value).</li>
+</ul>
+<h1>Referenz: CSS-Klassen</h1><h3>
+	CSS Class Reference<a name="s0"></a></h3>
+<p>
+	When dynamically generated or manually created interactive filters are present,
+	enabled and their filtering user controls are rendered into the <b>FilterZen</b>
+	Filter Web Part, it wrap them in HTML span elements decorated with the CSS class
+	names detailed below, to allow for full customization of their visual appearance.
+	Unless otherwise noted, these elements are pre-styled in <b style="white-space: nowrap;">
+		/_layouts/roxority_FilterZen/roxority_FilterZen.css</b>.</p>
+<ul>
+	<li><b>span.rox-ifilter-all</b> &mdash; the entire surrounding area of the Web Part
+		output (except in Web Part Page edit mode, where further contextual information
+		is prepended to this element).</li>
+	<li><b>span.rox-ifilter-<i>webpartid</i></b> &mdash; the entire surrounding area of
+		all interactive filter user controls, but excluding custom HTML for manual re-filtering,
+		if any, where <i>webpartid</i> is the Web Part ID. Not pre-styled.</li>
+	<li><b>span.rox-ifilter</b> &mdash; the surrounding area of an interactive filter user
+		control and its preceding caption label.</li>
+	<li><b>span.rox-ifilter-label</b> &mdash; the caption label preceding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-control</b> &mdash; the area immediately surrounding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-datetime</b> &mdash; the area immediately surrounding an interactive
+		Date filter user control (inside a <i>span.rox-ifilter-control</i>).</li>
+	<li><b>span.rox-ifilter-button</b> &mdash; the area surrounding custom HTML for manual
+		re-filtering, if any.</li>
+	<li><b>a.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i> links
+		from the predefined <i>Filter link</i> and <i>Filter and Clear All links</i> HTML
+		templates.</li>
+	<li><b>input.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i>
+		buttons from the predefined <i>Filter button</i> and <i>Filter and Clear All buttons</i>
+		HTML templates.</li>
+	<li><b>a.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> link from the
+		predefined <i>Filter and Clear All links</i> HTML template.</li>
+	<li><b>input.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> button from
+		the predefined <i>Filter and Clear All buttons</i> HTML template.</li>
+</ul>
+<h1>Endbenutzer-Lizenzvereinbarung (EULA)</h1><h3>ENDBENUTZER-LIZENZVEREINBARUNG F&Uuml;R ROXORITY SOFTWARE-PRODUKTE<a name="s0"></a></h3>
+<p><b>
+Durch Installation oder Verwendung dieser Software erkl&auml;ren Sie Ihre Zustimmung zu allen Bestimmungen des folgenden Lizenzabkommens. Stimmen Sie diesen Bestimmungen nicht zu, d&uuml;rfen Sie die Software nicht installieren oder verwenden.
+</b></p><p><b>Das Lizenzabkommen gilt weltweit und wurde auf Englisch verfa&szlig;t. Sind Sie der Sprache nicht m&auml;chtig, lassen Sie sich die Vereinbarung im Zweifelsfalle &uuml;bersetzen.</b></p><p>
+THIS IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE ENTITY) AND ROXORITY LTD. (ROXORITY) FOR THE ROXORITY SOFTWARE, ASSOCIATED MEDIA AND PRINTED MATERIALS, AND MAY INCLUDE ONLINE OR ELECTRONIC DOCUMENTATION ("SOFTWARE"). BY INSTALLING, COPYING, OR OTHERWISE USING THIS ROXORITY SOFTWARE PRODUCT, YOU ARE AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING THE SOFTWARE LICENSE AND DISCLAIMER OF SOFTWARE WARRANTY BELOW. PLEASE READ THIS DOCUMENT CAREFULLY BEFORE USING THE SOFTWARE. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS OF THIS AGREEMENT, YOU MUST NOT INSTALL OR USE THE SOFTWARE.
+</p><h3>
+LICENSE GRANT 
+<a name="s1"></a></h3><p>
+"You" or "your" as used herein means the person or company who is being licensed to use the Software, as defined below. "We," "us" and "our" as used herein means ROXORITY Ltd.
+</p><p>
+The "Software" as referred to herein means the ROXORITY Software "FilterZen", a product that extends "Microsoft SharePoint" web sites to provide additional capabilities.
+</p><p>
+We hereby grant you a non-exclusive, non-transferable, revocable license to use the Software on any single computer, provided the Software is in use on only one computer at any time. The Software is "in use" on a computer when it is loaded into temporary memory (RAM) or installed into the permanent memory of a computer--for example, a hard disk, CD-ROM or other storage device.
+</p><p>
+The total number of SharePoint "site collections" that the Software can be "activated" on shall be limited to the number of licenses which you purchase. For example, if you purchase 10 licenses, you may activate the Software on up to 10 SharePoint site collections.
+</p><h3>
+TITLE 
+<a name="s2"></a></h3><p>
+The Documentation as referred to herein shall mean the written materials that you may receive in connection with the Software. We will remain the sole and exclusive owners of all right, title and interest in and to the Software and the Documentation. 
+</p><h3>
+ARCHIVAL OR BACKUP COPIES
+<a name="s3"></a></h3><p>
+You may copy the Software for back-up and archival purposes only, provided however, that at all times herein, the original and each copy is kept in your possession and that your installation and use of the Software does not exceed that allowed in the "License Grant" section above.
+</p><h3>
+THINGS YOU MAY NOT DO
+<a name="s4"></a></h3><p>
+You agree and acknowledge that the Software and Documentation are proprietary works that are protected by the copyright laws of various nations. You may only use the Software and Documentation for the purposes and in accordance with the terms of this Agreement. You may not, without limitation:
+</p><ul><li>
+copy the Documentation, 
+</li><li>
+copy the Software except to make archival or backup copies as provided above, 
+</li><li>
+place the Software onto a server so that it is accessible via a public network such as the Internet, except as provided for above in "LICENSE GRANT," 
+</li><li>
+sublicense, rent, lease or lend any portion of the Software or Documentation. 
+</li></ul><p>
+You acknowledge that any violation of this paragraph will cause us immediate and irreparable harm and that the damages which we will suffer may be difficult or impossible to measure. Therefore, upon any actual or impending violation of this paragraph, we shall be entitled to the issuance of a restraining order, preliminary and permanent injunction without bond, restraining or enjoining such violation by you, your successors or assignees or any entity or person acting in concert with you. Such remedy shall be additional to and not in limitation of any other remedy which may otherwise be available to us by law.
+</p><h3>
+TRANSFERS
+<a name="s5"></a></h3><p>
+You may assign all your license to use the Software and Documentation to another person or legal entity (the "Assignee"), provided however, that prior to such assignment, the Assignee undertakes in writing to be bound by your obligations under this Agreement. Any attempt to assign or transfer the license to the Software, the Documentation or this Agreement shall be ineffective, unless the assignment complies with the terms of this paragraph. Upon assignment of your license hereunder, you agree to transfer to the Assignee all of your copies of the Software and Documentation, including all copies of updates and prior versions of the Software and Documentation and you further agree and that you will retain no copies, including, without limitation, electronic copies stored on computer discs or drives.
+</p><h3>
+DISCLAIMER OF WARRANTY
+<a name="s6"></a></h3><p>
+THE SOFTWARE AND SERVICES OFFERED BY US ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE, NONINFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, RELIABLE, SECURE OR ERROR-FREE AND EXPRESSLY DISCLAIM ANY WARRANTIES AS TO THE MATERIALS CONTAINED THEREIN, THE SERVERS USED OR THE GOODS OR SERVICES OFFERED BY US.
+</p><h3>
+EXCLUSION OF CERTAIN DAMAGES
+<a name="s7"></a></h3><p>
+IN NO EVENT WILL WE BE LIABLE TO YOU FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS, LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE OR THE INABILITY TO USE THE SOFTWARE (EVEN IF WE OR AN AUTHORIZED DEALER OR DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR FOR ANY CLAIM BY ANY OTHER PARTY.
+</p><h3>
+TERM AND TERMINATION
+<a name="s8"></a></h3><p>
+This Agreement takes effect upon your acceptance of the terms of this Agreement and remains effective until terminated by either party in accordance with this Agreement. You may terminate this Agreement at any time by destroying all copies of the Software and Documentation in your possession and giving us prompt notice of same. This Agreement will automatically terminate if you fail to comply with any term or condition of this Agreement. Upon termination of this Agreement, you warrant and represent that you will immediately destroy all copies of the Software and Documentation or other materials provided to you hereunder, if any, that are still in your possession and provide us prompt written assurance of same.
+</p><h3>
+CONFIDENTIALITY
+<a name="s9"></a></h3><p>
+Non-disclosure. You agree and acknowledge that the Software, its algorithms, protocols or interfaces, and the Documentation constitute proprietary and confidential information that belong to us (the "Confidential Information"). You also understand and agree that misuse and/or unauthorized disclosure of our Confidential Information could adversely affect our business. Accordingly, you agree that at all times you will (a) use and reproduce the Confidential Information only for the purposes of this Agreement and only to the extent necessary for such purpose; (b) restrict disclosure of the Confidential Information to your employees, consultants or independent contractors with a need to know and (c) not disclose the Confidential Information to any third party without our prior written approval. Notwithstanding the foregoing, it shall not be a breach of this Agreement for You to disclose Confidential Information if required to do so under law or in a judicial or other governmental investigation or proceeding, provided however, that You give us prior notice of the disclosure sought and You seek all reasonably available safeguards against widespread dissemination prior to such disclosure.
+</p><p>
+Remedies. You acknowledge that any violation of this paragraph will cause us immediate and irreparable harm and that the damages which we will suffer may be difficult or impossible to measure. Therefore, upon any actual or impending violation of this paragraph, we shall be entitled to the issuance of a restraining order, preliminary and permanent injunction without bond, restraining or enjoining such violation by you, your successors or assigns or any entity or person acting in concert with you. Such remedy shall be additional to and not in limitation of any other remedy which may otherwise be available to us by law.
+</p><h3>
+GENERAL PROVISIONS
+<a name="s10"></a></h3><ol><li>
+This Agreement constitutes the entire agreement between you and us concerning the Software and Documentation and supersedes any prior or contemporaneous negotiations, discussions, understandings, purchase orders, communications, advertising or representations concerning the subject matter hereof.
+</li><li>
+This Agreement may be modified only by a writing signed by you and us.
+</li><li>
+In the event of litigation between you and us concerning the Software or Documentation, the prevailing party in the litigation will be entitled to recover attorneys' fees and expenses from the other party.
+</li><li>
+This Agreement shall be governed by the laws of the Federal Republic of Germany.
+</li><li>
+You agree that the Software will not be shipped, transferred or exported into any country or used in any manner prohibited by any export laws, restrictions or regulations.
+</li><li>
+All disputes arising out of or in connection with this Agreement shall be submitted to arbitration under the Rules of Conciliation and Arbitration of the International Chamber of Commerce (the "ICC"). The arbitrator or arbitrators shall be chosen in accordance with the ICC rules.
+</li></ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"></div>
+</body>
+</html>

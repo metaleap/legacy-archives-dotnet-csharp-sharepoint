@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Data Sources</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Data Sources</h1>
+<p>
+	The user profiles listed in your PeopleZen Web Parts are provided by a something
+	called a <i>Data Source</i>. A PeopleZen <i>Data Source</i> defines the source of
+	the information to be displayed, and how to connect to that source (among other
+	settings).</p>
+<p>
+	After installation, there is only one pre-defined PeopleZen Data Source available,
+	titled <b>(Default Data Source)</b>. You can customize it or add additional <i>Data
+		Sources</i> via Site Settings / PeopleZen Studio / Data Sources. Each PeopleZen
+	Web Part then lets you select which of your <i>Data Sources</i> to use (in its settings
+	tool-pane, via web part menu / Modify Web Part).</p>
+<p>
+	Before reviewing <a href="itemref_DataSources.html">its many other settings</a>,
+	the primary choice for each <i>Data Source</i> is the <b>Connection provider</b> setting.
+	The currently supported choices are:</p>
+<h3>
+	Farm User Profiles<a name="s0"></a></h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2010 Server
+	(SPS) and Microsoft Office SharePoint Server (MOSS) 2007 (and is not available 
+	on SharePoint 2010 Foundation (SPF) or Windows SharePoint Services (WSS) 3.0).</p>
+<p>
+	Retrieves the farm-wide shared user profile information (which is often imported
+	from Active Directory) stored in the current default <i>User Profiles Service Application</i>
+	(SPS 2010) / the current default <i>Shared Service Provider</i> (MOSS 2007).</p>
+<h3>
+	Site User Accounts (People and Groups)<a name="s1"></a></h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2010 Foundation
+	(SPF) and Windows SharePoint Services (WSS) 3.0.</p>
+<p>
+	Retrieves the user profile information (plus optionally groups if desired) stored
+	in the current Site Collection&#39;s <i>User Information List</i> (at /_catalogs/users).</p>
+<h3>
+	Active Directory<a name="s2"></a></h3>
+<p>
+	Retrieves user profile information stored in any LDAP-compatible directory service,
+	such as Domino or Active Directory.</p>
+<h3>
+	Database<a name="s3"></a></h3>
+<p>
+	Retrieves user profile information from SQL Server, Oracle or any other database
+	accessible via OLEDB, ODBC or ADO.NET.</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

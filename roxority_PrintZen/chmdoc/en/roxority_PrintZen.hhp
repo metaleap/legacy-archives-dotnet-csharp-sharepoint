@@ -1,0 +1,45 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\zup\docs\PrintZen-Help.chm
+Contents file=roxority_PrintZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_PrintZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY PrintZen  Product Documentation
+
+
+[FILES]
+help.tlhr.css
+jQuery.js
+help\res\bgtmp.tlhr.jpg
+help\res\help.tlhr.css
+help\res\roxlogo.tlhr.png
+help\res\roxority.tlhr.png
+help\res\setup01.png
+help\res\setup02.png
+help\res\setup03.png
+help\res\setup04.png
+help\res\setup05.png
+help\res\setup06.png
+help\res\setup07.png
+help\res\sharepoint-list-data-print-actions.png
+help\res\sharepoint-list-data-print-definition.png
+help\res\sharepoint-list-data-print-menu-item.png
+help\res\sharepoint-list-data-print-popup.png
+help\res\sharepoint-list-print-calendar-view.png
+help\res\sharepoint-list-print-view-custom-design-web-part-page.png
+help\res\sharepoint-list-print-view-ribbon.png
+help\res\sharepoint-web-part-print-view-site-actions.png
+intro.html
+star.gif
+setup.html
+itemref_PrintActions.html
+itemref_PrintControls.html
+farm_site_config.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

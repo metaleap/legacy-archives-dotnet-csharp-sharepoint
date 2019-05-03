@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>Einf&uuml;hrung</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+	<h1>Einf&uuml;hrung</h1>
+<p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart erm&ouml;glicht das Filtern anderer 
+	SharePoint-Webparts, wie zum Beispiel <i>Listenansicht-Webparts</i> und <i>Datenansicht-Webparts</i>, 
+	anhand der beim Seitenaufruf jeweils &uuml;bergebenen Parameter in der 
+	Webpartseiten-URL.</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	<b>Was sind URL-Parameter?</b>
+	<p>
+		URL-Parameter sind die Name-Wert-Paare in einer URL, die auf das &#39;?&#39; (Fragezeichen) 
+		folgen. Beispielsweise enth&auml;lt die Google-Suche <a href="http://google.com/search?q=roxority&hl=de" target="_blank">http://google.com/search?q=roxority&hl=den</a> zwei URL-Parameter: die Suchanfrage &#39;q&#39; und die Spracheinstellung &#39;hl&#39;. 
+		<span id="urlsample" style="display: none;">Ein weiteres Beispiel: die aktuelle URL dieser Seite (<i style="white-space: nowrap;"
+			id="pageurl">[url]</i>) hat einen URL-Parameter &#39;doc&#39; mit dem Wert
+		&#39;intro&#39;.</span></p>
+	<!--script language="JavaScript" type="text/javascript">
+		if (location.href.indexOf('doc=intro') < 0) location.replace('intro.html');
+		jQuery('#pageurl').text(location.href);
+		jQuery('#urlsample').show(0);
+	</script-->
+
+</div>
+<p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart erm&ouml;glicht das Filtern von:</p>
+<ul>
+	<li><b>Listen</b>, einschlie&szlig;lich vordefinierter Standardlisten wie <i>Ank&uuml;ndigungen</i>, 
+		<i>Kalender</i>,
+		<i>Hyperlinks</i>, <i>Aufgaben</i> sowie nat&uuml;rlich Ihrer eigenen <i>
+		Benutzerdefinierten Listen</i></li>
+	<li><b>Dokumentenbibliotheken</b>, inklusive <i>Freigegebene Dokumente</i>, <i>Formularbibliotheken</i>,
+		<i>Wikiseitenbibliotheken</i>, <i>Bildbibliotheken</i> und beliebige andere 
+		Dokumentenbibliotheken</li>
+	<li><b>Datenansichten</b> (diese werden zumeist mit <i>SharePoint Designer</i> 
+		erstellt und sind f&uuml;r gew&ouml;hnlich an Listendaten gebunden)</li>
+</ul>
+<div class="rox-info">
+	<b>Sie m&ouml;chten Webpartfilter anwenden &mdash; aber nicht anhand von 
+	URL-Parametern?</b>
+	<p>
+		Das <b>FilterZen URL-Filter</b>-Webpart filtert Listen- und Datenansichten immer <i>
+		dynamisch</i>,
+		anhand sich potentiell st&auml;ndig beliebig &auml;ndernder URL-Parameter. Wollen Sie 
+		hingegen einen <i>statischen</i> Filter realisieren, dessen immer gleicher, 
+		fixer Filterwert immer aktiv ist:</p>
+	<ul>
+		<li>w&auml;hlen Sie bei einem <i>Listenansicht</i>-Webpart einfach <i>Bearbeiten</i> im 
+			Webpartmen&uuml; aus und klicken Sie dann auf <i>Aktuelle Ansicht bearbeiten</i> im 
+			Webparteinstellungen-Arbeitsbereich.</li>
+		<li>&ouml;ffnen Sie bei einem <i>Datenansicht</i>-Webpart die Webpartseite in <i>SharePoint Designer</i> 
+			und legen Sie den Filter in den Webparteinstellungen fest.</li>
+	</ul>
+	<p>
+		K&ouml;nnen Sie Ihre spezifischen Filteranforderungen weder mit <b>FilterZen</b>s URL-Parameterfilterung 
+		noch mit den Standard-Filterwebparts von <i>Microsoft Office SharePoint Server</i> (MOSS) umsetzen, lassen 
+		Sie uns das im <a href="http://roxority.com/filterzen-forum/">FilterZen-Diskussionsforum</a> 
+		wissen oder <a href="http://roxority.com/contact/">schreiben Sie uns direkt</a> 
+		&mdash; wir werden gerne versuchen, weiterzuhelfen.</p>
+</div>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+</body>
+</html>

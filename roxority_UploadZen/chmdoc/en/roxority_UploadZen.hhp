@@ -1,0 +1,94 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\zup\docs\UploadZen-Help.chm
+Contents file=roxority_UploadZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_UploadZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY UploadZen  Product Documentation
+
+
+[FILES]
+help.tlhr.css
+jQuery.js
+help\res\top_up\loader.gif
+help\res\top_up\top_up-min.js
+help\res\top_up\dashboard\bottom_left.png
+help\res\top_up\dashboard\bottom_middle.png
+help\res\top_up\dashboard\bottom_right.png
+help\res\top_up\dashboard\close_link.png
+help\res\top_up\dashboard\controls.png
+help\res\top_up\dashboard\middle.png
+help\res\top_up\dashboard\middle_left.png
+help\res\top_up\dashboard\middle_right.png
+help\res\top_up\dashboard\next.png
+help\res\top_up\dashboard\previous.png
+help\res\top_up\dashboard\resize_link.png
+help\res\top_up\dashboard\sprite.png
+help\res\top_up\dashboard\top_left.png
+help\res\top_up\dashboard\top_middle.png
+help\res\top_up\dashboard\top_right.png
+help\res\top_up\jquery\fxc-clip.js
+help\res\top_up\jquery\fxc-clip.uic-resizable.js
+help\res\top_up\jquery\uic-resizable.fxc-clip.js
+help\res\top_up\jquery\uic-resizable.js
+help\res\bgtmp.tlhr.jpg
+help\res\deletehs.png
+help\res\DoubleRightArrowHS.png
+help\res\filter2HS.png
+help\res\help.tlhr.css
+help\res\openfolderHS.png
+help\res\PublishPlanHS.png
+help\res\roxlogo.tlhr.png
+help\res\roxority.tlhr.png
+help\res\setup01.png
+help\res\setup03.png
+help\res\setup04.png
+help\res\setup05.png
+help\res\setup06.png
+help\res\setup07.png
+help\res\sharepoint-bulk-file-uploads-client-settings.png
+help\res\sharepoint-bulk-file-uploads-forms-based-authentication.png
+help\res\sharepoint-bulk-file-uploads-iis-configuration.png
+help\res\sharepoint-bulk-file-uploads-uploadzen-clickonce-launch.png
+help\res\sharepoint-bulk-file-uploads-uploadzen-clickonce-loading.png
+help\res\sharepoint-bulk-file-uploads-uploadzen-clickonce-prompt.png
+help\res\sharepoint-bulk-file-uploads-uploadzen-file-browser.png
+help\res\sharepoint-bulk-file-uploads-uploadzen-menu-item.png
+help\res\sharepoint-bulk-folder-uploads-01.png
+help\res\sharepoint-bulk-folder-uploads-02.png
+help\res\sharepoint-bulk-folder-uploads-zip-compression.png
+help\res\sharepoint-flash-silverlight-bulk-file-upload.png
+help\res\sharepoint-flash-silverlight-bulk-folder-upload.png
+help\res\sharepoint-flash-silverlight-multi-file-batch-upload.png
+help\res\sharepoint-flash-silverlight-multi-upload-ribbon.png
+help\res\sharepoint-flash-silverlight-select-multiple-files-upload.png
+help\res\sharepoint-upload-multiple-files-progress.png
+help\res\sharepoint-upload-multiple-files-unzipping.png
+help\res\sharepoint-upload-multiple-files-zip-compressed.png
+help\res\sharepoint_clickonce_upload_batch_checkin_automatic_checkout.png
+help\res\sharepoint_flash_silverlight_upload_batch_checkin_automatic_checkout.png
+intro.html
+star.gif
+servicenotinstalled.gif
+setup.html
+sharepoint_flash_silverlight_web_uploader.html
+checkall.gif
+roxority_uploadzen/upload.png
+crit_16.gif
+uploading_multiple_files.html
+comparison_web_windows_sharepoint_bulk_upload.html
+itemref_UploadActions.html
+farm_site_config.html
+clickonce_deployment_checklist.html
+automatic_checkout_batch_checkin_versioning.html
+windows_integrated_and_forms_based_authentication_fba.html
+bulk_folder_uploads_server_side_zip_unzipping.html
+client_side_settings.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

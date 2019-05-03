@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="01029c1a-3847-4e5f-8335-2d83ffa4f548" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction
+		Id="roxorityMenuItem_ExportActions"
+		RegistrationType="List"
+		GroupId="ActionsMenu"
+		Rights="ViewListItems"
+		Location="Microsoft.SharePoint.StandardMenu"
+		Sequence="10"
+		ControlAssembly="roxority_ExportZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01"
+		ControlClass="roxority_ExportZen.ExportZenMenuItem">
+	</CustomAction>
+</Elements>

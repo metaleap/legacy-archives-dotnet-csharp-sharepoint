@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="12345678-abcd-9999-eeff-5173ad000002" Title="ExportZen Admin Links" Description="" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Creator="roxority.com" SolutionId="776c627b-7975-4891-a0a0-398fbdd8d3e9" Scope="Farm" Version="1.0.0.0" Hidden="TRUE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="SiteAdminLinks.xml" />
+	</ElementManifests>
+</Feature>

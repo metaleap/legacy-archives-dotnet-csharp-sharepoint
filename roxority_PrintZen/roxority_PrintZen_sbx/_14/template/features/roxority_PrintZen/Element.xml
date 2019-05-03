@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Merge xmlns="http://schemas.microsoft.com/sharepoint/">
+	<AppendNode Path="/*[local-name()='Elements']">
+		<CustomAction Id="PrintZenAction"
+               RegistrationType="ContentType"
+               RegistrationId="0x01"
+               Rights="ViewListItems"
+               Location="CommandUI.Ribbon">
+			<CommandUIExtension>
+				<CommandUIHandlers>
+					<CommandUIHandler Command="PrintZenAction" CommandAction="javascript:roxPrintZenAction(arguments);" />
+				</CommandUIHandlers>
+			</CommandUIExtension>
+		</CustomAction>
+	</AppendNode>
+</Merge>

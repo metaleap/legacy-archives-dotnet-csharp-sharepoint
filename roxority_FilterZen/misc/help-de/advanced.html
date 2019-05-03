@@ -1,0 +1,180 @@
+﻿<h3>
+	Überblick</h3>
+<p>
+	Im Kapitel <a href="?doc=webpart">Schnelldurchlauf: Verwenden des Webparts</a> 
+	wurde ein einfaches Filterszenario einer
+	<i>Listenansicht</i> nach zwei <i>Aufgaben</i>-Listenspalten,
+	<i>Priorität</i> und <i>Status</i>, demonstriert. Bei der Umsetzung 
+	realistischerer und komplexerer Szenarieren helfen Ihnen die folgenden 
+	Funktionen, Optionen und Hinweise weiter:</p>
+<ul>
+	<li><b>Filternamen</b> — bei Listen müssen <a href="#s1">die internen Spaltennamen, 
+		nicht deren Anzeigenamen (Spaltentitel)</a>, verwendet werden.</li>
+	<li><b>Filternamen</b> — aus verschiedenen Gründen wollen Sie vielleicht <a href="#s2">
+		den internen Spaltennamen eigene URL-Parameternamen zuordnen</a>.</li>
+	<li><b>Filterdiagnose</b> &mdash; funktionieren Ihre Filter nicht wie erwartet, 
+		nutzen Sie die <a href="#s3">Diagnoseausgabe aller Filter</a>, die der URL 
+		entnommen und an verbundene Webparts gesendet werden.</li>
+	<li><b>Parameterbündlung</b> &mdash; zum Einsatz auf 
+		MOSS-Erweiterte-Suche-Ergebnisseiten oder zur Minimierung der Anzahl der URL-Filterparameter 
+		können <a href="#s4">mehrere Filter in einem URL-Parameter gebündelt werden</a>.</li>
+	<li><b>Sammelfilter</b> &mdash; um fortgeschrittenen Anwendern oder Webdesignern 
+		mehr Flexibilität zu bieten, lassen Sie <a
+		href="#s5">per Sammelfilter beliebige URL-Parameterfilter abfangen</a>.</li>
+</ul>
+<h3>
+	Interne Listenspaltennamen</h3>
+<p>
+	Wenn Sie ein <i>Listenansicht</i>-Webpart (oder ein <i>Datenansicht</i>-Webpart 
+	mit einer SharePoint-Liste oder -Dokumentbibliothek als Datenquelle) verbinden, 
+	erwarten diese Filter-empfangenden Standardwebparts <i>zwingend</i>, daß 
+	verbundene Filter-sendende Webparts wie das <b>FilterZen URL-Filter</b>-Webpart 
+	Filternamen senden, die <i>exakt</i> den <b>internen</b> Spaltennamen 
+	entsprechen (welche sich <i>nie mehr</i> ändern, sobald eine Spalte erzeugt 
+	wurde), statt den aktuellen Anzeigenamen (<b>Spaltentiteln</b>, welche durch 
+	Endanwender jederzeit geändert werden <i>können</i>).</p>
+<div class="rox-info" style="background-image: url('/_layouts/images/hhelp.gif');">
+	Der <i>interne Name</i> einer Spalte wird erzeugt, wenn eine Spalte initial 
+	angelegt wird, und ist von nun an unveränderbar, selbst wenn der <i>Spaltentitel</i> 
+	nachträglich wiederholt auf SharePoint&#39;s <i>Spalte ändern</i>-Seite 
+	verändert werden kann. Die Muster interner Spaltennamen variieren: einige 
+	vordefinierte Spalten in SharePoint&#39;s Standardlistendefinitionen haben 
+	interne Namen wie <i>AssignedTo</i> für die &quot;Zugewiesen an&quot;-Spalte in <i>
+	Aufgaben</i>-Listen, oder <i>_ModerationComments</i> für die &quot;Kommentare 
+	zur Genehmigung&quot;-Spalte in beliebigen Listen. Eine vom Benutzer angelegte eigene Spalte mit einem 
+	initialen Spaltentitel namens &quot;Test-Link&quot; wird hingegen zum Beispiel den 
+	internen Spaltennamen <i>Test_x002d_Link</i> 
+	erhalten.</div>
+<p>
+	<b>FilterZen URL-Filter</b> kann an dieser Anforderung, Filternamen zu senden, 
+	die <i>exakt</i> den internen Spaltennamen entsprechen, nichts ändern &mdash; 
+	sie wird von SharePoint so vorgegeben. Aufgrund von Einschränkungen in der 
+	aktuellen Architektur von Webpartverbindungen kann es noch nicht einmal 
+	ermitteln, welche Listen überhaupt von ihm gefiltert werden. Da das <b>FilterZen URL-Filter</b>-Webpart 
+	somit keinen direkten Zugang zu den Filterspalten erhalten kann, kann es auch 
+	nicht anhand von Spaltentiteln, die Sie andernfalls direkt eingeben könnten, die 
+	entsprechenden internen Spaltennamen ermitteln. Daher müssen Sie die internen 
+	Spaltennamen selbst ermitteln und als Filternamen eingeben.</p>
+<p>
+	Um diesen Vorgang so einfach wie möglich zu gestalten, haben wir ein 
+	Hilfswerkzeug direkt in den Webparteinstellungen-Arbeitsbereich eingebaut, mit 
+	dem Sie im Handumdrehen den korrekten Filternamen, also den <i>internen 
+	Spaltennamen</i>, für eine zu filternde Listenspalte ermitteln. Sobald Sie 
+	dieses Werkzeug eingeblendet haben durch Klick auf den Verbindung mit Liste</i>-Link, 
+	können Sie die Liste auswählen, die Sie filtern, um daraufhin alle ihre Spalten 
+	aufzulisten.
+	Wählen Sie nun die zu filternde Spalte aus, und es wird Ihnen der interne 
+	Spaltenname angezeigt. Kopieren Sie ihn und fügen Sie ihn in das bereits aus dem 
+	Kapitel <a href="?doc=webpart">Schnelldurchlauf: Verwenden des Webparts</a> bekannte URL-Parameter-Textfeld 
+	ein:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/de/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	Falls Sie ein <i>Datenansicht</i>-Webpart filtern, dessen Daten aus einer Liste 
+	in einer <i>anderen</i> Website oder Websitesammlung gespeist werden, geben Sie 
+	die entsprechende Website-URL in das Textfeld des Hilfswerkzeugs ein und klicken 
+	Sie auf <i>OK</i>, um die Liste im Listenfeld darunter anzuzeigen und auswählen zu 
+	können.</p>
+<h3>
+	Parameternamen Spaltennamen zuordnen</h3>
+<p>
+	Anhand der bisherigen Beispiele funktioniert das <b>FilterZen URL-Filter</b>-Webpart 
+	augenscheinlich einfach so, daß alle seine konfigurierten internen Spaltennamen 
+	in den
+	URL-Parametern eines jeden Webpartseitenaufrufs geortet werden und die 
+	entsprechenden Filter an verbundene Webparts gesendet werden, wenn diese 
+	URL-Parameter vorhanden sind.</p>
+<p>
+	Aus verschiedenen Gründen möchten Sie aber vielleicht URL-Parameter verarbeiten, 
+	die
+	<b>andere Namen</b> haben als die zu ihnen gehörigen internen Spaltennamen:</p>
+<ul>
+	<li>Die internen Spaltennamen sehen oft obskur und undurchsichtig aus (&quot;abschreckend 
+		technisch und intern&quot;), oder können auch einfach zu lang werden. Ihre 
+		Usabilitystrategie oder Informationsarchitektur empfiehlt möglicherweise hoch 
+		lesbare URLs mit kurzen, einprägsamen Parameternamen.</li>
+	<li>Sie möchten Ihre internen Filterdesigns vielleicht abstrahieren oder 
+		nachträglich anpassen, ohne den gehabten Aufruf Ihrer Filter durch Anwender oder 
+		Webdesigner über die URL zu ändern.</li>
+</ul>
+<p>
+	Um einen beliebigen gewünschten Parameternamen, wie zum Beispiel <i>T</i>, einem 
+	beliebigen internen Spaltennamen, wie zum Beispiel <i>Title</i> zuzuordnen, 
+	geben Sie statt wie bisher nur eine Textzeile mit dem internen Spaltennamen nun 
+	in das <i>URL-Parameter</i>-Textfeld eine Textzeile ein, die sowohl den 
+	Parameternamen als auch den Spaltennamen enthält, verbunden durch einen
+	<nobr style="background: infobackground; color: InfoText; border: solid 1px #ccc;">&nbsp;=&gt;&nbsp;</nobr>
+	&quot;Trennpfeil&quot;:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 316px;" src="help/de/res/adv_02.png"
+		title="" />
+</p>
+<h3>
+	Diagnosemodus</h3>
+<p>
+	Funktioniert ein Filter nicht wie erwartet, ist es hilfreich, herausfinden zu 
+	können, welche Filter das <b>FilterZen URL-Filter</b>-Webpart genau anhand der 
+	aktuellen URL und der aktuellen Webparteinstellungen generiert. Das <b>FilterZen URL-Filter</b>-Webpart 
+	erzeugt exakt diese Diagnoseausgabe <i>immer</i>, wenn sich die Webpartseite im 
+	Entwurfsmodus befindet. Wechseln Sie also auf der Seite, die nicht die erwartete 
+	Filterung produziert, einfach mit <i>Seite bearbeiten</i> aus dem <i>
+	Websiteaktionen</i>-Menü in den Seitenentwurfsmodus und Sie sehen alle Filter, 
+	die anhand der aktuellen URL generiert werden. Das ist umso hilfreicher, je 
+	unlesbarer Ihre URL-Parameter werden, zum Beispiel durch Verwendung der
+	<a href="#s4">Parameterbündlung</a> oder durch Nichtverwendung von <a href="#s2">
+	Parameternamen-Spaltennamen-Zuordnungen</a>. Wenn das <b>FilterZen URL-Filter</b>-Webpart 
+	nicht minimiert oder ausgeblendet wurde, sieht seine <i>Diagnosemodus</i>-Ausgabe 
+	in etwa so aus:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 272px;" src="help/de/res/adv_03.png"
+		title="" />
+</p>
+<h3>
+	Parameterbündlung</h3>
+<p>
+	Sollen alle durch die URL angegebenen Filter in einem einzigen URL-Parameter 
+	enthalten sein, geben Sie einfach den Namen dieses &quot;Bündelparameters&quot; im <i>Parameterbündlung</i>-Textfeld 
+	ein. Das <b>FilterZen URL-Filter</b>-Webpart sucht wie gehabt nach den im <i>URL-Parameters</i>-Textfeld 
+	angegebenen Filternamen, wird jetzt aber nur im Parameterwert des angegebenen 
+	Bündelparameters suchen und alle anderen URL-Parameter ignorieren.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 410px;" src="help/de/res/adv_04.png"
+		title="" />
+</p>
+<div class="rox-info">
+	Wie obige Abbildung verdeutlicht, können Sie zwar über den <i>Namen</i> des 
+	Bündelparameters frei entscheiden &mdash; von dessen <i>Wert</i> indes&nbsp;wird 
+	immer jene spezielle, vordefinierte Syntax erwartet, die auch MOSS Erweiterte 
+	Suche-Formulare und -Ergebnisseiten verwenden
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;wert&quot; 
+	name:&quot;wert&quot; name:&quot;wert&quot;&nbsp;</b> &mdash;</nobr> Filter 
+	folgen aufeinander, durch Leerzeichen getrennt, Namen und Werte sind durch 
+	Doppelpunkt getrennt und Werte sind <iimmer</i> in Anführungszeichen, 
+	unabhängig vom tatsächlichen Spaltentyp).</div>
+<h3>
+		URL-Parameter-Sammelfilter</h3>
+<p>
+	Indem Sie ausschließlich ein einzelnes Fragezeichen (&#39;?&#39;) in das <i>URL-Parameter</i>-Textfeld 
+	eingeben (statt wie gehabt Textzeilen mit Parameternamen und interne 
+	Spaltennamen), aktivieren Sie den <b>Sammelmodus</b>. Dieser Modus 
+	berücksichtigt ganz einfach <b>jeden</b> aktuell vorliegenden URL-Parameter und 
+	sendet den entsprechenden Filter an verbundene Webparts, ungeachtet dessen, wie 
+	diese Webparts letztendlich mit diesen Filtern umgehen. Kombiniert mit der
+	<a href="#s4">Parameterbündlung</a> berücksichtigt das Webpart zwar nur den 
+	angegebenen Bündelparameter, verwendet aber wiederum <b>jeden</b> darin 
+	enthaltenen Filternamen (statt wie gehabt nur die im <i>URL-Parameter</i>-Textfeld 
+	explizit angegebenen).</p>
+<div class="rox-info" style="background-image: url('/_layouts/images/exclaim.gif');">
+	Wird die Parameterbündlung <i>nicht</i> verwendet, funktioniert der Sammelmodus 
+	zwar wie beschrieben, wird aber <b>nicht zur Verwendung empfohlen</b>, da SharePoint-eigene URL-Parameter, 
+	die nicht zum Einsatz als Filter bestimmt sind, ebenfalls an verbundene Webparts 
+	gesendet werden (beispielsweise der häufig vorkommende 
+	URL-Parameter <i>PageView=Shared</i>), 
+	und <i>Listenansicht</i>- oder <i>Datenansicht</i>-Standardwebparts auch diese 
+	Filter unbesehen anwenden (selbst wenn eine entsprechende Spalte gar nicht 
+	existiert). 
+	Ob mit oder ohne Parameterbündlung &mdash; der Sammelmodus unterstützt keine <a href="#s2">
+	Namenszuordnungen</a>: Namen von URL-Parametern müssen <i>exakt</i> den <a href="#s1">internen 
+	Spaltennamen</a> entsprechen (und zwar <i>in korrekter Groß- und Kleinschreibung</i>).</div>

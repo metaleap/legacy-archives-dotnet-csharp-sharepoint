@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="b2748471-7f09-4c99-9c5b-c208404e85f4" Title="$Resources:roxority_UploadZen,Feature_Title" Description="$Resources:roxority_UploadZen,Feature_Desc" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="FALSE" Creator="roxority.com" SolutionId="89e8fd8b-fe57-477b-b10a-1f6adee43cff" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" ReceiverAssembly="roxority_UploadZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Elements.xml" />
+		<ElementFile Location="roxority_UploadWebPart.webpart" />
+	</ElementManifests>
+</Feature>

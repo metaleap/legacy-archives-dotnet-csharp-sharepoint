@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x801220">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Error message? Open docs\PeopleZen-Help.html instead.">
+		<param name="Local" value="intro.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Solution Installation and Feature Activation">
+		<param name="Local" value="setup.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Display Style">
+		<param name="Local" value="user_profiles_web_part_display_style.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Data Sources">
+		<param name="Local" value="web_part_user_profile_data_sources.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="User Profile Properties">
+		<param name="Local" value="web_part_user_profile_properties.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Filtering, Tabbing and Search">
+		<param name="Local" value="user_profiles_web_part_filtering_tabbing_search.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Sorting and Grouping">
+		<param name="Local" value="user_profiles_web_part_sorting_grouping.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Paging">
+		<param name="Local" value="user_profiles_web_part_paging.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Miscellaneous Web Part Properties">
+		<param name="Local" value="user_profiles_web_part_misc.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Settings for Data Sources">
+		<param name="Local" value="itemref_DataSources.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Settings for Data Field Templates">
+		<param name="Local" value="itemref_DataFieldFormats.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Configuration Settings">
+		<param name="Local" value="farm_site_config.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reference: URL Settings Parameters">
+		<param name="Local" value="ref_url_settings.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reference: CSS Classes">
+		<param name="Local" value="ref_css.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release Notes">
+		<param name="Local" value="release_notes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="End-User License Agreement (EULA)">
+		<param name="Local" value="eula.html">
+		</OBJECT>
+
+</UL>
+</BODY></HTML>

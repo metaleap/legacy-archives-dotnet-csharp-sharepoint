@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Seitenaufruffilter</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+	<h1>Seitenaufruffilter</h1>
+<p>
+		Use page request parameters to derive the filter value from the current Web Part 
+	Page HTTP request context:</p>
+<ul>
+	<li>URL parameters (HTTP GET)</li>
+	<li>Posted form values (HTTP POST)</li>
+	<li>Cookies or Server Variables</li>
+	<li>URL path fragments</li>
+</ul>
+<p>
+	The page request filter is capable of parsing various request parameter formats. 
+	Observe how the Matching URL format example area changes immediately in response 
+	to your changes to see exactly what kind of input the filter expects with the 
+	current setup. (In principle this applies even when using a request mode other 
+	than URL query string.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_url_query_string.png" title="" /></p>
+<h3>
+	Sub-Parameter Bundling<a name="s0"></a></h3>
+<p>
+	If the specified request parameter bundles multiple name-value pairs in a single 
+	parameter value, an individual sub-parameter value can be derived by entering 
+	the sub-parameter name, if the parameter value conforms to the syntax that is 
+	also used by MOSS Advanced Search forms / results pages
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;value&quot; 
+	name:&quot;value&quot; name:&quot;value&quot;&nbsp;</b> &mdash;</nobr>
+	filters are separated by spaces, names and values are separated by colons and values
+	are <i>always</i> in quotation marks, regardless of the column type).</p>
+
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+</body>
+</html>

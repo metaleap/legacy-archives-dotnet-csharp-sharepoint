@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="12345678-abcd-9999-eeff-5173ad000004" Title="FilterZen Admin Links" Description="This feature should NOT be deactivated!" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Creator="roxority.com" SolutionId="306ab001-d4f7-42be-a88b-52aed35d4e4b" Scope="Farm" Version="1.0.0.0" Hidden="TRUE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="SiteAdminLinks.xml" />
+	</ElementManifests>
+</Feature>

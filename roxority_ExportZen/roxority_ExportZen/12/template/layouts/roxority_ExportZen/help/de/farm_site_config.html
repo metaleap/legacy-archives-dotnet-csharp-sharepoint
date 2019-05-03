@@ -1,0 +1,25 @@
+<p>Die folgenden Einstellungen finden administrative Benutzer auf der Seite <span id="roxconfiglink"><i>Konfiguration</i> im <i>ExportZen-Studio</i>, welches Sie &uuml;ber Websiteeinstellungen / ExportZen Studio / Konfigurationseinstellungen erreichen</span>.</p><p>Jede Einstellung hat einen globalen, &uuml;ber die gesamte Serverfarm hinweg geltenden Wert, der jeweils optional auf Websitesammlungsebene &uuml;berschrieben werden kann. Die folgenden Konfigurationseinstellungen stehen zur Verf&uuml;gung:</p>
+<h3>Sprache</h3>
+<p>ExportZen wurde f&uuml;r verschiedene Sprachen lokalisiert. Zus&auml;tzlich zu Englisch und Deutsch werden hier alle Sprachen zur Auswahl angeboten, f&uuml;r die Sie eigene Teil&uuml;bersetzungen (unter Websiteeinstellungen / ExportZen Studio / DIY-Benutzeroberfl&auml;chen-Lokalisierung) angefertigt haben. Diese Einstellung betrifft alle ExportZen-Benutzeroberfl&auml;chen au&szlig;er Beschriftungen und Beschreibungen von Features, Listenvorlagen, Spaltentypen, Inhaltstypen oder Webpartvorlagen (diese werden von SharePoint immer direkt gem&auml;&szlig; der aktiven Website-Spracheinstellung geladen).</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>ExportZen-Studio</i>:</p>
+<ul>
+<li><i>(Wie Site, oder Englisch)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+</ul>
+<h3>SharePoint&#39;s vordefinierte &quot;Nach Excel exportieren&quot;-Originalaktion deaktivieren</h3>
+<p>Standardm&auml;&szlig;ig koexistieren Ihre ExportZen-Aktionen parallel zum bereits in SharePoint eingebauten &#39;Nach Excel exportieren&#39;-Originalbefehl. Wollen Sie letztere Funktionalit&auml;t komplett durch ExportZen ersetzen, k&ouml;nnen Sie hier anpassen, ob und wann SharePoints eigener Excel-Exportbefehl deaktiviert werden soll (betrifft sowohl den Men&uuml;befehl in der Aktionen-Toolbar von SharePoint 2007-Listen als auch die Ribbon-Befehle der &#39;Verbinden und exportieren&#39;-Gruppe im "Liste"-Ribbon von SharePoint 2010/2013).</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>ExportZen-Studio</i>:</p>
+<ul>
+<li><i>Nie</i></li>
+<li><i>Nur wenn CSV-Exportaktionen existieren (bei aktiviertem Websitesammlungsfeature)</i></li>
+<li><i>Immer (bei aktiviertem Websitesammlungsfeature)</i></li>
+</ul>
+<h3>Trennfolge f&#252;r exportierte mehrwertige Spaltendaten</h3>
+<p>Diese Einstellung gibt die Zeichenfolge an, mit der die Exportrepr&auml;sentationen von Werten aus Listenspalten, die mehrere Werte enthalten (z.B. Multi-Choice-Auswahlspalten oder Mehrfach-Nachschlagespalten), kombiniert werden.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>ExportZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>, </pre>
+<h3>Keine Standardinstanzen f&#252;r ExportZen-Konfiguratoren auf Websitesammlungsebene (NICHT empfohlen!)</h3>
+<p>Konfiguratoren sind Listen von Elementen, die das Verhalten dieser Software definieren bzw. anpassen (wie Export-Aktionen in ExportZen, Datenquellen und Datenfeldvorlagen in PeopleZen, Druckansichten und Druck-Launcher in PrintZen, Upload-Aktionen in UploadZen). Standardm&auml;&szlig;ig besitzt jede Websitesammlung f&uuml;r jeden Konfigurator ihre eigene, nicht entfernbare Standardinstanz , die angepa&szlig;t werden kann oder zu der weitere hinzugef&uuml;gt werden k&ouml;nnen. In sehr gro&szlig;en Serverfarmen mit 1000en von Websitesammlungen k&ouml;nnen diese Standardinstanzen eher hinderlich sein und der ausschlie&szlig;liche Einsatz von Instanzen auf Farmebene pr&auml;feriert werden. Kreuzen Sie diese Option an, um die Standardinstanz-pro-Websitesammlung zu deaktivieren.</p>
+<h3>Standardm&#228;&#223;ig keine Einbindung der jQuery-Bibliothek v1.8.3 (NICHT empfohlen)</h3>
+<p>Einige ExportZen-Benutzeroberfl&auml;chen erfordern die jQuery-Bibliothek und binden diese in die entsprechenden Seiten ein. Mehrfacheinbindung von jQuery kann manchmal zu Problemen f&uuml;hren. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>ExportZen-Studio</i> diese Option an <i>nur</i>, wenn Ihre Masterseiten, Webpartseiten oder Drittanbietererweiterungen eigenst&auml;ndig, global (nicht nur in Einzelf&auml;llen) und unabh&auml;ngig von ExportZen ebenfalls jQuery einbinden, um ExportZen davon abzuhalten, jQuery einzubinden. Ist diese Option aktiviert, m&uuml;ssen Sie selbst&auml;ndig sicherstellen, dass jQuery (in einer Version neuer als 1.4 ABER &auml;lter als 1.9) in Seiten geladen wird, die ExportZen-Benutzeroberfl&auml;chen enthalten, andernfalls wird ExportZen unter Umst&auml;nden nicht mehr funktionieren. Dies ist eine globale Voreinstellung, die lokal ggf. noch einmal individuell &uuml;berschrieben werden kann.</p>

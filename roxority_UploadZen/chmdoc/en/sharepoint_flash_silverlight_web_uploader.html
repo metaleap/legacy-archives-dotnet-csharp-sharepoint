@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>Walkthrough: Web Uploader</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Walkthrough: Web Uploader</h1>
+<h3>
+	End user experience of launching the Web Uploader<a name="s0"></a></h3>
+<p>
+	After UploadZen has been <a href="setup.html">installed</a>, <a href="clickonce_deployment_checklist.html">
+		fully deployed</a> and its <i>UploadZen Library Integration</i> Site Collection
+	<a href="setup.html#s2">feature activated</a>:</p>
+<ul>
+	<li>navigate to any Form Library, Picture Library, Slide Library, Translation Management
+		Library, Web Part Gallery, Master Page Gallery, List / Site Template Gallery or
+		any other <b>SharePoint Document Library</b></li>
+	<li><i>or</i> select any <b>Library View Web Part</b> (with its <i>Toolbar Type</i>
+		set to <i>Show</i> or <i>Full</i>) on any of your content, wiki or Web Part pages</li>
+	<li>and then switch to the <i>Documents</i> ribbon tab in the <i>Library Tools</i> ribbon
+		group.</li>
+</ul>
+<p>
+	In addition to the SharePoint <i>Upload Document</i> menu, you should also see an
+	<i>Upload Multiple Files</i> button in the ribbon section titled <i>New</i>:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 348px;" src="help/res/sharepoint-flash-silverlight-multi-upload-ribbon.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	Note that administrators can hide this ribbon command button from certain Document
+	Libraries or library types by customizing the default <a href="itemref_UploadActions.html">
+		Upload Action</a> under Site Actions / UploadZen Studio / Upload Actions. They
+	can also set up multiple, individually configured <i>Upload Actions</i> with different
+	settings (such as file type / name extension filters) targeting different libraries
+	by type or name.</div>
+<p>
+	Clicking the <i>Upload Multiple Files</i> button in the ribbon will show the <i>Web
+		Uploader</i>:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 444px;" src="help/res/sharepoint-flash-silverlight-bulk-file-upload.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	If the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Add Files</i> link is not visible, then the uploader will most likely display
+	a note that &quot;<i>This uploader requires either the Flash 10 browser plug-in (or
+		newer) or the Silverlight 4 browser plug-in (or newer)</i>&quot;.
+</div>
+<h3>Selecting multiple files and uploading them<a name="s1"></a></h3>
+<p>
+	Clicking the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Add Files</i> link shows a file browsing dialog allowing the selection of multiple
+	files:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 444px;" src="help/res/sharepoint-flash-silverlight-select-multiple-files-upload.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	Administrators can customize <a href="itemref_UploadActions.html">Upload Actions</a>
+	to offer file type filters in the file browsing dialog box, such as <i>Images (*.jpg;
+		*.gif etc)</i> or <i>Archives (*.zip; *.rar etc.)</i>. Offering such file type
+	filters (based on file name extensions) at the same time restricts the types of
+	files that users may select for upload.
+</div>
+<p>
+	Selecting files adds them to the listing of files to be uploaded:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 670px;" src="help/res/sharepoint-flash-silverlight-multi-file-batch-upload.png"
+		title="" /></p>
+<ul class="">
+	<li>Files can be de-selected by hovering the row of the file and clicking the
+		<img class="roxbuttonicon" src="help/res/deletehs.png" />
+		icon in the #number column.</li>
+	<li>Files with blocked name extensions are <span style="background-color: #ffbcbc;">
+		highlighted in red</span> (but administrators can customize the <a href="itemref_UploadActions.html">
+			Upload Action</a> to automatically remove such files from the listing when they
+		are selected).</li>
+	<li>Existing files with the same name are <span style="background-color: #ffefbc;">highlighted
+		in yellow</span>, so if end users do not want to overwrite certain existing files,
+		they are warned and can remove the file from the listing.</li>
+	<li>ZIP archive files can be set to one of the following options:
+		<ul>
+			<li><b>Upload (don&#39;t extract)</b> &mdash; the ZIP archive file will be uploaded
+				as is into the current Library folder</li>
+			<li><b>Extract in this folder</b> &mdash; all files and folders in the ZIP archive file
+				will be extracted at the server side and be placed into the current Library folder</li>
+			<li><b>Extract in a new sub-folder</b> &mdash; all files and folders in the ZIP archive
+				file will be extracted at the server side and be placed into a newly created sub-folder
+				(inside the current Library folder), which will be named after the original ZIP
+				archive file</li>
+		</ul>
+		All ZIP archive files selected for upload can be set to the same setting by selecting
+		that setting for one ZIP archive file, then clicking the
+		<img class="roxbuttonicon" src="checkall.gif" />
+		icon. </li>
+	<li>To begin uploading the selected files, end users simply click the
+		<img class="roxbuttonicon" src="roxority_UploadZen/upload.png" />
+		<i>Upload File(s) Now</i> link:</li>
+</ul>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 436px;" src="help/res/sharepoint-flash-silverlight-bulk-folder-upload.png"
+		title="" /></p>
+<p>
+	The status column now shows the exact upload progress (or result) for each file and the process can be cancelled at any time by clicking the <img class="roxbuttonicon" src="crit_16.gif" /> <i>Cancel All</i> link.
+</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

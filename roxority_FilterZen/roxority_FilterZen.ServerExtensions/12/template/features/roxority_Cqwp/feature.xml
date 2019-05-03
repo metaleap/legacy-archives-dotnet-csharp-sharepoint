@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="33ad3ecc-ff60-4953-8859-a217da7a00e3" Title="$Resources:roxority_FilterZen,ContentQueryWebPart_Title" Description="$Resources:roxority_FilterZen,ContentQueryWebPart_Desc" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="FALSE" ImageUrl="roxority_FilterZen/feature.png" Creator="roxority.com" SolutionId="acb70847-d7f9-4d25-bece-0de245cb6368" Scope="Site" Version="1.0.0.0" ReceiverAssembly="roxority_FilterZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" Hidden="FALSE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="roxority_Cqwp\roxority_Cqwp.xml" />
+		<ElementFile Location="roxority_Cqwp\roxority_Cqwp.webpart" />
+	</ElementManifests>
+</Feature>

@@ -1,0 +1,208 @@
+<html>
+	<head>
+		<title>Settings for Data Sources</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Settings for Data Sources</h1>
+<p>The following settings can be customized for each Data Source by administrative users on the <b>Data Sources</b> page in your <i>PeopleZen Studio</i>, accessible via Site Settings / PeopleZen Studio / Data Sources:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Data Source<a name="s0"></a></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>Connection provider<a name="s1"></a></h3>
+<p><b>(Data source connection provider picker)</b></p><p>Select which type of data connection will be used by this data source. <b>If you change this, all settings in the other tabs need to be reviewed and many will have to be re-configured.</b></p>
+<ul>
+<li><b>Farm User Profiles</b><br/>&mdash; <i>(SPS 2010: Service Application / MOSS 2007: Shared Service Provider)</i></li>
+<li><b>Site User Accounts (People and Groups)</b><br/>&mdash; <i>at the Web Site or Site Collection level</i></li>
+<li><b>Active Directory</b><br/>&mdash; <i>(or any other LDAP-compatible directory service)</i></li>
+<li><b>Database</b><br/>&mdash; <i>(SQL Server, Oracle or any other data source via OLEDB, ODBC or ADO.NET)</i></li>
+</ul>
+<h3>Security context for Data Source consumers<a name="s2"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which security context consumers of this Data Source (such as PeopleZen Web Parts, Lookup Columns etc.) should establish to connect to this Data Source.</p>
+<ul>
+<li><b>Current user BUT fall back to Elevate if &quot;Access Denied&quot;</b><br/>&mdash; <i>recommended</i></li>
+<li><b>Current user ONLY</b><br/>&mdash; <i>runs under the credentials and privileges of the calling user</i></li>
+<li><b>Elevate ONLY</b><br/>&mdash; <i>runs under the credentials and privileges of the current IIS application pool identity</i></li>
+<li><b>Impersonate</b><br/>&mdash; <i>runs under the credentials and privileges of a specified user name</i></li>
+</ul>
+<h3>Impersonate the following user<a name="s3"></a></h3>
+<p><b>(Text box)</b></p><p>Specify a fully-qualified Windows logon name (in the yourdomain\user123 format) for impersonation.</p>
+<h3>Password for impersonated user<a name="s4"></a></h3>
+<p><b>(Text box)</b></p><p>The password will be stored encrypted.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserProfiles"><a href="#" onclick="roxTogDocTab('t__UserProfiles');">&quot;Farm User Profiles&quot; tab:</a></h4><span class="rox-doctab rox-doctab-t__UserProfiles">
+<h3>Exclude User Names<a name="s5"></a></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<a name="s6"></a></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserAccounts"><a href="#" onclick="roxTogDocTab('t__UserAccounts');">&quot;Site User Accounts (People and Groups)&quot; tab:</a></h4><span class="rox-doctab rox-doctab-t__UserAccounts">
+<h3>Exclude User Names<a name="s7"></a></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<a name="s8"></a></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>Return user accounts<a name="s9"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which user account collection to enumerate, if any.</p>
+<ul>
+<li><b>All</b><br/>&mdash; <i>members of the current Web Site and authenticated domain group members who browsed to it</i></li>
+<li><b>Site Collection user accounts</b><br/>&mdash; <i>user accounts that belong to the current Site Collection</i></li>
+<li><b>Web Site user accounts</b><br/>&mdash; <i>user accounts that are explicitly assigned permissions in the current Web Site</i></li>
+<li><b>None</b><br/>&mdash; <i>no user accounts are enumerated</i></li>
+</ul>
+<h3>Return user groups<a name="s10"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which user group collection to enumerate, if any.</p>
+<ul>
+<li><b>None</b><br/>&mdash; <i>no groups are enumerated</i></li>
+<li><b>Web Site groups</b><br/>&mdash; <i>all groups of the current Web Site are enumerated</i></li>
+<li><b>Site Collection groups</b><br/>&mdash; <i>all groups of the current Site Collection are enumerated</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Directory"><a href="#" onclick="roxTogDocTab('t__Directory');">&quot;Active Directory&quot; tab:</a></h4><span class="rox-doctab rox-doctab-t__Directory">
+<h3>Exclude User Names<a name="s11"></a></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<a name="s12"></a></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>Connection URL (required)<a name="s13"></a></h3>
+<p><b>(Text box)</b></p><p>An LDAP/ADSI connection string that is used by this Data Source to connect to your directory service.</p>
+<p>Default value for new Data Sources:</p>
+<pre>LDAP://OU=Departments,DC=global,DC=local</pre>
+<h3>Search query for directory-side pre-filtering (if required)<a name="s14"></a></h3>
+<p><b>(Text box)</b></p><p>An optional LDAP/ADSI query that is used by the directory service to pre-filter the result set send back to this Data Dource. (With a filter query defined here, this Data Source performs a directory service Search operation and yields the result set returned; without, it simply enumerates through all directory entries.)</p>
+<p>Default value for new Data Sources:</p>
+<pre>(&amp;(objectCategory=person)(objectClass=user))</pre>
+<h3>Search scope for directory-side pre-filtering (if required)<a name="s15"></a></h3>
+<p>Select the search scope to observe when invoking the directory search specified by the above LDAP search query.</p>
+<ul>
+<li><b>Subtree (default / recommended)</b><br/>&mdash; <i>Searches the whole subtree, including the base object and all its child objects.</i></li>
+<li><b>Base</b><br/>&mdash; <i>Limits the search to the base object. The result contains a maximum of one object.</i></li>
+<li><b>One level</b><br/>&mdash; <i>Searches the immediate child objects of the base object, excluding the base object.</i></li>
+</ul>
+<h3>Authentication mode<a name="s16"></a></h3>
+<p>Select how this Data Source should authenticate itself to the directory service specified above.</p>
+<ul>
+<li><b>Default (or none)</b><br/>&mdash; <i>use basic authentication (simple bind) in the LDAP provider</i></li>
+<li><b>Secure</b><br/>&mdash; <i>requests secure authentication using NTLM or Kerberos</i></li>
+<li><b>Encryption</b><br/>&mdash; <i>a cryptographic signature that identifies the sender</i></li>
+<li><b>Anonymous</b><br/>&mdash; <i>no authentication is performed</i></li>
+<li><b>Delegation</b><br/>&mdash; <i>delegates the user's security context</i></li>
+</ul>
+<h3>User name for directory service authentication (if required)<a name="s17"></a></h3>
+<p><b>(Text box)</b></p><p>If you selected <b>Secure</b> under the <i>Authentication mode</i> setting above, you can optionally specify a fully-qualified user name for authentication. If you leave this blank, the <i>Secure</i> authentication mode will use the current security context; otherwise, you also need to specify a password below.</p>
+<h3>Password for directory service authentication (if required)<a name="s18"></a></h3>
+<p><b>(Text box)</b></p><p>If you selected <b>Secure</b> under the <i>Authentication mode</i> setting above, you can optionally specify a password for authentication of the above user name. If you leave this blank, the <i>Secure</i> authentication mode will use the current security context; otherwise, you also need to specify a user name above.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Ado"><a href="#" onclick="roxTogDocTab('t__Ado');">&quot;Database&quot; tab:</a></h4><span class="rox-doctab rox-doctab-t__Ado">
+<h3>Exclude User Names<a name="s19"></a></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<a name="s20"></a></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>ADO.NET database connection provider<a name="s21"></a></h3>
+<p><b>(Drop-down menu to pick from a configurable set of choices)</b></p><p>Select the ADO.NET database connection provider to use for this Data Source. If required, you can restrict or extend the available choices with the <a target="_blank" href="?cfg=cfg#cfg_DataProviders">ADO.NET Database Connection Providers for SQL Data Access</a> configuration setting.</p>
+<p>The drop-down menu provides a set of choices that can be customized on the Configuration page of the PeopleZen Studio.</p>
+<h3>ADO.NET database connection string (required)<a name="s22"></a></h3>
+<p><b>(Text box)</b></p><p>Specify the ADO.NET connection string (including user credentials if applicable) used by this Data Source to connect to the database. If you want to specify a password but hide it (and store it encrypted), enter the placeholder <b>{$ROXPWD$}</b> in place of the password and then specify the password in the field below instead.</p>
+<h3>ADO.NET database connection password (if required)<a name="s23"></a></h3>
+<p><b>(Text box)</b></p><p>If you used the <b>{$ROXPWD$}</b> placeholder in the setting above, you can specify the password here. This will be stored encrypted.</p>
+<h3>ADO.NET data query (required)<a name="s24"></a></h3>
+<p><b>(Text box)</b></p><p>Specify, in SQL (or any other query language dialect supported by the selected ADO.NET database connection provider), the query sent to the database to fetch the result set of records to be returned by this Data Source.<br/><br/><b>Important:</b> if you have Caching enabled (on the Caching tab) for this ADO.NET Data Source, you <b><i>need</i> to ensure consistent sort order of the raw result set at all times</b> by including an ORDER BY clause or equivalent.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-u"><a href="#" onclick="roxTogDocTab('u');">&quot;Caching&quot; tab:</a></h4><span class="rox-doctab rox-doctab-u">
+<h3>In-memory Data Source caching<a name="s25"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>If caching is enabled, PeopleZen always creates a full cache of all data records in memory the first time a rendering request consuming this Data Source is served after a web front-end server has been reset.<br/><br/>
+<b>Caution:</b> enabling caching will sometimes show stale data. Changes to records in your Data Source will not be reflected in real-time but <b>delayed</b> (see <i>Cache Refresh Rate</i> below when caching is enabled). Completely new records added after the cache was last built up will go completely unnoticed until the next server reset unless you tick the <i>Periodically rebuild cache fully</i> check-box option, visible below when caching is enabled.<br/><br/>
+If this is a <b>Database</b> Data Source and you just enabled Caching for it, you <i>need to review</i> the instructions for the <b>ADO.NET data query</b> setting on the <b>Database</b> tab (and its current value!) carefully to ensure a consistent result set sort order is at all times guaranteed by your query.</p>
+<ul>
+<li><b>Full caching</b><br/>&mdash; <i>reading from a (possibly outdated) in-memory copy of the COMPLETE set of backend data</i></li>
+<li><b>No caching (recommended)</b><br/>&mdash; <i>every rendering request will connect to the backing store of this Data Source</i></li>
+</ul>
+<h3>Cache Refresh Rate<a name="s26"></a></h3>
+<p><b>(Text box)</b></p><p>After a web front-end server has been reset, PeopleZen always creates a full cache of all records in memory the first time a rendering request consuming this Data Source is served.<br/><br/>
+Afterwards, PeopleZen resynchronizes only a certain number of cached records during each request to adequately balance performance with accuracy of the information displayed.<br/><br/>
+Specify the number of records to refresh during each PeopleZen rendering request. A higher number (40 or more) reflects recent data changes much sooner but slows down PeopleZen rendering significantly, and vice versa.<br/><br/>
+If you don&#39;t specify a valid integer number greater than 0, the default value of 10 will be used.</p>
+<p>Default value for new Data Sources:</p>
+<pre>10</pre>
+<h3>Periodically rebuild cache fully<a name="s27"></a></h3>
+<p><b>(Check box option)</b></p><p><b>Typically neither required nor recommended for production systems, except when "many" (&gt;1x a day) data record additions or deletions are expected at the backing store of this Data Source.</b><br/><br/>After a web front-end server has been reset, PeopleZen always creates a full cache of all records in memory the first time a rendering request consuming this Data Source is served.<br/><br/>
+Those cached records are periodically refreshed at the rate specified above; however, completely new data records go unnoticed until the next server reset.<br/><br/>
+Tick this check box for PeopleZen to completely rebuild the cache periodically every n<sup>th</sup> PeopleZen rendering request, which as a consequence may significantly slow down every n<sup>th</sup> request but captures new records added since the cache was last re-created (n = number of user profiles divided by the cache request rate specified above).</p>
+<h3>Clear the cache next time I click &quot;Save All&quot;<a name="s28"></a></h3>
+<p>This clears the cache (on the receiving WFE server only) for this Data Source to reflect recent changes in the backend data or your Data Field Templates immediately.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-w"><a href="#" onclick="roxTogDocTab('w');">&quot;Data Fields&quot; tab:</a></h4><span class="rox-doctab rox-doctab-w">
+<h3>Default data fields (for Preview and new Data Source consumers)<a name="s29"></a></h3>
+<p><b>(Data fields picker)</b></p><p>Specify the fields to be shown by default in the Data Source Preview and in newly created, not yet customized consumers of this Data Source (ie. PeopleZen Web Parts, Lookup Filters, Lookup Columns etc.)<br/><br/>Each line contains an internal field name. Fields will then be displayed by Data Source consumers in the same order. Note that this is a default template that can be customized for each consumer.<br/><br/>To override the display name of a field in the Data Source consumer, enter your own display name in the same line next to the internal name, separated by a colon [:].<br/><br/>You can only include original fields provided by this Data Source (as listed in the above drop-down) &mdash; any special fields defined below cannot be included here (but the Data Source consumer itself will know how to utilize those depending on its configuration).</p>
+<h3>Name/Title data field/s<a name="s30"></a></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"title / name"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Picture data field/s<a name="s31"></a></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"picture / icon image (URL)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Link URL data field/s<a name="s32"></a></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"URL for linking Name/Title and/or picture"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Presence email address data field/s<a name="s33"></a></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"email address (for IM/OCS Presence indicator)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Logon name data field/s<a name="s34"></a></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"full user logon name / domain account name (domainname\username)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Field mappings for Outlook (vCard 3.0) export<a name="s35"></a></h3>
+<p><b>(Text box)</b></p><p><b>Advanced users only!</b> When customizing, seek assistance in our software support forums.<br/><br/>Contains the full template for the entire vCard 3.0 export of a user profile (excluding the BEGIN, VERSION, REV and END lines). Placeholders in [square brackets] denote Data Source field names and will be replaced with their respective field values at export time.<br/><br/>In your [square bracket placeholders], you can specify <b>any</b> data field name supported by this Data Source <b>as well as</b> any of the following Special Field names:<br/><br/>
+<b>[rox___pt]</b> &mdash; Name/Title data field/s specified above<br/>
+<b>[rox___pp]</b> &mdash; Picture data field/s specified above<br/>
+<b>[rox___pu]</b> &mdash; Link URL data field/s specified above<br/>
+<b>[rox___pm]</b> &mdash; Presence email address data field/s specified above<br/>
+<b>[rox___pl]</b> &mdash; Logon name data field/s specified above</p>
+<p>Default value for new Data Sources:</p>
+<pre>N:[LastName];[FirstName]<br/>FN:[rox___pt]<br/>ORG:ROXORITY Ltd.<br/>EMAIL:[rox___pm]<br/>PHOTO;VALUE=URL:[rox___pp]<br/>TEL:[CellPhone]<br/>TITLE:[Title]</pre>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-y"><a href="#" onclick="roxTogDocTab('y');">&quot;Preview&quot; tab:</a></h4><span class="rox-doctab rox-doctab-y">
+<h3>Preview this Data Source<a name="s36"></a></h3>
+<p><b>(Data source previewer)</b></p><p>Click the <i>Refresh</i> button above to load a dynamic preview of this Data Source with its current settings (even if not yet saved). You can parameterize the preview with the various options offered above. It only shows the fields specified in your <b>Default data fields</b> setting (on the <i>Data Fields</i> tab).<br/><br/><b>Important note: this is a <i>data</i> preview rather than a <i>design</i> preview.</b> Depending on loaded out-of-box or custom style sheets, the look and feel of your ultimate Data Source consumers in your content sites will vary from the visual design presented above.</p>
+</span>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<p>
+	The output produced by the <b>PeopleZen</b> <i>User Profiles Web Part</i> is decorated with the CSS class
+	names detailed below, allowing for full customizability of its visual appearance.
+	These elements are pre-styled in <b style="white-space: nowrap;">
+		/_layouts/roxority_PeopleZen/roxority_PeopleZen.css</b>.</p>
+<div class="rox-info">
+	To customize the appearance of the <b>PeopleZen</b> <i>User Profiles Web Part</i>, do 
+	<b>not</b> modify the <i style="white-space: nowrap;">
+		/_layouts/roxority_PeopleZen/roxority_PeopleZen.css</i> file in your SharePoint server file system: your modifications 
+	would get lost when deploying product updates in the future. Instead, place your 
+	modifications in a separate CSS file and embed it in your Web Part Page, Master 
+	Page or Page Layout.
+	<br /><br />
+	See our blog article <a target="_blank" href="http://roxority.com/sharepoint-zen/introduction-to-peoplezen-css-customizations.html">Introduction to PeopleZen CSS Customizations</a> for an example of how to do so.
+	</div>
+<ul>
+	<li><b>div.rox-people div.rox-userprofiles</b> &mdash; the entire surrounding area of the <b>PeopleZen</b> <i>User Profiles Web Part</i> output<ul>
+			<li><b>div.rox-userprofile-paging</b> &mdash; contains paging information as well as the
+				<i>Next</i> and/or <i>Previous</i> links</li>
+			<li><b>div.rox-userprofile-switcher</b> &mdash; if ad-hoc end-user view switching is enabled, contains the switching links</li>
+			<li><b>span.rox-pz-zero</b> &mdash; the <i>There are no User Profiles to show in this view</i> message</li>
+			<li><b>div.rox-tabstrip</b> &mdash; contains all quick-filter tabs (if enabled)
+			<ul>
+			<li><b>div.rox-tabprop</b> &mdash; if ad-hoc end-user switching of the quick-filter tabbing property is enabled, contains the drop-down for doing so</li>
+				<li><b>div.rox-tabstrip-fill</b> — filler block element for the remaining area after 
+					the last one of the quick-filter tabs</li>
+			</ul>
+			</li>
+			<li><b>div.rox-loader</b> &mdash; shows a progress bar or spinner animation while information is 
+				refreshed or retrieved in the User Profiles Web Part (via AJAX)</li>
+			<li><b>table.rox-userprofiles</b> &mdash; in <i>List View</i> only: the surrounding table of the user profiles list view</li>
+			<li><b>div.rox-userprofiles-all</b> &mdash; in <i>Tiles View</i> only: the surrounding area of all user profile tiles</li>
+			<li><b>div.rox-userprofile</b> &mdash; the surrounding area of a single user profile listing in <i>Tiles</i> view
+				<ul>
+				<li><b>div.rox-userprofile-picture</b> &mdash; contains the user profile picture, linked 
+					to the user profile</li>
+					<li><b>div.rox-userprofile-fullname</b> &mdash; contains the user name, linked to the user 
+						profile (<i>Tiles</i> view only)</li>
+					<li><b>div.rox-userprofile-item, div.rox-userprofile-<i>property-name</i></b> &mdash; 
+						contains a user profile property (<i>Tiles</i> view only)</li>
+				</ul>
+			</li>
+			<li><b>span.rox-peopgroup</b> &mdash; if grouping is enabled, contains the group value
+			<ul>
+			<li><b>span.rox-peopgroupprefix</b> &mdash; if grouping is enabled, contains the group name</li>
+			<li><b>span.rox-peopgroupcount</b> &mdash; if grouping is enabled, contains the group item count</li>
+			<li><b>a.rox-peopgroupdirlink</b> &mdash; if grouping is enabled, represents the up/down arrow for re-sorting the group</li>
+			</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+

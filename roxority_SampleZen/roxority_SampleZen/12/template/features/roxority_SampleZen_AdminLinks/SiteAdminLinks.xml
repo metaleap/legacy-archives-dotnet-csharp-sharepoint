@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="SampleZen Studio"
+        Sequence="80"
+        Description="" />
+	<CustomAction
+        Id="SampleZenConfig"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminConfig;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenWss"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminWss;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenToolLocalizer"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminToolLocalizer;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenToolTransfer"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminToolTransfer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenToolSiteUsers"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminToolSiteUsers;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenLic"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="16"
+        Title="$Resources:roxority_SampleZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="SampleZenHelp"
+        GroupId="SampleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_SampleZen,SiteAdminHelp;"
+		Sequence="17"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_SampleZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

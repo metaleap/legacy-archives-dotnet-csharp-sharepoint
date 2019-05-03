@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37D15C6A-724D-47B6-A5DD-42FF7F35031D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxority_PrintZen</RootNamespace>
+    <AssemblyName>roxority_PrintZen</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET_3_0 WSS SP12</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>NET_3_0 WSS SP12</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\sharepoint\sp3asm\Microsoft.SharePoint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\sharepoint\sp3asm\Microsoft.SharePoint.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupToolPart.cs">
+      <Link>roxority.SharePoint\RollupToolPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_RollupZen\roxority_RollupZen\RollupWebPart.cs">
+      <Link>roxority.SharePoint\RollupWebPart.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>roxority.SharePoint\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>roxority.SharePoint\JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\MenuAction.cs">
+      <Link>roxority.SharePoint\MenuAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>roxority.SharePoint\ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.cs">
+      <Link>roxority.SharePoint\roxority.Data.cs</Link>
+    </Compile>
+    <Compile Include="PrintZenSiteMenuItem.cs" />
+    <Compile Include="PrintZenPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintZenMenuItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="roxority_PrintZenWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12\resources\roxority_PrintZen.de.resx" />
+    <EmbeddedResource Include="12\resources\roxority_PrintZen.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_PrintControls.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_PrintZen\ItemEditor.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_DataSources.tc.ascx" />
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_PrintActions.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_Localizer.tc.ascx" />
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_SiteUsers.tc.ascx" />
+    <Content Include="12\template\controltemplates\roxority_PrintZen\Tool_Transfer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\help\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\itemref_PrintActions.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\itemref_PrintControls.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-print-calendar-view.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-server-farm-solution-package-wsp-installation.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-web-part-print-view-site-actions.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\af.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ar.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\az.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\be.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\bg.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ca.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\cs.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\da.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\de.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\dv.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\el.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\en.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\es.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\et.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\eu.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\fa.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\fi.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\fo.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\fr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\gl.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\gu.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\he.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\hi.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\hr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\hu.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\hy.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\id.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\is.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\it.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ja.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ka.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\kk.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\kn.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ko.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\kok.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ky.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\lt.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\lv.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\mk.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\mn.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\mr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ms.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\nl.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\no.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\pa.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\pl.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\pt.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ro.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ru.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sa.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sk.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sl.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sq.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sv.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\sw.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\syr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ta.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\te.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\th.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\tr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\tt.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\uk.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\ur.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\uz.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\flag\vi.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\magpop.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\magpop.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority_PrintZen_WebPart\Element.xml.txt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority_PrintZen_WebPart\feature.xml.txt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_PrintZen\Element.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_PrintZen\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_PrintZen_AdminLinks\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_PrintZen_AdminLinks\SiteAdminLinks.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\images\roxority_PrintZen\feature.png" />
+    <Content Include="12\template\images\roxority_PrintZen\printer16.png" />
+    <Content Include="12\template\images\roxority_PrintZen\printer32.png" />
+    <Content Include="12\template\images\roxority_PrintZen\roxority_PrintZen.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority_PrintZen.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\de\itemref_PrintControls.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-data-print-definition.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-data-print-actions.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-data-print-popup.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-print-view-custom-design-web-part-page.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-print-view-ribbon.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\de\itemref_PrintActions.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\setup06.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\setup07.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\sharepoint-list-data-print-menu-item.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\LSTPEND.GIF" />
+    <Content Include="12\template\layouts\roxority_PrintZen\mash.tl.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\prnt.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\help\de\eula.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\de\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\eula.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\intro.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\release_notes.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\bgtmp.tlhr.jpg" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\help.tlhr.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\roxlogo.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\help\res\roxority.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_PrintZen\help\setup.html" />
+    <Content Include="12\template\layouts\roxority_PrintZen\ie6.tl.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\bgtmp.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\choicebrowse.gif" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\completeallwftasks.gif" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\ContentAreaBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\ContentAreaShadow.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\ewr200l.gif" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\favicon.ico" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\FooterBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\HeaderBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\ie6.gif" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\PageTitleBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\ProdNavGrad.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\RightNavActive.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\RightNavBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\RightNavBottomShadow.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\RightNavSection.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\RightNavTopShadow.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\star.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\TabBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\TabHoverBackground.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\TopNavActive.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\TopNavHover.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\img\VerticalShadow.png" />
+    <Content Include="12\template\layouts\roxority_PrintZen\jQuery.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\json2.tl.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\RollupZen.tl.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\RollupZen.tl.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority.tl.css" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority.tl.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority_PrintZen.js" />
+    <Content Include="12\template\layouts\roxority_PrintZen\roxsite.tl.css" />
+    <Content Include="solutionid.txt" />
+    <Content Include="_14\template\features\roxority_PrintZen\Element.xml" />
+    <Content Include="_14\template\features\roxority_PrintZen_AdminLinks\SiteAdminLinks.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="12\template\layouts\roxority_PrintZen\roxority_PrintZen_WebPart\roxority_PrintZen.webpart.txt" />
+    <None Include="12\template\layouts\roxority_PrintZen\schemas.json" />
+    <None Include="12\template\layouts\roxority_PrintZen\schemas.tl.json" />
+    <None Include="Properties\roxority.snk" />
+    <None Include="WSPBuilder.exe.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(ProjectDir)$(SolutionName).wsp" "$(SolutionDir)WspBuilder\zup\$(SolutionName)_xii.wsp"
+"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" CopyFiles $(SolutionName)
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1504 @@
+<html>
+	<head>
+		<title>ROXORITY UploadZen  Product Documentation</title><script type="text/javascript" language="JavaScript"> alert('For printing purposes only. Links have been disabled.\nNur zum Ausdrucken geeignet. Links wurden deaktiviert.'); </script>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<!--script type="text/javascript" language="JavaScript" src="jQuery.js"></script-->
+		<!--script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script-->
+		<!--script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<b style="font-style: italic; text-decoration: underline;" class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script-->
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #ffffff;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #ffffff;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"></div>
+	
+<h1>Introduction</h1><h3>
+	Why Use UploadZen for SharePoint Bulk-File Uploads?<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	UploadZen provides a much more sophisticated upload experience for your SharePoint
+	document management efforts than the rather &quot;lightweight&quot; out-of-box upload
+	tools do.</p>
+<ul>
+	<li>The SharePoint 2010 multi-upload function is based exclusively on the proprietary
+		<i>Microsoft Silverlight</i> plugin, restricting the feature to a small sub-set
+		of real-world users. UploadZen supports both <i>Flash and Silverlight</i>, <b>supporting
+			a much higher percentage (90+%)</b> of your web site visitors and end users.</li>
+	<li>Just like the out-of-box uploader, administrators can simply allow uploading of
+		any and all file types and sizes into any Library. Unlike the built-in uploader,
+		UploadZen lets them also <b>set up fine-grained rules prescribing exactly</b> which
+		<b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">file types (ie. filter by allowing images-only,
+			documents-only etc.) and/or sizes are allowed into which types of Libraries</b>.</li>
+	<li>UploadZen provides <i>Chunking</i> for uploading files of <b>any size, including
+		GB-sized files</b>, regardless of your server-side request length or file size limits.</li>
+	<li>UploadZen allows for client-side <b>on-the-fly image resizing</b> prior to the upload,
+		resulting in much faster upload times and substantial bandwidth savings.</li>
+	<li>UploadZen conveniently <b>alerts end users about existing files with the same name</b>
+		in real-time upon file selection, prior to the upload. This lets end users decide
+		individually, file by file whether overwriting is desired in the current upload
+		context or not.</li>
+	<li>UploadZen conveniently alerts end users in real-time upon file selection about files
+		that are blocked and will be refused by SharePoint, prior to the upload. This <b>saves
+			time and bandwidth</b> so that no upload is attempted and performed only to
+		fail after the transfer on the server side.</li>
+	<li>Resuming uploads that were cancelled half-way, or <b>retrying failed uploads</b>
+		could not be easier and smoother than with UploadZen.</li>
+	<li>UploadZen lets you <b>compress multiple selected files into a ZIP archive</b> on
+		the client-side prior to uploading it (Silverlight users only).</li>
+	<li>UploadZen lets your users <b>extract files and sub-folder structures of uploaded
+		ZIP archive files</b> on the server side in-place into the target Document Library
+		folder.</li>
+	<li>UploadZen provides both <b style="font-style: italic; text-decoration: underline;" href="automatic_checkout_batch_checkin_versioning.html">
+		automatic check-out and batch check-in</b> (supporting minor/major versioning),
+		substantially <b>speeding up your document work-flows</b>.</li>
+	<li>SharePoint is picky about many characters it doesn&#39;t like in uploaded file names.
+		UploadZen <b>goes the extra mile and removes or replaces them automatically</b>,
+		so that your end users will never encounter SharePoint&#39;s <i>&quot;The file name
+			is invalid or the file is empty. A file name cannot contain any of the following
+			characters...&quot;</i> message &mdash; yet another time and trouble saver.</li>
+</ul>
+<h3>
+	Added benefits specific to WSS 3.0 and MOSS 2007 sites<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	In Windows SharePoint Services (WSS) 3.0 and Microsoft Office SharePoint Server
+	(MOSS) 2007, the built-in, out-of-box functionality for uploading multiple files
+	to a SharePoint Document Library relies on a proprietary Microsoft-supplied <i>ActiveX</i>
+	control. The downsides to that approach:
+</p>
+<ul>
+	<li>it restricts multiple uploads to end users with Internet Explorer on Windows only
+		&mdash; sub-optimal for Internet-facing web sites</li>
+	<li>it requires special end user Internet Explorer security settings to be set and confronts
+		them with ambiguous confirmation dialogs</li>
+	<li>it is readily available without requiring further client-side installations <i>only</i>
+		on client computers that have SharePoint Designer or at least one <i>Microsoft Office
+			2007 or 2010</i> application installed (and selected certain SharePoint-related
+		client components when they installed that Office application, hidden in some crowded
+		setup customization tree view)</li>
+</ul>
+<p>
+	Once you do get this troublesome out-of-the-box <i>ActiveX</i> bulk-file upload
+	control to work for at least some of your users, then they can only upload multiple
+	files from a single directory in one bulk upload &mdash; but they cannot select
+	files from various directories to bulk-upload in one go.</p>
+<p>
+	Once you decide that the out-of-the-box approaches to bulk document uploads is too
+	fickle, or just not useful enough, for you and your end users, <b>UploadZen</b>
+	offers a robust and compelling alternative.</p>
+<span class="roxadmintopic">
+	<div class="rox-info" style="background-image: url('servicenotinstalled.gif');">
+		<strong>Note:</strong> after <b style="font-style: italic; text-decoration: underline;" href="setup.html">installing UploadZen to SharePoint</b>,
+		deployment is not yet complete. UploadZen will not work properly unless and until
+		you have taken <b style="font-style: italic; text-decoration: underline;" href="clickonce_deployment_checklist.html">all steps necessary to
+			fully prepare a Web Application for UploadZen</b>.
+	</div>
+</span><h1 style="page-break-before: always;">Solution Installation</h1><h3>
+	1. The UploadZen Setup Package<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The UploadZen setup package (the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.s3.amazonaws.com/roxority_UploadZen.zip">
+		roxority_UploadZen.zip</b> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> &mdash; a graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling UploadZen to and from a SharePoint
+		server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint farm or web front-end server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>docs</b> &mdash; a folder containing this product documentation in Microsoft
+		Compiled HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing the UploadZen Solution Package<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Run <b>Deploy.exe</b> (under user account credentials added to the <i>Farm Administrators</i>
+	group in <i>Central Administration</i>, on the &quot;primary&quot; SharePoint farm
+	or web front-end server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i>) and when the <i>Welcome</i> screen
+	is displayed, click <i>Next</i> to start a series of system checks. To proceed with
+	the installation, all system checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	UploadZen to. You can also de-select those Site Collections you <i>do not</i> want
+	the setup wizard, upon successful deployment, to <i>activate</i> the <b style="font-style: italic; text-decoration: underline;" href="#s2">UploadZen
+		Library Integration</b> feature immediately for you on.</p>
+<div class="rox-info">
+	<b>Note:</b> even when UploadZen is deployed in a Web Application, before you can
+	offer your Bulk File Uploads for Document Libraries in a given web site, the <b>UploadZen
+		Library Integration</b> <i>Feature</i> needs to be <i>activated</i> for the
+	parent Site Collection, as described in the <i>Feature Activation</i> section below.
+	For now, the setup wizard performs these activations for you, depending on your
+	selections.</div>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start defining your
+	own custom Multiple-File Uploads (via Site Settings / UploadZen Studio / Upload
+	Actions) immediately, or explore the out-of-box, factory default Upload Action interactively immediately.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The <b>UploadZen Library Integration</b> feature is a <i>SharePoint Site Collection-scoped
+		Feature</i>, which needs to be &#39;activated&#39; on each Site Collection it
+	is to be used in.</p>
+<ol>
+	<li>Select <i>Site Settings</i> from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root Web <i>Site Settings</i>
+		page now showing, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page (<b>not</b> the <i>Site Features</i> page!)
+		should contain a row titled <b>UploadZen Library Integration</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to enable your <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">
+				Upload Actions</b> inside this Site Collection; or click the <i>Deactivate</i> button
+				to disable the UploadZen library toolbar menu items and ribbon menu throughout this
+				Site Collection.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>UploadZen</b> solution package was not
+				yet deployed to this Web Application. On the <i>System Settings</i> page (<i>Operations</i>
+				in SharePoint 2007) in the <i>Central Administration</i>, click <i>Manage Farm Solutions</i>
+				(<i>Solution management</i> in SharePoint 2007). On the <i>Solution Management</i>
+				page, click <b>roxority_uploadzen_xyz.wsp</b> (the <i>xyz</i> part will be different
+				depending on your SharePoint version) to open the <i>Solution Properties</i> page.
+				Click <i>Deploy Solution</i>, then select this Site Collection&#39;s parent web
+				application and click <i>OK</i>. (The deployment is delegated to a background job
+				scheduled to run either at the date and time specified, or as soon as possible.
+				Once started, it may take this job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h1 style="page-break-before: always;">Walkthrough: Web Uploader</h1><h3>
+	End user experience of launching the Web Uploader<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	After UploadZen has been <b style="font-style: italic; text-decoration: underline;" href="setup.html">installed</b>, <b style="font-style: italic; text-decoration: underline;" href="clickonce_deployment_checklist.html">
+		fully deployed</b> and its <i>UploadZen Library Integration</i> Site Collection
+	<b style="font-style: italic; text-decoration: underline;" href="setup.html#s2">feature activated</b>:</p>
+<ul>
+	<li>navigate to any Form Library, Picture Library, Slide Library, Translation Management
+		Library, Web Part Gallery, Master Page Gallery, List / Site Template Gallery or
+		any other <b>SharePoint Document Library</b></li>
+	<li><i>or</i> select any <b>Library View Web Part</b> (with its <i>Toolbar Type</i>
+		set to <i>Show</i> or <i>Full</i>) on any of your content, wiki or Web Part pages</li>
+	<li>and then switch to the <i>Documents</i> ribbon tab in the <i>Library Tools</i> ribbon
+		group.</li>
+</ul>
+<p>
+	In addition to the SharePoint <i>Upload Document</i> menu, you should also see an
+	<i>Upload Multiple Files</i> button in the ribbon section titled <i>New</i>:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 348px;" src="help/res/sharepoint-flash-silverlight-multi-upload-ribbon.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	Note that administrators can hide this ribbon command button from certain Document
+	Libraries or library types by customizing the default <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">
+		Upload Action</b> under Site Actions / UploadZen Studio / Upload Actions. They
+	can also set up multiple, individually configured <i>Upload Actions</i> with different
+	settings (such as file type / name extension filters) targeting different libraries
+	by type or name.</div>
+<p>
+	Clicking the <i>Upload Multiple Files</i> button in the ribbon will show the <i>Web
+		Uploader</i>:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 444px;" src="help/res/sharepoint-flash-silverlight-bulk-file-upload.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	If the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Add Files</i> link is not visible, then the uploader will most likely display
+	a note that &quot;<i>This uploader requires either the Flash 10 browser plug-in (or
+		newer) or the Silverlight 4 browser plug-in (or newer)</i>&quot;.
+</div>
+<h3>Selecting multiple files and uploading them<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Clicking the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Add Files</i> link shows a file browsing dialog allowing the selection of multiple
+	files:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 444px;" src="help/res/sharepoint-flash-silverlight-select-multiple-files-upload.png"
+		title="" /></p>
+<div class="rox-info rox-infosmall">
+	Administrators can customize <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Actions</b>
+	to offer file type filters in the file browsing dialog box, such as <i>Images (*.jpg;
+		*.gif etc)</i> or <i>Archives (*.zip; *.rar etc.)</i>. Offering such file type
+	filters (based on file name extensions) at the same time restricts the types of
+	files that users may select for upload.
+</div>
+<p>
+	Selecting files adds them to the listing of files to be uploaded:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 670px;" src="help/res/sharepoint-flash-silverlight-multi-file-batch-upload.png"
+		title="" /></p>
+<ul class="">
+	<li>Files can be de-selected by hovering the row of the file and clicking the
+		<img class="roxbuttonicon" src="help/res/deletehs.png" />
+		icon in the #number column.</li>
+	<li>Files with blocked name extensions are <span style="background-color: #ffbcbc;">
+		highlighted in red</span> (but administrators can customize the <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">
+			Upload Action</b> to automatically remove such files from the listing when they
+		are selected).</li>
+	<li>Existing files with the same name are <span style="background-color: #ffefbc;">highlighted
+		in yellow</span>, so if end users do not want to overwrite certain existing files,
+		they are warned and can remove the file from the listing.</li>
+	<li>ZIP archive files can be set to one of the following options:
+		<ul>
+			<li><b>Upload (don&#39;t extract)</b> &mdash; the ZIP archive file will be uploaded
+				as is into the current Library folder</li>
+			<li><b>Extract in this folder</b> &mdash; all files and folders in the ZIP archive file
+				will be extracted at the server side and be placed into the current Library folder</li>
+			<li><b>Extract in a new sub-folder</b> &mdash; all files and folders in the ZIP archive
+				file will be extracted at the server side and be placed into a newly created sub-folder
+				(inside the current Library folder), which will be named after the original ZIP
+				archive file</li>
+		</ul>
+		All ZIP archive files selected for upload can be set to the same setting by selecting
+		that setting for one ZIP archive file, then clicking the
+		<img class="roxbuttonicon" src="checkall.gif" />
+		icon. </li>
+	<li>To begin uploading the selected files, end users simply click the
+		<img class="roxbuttonicon" src="roxority_UploadZen/upload.png" />
+		<i>Upload File(s) Now</i> link:</li>
+</ul>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 436px;" src="help/res/sharepoint-flash-silverlight-bulk-folder-upload.png"
+		title="" /></p>
+<p>
+	The status column now shows the exact upload progress (or result) for each file and the process can be cancelled at any time by clicking the <img class="roxbuttonicon" src="crit_16.gif" /> <i>Cancel All</i> link.
+</p>
+<h1 style="page-break-before: always;">Walkthrough: Windows Uploader</h1><div class="rox-info">
+	This topic only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	End user experience of launching the Windows Uploader<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	After UploadZen has been <b style="font-style: italic; text-decoration: underline;" href="setup.html">installed</b>, <b style="font-style: italic; text-decoration: underline;" href="clickonce_deployment_checklist.html">
+		fully deployed</b> and an <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Action</b>
+	(with its <b>Client-side uploader</b> option set to the legacy <i>Windows Uploader</i>
+	mode) has been made available, navigate to any Form Library, Picture Library, Slide
+	Library, Translation Management Library, Web Part Gallery, Master Page Gallery,
+	List / Site Template Gallery or any other SharePoint Document Library and drop down
+	the <i>Upload</i> menu. In addition to the SharePoint <i>Upload Document</i> menu
+	item, you should also see your <i>Upload Action&#39;s</i> menu item:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 200px;" src="help/res/sharepoint-bulk-file-uploads-uploadzen-menu-item.png"
+		title="" /></p>
+<p>
+	In SharePoint 2010, the above also applies to the <i>&quot;New&quot;</i> ribbon
+	group in the <i>Library Tools / Documents</i> ribbon tabs.</p>
+<p>
+	Now click the Upload Action&#39;s button or menu item to launch the <b>Windows Uploader</b>
+	window. The first time the <b>Windows Uploader</b> is launched on a client computer,
+	the user will be prompted to confirm that action:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 271px;" src="help/res/sharepoint-bulk-file-uploads-uploadzen-clickonce-prompt.png"
+		title="" /></p>
+<p>
+	Once confirmed, this security confirmation prompt will never appear a second time
+	when launching the <b>Windows Uploader</b> via any Upload Action on the same client
+	computer again in the future.</p>
+<h3>
+	The UploadZen Window<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	After a few seconds, the UploadZen window appears:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 590px;" src="help/res/sharepoint-bulk-file-uploads-uploadzen-file-browser.png"
+		title="" /></p>
+<p>
+	The window contains two major areas:</p>
+<ul>
+	<li>the local file navigation area to the left, which lets you browse the file system
+		and select files to be marked for uploading, as well as</li>
+	<li>the area to the right, labelled <i>Local Files Marked for Upload</i>.</li>
+</ul>
+<p>
+	The
+	<img class="roxbuttonicon" src="help/res/PublishPlanHS.png" />
+	<i>Upload Files</i> button will be enabled as soon as there are any files marked
+	for upload (ie. placed inside the second, right-hand side area). To mark files for
+	upload, simply select them and click the
+	<img class="roxbuttonicon" src="help/res/DoubleRightArrowHS.png" />
+	<i>Mark selected file(s) for upload</i> button.</p>
+<p>
+	After you do click the
+	<img class="roxbuttonicon" src="help/res/PublishPlanHS.png" />
+	<i>Upload Files</i> button to initiate your upload, <b>UploadZen</b> will keep you
+	informed about the progress of your upload. After all files have been processed,
+	only files that have been uploaded successfully will be removed from the <i>Local Files
+		Marked for Upload</i> area. You can mark additional files for upload even when
+	an upload is in progress.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 531px;" src="help/res/sharepoint-upload-multiple-files-progress.png"
+		title="" /></p>
+<h1 style="page-break-before: always;">Web vs. Windows Uploader</h1><p>
+	All UploadZen <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Actions</b> technically support two uploader modes:</p>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">Web Uploader</b>
+		&mdash; the default, recommended, &quot;new&quot; uploader mode supporting the widest
+		range of client browsers and operating systems.</li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows Uploader</b> &mdash; the &quot;old&quot;,
+		deprecated mode included and supported only for legacy UploadZen installations. For new installations,
+		<i>Web Uploader</i> is the recommended mode.</li>
+</ul>
+<table class="roxtable">
+	<thead>
+		<tr>
+			<th>
+				&nbsp;
+			</th>
+			<th>
+				Web Uploader
+			</th>
+			<th>
+				Windows Uploader
+			</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>
+			Summary
+		</td>
+		<td>
+			Primary UploadZen mode, receives full support, maintenance and future enhancements
+		</td>
+		<td>
+			Legacy UploadZen mode, will not receive future enhancements
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported <b>SharePoint versions</b> and editions
+		</td>
+		<td>
+			SharePoint 2010 Foundation (SPF),<br />SharePoint 2010 Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+		<td>
+			SharePoint 2010 Foundation (SPF),<br />SharePoint 2010 Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Client-side <b>plugin requirement</b>
+		</td>
+		<td>
+			Adobe Flash 10 (or higher) &mdash; <i>or</i> &mdash; Microsoft Silverlight 4 (or higher)
+		</td>
+		<td>
+			Internet Explorer: none (needs .NET)<br />Firefox: .NET Framework Assistant
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>operating systems</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Windows XP and 2003 only, with .NET Framework 2.0 or higher installed
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>web browsers</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Internet Explorer 6 - 8, or Firefox
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Automatic check-out / <b>batch check-in</b>
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Overwrite existing files
+		</td>
+		<td>
+			Yes by default, can turn off
+		</td>
+		<td>
+			No by default, can turn on
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Server-side extraction</b> of uploaded ZIP archive files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Client-side zipping</b> of files prior to upload
+		</td>
+		<td>
+			Silverlight: yes, Flash: no
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Chunking</b> for large files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Auto-<b>resize images</b> prior to upload
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Show <b>preview thumbnails</b> of upload files
+		</td>
+		<td>
+			No
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+</table>
+<h1 style="page-break-before: always;">Settings for Upload Actions</h1><p>The following settings can be customized for each Upload Action by administrative users on the <b>Upload Actions</b> page in your <i>UploadZen Studio</i>, accessible via Site Settings / UploadZen Studio / Upload Actions:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</b></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Upload Action<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Upload Action is...<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Upload Action will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Show UploadZen menu item in the following Document Libraries<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p><b>(Descriptor for a set of SharePoint Document Libraries and Views)</b></p><p>Select in which Document Libraries this upload action will be offered as a menu item to end users (in the SharePoint 2007 "Upload" toolbar menu and in the SharePoint 2010 "Library Tools / Documents / New" ribbon group).</p>
+<p>To define the set of Lists, first select either <b>Show in all Lists</b> or <b>Show in no Lists</b>, then click the <b>except...</b> link to describe which Lists to exclude from that selection. You can exclude:
+</p><ul>
+<li>Lists of the selected base types</li>
+<li>Lists of the selected template types</li>
+<li>Lists of the selected base templates</li>
+<li>or Lists with the specified names or IDs.</li>
+</ul><p>
+To define the set of Views, first select either <b>Show in all Views</b> or <b>Show in no Views</b>, then click the <b>except...</b> link to describe which Views to exclude from that selection. You can exclude:
+<ul>
+<li>the default View</li>
+<li>hidden Views</li>
+<li>personal Views</li>
+<li>or Views with the specified names or IDs.</li>
+</ul></p>
+<h3>UploadZen menu item caption<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p><b>(Text box)</b></p><p>Sets the menu item / ribbon button caption for this UploadZen "Upload Multiple Files" menu item.</p>
+<p>Default value for new Upload Actions:</p>
+<pre>$Resources:Tool_UploadActions_DefTitle</pre>
+<h3>UploadZen menu item description<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p><b>(Text box)</b></p><p>Sets the menu item description / ribbon button tool-tip for this UploadZen "Upload Multiple Files" menu item.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-i"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('i');">&quot;User Interface&quot; tab:</b></h4><span class="rox-doctab rox-doctab-i">
+<h3>Client-side uploader<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select the preferred uploading client technology presented to your end users when this Upload Action is invoked.<br/><br/><b>Web</b> mode is recommended for maximum compatibility &mdash; if Silverlight plugin is installed, this mode can offer a file drop area and perform client-side zipping of uploaded files; if Silverlight or Flash plugin is installed, multiple files can be selected in a file browsing dialog at once.<br/><br/><b>Windows</b> mode launches a native Windows application (ClickOnce / .NET Framework 2.0+) directly from Internet Explorer (or Firefox with Microsoft .NET / ClickOnce plug-in) &mdash; this choice in most cases does not deploy properly to Vista-and-newer Windows clients, and never to non-Windows clients.</p>
+<ul>
+<li><b>Web Uploader</b><br/>&mdash; <i>supports all client browsers and operating systems (recommended, highest compatibility)</i></li>
+<li><b>Windows Uploader</b><br/>&mdash; <i>works mostly just with pre-Vista Windows clients and IE (legacy mode, least compatible)</i></li>
+</ul>
+<h3>Also show in Upload.aspx replacement page<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p><b>(Check box option)</b></p><p>When clicking SharePoint&#39;s built-in, out-of-box &#39;Upload Document&#39; menu item (single-file upload), this always opens the Upload.aspx system page (which itself may or may not include another built-in, out-of-box &#39;Upload Multiple Documents&#39; link). Tick this check-box option to also offer this Upload Action on the Upload.aspx page. (Also requires activated <b style="font-style: italic; text-decoration: underline;" href="?cfg=wss" target="_blank">"UploadZen Upload.aspx Replacement Page" Site Collection feature</b>.)</p>
+<h3>Show Mini Tutorial in the uploader<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p><b>(Check box option)</b></p><p><b>Web Uploader:</b> The upload area displays a number of helpful hints whenever (and as long as) there are any files marked for upload.<br/><br/><b>Windows Uploader:</b> The UploadZen window displays a helpful Welcome page with Quick-Start steps whenever (and as long as) there are no files or folders marked for upload.<br/><br/>Untick this check box to never show the above Mini Tutorials to your users.</p>
+<h3>Show UploadZen link in the uploader<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p><b>(Check box option)</b></p><p>The uploader shows a link with a version number in the bottom right corner pointing to the UploadZen product web site. Untick this check box to never show this link to your users.</p>
+<h3>Show Help link in the uploader<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p><b>(Check box option)</b></p><p>The uploader shows a Help link in the bottom right corner pointing to select, end user-relevant documentation pages in this UploadZen Studio. Untick this check box to never show the Help link to your users.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-n"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('n');">&quot;Web Uploader&quot; tab:</b></h4><span class="rox-doctab rox-doctab-n">
+<h3>Require the following client-side browser plugin<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>The Web Uploader mode strictly requires at least one of these client-side browser plugins.<br/><br/>If Flash (all major platforms and browsers) or Silverlight (Windows and Mac, all major browsers) is installed, then the file-browsing dialog will allow the selection of multiple files at once, rather than having to click "select file" time and again to browse to the next file.<br/><br/>In addition to that, if Silverlight is available, a file drop area and client-side zipping of selected individual files (that will then be uploaded as a single ZIP file instead) can be provided.</p>
+<ul>
+<li>Use Silverlight (and only if not available: use Flash)</li>
+<li>Use Flash (and only if not available: use Silverlight)</li>
+<li>Only use Silverlight</li>
+<li>Only use Flash</li>
+</ul>
+<h3>Overwrite existing files with the same name<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, uploading files will overwrite any pre-existing files with the same name in the target Document Library folder (but the uploader will highlight existing files prior to the upload so users are notified and can choose to remove the file from the upload). If unticked, if a file with the same name exists in the target Document Library folder, the uploaded file will be rejected by SharePoint.</p>
+<h3>Prior to uploading, change all file names to random unique sequences<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this option will change the names of uploaded files to random, but unique sequences so that existing files will never be overwritten.</p>
+<h3>Replacement character<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<p><b>(Text box)</b></p><p>Specify a character or text used to replace the unsupported characters ~ " # % & * : < > ? / \ { | } in uploaded file or folder names. To simply remove (rather than replace) these characters, fully clear this setting. The default value is the underscore (_). (Thanks to this feature, your end users will never receive SharePoint&#39;s "The file name is invalid or the file is empty. A file name cannot contain any of the following characters..." message.)</p>
+<p>Default value for new Upload Actions:</p>
+<pre>_</pre>
+<h3>Auto-remove files marked for upload with blocked file extensions<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<p><b>(Check box option)</b></p><p>When users select files with name extensions that are "blocked by the administrator" (or by default) on the SharePoint server side (at the Web Application level [SPWebApplication.BlockedFileExtensions]), by default UploadZen will only warn about this (so users can remove the files from the listing) but will technically allow the upload, which SharePoint / IIS will however promptly refuse. Tick this option to have such files automatically removed from the listing when selected for upload, instead.<br/><br/><b>Note:</b> changes to blocked file extensions at the Web Application level are only picked up by UploadZen after all web front-end servers are IIS-reset or restarted.</p>
+<h3>File type filters (multi-selectable, no selection = no filters)<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<p><b>(Drop-down menu to pick from a configurable set of choices)</b></p><p>To restrict which types of files end users can upload via this Upload Action, select one or more file name extension filter sets. If end users then select files whose extensions do not match the selected filters, these files will not even be added to the Upload Files listing and consequently cannot be uploaded.<br/><br/>With the newest Silverlight / Flash versions, these filters even permeate the file browsing dialog and will be offered as choices in there. As a result, users cannot even see or select file types not allowed by the selected filter sets.<br/><br/>(If you need different or custom file name extension filters not offered here, customize or extend the pre-defined filter sets in the Web Uploader section of the Configuration page in UploadZen Studio.)</p>
+<p>The drop-down menu provides a set of choices that can be customized on the Configuration page of the UploadZen Studio.</p>
+<h3>Maximum file size (read description of this setting first)<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<p><b>(Text box)</b></p><p>You can optionally restrict the maximum size per file selected for upload. Files exceeding this limit will be automatically removed from the uploader file listing. Leave blank to allow files of any size.<br/><br/><b>Important:</b> the format for this setting is 10B, 100KB, or 1000MB. So use any integer number (no fractional, floats or real numbers) and B for bytes, KB for kilobytes or MB for megabytes, no spaces or other non-numeric characters. (For GB use MB multiplied by 1024, ie. for 2GB use 2048MB instead.)<br/><br/><b>Also note</b> that this setting is a limit for client-side file selection only. Independently of this setting, your SharePoint environment will be subject to server-side request length and upload file size limits on the IIS and SharePoint Web Application levels (refer to the UploadZen Deployment Checklist help topic for details on those limits). To allow uploads of files exceeding these server-side limits, you will need to enable Chunking below.</p>
+<h3>File chunk size (read description of this setting first)<b style="font-style: italic; text-decoration: underline;" name="s17"></b></h3>
+<p><b>(Text box)</b></p><p>To use this feature, you <b>NEED TO READ</b> the <i>"Preparing a Web Application for the Chunking feature"</i> section in the UploadZen Deployment Checklist help topic in additional to the following information.<br/><br/>While we highly encourage you to increase your server-side request length and upload file size limits as well as request time-outs (as described in the UploadZen Deployment Checklist help topic), you can use this setting to allow uploads of files whose size exceeds your server-side limits by splitting up such files into smaller separate individual chunks that will be put back together into the one original file by UploadZen at the server side once all chunks have been sent. If you choose to use this feature, you need to specify the file chunk size here and this should be slightly lower than your server-side request length / upload file size limits.<br/><br/><b>Example:</b> your server-side limits establish that the maximum upload file size is 50 MB. You can set the chunk size here to "48MB". Then when uploading a 110 MB file, this will be split up into three chunks (pre-upload on the client side), the first two being 48 MB each and the last one being 14 MB, none of which exceeds your server-side limits. UploadZen receives all three chunks and puts them back together to restore the original 110 MB file which is then placed into the target Document Library folder.<br/><br/><b>Important:</b> the format for this setting is 10B, 100KB, or 1000MB. So use any integer number (no fractional, floats or real numbers) and B for bytes, KB for kilobytes or MB for megabytes, no spaces or other non-numeric characters. (For GB use MB multiplied by 1024, ie. for 2GB use 2048MB instead.)</p>
+<h3>Auto-shrink images prior to upload (read description of this setting first)<b style="font-style: italic; text-decoration: underline;" name="s18"></b></h3>
+<p><b>(Text box)</b></p><p><b>This setting is only used if you specify three integer numbers separated by [,] commas</b>, no other characters. The first number is the maximum image width, the second number is the maximum image height, the third number is the image quality for additional file size compression (1 = worst, 100 = best). For example, if this setting is set to <b>320,240,90</b> then all uploaded images will be resized pre-upload, aspect ratio maintained so that neither the maximum width nor the maximum height is exceeded.</p>
+<h3>Offer end users selectable options for server-side ZIP extraction<b style="font-style: italic; text-decoration: underline;" name="s19"></b></h3>
+<p><b>(Check box option)</b></p><p>This allows users to select for each individual ZIP archive file marked for upload whether to keep the ZIP in the target Library as is, extract it in-place or extract it in a new sub-folder.</p>
+<h3>If Silverlight is used, offer client-side zipping<b style="font-style: italic; text-decoration: underline;" name="s20"></b></h3>
+<p><b>(Check box option)</b></p><p>This allows users to define ZIPs to be uploaded in place of the corresponding files marked for zipping. The ZIPs will be generated on the fly just prior to their upload.</p>
+<h3>If Silverlight is used, offer a file drop area<b style="font-style: italic; text-decoration: underline;" name="s21"></b></h3>
+<p><b>(Check box option)</b></p><p>This allows users to add files to their upload by dragging them from their Explorer or Finder window onto the drop area. <b>Note:</b> if ticked, this option may lead to minimal visual "side effects" on the page (which will not adversely affect or disrupt your users in their work).</p>
+<h3>If applicable, by default automatically check in uploaded files as follows<b style="font-style: italic; text-decoration: underline;" name="s22"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Only applies to Libraries that have check-out/check-in enabled. Select whether and how to automatically bulk check in uploaded files. Check-in will appear to have been done by the currently uploading user.</p>
+<ul>
+<li>No check-in (keep uploaded files checked out to uploading user)</li>
+<li>Check in as a minor new version (if minor versions are enabled)</li>
+<li>Check in as a major new version (if versions are enabled)</li>
+<li>Check in but keep previous version number (&quot;overwrite current version&quot;)</li>
+</ul>
+<h3>If applicable, allow end users to change the above default check-in per file<b style="font-style: italic; text-decoration: underline;" name="s23"></b></h3>
+<p><b>(Check box option)</b></p><p>Only applies to Libraries that have check-out/check-in enabled. If this option is ticked, end users can select for each upload file whether and how to check it in, prior to the upload. The user interface for that selection will for all files default to the check-in option selected above.</p>
+<h3>Allow users to launch the Windows Uploader from the Web Uploader<b style="font-style: italic; text-decoration: underline;" name="s24"></b></h3>
+<p><b>(Check box option)</b></p><p>Shows a link that launches the legacy Windows Uploader (but this will only show up for pre-Vista Windows clients with Internet Explorer).</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-z"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('z');">&quot;Windows Uploader&quot; tab:</b></h4><span class="rox-doctab rox-doctab-z">
+<h3>Show &#39;Options&#39; tab in the Windows Uploader<b style="font-style: italic; text-decoration: underline;" name="s25"></b></h3>
+<p><b>(Check box option)</b></p><p>The Windows Uploader contains an &#39;Options&#39; tab that lets users review or customize certain user-specific client-side UploadZen settings (such as overwriting of existing files). Untick this check box to never show the Options tab to any users.</p>
+<h3>Unzipping of uploaded ZIP archive files<b style="font-style: italic; text-decoration: underline;" name="s26"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>UploadZen can just put an uploaded ZIP archive file into the current Document Library target folder as a single file, or extract all of its files and sub-folders in place.</p>
+<ul>
+<li>Let users decide (recommended)</li>
+<li>Never unzip</li>
+<li>Always unzip</li>
+</ul>
+<h3>Allow users to store their SharePoint log-in password on their local PC<b style="font-style: italic; text-decoration: underline;" name="s27"></b></h3>
+<p><b>(Check box option)</b></p><p>Uploading users may be prompted to type their SharePoint user name and password in certain circumstances (see documentation), and can optionally elect to have UploadZen log them in automatically in the future. This will store their encrypted password in their Windows Registry "Local User" hive. Untick this check box to never let your UploadZen users store their password.</p>
+<h3>Allow users to change the target folder<b style="font-style: italic; text-decoration: underline;" name="s28"></b></h3>
+<p><b>(Check box option)</b></p><p>The uploader will be initialized to upload to the current Document Library folder, but users can change to another target folder right from within the uploader prior to uploading or between uploads, without having to navigate to that folder first via SharePoint. Untick this check box to never allow users to change the target folder.</p>
+<h3>Allow users to change the target Document Library<b style="font-style: italic; text-decoration: underline;" name="s29"></b></h3>
+<p><b>(Check box option)</b></p><p>The uploader will be initialized to upload to the current Document Library, but users can change to another target Document Library right from within the uploader prior to uploading or between uploads, without having to navigate to that Document Library first via SharePoint. Untick this check box to never allow users to change the target Document Library.</p>
+</span>
+<h1 style="page-break-before: always;">Configuration Settings</h1><p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>UploadZen Studio</i>, which you can access via Site Settings / UploadZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>UploadZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / UploadZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all UploadZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>UploadZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+<li><i>French</i></li>
+</ul>
+<h3>Hide (2007) or disable (2010) SharePoint&#39;s out-of-box &quot;Upload Multiple Documents&quot; menu item<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>By default, your UploadZen action commands co-exist together with the built-in, out-of-box "Upload Multiple Documents" command. If you intend to fully replace that functionality with UploadZen, you can set whether and when to show (2007) / enable (2010) the built-in, out-of-box "Upload Multiple Documents" command (affects both both the SharePoint 2007 Library "Upload" tool-bar menu and the ribbon menu in the SharePoint 2010 "Documents / New" section of the Library Tools ribbon tab).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>UploadZen Studio</i>:</p>
+<ul>
+<li><i>Never</i></li>
+<li><i>Only if Upload Actions exist (requires activated Site Collection feature)</i></li>
+<li><i>Always (requires activated Site Collection feature)</i></li>
+</ul>
+<h3>Hide SharePoint&#39;s out-of-box &quot;Upload Multiple Files&quot; link on the single-upload page<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>By default, your UploadZen action commands co-exist together with the built-in, out-of-box "Upload Multiple Files" link shown on the <b>UploadZen Upload.aspx Replacement Page</b> (if the corresponding Site Collection feature is activated). If you intend to fully replace the built-in functionality with UploadZen, you can set whether and when to show the built-in, out-of-box "Upload Multiple Files" link on the single-upload page.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>UploadZen Studio</i>:</p>
+<ul>
+<li><i>Never</i></li>
+<li><i>Only if Upload Actions exist (requires activated Site Collection feature)</i></li>
+<li><i>Always (requires activated Site Collection feature)</i></li>
+</ul>
+<h3>File name extension filter sets<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>You can restrict the file types users can upload in your Upload Action under Site Settings / UploadZen Studio / Upload Actions. If you choose to enable file type filtering, the Upload Action will let you select from the file name extension filter sets defined here. Every filter set is specified in a separate line and contains its name (do not use a comma anywhere in that first part), then a colon [:] and then all allowed file name extensions (without dots), comma-combined.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>UploadZen Studio</i> to restore the following default value:</p>
+<pre>Documents (*.pdf; *.doc; *.rtf etc.):123,602,cgm,csv,dbf,dif,doc,docx,docm,dot,dotx,hta,htm,html,hwp,mml,odb,odf,odm,odp,ods,odt,oth,otp,ott,pdb,pdf,pot,potm,potx,pps,ppt,pptm,pptx,psw,pxl,rtf,sdc,sdp,sdw,sgl,slk,smf,stc,sti,stw,sxc,sxg,sxm,sxi,sxw,txt,uof,uos,uof,uop,uot,vor,wb2,wpd,wk1,wks,wri,xlc,xlm,xltm,xltx,xls,xlsb,xlsm,xlsx,xlt,xlw,xml<br/>Pictures (*.jpg; *.png; *.gif etc.):bmp,dxf,dib,emf,eps,gif,ico,jfif,jif,jpe,jpeg,jpg,met,odg,otg,pbm,pcd,pct,pcx,pgm,pict,png,ppm,psd,ras,sda,sdd,sgf,sgv,std,svm,svg,sxd,tga,tif,tiff,vor,wmf,xbm,xpm<br/>Web Parts (*.dwp; *.webpart):dwp,webpart<br/>List Template / Site Template / Solution Packages (*.stp; *.cab; *.wsp):stp,cab,wsp<br/>Master Pages (*.master):master<br/>Compressed File Archives (*.zip; *.rar etc.):zip,rar,wsp,stp,cab,arj,lzh,ace,tar,gz,gzip,uue,bz2,jar,iso,z,7z</pre>
+<h3>Alternative path for temporary file chunk storage location<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>Setting an alternative path is imperative if you want to use the Chunking feature in a multi-server farm environment. In a single-server farm environment or if Chunking is not used, this setting can be ignored. First read the details in the <b>Preparing a Web Application for the Chunking feature</b> section of the UploadZen <b>Deployment Checklist</b> help topic.<br/><br/>If blank, this setting defaults to the current web server&#39;s physical path corresponding to the _layouts/roxority_UploadZen/fc virtual directory. If you need to change this setting, you must set this to a central location accessible from all web front-end servers, such as a network drive, shared folder or other network-mapped location.</p>
+<h3>All administrative actions described in the Deployment Checklist have been taken<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>On the <i>Configuration</i> page in the <i>UploadZen Studio</i>, tick this check box after having read the <b style="font-style: italic; text-decoration: underline;" href="clickonce_deployment_checklist.html">ClickOnce Deployment Checklist</b> documentation topic fully and having taken all administrative actions described that are <i>required</i> for UploadZen Windows Uploader to run correctly for all users. (This will hide the reminder notice in the UploadZen window the next time a user launches the UploadZen Windows Uploader from a reloaded page.)</p>
+<h3>Always include all debugging and diagnostic details in error messages<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>By default, for certain UploadZen-handled errors only the error message is shown to end users. For debugging and diagnostic purposes, it can occasionally and temporarily be useful to include all known error details such as inner exceptions or the stack trace, but in production this would likely confuse or scare your end users. On the <i>Configuration</i> page in the <i>UploadZen Studio</i>, tick this check box to always include all error details in your end user interfaces.</p>
+<h3>Per-File Delay in Seconds<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>Under rare circumstances, you may have to integrate with 3rd-party or custom Event Handlers that work better when there is a slight delay between Document Library events. Specify the number of seconds UploadZen should artificially delay each upload. If you don&#39;t specify an integer number, than the recommended default value of 0 will be used.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>UploadZen Studio</i> to restore the following default value:</p>
+<pre>0</pre>
+<h3>No default instances of UploadZen configurables on the Site Collection level (NOT recommended!)<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>Configurables are lists of items for defining and customizing the behaviors of this software (such as Export Actions in ExportZen, Data Sources and Data Field Templates in PeopleZen, Print Views and Print Launchers in PrintZen, Upload Actions in UploadZen). By default, each Site Collection has its own non-removable default instance that can be customized and to which additional instances can be added. In extensive farm setups (1000s of Site Collections), these default instances may be a hindrance and using only custom farm-level instances may be preferable. Tick this option to never provide the default instance on the Site Collection level.</p>
+<h3>By default, no inclusion of jQuery library v1.6.1 (NOT recommended)<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>Some UploadZen end user-facing artifacts require (and load into the respective host pages) the jQuery library, version 1.6.1. Embedding jQuery more than once in a single page can cause JavaScript warnings in Internet Explorer with <i>some few</i> jQuery plugins (and only if any are used in your farm at all). On the <i>Configuration</i> page in the <i>UploadZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and independently of UploadZen to prevent UploadZen from loading jQuery too. If you do so, you need to make sure jQuery 1.6.1 or higher is loaded on each page hosting also hosting UploadZen user interface artifacts, or UploadZen will appear broken. This is a global default setting that can be optionally overridden locally where applicable.</p>
+<h1 style="page-break-before: always;">Deployment Checklist</h1><h3>
+	Review Server-side Upload Limits<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	To support bulk-uploads of large file sets, you may want to review the maximums
+	currently supported by your SharePoint server farm.</p>
+<ul>
+	<li>Review the <i>Maximum Upload Size</i> setting on the <i>Web Application General
+		Settings</i> page under <i>Central Administration</i> &rarr; <i>Application Management</i>
+		&rarr; <i>SharePoint Web Application Management</i>.</li>
+	<li>Internet Information Services (IIS) respects the ASP.NET maximum request length
+		setting, pre-empting even the above SharePoint Web Application <i>Maximum Upload Size</i>
+		setting. The maximum request length setting is stored and can be modified manually
+		in the <i>&lt;wwwroot&gt;\wss\VirtualDirectories\&lt;webapp&gt;\web.config</i> file
+		(on each web front-end server) by locating the <i>&lt;httpRuntime&gt;</i> node and
+		editing the <i>maxRequestLength</i> attribute value.<ul>
+			<li>The stored attribute value represents KB &mdash; divide by 1024 to get the value
+				represented in MB (for example, the default value 51200 represents 50 MB). If you
+				decide you want to change the setting to a different MB value, multiply that one
+				with 1024 and store the result as the new attribute value.</li>
+		</ul>
+	</li>
+	<li>To prevent a large file upload from timing out before completion, review and customize
+		if required the <i>Request execution timeout (seconds)</i> setting on the <i>Application</i>
+		tab in the <i>ASP.NET Configuration Settings</i> dialog box by opening the <i>Properties</i>
+		dialog box for the SharePoint Web Application in <i>Internet Information Services (IIS)
+			Manager</i> on each SharePoint web front-end server and clicking <i>Edit Configuration</i>
+		on the <i>ASP.NET</i> tab.</li>
+</ul>
+<h3>
+	Preparing a Web Application for the Chunking feature<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	When chunking is used, UploadZen temporarily stores the individual file chunks in
+	the <b>_layouts/roxority_UploadZen/fc</b> virtual directory (before putting them
+	back together later on to add the original file to the target Document Library folder
+	when all chunks have been transferred). This typically corresponds to the <b>C:\Program
+		Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\LAYOUTS\roxority_UploadZen\fc\</b>
+	physical directory (12 instead of 14 for WSS 3.0 / MOSS 2007) &mdash; unless you
+	specified a different target storage folder for chunks on the <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html">
+		Configuration</b> page.</p>
+<p>
+	When writing to and reading from this directory, UploadZen uses SharePoint code
+	elevation so the user account that will access directory will be identical to the
+	user account specified as the <b>Identity</b> for the IIS Application Pool (under
+	[app pool] / Advanced Settings / Process Model &mdash; more often than not this
+	is set to <b>Network Service</b>).
+</p>
+<p>
+	You <b>need to ensure</b> that read and write access to the file chunking temporary
+	storage folder (either <i>_layouts/roxority_UploadZen/fc</i> or a custom-configured
+	one) is <b>fully granted to the above user account</b>, ie. the IIS app pool identity.
+	Note:
+</p>
+<ul>
+	<li>the permissions to check or set are on the Windows Explorer / server-side storage
+		OS level rather than IIS / ASP.NET / web server or SharePoint-specific permissions.</li>
+	<li>in a multi-server farm environment, you would need to perform the above for all
+		<i>_layouts/roxority_UploadZen/fc</i> folders on all web front-end servers; <b>however:</b>
+	</li>
+	<li>in such an environment you <i>SHOULD</i> instead <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html">
+		re-configure</b> the file chunk temporary storage directory to a central file-system
+		location such as a network drive, shared folder or other network-mapped location
+		since different chunks might otherwise end up in different <i>_layouts/roxority_UploadZen/fc</i>
+		folders on different servers and UploadZen could not put these back together to
+		complete the chunked upload as intended.</li>
+</ul>
+<h3>
+	Document Libraries and Other Libraries<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	No special preparation considerations apply to Document Libraries or other libraries.
+	All Library Views with a their <b>Toolbar Type</b> setting set to either <b>Full Toolbar</b>
+	or <b>Show Toolbar</b> provide your <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Actions&#39;</b>
+	menu items and may hide the SharePoint <i>Upload Multiple Documents</i> menu item
+	if <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s1">so configured</b>.</p>
+<h3>
+	XSL, Data Form, Data View Web Parts<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	If you have in use XSL / Data Form / Data View Web Parts that were created by converting
+	from an out-of-the-box Library View (for example using <i>SharePoint Designer</i>),
+	keep in mind that their menu structures are &quot;frozen&quot; at conversion time:</p>
+<ul>
+	<li>the <b>UploadZen</b> menu items will never be visible if <b>UploadZen</b> was not
+		activated at conversion time, and</li>
+	<li>the <b>UploadZen</b> menu items will always remain visible if <b>UploadZen</b> provided
+		active menu items at conversion time.</li>
+</ul>
+<p>
+	If you intend to create such Web Parts by converting from Views, uninstall or disable
+	<b>UploadZen</b> temporarily prior to the conversion. You can still generate your
+	own <i>Upload Multiple Files</i> links manually and add them to your pages for such
+	Web Parts or Document Libraries if desired.</p>
+<h3>
+	Secure Sockets Layer (SSL)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	<b>UploadZen</b> will work fine over SSL, except when the browser raises a prompt
+	about the SSL certificate. The prompt can be raised when there is something wrong
+	with the certificate, such as when the site names do not match or the certificate
+	has expired. To make <b>UploadZen</b> work over an SSL connection, make sure that
+	the certificate is up-to-date, and that the certificate data matches the site data.
+</p>
+<h3>
+	Preparing a Web Application for the Windows Uploader mode<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<div class="rox-info">
+	This section only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this section.</div>
+<p>
+	UploadZen&#39;s legacy <b>Windows Uploader</b> only works for SharePoint site visitors
+	using Windows (XP or 2003 only, newer versions no longer support this mode) and
+	Internet Explorer (6 - 8 only) or Firefox (with the <b style="font-style: italic; text-decoration: underline;" href="https://addons.mozilla.org/en-US/firefox/addon/9449"
+		target="_blank">Microsoft .NET Framework Assistant</b> installed).</p>
+<div class="rox-info" style="background-image: url('servicenotinstalled.gif');">
+	<strong>CAUTION:</strong> the legacy <i>Windows Uploader</i> mode will NOT work
+	out of the box for remote clients unless you take the additional administrative
+	steps outlined in this section.</div>
+<p>
+	As a minimum requirement for the legacy <i>Windows Uploader</i> mode to work for
+	remote clients (i.e. your users), you need to:</p>
+<ol>
+	<li>enable both the <i>Browse Directories</i> and the <i>Use Remote Interfaces</i> Site
+		Permissions on the <i>User permissions for Web application</i> page (in <i>Central Administration</i>
+		&rarr; <i>Application Management</i> &rarr; <i>Application Security</i> &mdash;
+		be sure you selected the correct target Web Application), as well as</li>
+	<li>perform the following steps in <i>Internet Information Services (IIS) Manager</i>
+		on <b>each SharePoint web front-end server</b>:</li>
+</ol>
+<ul>
+	<li>Locate the <i>_layouts/roxority_UploadZen/help</i> virtual directory in the IIS
+		Web Site corresponding to the SharePoint Web Application you want to <b>UploadZen</b>-enable.</li>
+	<li>If you&#39;re using IIS 6.0 on Windows 2003 server, or IIS 6.0 compatibility mode
+		on newer Windows versions :<ul>
+			<li>Open the <i>Properties</i> dialog box for the <i>_layouts/roxority_UploadZen/help</i>
+				virtual directory from its context menu and on the <i>Directory Security</i> tab,
+				in the <i>Authentication and access control</i> section, click the <i>Edit</i> button.</li>
+			<li>In the <i>Authentication Methods</i> dialog box, tick the <i>Enable anonymous access</i>
+				check box and click OK. Back in the <i>Properties</i> dialog box, click <i>OK</i>.
+				(If you are now prompted about applying your changes to child directories or files,
+				select all of them in the prompt dialog box and click <i>OK</i>.)</li>
+		</ul>
+		<p class="rox-docpic">
+			<img alt="" border="0" class="rox-docpic" style="height: 449px;" src="help/res/sharepoint-bulk-file-uploads-iis-configuration.png"
+				title="" />
+		</p>
+	</li>
+	<li>If you&#39;re using IIS 7.0 or higher, on Windows Vista, Windows 7, Windows 2008
+		Server or newer Windows operating systems:<ul>
+			<li>In the <i>Connections</i> side bar on the left, select the <i>_layouts/roxority_UploadZen/help</i>
+				virtual directory in the IIS Web Site corresponding to the SharePoint Web Application
+				you want to <b>UploadZen</b>-enable.</li>
+			<li>In <i>Features View</i>, double-click the <i>Authentication</i> icon in the <i>IIS</i>
+				group. In the <i>Authentication</i> list view, select <i>Anonymous Authentication</i>
+				and then click <i>Enable</i> in the <i>Actions</i> side bar on the right.</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	Granting anonymous read access exclusively to this virtual directory is acceptable
+	with regards to server security, since no sensitive information is ever stored underneath
+	the <i>help</i> virtual directory, nor does it at all expose access to any server-side
+	code anonymous users could ever invoke. Granting this anonymous read access is however
+	also <i>required</i> for the legacy <b>Windows Uploader</b> mode to work, as the
+	software is based on the Microsoft .NET Framework <i>ClickOnce</i> deployment technology,
+	the integration of which with both SharePoint and remote Internet Explorer users
+	with varying Windows versions, security and authentication settings more often than
+	not simply does not work without making this simple, safe and proven-to-work adjustment.</p>
+<p>
+	For remote <i>Internet Explorer</i> users, invoking a legacy <i>Windows Uploader</i>
+	mode <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Action</b> is likely to produce
+	only HTTP 401 error messages <i>unless and until</i> you take the above steps for
+	all IIS Web Sites associated with your content Web Applications on all SharePoint
+	web front-end servers &mdash; even though the menu item is already available in
+	all Document Library <i>Upload</i> menus throughout your server farm immediately
+	after <b style="font-style: italic; text-decoration: underline;" href="setup.html">solution installation</b>.</p>
+<h3>
+	Granting Web Service Access<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<div class="rox-info">
+	This section only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this section.</div>
+<p>
+	While running, the legacy <b>Windows Uploader</b> window will attempt to access
+	via HTTP / SOAP, under the user-specified credentials, the following XML Web Services:</p>
+<ul>
+	<li><i><s>http://site/_layouts/roxority_UploadZen/Files.asmx</s> http://site/_layouts/roxority_UploadZen/uploadzen.aspx</i></li>
+	<li><i>http://site/_vti_bin/Lists.asmx</i></li>
+	<li><i>http://site/_vti_bin/SiteData.asmx</i></li>
+	<li><i>http://site/_vti_bin/Authentication.asmx</i></li>
+</ul>
+<p>
+	It is the responsibility of the administrator deploying a legacy <b>Windows Uploader</b>
+	mode <b style="font-style: italic; text-decoration: underline;" href="itemref_UploadActions.html">Upload Action</b> to make sure that remote
+	users are granted access to these interfaces. In most environments, completing the
+	<b style="font-style: italic; text-decoration: underline;" href="#s4">steps outlined above</b> should be sufficient to grant this access.</p>
+<h3>
+	Proxy Authentication<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<div class="rox-info">
+	This section only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this section.</div>
+<p>
+	For the legacy <b>Windows Uploader</b> mode to work with default proxy authentication
+	in a corporate setting, the <i>defaultProxy</i> element in the .NET Framework <i>machine.config</i>
+	file on all client computers (under <i>%WINDIR%\Microsoft.NET\Framework\&lt;version&gt;\CONFIG\</i>)
+	must be set to allow <i>System.Net</i> to use default security credentials. Alternatively,
+	you can configure <i>defaultProxy</i> on client computers to use a specific proxy
+	server.</p>
+<h1 style="page-break-before: always;">Automatic Check-Out & Batch Check-In</h1><p>
+	UploadZen supports check-in and check-out for Document Libraries that have the <b>Require
+		documents to be checked out before they can be edited</b> setting set to <b>Yes</b>
+	(on the <b>Versioning Settings</b> page under <b>Document Library Settings</b>).
+</p>
+<h3>
+	UploadZen Web Uploader<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	You can select for each file whether and how it should be checked in after it was
+	successfully uploaded:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 414px;" src="help/res/sharepoint_flash_silverlight_upload_batch_checkin_automatic_checkout.png"
+		title="" /></p>
+<ul>
+	<li><b>No</b> &mdash; uploaded files stay checked out to you</li>
+	<li><b>As minor new version</b> &mdash; uploaded files are checked in. Overwritten,
+		previously existing files get a minor version number increment (ie. from 1.0 to
+		1.1 etc.) if the <b>Document Version History</b> for this Document Library is set
+		to <b>Create major and minor (draft) versions</b> (on the <b>Versioning Settings</b>
+		page under <b>Document Library Settings</b>).</li>
+	<li><b>As major new version</b> &mdash; uploaded files are checked in. Overwritten,
+		previously existing files get a manor version number increment (ie. from 1.0 to
+		2.0 etc.) <i>unless</i> the <b>Document Version History</b> for this Document Library
+		is set to <b>No versioning</b> (on the <b>Versioning Settings</b> page under <b>Document
+			Library Settings</b>).</li>
+	<li><b>Overwrite current version</b> &mdash; uploaded files are checked in but if the
+		file name already existed prior to the upload, the previous version number remains
+		unchanged.</li>
+</ul>
+<p>
+	To check in all files the same way, select the preferred setting for one file, then
+	click the
+	<img class="roxbuttonicon" src="checkall.gif" />
+	icon to <i>Set all files to this selection</i>.
+</p>
+<h3>
+	UploadZen Windows Uploader<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	In the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows Uploader</b>, prior
+	to your upload simply drop-down the menu next to the <b>Upload Files button:</b>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 315px;" src="help/res/sharepoint_clickonce_upload_batch_checkin_automatic_checkout.png"
+		title="" /></p>
+<ul>
+	<li><b>Auto Check-Out</b> &mdash; tick this menu option to check out existing files
+		to you prior to overwriting them. This is necessary or existing files cannot be
+		overwritten.</li>
+	<li><b>Auto Check-In</b> &mdash; select whether uploaded files should be checked in
+		after they have been uploaded:
+		<ul>
+			<li><b>None</b> &mdash; uploaded files stay checked out to you</li>
+			<li><b>Minor versions</b> &mdash; uploaded files are checked in. Overwritten, previously
+				existing files get a minor version number increment (ie. from 1.0 to 1.1 etc.) if
+				the <b>Document Version History</b> for this Document Library is set to <b>Create major
+					and minor (draft) versions</b> (on the <b>Versioning Settings</b> page under
+				<b>Document Library Settings</b>).</li>
+			<li><b>Major versions</b> &mdash; uploaded files are checked in. Overwritten, previously
+				existing files get a manor version number increment (ie. from 1.0 to 2.0 etc.) <i>unless</i>
+				the <b>Document Version History</b> for this Document Library is set to <b>No versioning</b>
+				(on the <b>Versioning Settings</b> page under <b>Document Library Settings</b>).</li>
+			<li><b>Major versions</b> &mdash; uploaded files are checked in but if the file name
+				already existed prior to the upload, the previous version number remains unchanged.</li>
+		</ul>
+	</li>
+</ul>
+<h1 style="page-break-before: always;">Authentication (Windows & Forms)</h1><div class="rox-info">
+	This topic only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	Preventing Common Authorization Problems<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	Attempts to launch <b>UploadZen</b> from a Document Library may yield a HTTP 401
+	error message, or <b>UploadZen</b> may repeatedly prompt for a user name and password
+	that won&#39;t work even when specified correctly for a Full Access account, <i>unless
+		and until</i> you take all administrative actions required to <b style="font-style: italic; text-decoration: underline;" href="clickonce_deployment_checklist.html">
+			prepare a Web Application for UploadZen</b>.</p>
+<h3>
+		Automatic Authentication (Single Sign-On) Attempts vs. Log-In Prompts<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Under certain circumstances, UploadZen users may be prompted to log in to SharePoint:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 181px;" src="help/res/sharepoint-bulk-file-uploads-forms-based-authentication.png"
+		title="" /></p>
+<p>
+	Generally, <b>UploadZen</b> will attempt to log users in to SharePoint automatically,
+	if and only if:</p>
+<ul>
+	<li>the SharePoint Web Application from which <b>UploadZen</b> is launched uses the
+		Windows Integrated authentication mode, and</li>
+	<li>the user who launched <b>UploadZen</b> was logged in to SharePoint as the same Windows
+		user account used to run their Internet Explorer process.</li>
+</ul>
+<p>
+	Consequently, users may be prompted by <b>UploadZen</b> to log in to SharePoint:</p>
+<ul>
+	<li>if the SharePoint Web Application from which <b>UploadZen</b> is launched uses the
+		Forms-based Authentication (FBA) mode, or</li>
+	<li>if the user who launched <b>UploadZen</b> was logged in to SharePoint with a different
+		user name than the one they used to run their Internet Explorer process, or</li>
+	<li>if they never ticked the Internet Explorer check box &#39;Remember my password&#39; when 
+		signing in to SharePoint, or</li>
+	<li>if their Internet Explorer or Windows security settings prevented Windows from caching
+		their user credentials for this SharePoint Web Application for later use by other
+		trusted applications, or</li>
+	<li>if <b>UploadZen</b> was denied access to previously cached Windows default 
+		credentials for the SharePoint Web Application for any other reasons.</li>
+</ul>
+<h3>
+	Saving User Passwords Locally<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	When users are prompted by <b>UploadZen</b> to log in to SharePoint, they can elect
+	for <b>UploadZen</b> to store their encrypted password in the Windows Registry
+	Local User hive and use it automatically in future upload sessions. To disable this
+	option for your some or all of your users, consult the appropriate <b style="font-style: italic; text-decoration: underline;" href="?doc=farm_site_config#s9">
+		server-side configuration setting</b>.</p>
+<h1 style="page-break-before: always;">Bulk Folder Uploads & ZIP Handling</h1><div class="rox-info">
+	This topic only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	Bulk-uploading entire folder structures<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	<b>UploadZen</b> lets you upload entire directory hierarchies including all (<b style="font-style: italic; text-decoration: underline;" href="?doc=client_side_settings#s4">or
+		only certain</b>) files and sub-directories by simply marking a directory for upload.</p>
+<p>
+	To mark a directory for bulk upload, you can <b>either</b> navigate to it by clicking
+	the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Change Folder</i> button, then selecting from the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Change Folder</i> drop-down menu the appropriate <i>Mark entire folder contents (files
+		and sub-folders) for upload</i> menu item...</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 154px;" src="help/res/sharepoint-bulk-folder-uploads-01.png"
+		title="" /></p>
+<p>
+	... <b>or</b> you can first select the folder(s) inside the local file navigation
+	area and then from the context menu select either the <i>Mark selected folders, their
+		files and sub-folders for upload</i> menu item or the <i>Mark files and sub-folders
+			of selected folders for upload</i> menu item. (The second menu item will
+	place the files and sub-folders directly into the currently selected Document Library
+	target folder, the former will re-create the folder inside the currently selected
+	Document Library target folder, then place the files and sub-folders inside that
+	newly created folder.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 210px;" src="help/res/sharepoint-bulk-folder-uploads-02.png"
+		title="" /></p>
+<p>
+	Once you have marked all folders for bulk-upload, click the
+	<img class="roxbuttonicon" src="help/res/PublishPlanHS.png" />
+	<i>Upload Files</i> button to initiate the bulk-upload. Each directory will be 
+	ZIP-compressed in its entirety (in memory) for transfer:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 148px;" src="help/res/sharepoint-bulk-folder-uploads-zip-compression.png"
+		title="" /></p>
+<p>
+	<b>UploadZen</b> then uploads the in-memory ZIP archive to SharePoint where it will be 
+	extracted into the currently selected target Document Library folder.</p>
+<h3>
+	Uploading multiple files as a dynamically generated ZIP archive<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>Sometimes you want to put together a number of related files in one ZIP archive 
+	for uploading. <b>UploadZen</b> saves you the step of manually compressing files 
+	into a ZIP archive with an external tool; instead, you can simply select the 
+	files and tell <b>UploadZen</b> to compress those files into a ZIP archive which 
+	to upload in place of the individual files using the context menu:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 250px;" src="help/res/sharepoint-upload-multiple-files-zip-compressed.png"
+		title="" /></p>
+<p>This will put a single item (with a prefix [ZIP] and the names of the included 
+	files) into the <i>Local Files Marked for Upload</i> area, representing the 
+	dynamic ZIP archive that will be generated automatically once you start your 
+	upload:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="help/res/sharepoint-upload-multiple-files-unzipping.png"
+		title="" /></p>
+<h3>
+	Server-side unzipping of uploaded ZIP archive files<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>As soon and as long as you have at least one ZIP 
+	archive marked for upload &mdash; whether an existing archive file you selected from your file system, or a dynamic ZIP that 
+	<b>UploadZen</b> will generate as described above &mdash; you will find check 
+	boxes next to these ZIP archives in the <i>Local Files Marked for Upload</i> 
+	area, as demonstrated in the screen shot above. Only tick the check boxes of 
+	those ZIP archives you want to extract into the currently selected target 
+	Document Library folder. This extraction will happen on the SharePoint server 
+	immediately after the ZIP archive has been fully uploaded.</p>
+<h1 style="page-break-before: always;">Client-Side Settings</h1><div class="rox-info">
+	This topic only applies to the legacy <b style="font-style: italic; text-decoration: underline;" href="uploading_multiple_files.html">Windows
+		Uploader</b> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <b style="font-style: italic; text-decoration: underline;" href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</b> mode in production instead, and can safely skip this topic.</div>
+<p>
+	The following settings are available to all users in the <b>UploadZen</b> window
+	on the <i>Settings</i> tab. <span class="roxadmintopic">Administrators can turn off
+		the <i>Settings</i> tab for some or all users via <b style="font-style: italic; text-decoration: underline;" href="?doc=farm_site_config#s6">
+			the appropriate server-side configuration setting</b>.</span></p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 522px;" src="help/res/sharepoint-bulk-file-uploads-client-settings.png"
+		title="" /></p>
+<h3>
+	(General) Maximum picture file preview icons per folder<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	Picture files are represented by an icon showing a preview of their content but
+	this consumes additional system resources. Specify the maximum number of picture
+	files that a folder can contain before preview icons are turned off for that folder.
+	Use 0 to never show any preview icons.</p>
+<h3>
+	(General) Apply the [xyz] file filter when targeting a [xyz] Library<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Choose &#39;Yes&#39; to automatically select a file filter for the local file browsing
+	area suitable for the target Document Library, or &#39;No&#39; to never automatically
+	change your file filters.</p>
+<h3>
+	(Upload) Overwrite existing files<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Select &#39;Yes&#39; to overwrite files that already exist in the SharePoint Document
+	Library target folder under the given name, or &#39;No&#39; to not replace the existing
+	file and produce a warning message instead.</p>
+<h3>
+	(Upload) Replacement character<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	Specify a character or text used to replace each unwanted character, ie. &tilde;
+	&quot; # % &amp; * : &lt; &gt; ? / \ { | and } in uploaded file or folder names.
+	(Clear this to simply remove the unwanted characters.)</p>
+<h3>
+	Display/include files/folders if...<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	These four sections of 13 settings each control whether to show or hide in the local
+	file navigation area, or include or exclude in folder bulk uploads, file or folders
+	with certain characteristics:</p>
+<ul>
+	<li>(Access or Read Error) &mdash; whether to show/include files/folders that cannot
+		be accessed by the current user (default: <i>No</i>)<ul>
+			<li>Files / folders that cannot be accessed by the current user can never be included
+				in folder bulk uploads. For the inclusion sections, this setting controls whether
+				to ignore-and-skip those files / folders (if set to <i>No</i>) or show an error
+				message for each such file / folder (if set to <i>Yes</i>).</li>
+		</ul>
+	</li>
+	<li>(Empty) &mdash; whether to show/include files/folders that are empty (zero-byte
+		files or folders containing neither files nor sub-folders, default: <i>No</i>)</li>
+	<li>(Blocked) &mdash; whether to show/include files with extensions that are blocked
+		for upload at the SharePoint web application level (default: <i>No</i>)</li>
+	<li>[xyz] Attribute &mdash; whether to show/include files/folders for which the given
+		file system attribute is set (default: <i>Yes</i> except for <i>Hidden, Offline</i>,
+		<i>Sparse</i>, <i>System</i>, <i>Temporary</i>)</li>
+</ul>
+<h1 style="page-break-before: always;">Release Notes</h1><h3>
+	Version 2.5 (8th March 2011)<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<ul>
+	<li>Added: on-the-fly, pre-upload client-side image resizing / picture shrinking</li>
+	<li>Added: configurable maximum file size</li>
+	<li>Added: chunking for large files exceeding your server-side file upload size / request
+		length limits</li>
+</ul>
+<h3>
+	Version 2.4 (1st March 2011)<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li>Added: new <b>Web Uploader</b> mode based on Flash or Silverlight plugin.</li>
+	<li>Deprecated: previous ClickOnce-based <b>Windows Uploader</b> mode is still included
+		but no longer a focus of future development.</li>
+</ul>
+<h3>
+	Version 2.3.5 (9th October 2010)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<ul>
+	<li>Added: you can now define multiple <i>Upload Actions</i> (with individual settings)
+		that can be offered concurrently.</li>
+</ul>
+<h3>
+	Version 2.3 (16th April 2010)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li>Added: DIY User Interface Localization tool</li>
+	<li>Added: Transfer Wizard (import/export) tool</li>
+</ul>
+<h3>
+	Version 2.2 (14th December 2009)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<ul>
+	<li>Added: automatic check-out and bulk check-in for SharePoint uploads</li>
+</ul>
+<h3>
+	Version 2.1 (31st August 2009)<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<ul>
+	<li>Added the &#39;UploadZen Upload Page&#39; Farm Feature. This redirects all requests
+		from the SharePoint Upload page to the UploadZen Upload page, which is an exact
+		clone of the SharePoint Upload page in design and functionality, except the &#39;Upload
+		Multiple Files...&#39; link launches the UploadZen window.</li>
+</ul>
+<h3>
+	Version 2.0 (27th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<ul>
+	<li>File extensions blocked by the SharePoint web application are now by default hidden
+		in the local file navigation area and not included in bulk folder uploads</li>
+	<li>SharePoint login passwords are now encrypted when stored on the client side</li>
+	<li>Bulk folder uploads are now split up into multiple smaller file transfers rather
+		than transferring one large ZIP-compressed data package if they exceed a user-customizable
+		maximum MB size</li>
+</ul>
+<h3>
+	Version 1.9 (22nd August 2009)<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<ul>
+	<li>Added a Welcome page with Mini Tutorial to the UploadZen window</li>
+	<li>Much revised and expanded product documentation</li>
+</ul>
+<h3>
+	Version 1.8 (18th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<ul>
+	<li>Added &#39;Select All&#39; menu command</li>
+	<li>Added support for storing (saving) and restoring (loading) uploads</li>
+</ul>
+<h3>
+	Version 1.7 (17th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<ul>
+	<li>Added colored highlighting for local files and folders marked for upload</li>
+	<li>Added auto-refresh for local file browsing area</li>
+	<li>Added file filters with useful presets matching Document Library base templates</li>
+	<li>Added local file navigation area buttons "Back", "Up" and "Show/Hide Folders"</li>
+	<li>Added additional client options for overwriting existing files, replacing unwanted
+		characters, and which files and folders to include or exclude in the local file
+		browsing area and folder bulk uploads.</li>
+	<li>Added picture file live preview icons</li>
+</ul>
+<h3>
+	Version 1.6 (6th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<ul>
+	<li>Added client-side user name / password storage for users who cannot log in to SharePoint
+		automatically</li>
+	<li>Added the Upload Multiple Files menu item to Picture Libraries, Web Part Galleries
+		and Site / List Template Galleries.</li>
+	<li>Bug fix: changing the target library did not work in root web sites</li>
+</ul>
+<h3>
+	Version 1.5 (5th August 2009)<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ul>
+	<li>Added full support for forms-based authentication</li>
+	<li>Now circumventing the "The file or folder name contains invalid characters. Please
+		use a different name." condition.</li>
+</ul>
+<h3>
+	Version 1.4 (2nd August 2009)<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<ul>
+	<li>Fixed: "Length cannot be less than zero" error message during Uploader Windows application
+		loading.</li>
+</ul>
+<h3>
+	Version 1.3 (15th June 2009)<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<ul>
+	<li>Now allowing switching to another target Document Library and folder from the UploadZen
+		window</li>
+	<li>Added support for extracting all contents of uploaded ZIP archive files on the SharePoint
+		server side into the appropriate target Document Library folder structures</li>
+	<li>Added support for uploading entire directory structures easily with ZIP-compressed
+		transfer to be restored recursively into the appropriate target Document Library
+		folder structures</li>
+	<li>Added support for uploading a selection of local files as a dynamically generated
+		ZIP archive file</li>
+</ul>
+<h3>
+	Version 1.2 (4th June 2009)<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<ul>
+	<li>The client Uploader Windows ClickOnce application no longer requires ADODB to be
+		installed on client computers.</li>
+</ul>
+<h3>
+	Version 1.1 (29th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<ul>
+	<li>Added automatic prompts for user name / password if SharePoint authentication with
+		Windows-cached credentials fails (also to support Forms authentication)</li>
+	<li>Added new product configuration options to be set farm-wide or on the site collection
+		level:<ul>
+			<li>to hide or show the &#39;Settings&#39; tab in the UploadZen window</li>
+			<li>to show or hide the &#39;Upload Multiple Documents&#39; out-of-the-box menu item
+				when UploadZen is available</li>
+			<li>to never show the &#39;Upload Multiple Files&#39; menu item</li>
+			<li>to only hide the &#39;Upload Multiple Files&#39; menu item when disabled (i.e. when
+				UploadZen is not supported by the client)</li>
+		</ul>
+	</li>
+</ul>
+<h3>
+	Version 1.0 (25th May 2009)<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<ul>
+	<li>Initial release of ROXORITY UploadZen</li>
+</ul>
+<h1 style="page-break-before: always;">End-User License Agreement (EULA)</h1><h3>
+	END-USER SOFTWARE LICENSE AGREEMENT FOR ROXORITY SOFTWARE PRODUCTS<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	THIS IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE
+	ENTITY) AND ROXORITY LTD. (ROXORITY) FOR ROXORITY SOFTWARE, ASSOCIATED MEDIA AND
+	PRINTED MATERIALS, AND MAY INCLUDE ONLINE OR ELECTRONIC DOCUMENTATION (&quot;SOFTWARE&quot;).
+	BY INSTALLING, COPYING, OR OTHERWISE USING THE ROXORITY SOFTWARE PRODUCT, YOU ARE
+	AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING THE
+	SOFTWARE LICENSE AND DISCLAIMER OF SOFTWARE WARRANTY BELOW. PLEASE READ THIS DOCUMENT
+	CAREFULLY BEFORE USING THE SOFTWARE. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS
+	OF THIS AGREEMENT, YOU MUST NOT INSTALL OR USE THE SOFTWARE.</p>
+<h3>
+	LICENSE GRANT<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	&quot;You&quot; or &quot;your&quot; as used herein means the person or company who is being licensed
+	to use the Software, as defined below. &quot;We,&quot; &quot;us&quot; and &quot;our&quot; as used herein means
+	ROXORITY Ltd.</p>
+<p>
+	The &quot;Software&quot; as referred to herein means the ROXORITY Software &quot;UploadZen&quot;, a
+	product that extends &quot;Microsoft SharePoint&quot; web sites to provide additional capabilities.
+</p>
+<p>
+	We hereby grant you a perpetual, non-exclusive, non-transferable, revocable license
+	to use the Software on your server and client computers.</p>
+<p>
+	The total number of SharePoint &quot;Site Collections&quot; or &quot;server farms&quot; that the Software
+	can be &quot;activated&quot; on (after 45 days of free trial use) shall be limited to the
+	number of licenses which you purchase. For example, if you purchase 4 Site Collection
+	licenses, you may activate the Software on up to 4 SharePoint Site Collections;
+	if you purchase 2 server farm licenses, you may active the Software on unlimited
+	Site Collections within up to 2 server farms.</p>
+<p>
+	Each license is issued to one unique Site Collection or server farm and cannot be
+	transferred to another Site Collection or server farm.
+</p>
+<h3>
+	TITLE<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The Documentation as referred to herein shall mean the written materials that you
+	may receive in connection with the Software. We will remain the sole and exclusive
+	owners of all right, title and interest in and to the Software and the Documentation.</p>
+<h3>
+	ARCHIVAL OR BACKUP COPIES<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	You may copy the Software for back-up and archival purposes only, provided however,
+	that at all times herein, the original and each copy is kept in your possession
+	and that your installation and use of the Software does not exceed that allowed
+	in the &quot;License Grant&quot; section above.</p>
+<h3>
+	THINGS YOU MAY NOT DO<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	You agree and acknowledge that the Software and Documentation are proprietary works
+	that are protected by the copyright laws of various nations. You may only use the
+	Software and Documentation for the purposes and in accordance with the terms of
+	this Agreement. You may not, without limitation:</p>
+<ul>
+	<li>copy the Documentation, </li>
+	<li>copy the Software except to make archival or backup copies as provided above,
+	</li>
+	<li>place the Software onto a server so that it is accessible via a public network such
+		as the Internet, except as provided for above in &quot;LICENSE GRANT,&quot; </li>
+	<li>sublicense, rent, lease or lend any portion of the Software or Documentation.
+	</li>
+</ul>
+<p>
+	You acknowledge that any violation of this paragraph will cause us immediate and
+	irreparable harm and that the damages which we will suffer may be difficult or impossible
+	to measure. Therefore, upon any actual or impending violation of this paragraph,
+	we shall be entitled to the issuance of a restraining order, preliminary and permanent
+	injunction without bond, restraining or enjoining such violation by you, your successors
+	or assignees or any entity or person acting in concert with you. Such remedy shall
+	be additional to and not in limitation of any other remedy which may otherwise be
+	available to us by law.</p>
+<h3>
+	TRANSFERS<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>
+	You may assign all your license to use the Software and Documentation to another
+	person or legal entity (the &quot;Assignee&quot;), provided however, that prior to such assignment,
+	the Assignee undertakes in writing to be bound by your obligations under this Agreement.
+	Any attempt to assign or transfer the license to the Software, the Documentation
+	or this Agreement shall be ineffective, unless the assignment complies with the
+	terms of this paragraph. Upon assignment of your license hereunder, you agree to
+	transfer to the Assignee all of your copies of the Software and Documentation, including
+	all copies of updates and prior versions of the Software and Documentation and you
+	further agree and that you will retain no copies, including, without limitation,
+	electronic copies stored on computer discs or drives.</p>
+<h3>
+	DISCLAIMER OF WARRANTY<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>
+	Except as otherwise provided herein, we warrant that the Software is free from defects
+	in material and workmanship and will perform substantially in accordance with the
+	Software documentation under normal use for one hundred eighty (180) days after
+	the receipt of the Software. If you notify us within such one hundred eighty (180)
+	day period of any claimed defect in the Software, we will at our sole option and
+	expense, and as you sole remedy, either repair or replace the defective Software.
+	Or, if we cannot repair or replace the Software then we will accept the return of
+	the Software at our expense and refund the purchase price of the Software.
+</p>
+<p>
+	EXCEPT AS STATED HEREIN, THE SOFTWARE AND SERVICES OFFERED BY US ARE PROVIDED ON
+	AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY OTHER KIND, EXPRESS,
+	IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE,
+	NONINFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT
+	WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, RELIABLE, SECURE OR ERROR-FREE
+	AND EXPRESSLY DISCLAIM ANY WARRANTIES AS TO THE MATERIALS CONTAINED THEREIN, THE
+	SERVERS USED OR THE GOODS OR SERVICES OFFERED BY US.</p>
+<h3>
+	EXCLUSION OF CERTAIN DAMAGES<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>
+	IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS,
+	LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE
+	OR THE INABILITY TO USE THE SOFTWARE (EVEN IF A PARTY OR AN AUTHORIZED DEALER OR
+	DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR FOR ANY CLAIM
+	BY ANY OTHER PARTY. EXCLUDED FROM THE ABOVE LIMITATION OF LIABILITY IS LIABILITY
+	FOR INDEMNIFICATION AS STATED HEREIN AND DAMAGES CAUSED BY THE GROSS NEGLIGENCE
+	OR WILLFUL MISCONDUCT OF A PARTY.</p>
+<h3>
+	TERM AND TERMINATION<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>
+	This Agreement takes effect upon your acceptance of the terms of this Agreement
+	and remains effective until terminated by either party in accordance with this Agreement.
+	You may terminate this Agreement at any time by destroying all copies of the Software
+	and Documentation in your possession and giving us prompt notice of same. This Agreement
+	will automatically terminate if you fail to comply with any term or condition of
+	this Agreement. Upon termination of this Agreement, you warrant and represent that
+	you will immediately destroy all copies of the Software and Documentation or other
+	materials provided to you hereunder, if any, that are still in your possession and
+	provide us prompt written assurance of same.</p>
+<h3>
+	CONFIDENTIALITY<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>
+	Non-disclosure. You agree and acknowledge that the Software, its algorithms, protocols
+	or interfaces, and the Documentation constitute proprietary and confidential information
+	that belong to us (the &quot;Confidential Information&quot;). You also understand and agree
+	that misuse and/or unauthorized disclosure of our Confidential Information could
+	adversely affect our business. Accordingly, you agree that at all times you will
+	(a) use and reproduce the Confidential Information only for the purposes of this
+	Agreement and only to the extent necessary for such purpose; (b) restrict disclosure
+	of the Confidential Information to your employees, consultants or independent contractors
+	with a need to know and (c) not disclose the Confidential Information to any third
+	party without our prior written approval. Notwithstanding the foregoing, it shall
+	not be a breach of this Agreement for You to disclose Confidential Information if
+	required to do so under law or in a judicial or other governmental investigation
+	or proceeding, provided however, that You give us prior notice of the disclosure
+	sought and You seek all reasonably available safeguards against widespread dissemination
+	prior to such disclosure.</p>
+<p>
+	Remedies: You acknowledge that any violation of this paragraph may cause us immediate
+	and irreparable harm and that the damages which we will suffer may be difficult
+	or impossible to measure. Therefore, upon any actual or impending violation of this
+	paragraph, we shall be entitled to the issuance of a restraining order, preliminary
+	and permanent injunction without bond, restraining or enjoining such violation by
+	you, your successors or assigns or any entity or person acting in concert with you.
+	Such remedy shall be additional to and not in limitation of any other remedy which
+	may otherwise be available to us by law.</p>
+<h3>
+	INDEMNITY<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>
+	We will at our own expense defend and hold you fully harmless against any action
+	asserted against you (and specifically including costs and reasonable attorneys&#39;
+	fees associated with any such action) to the extent that it is based on a claim
+	that use of the Software and any documentation or other materials being licensed
+	by or provided to you under this Agreement infringes any patent, copyright, license
+	or other proprietary right of any third party. You shall promptly notify us in writing
+	of any such claim. If as a result of any claim of infringement against any patent,
+	copyright, License or other proprietary right of any third party, you are enjoined
+	from using the Software, or if we believe that the Software are likely to become
+	the subject of a claim of infringement, We will at our option and expense will procure
+	the right for you to continue to use the Software, or replace or modify the Software
+	so as to make them non-infringing, or if it cannot do so within a reasonable time
+	period, refund the Software fees paid by you pursuant to the Agreement.
+</p>
+<h3>
+	GENERAL PROVISIONS<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ol>
+	<li>This Agreement constitutes the entire agreement between you and us concerning the
+		Software and Documentation and supersedes any prior or contemporaneous negotiations,
+		discussions, understandings, purchase orders, communications, advertising or representations
+		concerning the subject matter hereof. </li>
+	<li>This Agreement may be modified or amended only in writing signed by you and us.
+	</li>
+	<li>In the event of litigation between you and us concerning the Software or Documentation,
+		the prevailing party in the litigation will be entitled to recover attorneys&#39; fees
+		and expenses from the other party. </li>
+	<li>You agree that the Software will not be shipped, transferred or exported into any
+		country or used in any manner prohibited by any export laws, restrictions or regulations.
+	</li>
+	<li>The failure or delay of of either party to exercise any of its rights under this
+		Agreement or upon any breach of this Agreement shall not be deemed a waiver of those
+		rights or of the breach.</li>
+	<li>If any provision of this Agreement shall be held by a court of competent jurisdiction
+		to be contrary to law that provision will be enforced to the maximum extent permissible
+		and the remaining provisions of this Agreement will remain in full force and effect.</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"></div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<div class="rox-info">
+	This topic only applies to the legacy <a href="uploading_multiple_files">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader">
+		Web Uploader</a> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	End user experience of launching the Windows Uploader<a name="s0"></a></h3>
+<p>
+	After UploadZen has been <a href="setup">installed</a>, <a href="clickonce_deployment_checklist">
+		fully deployed</a> and an <a href="itemref_UploadActions">Upload Action</a>
+	(with its <b>Client-side uploader</b> option set to the legacy <i>Windows Uploader</i>
+	mode) has been made available, navigate to any Form Library, Picture Library, Slide
+	Library, Translation Management Library, Web Part Gallery, Master Page Gallery,
+	List / Site Template Gallery or any other SharePoint Document Library and drop down
+	the <i>Upload</i> menu. In addition to the SharePoint <i>Upload Document</i> menu
+	item, you should also see your <i>Upload Action&#39;s</i> menu item:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 200px;" src="/storage/images/roxority_UploadZen/sharepoint-bulk-file-uploads-uploadzen-menu-item.png"
+		title="" /></p>
+<p>
+	In SharePoint 2010, the above also applies to the <i>&quot;New&quot;</i> ribbon
+	group in the <i>Library Tools / Documents</i> ribbon tabs.</p>
+<p>
+	Now click the Upload Action&#39;s button or menu item to launch the <b>Windows Uploader</b>
+	window. The first time the <b>Windows Uploader</b> is launched on a client computer,
+	the user will be prompted to confirm that action:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 271px;" src="/storage/images/roxority_UploadZen/sharepoint-bulk-file-uploads-uploadzen-clickonce-prompt.png"
+		title="" /></p>
+<p>
+	Once confirmed, this security confirmation prompt will never appear a second time
+	when launching the <b>Windows Uploader</b> via any Upload Action on the same client
+	computer again in the future.</p>
+<h3>
+	The UploadZen Window<a name="s1"></a></h3>
+<p>
+	After a few seconds, the UploadZen window appears:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 590px;" src="/storage/images/roxority_UploadZen/sharepoint-bulk-file-uploads-uploadzen-file-browser.png"
+		title="" /></p>
+<p>
+	The window contains two major areas:</p>
+<ul>
+	<li>the local file navigation area to the left, which lets you browse the file system
+		and select files to be marked for uploading, as well as</li>
+	<li>the area to the right, labelled <i>Local Files Marked for Upload</i>.</li>
+</ul>
+<p>
+	The
+	<img class="roxbuttonicon" src="/storage/images/roxority_UploadZen/PublishPlanHS.png" />
+	<i>Upload Files</i> button will be enabled as soon as there are any files marked
+	for upload (ie. placed inside the second, right-hand side area). To mark files for
+	upload, simply select them and click the
+	<img class="roxbuttonicon" src="/storage/images/roxority_UploadZen/DoubleRightArrowHS.png" />
+	<i>Mark selected file(s) for upload</i> button.</p>
+<p>
+	After you do click the
+	<img class="roxbuttonicon" src="/storage/images/roxority_UploadZen/PublishPlanHS.png" />
+	<i>Upload Files</i> button to initiate your upload, <b>UploadZen</b> will keep you
+	informed about the progress of your upload. After all files have been processed,
+	only files that have been uploaded successfully will be removed from the <i>Local Files
+		Marked for Upload</i> area. You can mark additional files for upload even when
+	an upload is in progress.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 531px;" src="/storage/images/roxority_UploadZen/sharepoint-upload-multiple-files-progress.png"
+		title="" /></p>

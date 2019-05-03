@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="PrintZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="PrintZen Studio"
+        Sequence="85"
+        Description="" />
+	<CustomAction
+        Id="PrintZenToolPrintActions"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminToolPrintActions;"
+		Sequence="10"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen/default.aspx?cfg=tools&amp;tool=Tool_PrintActions" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenToolPrintControls"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminToolPrintControls;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen/default.aspx?cfg=tools&amp;tool=Tool_PrintControls" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenConfig"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminConfig;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenWss"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminWss;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenToolLocalizer"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminToolLocalizer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenToolTransfer"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminToolTransfer;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenToolSiteUsers"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminToolSiteUsers;"
+		Sequence="16"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenLic"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="17"
+        Title="$Resources:roxority_PrintZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="PrintZenHelp"
+        GroupId="PrintZen"
+		RequireSiteAdministrator="TRUE"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PrintZen,SiteAdminHelp;"
+		Sequence="18"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PrintZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

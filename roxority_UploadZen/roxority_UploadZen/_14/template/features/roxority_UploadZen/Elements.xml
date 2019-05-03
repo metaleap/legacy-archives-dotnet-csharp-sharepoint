@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Merge xmlns="http://schemas.microsoft.com/sharepoint/">
+	<AppendNode Path="/*[local-name()='Elements']">
+		<CustomAction Id="UploadAction"
+	   RegistrationType="ContentType"
+	   RegistrationId="0x01"
+	   Rights="AddListItems"
+	   Location="CommandUI.Ribbon">
+			<CommandUIExtension>
+				<CommandUIHandlers>
+					<CommandUIHandler Command="UploadZenAction" CommandAction="javascript:roxUploadZenAction(arguments);" />
+				</CommandUIHandlers>
+			</CommandUIExtension>
+		</CustomAction>
+	</AppendNode>
+</Merge>

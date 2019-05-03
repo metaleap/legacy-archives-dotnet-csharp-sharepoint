@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="roxority_SetupZen">
+</Property><Property Name="Solution File" Value="C:\Users\roxor\Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen.sln">
+</Property><Property Name="Date" Value="Wednesday, March 31, 2010">
+</Property><Property Name="Time" Value="22:55:28 PM">
+</Property></Properties><Event ErrorLevel="0" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

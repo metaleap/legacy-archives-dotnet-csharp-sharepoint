@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_SampleZen", "roxority_SampleZen\roxority_SampleZen.csproj", "{C52E47DE-4E12-4009-8FD4-63EB0F84E7F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WspBuilder", "WspBuilder\WspBuilder.csproj", "{9A1589E3-BB2F-42d2-ACB5-FCBC6AE98855}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C52E47DE-4E12-4009-8FD4-63EB0F84E7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52E47DE-4E12-4009-8FD4-63EB0F84E7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52E47DE-4E12-4009-8FD4-63EB0F84E7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52E47DE-4E12-4009-8FD4-63EB0F84E7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1589E3-BB2F-42d2-ACB5-FCBC6AE98855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1589E3-BB2F-42d2-ACB5-FCBC6AE98855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1589E3-BB2F-42d2-ACB5-FCBC6AE98855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1589E3-BB2F-42d2-ACB5-FCBC6AE98855}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

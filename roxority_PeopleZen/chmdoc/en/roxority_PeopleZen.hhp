@@ -1,0 +1,84 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\zup\docs\PeopleZen-Help.chm
+Contents file=roxority_PeopleZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_PeopleZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY PeopleZen  Product Documentation
+
+
+[FILES]
+help.tlhr.css
+jQuery.js
+help\res\top_up\loader.gif
+help\res\top_up\top_up-min.js
+help\res\top_up\dashboard\bottom_left.png
+help\res\top_up\dashboard\bottom_middle.png
+help\res\top_up\dashboard\bottom_right.png
+help\res\top_up\dashboard\close_link.png
+help\res\top_up\dashboard\controls.png
+help\res\top_up\dashboard\middle.png
+help\res\top_up\dashboard\middle_left.png
+help\res\top_up\dashboard\middle_right.png
+help\res\top_up\dashboard\next.png
+help\res\top_up\dashboard\previous.png
+help\res\top_up\dashboard\resize_link.png
+help\res\top_up\dashboard\sprite.png
+help\res\top_up\dashboard\top_left.png
+help\res\top_up\dashboard\top_middle.png
+help\res\top_up\dashboard\top_right.png
+help\res\top_up\jquery\fxc-clip.js
+help\res\top_up\jquery\fxc-clip.uic-resizable.js
+help\res\top_up\jquery\uic-resizable.fxc-clip.js
+help\res\top_up\jquery\uic-resizable.js
+help\res\bgtmp.tlhr.jpg
+help\res\help.tlhr.css
+help\res\roxlogo.tlhr.png
+help\res\roxority.tlhr.png
+help\res\setup01.png
+help\res\setup02.png
+help\res\setup03.png
+help\res\setup04.png
+help\res\setup05.png
+help\res\setup06.png
+help\res\setup07.png
+help\res\sharepoint-moss-people-user-profiles-web-part-settings.png
+help\res\sharepoint-moss-people-web-part-user-profiles.png
+help\res\sharepoint-people-web-part-user-profiles-table-list-view.png
+help\res\sharepoint-staff-directory-print-friendly-view-phone-listing-user-profiles-web-part.png
+help\res\sharepoint_user_profiles_web_part_alphabetical_index.png
+help\res\sharepoint_user_profiles_web_part_configure_connection_dialog.png
+help\res\sharepoint_user_profiles_web_part_display_style.png
+help\res\sharepoint_user_profiles_web_part_filtering_search.png
+help\res\sharepoint_user_profiles_web_part_filtering_tabbing_search.png
+help\res\sharepoint_user_profiles_web_part_get_filter_values_from.png
+help\res\sharepoint_user_profiles_web_part_im_ocs_presence.png
+help\res\sharepoint_user_profiles_web_part_misc.png
+help\res\sharepoint_user_profiles_web_part_paging.png
+help\res\sharepoint_user_profiles_web_part_quick_filter_tabs.png
+help\res\sharepoint_user_profiles_web_part_sorting_grouping.png
+help\res\sharepoint_web_part_user_profile_properties.png
+help\res\wpdialog.png
+intro.html
+star.gif
+setup.html
+user_profiles_web_part_display_style.html
+web_part_user_profile_data_sources.html
+web_part_user_profile_properties.html
+user_profiles_web_part_filtering_tabbing_search.html
+user_profiles_web_part_sorting_grouping.html
+user_profiles_web_part_paging.html
+user_profiles_web_part_misc.html
+itemref_DataSources.html
+itemref_DataFieldFormats.html
+farm_site_config.html
+ref_url_settings.html
+ref_css.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="RollupZen Studio"
+        Sequence="86"
+        Description="" />
+	<CustomAction
+        Id="RollupZenDataSources"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminDataSources;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen/default.aspx?cfg=tools&amp;tool=Tool_DataSources" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenConfig"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminConfig;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenWss"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminWss;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenToolLocalizer"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminToolLocalizer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenToolTransfer"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminToolTransfer;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenToolSiteUsers"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminToolSiteUsers;"
+		Sequence="16"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenLic"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="17"
+        Title="$Resources:roxority_RollupZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="RollupZenHelp"
+        GroupId="RollupZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_RollupZen,SiteAdminHelp;"
+		Sequence="18"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_RollupZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

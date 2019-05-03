@@ -1,0 +1,52 @@
+<div class="rox-info">
+	This topic only applies to the legacy <a href="uploading_multiple_files">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader">
+		Web Uploader</a> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	Preventing Common Authorization Problems<a name="s0"></a></h3>
+<p>
+	Attempts to launch <b>UploadZen</b> from a Document Library may yield a HTTP 401
+	error message, or <b>UploadZen</b> may repeatedly prompt for a user name and password
+	that won&#39;t work even when specified correctly for a Full Access account, <i>unless
+		and until</i> you take all administrative actions required to <a href="clickonce_deployment_checklist">
+			prepare a Web Application for UploadZen</a>.</p>
+<h3>
+		Automatic Authentication (Single Sign-On) Attempts vs. Log-In Prompts<a name="s1"></a></h3>
+<p>
+	Under certain circumstances, UploadZen users may be prompted to log in to SharePoint:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 181px;" src="/storage/images/roxority_UploadZen/sharepoint-bulk-file-uploads-forms-based-authentication.png"
+		title="" /></p>
+<p>
+	Generally, <b>UploadZen</b> will attempt to log users in to SharePoint automatically,
+	if and only if:</p>
+<ul>
+	<li>the SharePoint Web Application from which <b>UploadZen</b> is launched uses the
+		Windows Integrated authentication mode, and</li>
+	<li>the user who launched <b>UploadZen</b> was logged in to SharePoint as the same Windows
+		user account used to run their Internet Explorer process.</li>
+</ul>
+<p>
+	Consequently, users may be prompted by <b>UploadZen</b> to log in to SharePoint:</p>
+<ul>
+	<li>if the SharePoint Web Application from which <b>UploadZen</b> is launched uses the
+		Forms-based Authentication (FBA) mode, or</li>
+	<li>if the user who launched <b>UploadZen</b> was logged in to SharePoint with a different
+		user name than the one they used to run their Internet Explorer process, or</li>
+	<li>if they never ticked the Internet Explorer check box &#39;Remember my password&#39; when 
+		signing in to SharePoint, or</li>
+	<li>if their Internet Explorer or Windows security settings prevented Windows from caching
+		their user credentials for this SharePoint Web Application for later use by other
+		trusted applications, or</li>
+	<li>if <b>UploadZen</b> was denied access to previously cached Windows default 
+		credentials for the SharePoint Web Application for any other reasons.</li>
+</ul>
+<h3>
+	Saving User Passwords Locally<a name="s2"></a></h3>
+<p>
+	When users are prompted by <b>UploadZen</b> to log in to SharePoint, they can elect
+	for <b>UploadZen</b> to store their encrypted password in the Windows Registry
+	Local User hive and use it automatically in future upload sessions. To disable this
+	option for your some or all of your users, consult the appropriate <a href="?doc=farm_site_config#s9">
+		server-side configuration setting</a>.</p>

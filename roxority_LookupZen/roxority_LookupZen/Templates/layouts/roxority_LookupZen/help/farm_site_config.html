@@ -1,0 +1,11 @@
+<p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>LookupZen Product Center</i>, which you can access by typing a URL like <b>http://my/share/point/_layouts/roxority_LookupZen/default.aspx</b> &mdash; just be sure to replace <i>http://my/share/point</i> with a valid full Site Collection URL pointing to your SharePoint system</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language</h3>
+<p>LookupZen has been localized for multiple languages. Changing this setting affects all user interface artifacts except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>LookupZen Product Center</i>:</p>
+<ul>
+<li><em>(Like site, or English)</em></li>
+<li><em>English</em></li>
+<li><em>Deutsch</em></li>
+</ul>
+<h3>Apply UNIX-style escaping</h3>
+<p>By default, LookupZen generates CSV data files using escaping patterns (for critical characters such as commas, line-breaks and quotes) that software written for Windows or Office is more likely to read flawlessly. On the <i>Configuration</i> page in the <i>LookupZen Product Center</i>, tick this check box to generate CSV data files using UNIX-style escaping patterns instead (particularly if you get errors while feeding your exported CSV data files to other, non-Office software).</p>

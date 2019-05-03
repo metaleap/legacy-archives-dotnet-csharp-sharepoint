@@ -1,0 +1,115 @@
+﻿<html>
+<head>
+	<style type="text/css">
+		body
+		{
+			background-color: Window;
+			color: WindowText;
+			font-family: Arial, Helvetica, "Helvetica Neue" , Sans-Serif;
+			font-size: 11px;
+			line-height: 1.8em;
+		}
+		h3
+		{
+			border-bottom: #c0c0a0 1px dotted;
+			margin: 0px !important;
+			padding: 0px !important;
+			font-size: 20px;
+			letter-spacing: -1px;
+			color: #909070;
+			font-weight: normal;
+		}
+		img
+		{
+			margin: 0px 3px 0px 3px;
+			width: 16px !important;
+			height: 16px !important;
+		}
+	</style>
+	<base href="%%BASE_URL%%/_layouts/roxority_UploadZen/help/res/" />
+
+	<script language="JavaScript" type="text/javascript">
+	function ShowDeployNote() {
+		var baseUrl = '%%BASE_URL%%', sep = '://', pos = baseUrl.indexOf(sep), pos2 = baseUrl.lastIndexOf('/');
+		if (pos > 0) {
+			baseUrl = baseUrl.substr(pos + sep.length);
+			if (pos2 > (pos + 2))
+				baseUrl = baseUrl.substr(0, baseUrl.lastIndexOf('/'));
+		}
+		document.getElementById('roxUpDeployHead').innerHTML = 'Kein Zugriff auf ' + baseUrl + '.';
+		document.getElementById('roxUpDeployPara').innerHTML = 'Die Bereitstellung ist m&ouml;glicherweise noch nicht abgeschlossen. ' + document.getElementById('roxUpDeployPara').innerHTML;
+		document.getElementById('roxUpDeployNote').style.display = 'block';
+	}
+	var roxUpTimer = setTimeout("ShowDeployNote();", 9000);
+	</script>
+
+</head>
+<body>
+	<p style="display: %%DISPLAY_WELCOME%%;">
+		<a target="_blank" href="http://roxority.ch/UploadZen"><img border="0" alt="http://SharePoint-Tools.net/UploadZen/" border="0" height="30" src="roxority.tlhr.png" style="height: 30px !important; width: 90px !important;" width="90" align="right" /></a>
+		<b>Willkommen!</b> Sie haben noch keine Dateien zum Upload markiert.</p>
+	<p style="display: %%DISPLAY_SUCCESS%%;">
+		<b style="background-color: #99FF99;">Upload vollendet!</b> Haben Sie noch mehr
+		hochzuladen?</p>
+	<div id="roxUpDeployNote" style="padding: 2px; margin: 2px; background-color: InfoBackground;
+		color: InfoText; display: %%DISPLAY_NOTE%%;">
+		<h3 id="roxUpDeployHead">
+			Bereitstellung noch nicht abgeschlossen!</h3>
+		<p id="roxUpDeployPara">
+			Bitten Sie den f&uuml;r diesen SharePoint-Server zust&auml;ndigen Administrator:</p>
+		<ul>
+			<li>die <a target="_blank" href="%%BASE_URL%%/_layouts/roxority_UploadZen/default.aspx?doc=clickonce_deployment_checklist">
+				Bereitstellungs-Checkliste</a> vollst&auml;ndig zu lesen und alle darin beschriebenen,
+				administrativen Schritte durchzuf&uuml;hren, damit <b>UploadZen</b> f&uuml;r andere
+				Benutzer korrekt funktioniert, sowie</li>
+			<li><i>erst danach</i> diesen Erinnerungshinweis &uuml;ber die <a target="_blank"
+				href="%%BASE_URL%%/_layouts/roxority_UploadZen/default.aspx?cfg=cfg#cfg_HideNote">Produktkonfiguration</a>
+				auszublenden. </li>
+		</ul>
+	</div>
+	<h3>
+		So laden Sie mehrere Dateien hoch:</h3>
+	<ul>
+		<li>Navigieren Sie zu einem Verzeichnis mit hochzuladenen Dateien &uuml;ber die Schaltfl&auml;che
+			<img src="openfolderHS.png" />
+			<b>Ordner wechseln...</b></li>
+		<li>Jede hochzuladene Datei &quot;zum Upload markieren&quot;, indem Sie:<ul>
+			<li>entweder die Datei doppelt anklicken oder</li>
+			<li>mehrere Dateien ausw&auml;hlen und die Schaltfl&auml;che
+				<img src="DoubleRightArrowHS.png" />
+				<b>Ausgew&auml;hlte Datei(en) zum Upload markieren</b> anklicken.</li>
+		</ul>
+		</li>
+		<li>Wiederholen Sie die obigen Schritte je nach Bedarf. Sobald Sie zum Upload bereit
+			sind, klicken Sie die Schaltfl&auml;che
+			<img src="PublishPlanHS.png" />
+			<b>Datei-Upload</b> an.</li>
+	</ul>
+	<h3>
+		Eine existierende Datei wird nicht gezeigt?</h3>
+	<ul>
+		<li>&Ouml;ffnen Sie das Drop-Down-Men&uuml;
+			<img src="filter2HS.png" />
+			<b>Dateifilter</b> und falls ein Dateifilter aktiviert ist, w&auml;hlen Sie
+			<img src="deletehs.png" />
+			<b>(Keine Dateifilter)</b> aus, um alle Dateien zu zeigen.</li></ul>
+	<h3>
+		Massenupload ganzer Ordnerstrukturen:</h3>
+	<ul>
+		<li>Navigieren Sie zum hochzuladenen Verzeichnis &uuml;ber die Schaltfl&auml;che
+			<img src="openfolderHS.png" />
+			<b>Ordner wechseln...</b></li>
+		<li>&Ouml;ffnen Sie nun das Drop-Down-Men&uuml;
+			<img src="openfolderHS.png" />
+			<b>Ordner wechseln...</b> und w&auml;hlen Sie den Men&uuml;befehl <b>Gesamten Ordnerinhalt
+				(Dateien und Unterordner) zum Massenupload markieren</b>.</li>
+		<li>Wiederholen Sie die obigen Schritte je nach Bedarf. Sobald Sie zum Upload bereit
+			sind, klicken Sie die Schaltfl&auml;che
+			<img src="PublishPlanHS.png" />
+			<b>Datei-Upload</b> an.</li>
+	</ul>
+	<script type="text/javascript" language="JavaScript" src="%%BASE_URL%%/_layouts/roxority_UploadZen/help/app/welcome.js">
+	</script>
+
+</body>
+</html>

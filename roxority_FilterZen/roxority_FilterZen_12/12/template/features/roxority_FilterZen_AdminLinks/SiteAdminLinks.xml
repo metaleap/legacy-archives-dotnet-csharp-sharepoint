@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="FilterZen Studio"
+        Sequence="84"
+        Description="" />
+	<CustomAction
+        Id="FilterZenConfig"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminConfig;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenWss"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminWss;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenToolLocalizer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminToolLocalizer;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenToolTransfer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminToolTransfer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenToolSiteUsers"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminToolSiteUsers;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenLic"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="16"
+        Title="$Resources:roxority_FilterZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="FilterZenHelp"
+		RequireSiteAdministrator="TRUE"
+        GroupId="FilterZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_FilterZen,SiteAdminHelp;"
+		Sequence="17"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_FilterZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

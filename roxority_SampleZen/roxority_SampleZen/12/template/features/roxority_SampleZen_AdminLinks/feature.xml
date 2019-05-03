@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="12345678-abcd-9999-eeff-5173ad000995" Title="ROXORITY SampleZen Internal System Feature (Required)" Description="" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Creator="roxority.com" SolutionId="8809fab4-e0a6-404a-b628-e4fee872d91c" Scope="Farm" Version="1.0.0.0" Hidden="TRUE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="SiteAdminLinks.xml" />
+	</ElementManifests>
+</Feature>

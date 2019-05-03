@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">roxority_LookupZenField</Field>
+    <Field Name="TypeDisplayName">$Resources:roxority_LookupZen,FieldType_Title</Field>
+    <Field Name="TypeShortDescription">$Resources:roxority_LookupZen,FieldType_Desc</Field>
+    <Field Name="ParentType">Lookup</Field>
+    <Field Name="InternalType">Lookup</Field>
+    <Field Name="SQLType">int</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="AllowBaseTypeRendering">TRUE</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="FieldTypeClass">roxority_LookupZen.roxority_LookupZenField, roxority_LookupZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01</Field>
+  </FieldType>
+</FieldTypes>

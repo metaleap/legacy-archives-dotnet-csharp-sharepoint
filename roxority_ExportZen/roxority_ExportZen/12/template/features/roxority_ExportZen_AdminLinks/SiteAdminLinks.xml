@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="ExportZen Studio"
+        Sequence="82"
+        Description="" />
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenToolExportActions"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminToolExportActions;"
+		Sequence="10"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen/default.aspx?cfg=tools&amp;tool=Tool_ExportActions" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenConfig"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminConfig;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenWss"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminWss;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenToolLocalizer"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminToolLocalizer;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenToolTransfer"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminToolTransfer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenToolSiteUsers"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminToolSiteUsers;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenLic"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="16"
+        Title="$Resources:roxority_ExportZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+		RequireSiteAdministrator="TRUE"
+        Id="ExportZenHelp"
+        GroupId="ExportZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_ExportZen,SiteAdminHelp;"
+		Sequence="17"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_ExportZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

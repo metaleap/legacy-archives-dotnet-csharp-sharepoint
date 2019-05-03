@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="12345678-abcd-9999-eeff-5173ad000005" Title="PrintZen Admin Links" Description="" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Creator="roxority.com" SolutionId="dce8c469-2132-425b-9065-151f090ea138" Scope="Farm" Version="1.0.0.0" Hidden="TRUE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="SiteAdminLinks.xml" />
+	</ElementManifests>
+</Feature>

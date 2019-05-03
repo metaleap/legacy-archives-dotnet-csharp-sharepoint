@@ -1,0 +1,142 @@
+<p>Die folgenden Einstellungen k&ouml;nnen f&uuml;r jede Druck-Ansicht durch administrative Benutzer auf der Seite <b>Druck-Ansichten</b> in Ihrem <i>PrintZen Studio</i> vorgenommen werden; via Websiteeinstellungen / PrintZen Studio / Druck-Ansichten:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">Register &quot;Men&#252;befehl und Integration&quot;:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name dieser Druck-Ansicht</h3>
+<p><b>(Texteingabefeld)</b></p><p>Dieser Name wird &uuml;blicherweise Endanwendern nirgends angezeigt, hilft Ihnen aber gegebenenfalls, die &Uuml;bersicht zu behalten.</p>
+<h3>Diese Druck-Ansicht ist...</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Websites)</b></p><p>Optional: w&auml;hlen Sie aus, in welchen Websites diese Druck-Ansicht verf&uuml;gbar sein wird. Standardm&auml;&szlig;ig steht Sie allen Websites zur Verf&uuml;gung und dies mu&szlig; normalerweise bei der Ersteinrichtung dieser Software auch vorerst nicht ge&auml;ndert werden. Nehmen Sie nur &Auml;nderungen vor, wenn Sie mit der in obigen Steuerelementen verwendeten Terminologie vertraut sind. Sollten Ihre &Auml;nderungen nicht die erwarteten Wirkungen erzielen, k&ouml;nnen Sie diese jederzeit auf "in allen Websites ohne Ausnahmen verf&uuml;gbar" zur&uuml;cksetzen und erneut inkrementell mit Ihren Ausnahmen experimentieren.</p>
+<p>Um eine Menge an SharePoint-Websites zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>verf&uuml;gbar in allen Websites</b> oder <b>verf&uuml;gbar in keinen Websites</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Websites aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Stammwebsite (der jeweils aktuellen Websitesammlung)</li>
+<li>Websites auf Basis der ausgew&auml;hlten Sitedefinitionen</li>
+<li>oder Websites mit den angegebenen Titeln, URL-Pfadfragmenten oder IDs.</li>
+</ul></p>
+<h3>PrintZen-Men&#252;befehl in folgenden Listen anzeigen</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Listen und Listenansichten)</b></p><p>W&auml;hlen Sie aus, in welchen Listen Endanwendern diese Druck-Ansicht als Men&uuml;befehl angeboten wird (im SharePoint 2007 "Aktionen"-Toolbarmen&uuml; sowie im SharePoint 2010/2013-"Liste"-Ribbon unter "Ansichten"; jeweils nur bei au&szlig;erdem aktiviertem "PrintZen Men&uuml;integration"-Websitesammlungsfeature und bei Listenansichten NUR, wenn deren "Toolbar Type"-Einstellung auf "Full" oder "Show" gesetzt ist, NICHT auf "Summary" oder "None").</p>
+<p>Um eine Menge an SharePoint-Listen zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Listen anzeigen</b> oder <b>in keinen Listen anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listen aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+</p><ul>
+<li>Listen der ausgew&auml;hlten Basistypen</li>
+<li>Listen der ausgew&auml;hlten Vorlagenarten</li>
+<li>Listen der ausgew&auml;hlten Basisvorlagen</li>
+<li>oder Listen mit den angegebenen Namen oder IDs.</li>
+</ul><p>
+Um eine Menge an SharePoint-Listenansichten zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Ansichten anzeigen</b> oder <b>in keinen Ansichten anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listenansichten aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Standardansicht</li>
+<li>versteckte Ansichten</li>
+<li>pers&ouml;nliche Ansichten</li>
+<li>oder Ansichten mit den angegebenen Namen oder IDs.</li>
+</ul></p>
+<h3>Verf&#252;gbarkeit in Anzeigeformularen (DispForm.aspx) und/oder Ansichten</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>Standardm&auml;&szlig;ig wird diese Druck-Ansicht (bei aktiviertem <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeature) in den Ribbons und Toolbars aller oben angegebenen Listen angeboten, und zwar <i>sowohl</i> in den oben angegebenen Ansichten <i>als auch</i> in jeder einzelnen <b>Eigenschaften anzeigen</b>-Formularseite (DispForm.aspx). Mit dieser Option k&ouml;nnen Sie die Verf&uuml;gbarkeit der Druck-Ansicht (in Ribbon und/oder Toolbar) bez&uuml;glich dieser Seitentypen einschr&auml;nken, falls erforderlich.</p>
+<ul>
+<li>Sowohl in Listenansichten (gem&#228;&#223; obigen Angaben) als auch in Elementanzeige-Listenformularen</li>
+<li>Nur in Listenansichten (gem&#228;&#223; obigen Angaben), nie in Elementanzeige-Listenformularen</li>
+<li>Nur in Elementanzeige-Listenformularen (gem&#228;&#223; obigen Angaben), nie in Listenansichten</li>
+</ul>
+<h3>Beschriftung f&#252;r PrintZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Beschriftung dieser Druck-Ansicht an, die im Drucken-Men&uuml;befehl f&uuml;r die oben angegebenen Listen angezeigt werden soll. (Geben Sie keine Beschriftung an, so wird der oben angegebene Name f&uuml;r diese Druck-Ansicht verwendet, oder falls ebenfalls leer, ihre interne ID.)</p>
+<p>Standardwert f&#252;r neue Druck-Ansichten:</p>
+<pre>$Resources:Tool_PrintActions_DefTitle</pre>
+<h3>Beschreibung f&#252;r PrintZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Beschreibung dieser Druck-Ansicht an, die im Drucken-Men&uuml;befehl f&uuml;r die oben angegebenen Listen angezeigt werden soll.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-b"><a href="#" onclick="roxTogDocTab('b');">Register &quot;Unterst&#252;tzte Seitenmodi&quot;:</a></h4><span class="rox-doctab rox-doctab-b">
+<h3>Druckansicht-Seitenmodus f&#252;r Bibliotheks- und Listenansichten</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>PrintZen-Seite</b><br/>&mdash; <i>erforderlich, wenn Sie f&#252;r diese Druck-Ansicht eine Designanpassung definiert haben</i></li>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r Listenelement-Anzeigeformulare</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>PrintZen-Seite</b><br/>&mdash; <i>erforderlich, wenn Sie f&#252;r diese Druck-Ansicht eine Designanpassung definiert haben</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r Kalenderansichten</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r PeopleZen-Webparts</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>PrintZen-Seite</b><br/>&mdash; <i>erforderlich, wenn Sie f&#252;r diese Druck-Ansicht eine Designanpassung definiert haben</i></li>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r alle anderen Webparts</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>PrintZen-Seite</b><br/>&mdash; <i>erforderlich, wenn Sie f&#252;r diese Druck-Ansicht eine Designanpassung definiert haben</i></li>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r Webpartzonen</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+<h3>Druckansicht-Seitenmodus f&#252;r Gesamter Seiteninhalt</h3>
+<p>W&auml;hlen Sie aus, welcher Seitentyp diese Druck-Ansicht f&uuml;r dieses Druckziel anzeigt.<br/><br/>Der <b>Original-Seitenmodus</b> zeigt die aktuelle Quellseite an, blendet jedoch nicht-inhaltliche Artefakte (Ribbon, Navigation, Schnellstart etc.) sowie alle Inhalte (au&szlig;er dem vom Endanwender ausgew&auml;hlten Druckziel) aus. Dieser Seitenmodus erfordert die Aktivierung des <b>PrintZen Men&uuml;integration</b>-Websitesammlungsfeatures.<br/><br/>Der <b>PrintZen-Seitenmodus</b> zeigt eine PrintZen-eigene fast-leere Seite (mit dem vom Endanwender ausgew&auml;hlten Druckziel an). Falls Sie eine <b>Designanpassung</b> f&uuml;r diese Druck-Ansicht implementiert haben, wird diese <i>nur</i> vom <b>PrintZen-Seitenmodus</b> unterst&uuml;tzt.</p>
+<ul>
+<li><b>Originalseite</b><br/>&mdash; <i>&#246;ffnet dieselbe Quellseite, aber blendet alle Inhalte und Artefakte au&#223;er dem Druckziel aus</i></li>
+<li><b>Keine</b><br/>&mdash; <i>diesen Zieltyp in dieser Druckansicht nicht unterst&#252;tzen</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><a href="#" onclick="roxTogDocTab('c');">Register &quot;Druckansicht und -Inhalte&quot;:</a></h4><span class="rox-doctab rox-doctab-c">
+<h3>Diese Druck-Ansicht wird ge&#246;ffnet</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie aus, wie diese Druck-Ansicht in Endanwender-Browsern aufgerufen werden soll.</p>
+<ul>
+<li><b>in einem neuen Popup-Fenster</b><br/>&mdash; <i>empfohlen</i></li>
+<li><b>in einem modalen Popup-Overlay-IFRAME</b><br/>&mdash; <i>(nicht verf&#252;gbar in WSS 3.0 / MOSS 2007)</i></li>
+<li>im aktuellen Browser-Tab</li>
+</ul>
+<h3>In der Druck-Ansicht eine Drucken-Schaltfl&#228;che und Kurzinfo anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Beides wird im endg&uuml;ltigen Ausdruck grunds&auml;tzlich nicht mit ausgegeben, kann sich aber f&uuml;r Ihre Endanwender als hilfreich erweisen.<br/><br/>Wird diese Druck-Ansicht gem&auml;&szlig; obiger Auswahl <b>in einem modalen Popup-Overlay-IFRAME</b> ge&ouml;ffnet, dann kann diese Option <b>nicht deaktiviert werden</b> und es wird in der Druck-Ansicht <b>immer</b> eine Info-Leiste mit einer Drucken-Schaltfl&auml;che angezeigt (im finalen Ausdruck jedoch nie).</p>
+<h3>Sofort den Druckerauswahl-Dialog des Browsers automatisch aufrufen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls angekreuzt, l&ouml;st diese Option sofort beim Aufruf dieser Druck-Ansicht den Drucken-Dialog des Endanwender-Browsers aus.</p>
+<h3>[Listen mit PrintZen-Seitenmodus] Aktuelle Listenansicht verwenden</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Aktivieren Sie diese Option, um immer nur in der <i>aktuell angezeigten</i> Listenansicht (statt der Standardansicht) enthaltene Elemente (gem&auml;&szlig; der Standardeinstellungen dieser Listenansicht gefiltert und sortiert &mdash; <b>ignoriert jedoch</b> benutzerseitig aktuell eingestellte Sortierung, Filter oder Paginierung) einzubeziehen. Deaktivieren Sie diese Option, um immer alle Listenelemente in der Originalreihenfolge darzustellen.</p>
+<h3>[Listen mit PrintZen-Seitenmodus] Aktuelle Sortierung anwenden</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Um die aktuelle (durch die Spaltenk&ouml;pfe interaktiv gesetzte) Sortierreihenfolge des Endanwenders (statt die durch die Ansicht vorgegebene Standardsortierung) zu verwenden, kreuzen Sie diese Option an.</p>
+<h3>[Listen mit PrintZen-Seitenmodus] Anzeige von Ordnerinhalten</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie aus, ob der aktuell durch den Endanwender ge&ouml;ffnete Listenordner ber&uuml;cksichtigt werden soll.</p>
+<ul>
+<li>Nur Elemente des aktuellen Ordners anzeigen (aber keine Unterordner)</li>
+<li>Nur Elemente und Unterordner des aktuellen Ordners anzeigen</li>
+<li>Keine Ordner anzeigen, aber alle Elemente aus allen Ordnern und Unterordnern</li>
+<li>Alle Elemente, Ordner und Unterordner der Liste anzeigen</li>
+</ul>
+<h3>[Listen mit PrintZen-Seitenmodus] Aktuelle Paginierung anwenden</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Um die aktuelle Seitenbl&auml;tterungsposition des Endanwenders zu verwenden (falls vorhanden), kreuzen Sie diese Option an.</p>
+<h3>[Listen mit PrintZen-Seitenmodus] Aktuelle Filter anwenden (nur FilterZen)</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls aktiviert, werden immer nur jene Listenelemente in die Druck-Ansicht mit aufgenommen, die von den aktuell auf die jeweilige Listenansicht angewendeten Filtern zugelassen werden. (Es werden <b>nur</b> Filter unterst&uuml;tzt, die von einem verbundenen <a target="_blank" href="http://roxority.com/filterzen/">FilterZen-Filterwebpart</a> gesendet werden.)</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-d"><a href="#" onclick="roxTogDocTab('d');">Register &quot;Designanpassung&quot;:</a></h4><span class="rox-doctab rox-doctab-d">
+<h3>Webpartseite f&#252;r eigenes Design dieser Druck-Ansicht</h3>
+<p><b>(Texteingabefeld)</b></p><p><b>NUR unterst&uuml;tzt von Druck-Ansichten im PrintZen-Seitenmodus (siehe Registerkarte <i>Unterst&uuml;tzte Seitenmodi</i>)!</b><br/><br/>Standardm&auml;&szlig;ig enth&auml;lt die Druck-Ansicht nichts au&szlig;er dem ausgew&auml;hlten Druckziel. Um zus&auml;tzliche Inhalte mit einzubinden, k&ouml;nnen Sie eine eigene Webpartseite anlegen (nur die Layoutvorlage <i>Ganze Seite, vertikal</i> wird unterst&uuml;tzt) und deren absolute oder relative URL hier angeben (z.B. <b>/Freigegebene Dokumente/UnsereDruckansicht.aspx</b>). In diesem Fall wird die Druck-Ansicht versuchen, alle auf dieser Seite enthaltenen Webparts zu laden und anzuzeigen. Ihre Webpartseite ben&ouml;tigt allerdings ein Platzhalterwebpart beliebigen Typs (z.B. ein leeres oder gef&uuml;lltes Inhaltseditor-Webpart) mit dem exakten Titel PRINTZEN_TARGET, um festzulegen, an welcher Position PrintZen das ausgew&auml;hlte Druckziel plazieren soll. Das Platzhalter-Webpart wird nicht mit ausgedruckt, an seiner Stelle wird stattdessen das ausgew&auml;hlte Druckziel von PrintZen eingebunden.<br/><br/>Hinweise: es werden ggf. nicht alle Webparts exakt so angezeigt wie erwartet, da es sich um &quot;tempor&auml;re Webpartklone&quot; handelt, in einem komplett anderen Seitenkontext und technisch gesehen nicht auf einer "vollwertigen Webpartseite" &mdash; experimentieren Sie selbst. Webpartverbindungen werden z.B. nicht unterst&uuml;tzt.</p>
+<h3>Titelleiste der Webpartseite mit einbinden</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Standardm&auml;&szlig;ig bindet PrintZen das Titelleisten-Webpart, welches in fast allen benutzerdefinierten Webpartseiten normalerweise enthalten, aber typischerweise oft nicht angepa&szlig;t wird, <i>nicht</i> mit ein. Kreuzen Sie diese Option an, wenn das Titelleisten-Webpart der obigen Webpartseite in diese Druck-Ansicht mit eingebunden werden soll.</p>
+<h3>Platzhalternamen mit Werten anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Zeigt in dieser Druck-Ansicht alle Platzhalter, die in den Eigenschaften und Inhalten s&auml;mtlicher Webparts (au&szlig;er des Platzhalterwebparts) auf der obigen Seite eingebunden werden k&ouml;nnen. (Nicht empfehlenswert f&uuml;r Endanwender-Druckansichten, aber tempor&auml;r, w&auml;hrend des Entwurfs Ihrer eigenen Webpartseite ggf. h&ouml;chst n&uuml;tzlich.)
+<br/><br/>
+Welche Platzhalter zur Verf&uuml;gung stehen sowie deren Werte h&auml;ngen jeweils stark vom aktuellen Webpart- und Druckkontext ab. Generell sind folgende Platzhalter normalerweise verf&uuml;gbar, aber wir empfehlen, deren typische Werte und Verf&uuml;gbarkeit in Ihrem eigenen Kontext interaktiv selbst zu inspizieren, indem Sie diese Option w&auml;hrend der Designphase ankreuzen.
+<ul>
+<li>{$PrintZen_WebPart_Title$} &mdash; der Titel des zu druckenden Webparts (alle Modi)</li>
+<li>{$PrintZen_List_Title$} &mdash; der Titel der zu druckenden Liste (im Listenansicht-Modus; im Elementanzeigeformular-Modus der Titel der Liste, die den zu druckenden Listeneintrag enth&auml;lt)</li>
+<li>{$PrintZen_Item_Title$} &mdash; der Titel des zu druckenden Listenelements (im Elementanzeigeformular-Modus)</li>
+<li>{$PrintZen_View_Title$} &mdash; der Titel der zu druckenden Listenansicht (im Listenansicht-Modus)</li>
+<li>{$PrintZen_Context_Title$} &mdash; der Titel des Webparts, der Liste und Ansicht, oder des Elements, je nach Modus</li>
+<li>{$PrintZen_PrintAction_<i>xyz</i>$} &mdash; anstelle von <i>xyz</i>, verschiedene Platzhalter, welche die meisten Einstellungen dieser Druck-Ansicht enthalten</li>
+<li>{$PrintZen_QueryString_a$} &mdash; die ID dieser Druck-Ansicht</li>
+<li>{$PrintZen_QueryString_l$} &mdash; die ID des zu druckenden Webparts (im PeopleZen-Modus) oder die ID der Liste (im Listenansicht-Modus und Elementanzeigeformular-Modus)</li>
+<li>{$PrintZen_QueryString_View$} &mdash; die Ansichts-ID (im Listenansicht-Modus), Element-ID (im Elementanzeigeformular-Modus) oder die URL der Quell-Webpartseite (im PeopleZen-Modus)</li>
+<li>{$PrintZen_TitleBar_Caption$} &mdash; der f&uuml;r die Titelleiste der obigen Webpartseite konfigurierte Untertitel.</li>
+<li>{$PrintZen_TitleBar_Description$} &mdash; die f&uuml;r die Titelleiste der obigen Webpartseite konfigurierte Beschreibung.</li>
+<li>{$PrintZen_TitleBar_Title$} &mdash; der f&uuml;r die Titelleiste der obigen Webpartseite konfigurierte Titel.</li>
+<li>{$PrintZen_TitleBar_Image$} &mdash; das f&uuml;r die Titelleiste der obigen Webpartseite konfigurierte Bild.</li>
+</ul></p>
+<h3>Der Seite ein &quot;ScriptManager&quot;-Steuerelement hinzuf&#252;gen (NICHT empfohlen)</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Unter sehr seltenen und unwahrscheinlichen Umst&auml;nden kann die Verwendung von Drittanbieter-Webparts auf Ihrer eigenen Design-Webpartseite zu einer Fehlermeldung f&uuml;hren, da&szlig; ein "ScriptManager" erforderlich sei.<br/><br/><b>NUR</b> wenn Sie eine derartige Fehlermeldung erhalten, sollten Sie diese Option ankreuzen: denn ist diese ohne Erfordernis aktiviert, f&uuml;hrt dies leider zu einer ganz <b>anderen</b> Skript-Fehlermeldung f&uuml;r Ihre Endanwender, was Sie nat&uuml;rlich vermeiden m&ouml;chten.</p>
+</span>

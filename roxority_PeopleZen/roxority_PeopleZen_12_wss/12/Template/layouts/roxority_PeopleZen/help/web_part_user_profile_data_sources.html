@@ -1,0 +1,43 @@
+﻿<p>
+	The user profiles listed in your PeopleZen Web Parts are provided by a something
+	called a <i>Data Source</i>. A PeopleZen <i>Data Source</i> defines the source of
+	the information to be displayed, and how to connect to that source (among other
+	settings).</p>
+<p>
+	After installation, there is only one pre-defined PeopleZen Data Source available,
+	titled <b>(Default Data Source)</b>. You can customize it or add additional <i>Data
+		Sources</i> via Site Settings / PeopleZen Studio / Data Sources. Each PeopleZen
+	Web Part then lets you select which of your <i>Data Sources</i> to use (in its settings
+	tool-pane, via web part menu / Modify Web Part).</p>
+<p>
+	Before reviewing <a href="?doc=itemref_DataSources">its many other settings</a>,
+	the primary choice for each <i>Data Source</i> is the <b>Connection provider</b> setting.
+	The currently supported choices are:</p>
+<h3>
+	Farm User Profiles</h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2013 / 2010 Server
+	(SPS) and Microsoft Office SharePoint Server (MOSS) 2007 (and is not available 
+	on SharePoint 2013 / 2010 Foundation (SPF) or Windows SharePoint Services (WSS) 3.0).</p>
+<p>
+	Retrieves the farm-wide shared user profile information (which is often imported
+	from Active Directory) stored in the current default <i>User Profiles Service Application</i>
+	(SPS 2013 / 2010) / the current default <i>Shared Service Provider</i> (MOSS 2007).</p>
+<h3>
+	Site User Accounts (People and Groups)</h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2013 / 2010 Foundation
+	(SPF) and Windows SharePoint Services (WSS) 3.0.</p>
+<p>
+	Retrieves the user profile information (plus optionally groups if desired) stored
+	in the current Site Collection&#39;s <i>User Information List</i> (at /_catalogs/users).</p>
+<h3>
+	Active Directory</h3>
+<p>
+	Retrieves user profile information stored in any LDAP-compatible directory service,
+	such as Domino or Active Directory.</p>
+<h3>
+	Database</h3>
+<p>
+	Retrieves user profile information from SQL Server, Oracle or any other database
+	accessible via OLEDB, ODBC or ADO.NET.</p>

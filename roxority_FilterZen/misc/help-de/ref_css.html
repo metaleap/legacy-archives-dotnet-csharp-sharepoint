@@ -1,0 +1,41 @@
+﻿<p>
+	Wenn dynamisch generierte oder manuell angelegte, aktivierte interaktive Filter
+	ihre Filtersteuerelemente in das Webpart einbinden, werden diese in HTML-span-Elementen
+	repräsentiert, die mit den wie folgt beschriebenen CSS-Klassen dekoriert werden,
+	um volle Anpaßbarkeit ihres visuellen Erscheinungsbilds zu gewährleisten. Soweit
+	nicht anders gekennzeichnet, gelten für diese Elemente bereits einige vordefinierte
+	Gestaltungsvorschriften in <b style="white-space: nowrap;">/_layouts/roxority_FilterZen/roxority_FilterZen.css</b>.</p>
+<ul>
+	<li><b>span.rox-ifilter-all</b> &mdash; der gesamte umgebende Bereich aller Webpart-Inhalte
+		(außer im Webpartseiten-Bearbeitungsmodus, wenn diesem Element weitere kontextuelle
+		Informationen vorangestellt werden).</li>
+	<li><b>span.rox-ifilter-<i>webpartid</i></b> &mdash; der gesamte umgebende Bereich aller
+		interaktiven Filtersteuerelemente, exklusive <a href="?doc=advanced#s2">benutzerdefinierten
+			HTML für manuelle Neufilterung</a> (falls vorhanden), wobei <i>webpartid</i>
+		jeweils der aktuellen Webpart-ID entspricht. Keine Gestaltungsvorschriften vordefiniert.</li>
+	<li><b>span.rox-ifilter</b> &mdash; der gesamte umgebende Bereich eines interaktiven 
+		Filtersteuerelements inklusive der vorangestellten Filterbeschriftung (falls 
+		vorhanden).</li>
+	<li><b>span.rox-ifilter-label</b> &mdash; die einem interaktiven Filtersteuerelement 
+		vorangestellte Filterbeschriftung (falls vorhanden). Gestaltungsvorschriften nur 
+		bei <i>angewendeten SharePoint-Toolbar-Stylings</i> vordefiniert.</li>
+	<li><b>span.rox-ifilter-control</b> — der unmittelbar umgebende Bereich eines 
+		interaktiven Filtersteuerelements. Gestaltungsvorschriften nur bei <i>
+		angewendeten SharePoint-Toolbar-Stylings</i> vordefiniert.</li>
+	<li><b>span.rox-ifilter-datetime</b> &mdash; der unmittelbar umgebende Bereich eines 
+		Datumsfiltersteuerelements (innerhalb eines <i>span.rox-ifilter-control</i>).</li>
+	<li><b>span.rox-ifilter-button</b> &mdash; der umgebende Bereich von 
+		<i>benutzerdefiniertem HTML für manuelle Neufilterung</i> (falls vorhanden).</li>
+	<li><b>a.rox-ifilter-button</b> — die <i>Filtern</i> oder <i>Filter löschen</i>-Hyperlinks 
+		aus den vordefinierten HTML-Vorlagen <i>Filtern-Hyperlink</i> und <i>Filtern- 
+		und Filter entfernen-Hyperlinks</i>.</li>
+	<li><b>input.rox-ifilter-button</b> — die <i>Filtern</i> oder <i>Filter löschen</i>-Schaltflächen 
+		aus den vordefinierten HTML-Vorlagen <i>Filtern-Schaltfläche</i> und <i>Filtern- 
+		und Filter entfernen-Schaltflächen</i>.</li>
+	<li><b>a.rox-ifilter-button-clear</b> — der <i>Filter löschen</i>-Hyperlink aus der 
+		vordefinierten HTML-Vorlage <i>Filtern- und Filter entfernen-Hyperlinks</i>.</li>
+	<li><b>input.rox-ifilter-button-clear</b> — die <i>Filter löschen</i>-Schaltfläche 
+		aus der vordefinierten HTML-Vorlage <i>Filtern- und Filter 
+		entfernen-Schaltflächen</i>.</li>
+</ul>
+

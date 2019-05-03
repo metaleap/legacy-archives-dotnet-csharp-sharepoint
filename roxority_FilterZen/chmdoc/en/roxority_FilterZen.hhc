@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x801220">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Error message? Open docs\FilterZen-Help.html instead.">
+		<param name="Local" value="intro.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Solution Installation and Feature Activation">
+		<param name="Local" value="setup.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Walkthrough: using FilterZen">
+		<param name="Local" value="webpart.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="General Filter Settings">
+		<param name="Local" value="general.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Text Filters">
+		<param name="Local" value="text_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Choice Filters">
+		<param name="Local" value="choice_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Date Filters">
+		<param name="Local" value="date_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="List Lookup Filters">
+		<param name="Local" value="list_lookup_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="User Filters">
+		<param name="Local" value="user_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Page Column Filters">
+		<param name="Local" value="page_field_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="URL / Page Request Filters">
+		<param name="Local" value="url_query_string_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="SQL Data Filters">
+		<param name="Local" value="sql_data_lookup_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Business Data Connectivity (BCS/BDC) Filters">
+		<param name="Local" value="bcs_bdc_business_data_catalog_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FilterZen Web Part Settings">
+		<param name="Local" value="advanced.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="'How do I...?' Recipes">
+		<param name="Local" value="how_tos.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FilterZen BCS/BDC Item Builder Web Part">
+		<param name="Local" value="bcs_bdc_business_data_item_builder_web_part.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Configuration Settings">
+		<param name="Local" value="farm_site_config.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reference: URL Setting Parameters">
+		<param name="Local" value="ref_url_settings.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reference: CSS Classes">
+		<param name="Local" value="ref_css.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release Notes">
+		<param name="Local" value="release_notes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="End-User License Agreement (EULA)">
+		<param name="Local" value="eula.html">
+		</OBJECT>
+
+</UL>
+</BODY></HTML>

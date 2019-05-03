@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://roxority/_layouts/roxority_UploadZen/Files.asmx?wsdl" filename="Files.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://roxority/_layouts/roxority_UploadZen/Files.asmx?disco" filename="Files.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

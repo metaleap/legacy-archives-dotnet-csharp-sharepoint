@@ -1,0 +1,109 @@
+﻿<h3>
+	1. The PeopleZen Setup Package</h3>
+<p>
+	The PeopleZen setup package (the <a href="http://roxority.s3.amazonaws.com/roxority_PeopleZen.zip">
+		roxority_PeopleZen.zip</a> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> &mdash; a graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling PeopleZen to and from a SharePoint
+		server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint farm or web front-end server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>docs</b> &mdash; a folder containing this product documentation in Microsoft
+		Compiled HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing the PeopleZen Solution Package</h3>
+<p>
+	Run <b>Deploy.exe</b> (under user account credentials added to the <i>Farm Administrators</i>
+	group in <i>Central Administration</i>, on the &quot;primary&quot; SharePoint farm
+	or web front-end server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i>) and when the <i>Welcome</i> screen
+	is displayed, click <i>Next</i> to start a series of system checks. To proceed with
+	the installation, all system checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	<b>PeopleZen</b> to. You can also de-select those Site Collections you <i>do not</i>
+	want the setup wizard, upon successful deployment, to <i>activate</i> the Web Part
+	Feature immediately for you on.
+</p>
+<div class="rox-info">
+	<b>Note:</b> even when <b>PeopleZen</b> is deployed in a Web Application, before
+	you can add and start using the <b>PeopleZen</b> <i>User Profiles Web Part</i> on
+	Web Part Pages inside a web site, the <b>PeopleZen User Profiles Web Part</b> <i>Feature</i>
+	needs to be <i>activated</i> for the parent Site Collection, as described in the
+	<i>Feature Activation</i> section below. For now, the setup wizard performs these
+	activations for you, depending on your selections.</div>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup02.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start using the <b>PeopleZen</b>
+	<i>User Profiles Web Part</i> on Web Part Pages inside the previously selected Site
+	Collections immediately.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature</h3>
+<p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> is a <i>SharePoint Site Collection-scoped
+		Feature</i>, which needs to be &#39;activated&#39; on each Site Collection it
+	is to be used in.</p>
+<ol>
+	<li>Start from the Web Part Page you want to use the Web Part on. Select <i>Site Settings</i>
+		from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root web&#39;s <i>Site Settings</i>
+		page now displayed, click the <i>Site Collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page should contain a row titled <b>PeopleZen
+		Web Part</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to make the Web Part available
+				to all web sites, Web Part galleries and Web Part Pages inside this site collection;
+				or click the <i>Deactivate</i> button to disable the Web Part throughout this site
+				collection.<ul>
+					<li>Note: if you do deactivate the Site Collection Feature, existing <b>PeopleZen</b>
+						Web Parts will continue to work: the feature activation status only controls whether
+						the Web Part is available inside your Site Web Part Galleries.</li></ul>
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>PeopleZen</b> solution package was not
+				yet deployed to this web application. On the <i>System Settings</i> page (<i>Operations</i>
+				in SharePoint 2007) in the <i>Central Administration</i>, click <i>Manage Farm Solutions</i>
+				(<i>Solution management</i> in SharePoint 2007). On the <i>Solution Management</i>
+				page, click <b>roxority_peoplezen_xyz.wsp</b> (the <i>xyz</i> part will be different
+				depending on your SharePoint version) to open the <i>Solution Properties</i> page.
+				Click <i>Deploy Solution</i>, then select this Site Collection&#39;s parent web
+				application and click <i>OK</i>. (The deployment is delegated to a background job
+				scheduled to run either at the date and time specified, or as soon as possible.
+				Once started, it may take this job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>

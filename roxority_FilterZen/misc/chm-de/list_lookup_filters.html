@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Listen-Lookupfilter</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+	<h1>Listen-Lookupfilter</h1>
+<p>Create a List lookup filter to send filters based on List data. Whether you let 
+	users pick a List item to use in interactive mode, or specify the source item to 
+	use directly, the filter value being sent is always the current, live value of a 
+	Column you chose.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_list_lookup.png" title="" /></p>
+<h3>View URL of the Lookup List<a name="s0"></a></h3>
+<p>Specify the URL of the View used to access the List and retrieve its data. The 
+	View provides initial pre-filtering and sorting. A View URL includes the file 
+	name of the View page (such as <i>AllItems.aspx</i>).</p>
+<p>You can specify a full, absolute URL (those starting with http:// or https:// ). 
+	Also supported are site-relative URLs (those starting with / ), to which the 
+	site collection root web URL will be prepended at run time, and web-relative 
+	URLs (those neither starting with http:// nor https:// nor with / ), to which 
+	the current web URL will be prepended at run time.</p>
+<h3>Value Column and Display Column<a name="s1"></a></h3>
+<p>Specify the internal name of the Column in the lookup List providing the filter 
+	value to be sent. Typically this is also the Column you will want to use for 
+	displaying filter choices, however, you may also optionally specify another 
+	internal name for the display Column.</p>
+
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+</body>
+</html>

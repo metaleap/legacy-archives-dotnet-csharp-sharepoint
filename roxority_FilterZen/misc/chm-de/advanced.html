@@ -1,0 +1,245 @@
+<html>
+	<head>
+		<title>FilterZen-Webparteinstellungen</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+	<h1>FilterZen-Webparteinstellungen</h1>
+<h3>
+	&Uuml;berblick<a name="s0"></a></h3>
+<p>
+	Im Kapitel <a href="webpart.html">Schnelldurchlauf: Verwenden des Webparts</a> 
+	wurde ein einfaches Filterszenario einer
+	<i>Listenansicht</i> nach zwei <i>Aufgaben</i>-Listenspalten,
+	<i>Priorit&auml;t</i> und <i>Status</i>, demonstriert. Bei der Umsetzung 
+	realistischerer und komplexerer Szenarieren helfen Ihnen die folgenden 
+	Funktionen, Optionen und Hinweise weiter:</p>
+<ul>
+	<li><b>Filternamen</b> &mdash; bei Listen m&uuml;ssen <a href="#s1">die internen Spaltennamen, 
+		nicht deren Anzeigenamen (Spaltentitel)</a>, verwendet werden.</li>
+	<li><b>Filternamen</b> &mdash; aus verschiedenen Gr&uuml;nden wollen Sie vielleicht <a href="#s2">
+		den internen Spaltennamen eigene URL-Parameternamen zuordnen</a>.</li>
+	<li><b>Filterdiagnose</b> &mdash; funktionieren Ihre Filter nicht wie erwartet, 
+		nutzen Sie die <a href="#s3">Diagnoseausgabe aller Filter</a>, die der URL 
+		entnommen und an verbundene Webparts gesendet werden.</li>
+	<li><b>Parameterb&uuml;ndlung</b> &mdash; zum Einsatz auf 
+		MOSS-Erweiterte-Suche-Ergebnisseiten oder zur Minimierung der Anzahl der URL-Filterparameter 
+		k&ouml;nnen <a href="#s4">mehrere Filter in einem URL-Parameter geb&uuml;ndelt werden</a>.</li>
+	<li><b>Sammelfilter</b> &mdash; um fortgeschrittenen Anwendern oder Webdesignern 
+		mehr Flexibilit&auml;t zu bieten, lassen Sie <a
+		href="#s5">per Sammelfilter beliebige URL-Parameterfilter abfangen</a>.</li>
+</ul>
+<h3>
+	Interne Listenspaltennamen<a name="s1"></a></h3>
+<p>
+	Wenn Sie ein <i>Listenansicht</i>-Webpart (oder ein <i>Datenansicht</i>-Webpart 
+	mit einer SharePoint-Liste oder -Dokumentbibliothek als Datenquelle) verbinden, 
+	erwarten diese Filter-empfangenden Standardwebparts <i>zwingend</i>, da&szlig; 
+	verbundene Filter-sendende Webparts wie das <b>FilterZen URL-Filter</b>-Webpart 
+	Filternamen senden, die <i>exakt</i> den <b>internen</b> Spaltennamen 
+	entsprechen (welche sich <i>nie mehr</i> &auml;ndern, sobald eine Spalte erzeugt 
+	wurde), statt den aktuellen Anzeigenamen (<b>Spaltentiteln</b>, welche durch 
+	Endanwender jederzeit ge&auml;ndert werden <i>k&ouml;nnen</i>).</p>
+<div class="rox-info" style="background-image: url('hhelp.gif');">
+	Der <i>interne Name</i> einer Spalte wird erzeugt, wenn eine Spalte initial 
+	angelegt wird, und ist von nun an unver&auml;nderbar, selbst wenn der <i>Spaltentitel</i> 
+	nachtr&auml;glich wiederholt auf SharePoint&#39;s <i>Spalte &auml;ndern</i>-Seite 
+	ver&auml;ndert werden kann. Die Muster interner Spaltennamen variieren: einige 
+	vordefinierte Spalten in SharePoint&#39;s Standardlistendefinitionen haben 
+	interne Namen wie <i>AssignedTo</i> f&uuml;r die &quot;Zugewiesen an&quot;-Spalte in <i>
+	Aufgaben</i>-Listen, oder <i>_ModerationComments</i> f&uuml;r die &quot;Kommentare 
+	zur Genehmigung&quot;-Spalte in beliebigen Listen. Eine vom Benutzer angelegte eigene Spalte mit einem 
+	initialen Spaltentitel namens &quot;Test-Link&quot; wird hingegen zum Beispiel den 
+	internen Spaltennamen <i>Test_x002d_Link</i> 
+	erhalten.</div>
+<p>
+	<b>FilterZen URL-Filter</b> kann an dieser Anforderung, Filternamen zu senden, 
+	die <i>exakt</i> den internen Spaltennamen entsprechen, nichts &auml;ndern &mdash; 
+	sie wird von SharePoint so vorgegeben. Aufgrund von Einschr&auml;nkungen in der 
+	aktuellen Architektur von Webpartverbindungen kann es noch nicht einmal 
+	ermitteln, welche Listen &uuml;berhaupt von ihm gefiltert werden. Da das <b>FilterZen URL-Filter</b>-Webpart 
+	somit keinen direkten Zugang zu den Filterspalten erhalten kann, kann es auch 
+	nicht anhand von Spaltentiteln, die Sie andernfalls direkt eingeben k&ouml;nnten, die 
+	entsprechenden internen Spaltennamen ermitteln. Daher m&uuml;ssen Sie die internen 
+	Spaltennamen selbst ermitteln und als Filternamen eingeben.</p>
+<p>
+	Um diesen Vorgang so einfach wie m&ouml;glich zu gestalten, haben wir ein 
+	Hilfswerkzeug direkt in den Webparteinstellungen-Arbeitsbereich eingebaut, mit 
+	dem Sie im Handumdrehen den korrekten Filternamen, also den <i>internen 
+	Spaltennamen</i>, f&uuml;r eine zu filternde Listenspalte ermitteln. Sobald Sie 
+	dieses Werkzeug eingeblendet haben durch Klick auf den Verbindung mit Liste</i>-Link, 
+	k&ouml;nnen Sie die Liste ausw&auml;hlen, die Sie filtern, um daraufhin alle ihre Spalten 
+	aufzulisten.
+	W&auml;hlen Sie nun die zu filternde Spalte aus, und es wird Ihnen der interne 
+	Spaltenname angezeigt. Kopieren Sie ihn und f&uuml;gen Sie ihn in das bereits aus dem 
+	Kapitel <a href="webpart.html">Schnelldurchlauf: Verwenden des Webparts</a> bekannte URL-Parameter-Textfeld 
+	ein:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/de/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	Falls Sie ein <i>Datenansicht</i>-Webpart filtern, dessen Daten aus einer Liste 
+	in einer <i>anderen</i> Website oder Websitesammlung gespeist werden, geben Sie 
+	die entsprechende Website-URL in das Textfeld des Hilfswerkzeugs ein und klicken 
+	Sie auf <i>OK</i>, um die Liste im Listenfeld darunter anzuzeigen und ausw&auml;hlen zu 
+	k&ouml;nnen.</p>
+<h3>
+	Parameternamen Spaltennamen zuordnen<a name="s2"></a></h3>
+<p>
+	Anhand der bisherigen Beispiele funktioniert das <b>FilterZen URL-Filter</b>-Webpart 
+	augenscheinlich einfach so, da&szlig; alle seine konfigurierten internen Spaltennamen 
+	in den
+	URL-Parametern eines jeden Webpartseitenaufrufs geortet werden und die 
+	entsprechenden Filter an verbundene Webparts gesendet werden, wenn diese 
+	URL-Parameter vorhanden sind.</p>
+<p>
+	Aus verschiedenen Gr&uuml;nden m&ouml;chten Sie aber vielleicht URL-Parameter verarbeiten, 
+	die
+	<b>andere Namen</b> haben als die zu ihnen geh&ouml;rigen internen Spaltennamen:</p>
+<ul>
+	<li>Die internen Spaltennamen sehen oft obskur und undurchsichtig aus (&quot;abschreckend 
+		technisch und intern&quot;), oder k&ouml;nnen auch einfach zu lang werden. Ihre 
+		Usabilitystrategie oder Informationsarchitektur empfiehlt m&ouml;glicherweise hoch 
+		lesbare URLs mit kurzen, einpr&auml;gsamen Parameternamen.</li>
+	<li>Sie m&ouml;chten Ihre internen Filterdesigns vielleicht abstrahieren oder 
+		nachtr&auml;glich anpassen, ohne den gehabten Aufruf Ihrer Filter durch Anwender oder 
+		Webdesigner &uuml;ber die URL zu &auml;ndern.</li>
+</ul>
+<p>
+	Um einen beliebigen gew&uuml;nschten Parameternamen, wie zum Beispiel <i>T</i>, einem 
+	beliebigen internen Spaltennamen, wie zum Beispiel <i>Title</i> zuzuordnen, 
+	geben Sie statt wie bisher nur eine Textzeile mit dem internen Spaltennamen nun 
+	in das <i>URL-Parameter</i>-Textfeld eine Textzeile ein, die sowohl den 
+	Parameternamen als auch den Spaltennamen enth&auml;lt, verbunden durch einen
+	<nobr style="background: infobackground; color: InfoText; border: solid 1px #ccc;">&nbsp;=&gt;&nbsp;</nobr>
+	&quot;Trennpfeil&quot;:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 316px;" src="help/de/res/adv_02.png"
+		title="" />
+</p>
+<h3>
+	Diagnosemodus<a name="s3"></a></h3>
+<p>
+	Funktioniert ein Filter nicht wie erwartet, ist es hilfreich, herausfinden zu 
+	k&ouml;nnen, welche Filter das <b>FilterZen URL-Filter</b>-Webpart genau anhand der 
+	aktuellen URL und der aktuellen Webparteinstellungen generiert. Das <b>FilterZen URL-Filter</b>-Webpart 
+	erzeugt exakt diese Diagnoseausgabe <i>immer</i>, wenn sich die Webpartseite im 
+	Entwurfsmodus befindet. Wechseln Sie also auf der Seite, die nicht die erwartete 
+	Filterung produziert, einfach mit <i>Seite bearbeiten</i> aus dem <i>
+	Websiteaktionen</i>-Men&uuml; in den Seitenentwurfsmodus und Sie sehen alle Filter, 
+	die anhand der aktuellen URL generiert werden. Das ist umso hilfreicher, je 
+	unlesbarer Ihre URL-Parameter werden, zum Beispiel durch Verwendung der
+	<a href="#s4">Parameterb&uuml;ndlung</a> oder durch Nichtverwendung von <a href="#s2">
+	Parameternamen-Spaltennamen-Zuordnungen</a>. Wenn das <b>FilterZen URL-Filter</b>-Webpart 
+	nicht minimiert oder ausgeblendet wurde, sieht seine <i>Diagnosemodus</i>-Ausgabe 
+	in etwa so aus:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 272px;" src="help/de/res/adv_03.png"
+		title="" />
+</p>
+<h3>
+	Parameterb&uuml;ndlung<a name="s4"></a></h3>
+<p>
+	Sollen alle durch die URL angegebenen Filter in einem einzigen URL-Parameter 
+	enthalten sein, geben Sie einfach den Namen dieses &quot;B&uuml;ndelparameters&quot; im <i>Parameterb&uuml;ndlung</i>-Textfeld 
+	ein. Das <b>FilterZen URL-Filter</b>-Webpart sucht wie gehabt nach den im <i>URL-Parameters</i>-Textfeld 
+	angegebenen Filternamen, wird jetzt aber nur im Parameterwert des angegebenen 
+	B&uuml;ndelparameters suchen und alle anderen URL-Parameter ignorieren.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 410px;" src="help/de/res/adv_04.png"
+		title="" />
+</p>
+<div class="rox-info">
+	Wie obige Abbildung verdeutlicht, k&ouml;nnen Sie zwar &uuml;ber den <i>Namen</i> des 
+	B&uuml;ndelparameters frei entscheiden &mdash; von dessen <i>Wert</i> indes&nbsp;wird 
+	immer jene spezielle, vordefinierte Syntax erwartet, die auch MOSS Erweiterte 
+	Suche-Formulare und -Ergebnisseiten verwenden
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;wert&quot; 
+	name:&quot;wert&quot; name:&quot;wert&quot;&nbsp;</b> &mdash;</nobr> Filter 
+	folgen aufeinander, durch Leerzeichen getrennt, Namen und Werte sind durch 
+	Doppelpunkt getrennt und Werte sind <iimmer</i> in Anf&uuml;hrungszeichen, 
+	unabh&auml;ngig vom tats&auml;chlichen Spaltentyp).</div>
+<h3>
+		URL-Parameter-Sammelfilter<a name="s5"></a></h3>
+<p>
+	Indem Sie ausschlie&szlig;lich ein einzelnes Fragezeichen (&#39;?&#39;) in das <i>URL-Parameter</i>-Textfeld 
+	eingeben (statt wie gehabt Textzeilen mit Parameternamen und interne 
+	Spaltennamen), aktivieren Sie den <b>Sammelmodus</b>. Dieser Modus 
+	ber&uuml;cksichtigt ganz einfach <b>jeden</b> aktuell vorliegenden URL-Parameter und 
+	sendet den entsprechenden Filter an verbundene Webparts, ungeachtet dessen, wie 
+	diese Webparts letztendlich mit diesen Filtern umgehen. Kombiniert mit der
+	<a href="#s4">Parameterb&uuml;ndlung</a> ber&uuml;cksichtigt das Webpart zwar nur den 
+	angegebenen B&uuml;ndelparameter, verwendet aber wiederum <b>jeden</b> darin 
+	enthaltenen Filternamen (statt wie gehabt nur die im <i>URL-Parameter</i>-Textfeld 
+	explizit angegebenen).</p>
+<div class="rox-info" style="background-image: url('exclaim.gif');">
+	Wird die Parameterb&uuml;ndlung <i>nicht</i> verwendet, funktioniert der Sammelmodus 
+	zwar wie beschrieben, wird aber <b>nicht zur Verwendung empfohlen</b>, da SharePoint-eigene URL-Parameter, 
+	die nicht zum Einsatz als Filter bestimmt sind, ebenfalls an verbundene Webparts 
+	gesendet werden (beispielsweise der h&auml;ufig vorkommende 
+	URL-Parameter <i>PageView=Shared</i>), 
+	und <i>Listenansicht</i>- oder <i>Datenansicht</i>-Standardwebparts auch diese 
+	Filter unbesehen anwenden (selbst wenn eine entsprechende Spalte gar nicht 
+	existiert). 
+	Ob mit oder ohne Parameterb&uuml;ndlung &mdash; der Sammelmodus unterst&uuml;tzt keine <a href="#s2">
+	Namenszuordnungen</a>: Namen von URL-Parametern m&uuml;ssen <i>exakt</i> den <a href="#s1">internen 
+	Spaltennamen</a> entsprechen (und zwar <i>in korrekter Gro&szlig;- und Kleinschreibung</i>).</div>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+</body>
+</html>

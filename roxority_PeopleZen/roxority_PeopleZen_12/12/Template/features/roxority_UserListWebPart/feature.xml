@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="df0bd2b0-1c72-497e-a86b-0783eb216993" Title="$Resources:roxority_PeopleZen,PeopleWebPart_Title" Description="$Resources:roxority_PeopleZen,PeopleWebPart_Desc" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="FALSE" Creator="roxority.com" SolutionId="1f9fd01f-dfd4-41ba-b3f0-6394a4616130" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" ReceiverAssembly="roxority_PeopleZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="roxority_UserListWebPart\roxority_UserListWebPart.xml" />
+		<ElementFile Location="roxority_UserListWebPart\roxority_UserListWebPart.webpart" />
+	</ElementManifests>
+</Feature>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.1.dtd">
+<dotfuscator version="2.1">
+  <!--This is application generated code. Do not edit manually.-->
+  <global />
+  <input>
+    <asmlist>
+      <inputassembly>
+        <option>library</option>
+        <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen\bin\Release" name="setup.exe" />
+      </inputassembly>
+      <inputassembly>
+        <option>library</option>
+        <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen\bin\Release\de" name="setup.resources.dll" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen\final" />
+  </output>
+  <tempdir>
+    <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen\temp" />
+  </tempdir>
+  <renaming>
+    <excludelist>
+      <assembly>
+        <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_SetupZen\roxority_SetupZen\bin\Release\de" name="setup.resources.dll" />
+      </assembly>
+      <namespace name="roxority_SetupZen.Properties" />
+    </excludelist>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+  </renaming>
+</dotfuscator>

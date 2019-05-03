@@ -1,0 +1,28 @@
+<p>The following settings can be customized for each Print Launcher by administrative users on the <b>Print Launchers</b> page in your <i>PrintZen Studio</i>, accessible via Site Settings / PrintZen Studio / Print Launchers:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Print Launcher</h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Print Launcher is...</h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Print Launcher will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Print Launcher caption</h3>
+<p><b>(Text box)</b></p><p>Specify the caption for this Print Launcher to be shown in the Site Actions menus that use this Print Launcher. (If you do not specify a caption, the above name for this Print Launcher will be used, or if blank, its internal ID.)</p>
+<p>Default value for new Print Launchers:</p>
+<pre>$Resources:Tool_PrintControls_DefTitle</pre>
+<h3>Print Launcher description</h3>
+<p><b>(Text box)</b></p><p>Specify the description for this Print Launcher to be shown in the Site Actions menus that use this Print Launcher.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><a href="#" onclick="roxTogDocTab('c');">&quot;Availability and Print Commands&quot; tab:</a></h4><span class="rox-doctab rox-doctab-c">
+<h3>Show in &quot;Site Actions&quot; menu (requires activated Site Collection feature)</h3>
+<p><b>(Check box option)</b></p><p>If ticked (and if the <b>PrintZen Menu Integration</b> Site Collection feature is activated), all available print commands provided by this Print Launcher appear in its own sub-menu (showing the caption and description specified above) inside the SharePoint <i>Site Actions</i> menu.</p>
+<h3>Offer printing of the page content area, if possible</h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offer a command to print the content area of the current page, excluding out-of-box page chrome and navigational artifacts such as ribbon, top navigation, quick launch etc.</p>
+<h3>Offer printing of individual Web Parts, if possible</h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offers Print commands for each Web Part on the page.</p>
+<h3>Offer printing of individual Web Part zones, if possible</h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print Launcher offers a command to print all Web Parts in a selected zone only.</p>
+</span>

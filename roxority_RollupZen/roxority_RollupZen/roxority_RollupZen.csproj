@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2166D77-E843-4B10-AC14-51E15A445483}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxority_RollupZen</RootNamespace>
+    <AssemblyName>roxority_RollupZen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ROLLUPZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>ROLLUPZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.Office.Server.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>roxority.SharePoint\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>roxority.SharePoint\JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>roxority.SharePoint\ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.cs">
+      <Link>roxority.SharePoint\roxority.Data.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.Server.cs">
+      <Link>roxority.SharePoint\roxority.Data.Server.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RollupToolPart.cs" />
+    <Compile Include="RollupWebPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12\resources\roxority_RollupZen.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12\resources\roxority_RollupZen.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12\template\controltemplates\roxority_RollupZen\ItemEditor.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_RollupZen\Tool_DataSources.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_RollupZen\Tool_Localizer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_RollupZen\Tool_SiteUsers.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\controltemplates\roxority_RollupZen\Tool_Transfer.tc.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_RollupZen\Element.xml" />
+    <Content Include="12\template\features\roxority_RollupZen\feature.xml" />
+    <Content Include="12\template\features\roxority_RollupZen_AdminLinks\feature.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\features\roxority_RollupZen_AdminLinks\SiteAdminLinks.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="12\template\images\roxority_RollupZen\b.gif" />
+    <Content Include="12\template\images\roxority_RollupZen\feature.png" />
+    <Content Include="12\template\images\roxority_RollupZen\itdisc.gif" />
+    <Content Include="12\template\images\roxority_RollupZen\k.gif" />
+    <Content Include="12\template\images\roxority_RollupZen\l.gif" />
+    <Content Include="12\template\images\roxority_RollupZen\NO_PIC.GIF" />
+    <Content Include="12\template\images\roxority_RollupZen\PERSON.GIF" />
+    <Content Include="12\template\images\roxority_RollupZen\roxority_RollupZen.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_RollupZen\help\de\eula.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\de\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\de\itemref_DataSources.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\eula.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\farm_site_config.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\intro.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\itemref_DataSources.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\ref_css.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\ref_url_settings.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\release_notes.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\bgtmp.tlhr.jpg" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\help.tlhr.css" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\roxlogo.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\roxority.tlhr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup01.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup02.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup03.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup04.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup05.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup06.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\setup07.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint-moss-people-user-profiles-web-part-settings.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint-moss-people-web-part-user-profiles.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint-people-web-part-user-profiles-table-list-view.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint-staff-directory-print-friendly-view-phone-listing-user-profiles-web-part.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_alphabetical_index.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_configure_connection_dialog.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_display_style.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_filtering_search.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_filtering_tabbing_search.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_get_filter_values_from.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_im_ocs_presence.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_misc.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_paging.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_quick_filter_tabs.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_user_profiles_web_part_sorting_grouping.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\sharepoint_web_part_user_profile_properties.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\res\wpdialog.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\setup.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\user_profiles_web_part_display_style.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\user_profiles_web_part_filtering_tabbing_search.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\user_profiles_web_part_misc.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\user_profiles_web_part_paging.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\user_profiles_web_part_sorting_grouping.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\help\web_part_user_profile_properties.html" />
+    <Content Include="12\template\layouts\roxority_RollupZen\ie6.tl.css" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\bgtmp.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\choicebrowse.gif" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\completeallwftasks.gif" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\ContentAreaBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\ContentAreaShadow.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\ewr200l.gif" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\favicon.ico" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\af.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ar.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\az.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\be.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\bg.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ca.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\cs.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\da.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\de.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\dv.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\el.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\en.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\es.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\et.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\eu.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\fa.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\fi.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\fo.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\fr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\gl.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\gu.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\he.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\hi.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\hr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\hu.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\hy.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\id.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\is.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\it.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ja.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ka.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\kk.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\kn.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ko.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\kok.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ky.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\lv.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\mk.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\mn.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\mr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ms.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\nl.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\no.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\pa.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\pl.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\pt.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ro.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ru.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sa.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sk.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sl.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sq.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sv.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\sw.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\syr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ta.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\te.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\th.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\tr.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\tt.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\uk.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\ur.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\uz.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\flag\vi.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\FooterBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\HeaderBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\ie6.gif" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\LSTPEND.GIF" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\PageTitleBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\ProdNavGrad.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\RightNavActive.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\RightNavBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\RightNavBottomShadow.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\RightNavSection.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\RightNavTopShadow.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\star.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\TabBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\TabHoverBackground.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\TopNavActive.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\TopNavHover.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\bottom_left.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\bottom_middle.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\bottom_right.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\close_link.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\controls.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\middle.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\middle_left.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\middle_right.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\next.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\previous.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\resize_link.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\sprite.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\top_left.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\top_middle.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\dashboard\top_right.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\jquery\fxc-clip.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\jquery\uic-resizable.fxc-clip.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\jquery\uic-resizable.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\loader.gif" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\top_up\top_up-min.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\img\VerticalShadow.png" />
+    <Content Include="12\template\layouts\roxority_RollupZen\jQuery.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\json2.tl.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\mash.tl.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="12\template\layouts\roxority_RollupZen\RollupZen.tl.css" />
+    <Content Include="12\template\layouts\roxority_RollupZen\RollupZen.tl.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\roxority.tl.css" />
+    <Content Include="12\template\layouts\roxority_RollupZen\roxority.tl.js" />
+    <Content Include="12\template\layouts\roxority_RollupZen\roxsite.tl.css" />
+    <Content Include="solutionid.txt" />
+    <Content Include="_14\template\features\roxority_RollupZen_AdminLinks\SiteAdminLinks.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="12\template\features\roxority_RollupZen\roxority_RollupZen.webpart" />
+    <None Include="12\template\layouts\roxority_RollupZen\schemas.tl.json" />
+    <None Include="Properties\roxority.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>del "$(TargetDir)ssocli.dll"
+"$(SolutionDir)..\roxority_SetupZen\roxority_BuildZen\bin\Release\roxority_BuildZen.exe" CopyFiles $(SolutionName)
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

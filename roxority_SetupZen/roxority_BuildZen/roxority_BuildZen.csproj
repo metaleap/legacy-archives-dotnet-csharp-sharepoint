@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BE2687B-11F7-466E-B92E-F0A58C6C8362}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxority_BuildZen</RootNamespace>
+    <AssemblyName>roxority_BuildZen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>roxority_BuildZen.Program</StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/roxority_DocZen/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AESCRYPTO WSS SETUPZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>AESCRYPTO WSS SETUPZEN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\My Dropbox\dev-vs\sp3asm\Microsoft.SharePoint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\My Dropbox\dev-vs\sp3asm\Microsoft.SharePoint.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Crc32.cs">
+      <Link>Ionic.Zlib\Crc32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Deflate.cs">
+      <Link>Ionic.Zlib\Deflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Events.cs">
+      <Link>Ionic.Zlib\Events.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Exceptions.cs">
+      <Link>Ionic.Zlib\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Inflate.cs">
+      <Link>Ionic.Zlib\Inflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\InfTree.cs">
+      <Link>Ionic.Zlib\InfTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Shared.cs">
+      <Link>Ionic.Zlib\Shared.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Tree.cs">
+      <Link>Ionic.Zlib\Tree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\WinZipAes.cs">
+      <Link>Ionic.Zlib\WinZipAes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipConstants.cs">
+      <Link>Ionic.Zlib\ZipConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipCrypto.cs">
+      <Link>Ionic.Zlib\ZipCrypto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipDirEntry.cs">
+      <Link>Ionic.Zlib\ZipDirEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipEntry.cs">
+      <Link>Ionic.Zlib\ZipEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipFile.cs">
+      <Link>Ionic.Zlib\ZipFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Zlib.cs">
+      <Link>Ionic.Zlib\Zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibCodec.cs">
+      <Link>Ionic.Zlib\ZlibCodec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibConstants.cs">
+      <Link>Ionic.Zlib\ZlibConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibStream.cs">
+      <Link>Ionic.Zlib\ZlibStream.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.Shared.cs">
+      <Link>roxority.Shared.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\roxority.Data.cs">
+      <Link>roxority.Data.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlScaffolding.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Index.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table_of_Contents.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpProject.txt" />
+    <None Include="Properties\roxority.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlIndexFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="S3\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>rem if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+rem if exist "$(TargetPath)" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

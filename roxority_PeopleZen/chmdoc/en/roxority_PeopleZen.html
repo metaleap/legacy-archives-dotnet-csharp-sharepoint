@@ -1,0 +1,1494 @@
+<html>
+	<head>
+		<title>ROXORITY PeopleZen  Product Documentation</title><script type="text/javascript" language="JavaScript"> alert('For printing purposes only. Links have been disabled.\nNur zum Ausdrucken geeignet. Links wurden deaktiviert.'); </script>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<!--script type="text/javascript" language="JavaScript" src="jQuery.js"></script-->
+		<!--script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script-->
+		<!--script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<b style="font-style: italic; text-decoration: underline;" class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script-->
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #ffffff;
+				color: #000000;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #ffffff;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #ffffff;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"></div>
+	
+<h1>Using the User Profiles Web Part</h1><p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> offers you an incredibly easy
+	way to list richly formatted links to user profiles inside your SharePoint environment,
+	include relevant people data you choose, filter based on date properties or any
+	others, and display user profile pictures too.</p>
+<p>
+	After successfully completed <b style="font-style: italic; text-decoration: underline;" href="setup.html">solution installation and feature
+		activation</b>, simply place the Web Part onto any SharePoint Page in the usual
+	way and, depending on the user profiles already set up in your server farm, you
+	will see something like the following:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 630px;" src="help/res/sharepoint-moss-people-web-part-user-profiles.png"
+		title="" /></p>
+<p>
+	To customize the <b>PeopleZen</b> <i>User Profiles Web Part</i>, simply select <i>Edit
+		Web Part</i> from the Web Part menu. In the current release, you can customize
+	for any given individual Web Part the following settings outlined below. (<b>PeopleZen</b>
+	also exposes additional <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html">configuration settings on the
+		server farm or Site Collection level</b>.)</p>
+<h3>
+	Display Style<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	PeopleZen currently supports two view modes.</p>
+<ul>
+	<li>The default view mode, pictured above, is called <i>Tiles</i>. It arranges user
+		profiles next to each other, and optionally into multiple rows each containing a
+		given maximum number (2 by default) of user profiles.</li>
+	<li>The second view mode, pictured below, is called <i>List View</i>. It resembles the
+		look and feel of the out-of-the-box SharePoint Document Library and List View tables:</li>
+</ul>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/sharepoint-people-web-part-user-profiles-table-list-view.png"
+		title="" /></p>
+<p>
+	To find out more:</p>
+<ul>
+	<li>See the <b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_display_style#s0">Display Style</b>
+		section</li>
+	<li>Learn about <b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_display_style#s1">further appearance
+		and design customizations</b></li>
+	<li>Also see the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_misc.html">Miscellaneous</b> section
+		as well as the <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html">configuration settings</b> available
+		via <i>Site Settings</i> / <i>PeopleZen</i> / <i>Configuration Settings</i>.</li>
+</ul>
+<h3>
+	User Profile Properties<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> always displays both the user
+	profile picture and the name of the user. You can specify additional profile properties
+	to be displayed per user. To find out more, see:</p>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=web_part_user_profile_properties#s0">About SharePoint User Profile
+		Properties</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=web_part_user_profile_properties#s1">Displaying User Profile Properties
+		in PeopleZen</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=web_part_user_profile_properties#s2">How user names and profile pictures
+		are displayed (or hidden)</b></li>
+</ul>
+<h3>
+	Paging, Sorting, Grouping<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Simply specify the maximum number of user profiles to show at once, or specify 0
+	to always show all user profiles in the Web Part. Users can click <i>Next</i> and
+	<i>Previous</i> links inside the Web Part to &quot;page through&quot; all user profiles.
+	<b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_paging.html">To find out more, see the Paging section.</b></p>
+<p>
+	PeopleZen lets you pre-define a sort property and order, as well as a grouping property
+	and direction, and optionally lets end users change these interactively on-the-fly.
+	To find out more, see the <b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_sorting_grouping#s0">
+		Sorting</b> and <b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_sorting_grouping#s0">Grouping</b>
+	sections.</p>
+<h3>
+	Filtering, Tabbing and Search<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	You can limit the user profiles to be displayed based on any user profile properties,
+	for example to create Web Parts such as <i>Newly Hired Employees</i> or <i>Upcoming
+		Colleague Birthdays</i>. To find out more, see:</p>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_filtering_tabbing_search#s0">Global user name
+		filtering</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_filtering_tabbing_search#s1">Simple built-in
+		filtering options and setting up quick-filter tabbing</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="?doc=user_profiles_web_part_filtering_tabbing_search#s2">Adding search
+		and advanced filtering via connections</b></li>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/an-upcoming-birthdays-web-part-in-10-minutes.html"
+		target="_blank">An &quot;Upcoming Birthdays&quot; Web Part in 10 minutes</b> (tutorial
+		posted to our blog)</li>
+	<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/peoplezen-forum/post/1047307">Filtering
+		PeopleZen by SharePoint Website User Group Memberships</b> (forum thread on our
+		website)</li>
+</ul>
+<!--
+<h3>
+	Data Source for User Information<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	PeopleZen currently supports the following modes for loading user information:
+</p>
+<ul>
+	<li><b>User Profile Shared Service Application</b> &mdash; available on <i>SharePoint Server
+		2010 (SPS)</i> and <i>2007 (MOSS)</i>, and requires:
+		<ul>
+			<li>for SPS 2010: a fully configured User Profile Service Application (review this via
+				Central Administration / Service Applications; however, MySites are not necessarily
+				required)</li>
+			<li>for MOSS 2007: a Shared Service Provider (SSP) fully configured for User Profiles
+				(check this via Central Administration / SharedServices1 or similar / User profiles
+				and properties)</li>
+			<li>&mdash; however, <i>MySites</i> are not necessarily required in order for this 
+				PeopleZen mode to function.</li>
+			<li>To show some or all <i>Active Directory</i> user accounts (which PeopleZen can filter down
+				to a preferred sub-set if required), you need to configure the SPS/MOSS out-of-box user profile
+				import feature accordingly.</li>
+		</ul>
+	</li>
+	<li><b>Site Collection Accounts</b> &mdash; available on all SharePoint environments, including
+		the above as well as <i>SharePoint Foundation 2010 (SPF)</i> and <i>Windows SharePoint
+			Services (WSS) 3.0</i>.
+		<ul>
+			<li>To show some or all <i>Active Directory</i> user accounts (which PeopleZen can filter down
+				to a preferred sub-set if required), you need to add these users to the Site Collection.</li>
+		</ul>
+	</li>
+</ul>
+-->
+<h1 style="page-break-before: always;">Solution Installation and Feature Activation</h1><h3>
+	1. The PeopleZen Setup Package<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	The PeopleZen setup package (the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.s3.amazonaws.com/roxority_PeopleZen.zip">
+		roxority_PeopleZen.zip</b> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> &mdash; a graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling PeopleZen to and from a SharePoint
+		server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint farm or web front-end server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>docs</b> &mdash; a folder containing this product documentation in Microsoft
+		Compiled HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing the PeopleZen Solution Package<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Run <b>Deploy.exe</b> (under user account credentials added to the <i>Farm Administrators</i>
+	group in <i>Central Administration</i>, on the &quot;primary&quot; SharePoint farm
+	or web front-end server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i>) and when the <i>Welcome</i> screen
+	is displayed, click <i>Next</i> to start a series of system checks. To proceed with
+	the installation, all system checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	<b>PeopleZen</b> to. You can also de-select those Site Collections you <i>do not</i>
+	want the setup wizard, upon successful deployment, to <i>activate</i> the Web Part
+	Feature immediately for you on.
+</p>
+<div class="rox-info">
+	<b>Note:</b> even when <b>PeopleZen</b> is deployed in a Web Application, before
+	you can add and start using the <b>PeopleZen</b> <i>User Profiles Web Part</i> on
+	Web Part Pages inside a web site, the <b>PeopleZen User Profiles Web Part</b> <i>Feature</i>
+	needs to be <i>activated</i> for the parent Site Collection, as described in the
+	<i>Feature Activation</i> section below. For now, the setup wizard performs these
+	activations for you, depending on your selections.</div>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup02.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start using the <b>PeopleZen</b>
+	<i>User Profiles Web Part</i> on Web Part Pages inside the previously selected Site
+	Collections immediately.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> is a <i>SharePoint Site Collection-scoped
+		Feature</i>, which needs to be &#39;activated&#39; on each Site Collection it
+	is to be used in.</p>
+<ol>
+	<li>Start from the Web Part Page you want to use the Web Part on. Select <i>Site Settings</i>
+		from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root web&#39;s <i>Site Settings</i>
+		page now displayed, click the <i>Site Collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page should contain a row titled <b>PeopleZen
+		Web Part</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to make the Web Part available
+				to all web sites, Web Part galleries and Web Part Pages inside this site collection;
+				or click the <i>Deactivate</i> button to disable the Web Part throughout this site
+				collection.<ul>
+					<li>Note: if you do deactivate the Site Collection Feature, existing <b>PeopleZen</b>
+						Web Parts will continue to work: the feature activation status only controls whether
+						the Web Part is available inside your Site Web Part Galleries.</li></ul>
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>PeopleZen</b> solution package was not
+				yet deployed to this web application. On the <i>System Settings</i> page (<i>Operations</i>
+				in SharePoint 2007) in the <i>Central Administration</i>, click <i>Manage Farm Solutions</i>
+				(<i>Solution management</i> in SharePoint 2007). On the <i>Solution Management</i>
+				page, click <b>roxority_peoplezen_xyz.wsp</b> (the <i>xyz</i> part will be different
+				depending on your SharePoint version) to open the <i>Solution Properties</i> page.
+				Click <i>Deploy Solution</i>, then select this Site Collection&#39;s parent web
+				application and click <i>OK</i>. (The deployment is delegated to a background job
+				scheduled to run either at the date and time specified, or as soon as possible.
+				Once started, it may take this job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h1 style="page-break-before: always;">Display Style</h1><p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>Display Style</i> section right at the top:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 283px;" src="help/res/sharepoint_user_profiles_web_part_display_style.png"
+		title="" /></p>
+<h3>
+	Display Style<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	PeopleZen provides two basic view styles, <i>Tiles View</i> and <i>List View</i>:
+</p>
+<ul>
+	<li><b>Tiles View</b> &mdash; a Rolodex-like view where user profiles are arranged as 
+		individual badges from
+		left to right.
+		<ul>
+			<li>For a clear tabular layout of tiles, specify the number of user profiles per row
+				in the <b>In rows of</b> text box. To have as many user profiles as possible per
+				row, with each row filling the entire Web Part zone and expanding to the maximum
+				available width before <b>wrapping</b> forces further profiles to be shown in a new row,
+				enter <i>0</i>.</li>
+			<li>You can (and should) specify a width that is used per tile. Specifying too small
+				a value may wrap user profile field values that are too long in multiple lines.
+				When specifying a width, you can use any CSS-compatible unit value, for example <i>100px</i>,
+				<i>5cm</i> or <i>20%</i>.</li>
+			<li>To pre-define a custom sort order, see the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_sorting_grouping.html">
+				Sorting</b> section.</li></ul>
+	</li>
+	<li><b>List View</b> &mdash; resembles the default layout and visual design of most out-of-box,
+		standard SharePoint Lists, with column headers and group headers sharing the same
+		CSS style rules also applied to built-in List View Web Parts. Each user profile
+		is represented as a single data record row.
+		<ul>
+			<li>To allow end-users to interactively re-sort the list on-the-fly, tick the <b>Allow
+				interactive ad-hoc sorting</b> check-box option.</li>
+			<li>To pre-define a custom sort order, see the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_sorting_grouping.html">
+				Sorting</b> section.</li></ul>
+	</li>
+</ul>
+<h3>
+	Further Appearance and Design Customizations<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li>You can customize the following visual artifacts through the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_misc.html">
+		Miscellaneous</b> section: the height of user profile pictures being used, the loading
+		animation shown during AJAX data refreshes, whether and how names and pictures are
+		displayed and/or linked, and whether an OCS/IM online presence indicator should
+		be displayed next to user names.</li>
+	<li>Theming: PeopleZen can be fully themed just the same way your SharePoint site designs
+		can be completely remodeled, <b style="font-style: italic; text-decoration: underline;" href="ref_css.html">using Cascading Stylesheets (CSS)</b>.</li>
+	<li>How many user profiles are shown, in what order and arrangement, are all affected
+		by your <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_filtering_tabbing_search.html">filtering</b>, <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_paging.html">
+			paging</b>, <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_sorting_grouping.html">sorting and grouping</b>
+		settings.</li>
+	<li>Some aspects of PeopleZen's graphical end-user interface (GUI) are affected by farm-wide or Site Collection-specific <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html">configuration settings</b>, 
+		such as:
+	<ul>
+		<li><b>Window target:</b> to have user profile links target a new (popup) window or a frame or <i>IFRAME</i> on your page.</li>
+		<li>Control how <b>email addresses</b> are displayed and/or linked by providing a customized HTML template &mdash; by default, 
+			<i>List View</i> just shows an envelope graphical icon while <i>Tiles View</i> shows the full email address.</li>
+		<li>Control how other user profile fields are displayed when they have and don't have a value set by providing a customized 
+			<b>HTML template</b> (this can also simplify CSS-based theming)</li>
+		<li>If you&#39;d like to combine multi-valued fields (collections of values such as
+			<i>Skills</i>, <i>Responsibilities</i>, <i>Past Projects</i> etc.) with a delimiter other than 
+			the default comma, you can specify it.</li>
+		<li>Optionally fully <b>exclude empty user profile fields</b> in Tiles View (instead of 
+			showing for example &quot;<i>Department: &mdash;</i>&quot; or &quot;<i>Department: (unknown)</i>&quot;)</li>
+	</ul>
+	</li>
+</ul>
+<h1 style="page-break-before: always;">Data Sources</h1><p>
+	The user profiles listed in your PeopleZen Web Parts are provided by a something
+	called a <i>Data Source</i>. A PeopleZen <i>Data Source</i> defines the source of
+	the information to be displayed, and how to connect to that source (among other
+	settings).</p>
+<p>
+	After installation, there is only one pre-defined PeopleZen Data Source available,
+	titled <b>(Default Data Source)</b>. You can customize it or add additional <i>Data
+		Sources</i> via Site Settings / PeopleZen Studio / Data Sources. Each PeopleZen
+	Web Part then lets you select which of your <i>Data Sources</i> to use (in its settings
+	tool-pane, via web part menu / Modify Web Part).</p>
+<p>
+	Before reviewing <b style="font-style: italic; text-decoration: underline;" href="itemref_DataSources.html">its many other settings</b>,
+	the primary choice for each <i>Data Source</i> is the <b>Connection provider</b> setting.
+	The currently supported choices are:</p>
+<h3>
+	Farm User Profiles<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2010 Server
+	(SPS) and Microsoft Office SharePoint Server (MOSS) 2007 (and is not available 
+	on SharePoint 2010 Foundation (SPF) or Windows SharePoint Services (WSS) 3.0).</p>
+<p>
+	Retrieves the farm-wide shared user profile information (which is often imported
+	from Active Directory) stored in the current default <i>User Profiles Service Application</i>
+	(SPS 2010) / the current default <i>Shared Service Provider</i> (MOSS 2007).</p>
+<h3>
+	Site User Accounts (People and Groups)<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	This is the default choice for PeopleZen installations on SharePoint 2010 Foundation
+	(SPF) and Windows SharePoint Services (WSS) 3.0.</p>
+<p>
+	Retrieves the user profile information (plus optionally groups if desired) stored
+	in the current Site Collection&#39;s <i>User Information List</i> (at /_catalogs/users).</p>
+<h3>
+	Active Directory<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	Retrieves user profile information stored in any LDAP-compatible directory service,
+	such as Domino or Active Directory.</p>
+<h3>
+	Database<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	Retrieves user profile information from SQL Server, Oracle or any other database
+	accessible via OLEDB, ODBC or ADO.NET.</p>
+<h1 style="page-break-before: always;">User Profile Properties</h1><p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>User Profile Properties</i> section directly underneath
+	<b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_display_style.html">Display Style</b>:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 349px;" src="help/res/sharepoint_web_part_user_profile_properties.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Note:</b> the information given below applies for the most part to <b style="font-style: italic; text-decoration: underline;" href="web_part_user_profile_data_sources.html">
+		Data Sources</b> with the <i>Connection Provider</i> set to <b>Farm User Profiles</b>,
+	and to a lesser extent, <b>Site User Accounts (People and Groups)</b>. Even if you
+	intend to use another data source such as Active Directory or your own custom SQL-based
+	user database, the basic principles illustrated herein can be extrapolated to these
+	(also with the additional aid of the documented <b style="font-style: italic; text-decoration: underline;" href="itemref_DataSources.html">Data
+		Source settings</b> for these <i>Connection Providers</i>).</div>
+<h3>
+	About SharePoint User Profile Properties<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	Detailed information belonging to your user profiles in SharePoint is stored in
+	so-called <i>User Profile Properties</i>. They contain &quot;people data&quot; such
+	as their <i>Birthday</i>, <i>Hire Date</i>, <i>Department</i>, <i>Skills</i>, <i>Past
+		Projects</i> etc. SharePoint (Server) 2007 ships with over 40 default properties,
+	SharePoint (Server) 2010 with over 60. You can of course create your own additional
+	custom properties. You can allow or require your users to manually populate their
+	properties on their own profile page directly in SharePoint, and/or you can automatically
+	populate properties during your <i>User Profile Imports</i> from LDAP-compatible
+	directory services such as <i>Active Directory</i>.</p>
+<p>
+	It is crucial to note that PeopleZen <i>only displays</i> user profiles and properties
+	<i>already stored</i> inside your SharePoint environment (or your selected non-SharePoint
+	<b style="font-style: italic; text-decoration: underline;" href="web_part_user_profile_data_sources.html">Data Source</b>) &mdash; how they
+	get there, how and where they are stored, how they are updated all depends on your
+	SharePoint or systems configuration and is well outside the scope of PeopleZen,
+	the display engine.</p>
+<p>
+	To set up or review your user profile properties and your user profile imports from
+	AD or another directory service:</p>
+<ul>
+	<li><b>in Microsoft Office SharePoint Server (MOSS) 2007:</b> go to Central Administration
+		and underneath the <i>Shared Services Administration</i> link in the quick launch,
+		click your default Shared Service Provider (SSP), often called <i>SharedServices1</i>.
+		On its <i>Home</i> page, underneath the <i>User Profiles and My Sites</i> section,
+		click <i>User profiles and properties</i>.</li>
+	<li><b>in SharePoint Server (SPS) 2010:</b> go to Central Administration / Application
+		Management / Manage Service Applications. If there already is a <i>User Profile Service
+			Application</i> listed, click through to it; otherwise, add one via the <i>New</i>
+		or <i>Connect</i> menus in the <i>Service Applications</i> ribbon tab.</li>
+	<li>In <i>Windows SharePoint Services (WSS) 3.0</i> and <i>SharePoint Foundation (SPF)
+		2010</i>, you can add custom user properties via the <i>List Settings</i> page of
+		the <i>User Information List</i> in a Web Site, accessible via the <i>Settings</i>
+		menu on the <i>People and Groups</i> page. There is no out-of-box user profiles
+		import from AD.</li>
+</ul>
+<h3>
+	Displaying User Profile Properties in PeopleZen<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	In the <i>User Profile Properties</i> section pictured above, simply enter the properties
+	to be shown in the multi-line text area, <i>one per line</i>. <b>Always include in each
+		line a colon [ : ] delimiter, otherwise the property will remain hidden</b>
+	from the listings (but can still be selected for interactive end-user ad-hoc <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_sorting_grouping.html">
+		re-grouping</b> or <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_filtering_tabbing_search.html">re-tabbing</b>).</p>
+<p>
+	The easier and least error-prone way for adding user profile properties to this
+	text box is to select them from the drop-down menu just below it, labeled <b>Add known
+		user profile property</b>.</p>
+<p>
+	Each user profile property contained in this text box is represented by a line containing
+	a colon [ : ] delimiter. Before the colon, the internal property name is given,
+	for example <i>SPS-Birthday</i>. After the colon, specify the desired localized
+	display name shown to end users, for example <i>Birthday</i>. The part after the
+	colon can be anything you wish, the part before the colon must be the valid internal
+	name of an existing SharePoint user profile property (otherwise you'll see a <i>Property
+		Not Defined: [WrongPropName]. An administrator must create this property in the
+		Profile Administration tool</i> message).</p>
+<p>
+	If you do not specify a colon delimiter and a display name, the user profile property
+	will not be shown in your people listings. <b>To show the property values but <i>no</i>
+		property name,</b> use the special display name ___ (three underscores).</p>
+<h3>
+	How user names and profile pictures are displayed (or hidden)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	User names and profile pictures are also stored in User Profile Properties, but
+	PeopleZen shows them already by default without having to specify them in the <i>User
+		Profile Properties</i> text box described above. PeopleZen treats these as &quot;special
+	properties&quot; and you can customize them in the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_misc.html">
+		Miscellaneous</b> section.</p>
+<ul>
+	<li>The pictures are displayed directly rather than showing their textual URL path that
+		is stored inside the corresponding <i>PictureURL</i> user profile property. They
+		also link to the user profile page (unless this has been customized in the <i>Miscellaneous</i>
+		section).</li>
+	<li>The user name displayed depends on which user profile properties have been populated.
+		If the <i>FirstName</i> and <i>LastName</i> properties are filled out, those two
+		values are shown, otherwise the <i>PreferredName</i>, <i>AccountName</i> and then
+		<i>UserName</i> property are being probed in that order. The name also links to
+		the user profile page (unless this has been customized in the <i>Miscellaneous</i>
+		section).</li>
+</ul>
+<h1 style="page-break-before: always;">Filtering, Tabbing and Search</h1><h3>
+	Global User Name Filter<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	There are certain user accounts that you probably never want PeopleZen to show under
+	<i>any</i> circumstances. You can filter these out &quot;globally&quot;, ie. on
+	the farm level or on the Site Collection level. This is done via the <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s9">
+		Exclude User Names</b> configuration setting available via Site Settings / PeopleZen
+	Studio / Configuration Settings, where you specify fully qualified domain account
+	names to exclude, or describe a range of user names with *wild-card* patterns.</p>
+<h3>
+	Simple Built-In Filtering<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>Filtering</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="help/res/sharepoint_user_profiles_web_part_filtering_tabbing_search.png"
+		title="" /></p>
+<p>
+	A simple way to let end-users quickly filter by a given primary user profile field
+	is the built in <i>Quick-Filter Tabs</i> feature. Simply select that field in
+	the drop-down menu labeled <b>Show tabs to quickly filter by</b>. If you select
+	the <i>Department</i> field, for example, PeopleZen provides tabs that correspond
+	to the existing data values, and each tab shows only user profiles matching the
+	implied filter:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 190px;" src="help/res/sharepoint_user_profiles_web_part_quick_filter_tabs.png"
+		title="" /></p>
+<p>
+	This works well for user profile fields with a limited number of repeatedly
+	used values, such as <i>Department</i> (where realistically between 3 and 20 values
+	will exist), <i>Skills</i>, <i>Past Projects</i>, <i>Manager</i> etc. However, this
+	feature has a neat way of also working well with fields of a potentially vast
+	set of values, such as user names (up to as many values as user profiles may exist),
+	phone numbers, birthdays etc. Beyond a certain <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s10">threshold
+		number</b> of unique values (the default is 16), instead of providing each value
+	as a separate tab, groups of values are subsumed under alphabetical, numerical or
+	chronological index tabs:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 168px;" src="help/res/sharepoint_user_profiles_web_part_alphabetical_index.png"
+		title="" /></p>
+<p>
+	To use quick-filter tabs, you need to pre-define a user profile field to filter
+	by, but if you want end-users to change this interactively on-the-fly, simply tick
+	the <b>Allow interactive ad-hoc change of that field</b> check-box option.</p>
+<p>
+	You will notice in the above screenshots that a tab simply labeled &quot;&mdash;&quot;
+	may be shown at the end that shows all user profiles where the quick-filter tabs
+	user profile field has no values at all. You can hide these people using the
+	<b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s11">Always hide the [Empty] quick-filter tab</b>
+	configuration setting. You can also choose to show the PeopleZen Web Part initially-unfiltered
+	by prepending to your quick-filter tabs a tab (to be selected-by-default) labeled
+	<i>(All)</i>, using the <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s11">Always show the [All] quick-filter
+		tab</b> configuration setting.</p>
+<p>
+	Other options in the <i>Filtering</i> section:</p>
+<ul>
+	<li><b>Ignore year when filtering by date fields</b> &mdash; tick this check-box
+		option only when filtering (via quick-filter tabs or Web Part Connections) by a
+		user profile field of the type <b>date no year</b>, such as <i>SPS-Birthday</i>.
+		This ignores the year both from the field value and the filter value when performing
+		the filtering. </li>
+	<li><b>Ajax-based live filtering</b> &mdash; this check-box option controls how filter values
+		sent via a Web Part connection with a FilterZen Filter Web Part (see below) are
+		applied:
+		<ul>
+			<li>if unticked, every time a filter is changed in the FilterZen Web Part, the entire
+				page refreshes itself to apply the new filter values to the PeopleZen Web Part.</li>
+			<li>if ticked, every time a filter is changed in the FilterZen Web Part, no page-reload
+				happens but just the PeopleZen Web Part updates itself autonomously in the background
+				to apply the new filter values.</li>
+		</ul>
+	</li>
+	<li><b>Show only the current user profile</b> &mdash; self-explanatory.</li>
+</ul>
+<h3>
+	Adding Search and Advanced Filtering via Connections<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	You can further filter PeopleZen by a variety of methods:
+</p>
+<ul>
+	<li>by providing a filter via a URL parameter or posted form value</li>
+	<li>by providing text boxes, date pickers or choice selectors for end users to supply
+		a filter</li>
+	<li>by letting end users select a document or an item in a Document Library or List
+		View and supply a Column value as the filter</li>
+</ul>
+<p>
+	All of these above use-cases, and many more, can be achieved by connecting PeopleZen
+	to a filter provider Web Part. Select <i>Edit Web Part</i> from the PeopleZen Web
+	Part menu and then from the same menu, in the <i>Connections / Get Filters From</i>
+	sub-menu select a filter provider Web Part:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 382px;" src="help/res/sharepoint_user_profiles_web_part_get_filter_values_from.png"
+		title="" /></p>
+<p>
+	Depending on the filter provider Web Part, this may show a <i>Configure Connection</i>
+	dialog (that you can also use to remove the connection if needed) where you can
+	select the user profile field to filter by:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 370px;" src="help/res/sharepoint_user_profiles_web_part_configure_connection_dialog.png"
+		title="" /></p>
+<p>
+	While PeopleZen supports all filter provider Web Parts built into SharePoint (including
+	<i>List Views</i> and the built-in Filter Web Parts including the <i>Choice Filter</i>,
+	<i>Current User Filter</i>, <i>Date Filter</i>, <i>Page Field Filter</i>, <i>Query String
+		(URL) Filter</i>, <i>SharePoint List Filter</i>, <i>SQL Server Analysis Services Filter</i>
+	and <i>Text Filter</i>), we highly recommend using a <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/filterzen/"
+		target="_blank">FilterZen Filter Web Part</b>, which:</p>
+<ul>
+	<li>provides the same filter types (and more!) as SharePoint Server Enterprise Edition
+		(yet with much extended capabilities), but works across SharePoint 2010 Foundation
+		and Server as well as WSS 3.0 and MOSS 2007,</li>
+	<li>allows for combining multiple filters in a single filter provider Web Part, having
+		individual filters send multiple values (and end users select them easily), advanced
+		comparison operators other than just <i>Equals</i> (such as <i>Contains</i>, <i>Greater/Less
+			Than</i> and value-ranges)</li>
+	<li>and when displayed to end users, fully integrates visually into the User Profiles
+		Web Part, becoming a part of it rather than appearing as a separate Web Part (unless
+		this has been disabled via the <b style="font-style: italic; text-decoration: underline;" href="farm_site_config.html#s13">Embedding of connected
+			FilterZen Web Parts</b> configuration setting).</li>
+</ul>
+<p>
+	FilterZen lets you compose the most advanced search interfaces for PeopleZen:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/sharepoint_user_profiles_web_part_filtering_search.png"
+		title="" /></p>
+<h3>
+	Filtering Use-Cases:<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li><b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/an-upcoming-birthdays-web-part-in-10-minutes.html"
+		target="_blank">An &quot;Upcoming Birthdays&quot; Web Part in 10 minutes</b> (tutorial
+		posted to our blog)</li>
+	<li><b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/peoplezen-forum/post/1047307">Filtering
+		PeopleZen by SharePoint Website User Group Memberships</b> (forum thread on our
+		website)</li>
+</ul>
+<h1 style="page-break-before: always;">Sorting and Grouping</h1><p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, scroll down to the <i>Sorting and Grouping</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 323px;" src="help/res/sharepoint_user_profiles_web_part_sorting_grouping.png"
+		title="" /></p>
+<h3>
+	Sorting<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	First note that there is <i>always</i> a sort order applied to all PeopleZen team
+	listings, the default order of people is <i>never</i> random. The default sort order is
+	ascending by user display name. You can customize this by selecting a different user profile 
+	field from
+	the <b>Sort by:</b> drop-down menu.</p>
+<p>
+	Numeric fields and date values are not sorted alphabetically, but 
+	rather numerically
+	or chronologically.</p>
+<p>
+	In <i>List View</i>, you can 
+	optionally allow end users to change the sort field and direction
+	(ascending or descending) interactively on-the-fly (re-sorting via column 
+	headers) &mdash; inside the <b style="font-style: italic; text-decoration: underline;" href="user_profiles_web_part_display_style_properties.html">
+		Display Style</b> section rather than the <i>Paging</i> section.</p>
+<h3>
+	Grouping<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	By default, user profiles are not grouped, but you can group them by any user profile
+	field by selecting it from the <b>Group by:</b> drop-down menu. For example,
+	grouping by the <i>Department</i> field may first show all user profiles belonging to
+	the <i>Engineering</i> department, then all belonging to the <i>Finance</i> department,
+	then the <i>HR</i> department, <i>IT</i> and so on, all under a respective grouping
+	header in each case.</p>
+<p>
+	The order of the group headers is ascending by default but can be changed to descending.
+	This uses the grouping field&#39;s value by default, unless you tick the <b>...but by counts instead
+		of group values</b> check-box option. To show the number of profiles belonging
+	to each group in parentheses right after the group header, tick the <b>Show counts in
+		group headers</b> check-box option.</p>
+<p>
+	You can allow end users to change the group sort field and direction (ascending or
+	descending) interactively on-the-fly, by ticking the <b>Allow interactive ad-hoc change
+		of the grouping property selected above</b> and/or <b>Allow interactive ad-hoc change
+			of grouping direction (ascending / descending)</b> check-box options.
+</p>
+<h1 style="page-break-before: always;">Paging</h1><p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, scroll down to the <i>Paging</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 247px;" src="help/res/sharepoint_user_profiles_web_part_paging.png"
+		title="" /></p>
+<p>
+	At its top, this section lets you <b>specify the maximum number of user profiles to
+		show per "page"</b>. The default value is 6 and this simply means that no more
+	than 6 user accounts will ever be listed at once in the Web Part. If there are more
+	profiles then "paging links" will be shown at the top, allowing end users to navigate
+	forward or backward in the people listing. <b>To disable paging</b>, simply enter
+	0.
+</p>
+<p>
+	You can also customize how these paging links are displayed:
+</p>
+<ul>
+	<li><b>Show current position:</b> &mdash; lets you set how to indicate which sub-set
+		of the overall listing is currently shown:
+		<ul>
+			<li><b>(Person) x - y of z</b> &mdash; on a listing of 10 people with 4 per page, the
+				second page would show: <b>5 - 8 of 10</b></li>
+			<li><b>(Page) x of y</b> &mdash; on a listing of 10 people with 4 per page, the second
+				page would show: <b>2 of 3</b></li>
+			<li><b>(Page) ... | x | y | z | ...</b> &mdash; on a listing of 10 people with 4 per
+				page, the second page would show: <b>1 | <u>2</u> | 3</b></li>
+			<li><b>(No)</b> &mdash; no positional information is displayed</li>
+		</ul>
+	</li>
+	<li><b>Prev/Next links:</b> &mdash; lets you customize whether and how users can navigate
+		forward and backward inside the Web Part:
+		<ul>
+			<li><b>Text Links</b> &mdash; textual links are used, with the labels <i>Back</i> and
+				<i>Next</i> (customizable via the <i>DIY User Interface Localization</i> tool in
+				<i>PeopleZen Studio</i>)</li>
+			<li><b>Arrow Icons</b> &mdash; small graphical icons are provided for going back (left
+				arrow) or forward (right arrow)</li>
+			<li><b>(None)</b> &mdash; no paging links for step-based navigation are provided</li>
+		</ul>
+	</li>
+	<li><b>First/Last links:</b> &mdash; lets you customize whether and how users can skip
+		pages to navigate directly to the very beginning or the end of the entire listing:
+		<ul>
+			<li><b>Text Links</b> &mdash; textual links are used, with the labels <i>First</i> and
+				<i>Last</i> (customizable via the <i>DIY User Interface Localization</i> tool in
+				<i>PeopleZen Studio</i>)</li>
+			<li><b>Arrow Icons</b> &mdash; small graphical icons are provided for going to the beginning
+				(left arrow) or the end (right arrow)</li>
+			<li><b>(None)</b> &mdash; no paging links for skip-based navigation are provided</li>
+		</ul>
+	</li>
+</ul>
+<h1 style="page-break-before: always;">Miscellaneous Web Part Properties</h1><p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, scroll down to the <i>Miscellaneous</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 448px;" src="help/res/sharepoint_user_profiles_web_part_misc.png"
+		title="" /></p>
+<p>
+	At its top, this section lets you <b>specify a custom height (in pixels) of user profile
+		pictures</b>. This setting defaults to 0, which causes the Web Part to fall
+	back to the currently applicable CSS rules (by default, ie. unless you have CSS
+	customizations in place, 72 pixels in <i>Tiles View</i> or 24 pixels in <i>List View</i>).</p>
+<p>
+	Right below it you can choose to <b>offer the selected print-friendly view in the Web
+		Part menu</b> &mdash; this adds a <i>Print</i> command to the PeopleZen Web
+	Part menu. To be able to select a print-friendly view from this drop-down list,
+	<b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://SharePoint-Tools.net/PrintZen/">PrintZen</b> needs
+	to be installed in this SharePoint server farm:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 361px;" src="help/res/sharepoint-staff-directory-print-friendly-view-phone-listing-user-profiles-web-part.png"
+		title="" /></p>
+<p>
+	Right below it you can choose to <b>offer the selected CSV/Excel export in the Web Part
+		menu</b> &mdash; this adds an <i>Export</i> command to the PeopleZen Web Part
+	menu. To be able to select an export from this drop-down list, <b style="font-style: italic; text-decoration: underline;" target="_blank"
+		href="http://SharePoint-Tools.net/ExportZen/">ExportZen</b> needs to be installed
+	in this SharePoint server farm.
+</p>
+<p>
+	The <b>Loading Animation</b> is shown to indicate that PeopleZen is currently refreshing
+	or reloading information to be displayed via AJAX, ie. without causing the rest
+	of the page to reload. This can occur when changing a filter or switching to another
+	quick-filter tab, paging forward or back, applying a new sort order, changing the
+	grouping field or direction, or changing the quick-tab filtering field. You
+	can choose between a <i>Progress Bar</i> animation, a <i>Spinner</i> animation or
+	select <i>(None)</i> to disable any loader animations.
+</p>
+<p>
+	When rendering both <b>user profile pictures</b> and <b>user names</b>, you can
+	customize whether to display them and if so, whether to link them to either the
+	<i>public profile</i> or the <i>personal page</i> of the user, or not at all.</p>
+<p>
+	Tick the <b>indicate online presence</b> check-box option just below if you want
+	to show a little marker next to the user name indicating the online/offline status
+	of the user in the currently available instant messaging infrastructure context,
+	if any (most likely, this will be Office Communications Server / OCS integrated
+	with MSN / Windows Live Messenger). Clicking the marker will bring up an Office
+	Communications menu (2007) or info popup (2010 products) for further details
+	about, or interaction with this person:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/sharepoint_user_profiles_web_part_im_ocs_presence.png"
+		title="" /></p>
+<p>
+	Tick the <b>Override Web Part settings from URL parameters</b> check-box option
+	if you intend to supply via URL Parameters any of <b style="font-style: italic; text-decoration: underline;" href="ref_url_settings.html">PeopleZen&#39;s
+		URL-overridable Web Part properties</b>.
+</p>
+<!--
+<p>
+	For improved performance, PeopleZen <b style="font-style: italic; text-decoration: underline;" href="?doc=farm_site_config#s14">maintains an
+		in-memory cache</b> of user profiles that gets refreshed with potential delays.
+	To see immediately how a changed user profile property value affects the Web Part,
+	tick the <b>Reset PeopleZen caches when I next click OK / Apply below</b> check-box
+	option. Caching is only used for the &quot;SPS/MOSS User Profiles Shared Service
+	Application&quot; mode, therefore this option does not apply to the &quot;SPF/WSS
+	Site Collection Accounts&quot; mode.
+</p>
+-->
+<h1 style="page-break-before: always;">Settings for Data Sources</h1><p>The following settings can be customized for each Data Source by administrative users on the <b>Data Sources</b> page in your <i>PeopleZen Studio</i>, accessible via Site Settings / PeopleZen Studio / Data Sources:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</b></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Data Source<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>Connection provider<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p><b>(Data source connection provider picker)</b></p><p>Select which type of data connection will be used by this data source. <b>If you change this, all settings in the other tabs need to be reviewed and many will have to be re-configured.</b></p>
+<ul>
+<li><b>Farm User Profiles</b><br/>&mdash; <i>(SPS 2010: Service Application / MOSS 2007: Shared Service Provider)</i></li>
+<li><b>Site User Accounts (People and Groups)</b><br/>&mdash; <i>at the Web Site or Site Collection level</i></li>
+<li><b>Active Directory</b><br/>&mdash; <i>(or any other LDAP-compatible directory service)</i></li>
+<li><b>Database</b><br/>&mdash; <i>(SQL Server, Oracle or any other data source via OLEDB, ODBC or ADO.NET)</i></li>
+</ul>
+<h3>Security context for Data Source consumers<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which security context consumers of this Data Source (such as PeopleZen Web Parts, Lookup Columns etc.) should establish to connect to this Data Source.</p>
+<ul>
+<li><b>Current user BUT fall back to Elevate if &quot;Access Denied&quot;</b><br/>&mdash; <i>recommended</i></li>
+<li><b>Current user ONLY</b><br/>&mdash; <i>runs under the credentials and privileges of the calling user</i></li>
+<li><b>Elevate ONLY</b><br/>&mdash; <i>runs under the credentials and privileges of the current IIS application pool identity</i></li>
+<li><b>Impersonate</b><br/>&mdash; <i>runs under the credentials and privileges of a specified user name</i></li>
+</ul>
+<h3>Impersonate the following user<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p><b>(Text box)</b></p><p>Specify a fully-qualified Windows logon name (in the yourdomain\user123 format) for impersonation.</p>
+<h3>Password for impersonated user<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p><b>(Text box)</b></p><p>The password will be stored encrypted.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserProfiles"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('t__UserProfiles');">&quot;Farm User Profiles&quot; tab:</b></h4><span class="rox-doctab rox-doctab-t__UserProfiles">
+<h3>Exclude User Names<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__UserAccounts"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('t__UserAccounts');">&quot;Site User Accounts (People and Groups)&quot; tab:</b></h4><span class="rox-doctab rox-doctab-t__UserAccounts">
+<h3>Exclude User Names<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>Return user accounts<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which user account collection to enumerate, if any.</p>
+<ul>
+<li><b>All</b><br/>&mdash; <i>members of the current Web Site and authenticated domain group members who browsed to it</i></li>
+<li><b>Site Collection user accounts</b><br/>&mdash; <i>user accounts that belong to the current Site Collection</i></li>
+<li><b>Web Site user accounts</b><br/>&mdash; <i>user accounts that are explicitly assigned permissions in the current Web Site</i></li>
+<li><b>None</b><br/>&mdash; <i>no user accounts are enumerated</i></li>
+</ul>
+<h3>Return user groups<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select which user group collection to enumerate, if any.</p>
+<ul>
+<li><b>None</b><br/>&mdash; <i>no groups are enumerated</i></li>
+<li><b>Web Site groups</b><br/>&mdash; <i>all groups of the current Web Site are enumerated</i></li>
+<li><b>Site Collection groups</b><br/>&mdash; <i>all groups of the current Site Collection are enumerated</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Directory"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('t__Directory');">&quot;Active Directory&quot; tab:</b></h4><span class="rox-doctab rox-doctab-t__Directory">
+<h3>Exclude User Names<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>Connection URL (required)<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<p><b>(Text box)</b></p><p>An LDAP/ADSI connection string that is used by this Data Source to connect to your directory service.</p>
+<p>Default value for new Data Sources:</p>
+<pre>LDAP://OU=Departments,DC=global,DC=local</pre>
+<h3>Search query for directory-side pre-filtering (if required)<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<p><b>(Text box)</b></p><p>An optional LDAP/ADSI query that is used by the directory service to pre-filter the result set send back to this Data Dource. (With a filter query defined here, this Data Source performs a directory service Search operation and yields the result set returned; without, it simply enumerates through all directory entries.)</p>
+<p>Default value for new Data Sources:</p>
+<pre>(&amp;(objectCategory=person)(objectClass=user))</pre>
+<h3>Search scope for directory-side pre-filtering (if required)<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<p>Select the search scope to observe when invoking the directory search specified by the above LDAP search query.</p>
+<ul>
+<li><b>Subtree (default / recommended)</b><br/>&mdash; <i>Searches the whole subtree, including the base object and all its child objects.</i></li>
+<li><b>Base</b><br/>&mdash; <i>Limits the search to the base object. The result contains a maximum of one object.</i></li>
+<li><b>One level</b><br/>&mdash; <i>Searches the immediate child objects of the base object, excluding the base object.</i></li>
+</ul>
+<h3>Authentication mode<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<p>Select how this Data Source should authenticate itself to the directory service specified above.</p>
+<ul>
+<li><b>Default (or none)</b><br/>&mdash; <i>use basic authentication (simple bind) in the LDAP provider</i></li>
+<li><b>Secure</b><br/>&mdash; <i>requests secure authentication using NTLM or Kerberos</i></li>
+<li><b>Encryption</b><br/>&mdash; <i>a cryptographic signature that identifies the sender</i></li>
+<li><b>Anonymous</b><br/>&mdash; <i>no authentication is performed</i></li>
+<li><b>Delegation</b><br/>&mdash; <i>delegates the user's security context</i></li>
+</ul>
+<h3>User name for directory service authentication (if required)<b style="font-style: italic; text-decoration: underline;" name="s17"></b></h3>
+<p><b>(Text box)</b></p><p>If you selected <b>Secure</b> under the <i>Authentication mode</i> setting above, you can optionally specify a fully-qualified user name for authentication. If you leave this blank, the <i>Secure</i> authentication mode will use the current security context; otherwise, you also need to specify a password below.</p>
+<h3>Password for directory service authentication (if required)<b style="font-style: italic; text-decoration: underline;" name="s18"></b></h3>
+<p><b>(Text box)</b></p><p>If you selected <b>Secure</b> under the <i>Authentication mode</i> setting above, you can optionally specify a password for authentication of the above user name. If you leave this blank, the <i>Secure</i> authentication mode will use the current security context; otherwise, you also need to specify a user name above.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-t__Ado"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('t__Ado');">&quot;Database&quot; tab:</b></h4><span class="rox-doctab rox-doctab-t__Ado">
+<h3>Exclude User Names<b style="font-style: italic; text-decoration: underline;" name="s19"></b></h3>
+<p><b>(Text box)</b></p><p>You can optionally specify the patterns of user names (one per line) that should always be excluded from all PeopleZen Web Parts (for example, service accounts). You may include an asterisk (*) only at the beginning ("ends with"), at the end ("begins with") or both ("contains"). This setting is not case-sensitive.<br/><br/><b>Important:</b> the patterns in this setting are matched against the field denoted as the <b>Logon name data field</b> (on the <i>Data Fields</i> tab).</p>
+<p>Default value for new Data Sources:</p>
+<pre>system\*<br/>nt authority\*<br/>builtin\*<br/>sharepoint\*</pre>
+<h3>Always exclude domain from names displayed in the Name/Title special field<b style="font-style: italic; text-decoration: underline;" name="s20"></b></h3>
+<p><b>(Check box option)</b></p><p>User names are usually displayed based on your <b>Name/Title data field/s</b> setting (on the <i>Data Fields</i> tab). Some of the users returned by this Data Source may not have a preferred name (such as first and last name combined) set and might show a fully-qualified domain account name (ie. <b>companydomain\user123</b>). Tick this option to always suppress the domain part of the user name when displayed in the Name/Title special field.</p>
+<h3>ADO.NET database connection provider<b style="font-style: italic; text-decoration: underline;" name="s21"></b></h3>
+<p><b>(Drop-down menu to pick from a configurable set of choices)</b></p><p>Select the ADO.NET database connection provider to use for this Data Source. If required, you can restrict or extend the available choices with the <b style="font-style: italic; text-decoration: underline;" target="_blank" href="?cfg=cfg#cfg_DataProviders">ADO.NET Database Connection Providers for SQL Data Access</b> configuration setting.</p>
+<p>The drop-down menu provides a set of choices that can be customized on the Configuration page of the PeopleZen Studio.</p>
+<h3>ADO.NET database connection string (required)<b style="font-style: italic; text-decoration: underline;" name="s22"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the ADO.NET connection string (including user credentials if applicable) used by this Data Source to connect to the database. If you want to specify a password but hide it (and store it encrypted), enter the placeholder <b>{$ROXPWD$}</b> in place of the password and then specify the password in the field below instead.</p>
+<h3>ADO.NET database connection password (if required)<b style="font-style: italic; text-decoration: underline;" name="s23"></b></h3>
+<p><b>(Text box)</b></p><p>If you used the <b>{$ROXPWD$}</b> placeholder in the setting above, you can specify the password here. This will be stored encrypted.</p>
+<h3>ADO.NET data query (required)<b style="font-style: italic; text-decoration: underline;" name="s24"></b></h3>
+<p><b>(Text box)</b></p><p>Specify, in SQL (or any other query language dialect supported by the selected ADO.NET database connection provider), the query sent to the database to fetch the result set of records to be returned by this Data Source.<br/><br/><b>Important:</b> if you have Caching enabled (on the Caching tab) for this ADO.NET Data Source, you <b><i>need</i> to ensure consistent sort order of the raw result set at all times</b> by including an ORDER BY clause or equivalent.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-u"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('u');">&quot;Caching&quot; tab:</b></h4><span class="rox-doctab rox-doctab-u">
+<h3>In-memory Data Source caching<b style="font-style: italic; text-decoration: underline;" name="s25"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>If caching is enabled, PeopleZen always creates a full cache of all data records in memory the first time a rendering request consuming this Data Source is served after a web front-end server has been reset.<br/><br/>
+<b>Caution:</b> enabling caching will sometimes show stale data. Changes to records in your Data Source will not be reflected in real-time but <b>delayed</b> (see <i>Cache Refresh Rate</i> below when caching is enabled). Completely new records added after the cache was last built up will go completely unnoticed until the next server reset unless you tick the <i>Periodically rebuild cache fully</i> check-box option, visible below when caching is enabled.<br/><br/>
+If this is a <b>Database</b> Data Source and you just enabled Caching for it, you <i>need to review</i> the instructions for the <b>ADO.NET data query</b> setting on the <b>Database</b> tab (and its current value!) carefully to ensure a consistent result set sort order is at all times guaranteed by your query.</p>
+<ul>
+<li><b>Full caching</b><br/>&mdash; <i>reading from a (possibly outdated) in-memory copy of the COMPLETE set of backend data</i></li>
+<li><b>No caching (recommended)</b><br/>&mdash; <i>every rendering request will connect to the backing store of this Data Source</i></li>
+</ul>
+<h3>Cache Refresh Rate<b style="font-style: italic; text-decoration: underline;" name="s26"></b></h3>
+<p><b>(Text box)</b></p><p>After a web front-end server has been reset, PeopleZen always creates a full cache of all records in memory the first time a rendering request consuming this Data Source is served.<br/><br/>
+Afterwards, PeopleZen resynchronizes only a certain number of cached records during each request to adequately balance performance with accuracy of the information displayed.<br/><br/>
+Specify the number of records to refresh during each PeopleZen rendering request. A higher number (40 or more) reflects recent data changes much sooner but slows down PeopleZen rendering significantly, and vice versa.<br/><br/>
+If you don&#39;t specify a valid integer number greater than 0, the default value of 10 will be used.</p>
+<p>Default value for new Data Sources:</p>
+<pre>10</pre>
+<h3>Periodically rebuild cache fully<b style="font-style: italic; text-decoration: underline;" name="s27"></b></h3>
+<p><b>(Check box option)</b></p><p><b>Typically neither required nor recommended for production systems, except when "many" (&gt;1x a day) data record additions or deletions are expected at the backing store of this Data Source.</b><br/><br/>After a web front-end server has been reset, PeopleZen always creates a full cache of all records in memory the first time a rendering request consuming this Data Source is served.<br/><br/>
+Those cached records are periodically refreshed at the rate specified above; however, completely new data records go unnoticed until the next server reset.<br/><br/>
+Tick this check box for PeopleZen to completely rebuild the cache periodically every n<sup>th</sup> PeopleZen rendering request, which as a consequence may significantly slow down every n<sup>th</sup> request but captures new records added since the cache was last re-created (n = number of user profiles divided by the cache request rate specified above).</p>
+<h3>Clear the cache next time I click &quot;Save All&quot;<b style="font-style: italic; text-decoration: underline;" name="s28"></b></h3>
+<p>This clears the cache (on the receiving WFE server only) for this Data Source to reflect recent changes in the backend data or your Data Field Templates immediately.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-w"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('w');">&quot;Data Fields&quot; tab:</b></h4><span class="rox-doctab rox-doctab-w">
+<h3>Default data fields (for Preview and new Data Source consumers)<b style="font-style: italic; text-decoration: underline;" name="s29"></b></h3>
+<p><b>(Data fields picker)</b></p><p>Specify the fields to be shown by default in the Data Source Preview and in newly created, not yet customized consumers of this Data Source (ie. PeopleZen Web Parts, Lookup Filters, Lookup Columns etc.)<br/><br/>Each line contains an internal field name. Fields will then be displayed by Data Source consumers in the same order. Note that this is a default template that can be customized for each consumer.<br/><br/>To override the display name of a field in the Data Source consumer, enter your own display name in the same line next to the internal name, separated by a colon [:].<br/><br/>You can only include original fields provided by this Data Source (as listed in the above drop-down) &mdash; any special fields defined below cannot be included here (but the Data Source consumer itself will know how to utilize those depending on its configuration).</p>
+<h3>Name/Title data field/s<b style="font-style: italic; text-decoration: underline;" name="s30"></b></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"title / name"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Picture data field/s<b style="font-style: italic; text-decoration: underline;" name="s31"></b></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"picture / icon image (URL)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Link URL data field/s<b style="font-style: italic; text-decoration: underline;" name="s32"></b></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"URL for linking Name/Title and/or picture"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Presence email address data field/s<b style="font-style: italic; text-decoration: underline;" name="s33"></b></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"email address (for IM/OCS Presence indicator)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Logon name data field/s<b style="font-style: italic; text-decoration: underline;" name="s34"></b></h3>
+<p><b>(Data fields picker)</b></p><p>This lets you define a special <b>"full user logon name / domain account name (domainname\username)"</b> field, which can then be linked or displayed in a specific manner if so configured at the data source <i>consumer</i> side (ie. PeopleZen Web Part, Lookup Filter, Lookup Column etc.) The source data fields specified here will be probed in the specified order to populate this target special field.<br/><br/>Each line contains the source field name to probe enclosed by <b>[square brackets]</b>. You can also combine other static textual content with one or multiple <b>[field names]</b> in each line. For each record, only the first line to return a non-empty value will be used and all other lines will be ignored.</p>
+<h3>Field mappings for Outlook (vCard 3.0) export<b style="font-style: italic; text-decoration: underline;" name="s35"></b></h3>
+<p><b>(Text box)</b></p><p><b>Advanced users only!</b> When customizing, seek assistance in our software support forums.<br/><br/>Contains the full template for the entire vCard 3.0 export of a user profile (excluding the BEGIN, VERSION, REV and END lines). Placeholders in [square brackets] denote Data Source field names and will be replaced with their respective field values at export time.<br/><br/>In your [square bracket placeholders], you can specify <b>any</b> data field name supported by this Data Source <b>as well as</b> any of the following Special Field names:<br/><br/>
+<b>[rox___pt]</b> &mdash; Name/Title data field/s specified above<br/>
+<b>[rox___pp]</b> &mdash; Picture data field/s specified above<br/>
+<b>[rox___pu]</b> &mdash; Link URL data field/s specified above<br/>
+<b>[rox___pm]</b> &mdash; Presence email address data field/s specified above<br/>
+<b>[rox___pl]</b> &mdash; Logon name data field/s specified above</p>
+<p>Default value for new Data Sources:</p>
+<pre>N:[LastName];[FirstName]<br/>FN:[rox___pt]<br/>ORG:ROXORITY Ltd.<br/>EMAIL:[rox___pm]<br/>PHOTO;VALUE=URL:[rox___pp]<br/>TEL:[CellPhone]<br/>TITLE:[Title]</pre>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-y"><b style="font-style: italic; text-decoration: underline;" href="#" onclick="roxTogDocTab('y');">&quot;Preview&quot; tab:</b></h4><span class="rox-doctab rox-doctab-y">
+<h3>Preview this Data Source<b style="font-style: italic; text-decoration: underline;" name="s36"></b></h3>
+<p><b>(Data source previewer)</b></p><p>Click the <i>Refresh</i> button above to load a dynamic preview of this Data Source with its current settings (even if not yet saved). You can parameterize the preview with the various options offered above. It only shows the fields specified in your <b>Default data fields</b> setting (on the <i>Data Fields</i> tab).<br/><br/><b>Important note: this is a <i>data</i> preview rather than a <i>design</i> preview.</b> Depending on loaded out-of-box or custom style sheets, the look and feel of your ultimate Data Source consumers in your content sites will vary from the visual design presented above.</p>
+</span>
+<h1 style="page-break-before: always;">Settings for Data Field Templates</h1><p>The following settings can be customized for each Data Field Template by administrative users on the <b>Data Field Templates</b> page in your <i>PeopleZen Studio</i>, accessible via Site Settings / PeopleZen Studio / Data Field Templates:</p><span>
+<h3>Name for this Data Field Template<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>Content mode<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Keep this set to <b>Plain</b> if you are only providing textual content with or without placeholders. Set this to <b>HTML</b> if you need to provide additional imagery, custom formattings, hyperlinks etc. Both modes support [placeholders in square brackets].<br/><br/><b>Note:</b> in caching-enabled Data Sources using this Data Field Template, changes made to this setting will not be reflected immediately but delayed as configured on the Data Source&#39;s Caching tab.</p>
+<ul>
+<li><b>Plain text</b><br/>&mdash; <i>content will be HTML-encoded</i></li>
+<li><b>HTML source code</b><br/>&mdash; <i>will be rendered directly by the browser</i></li>
+</ul>
+<h3>Template content<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p><b>(Text box)</b></p><p>Specify the content for this template. You can use placeholders in [square brackets] for referencing other data field values. Use [1], [2], [3] .. [n] to reference data values passed to this template.<br/><br/><b>Note:</b> in caching-enabled Data Sources using this Data Field Template, changes made to this setting will not be reflected immediately but delayed as configured on the Data Source&#39;s Caching tab.</p>
+</span>
+<h1 style="page-break-before: always;">Configuration Settings</h1><p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>PeopleZen Studio</i>, which you can access via Site Settings / PeopleZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>PeopleZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / PeopleZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all PeopleZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PeopleZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+<li><i>French</i></li>
+</ul>
+<h3>Window target for data record Name/Title links<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>Data record "Name/Title" links produced by the PeopleZen Web Part can target an HTML window of your choice. Use <i>_self</i> for these links to open in the current browser window, <i>_blank</i> for them to open in a new window, <i>_modal</i> for them to open in a modal pop-up dialog window, <i>_popup</i> for a SharePoint 2010 "modal" in-page popup, or the name of an IFRAME or FRAME element residing in your Web Part Page.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>_popup</pre>
+<h3>HTML template for email addresses<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>The HTML to be generated by the PeopleZen Web Part for all data record field values that are email addresses. Valid placeholders: {0} for the email address, {1} for { and {2} for }.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>&lt;a href=&quot;mailto:{0}&quot;&gt;{0}&lt;/a&gt;</pre>
+<h3>HTML template for vCard export links<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>The HTML to be generated by the PeopleZen Web Part for vCard export links. Valid placeholders: {0} for the vCard export URL, {1} for { and {2} for }.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>&lt;a href=&quot;{0}&quot;&gt;&lt;img src=&quot;/_layouts/images/outl.gif&quot;/&gt;&lt;/a&gt;</pre>
+<h3>HTML template for record field with value<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>The HTML to be generated by the PeopleZen Web Part (in Tiles view) for each data field that has a value. Valid placeholders: {0} for the field display name, {1} for the field value, {2} for the field internal name, {3} for { and {4} for }.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>{0}: &lt;span&gt;{1}&lt;/span&gt;</pre>
+<h3>HTML template for record field without value<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>The HTML to be generated by the PeopleZen Web Part (in Tiles view) for each data field that has no value. Valid placeholders: {0} for the field display name, {1} for the localized word &#39;unknown&#39;, {2} for the field internal name, {3} for { and {4} for }.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>{0}: &amp;mdash;</pre>
+<h3>Exclude all record fields without values (in Tiles view)<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>By default, the PeopleZen Web Part generates an HTML block element (in <i>Tiles</i> view) for each data field included per its Web Part settings, even when no field value has been set for a particular data record. On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to never generate any HTML output (in <i>Tiles</i> view) for empty data fields.</p>
+<h3>Separator for multi-valued record fields<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>Some data fields (such as for example <i>Skills</i> or <i>Responsibilities</i> in Farm User Profiles) can store multiple values. Specify how to join these values together for rendering in the PeopleZen Web Part.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>, </pre>
+<h3>Position of Navigation Bar<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>Your PeopleZen Web Parts may show a navigation bar containing paging links [Back | Next], the interactive View switcher [Tiles | List] and/or an animated loading progress indicator. Select where this navigation bar should be placed.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PeopleZen Studio</i>:</p>
+<ul>
+<li><i>Top (but below quick-filter tabs)</i></li>
+<li><i>Both top and bottom</i></li>
+<li><i>Bottom</i></li>
+</ul>
+<h3>Threshold before reducing quick-filter tabs<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>By default, quick-filter tabs are generated so that all tabs correspond to existing data field values. This is preferable for multi-choice properties (such as for example Skills, Responsibilities etc. for Farm User Profiles) but less usable for potentially vast numbers of values (First Name, Last Name...) &mdash; therefore, beyond a certain number of values quick-filter tabs will be reduced to alphabetic or numeric indices (A, B, C...)<br/><br/>Use this setting to specify that threshold. If you don&#39;t specify a valid integer number between 2 and 50, the default value of 16 will be used.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>16</pre>
+<h3>Always hide the [Empty] quick-filter tab<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>By default, a quick-filter tab will be added to show data records without a value for the quick-filter field (but only if such records exist). On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to never show that quick-filter tab.</p>
+<h3>Always show the [All] quick-filter tab<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<p>When using quick-filter tabs, by default the first quick-filter tab will be initially selected and there is no way for end users to show "all data records, unfiltered". On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to always add an [All] quick-filter tab that shows all data records unfiltered (and to always make this the initially-selected tab, too).</p>
+<h3>Always reverse the sort order of quick-filter tabs<b style="font-style: italic; text-decoration: underline;" name="s12"></b></h3>
+<p>On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to sort quick-filter tabs descending rather than ascending.</p>
+<h3>Do not normalize international characters in reduced quick-filter tabs<b style="font-style: italic; text-decoration: underline;" name="s13"></b></h3>
+<p>Experiment with this setting if the values used in your quick-filter tabs use non-ASCII international characters and your quick-filter tabs look unexpected or non-usable.</p>
+<h3>Embedding of connected FilterZen Web Parts<b style="font-style: italic; text-decoration: underline;" name="s14"></b></h3>
+<p>By default, the Interactive Filters container area of a FilterZen Web Part will be visually embedded inside the PeopleZen Web Part it is connected to (if Ajax-based Live Filtering has been enabled for the latter). This usually results in a preferable user experience, but this setting allows you to turn the behaviour off, should you want to.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PeopleZen Studio</i>:</p>
+<ul>
+<li><i>Yes (no top border)</i></li>
+<li><i>Yes</i></li>
+<li><i>No</i></li>
+</ul>
+<h3>Local text comparison mode for certain Data Source connection providers<b style="font-style: italic; text-decoration: underline;" name="s15"></b></h3>
+<p>For filtering that is performed not at the Data Source side but directly by PeopleZen at the SharePoint side, you can select the string comparison algorithm used to filter based on textual (rather than numeric or date) data field values.</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PeopleZen Studio</i>:</p>
+<ul>
+<li><i>&quot;Invariant&quot; (neutral) locale</i></li>
+<li><i>Current locale</i></li>
+<li><i>Ordinal</i></li>
+</ul>
+<h3>AJAX-based lazy loading of data records after page render (typically not preferable)<b style="font-style: italic; text-decoration: underline;" name="s16"></b></h3>
+<p>Unless disabled below, all interactive end user re-adjustments of information shown in a PeopleZen Web Part refresh its display asynchronously (without reloading the page) via AJAX; however, when the page is first rendered, the initial display of the PeopleZen Web Part is by default already loaded and pre-populated at render time. Unless this significantly (!) slows down the rendering time of the entire page, this is the preferable and more end user-friendly approach. On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to never load and show data records at render time and instead lazy-load them via AJAX once the full page is ready and fully loaded client-side.</p>
+<h3>Disable AJAX-based handling (not recommended)<b style="font-style: italic; text-decoration: underline;" name="s17"></b></h3>
+<p>Certain end-user interactions (such as paging forwards or back, re-sorting, re-grouping or re-filtering) are handled by PeopleZen using AJAX, without reloading the entire page. This highly preferable behavior however can break in certain very rare FBA / ISA constellations or other kinds of highly customized enterprise VPN / proxy setups. On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box to disable all AJAX-based interactions and revert to a page-reloading, post-back style of handling user interaction.</p>
+<h3>ADO.NET Database Connection Providers for SQL Data Access<b style="font-style: italic; text-decoration: underline;" name="s18"></b></h3>
+<p>Specify the ADO.NET database connection providers that your Database/SQL Data Sources should support (one per line, using the pattern "Provider display name: full provider IDbConnection Type name, full assembly name").</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PeopleZen Studio</i> to restore the following default value:</p>
+<pre>SQL Server: System.Data.SqlClient.SqlConnection, System.Data<br/>Oracle: System.Data.OracleClient.OracleConnection, System.Data.OracleClient<br/>ODBC: System.Data.Odbc.OdbcConnection, System.Data<br/>OLE DB: System.Data.OleDb.OleDbConnection, System.Data</pre>
+<h3>Experimental option (MOSS 2007 only) -- do not tick unless so instructed by ROXORITY<b style="font-style: italic; text-decoration: underline;" name="s19"></b></h3>
+<p>Experimental option (MOSS 2007 only) -- do not tick unless so instructed by ROXORITY technical support.</p>
+<h3>No default instances of PeopleZen configurables on the Site Collection level (NOT recommended!)<b style="font-style: italic; text-decoration: underline;" name="s20"></b></h3>
+<p>Configurables are lists of items for defining and customizing the behaviors of this software (such as Export Actions in ExportZen, Data Sources and Data Field Templates in PeopleZen, Print Views and Print Launchers in PrintZen, Upload Actions in UploadZen). By default, each Site Collection has its own non-removable default instance that can be customized and to which additional instances can be added. In extensive farm setups (1000s of Site Collections), these default instances may be a hindrance and using only custom farm-level instances may be preferable. Tick this option to never provide the default instance on the Site Collection level.</p>
+<h3>By default, no inclusion of jQuery library v1.6.1 (NOT recommended)<b style="font-style: italic; text-decoration: underline;" name="s21"></b></h3>
+<p>Some PeopleZen end user-facing artifacts require (and load into the respective host pages) the jQuery library, version 1.6.1. Embedding jQuery more than once in a single page can cause JavaScript warnings in Internet Explorer with <i>some few</i> jQuery plugins (and only if any are used in your farm at all). On the <i>Configuration</i> page in the <i>PeopleZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and independently of PeopleZen to prevent PeopleZen from loading jQuery too. If you do so, you need to make sure jQuery 1.6.1 or higher is loaded on each page hosting also hosting PeopleZen user interface artifacts, or PeopleZen will appear broken. This is a global default setting that can be optionally overridden locally where applicable.</p>
+<h1 style="page-break-before: always;">Reference: URL Settings Parameters</h1><h3>
+	About URL-overridable Settings<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	When the <i>Override Web Part and filter settings from URL parameters</i> check
+	box is ticked (in Web Part settings), every Web Part setting is overridden by the
+	appropriate URL (query string) parameter value, if it exists. See the possible parameter
+	names and values below.</p>
+<div class="rox-info">
+	<b>Note:</b> a URL override of any given <i>Web Part setting</i> will affect <i>all</i>
+	<b>PeopleZen</b> User Profile Web Parts present on the current Web Part Page with
+	the <i>Override Web Part and filter settings from URL parameters</i> option ticked.</div>
+<h3>
+	Overridable Web Part Settings<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li><b>people_AllowSort</b> &mdash; overrides the <i>Allow interactive ad-hoc sorting</i>
+		setting (when using <i>List View</i>). A URL parameter value of &#39;1&#39; activates
+		the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_AllowView</b> &mdash; overrides the <i>Allow interactive view switching</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_CurUser</b> &mdash; overrides the <i>Show only the Current User profile</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_DateThisYear</b> &mdash; overrides the <i>Ignore year</i> setting used
+		for date-based filtering. A URL parameter value of &#39;1&#39; activates the setting,
+		&#39;0&#39; deactivates it.</li>
+	<li><b>people_FilterLive</b> &mdash; overrides the <i>Use Ajax-based live filtering</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_GroupByCounts</b> &mdash; overrides the <i>When grouping, sort by counts
+		instead of group values</i> setting. A URL parameter value of &#39;1&#39; activates
+		the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupDesc</b> &mdash; overrides the <i>When grouping, sort descending</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_GroupInteractive</b> &mdash; overrides the <i>Allow interactive ad-hoc
+		change of the grouping property</i> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupInteractiveDir</b> &mdash; overrides the <i>Allow interactive ad-hoc
+		change of grouping direction (ascending / descending)</i> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupProp</b> &mdash; overrides the <i>Group by property</i> setting.
+		The URL parameter value needs to the internal name of a User Profile property existing
+		in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_GroupShowCounts</b> &mdash; overrides the <i>Show counts in group headers</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_ImageHeight</b> &mdash; overrides the <i>Custom height of user profile
+		pictures</i> setting. Use a URL parameter value of &#39;0&#39; to fall back to CSS-supplied
+		defaults, or any higher number to specify the image height.</li>
+	<li><b>people_ListStyle</b> &mdash; overrides the <i>Display Style</i> setting. Use
+		a URL parameter value of &#39;1&#39; for <i>List View</i>, or &#39;0&#39; for <i>Tiles</i>.</li>
+	<li><b>people_LoaderAnim</b> &mdash; overrides the <i>Loading animation</i> setting.
+		Use a URL parameter value of &#39;k&#39; for <i>Progress bar</i>, &#39;l&#39; for
+		<i>Spinner</i>, or &#39;b&#39; for <i>None</i>.</li>
+	<li><b>people_NameMode</b> &mdash; overrides the <i>Render user names</i> setting. Use
+		a URL parameter value of &#39;0&#39; for <i>No</i>, &#39;1&#39; for <i>Yes, linked to
+			public profile</i>, &#39;2&#39; for <i>Yes, linked to personal page</i> or &#39;3&#39;
+		for <i>Yes, but do not link</i>.</li>
+	<li><b>people_PageSize</b> &mdash; overrides the <i>Paging</i> setting. A URL parameter
+		value of &#39;0&#39; (or any other number less than &#39;1&#39;) disables paging,
+		any higher number specifies the maximum number of profiles per page.</li>
+	<li><b>people_PictMode</b> &mdash; overrides the <i>Render user profile pictures</i>
+		setting. Use a URL parameter value of &#39;0&#39; for <i>No</i>, &#39;1&#39; for
+		<i>Yes, linked to public profile</i>, &#39;2&#39; for <i>Yes, linked to personal page</i>
+		or &#39;3&#39; for <i>Yes, but do not link</i>.</li>
+	<li><b>people_Presence</b> &mdash; overrides the <i>Indicate OCS / IM online presence</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_RowSize</b> &mdash; overrides the <i>In rows of...</i> setting (when using
+		<i>Tiles</i>). Use a URL parameter value of &#39;0&#39; (or any other number less
+		than &#39;1&#39;) to not enforce rows, or any higher number to specify the maximum
+		number of profiles per row.</li>
+	<li><b>people_SortDesc</b> &mdash; overrides the <i>Sort descending</i> setting. A URL
+		parameter value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_SortProp</b> &mdash; overrides the <i>Sort by property</i> setting. The
+		URL parameter value needs to the internal name of a User Profile property existing
+		in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_TabInteractive</b> &mdash; overrides the <i>Allow interactive ad-hoc change
+		of the quick-filter tab property</i> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_TabProp</b> &mdash; overrides the <i>Show tabs to quickly filter by</i>
+		setting. The URL parameter value needs to the internal name of a User Profile property
+		existing in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_TileWidth</b> &mdash; overrides the <i>Tile width</i> setting. Use a CSS-compatible
+		width setting (such as for example 100px, 10%, 3cm...)</li>
+</ul>
+<h1 style="page-break-before: always;">Reference: CSS Classes</h1><p>
+	The output produced by the <b>PeopleZen</b> <i>User Profiles Web Part</i> is decorated with the CSS class
+	names detailed below, allowing for full customizability of its visual appearance.
+	These elements are pre-styled in <b style="white-space: nowrap;">
+		/_layouts/roxority_PeopleZen/roxority_PeopleZen.css</b>.</p>
+<div class="rox-info">
+	To customize the appearance of the <b>PeopleZen</b> <i>User Profiles Web Part</i>, do 
+	<b>not</b> modify the <i style="white-space: nowrap;">
+		/_layouts/roxority_PeopleZen/roxority_PeopleZen.css</i> file in your SharePoint server file system: your modifications 
+	would get lost when deploying product updates in the future. Instead, place your 
+	modifications in a separate CSS file and embed it in your Web Part Page, Master 
+	Page or Page Layout.
+	<br /><br />
+	See our blog article <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://roxority.com/sharepoint-zen/introduction-to-peoplezen-css-customizations.html">Introduction to PeopleZen CSS Customizations</b> for an example of how to do so.
+	</div>
+<ul>
+	<li><b>div.rox-rollup div.rox-rollupitems</b> &mdash; the entire surrounding area of the <b>PeopleZen</b> <i>User Profiles Web Part</i> output<ul>
+			<li><b>div.rox-rollup-paging</b> &mdash; contains paging information as well as the
+				<i>Next</i> and/or <i>Previous</i> links</li>
+			<li><b>div.rox-rollup-switcher</b> &mdash; if ad-hoc end-user view switching is enabled, contains the switching links</li>
+			<li><b>span.rox-pz-zero</b> &mdash; the <i>There are no User Profiles to show in this view</i> message</li>
+			<li><b>div.rox-tabstrip</b> &mdash; contains all quick-filter tabs (if enabled)
+			<ul>
+			<li><b>div.rox-tabprop</b> &mdash; if ad-hoc end-user switching of the quick-filter tabbing property is enabled, contains the drop-down for doing so</li>
+				<li><b>div.rox-tabstrip-fill</b> &mdash; filler block element for the remaining area after 
+					the last one of the quick-filter tabs</li>
+			</ul>
+			</li>
+			<li><b>div.rox-loader</b> &mdash; shows a progress bar or spinner animation while information is 
+				refreshed or retrieved in the User Profiles Web Part (via AJAX)</li>
+			<li><b>table.rox-rollupitems</b> &mdash; in <i>List View</i> only: the surrounding table of the user profiles list view</li>
+			<li><b>div.rox-rollupitems-all</b> &mdash; in <i>Tiles View</i> only: the surrounding area of all user profile tiles</li>
+			<li><b>div.rox-rollupitem</b> &mdash; the surrounding area of a single user profile listing in <i>Tiles</i> view
+				<ul>
+				<li><b>div.rox-rollupitem-picture</b> &mdash; contains the user profile picture, linked 
+					to the user profile</li>
+					<li><b>div.rox-rollupitem-fullname</b> &mdash; contains the user name, linked to the user 
+						profile (<i>Tiles</i> view only)</li>
+					<li><b>div.rox-rollup-item, div.rox-rollupitem-<i>property-name</i></b> &mdash; 
+						contains a user profile property (<i>Tiles</i> view only)</li>
+				</ul>
+			</li>
+			<li><b>span.rox-rollgroup</b> &mdash; if grouping is enabled, contains the group value
+			<ul>
+			<li><b>span.rox-rollgroupprefix</b> &mdash; if grouping is enabled, contains the group name</li>
+			<li><b>span.rox-rollgroupcount</b> &mdash; if grouping is enabled, contains the group item count</li>
+			<li><b>a.rox-rollgroupdirlink</b> &mdash; if grouping is enabled, represents the up/down arrow for re-sorting the group</li>
+			</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+
+<h1 style="page-break-before: always;">Release Notes</h1><h3>
+	Version 1.1 (20th February 2011)<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<ul>
+<li>Stability fixes</li>
+<li>Added: new <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/peoplezen-data-field-templates-one-new-feature-many-new-poss.html">Data Field Templates</b> feature</li>
+</ul>
+<h3>
+	Version 1.8 (29th November 2010)<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<ul>
+	<li>Added: new Data Source connection providers <b>Database (SQL Server, Oracle, etc.)</b> and <b>Active Directory / LDAP</b> in addition to the existing <b>SPS/MOSS Farm User Profiles</b> and <b>SPF/WSS Site User Accounts</b> connections.</li>
+</ul>
+<h3>
+	Version 1.7.5 (25th September 2010)<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<ul>
+	<li>[7th October 2010] Added: <b>ExportZen</b> integration for exporting your SharePoint
+		staff directories, phone listings, departmental or any other User Profile listings
+		to Excel or CSV</li>
+	<li>Added: option to <b>offer the selected print-friendly view in the Web Part menu</b>
+		(integrates with <b style="font-style: italic; text-decoration: underline;" target="_blank" href="http://SharePoint-Tools.net/PrintZen/">PrintZen</b>)</li>
+</ul>
+<h3>
+	Version 1.7 (11th September 2010)<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<ul>
+	<li>Added: full support for SharePoint Foundation 2010 (SPF) and Windows SharePoint
+		Services (WSS) 2007</li>
+	<li>Added: on SharePoint Server 2010 (SPS) and Microsoft Office SharePoint Server (MOSS)
+		2007, as a new alternative to the <i>User Profiles Shared Service Application</i>,
+		you can now instead use the current <i>Site Collection User Accounts</i> as the
+		data source for user profile information displayed in the Web Part.</li>
+	<li>Fixed: a "stack overflow" warning message when using <i>AJAX-based live filtering</i>
+		on a page with more than one FilterZen Web Part</li>
+</ul>
+<h3>
+	Version 1.6 (8th August 2010)<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<ul>
+	<li>Added: support for <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/ad-hoc-view-customization-in-the-user-profiles-web-part.html">
+		ad-hoc, on-the-fly end-user view customization</b> (switching to another user profile
+		property for grouping and/or filter tabs)</li>
+	<li>Added: the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/sharepoint-zen/heres-a-free-web-part-to-show-just-the-current-user-profile.html">
+		Show only Current User profile</b> filtering option</li>
+	<li>Added: the <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/peoplezen-forum/post/1165785">Disable AJAX-based
+		handling</b> configuration option</li>
+	<li>Added: the <i>Reset caches when I next click OK/Apply below</i> check-box option
+		in the PeopleZen Web Part's settings tool-pane</li>
+	<li>Added: <i>Site Accounts for Licensing</i> tool in <i>PeopleZen Studio</i></li>
+</ul>
+<h3>
+	Version 1.5 (16th April 2010)<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<ul>
+	<li>Added: interactive quick-filter tabs by any user profile property of your choice
+		(for example, tab by Department or A..Z name indices)</li>
+	<li>Added: <b style="font-style: italic; text-decoration: underline;" href="http://roxority.com/peoplezen-forum/post/1047307">roxSiteGroups</b>
+		property for filtering by user group membership</li>
+	<li>Added: Performance improvements and <i>Fast user profiles enumeration mode</i> for
+		MOSS 2007</li>
+	<li>Added: <i>DIY User Interface Localization</i> tool in <i>PeopleZen Studio</i></li>
+	<li>Added: <i>Transfer Wizard</i> (import/export) tool in <i>PeopleZen Studio</i></li>
+</ul>
+<h3>
+	Version 1.4 (26th January 2010)<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<ul>
+	<li>Added: more control over paging appearance and controls</li>
+	<li>Added: AJAX support for smoother paging, filtering, ad-hoc sorting, and interactive
+		view switching</li>
+	<li>Added: grouping (ascending or descending) by user profile property</li>
+	<li>Improved: UI for pre-sorting (ascending or descending) by user profile property</li>
+</ul>
+<h3>
+	Version 1.3 (25th December 2009)<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<ul>
+	<li>Added: Display style <i>List-style view table</i>, resembling SharePoint List Views
+		for user profile listings, with option to enable interactive ad-hoc sorting via
+		column headers</li>
+	<li>Added: Option to enforce rows of <i>n</i> user profiles each in the <i>Tiles</i>
+		view style</li>
+	<li>Added: Web Part settings to control rendering of user profile pictures</li>
+	<li>Added: Web Part settings to control rendering of user display names</li>
+</ul>
+<h3>
+	Version 1.2 (21st September 2009)<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<ul>
+	<li>Added: product configuration setting for always excluding certain user name patterns</li>
+	<li>Added: support for extensive filtering using FilterZen</li>
+	<li>Fixed: sorting by numeric or date/time user profile properties was performed alphabetically</li>
+	<li>Fixed: &quot;<i>Unable to add selected web part: This web part could not be imported.</i>&quot;
+		error message</li>
+</ul>
+<h3>
+	Version 1.1 (18th September 2009)<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<ul>
+	<li>Added: product configuration settings for controlling links to user profiles
+	</li>
+	<li>Added: support for URL parameters optionally overriding Web Part settings</li>
+	<li>Added: product documentation</li>
+	<li>Fixed: Web Part produced a &quot;<i>Could not find a part of the path &#39;12\template\images\peoplecache\peoplecache.xml&#39;</i>&quot;
+		error message under certain circumstances.</li>
+</ul>
+<h3>
+	Version 1.0 (30th July 2008)<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<ul>
+	<li>Initial Beta Release: &quot;<b>roxority</b> <i>User Profiles Web Part</i>&quot;</li>
+</ul>
+<h1 style="page-break-before: always;">End-User License Agreement (EULA)</h1><h3>
+	END-USER SOFTWARE LICENSE AGREEMENT FOR ROXORITY SOFTWARE PRODUCTS<b style="font-style: italic; text-decoration: underline;" name="s0"></b></h3>
+<p>
+	THIS IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE
+	ENTITY) AND ROXORITY LTD. (ROXORITY) FOR ROXORITY SOFTWARE, ASSOCIATED MEDIA AND
+	PRINTED MATERIALS, AND MAY INCLUDE ONLINE OR ELECTRONIC DOCUMENTATION (&quot;SOFTWARE&quot;).
+	BY INSTALLING, COPYING, OR OTHERWISE USING THE ROXORITY SOFTWARE PRODUCT, YOU ARE
+	AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT, INCLUDING THE
+	SOFTWARE LICENSE AND DISCLAIMER OF SOFTWARE WARRANTY BELOW. PLEASE READ THIS DOCUMENT
+	CAREFULLY BEFORE USING THE SOFTWARE. IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS
+	OF THIS AGREEMENT, YOU MUST NOT INSTALL OR USE THE SOFTWARE.</p>
+<h3>
+	LICENSE GRANT<b style="font-style: italic; text-decoration: underline;" name="s1"></b></h3>
+<p>
+	&quot;You&quot; or &quot;your&quot; as used herein means the person or company who is being licensed
+	to use the Software, as defined below. &quot;We,&quot; &quot;us&quot; and &quot;our&quot; as used herein means
+	ROXORITY Ltd.</p>
+<p>
+	The &quot;Software&quot; as referred to herein means the ROXORITY Software &quot;PeopleZen&quot;, a
+	product that extends &quot;Microsoft SharePoint&quot; web sites to provide additional capabilities.
+</p>
+<p>
+	We hereby grant you a perpetual, non-exclusive, non-transferable, revocable license
+	to use the Software on your server and client computers.</p>
+<p>
+	The total number of SharePoint &quot;Site Collections&quot; or &quot;server farms&quot; that the Software
+	can be &quot;activated&quot; on (after 45 days of free trial use) shall be limited to the
+	number of licenses which you purchase. For example, if you purchase 4 Site Collection
+	licenses, you may activate the Software on up to 4 SharePoint Site Collections;
+	if you purchase 2 server farm licenses, you may active the Software on unlimited
+	Site Collections within up to 2 server farms.</p>
+<p>
+	Each license is issued to one unique Site Collection or server farm and cannot be
+	transferred to another Site Collection or server farm.
+</p>
+<h3>
+	TITLE<b style="font-style: italic; text-decoration: underline;" name="s2"></b></h3>
+<p>
+	The Documentation as referred to herein shall mean the written materials that you
+	may receive in connection with the Software. We will remain the sole and exclusive
+	owners of all right, title and interest in and to the Software and the Documentation.</p>
+<h3>
+	ARCHIVAL OR BACKUP COPIES<b style="font-style: italic; text-decoration: underline;" name="s3"></b></h3>
+<p>
+	You may copy the Software for back-up and archival purposes only, provided however,
+	that at all times herein, the original and each copy is kept in your possession
+	and that your installation and use of the Software does not exceed that allowed
+	in the &quot;License Grant&quot; section above.</p>
+<h3>
+	THINGS YOU MAY NOT DO<b style="font-style: italic; text-decoration: underline;" name="s4"></b></h3>
+<p>
+	You agree and acknowledge that the Software and Documentation are proprietary works
+	that are protected by the copyright laws of various nations. You may only use the
+	Software and Documentation for the purposes and in accordance with the terms of
+	this Agreement. You may not, without limitation:</p>
+<ul>
+	<li>copy the Documentation, </li>
+	<li>copy the Software except to make archival or backup copies as provided above,
+	</li>
+	<li>place the Software onto a server so that it is accessible via a public network such
+		as the Internet, except as provided for above in &quot;LICENSE GRANT,&quot; </li>
+	<li>sublicense, rent, lease or lend any portion of the Software or Documentation.
+	</li>
+</ul>
+<p>
+	You acknowledge that any violation of this paragraph will cause us immediate and
+	irreparable harm and that the damages which we will suffer may be difficult or impossible
+	to measure. Therefore, upon any actual or impending violation of this paragraph,
+	we shall be entitled to the issuance of a restraining order, preliminary and permanent
+	injunction without bond, restraining or enjoining such violation by you, your successors
+	or assignees or any entity or person acting in concert with you. Such remedy shall
+	be additional to and not in limitation of any other remedy which may otherwise be
+	available to us by law.</p>
+<h3>
+	TRANSFERS<b style="font-style: italic; text-decoration: underline;" name="s5"></b></h3>
+<p>
+	You may assign all your license to use the Software and Documentation to another
+	person or legal entity (the &quot;Assignee&quot;), provided however, that prior to such assignment,
+	the Assignee undertakes in writing to be bound by your obligations under this Agreement.
+	Any attempt to assign or transfer the license to the Software, the Documentation
+	or this Agreement shall be ineffective, unless the assignment complies with the
+	terms of this paragraph. Upon assignment of your license hereunder, you agree to
+	transfer to the Assignee all of your copies of the Software and Documentation, including
+	all copies of updates and prior versions of the Software and Documentation and you
+	further agree and that you will retain no copies, including, without limitation,
+	electronic copies stored on computer discs or drives.</p>
+<h3>
+	DISCLAIMER OF WARRANTY<b style="font-style: italic; text-decoration: underline;" name="s6"></b></h3>
+<p>
+	Except as otherwise provided herein, we warrant that the Software is free from defects
+	in material and workmanship and will perform substantially in accordance with the
+	Software documentation under normal use for one hundred eighty (180) days after
+	the receipt of the Software. If you notify us within such one hundred eighty (180)
+	day period of any claimed defect in the Software, we will at our sole option and
+	expense, and as you sole remedy, either repair or replace the defective Software.
+	Or, if we cannot repair or replace the Software then we will accept the return of
+	the Software at our expense and refund the purchase price of the Software.
+</p>
+<p>
+	EXCEPT AS STATED HEREIN, THE SOFTWARE AND SERVICES OFFERED BY US ARE PROVIDED ON
+	AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY OTHER KIND, EXPRESS,
+	IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE,
+	NONINFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT
+	WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, RELIABLE, SECURE OR ERROR-FREE
+	AND EXPRESSLY DISCLAIM ANY WARRANTIES AS TO THE MATERIALS CONTAINED THEREIN, THE
+	SERVERS USED OR THE GOODS OR SERVICES OFFERED BY US.</p>
+<h3>
+	EXCLUSION OF CERTAIN DAMAGES<b style="font-style: italic; text-decoration: underline;" name="s7"></b></h3>
+<p>
+	IN NO EVENT WILL EITHER PARTY BE LIABLE FOR ANY DAMAGES, INCLUDING ANY LOST PROFITS,
+	LOST SAVINGS, OR OTHER INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING FROM THE USE
+	OR THE INABILITY TO USE THE SOFTWARE (EVEN IF A PARTY OR AN AUTHORIZED DEALER OR
+	DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF THESE DAMAGES), OR FOR ANY CLAIM
+	BY ANY OTHER PARTY. EXCLUDED FROM THE ABOVE LIMITATION OF LIABILITY IS LIABILITY
+	FOR INDEMNIFICATION AS STATED HEREIN AND DAMAGES CAUSED BY THE GROSS NEGLIGENCE
+	OR WILLFUL MISCONDUCT OF A PARTY.</p>
+<h3>
+	TERM AND TERMINATION<b style="font-style: italic; text-decoration: underline;" name="s8"></b></h3>
+<p>
+	This Agreement takes effect upon your acceptance of the terms of this Agreement
+	and remains effective until terminated by either party in accordance with this Agreement.
+	You may terminate this Agreement at any time by destroying all copies of the Software
+	and Documentation in your possession and giving us prompt notice of same. This Agreement
+	will automatically terminate if you fail to comply with any term or condition of
+	this Agreement. Upon termination of this Agreement, you warrant and represent that
+	you will immediately destroy all copies of the Software and Documentation or other
+	materials provided to you hereunder, if any, that are still in your possession and
+	provide us prompt written assurance of same.</p>
+<h3>
+	CONFIDENTIALITY<b style="font-style: italic; text-decoration: underline;" name="s9"></b></h3>
+<p>
+	Non-disclosure. You agree and acknowledge that the Software, its algorithms, protocols
+	or interfaces, and the Documentation constitute proprietary and confidential information
+	that belong to us (the &quot;Confidential Information&quot;). You also understand and agree
+	that misuse and/or unauthorized disclosure of our Confidential Information could
+	adversely affect our business. Accordingly, you agree that at all times you will
+	(a) use and reproduce the Confidential Information only for the purposes of this
+	Agreement and only to the extent necessary for such purpose; (b) restrict disclosure
+	of the Confidential Information to your employees, consultants or independent contractors
+	with a need to know and (c) not disclose the Confidential Information to any third
+	party without our prior written approval. Notwithstanding the foregoing, it shall
+	not be a breach of this Agreement for You to disclose Confidential Information if
+	required to do so under law or in a judicial or other governmental investigation
+	or proceeding, provided however, that You give us prior notice of the disclosure
+	sought and You seek all reasonably available safeguards against widespread dissemination
+	prior to such disclosure.</p>
+<p>
+	Remedies. You acknowledge that any violation of this paragraph may cause us immediate
+	and irreparable harm and that the damages which we will suffer may be difficult
+	or impossible to measure. Therefore, upon any actual or impending violation of this
+	paragraph, we shall be entitled to the issuance of a restraining order, preliminary
+	and permanent injunction without bond, restraining or enjoining such violation by
+	you, your successors or assigns or any entity or person acting in concert with you.
+	Such remedy shall be additional to and not in limitation of any other remedy which
+	may otherwise be available to us by law.</p>
+<h3>
+	INDEMNITY<b style="font-style: italic; text-decoration: underline;" name="s10"></b></h3>
+<p>
+	We will at our own expense defend and hold you fully harmless against any action
+	asserted against you (and specifically including costs and reasonable attorneys&#39;
+	fees associated with any such action) to the extent that it is based on a claim
+	that use of the Software and any documentation or other materials being licensed
+	by or provided to you under this Agreement infringes any patent, copyright, license
+	or other proprietary right of any third party. You shall promptly notify us in writing
+	of any such claim. If as a result of any claim of infringement against any patent,
+	copyright, License or other proprietary right of any third party, you are enjoined
+	from using the Software, or if we believe that the Software are likely to become
+	the subject of a claim of infringement, We will at our option and expense will procure
+	the right for you to continue to use the Software, or replace or modify the Software
+	so as to make them non-infringing, or if it cannot do so within a reasonable time
+	period, refund the Software fees paid by you pursuant to the Agreement.
+</p>
+<h3>
+	GENERAL PROVISIONS<b style="font-style: italic; text-decoration: underline;" name="s11"></b></h3>
+<ol>
+	<li>This Agreement constitutes the entire agreement between you and us concerning the
+		Software and Documentation and supersedes any prior or contemporaneous negotiations,
+		discussions, understandings, purchase orders, communications, advertising or representations
+		concerning the subject matter hereof. </li>
+	<li>This Agreement may be modified or amended only in writing signed by you and us.
+	</li>
+	<li>In the event of litigation between you and us concerning the Software or Documentation,
+		the prevailing party in the litigation will be entitled to recover attorneys&#39; fees
+		and expenses from the other party. </li>
+	<li>You agree that the Software will not be shipped, transferred or exported into any
+		country or used in any manner prohibited by any export laws, restrictions or regulations.
+	</li>
+	<li>The failure or delay of of either party to exercise any of its rights under this
+		Agreement or upon any breach of this Agreement shall not be deemed a waiver of those
+		rights or of the breach.</li>
+	<li>If any provision of this Agreement shall be held by a court of competent jurisdiction
+		to be contrary to law that provision will be enforced to the maximum extent permissible
+		and the remaining provisions of this Agreement will remain in full force and effect.</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"></div>
+</body>
+</html>

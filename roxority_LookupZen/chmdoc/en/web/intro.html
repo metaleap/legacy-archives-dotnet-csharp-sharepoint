@@ -1,0 +1,81 @@
+<h3>
+	Why Export SharePoint List Data to CSV?<a name="s0"></a></h3>
+<p>
+	CSV stands for "comma-separated values" and is a seasoned, proven, stable and cross-platform
+	file format for exchanging data records of identical or similar structure. Most
+	advanced, industry-strength software programs can read in and import CSV data files
+	easily, including Microsoft Office Excel (for spread sheets) and Outlook (for contacts).
+	Utilizing the sophisticated, customizable CSV data export solution provided by LookupZen
+	can make your highly custom data transformation or migration processes and tasks
+	so much easier and faster to accomplish.</p>
+<h3>
+	How LookupZen CSV Data Exports work for SharePoint Lists<a name="s1"></a></h3>
+<p>
+	LookupZen integrates one or more Export actions into the <i>Actions</i> menu of
+	SharePoint List Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="/storage/images/roxority_LookupZen/sharepoint-list-data-export-csv-menu-item.png"
+		title="" /></p>
+<p>
+	Clicking the menu item will let users download the SharePoint List data as a CSV
+	file:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 266px;" src="/storage/images/roxority_LookupZen/sharepoint-list-data-export-csv-download.png"
+		title="" /></p>
+<h3>
+	Defining Your Export Action<a name="s2"></a></h3>
+<p>
+	To make the above work, you need to tell LookupZen just four things:</p>
+<ul>
+	<li>the title of the Export menu item,</li>
+	<li>the description of the Export menu item,</li>
+	<li>the Columns to be included in the exported CSV data file and</li>
+	<li>the types of Lists compatible with this export.</li>
+</ul>
+<p>
+	To do so, you just need to create at least one item in an <i>LookupZen Action Definitions</i>
+	List, after you have <a href="">activated</a> the <i>LookupZen Action Definitions
+		List</i> Site Collection Feature. While you can create such a List from the
+	<i>Create</i> page (available from the <i>Site Actions</i> menu) by clicking <i>LookupZen
+		Action Definitions</i> (under the <i>Custom Lists</i> section), note that one
+	such List should already exist in your root Web Site, titled <i>LookupZen Action Definitions</i>
+	(under the web-relative URL <b>Lists/CsvExportActions</b>) &mdash; check the <i>All
+		Site Content</i> page to find that List:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 388px;" src="/storage/images/roxority_LookupZen/sharepoint-list-data-export-csv-actions.png"
+		title="" /></p>
+<p>
+	In your <i>LookupZen Action Definitions</i> List, simply create and save a new List
+	item to finally define your CSV Export action:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 648px;" src="/storage/images/roxority_LookupZen/sharepoint-list-data-export-csv-definition.png"
+		title="" /></p>
+<p>
+	That's it! This CSV Export action you just defined is now available in the <i>Actions</i>
+	menu of the specified Lists, and clicking it will download a CSV data file with
+	only those columns you specified.
+</p>
+<div class="rox-info">
+	Export actions in <i>LookupZen Action Definitions</i> Lists in a root Web Site are
+	available to Lists in all Web Sites across that Site Collection.</div>
+<h3>
+	Export menu item not showing up? You can also link to your CSV export:<a name="s3"></a></h3>
+<p>
+	Your Export action will not show up in the <i>Actions</i> menu of Document Libraries
+	and other SharePoint Libraries, and in addition may not show up in List <i>Actions</i>
+	menus of heavily customized SharePoint environments. To direct users to a CSV export
+	of a given List, simply give them a link to <b>http://your/web/site/url/_layouts/roxority_LookupZen.csv.aspx?exportlist=list_guid</b>
+	&mdash; replacing, of course, the <i>your/web/site/url</i> part with your SharePoint
+	Web Site URL and the <i>list_guid</i> URL parameter value with the GUID of the List
+	to be exported.</p>
+<ul>
+	<li>If you have more than one export action defined, you can pass a <i>rule</i> 
+		URL parameter with the numeric List Item ID of the export action definition to 
+		be used.</li>
+	<li>If you have more than one <i>Export Action Definitions</i> List, you can specify 
+		the one to be used for looking up the applicable export action by passing a <i>
+		rulelist</i> URL parameter with the <i>Export Action Definitions</i> List GUID.</li>
+</ul>
+

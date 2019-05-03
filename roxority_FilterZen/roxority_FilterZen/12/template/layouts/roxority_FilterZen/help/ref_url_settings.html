@@ -1,0 +1,198 @@
+﻿<h3>
+	About URL-overridable Settings</h3>
+<p>
+	(If you are looking for URL-based filtering, see the chapter on <a href="?doc=url_query_string_filters">
+		Page Request / URL Filters</a>.)
+</p>
+<p>
+	When the <i>Override Web Part and filter settings from URL parameters</i> check
+	box is ticked (in Web Part settings), every filter setting or Web Part setting is
+	overridden by the appropriate URL (query string) parameter value, if it exists.
+	See the possible parameter names and values below.</p>
+<div class="rox-info">
+	<b>Note:</b> a URL override of a <i>Web Part setting</i> will affect <i>all</i>
+	<b>FilterZen</b> Filter Web Parts present on the current Web Part Page with the
+	<i>Override Web Part and filter settings from URL parameters</i> option ticked.
+	A URL override of a <i>filter setting</i> will affect <i>all</i> dynamically generated
+	and manually defined filters in <i>all</i> <b>FilterZen</b> Filter Web Parts present
+	on the current Web Part Page with the <i>Override Web Part and filter settings from
+		URL parameters</i> option ticked.</div>
+<h3>
+	Overridable Web Part Settings</h3>
+<ul>
+	<li><b>filter_ApplyToolbarStylings</b> &mdash; overrides the <a href="?doc=advanced#s2">
+		Apply SharePoint toolbar styles</a> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_AutoRepost</b> &mdash; overrides the <a href="?doc=advanced#s2">Upon user input,
+		immediately reload the page to re-filter</a> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_Cascaded</b> &mdash; override the <i>Limit pickable choices of all drop-down filters to existing values still available after filtering (&#39;cascading filters&#39;, only with CAML Filtering mode enabled)</i> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_DebugMode</b> &mdash; overrides the <a href="?doc=advanced#s4">Debug Mode</a>
+		setting. Use a URL parameter value of &#39;1&#39; to <i>always display the currently
+			sent filter values</i>, &#39;0&#39; to <i>only display these in Web Part edit mode</i>.</li>
+	<li><b>filter_DynamicInteractiveFilters</b> &mdash; overrides the <a href="?doc=advanced#s3">
+		dynamic generation of temporary, interactive filters</a>. Use a URL parameter value
+		of &#39;0&#39; to deactivate, &#39;1&#39; to prepend or &#39;2&#39; to append <i>dynamically
+			generated, temporary, enabled interactive filters for all <a href="?doc=advanced#s0">
+				&#39;known&#39; filter names</a>, if possible</i>.</li>
+	<li><b>filter_HtmlMode</b> &mdash; if interactive filters are present, overrides the
+		<i>rendering of a user interface control for manual re-filtering</i>. Use a URL
+		parameter value of &#39;0&#39; to not embed, &#39;1&#39; to prepend or &#39;2&#39;
+		to append the HTML specified in the Web Part settings to interactive filter controls.</li>
+	<li><b>filter_RememberFilterValues</b> &mdash; overrides the <a href="?doc=advanced#s2">
+		Remember filter values last used for each user</a> setting. A URL parameter value
+		of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>filter_SuppressUnknownFilters</b> &mdash; overrides the <a href="?doc=advanced#s0">
+		Suppress (never send) &#39;unknown&#39; filter names</a> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: All Filter Types</h3>
+<ul>
+	<li><b>filter_FallbackValue</b> &mdash; overrides the <i>If empty, always fall back
+		to this filter value</i> setting (use any text value).</li>
+	<li><b>filter_MultiValueSeparator</b> &mdash; overrides the <i>Send multiple values for 
+		the specified filter name</i> setting (use any text value).</li>
+	<li><b>filter_MultiFilterSeparator</b> &mdash; overrides the <i>Send multiple filter 
+		name-value pairs</i> setting (use any text value).</li>
+	<li><b>filter_SendEmpty</b> &mdash; overrides the <i>Send filter value even if empty</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_SuppressMode</b> &mdash; overrides the <i>Always suppress certain filter values</i>
+		setting.<br />
+		(Use &#39;0&#39; for <i>Don&#39;t suppress any filter values</i>,<br />
+		&#39;1&#39; for <i>Suppress (send Empty) no filter values except...</i>,<br />
+		&#39;2&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>,<br />
+		&#39;3&#39; for <i>Suppress (send Empty) all filter values except...</i><br />
+		or &#39;4&#39; for <i>Suppress (don&#39;t send) no filter values except...</i>)</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice, Date, List Lookup, Text, SQL Data, BCS/BDC and User Filters</h3>
+<ul>
+	<li><b>filter_DefaultIfEmpty</b> &mdash; overrides the <i>Use default value if user
+		input empty</i> or the <i>Allow picking the empty filter value</i> setting, depending
+		on filter type (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_IsInteractive</b> &mdash; overrides the <i>Allow users to enter / pick
+		a filter value</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_Label</b> &mdash; overrides the <i>filter caption label</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice, List Lookup, SQL Data, BCS/BDC and User Filters</h3>
+<ul>
+	<li><b>filter_PostFilter</b> &mdash; overrides the <i>Pre-filtering &mdash; only offer
+		pickable choices that also exist in a List column</i> setting (use &#39;1&#39; or
+		&#39;0&#39;).</li>
+	<li><b>filter_PostFilterFieldName</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		List View URL</i> setting (use any text value).</li>
+	<li><b>filter_PostFilterListViewUrl</b> &mdash; overrides the <i>Pre-filtering &mdash;
+		Column name</i> setting (use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Choice Filters</h3>
+<ul>
+	<li><b>filter_DefaultChoice</b> &mdash; overrides the <i>default filter value</i>
+		setting (use <i>0478f8f9-fbdc-42f5-99ea-f6e8ec702606</i> for <i>Empty</i>, or any value from your <i>valid
+			choices</i> setting).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Date Filters</h3>
+<ul>
+	<li><b>filter_AbsoluteDefaultValue</b> &mdash; overrides the <i>default date filter
+		value</i> setting (use 3155378975999999999 for <i>Today</i>, 0 for <i>Empty</i>,
+		or any other long integer number representing the Ticks of the desired date value).</li>
+	<li><b>filter_RelativeOffset</b> &mdash; overrides the <i>add days</i> setting.</li>
+	<li><b>filter_RelativeOffsetForDefaultOnly</b> &mdash; overrides the <i>only add days when default value</i> setting.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup Filters</h3>
+<ul>
+	<li><b>filter_ListUrl</b> &mdash; overrides the <i>View URL of the lookup List</i> setting
+		(use any text value).</li>
+	<li><b>filter_RemoveDuplicateTitles</b> &mdash; overrides the <i>Remove display duplicates</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_RemoveDuplicateValues</b> &mdash; overrides the <i>Remove duplicate values</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup and User Filters</h3>
+<ul>
+	<li><b>filter_DisplayFieldName</b> &mdash; overrides the <i>display Column</i> setting
+		(use any text value).</li>
+	<li><b>filter_FilterCaml</b> &mdash; overrides the <i>optional custom CAML query</i>
+		setting (use any text value).</li>
+	<li><b>filter_ItemID</b> &mdash; overrides the <i>default filter value</i> setting (use
+		0 for <i>Empty</i>, -1 for <i>the current user or Empty</i>, -2 for <i>the first item
+			after pre-filtering and sorting</i>, -3 for <i>the last item after pre-filtering and
+				sorting</i> or an integer number value representing the desired List item
+		ID).</li>
+	<li><b>filter_ItemSorting</b> &mdash; overrides the <i>sorting of available choices</i> setting
+		(use:<br />
+		0 = as specified by List View or CAML,<br />
+		1 = by display column, ascending,<br />
+		2 = by display column, descending,<br />
+		3 = by display frequency, ascending,<br />
+		4 = by display frequency, descending,<br />
+		5 = by value column, ascending,<br />
+		6 = by value column, descending,<br />
+		7 = by value frequency, ascending,<br />
+		8 = by value frequency, descending).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: List Lookup, Page Column and User Filters</h3>
+<ul>
+	<li><b>filter_StripID</b> &mdash; overrides the <i>Strip internal ID;# prefixes from
+		filter values</i> setting (use &#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ValueFieldName</b> &mdash; overrides the <i>value Column</i> setting (use
+		any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Page Request / URL Filters</h3>
+<ul>
+	<li><b>filter_CatchAll</b> &mdash; overrides the <i>Advanced catch-all</i> setting (use
+		&#39;1&#39; or &#39;0&#39;).</li>
+	<li><b>filter_ParameterName</b> &mdash; overrides the <i>request (form or URL) parameter
+		name</i> setting (use any text value).</li>
+	<li><b>filter_RequestMode</b> &mdash; overrides the <i>Look for the specified parameter
+		in</i> setting (use &#39;0&#39; for <i>URL query string</i>, &#39;1&#39; for <i>Posted
+			form data</i>, &#39;2&#39; for <i>Both, plus cookies and server variables</i>,
+		or 3 for <i>URL path fragment</i>).</li>
+	<li><b>filter_SubParameterName</b> &mdash; overrides the <i>sub-parameter name</i> setting
+		(use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Page Request and BCS/BDC Filters</h3>
+<ul>
+	<li><b>filter_SendNull</b> &mdash; overrides the <i>Use the Empty filter value if missing</i>
+		setting (use &#39;1&#39; or &#39;0&#39;).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: BCS/BDC Filters</h3>
+<ul>
+	<li><b>filter_BdcEntity</b> &mdash; overrides the <i>External Content Type</i> setting (use the BCS/BDC external system / application name and the BCS/BDC external content type / data type 
+		name, separated by {C453BF77-8CC4-4e1a-A50E-8A60B293CE94}).</li>
+	<li><b>filter_BdcValueField</b> &mdash; overrides the <i>value field</i> setting (use any text value).</li>
+	<li><b>filter_BdcDisplayField</b> &mdash; overrides the <i>display field</i> setting (use any text value).</li>
+	<li><b>filter_BdcInstanceID</b> &mdash; overrides the <i>default filter value</i> setting (use any text value).</li>
+</ul>
+<h3>
+	Overridable Filter Settings: SQL Data Filters</h3>
+<ul>
+	<li><b>filter_AdoDataProvider</b> &mdash; overrides the <i>ADO.NET data source 
+		provider</i> setting (use the fully assembly-qualified name of the type 
+		implementing the <i>System.Data.IDbConnection</i> interface).</li>
+	<li><b>filter_AdoConnectionString</b> &mdash; overrides the <i>ADO.NET connection 
+		string</i> setting (use any text value).</li>
+	<li><b>filter_ValueColumnName</b> &mdash; overrides the <i>value column</i> setting (use any text value).</li>
+	<li><b>filter_DisplayColumnName</b> &mdash; overrides the <i>display column</i> setting (use any text value).</li>
+	<li><b>filter_Query</b> &mdash; overrides the <i>query</i> setting (use any text value).</li>
+	<li><b>filter_SqlChoice</b> &mdash; overrides the <i>default filter value</i> setting (use
+		<i>0478f8f9-fbdc-42f5-99ea-f6e8ec702606</i> for <i>Empty</i>, <i>4aea04a6-787a-4135-81a0-195e5946db1f</i> for <i>the first row in the result set</i>, <i>c3bd9af3-8df1-49bd-835b-36f5d64b060c</i> for <i>the 
+		last row in the result set</i> or the <i>value column</i> value of the data row to use.</li>
+</ul>
+<h3>
+	Overridable Filter Settings: Text Filters</h3>
+<ul>
+	<li><b>filter_DefaultValue</b> &mdash; overrides the <i>default filter value</i> setting
+		(use any text value).</li>
+</ul>

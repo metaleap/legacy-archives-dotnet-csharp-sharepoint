@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8335EFB5-20C4-472B-B415-84B04BF5CDAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxority_SetupZen</RootNamespace>
+    <AssemblyName>Deploy</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>roxicon.ico</ApplicationIcon>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/setup/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SETUPZEN WSS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>SETUPZEN WSS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\_r\My Dropbox\dev-vs\sp3asm\Microsoft.SharePoint.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Security, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\_r\My Dropbox\dev-vs\sp3asm\Microsoft.SharePoint.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\Json.cs">
+      <Link>Json.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\JsonSchema.cs">
+      <Link>JsonSchema.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="CompletionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompletionControl.designer.cs">
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeploymentTargetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeploymentTargetsControl.designer.cs">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EULAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EULAControl.designer.cs">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedTreeNode.cs" />
+    <Compile Include="FinishedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinishedControl.designer.cs">
+      <DependentUpon>FinishedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILog.cs" />
+    <Compile Include="JavaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JavaForm.Designer.cs">
+      <DependentUpon>JavaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="InstallConfiguration.cs" />
+    <Compile Include="InstallerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallerForm.designer.cs">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallException.cs" />
+    <Compile Include="InstallOptions.cs" />
+    <Compile Include="InstallProcessControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallProcessControl.designer.cs">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="final\roxority_SetupZen.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RepairControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RepairControl.designer.cs">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SiteCollectionDeploymentTargetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SiteCollectionDeploymentTargetsControl.designer.cs">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SqlControl.Designer.cs">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemCheckControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemCheckControl.designer.cs">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpgradeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpgradeControl.designer.cs">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WelcomeControl.designer.cs">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.fr.resx">
+      <Link>Properties\roxority_Shared.fr.resx</Link>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletionControl.fr.resx">
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletionControl.resx">
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeploymentTargetsControl.de.resx">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeploymentTargetsControl.fr.resx">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeploymentTargetsControl.resx">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EULAControl.de.resx">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EULAControl.fr.resx">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EULAControl.resx">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedControl.resx">
+      <DependentUpon>FinishedControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerControl.resx">
+      <DependentUpon>InstallerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerForm.de.resx">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerForm.fr.resx">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProcessControl.de.resx">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProcessControl.fr.resx">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JavaForm.de.resx">
+      <DependentUpon>JavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JavaForm.fr.resx">
+      <DependentUpon>JavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JavaForm.resx">
+      <DependentUpon>JavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerForm.resx">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProcessControl.resx">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairControl.de.resx">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairControl.fr.resx">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairControl.resx">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Banner.bmp" />
+    <EmbeddedResource Include="Resources\CheckFail.gif" />
+    <EmbeddedResource Include="Resources\CheckOk.gif" />
+    <EmbeddedResource Include="Resources\CheckPlay.gif" />
+    <EmbeddedResource Include="Resources\CheckWait.gif" />
+    <EmbeddedResource Include="SiteCollectionDeploymentTargetsControl.de.resx">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteCollectionDeploymentTargetsControl.fr.resx">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteCollectionDeploymentTargetsControl.resx">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlControl.de.resx">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlControl.fr.resx">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlControl.resx">
+      <DependentUpon>SqlControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemCheckControl.de.resx">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemCheckControl.fr.resx">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemCheckControl.resx">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeControl.de.resx">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeControl.fr.resx">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeControl.resx">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeControl.de.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeControl.fr.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeControl.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\dotfuscator.xml" />
+    <None Include="Resources\gb.png" />
+    <None Include="Resources\de.png" />
+    <None Include="Properties\roxority.snk" />
+    <None Include="Resources\fr.png" />
+    <Content Include="roxicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_ExportZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_ExportZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_ExportZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_FilterZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_FilterZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_FilterZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_PeopleZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_PeopleZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_PeopleZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_PrintZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_PrintZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_PrintZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_SampleZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_SampleZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_SampleZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_UploadZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_UploadZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_UploadZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+
+copy /Y "$(TargetPath)" "$(SolutionDir)..\roxority_RollupZen\WspBuilder\zup\"
+copy /Y "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_RollupZen\WspBuilder\zup\de\$(TargetName).resources.dll"
+copy /Y "$(TargetDir)fr\$(TargetName).resources.dll" "$(SolutionDir)..\roxority_RollupZen\WspBuilder\zup\fr\$(TargetName).resources.dll"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

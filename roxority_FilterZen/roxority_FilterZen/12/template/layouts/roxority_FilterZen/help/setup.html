@@ -1,0 +1,104 @@
+﻿<h3>
+	1. The FilterZen Setup Package</h3>
+<p>
+	The FilterZen setup package (the <a href="http://roxority.s3.amazonaws.com/roxority_FilterZen.zip">
+		roxority_FilterZen.zip</a> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Inst_2013.exe</b> &mdash; a setup wizard for adding or removing FilterZen
+	to/from the SharePoint 2013 server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint 2013 farm server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>Inst_2010_2007.exe</b> &mdash; a setup wizard for adding or removing FilterZen
+	to/from the SharePoint 2010 or SharePoint 2007 server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint 2010/2007 farm server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li>Additional supporting files (such as the solution package/s) that are <i>required</i> for <b>Inst_2013.exe</b> and <b>Inst_2010_2007.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing / uninstalling the FilterZen Solution Package</h3>
+<p>
+	Run <b>Inst_2013.exe</b> (for SharePoint 2013) or <b>Inst_2010_2007.exe</b> (for SharePoint 2010 or 2007) &mdash; <b>DO SO ONLY:</b></p>
+<ul>
+	<li>on the &quot;primary&quot; SharePoint farm
+	server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i></li>
+	<li>under user account credentials that are added to the <i>Farm Administrators</i>
+	group in your SharePoint <i>Central Administration</i></li>
+</ul>
+<ol>
+	<li>
+	<b>Deinstallation:</b> &mdash; the setup wizard will first determine whether any version of FilterZen is currently deployed or installed in the server farm.
+	<ul><li>If so, it <i>immediately proceeds</i> to retract it from all Web Applications,</li><li>then removes it from the server farm&#39;s solution store.</li></ul>
+	</li>
+	<li>
+	<b>(Re)installation:</b> &mdash; the setup wizard will then prompt you whether to proceed installing and deploying FilterZen to your SharePoint server farm:
+	</li>
+</ol>
+<p>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" src="help/res/sharepoint-server-farm-solution-package-wsp-installation.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Notes:</b>
+	<ul>
+	<li>We <i>highly</i> recommend performing a full IISRESET on all farm servers after the setup wizard has finished.</li>
+	<li>
+	Even when FilterZen is deployed in a Web Application, before
+	you can add and start using the Filter Web Part on Web Part
+	Pages inside a Site, the <b>FilterZen Filter Web Part</b> <i>Site Collection Feature</i>
+	needs to be <i>activated</i> for the parent Site Collection, as described in the
+	<i>Feature Activation</i> section below. (The setup wizard will <i>attempt</i> to
+	perform these Feature Activations for you, but does not check whether this succeeded.)
+	</li>
+</div>
+<p>
+	Once you have successfully completed the setup wizard, you can start using the <b>FilterZen</b> Filter Web Part on Web Part Pages inside the applicable Site Collections immediately.
+</p>
+<h3>
+	3. Activating the Site Collection Feature</h3>
+<p>
+	The <b>FilterZen</b> Filter Web Part is a <i>SharePoint Site Collection-scoped Feature</i>, which needs to be
+	&#39;activated&#39; on each Site Collection it is to be used in.</p>
+<ol>
+	<li>Start from the Web Part Page you want to use the Web Part on. Select <i>Site Settings</i>
+		from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root web&#39;s <i>Site Settings</i>
+		page now displayed, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page should contain a row titled <b>FilterZen Filter
+		Web Part</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to make the Web Part available
+				to all web sites, Web Part galleries and Web Part Pages inside this site collection;
+				or click the <i>Deactivate</i> button to disable the Web Part throughout this site
+				collection.<ul><li>Note: if you do deactivate the Site Collection Feature, existing 
+					<b>FilterZen</b> Web Parts will continue to work: the feature 
+				activation status only controls whether the Web Part is available inside your 
+				Site Web Part Galleries.</li></ul>
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>FilterZen</b> solution package was not
+				yet deployed to this web application. On the <i>System Settings</i> page (<i>Operations</i> 
+				in SharePoint 2007) in the <i>Central
+					Administration</i>, click <i>Manage Farm Solutions</i> (<i>Solution management</i> 
+				in SharePoint 2007). On the <i>Solution Management</i> page, click <b>roxority_filterzen_xiv.wsp</b> 
+				(<i>roxority_filterzen_xii.wsp</i> in SharePoint 2007)
+				to open the <i>Solution Properties</i> page. Click <i>Deploy Solution</i>, then
+				select this Site Collection&#39;s parent web application and click <i>OK</i>.
+				(The deployment is delegated to a background job scheduled to run either at the
+				date and time specified, or as soon as possible. Once started, it may take this
+				job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>

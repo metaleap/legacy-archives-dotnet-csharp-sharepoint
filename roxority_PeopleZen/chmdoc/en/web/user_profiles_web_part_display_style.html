@@ -1,0 +1,70 @@
+<p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>Display Style</i> section right at the top:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 283px;" src="/storage/images/roxority_PeopleZen/sharepoint_user_profiles_web_part_display_style.png"
+		title="" /></p>
+<h3>
+	Display Style<a name="s0"></a></h3>
+<p>
+	PeopleZen provides two basic view styles, <i>Tiles View</i> and <i>List View</i>:
+</p>
+<ul>
+	<li><b>Tiles View</b> &mdash; a Rolodex-like view where user profiles are arranged as 
+		individual badges from
+		left to right.
+		<ul>
+			<li>For a clear tabular layout of tiles, specify the number of user profiles per row
+				in the <b>In rows of</b> text box. To have as many user profiles as possible per
+				row, with each row filling the entire Web Part zone and expanding to the maximum
+				available width before <b>wrapping</b> forces further profiles to be shown in a new row,
+				enter <i>0</i>.</li>
+			<li>You can (and should) specify a width that is used per tile. Specifying too small
+				a value may wrap user profile field values that are too long in multiple lines.
+				When specifying a width, you can use any CSS-compatible unit value, for example <i>100px</i>,
+				<i>5cm</i> or <i>20%</i>.</li>
+			<li>To pre-define a custom sort order, see the <a href="user_profiles_web_part_sorting_grouping">
+				Sorting</a> section.</li></ul>
+	</li>
+	<li><b>List View</b> &mdash; resembles the default layout and visual design of most out-of-box,
+		standard SharePoint Lists, with column headers and group headers sharing the same
+		CSS style rules also applied to built-in List View Web Parts. Each user profile
+		is represented as a single data record row.
+		<ul>
+			<li>To allow end-users to interactively re-sort the list on-the-fly, tick the <b>Allow
+				interactive ad-hoc sorting</b> check-box option.</li>
+			<li>To pre-define a custom sort order, see the <a href="user_profiles_web_part_sorting_grouping">
+				Sorting</a> section.</li></ul>
+	</li>
+</ul>
+<h3>
+	Further Appearance and Design Customizations<a name="s1"></a></h3>
+<ul>
+	<li>You can customize the following visual artifacts through the <a href="user_profiles_web_part_misc">
+		Miscellaneous</a> section: the height of user profile pictures being used, the loading
+		animation shown during AJAX data refreshes, whether and how names and pictures are
+		displayed and/or linked, and whether an OCS/IM online presence indicator should
+		be displayed next to user names.</li>
+	<li>Theming: PeopleZen can be fully themed just the same way your SharePoint site designs
+		can be completely remodeled, <a href="ref_css">using Cascading Stylesheets (CSS)</a>.</li>
+	<li>How many user profiles are shown, in what order and arrangement, are all affected
+		by your <a href="user_profiles_web_part_filtering_tabbing_search">filtering</a>, <a href="user_profiles_web_part_paging">
+			paging</a>, <a href="user_profiles_web_part_sorting_grouping">sorting and grouping</a>
+		settings.</li>
+	<li>Some aspects of PeopleZen's graphical end-user interface (GUI) are affected by farm-wide or Site Collection-specific <a href="farm_site_config">configuration settings</a>, 
+		such as:
+	<ul>
+		<li><b>Window target:</b> to have user profile links target a new (popup) window or a frame or <i>IFRAME</i> on your page.</li>
+		<li>Control how <b>email addresses</b> are displayed and/or linked by providing a customized HTML template &mdash; by default, 
+			<i>List View</i> just shows an envelope graphical icon while <i>Tiles View</i> shows the full email address.</li>
+		<li>Control how other user profile fields are displayed when they have and don't have a value set by providing a customized 
+			<b>HTML template</b> (this can also simplify CSS-based theming)</li>
+		<li>If you&#39;d like to combine multi-valued fields (collections of values such as
+			<i>Skills</i>, <i>Responsibilities</i>, <i>Past Projects</i> etc.) with a delimiter other than 
+			the default comma, you can specify it.</li>
+		<li>Optionally fully <b>exclude empty user profile fields</b> in Tiles View (instead of 
+			showing for example &quot;<i>Department: &mdash;</i>&quot; or &quot;<i>Department: (unknown)</i>&quot;)</li>
+	</ul>
+	</li>
+</ul>

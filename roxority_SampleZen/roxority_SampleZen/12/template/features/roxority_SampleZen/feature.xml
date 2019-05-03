@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="a2d2e02e-cc87-4b1e-b776-d72302ee87d0" Title="$Resources:roxority_SampleZen,Feature_Title" Description="$Resources:roxority_SampleZen,Feature_Desc" ImageUrl="roxority_SampleZen/feature.png" Creator="ROXORITY.com" ActivateOnDefault="TRUE" AutoActivateInCentralAdmin="FALSE" AlwaysForceInstall="TRUE" SolutionId="8809fab4-e0a6-404a-b628-e4fee872d91c" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" ReceiverAssembly="roxority_SampleZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Element.xml" />
+	</ElementManifests>
+</Feature>

@@ -1,0 +1,24 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\setup\docs\LookupZen-Help.chm
+Contents file=roxority_LookupZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_LookupZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY LookupZen  Product Documentation
+
+
+[FILES]
+help.css
+jQuery.js
+intro.html
+star.gif
+setup.html
+farm_site_config.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

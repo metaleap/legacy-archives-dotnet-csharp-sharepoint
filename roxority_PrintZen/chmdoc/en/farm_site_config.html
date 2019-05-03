@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Configuration Settings</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PrintZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Configuration Settings</h1>
+<p>The following configuration settings are available to administrative users on the <span id="roxconfiglink"><i>Configuration</i> page in your <i>PrintZen Studio</i>, which you can access via Site Settings / PrintZen Studio / Configuration Settings</span>.</p><p>Each setting has a global value scoped to the SharePoint server farm, and this value can optionally be overridden on the Site Collection level. The following settings are available:</p>
+<h3>User Interface Language<a name="s0"></a></h3>
+<p>PrintZen has been localized for multiple languages. In addition to English and German, if you have added partial translations in other languages (via Site Settings / PrintZen Studio / DIY User Interface Localization), these languages will be available for selection here. Changing this setting affects all PrintZen user interfaces except captions and descriptions of Features, List Templates, Column Types, Content Types or Web Part Templates (those are always loaded directly by SharePoint based on the current Web Site locale).</p>
+<p><strong>You can pick one of the following options</strong> on the <i>Configuration</i> page in the <i>PrintZen Studio</i>:</p>
+<ul>
+<li><i>(Like site, or English)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+<li><i>French</i></li>
+</ul>
+<h3>Window Options for Pop-Up Print Views<a name="s1"></a></h3>
+<p>For Print Views that have been set to open in a new pop-up window (rather than the current browser tab), you can customize the options for that pop-up window here. Note that the syntax is JavaScript-imposed, consult our support forum or your in-house web developer / script specialist if unsure about the options or the syntax.</p>
+<p>After you have customized this setting, you can click the <b>Reset to Default Value</b> link on the <i>Configuration</i> page in the <i>PrintZen Studio</i> to restore the following default value:</p>
+<pre>width=760,height=560,menubar=1,resizable=1,scrollbars=1,status=0,toolbar=0,location=0,directories=0</pre>
+<h3>No default instances of PrintZen configurables on the Site Collection level (NOT recommended!)<a name="s2"></a></h3>
+<p>Configurables are lists of items for defining and customizing the behaviors of this software (such as Export Actions in ExportZen, Data Sources and Data Field Templates in PeopleZen, Print Views and Print Launchers in PrintZen, Upload Actions in UploadZen). By default, each Site Collection has its own non-removable default instance that can be customized and to which additional instances can be added. In extensive farm setups (1000s of Site Collections), these default instances may be a hindrance and using only custom farm-level instances may be preferable. Tick this option to never provide the default instance on the Site Collection level.</p>
+<h3>By default, no inclusion of jQuery library (NOT recommended)<a name="s3"></a></h3>
+<p>Some PrintZen end user-facing artifacts require (and load into the respective host pages) the jQuery library. Embedding jQuery more than once in a single page can cause JavaScript warnings in Internet Explorer with <i>some few</i> jQuery plugins (and only if any are used in your farm at all). On the <i>Configuration</i> page in the <i>PrintZen Studio</i>, tick this check box <i>only</i> if your master pages, web pages or third-party extensions also already include jQuery globally (not just on some individual pages) and independently of PrintZen to prevent PrintZen from loading jQuery too. If you do so, you need to make sure jQuery is loaded on each page hosting also hosting PrintZen user interface artifacts, or PrintZen will appear broken. This is a global default setting that can be optionally overridden locally where applicable.</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PrintZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="3554abff-4b96-4964-80d7-2a91e45600c7"
+          Title="ConsumerWebPart"
+          Description="Description for ConsumerWebPart"
+          Version="1.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+    <ElementFile Location="ConsumerWebPart.webpart" />
+  </ElementManifests>
+</Feature>

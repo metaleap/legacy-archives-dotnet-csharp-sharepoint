@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>User Profile Properties</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>User Profile Properties</h1>
+<p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>User Profile Properties</i> section directly underneath
+	<a href="user_profiles_web_part_display_style.html">Display Style</a>:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 349px;" src="help/res/sharepoint_web_part_user_profile_properties.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Note:</b> the information given below applies for the most part to <a href="web_part_user_profile_data_sources.html">
+		Data Sources</a> with the <i>Connection Provider</i> set to <b>Farm User Profiles</b>,
+	and to a lesser extent, <b>Site User Accounts (People and Groups)</b>. Even if you
+	intend to use another data source such as Active Directory or your own custom SQL-based
+	user database, the basic principles illustrated herein can be extrapolated to these
+	(also with the additional aid of the documented <a href="itemref_DataSources.html">Data
+		Source settings</a> for these <i>Connection Providers</i>).</div>
+<h3>
+	About SharePoint User Profile Properties<a name="s0"></a></h3>
+<p>
+	Detailed information belonging to your user profiles in SharePoint is stored in
+	so-called <i>User Profile Properties</i>. They contain &quot;people data&quot; such
+	as their <i>Birthday</i>, <i>Hire Date</i>, <i>Department</i>, <i>Skills</i>, <i>Past
+		Projects</i> etc. SharePoint (Server) 2007 ships with over 40 default properties,
+	SharePoint (Server) 2010 with over 60. You can of course create your own additional
+	custom properties. You can allow or require your users to manually populate their
+	properties on their own profile page directly in SharePoint, and/or you can automatically
+	populate properties during your <i>User Profile Imports</i> from LDAP-compatible
+	directory services such as <i>Active Directory</i>.</p>
+<p>
+	It is crucial to note that PeopleZen <i>only displays</i> user profiles and properties
+	<i>already stored</i> inside your SharePoint environment (or your selected non-SharePoint
+	<a href="web_part_user_profile_data_sources.html">Data Source</a>) &mdash; how they
+	get there, how and where they are stored, how they are updated all depends on your
+	SharePoint or systems configuration and is well outside the scope of PeopleZen,
+	the display engine.</p>
+<p>
+	To set up or review your user profile properties and your user profile imports from
+	AD or another directory service:</p>
+<ul>
+	<li><b>in Microsoft Office SharePoint Server (MOSS) 2007:</b> go to Central Administration
+		and underneath the <i>Shared Services Administration</i> link in the quick launch,
+		click your default Shared Service Provider (SSP), often called <i>SharedServices1</i>.
+		On its <i>Home</i> page, underneath the <i>User Profiles and My Sites</i> section,
+		click <i>User profiles and properties</i>.</li>
+	<li><b>in SharePoint Server (SPS) 2010:</b> go to Central Administration / Application
+		Management / Manage Service Applications. If there already is a <i>User Profile Service
+			Application</i> listed, click through to it; otherwise, add one via the <i>New</i>
+		or <i>Connect</i> menus in the <i>Service Applications</i> ribbon tab.</li>
+	<li>In <i>Windows SharePoint Services (WSS) 3.0</i> and <i>SharePoint Foundation (SPF)
+		2010</i>, you can add custom user properties via the <i>List Settings</i> page of
+		the <i>User Information List</i> in a Web Site, accessible via the <i>Settings</i>
+		menu on the <i>People and Groups</i> page. There is no out-of-box user profiles
+		import from AD.</li>
+</ul>
+<h3>
+	Displaying User Profile Properties in PeopleZen<a name="s1"></a></h3>
+<p>
+	In the <i>User Profile Properties</i> section pictured above, simply enter the properties
+	to be shown in the multi-line text area, <i>one per line</i>. <b>Always include in each
+		line a colon [ : ] delimiter, otherwise the property will remain hidden</b>
+	from the listings (but can still be selected for interactive end-user ad-hoc <a href="user_profiles_web_part_sorting_grouping.html">
+		re-grouping</a> or <a href="user_profiles_web_part_filtering_tabbing_search.html">re-tabbing</a>).</p>
+<p>
+	The easier and least error-prone way for adding user profile properties to this
+	text box is to select them from the drop-down menu just below it, labeled <b>Add known
+		user profile property</b>.</p>
+<p>
+	Each user profile property contained in this text box is represented by a line containing
+	a colon [ : ] delimiter. Before the colon, the internal property name is given,
+	for example <i>SPS-Birthday</i>. After the colon, specify the desired localized
+	display name shown to end users, for example <i>Birthday</i>. The part after the
+	colon can be anything you wish, the part before the colon must be the valid internal
+	name of an existing SharePoint user profile property (otherwise you'll see a <i>Property
+		Not Defined: [WrongPropName]. An administrator must create this property in the
+		Profile Administration tool</i> message).</p>
+<p>
+	If you do not specify a colon delimiter and a display name, the user profile property
+	will not be shown in your people listings. <b>To show the property values but <i>no</i>
+		property name,</b> use the special display name ___ (three underscores).</p>
+<h3>
+	How user names and profile pictures are displayed (or hidden)<a name="s2"></a></h3>
+<p>
+	User names and profile pictures are also stored in User Profile Properties, but
+	PeopleZen shows them already by default without having to specify them in the <i>User
+		Profile Properties</i> text box described above. PeopleZen treats these as &quot;special
+	properties&quot; and you can customize them in the <a href="user_profiles_web_part_misc.html">
+		Miscellaneous</a> section.</p>
+<ul>
+	<li>The pictures are displayed directly rather than showing their textual URL path that
+		is stored inside the corresponding <i>PictureURL</i> user profile property. They
+		also link to the user profile page (unless this has been customized in the <i>Miscellaneous</i>
+		section).</li>
+	<li>The user name displayed depends on which user profile properties have been populated.
+		If the <i>FirstName</i> and <i>LastName</i> properties are filled out, those two
+		values are shown, otherwise the <i>PreferredName</i>, <i>AccountName</i> and then
+		<i>UserName</i> property are being probed in that order. The name also links to
+		the user profile page (unless this has been customized in the <i>Miscellaneous</i>
+		section).</li>
+</ul>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

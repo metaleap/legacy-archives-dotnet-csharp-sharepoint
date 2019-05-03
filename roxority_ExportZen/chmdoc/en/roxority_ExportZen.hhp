@@ -1,0 +1,46 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\zup\docs\ExportZen-Help.chm
+Contents file=roxority_ExportZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_ExportZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY ExportZen  Product Documentation
+
+
+[FILES]
+help.tlhr.css
+jQuery.js
+help\res\bgtmp.tlhr.jpg
+help\res\csv-list-export-ribbon.png
+help\res\help.tlhr.css
+help\res\roxlogo.tlhr.png
+help\res\roxority.tlhr.png
+help\res\setup01.png
+help\res\setup02.png
+help\res\setup03.png
+help\res\setup04.png
+help\res\setup05.png
+help\res\setup06.png
+help\res\setup07.png
+help\res\sharepoint-export-12-hive-14.png
+help\res\sharepoint-export-timer-job-task-scheduler.png
+help\res\sharepoint-export-timer-job.png
+help\res\sharepoint-list-data-export-csv-actions.png
+help\res\sharepoint-list-data-export-csv-definition.png
+help\res\sharepoint-list-data-export-csv-download.png
+help\res\sharepoint-list-data-export-csv-menu-item.png
+help\res\sharepoint-list-export-legacy-migration-tool.png
+intro.html
+star.gif
+setup.html
+itemref_ExportActions.html
+scheduling_sharepoint_list_data_csv_exports.html
+farm_site_config.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

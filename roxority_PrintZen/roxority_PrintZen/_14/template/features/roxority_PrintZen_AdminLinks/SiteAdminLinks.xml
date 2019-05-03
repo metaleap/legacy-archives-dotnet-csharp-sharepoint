@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Merge xmlns="http://schemas.microsoft.com/sharepoint/">
+	<SetAtt Path="/*[local-name()='Elements']/*[local-name()='CustomActionGroup']" Name="ImageUrl" Value="/_layouts/images/roxority_PrintZen/roxority_PrintZen.png"/>
+</Merge>

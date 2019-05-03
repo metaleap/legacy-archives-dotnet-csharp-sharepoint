@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution SolutionId="05399fab-cda1-44a6-98fd-7c9ea4d22f20" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Assemblies>
+    <Assembly Location="roxority_LookupZen.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="images\roxority_LookupZen\completeallwftasks.gif" />
+    <TemplateFile Location="images\roxority_LookupZen\ewr052.gif" />
+    <TemplateFile Location="images\roxority_LookupZen\feature.png" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\res\help.css" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\eula.html" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\farm_site_config.html" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\intro.html" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\release_notes.html" />
+    <TemplateFile Location="layouts\roxority_LookupZen\help\setup.html" />
+    <TemplateFile Location="layouts\roxority_LookupZen\default.aspx" />
+    <TemplateFile Location="layouts\roxority_LookupZen\jQuery.js" />
+    <TemplateFile Location="layouts\roxority_LookupZen\micro.rox" />
+    <TemplateFile Location="layouts\roxority_LookupZen\roxbase.js" />
+    <TemplateFile Location="layouts\roxority_LookupZen\roxority.js" />
+    <TemplateFile Location="xml\fldtypes_roxority_LookupZen.xml" />
+  </TemplateFiles>
+</Solution>

@@ -1,0 +1,137 @@
+﻿<h3>
+	Global User Name Filter</h3>
+<p>
+	There are certain user accounts that you probably never want PeopleZen to show under
+	<i>any</i> circumstances. You can filter these out &quot;globally&quot;, ie. on
+	the farm level or on the Site Collection level. This is done via the <a href="?doc=farm_site_config#s9">
+		Exclude User Names</a> configuration setting available via Site Settings / PeopleZen
+	Studio / Configuration Settings, where you specify fully qualified domain account
+	names to exclude, or describe a range of user names with *wild-card* patterns.</p>
+<h3>
+	Simple Built-In Filtering</h3>
+<p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, you will find the <i>Filtering</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="help/res/sharepoint_user_profiles_web_part_filtering_tabbing_search.png"
+		title="" /></p>
+<p>
+	A simple way to let end-users quickly filter by a given primary user profile field
+	is the built in <i>Quick-Filter Tabs</i> feature. Simply select that field in
+	the drop-down menu labeled <b>Show tabs to quickly filter by</b>. If you select
+	the <i>Department</i> field, for example, PeopleZen provides tabs that correspond
+	to the existing data values, and each tab shows only user profiles matching the
+	implied filter:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 190px;" src="help/res/sharepoint_user_profiles_web_part_quick_filter_tabs.png"
+		title="" /></p>
+<p>
+	This works well for user profile fields with a limited number of repeatedly
+	used values, such as <i>Department</i> (where realistically between 3 and 20 values
+	will exist), <i>Skills</i>, <i>Past Projects</i>, <i>Manager</i> etc. However, this
+	feature has a neat way of also working well with fields of a potentially vast
+	set of values, such as user names (up to as many values as user profiles may exist),
+	phone numbers, birthdays etc. Beyond a certain <a href="?doc=farm_site_config#s10">threshold
+		number</a> of unique values (the default is 16), instead of providing each value
+	as a separate tab, groups of values are subsumed under alphabetical, numerical or
+	chronological index tabs:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 168px;" src="help/res/sharepoint_user_profiles_web_part_alphabetical_index.png"
+		title="" /></p>
+<p>
+	To use quick-filter tabs, you need to pre-define a user profile field to filter
+	by, but if you want end-users to change this interactively on-the-fly, simply tick
+	the <b>Allow interactive ad-hoc change of that field</b> check-box option.</p>
+<p>
+	You will notice in the above screenshots that a tab simply labeled &quot;&mdash;&quot;
+	may be shown at the end that shows all user profiles where the quick-filter tabs
+	user profile field has no values at all. You can hide these people using the
+	<a href="?doc=farm_site_config#s11">Always hide the [Empty] quick-filter tab</a>
+	configuration setting. You can also choose to show the PeopleZen Web Part initially-unfiltered
+	by prepending to your quick-filter tabs a tab (to be selected-by-default) labeled
+	<i>(All)</i>, using the <a href="?doc=farm_site_config#s11">Always show the [All] quick-filter
+		tab</a> configuration setting.</p>
+<p>
+	Other options in the <i>Filtering</i> section:</p>
+<ul>
+	<li><b>Ignore year when filtering by date fields</b> &mdash; tick this check-box
+		option only when filtering (via quick-filter tabs or Web Part Connections) by a
+		user profile field of the type <b>date no year</b>, such as <i>SPS-Birthday</i>.
+		This ignores the year both from the field value and the filter value when performing
+		the filtering. </li>
+	<li><b>Ajax-based live filtering</b> — this check-box option controls how filter values
+		sent via a Web Part connection with a FilterZen Filter Web Part (see below) are
+		applied:
+		<ul>
+			<li>if unticked, every time a filter is changed in the FilterZen Web Part, the entire
+				page refreshes itself to apply the new filter values to the PeopleZen Web Part.</li>
+			<li>if ticked, every time a filter is changed in the FilterZen Web Part, no page-reload
+				happens but just the PeopleZen Web Part updates itself autonomously in the background
+				to apply the new filter values.</li>
+		</ul>
+	</li>
+	<li><b>Show only the current user profile</b> &mdash; self-explanatory.</li>
+</ul>
+<h3>
+	Adding Search and Advanced Filtering via Connections</h3>
+<p>
+	You can further filter PeopleZen by a variety of methods:
+</p>
+<ul>
+	<li>by providing a filter via a URL parameter or posted form value</li>
+	<li>by providing text boxes, date pickers or choice selectors for end users to supply
+		a filter</li>
+	<li>by letting end users select a document or an item in a Document Library or List
+		View and supply a Column value as the filter</li>
+</ul>
+<p>
+	All of these above use-cases, and many more, can be achieved by connecting PeopleZen
+	to a filter provider Web Part. Select <i>Edit Web Part</i> from the PeopleZen Web
+	Part menu and then from the same menu, in the <i>Connections / Get Filters From</i>
+	sub-menu select a filter provider Web Part:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 382px;" src="help/res/sharepoint_user_profiles_web_part_get_filter_values_from.png"
+		title="" /></p>
+<p>
+	Depending on the filter provider Web Part, this may show a <i>Configure Connection</i>
+	dialog (that you can also use to remove the connection if needed) where you can
+	select the user profile field to filter by:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 370px;" src="help/res/sharepoint_user_profiles_web_part_configure_connection_dialog.png"
+		title="" /></p>
+<p>
+	While PeopleZen supports all filter provider Web Parts built into SharePoint (including
+	<i>List Views</i> and the built-in Filter Web Parts including the <i>Choice Filter</i>,
+	<i>Current User Filter</i>, <i>Date Filter</i>, <i>Page Field Filter</i>, <i>Query String
+		(URL) Filter</i>, <i>SharePoint List Filter</i>, <i>SQL Server Analysis Services Filter</i>
+	and <i>Text Filter</i>), we highly recommend using a <a href="http://roxority.com/filterzen/"
+		target="_blank">FilterZen Filter Web Part</a>, which:</p>
+<ul>
+	<li>provides the same filter types (and more!) as SharePoint Server Enterprise Edition
+		(yet with much extended capabilities), but works across SharePoint 2013 / 2010 Foundation
+		and Server as well as WSS 3.0 and MOSS 2007,</li>
+	<li>allows for combining multiple filters in a single filter provider Web Part, having
+		individual filters send multiple values (and end users select them easily), advanced
+		comparison operators other than just <i>Equals</i> (such as <i>Contains</i>, <i>Greater/Less
+			Than</i> and value-ranges)</li>
+	<li>and when displayed to end users, fully integrates visually into the User Profiles
+		Web Part, becoming a part of it rather than appearing as a separate Web Part (unless
+		this has been disabled via the <a href="?doc=farm_site_config#s13">Embedding of connected
+			FilterZen Web Parts</a> configuration setting).</li>
+</ul>
+<p>
+	FilterZen lets you compose the most advanced search interfaces for PeopleZen:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/sharepoint_user_profiles_web_part_filtering_search.png"
+		title="" /></p>
+<h3>
+	Filtering Use-Cases:</h3>
+<ul>
+	<li><a href="http://roxority.com/sharepoint-zen/an-upcoming-birthdays-web-part-in-10-minutes.html"
+		target="_blank">An &quot;Upcoming Birthdays&quot; Web Part in 10 minutes</a> (tutorial
+		posted to our blog)</li>
+	<li><a target="_blank" href="http://roxority.com/peoplezen-forum/post/1047307">Filtering
+		PeopleZen by SharePoint Website User Group Memberships</a> (forum thread on our
+		website)</li>
+</ul>

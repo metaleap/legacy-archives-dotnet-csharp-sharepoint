@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" Debug="false" %><% Response.Redirect (Request.RawUrl.ToLowerInvariant ().Replace ("roxority_uploadzen.aspx", "roxority_UploadZen/default.aspx"), true); %>

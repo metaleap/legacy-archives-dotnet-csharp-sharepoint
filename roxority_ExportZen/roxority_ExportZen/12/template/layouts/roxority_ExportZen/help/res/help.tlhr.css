@@ -1,0 +1,313 @@
+div#rox_page_info input.ms-input, .rox-input
+{
+	width: 380px !important;
+	margin: 4px 4px 4px 24px;
+	background: window;
+	padding: 2px;
+	color: WindowText;
+	border: solid 1px graytext;
+	text-align: center;
+	font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+img.roxbuttonicon
+{
+	margin: 0px 3px 0px 3px;
+	width: 16px !important;
+	height: 16px !important;
+}
+.roxcfggroup
+{
+	cursor: pointer;
+	background: InfoBackground url('/_layouts/images/collapseplus.gif') no-repeat 6px center;
+	padding: 6px 8px 6px 18px;
+	text-align: left;
+}
+.rox-margin
+{
+	margin: 4px 0px 4px 0px;
+}
+.rox-tooltable, .rox-tooltable td
+{
+	color: #525252;
+	vertical-align: top;
+	padding-bottom: 4px;
+}
+table.ms-toolbar a.ms-toolbar
+{
+	text-decoration: none;
+}
+h4
+{
+	background-color: #b9b9b1;
+	text-align: center;
+}
+.rox-tooltable td b
+{
+	display: block;
+	padding-right: 8px;
+	white-space: nowrap;
+}
+.roxcfggroup *
+{
+	font-size: 12px;
+	text-decoration: none !important;
+}
+.roxadmintopic
+{
+	display: none;
+}
+input.ms-ButtonHeightWidth
+{
+	border: solid 1px graytext;
+	text-align: center;
+	font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+div#licdiv ul, div#licdiv ul li
+{
+	background-repeat: no-repeat;
+	background-position: left center;
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 3px;
+	padding: 3px;
+	white-space: nowrap;
+}
+b.lichead
+{
+	display: block;
+	color: #fff;
+	padding: 4px;
+	white-space: nowrap;
+}
+img
+{
+	-ms-interpolation-mode: bicubic !important;
+}
+td#GlobalTitleAreaImage
+{
+	background-repeat: no-repeat;
+	background-position: 1px 4px;
+}
+img#onetidHeadbnnr0
+{
+	visibility: hidden;
+	width: 36px;
+	height: 36px;
+}
+img.rox-docpic
+{
+	height: 92px !important;
+	padding: 4px;
+	margin: 4px;
+	background-color: buttonface;
+	border: solid 1px buttonshadow;
+	cursor: hand;
+}
+.rox-docpic, .rox-docpic span
+{
+	color: buttontext;
+	text-align: center;
+}
+p.rox-docpic span
+{
+	display: block;
+}
+td
+{
+	font-family: Tahoma, sans-serif;
+	font-size: 8pt;
+}
+td.ms-descriptiontext, td.ms-authoringcontrols, td.ms-inputformcontrols
+{
+	vertical-align: top;
+	padding: 8px !important;
+}
+td.ms-inputformcontrols
+{
+	width: auto !important;
+}
+table.ms-propertysheet a
+{
+	font-weight: normal !important;
+	text-decoration: underline;
+}
+table.ms-propertysheet td.ms-descriptionText fieldset
+{
+	margin: 12px;
+	padding: 12px;
+}
+table.ms-propertysheet td.ms-descriptionText fieldset table.ms-propertysheet
+{
+	margin-top: 12px;
+}
+.rox-wssinfo
+{
+	background-color: infobackground;
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+	color: infotext;
+	border: solid 1px #ccc;
+	padding: 2px;
+	font-size: 10px;
+}
+.rox-info, div#licdiv ul
+{
+	background: infobackground url('/_layouts/images/star.gif') 4px 4px no-repeat;
+	color: infotext;
+	border: solid 1px #ccc;
+	padding: 4px 4px 4px 24px;
+}
+div#licdiv ul
+{
+	background-image: none;
+}
+#rox_page_help, #rox_page_info, #rox_page_help td, #rox_page_info td, #roxdataeditor
+{
+	line-height: 16px;
+	font-size: 11px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Sans-Serif;
+}
+h2.ms-sitetitle, h3
+{
+	font-size: 20px;
+	font-family: "Lucida Grande", "Corbel", "Trebuchet MS", "Lucida Sans Unicode", Sans-Serif;
+}
+.rox-templatepickerspacer
+{
+	height: 23px;
+	border-bottom: 1px solid #c4c4c4;
+	font-size: 10px;
+	padding: 4px 2px 2px 2px;
+	text-align: right;
+	overflow: auto;
+}
+.rox-tabcontainer
+{
+	clear: both;
+	border: 1px solid #c4c4c4;
+	border-top: 0px none red;
+}
+div.rox-tabrow div div a, div.rox-tabrow div div a:hover, div.rox-tabrow div div a:link, div.rox-tabrow div div a:active, div.rox-tabrow div div a:visisted
+{
+	text-decoration: none !important;
+}
+div.rox-tabrow div.ms-templatepickerselected div a
+{
+	font-weight: bold !important;
+}
+td.rox-homecell
+{
+	padding-top: 12px !important;
+	padding-left: 44px !important;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+}
+td.rox-homecell h3 a
+{
+	font-weight: bold !important;
+}
+td.rox-homecell ul
+{
+	margin-left: 20px;
+	list-style-type: square;
+}
+div.rox-vh
+{
+	position: relative;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+}
+table.rox-vh
+{
+	width: 100%;
+}
+#roxdataeditor
+{
+	background: url('/_layouts/images/roxority_ExportZen/overlay.png') repeat left top;
+	position: absolute;
+	width: 100%;
+	padding: 8%;
+	height: 100%;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+#roxdataeditor .rox-tabrow
+{
+	margin-left: 2px;
+}
+#roxdataeditor .rox-templatepickerspacer
+{
+	color: ButtonFace;
+}
+#roxdataeditor .ms-templatepickerunselected div, #roxdataeditor .ms-templatepickerselected div
+{
+	padding-left: 2px;
+}
+#roxdataeditor .ms-templatepickerunselected a, #roxdataeditor .ms-templatepickerselected a
+{
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+#roxdataeditor .rox-tabcontainer, #roxdataeditor .rox-templatepickerspacer
+{
+	border: 0px none red !important;
+}
+#roxdataeditor .rox-tabcontainer-container
+{
+	border: 1px solid ButtonShadow;
+	border-top: 0px none red;
+	padding: 0px 1px 1px 1px;
+}
+#roxdataeditor .rox-tabcontainer
+{
+	padding: 24px;
+	background-color: Window;
+	height: 80%; position: relative;
+	overflow: auto;
+	color: WindowText;
+}
+#roxdataeditor .rox-tabcontainer fieldset
+{
+	margin-bottom: 8px;
+}
+#roxdataeditor .rox-tabcontainer fieldset legend
+{
+	color: GrayText;
+}
+#roxdataeditor .rox-tabcontainer fieldset div.rox-fieldset .rox-dataprop
+{
+	white-space: nowrap;
+}
+#roxdataeditor .rox-tabcontainer fieldset div.rox-fieldset
+{
+	padding: 8px;
+}
+#roxdataeditor .rox-tabcontainer fieldset div.rox-fieldset .ms-input
+{
+	margin-left: 8px;
+	margin-right: 8px;
+}
+#roxdataeditor .rox-tabbuttons
+{
+	text-align: right;
+	border-top: 1px solid ButtonShadow;
+	padding: 12px;
+	background-color: ButtonFace;
+	color: ButtonText;
+}
+#roxdataeditor .rox-tabbuttons input
+{
+	background-color: ThreeDLightShadow;
+	width: auto;
+	padding: 0px 0px 0px 16px;
+	background-repeat: no-repeat;
+	background-position: 4px center;
+}

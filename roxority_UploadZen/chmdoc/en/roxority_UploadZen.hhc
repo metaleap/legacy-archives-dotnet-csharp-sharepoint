@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x801220">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Error message? Open docs\UploadZen-Help.html instead.">
+		<param name="Local" value="intro.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Solution Installation">
+		<param name="Local" value="setup.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Walkthrough: Web Uploader">
+		<param name="Local" value="sharepoint_flash_silverlight_web_uploader.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Walkthrough: Windows Uploader">
+		<param name="Local" value="uploading_multiple_files.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Web vs. Windows Uploader">
+		<param name="Local" value="comparison_web_windows_sharepoint_bulk_upload.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Settings for Upload Actions">
+		<param name="Local" value="itemref_UploadActions.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Configuration Settings">
+		<param name="Local" value="farm_site_config.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Deployment Checklist">
+		<param name="Local" value="clickonce_deployment_checklist.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Automatic Check-Out & Batch Check-In">
+		<param name="Local" value="automatic_checkout_batch_checkin_versioning.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Authentication (Windows & Forms)">
+		<param name="Local" value="windows_integrated_and_forms_based_authentication_fba.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bulk Folder Uploads & ZIP Handling">
+		<param name="Local" value="bulk_folder_uploads_server_side_zip_unzipping.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Client-Side Settings">
+		<param name="Local" value="client_side_settings.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release Notes">
+		<param name="Local" value="release_notes.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="End-User License Agreement (EULA)">
+		<param name="Local" value="eula.html">
+		</OBJECT>
+
+</UL>
+</BODY></HTML>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="12345678-abcd-9999-eeff-5173ad000001" Title="PeopleZen Admin Links" Description="" ActivateOnDefault="TRUE" AlwaysForceInstall="TRUE" AutoActivateInCentralAdmin="TRUE" Creator="roxority.com" SolutionId="1f9fd01f-dfd4-41ba-b3f0-6394a4616130" Scope="Farm" Version="1.0.0.0" Hidden="TRUE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="SiteAdminLinks.xml" />
+	</ElementManifests>
+</Feature>

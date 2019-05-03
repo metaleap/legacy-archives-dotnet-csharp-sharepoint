@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6831A9D-07A8-44C7-B864-D6E510B4CD68}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>roxUpZen</RootNamespace>
+    <AssemblyName>roxUpZen</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>roxUpZen.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>roxUpZen.App</SilverlightAppEntry>
+    <TestPageFileName>roxUpZenTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=2.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Data.Input, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Data, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Crc32.cs">
+      <Link>Zlib\Crc32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Deflate.cs">
+      <Link>Zlib\Deflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Events.cs">
+      <Link>Zlib\Events.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Exceptions.cs">
+      <Link>Zlib\Exceptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Inflate.cs">
+      <Link>Zlib\Inflate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\InfTree.cs">
+      <Link>Zlib\InfTree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Shared.cs">
+      <Link>Zlib\Shared.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Tree.cs">
+      <Link>Zlib\Tree.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\WinZipAes.cs">
+      <Link>Zlib\WinZipAes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipConstants.cs">
+      <Link>Zlib\ZipConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipCrypto.cs">
+      <Link>Zlib\ZipCrypto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipDirEntry.cs">
+      <Link>Zlib\ZipDirEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipEntry.cs">
+      <Link>Zlib\ZipEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZipFile.cs">
+      <Link>Zlib\ZipFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\Zlib.cs">
+      <Link>Zlib\Zlib.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibCodec.cs">
+      <Link>Zlib\ZlibCodec.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibConstants.cs">
+      <Link>Zlib\ZlibConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\roxority_Shared\Ionic.Zlib\ZlibStream.cs">
+      <Link>Zlib\ZlibStream.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="roxority_SetupZen">
+</Property><Property Name="Solution File" Value="C:\Users\roxor\Documents\Visual Studio 2010\Projects\roxority_SetupZen\roxority_SetupZen.sln">
+</Property><Property Name="Date" Value="Wednesday, April 28, 2010">
+</Property><Property Name="Time" Value="19:21 PM">
+</Property><Property Name="Log Number" Value="3">
+</Property></Properties><Event ErrorLevel="1" Project="roxority_LicenseZen" Source="roxority_LicenseZen\roxority_LicenseZen.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="roxority_LicenseZen" Source="roxority_LicenseZen\roxority_LicenseZen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_LicenseZen" Source="roxority_LicenseZen\roxority_LicenseZen.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="roxority_SetupZen" Source="roxority_SetupZen\roxority_SetupZen.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="roxority_SetupZen" Source="roxority_SetupZen\roxority_SetupZen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_SetupZen" Source="roxority_SetupZen\roxority_SetupZen.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="roxority_BuildZen" Source="roxority_BuildZen\roxority_BuildZen.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="roxority_BuildZen" Source="roxority_BuildZen\roxority_BuildZen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_BuildZen" Source="roxority_BuildZen\roxority_BuildZen.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_Licensing" Source="roxority_Licensing\roxority_Licensing.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_Licensing" Source="roxority_Licensing\roxority_Licensing.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="Affirma.ThreeSharp.Wrapper" Source="..\s3sdk\Affirma.ThreeSharp.Wrapper\Affirma.ThreeSharp.Wrapper.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="Affirma.ThreeSharp.Wrapper" Source="..\s3sdk\Affirma.ThreeSharp.Wrapper\Affirma.ThreeSharp.Wrapper.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Affirma.ThreeSharp.Wrapper" Source="..\s3sdk\Affirma.ThreeSharp.Wrapper\Affirma.ThreeSharp.Wrapper.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_S3Sync" Source="roxority_S3Sync\roxority_S3Sync.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_S3Sync" Source="roxority_S3Sync\roxority_S3Sync.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="LicenseeExport.cs" Source="LicenseeExport.cs\LicenseeExport.cs.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="LicenseeExport.cs" Source="LicenseeExport.cs\LicenseeExport.cs.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="roxority_SetupZen.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="roxority_SetupZen.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_LicenseZen" Source="roxority_LicenseZen\roxority_LicenseZen.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="roxority_SetupZen" Source="roxority_SetupZen\app.config" Description="File converted successfully. All &lt;supportedRuntime&gt; and &lt;requiredRuntime&gt; tags were removed to enable the project to build and run with Visual Studio 2005.">
+</Event><Event ErrorLevel="3" Project="roxority_SetupZen" Source="roxority_SetupZen\app.config" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_BuildZen" Source="roxority_BuildZen\roxority_BuildZen.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="roxority_Licensing" Source="roxority_Licensing\roxority_Licensing.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Affirma.ThreeSharp" Source="..\s3sdk\Affirma.ThreeSharp\Affirma.ThreeSharp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Affirma.ThreeSharp.Wrapper" Source="..\s3sdk\Affirma.ThreeSharp.Wrapper\Affirma.ThreeSharp.Wrapper.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="roxority_S3Sync" Source="roxority_S3Sync\roxority_S3Sync.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="LicenseeExport.cs" Source="LicenseeExport.cs\LicenseeExport.cs.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

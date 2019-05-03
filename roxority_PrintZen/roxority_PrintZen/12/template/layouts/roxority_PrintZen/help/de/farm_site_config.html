@@ -1,0 +1,46 @@
+<p>Die folgenden Einstellungen finden administrative Benutzer auf der Seite <span id="roxconfiglink"><i>Konfiguration</i> im <i>PrintZen-Studio</i>, welches Sie &uuml;ber Websiteeinstellungen / PrintZen Studio / Konfigurationseinstellungen erreichen</span>.</p><p>Jede Einstellung hat einen globalen, &uuml;ber die gesamte Serverfarm hinweg geltenden Wert, der jeweils optional auf Websitesammlungsebene &uuml;berschrieben werden kann. Die folgenden Konfigurationseinstellungen stehen zur Verf&uuml;gung:</p>
+<h3>Sprache</h3>
+<p>PrintZen wurde f&uuml;r verschiedene Sprachen lokalisiert. Zus&auml;tzlich zu Englisch und Deutsch werden hier alle Sprachen zur Auswahl angeboten, f&uuml;r die Sie eigene Teil&uuml;bersetzungen (unter Websiteeinstellungen / PrintZen Studio / DIY-Benutzeroberfl&auml;chen-Lokalisierung) angefertigt haben. Diese Einstellung betrifft alle PrintZen-Benutzeroberfl&auml;chen au&szlig;er Beschriftungen und Beschreibungen von Features, Listenvorlagen, Spaltentypen, Inhaltstypen oder Webpartvorlagen (diese werden von SharePoint immer direkt gem&auml;&szlig; der aktiven Website-Spracheinstellung geladen).</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PrintZen-Studio</i>:</p>
+<ul>
+<li><i>(Wie Site, oder Englisch)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+</ul>
+<h3>Fensteroptionen f&#252;r Popup-Druckansichten</h3>
+<p>Sie k&ouml;nnen f&uuml;r Druck-Ansichten, die in einem neuen Popup-Fenster (statt im aktuellen Browsertab) ge&ouml;ffnet werden, hier die Fensteroptionen f&uuml;r das Popup anpassen. Hinweis: die Syntax hierf&uuml;r wird durch JavaScript vorgegeben, bei Unklarheiten konsultieren Sie unsere Support-Foren oder Ihren Webentwickler / Skriptspezialisten vor Ort.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PrintZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>width=760,height=560,menubar=1,resizable=1,scrollbars=1,status=0,toolbar=0,location=0,directories=0</pre>
+<h3>URLs zus&#228;tzlich einzubindender Cascading Stylesheets (CSS)</h3>
+<p>Ihre Druckansichten binden zwar bereits automatisch die "Theme"- und "Benutzerdefinierte CSS-URL"-Einstellungen der aktuellen SharePoint-Site ein. Sie k&ouml;nnen hier jedoch weitere in Ihren Druckansichten zu ladende CSS-Stylesheets angeben (als absolute oder relative URLs, eine pro Zeile).</p>
+<h3>Pfad zum Merge-Werkzeug</h3>
+<p>Geben Sie die vollen Dateipfad (inklusive Dateinamen) zu Ihrer doc2pdf.exe-Programmdatei oder &auml;quivalenten Programm an. HINWEIS: in Multi-Server-Farmumgebungen sollte das Programm auf allen Farmservern an exakt demselben Pfad vorliegen.<br/><br/><b>PrintZenServer.exe kann WEDER serverseitiges Dokumentmerging NOCH serverseitiges Drucken unterst&uuml;tzen, solange hier keine g&uuml;ltige und voll funktionsf&auml;hige doc2pdf.exe oder &auml;quivalente Programmdatei angegeben wird.</b></p>
+<h3>Heften (Stapling)</h3>
+<p>Gibt an, ob und an welcher Position ein Drucker ein mehrseitiges Dokument heftet.</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PrintZen-Studio</i>:</p>
+<ul>
+<li><i>Keine Heftung</i></li>
+<li><i>Oben links</i></li>
+<li><i>Oben rechts</i></li>
+<li><i>Unten links</i></li>
+<li><i>Unten rechts</i></li>
+<li><i>R&#252;ckendrahtheftung</i></li>
+<li><i>Zweifach links</i></li>
+<li><i>Zweifach rechts</i></li>
+<li><i>Zweifach oben</i></li>
+<li><i>Zweifach unten</i></li>
+<li><i>Nicht angegeben bzw. Drucker-Voreinstellung oder -Standardeinstellung</i></li>
+</ul>
+<h3>Beidseitigkeit (Duplex)</h3>
+<p>Gibt an, ob ein Drucker einseitigen Druck oder einen zweiseitigen Drucktyp (Duplexdruck) verwendet.</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PrintZen-Studio</i>:</p>
+<ul>
+<li><i>Einseitig</i></li>
+<li><i>Beidseitig (langer Rand)</i></li>
+<li><i>Beidseitig (kurzer Rand)</i></li>
+<li><i>Nicht angegeben bzw. Drucker-Voreinstellung oder -Standardeinstellung</i></li>
+</ul>
+<h3>Keine Standardinstanzen f&#252;r PrintZen-Konfiguratoren auf Websitesammlungsebene (NICHT empfohlen!)</h3>
+<p>Konfiguratoren sind Listen von Elementen, die das Verhalten dieser Software definieren bzw. anpassen (wie Export-Aktionen in ExportZen, Datenquellen und Datenfeldvorlagen in PeopleZen, Druckansichten und Druck-Launcher in PrintZen, Upload-Aktionen in UploadZen). Standardm&auml;&szlig;ig besitzt jede Websitesammlung f&uuml;r jeden Konfigurator ihre eigene, nicht entfernbare Standardinstanz , die angepa&szlig;t werden kann oder zu der weitere hinzugef&uuml;gt werden k&ouml;nnen. In sehr gro&szlig;en Serverfarmen mit 1000en von Websitesammlungen k&ouml;nnen diese Standardinstanzen eher hinderlich sein und der ausschlie&szlig;liche Einsatz von Instanzen auf Farmebene pr&auml;feriert werden. Kreuzen Sie diese Option an, um die Standardinstanz-pro-Websitesammlung zu deaktivieren.</p>
+<h3>Standardm&#228;&#223;ig keine Einbindung der jQuery-Bibliothek v1.8.3 (NICHT empfohlen)</h3>
+<p>Einige PrintZen-Benutzeroberfl&auml;chen erfordern die jQuery-Bibliothek und binden diese in die entsprechenden Seiten ein. Mehrfacheinbindung von jQuery kann manchmal zu Problemen f&uuml;hren. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PrintZen-Studio</i> diese Option an <i>nur</i>, wenn Ihre Masterseiten, Webpartseiten oder Drittanbietererweiterungen eigenst&auml;ndig, global (nicht nur in Einzelf&auml;llen) und unabh&auml;ngig von PrintZen ebenfalls jQuery einbinden, um PrintZen davon abzuhalten, jQuery einzubinden. Ist diese Option aktiviert, m&uuml;ssen Sie selbst&auml;ndig sicherstellen, dass jQuery (in einer Version neuer als 1.4 ABER &auml;lter als 1.9) in Seiten geladen wird, die PrintZen-Benutzeroberfl&auml;chen enthalten, andernfalls wird PrintZen unter Umst&auml;nden nicht mehr funktionieren. Dies ist eine globale Voreinstellung, die lokal ggf. noch einmal individuell &uuml;berschrieben werden kann.</p>

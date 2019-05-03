@@ -1,0 +1,115 @@
+﻿<h3>
+	1. Das FilterZen-Setuppaket</h3>
+<p>
+	Das <b>FilterZen</b>-Setuppaket (die <a href="http://roxority.com/storage/sharepoint/filterzen/roxority_FilterZen.zip">roxority_FilterZen.zip</a>-Datei) ist ein 
+	ZIP-Archiv und enthält:</p>
+<ul>
+	<li><b>setup.exe</b> - Ein Installationsassistent mit graphischer Benutzeroberfläche (GUI) 
+		zur Installation und Bereitstellung, sowie zur Rückstellung und Deinstallation 
+		von <b>FilterZen</b> auf einer SharePoint-Serverfarm, auszuführen durch einen Administrator-Benutzer 
+		auf dem primären SharePoint- Farm- oder Web-Frontend-Server.</li>
+	<li><b>doc</b> - Ein Ordner, der diese Produktdokumentation im Compiled HTML (CHM)- und Portable Document (PDF)-Format enthält (Englisch und Deutsch).</li>
+	<li>Zusätzliche Unterstützungsdateien, die für die korrekte Ausführung von <b>
+		setup.exe</b> <i>erforderlich</i> sind und nicht modifiziert oder entfernt 
+		werden dürfen.</li>
+</ul>
+<div class="rox-info">
+	Extrahieren Sie das Setuppaket in ein beliebiges Dateisystemverzeichnis. Führen 
+	Sie <b>setup.exe</b> nicht einfach direkt aus dem Setuppaket heraus aus &mdash; 
+	der Installationsassistent muß von einem Dateisystemverzeichnis aus gestartet 
+	werden, welches auch alle anderen Unterstützungsdateien aus dem Setuppaket 
+	enthält.</div>
+<h3>
+	2. Installieren des FilterZen-Lösungspakets</h3>
+<p>
+	Führen Sie <b>setup.exe</b> aus und klicken Sie im <i>Willkommen</i>-Fenster 
+	auf <i>Weiter</i>, um eine Reihe an Systemtests zu starten. Damit die 
+	Installation fortgesetzt werden kann, müssen alle Systemtests zu einem positiven 
+	Ergebnis kommen:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup01.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i> und wählen Sie im folgenden Assistentenschritt die 
+	Webanwendungen aus, in denen <b>FilterZen</b> bereitgestellt werden soll. 
+	Unterhalb jeder ausgewählten Webanwendung können Sie optional auch jene 
+	Websitesammlungen <i>abwählen</i>, in denen der Installationsassistent das Webpartfeature <i>nicht</i> 
+	unmittelbar nach erfolgter Bereistellung automatisch für Sie <i>aktivieren</i> 
+	soll. (Selbst wenn <b>FilterZen</b> in einer Webanwendung bereitgestellt wurde, 
+	muß das <b>FilterZen Filter-Webpart</b>-<i>Feature</i> in einer 
+	Websitesammlung <i>aktiviert</i> werden, bevor das <b>FilterZen</b> Filter-Webpart 
+	auf Webpartseiten einer Website eingesetzt werden kann, wie im Abschnitt <i>Aktivierung 
+	des Websitesammlungsfeatures</i> weiter unten beschrieben. Für den aktuellen 
+	Schritt genügt aber die Kenntnis, das der Installationsassistent die 
+	Feature-Aktivierungen für Sie vornimmt, außer bei explizit abgewählten 
+	Websitesammlungen.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup02.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i>, um die Installation zu starten und warten Sie, 
+	bis die Bereitstellungsvorgänge und Feature-Aktivierung abgeschlossen wurden. 
+	Dieser Prozeß kann einige Sekunden bis mehrere Minuten in Anspruch nehmen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup03.png"
+		title="" /></p>
+<p>
+	Überprüfen Sie nach Abschluß der Bereitstellungsvorgänge und 
+	Feature-Aktivierungen das Installationslog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup04.png"
+		title="" /></p>
+<p>
+	Sobald Sie den Installationsassisten erfolgreich abgeschlossen haben, können Sie 
+	das <b>FilterZen</b> Filter-Webpart bereits auf Webpartseiten innerhalb der zuvor 
+	angewählten Websitesammlungen einsetzen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Aktivierung des Websitesammlungsfeatures</h3>
+<p>
+	Das <b>FilterZen</b> Filter-Webpart ist ein <i>SharePoint-Feature auf 
+	Websitesammlungsebene</i>, welches in jeder Websitesammlung, in der es 
+	eingesetzt werden soll, einmalig
+	&#39;aktiviert&#39; werden muß.</p>
+<ol>
+	<li>Beginnen Sie auf der Webpartseite, auf der Sie das Webpart einsetzen wollen. 
+		Wählen Sie <i>Websiteeinstellungen</i> aus dem <i>Websiteaktionen</i>-Menü aus. </li>
+	<li>Die <i>Websiteeinstellungen</i>-Seite enthält ganz rechts den Abschnitt <i>
+		Websitesammlungsverwaltung</i>. Klicken Sie hier auf <i>Websitesammlungsfeatures</i>. 
+		Falls dieser Link nicht existiert, klicken Sie stattdessen auf <i>Zu 
+		Websiteeinstellungen der obersten Ebene wechseln</i>, 
+		und klicken Sie auf der nun angezeigten <i>Websiteeinstellungen</i>-Seite der 
+		Stammwebsite auf <i>Websiteauflistungsfeatures</i> unterhalb des Abschnitts <i>
+		Websitesammlungsverwaltung</i>. </li>
+	<li>Die <i>Websitesammlungs-Features</i>-Seite sollte einen Eintrag namens <b>FilterZen Filter-Webpart</b> 
+		enthalten.
+		<ul>
+			<li><b>Ist dieser Eintrag vorhanden</b>, dann klicken Sie auf <i>Aktivieren</i>, um das Webpart 
+				allen Websites, Webpartkatalogen und Webpartseiten dieser Websitesammlung zur 
+				Verfügung zu stellen; oder klicken Sie auf <i>Deaktivieren</i>, um das Webpart 
+				in der gesamten Websitesammlung umgehend zu deaktivieren.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/de/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li><b>Fehlt dieser Eintrag</b>, wurde das <b>FilterZen</b>-Lösungspaket in der 
+				übergeordneten Webanwendung noch nicht <i>bereitgestellt</i>. Klicken Sie unter <i>
+				Vorgänge</i> in der <i>Zentraladministration</i> auf <i>Lösungsverwaltung</i> 
+				(unterhalb des <i>Globale Konfiguration</i>-Abschnitts). Klicken Sie auf der 
+				Seite <i>Lösungsverwaltung</i> auf <b>roxority_filterzen.wsp</b>, um die Seite 
+				<i>
+				Eigenschaften der Lösung</i> zu öffnen. Klicken Sie auf <i>Lösung bereitstellen</i>, 
+				wählen Sie die der betreffenden Websitesammlung übergeordnete Webanwendung aus und 
+				klicken Sie auf <i>OK</i>.
+				(Die Bereitstellung wird an einen Zeitgeberauftrag delegiert, dessen geplanter 
+				Ausführungszeitpunkt ebenfalls von Ihnen angegeben wurde. Der Abschluß der 
+				Bereitstellung kann einige Minuten beanspruchen.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/de/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>

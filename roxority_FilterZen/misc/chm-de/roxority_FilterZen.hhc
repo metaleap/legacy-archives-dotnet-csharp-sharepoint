@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x801220">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Einf&uuml;hrung">
+		<param name="Local" value="intro.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="L&ouml;sungsinstallation und Feature-Aktivierung">
+		<param name="Local" value="setup.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Durchlauf: Verwenden von FilterZen">
+		<param name="Local" value="webpart.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Allgemeine Filtereinstellungen">
+		<param name="Local" value="general.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Textfilter">
+		<param name="Local" value="text_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Auswahlfilter">
+		<param name="Local" value="choice_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Datumsfilter">
+		<param name="Local" value="date_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Listen-Lookupfilter">
+		<param name="Local" value="list_lookup_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Benutzerfilter">
+		<param name="Local" value="user_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seitenspaltenfilter">
+		<param name="Local" value="page_field_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Seitenaufruffilter">
+		<param name="Local" value="url_query_string_filters.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FilterZen-Webparteinstellungen">
+		<param name="Local" value="advanced.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Referenz: URL-Einstellungsparameter">
+		<param name="Local" value="ref_url_settings.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Referenz: CSS-Klassen">
+		<param name="Local" value="ref_css.html">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Endbenutzer-Lizenzvereinbarung (EULA)">
+		<param name="Local" value="eula.html">
+		</OBJECT>
+
+</UL>
+</BODY></HTML>

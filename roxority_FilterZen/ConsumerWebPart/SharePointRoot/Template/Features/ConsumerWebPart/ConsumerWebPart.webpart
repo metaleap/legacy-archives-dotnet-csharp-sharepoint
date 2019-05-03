@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="ConsumerWebPart.UI.WebControls.WebParts.ConsumerWebPartWebPart, ConsumerWebPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=febd05d7df3a28f6" />
+      <importErrorMessage>Cannot import ConsumerWebPart Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">ConsumerWebPart</property>
+        <property name="Description" type="string">Description for ConsumerWebPart</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

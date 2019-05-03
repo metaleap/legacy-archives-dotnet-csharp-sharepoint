@@ -1,0 +1,98 @@
+﻿<h3>
+	Suppressing 'Unknown' Filters</h3>
+<p>
+	This setting is not necessary nor recommended unless you are using a filter that 
+	determines filter names to be sent dynamically, rather than using a fixed one 
+	you entered for the filter, such as catch-all <i>Page Request / URL Filters</i>.</p>
+<p>
+	Connected Web Parts may or may not inform the FilterZen Filter Web Part about 
+	the names of filterable columns. This information is not always necessarily 
+	complete. For example, when you connect to a List View Web Part with three 
+	visible List Columns, then it will notify the FilterZen Filter Web Part about 
+	these three filterable Columns &mdash; they become &#39;known filter names&#39;. However, you 
+	can still validly use any other Column Name present in the List but not the List 
+	View, and filtering will still work as expected.</p>
+<p>
+	If this setting is activated, filter values will never be sent if the 
+	corresponding filter name is not in the list of &#39;known&#39; filter names. This 
+	setting may work against you because the list of &#39;known&#39; filter names is not 
+	always exhaustive. It may be useful, however, to build a single &quot;catch-all&quot; <i>Page Request 
+	Filter</i> that takes all URL parameters as filter name-value-pairs, but sends only 
+	those that are known, visibly filterable Columns.</p>
+<h3>
+	Overriding Settings from URL Parameters</h3>
+<p>
+	By ticking the <i>Override Web Part and filter settings from URL parameters</i> checkbox, every filter setting or Web Part
+	setting is overridden by the appropriate URL (query string) parameter value, if it exists. See the possible parameter names and values in the <a href="?doc=ref_url_settings">reference chapter</a>.
+</p>
+<h3>
+	Interactive Filters</h3>
+<p>
+	All filter types (except <a href="?doc=page_field_filters">Page Column Filters</a> and <a href="?doc=url_query_string_filters">Page Request / URL Filters</a>) support the so-called
+	<a href="?doc=general#s5">interactive mode</a> which you enable by ticking the <i>Allow users to enter / 
+	pick a value</i> check box. If interactive mode is enabled for at least one of 
+	your filters, the <b>FilterZen</b> Filter Web Part renders an interactive 
+	filtering user control appropriate for the filter type (date pickers for <a href="?doc=date_filters">Date 
+	Filters</a>, drop-down lists for <a href="?doc=choice_filters">Choice Filters</a>, <a href="?doc=user_filters">User Filters</a>, <a href="?doc=list_lookup_filters">List Lookup 
+	Filters</a>, <a href="?doc=sql_data_lookup_filters">SQL Data Filters</a> and <a href="?doc=bcs_bdc_business_data_catalog_filters">BDC Filters</a>, and text boxes for <a href="?doc=text_filters">Text Filters</a> into the Web Part Page, allowing your page 
+	visitors to change the filtering on-the-fly. The appearance of this Web Part 
+	output can be <a href="?doc=ref_css">customized via CSS</a>.</p>
+<p>
+	If interactive mode is enabled for at least one of your filters, the following 
+	additional Web Part settings are available:</p>
+<ul>
+	<li><b>Apply SharePoint toolbar stylings</b> &mdash; if ticked, instead of rendering the 
+		filtering user controls with only blank, un-styled <a href="?doc=ref_css">CSS rules</a> applied, applies a 
+		set of minimal <a href="?doc=ref_css">CSS stylings</a> resulting in a toolbar-like area.</li>
+	<li><b>Remember filter values last used for each user</b> &mdash; if ticked, stores the 
+		last filter value used by a user for each filter in the content database. The 
+		next time the user visits the Web Part Page, the interactive filtering user 
+		controls (and the interactive filters themselves) are pre-initialized with this 
+		filter value. Tick this option only if it adds real value (rather than being 
+		just a nice-to-have convenience that your users could do without just as well), 
+		since it may inflate the content database unduly over time, depending on the 
+		number of users.</li>
+	<li><b>Upon user input, immediately reload the page to re-filter</b> &mdash; if ticked, 
+		causes the Web Part Page to reload itself through a server post-back and apply 
+		the newly specified filter values in the process.</li>
+</ul>
+<p>Interactively input filter values are applied during the next server post-back, 
+	whether the above option is active or not, and regardless of how exactly the 
+	post-back was initiated. You can force such a server post-back by calling the <i>roxRefreshFilters(filterWebPartID)</i> 
+	JavaScript method. Just below the Web Part settings described above, there is 
+	also a text area for you to enter additional HTML mark-up code to be rendered 
+	into the Web Part area, depending on your choice either prepended or appended to 
+	the interactive filtering user controls.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 440px;" src="help/res/adv_02.png"
+		title="" />
+</p>
+<h3>
+	Dynamically Generating Temporary Interactive Filters</h3>
+<p>
+	Want to offer interactive filtering user controls for all your columns without 
+	having to set up all these filters manually?</p>
+<p>
+	You can have the <b>FilterZen</b> Filter Web Part generate the appropriate 
+	interactive filtering user controls for you automatically, on-the-fly during 
+	each Web Part rendering for all 
+	available &#39;known&#39; filter names. This time-saving feauture generates drop-down filtering 
+	lists for choice and lookup Columns (appropriately pre-populated and 
+	pre-filtered), date pickers for date Columns and text boxes for all other Columns. 
+	To activate dynamically generated temporary interactive filters, from the 
+	drop-down list labelled <i>dynamically generated temporary enabled interactive filters for all 
+	&#39;known&#39; filter names if possible</i>, select <i>Prepend</i> or <i>Append</i>.</p>
+<h3>
+	Debug Mode</h3>
+<p>
+	When a filter does not seem to work as expected, it can be helpful to find out which
+	filters exactly the <b>FilterZen</b> Filter Web Part constructs and sends, given its current settings. The <b>FilterZen</b> Filter Web Part will render
+	just that information whenever the page is in edit mode, so on the page that does not result
+	in the filter you want, select <i>Edit Page</i> from the <i>Site Actions</i> menu
+	and you will see all filters produced from the current setup. Also shown are all the filter values that were 
+	<i>not</i> sent, if any, and the reason. Unless the <b>FilterZen</b> Filter Web Part is minimized or hidden, its <i>Debug Mode</i> output
+	looks like this:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 272px;" src="help/res/adv_03.png"
+		title="" />
+</p>

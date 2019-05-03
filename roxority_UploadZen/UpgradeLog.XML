@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="roxority_UploadZen">
+</Property><Property Name="Solution File" Value="C:\Users\roxor\Documents\Visual Studio 2010\Projects\roxority_UploadZen\roxority_UploadZen.sln">
+</Property><Property Name="Date" Value="Wednesday, May 05, 2010">
+</Property><Property Name="Time" Value="21:36 PM">
+</Property></Properties><Event ErrorLevel="1" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_UploadZen" Source="roxority_UploadZen\roxority_UploadZen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_UploadZen" Source="roxority_UploadZen\roxority_UploadZen.csproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="roxUp" Source="roxority_UploadZen_Uploader\roxUp.csproj" Description="Your project is targeting .NET Framework 2.0 or 3.0. If your project uses assemblies requiring a newer .NET Framework, your project will fail to build. You can change the .NET Framework version by clicking Properties on the project menu and then selecting a new version in the '.NET Framework' dropdown box. (In Visual Basic, this is located on the Compile tab by clicking the 'Advanced Compiler Options...' button.)">
+</Event><Event ErrorLevel="0" Project="roxUp" Source="roxority_UploadZen_Uploader\roxUp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxUp" Source="roxority_UploadZen_Uploader\roxUp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="roxority_UploadZen.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="roxority_UploadZen.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="roxority_UploadZen" Source="roxority_UploadZen\app.config" Description="File converted successfully. All &lt;supportedRuntime&gt; and &lt;requiredRuntime&gt; tags were removed to enable the project to build and run with Visual Studio 2005.">
+</Event><Event ErrorLevel="3" Project="roxority_UploadZen" Source="roxority_UploadZen\app.config" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxUp" Source="roxority_UploadZen_Uploader\app.config" Description="File converted successfully. All &lt;supportedRuntime&gt; and &lt;requiredRuntime&gt; tags were removed to enable the project to build and run with Visual Studio 2005.">
+</Event><Event ErrorLevel="3" Project="roxUp" Source="roxority_UploadZen_Uploader\app.config" Description="Converted">
+</Event></UpgradeLog>

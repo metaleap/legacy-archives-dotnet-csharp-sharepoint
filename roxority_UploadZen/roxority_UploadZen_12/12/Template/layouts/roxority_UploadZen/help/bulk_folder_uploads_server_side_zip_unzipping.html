@@ -1,0 +1,71 @@
+﻿<div class="rox-info">
+	This topic only applies to the legacy <a href="?doc=uploading_multiple_files">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="?doc=sharepoint_flash_silverlight_clickonce_windows_uploader">
+		Web Uploader</a> mode in production instead, and can safely skip this topic.</div>
+<h3>
+	Bulk-uploading entire folder structures</h3>
+<p>
+	<b>UploadZen</b> lets you upload entire directory hierarchies including all (<a href="?doc=client_side_settings#s4">or
+		only certain</a>) files and sub-directories by simply marking a directory for upload.</p>
+<p>
+	To mark a directory for bulk upload, you can <b>either</b> navigate to it by clicking
+	the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Change Folder</i> button, then selecting from the
+	<img class="roxbuttonicon" src="help/res/openfolderHS.png" />
+	<i>Change Folder</i> drop-down menu the appropriate <i>Mark entire folder contents (files
+		and sub-folders) for upload</i> menu item...</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 154px;" src="help/res/sharepoint-bulk-folder-uploads-01.png"
+		title="" /></p>
+<p>
+	... <b>or</b> you can first select the folder(s) inside the local file navigation
+	area and then from the context menu select either the <i>Mark selected folders, their
+		files and sub-folders for upload</i> menu item or the <i>Mark files and sub-folders
+			of selected folders for upload</i> menu item. (The second menu item will
+	place the files and sub-folders directly into the currently selected Document Library
+	target folder, the former will re-create the folder inside the currently selected
+	Document Library target folder, then place the files and sub-folders inside that
+	newly created folder.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 210px;" src="help/res/sharepoint-bulk-folder-uploads-02.png"
+		title="" /></p>
+<p>
+	Once you have marked all folders for bulk-upload, click the
+	<img class="roxbuttonicon" src="help/res/PublishPlanHS.png" />
+	<i>Upload Files</i> button to initiate the bulk-upload. Each directory will be 
+	ZIP-compressed in its entirety (in memory) for transfer:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 148px;" src="help/res/sharepoint-bulk-folder-uploads-zip-compression.png"
+		title="" /></p>
+<p>
+	<b>UploadZen</b> then uploads the in-memory ZIP archive to SharePoint where it will be 
+	extracted into the currently selected target Document Library folder.</p>
+<h3>
+	Uploading multiple files as a dynamically generated ZIP archive</h3>
+<p>Sometimes you want to put together a number of related files in one ZIP archive 
+	for uploading. <b>UploadZen</b> saves you the step of manually compressing files 
+	into a ZIP archive with an external tool; instead, you can simply select the 
+	files and tell <b>UploadZen</b> to compress those files into a ZIP archive which 
+	to upload in place of the individual files using the context menu:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 250px;" src="help/res/sharepoint-upload-multiple-files-zip-compressed.png"
+		title="" /></p>
+<p>This will put a single item (with a prefix [ZIP] and the names of the included 
+	files) into the <i>Local Files Marked for Upload</i> area, representing the 
+	dynamic ZIP archive that will be generated automatically once you start your 
+	upload:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="help/res/sharepoint-upload-multiple-files-unzipping.png"
+		title="" /></p>
+<h3>
+	Server-side unzipping of uploaded ZIP archive files</h3>
+<p>As soon and as long as you have at least one ZIP 
+	archive marked for upload &mdash; whether an existing archive file you selected from your file system, or a dynamic ZIP that 
+	<b>UploadZen</b> will generate as described above &mdash; you will find check 
+	boxes next to these ZIP archives in the <i>Local Files Marked for Upload</i> 
+	area, as demonstrated in the screen shot above. Only tick the check boxes of 
+	those ZIP archives you want to extract into the currently selected target 
+	Document Library folder. This extraction will happen on the SharePoint server 
+	immediately after the ZIP archive has been fully uploaded.</p>

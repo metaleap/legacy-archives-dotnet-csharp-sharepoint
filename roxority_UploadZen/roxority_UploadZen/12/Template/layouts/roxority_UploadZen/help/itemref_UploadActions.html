@@ -1,0 +1,114 @@
+<p>The following settings can be customized for each Upload Action by administrative users on the <b>Upload Actions</b> page in your <i>UploadZen Studio</i>, accessible via Site Settings / UploadZen Studio / Upload Actions:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">&quot;General&quot; tab:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Upload Action</h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Upload Action is...</h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Upload Action will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Show UploadZen menu item in the following Document Libraries</h3>
+<p><b>(Descriptor for a set of SharePoint Document Libraries and Views)</b></p><p>Select in which Document Libraries this upload action will be offered as a menu item to end users (in the SharePoint 2007 "Upload" toolbar menu and in the SharePoint 2010/2013 "Library Tools / Documents / New" ribbon group).</p>
+<p>To define the set of Lists, first select either <b>Show in all Lists</b> or <b>Show in no Lists</b>, then click the <b>except...</b> link to describe which Lists to exclude from that selection. You can exclude:
+</p><ul>
+<li>Lists of the selected base types</li>
+<li>Lists of the selected template types</li>
+<li>Lists of the selected base templates</li>
+<li>or Lists with the specified names or IDs.</li>
+</ul><p>
+To define the set of Views, first select either <b>Show in all Views</b> or <b>Show in no Views</b>, then click the <b>except...</b> link to describe which Views to exclude from that selection. You can exclude:
+<ul>
+<li>the default View</li>
+<li>hidden Views</li>
+<li>personal Views</li>
+<li>or Views with the specified names or IDs.</li>
+</ul></p>
+<h3>UploadZen menu item caption</h3>
+<p><b>(Text box)</b></p><p>Sets the menu item / ribbon button caption for this UploadZen "Upload Multiple Files" menu item.</p>
+<p>Default value for new Upload Actions:</p>
+<pre>$Resources:Tool_UploadActions_DefTitle</pre>
+<h3>UploadZen menu item description</h3>
+<p><b>(Text box)</b></p><p>Sets the menu item description / ribbon button tool-tip for this UploadZen "Upload Multiple Files" menu item.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-i"><a href="#" onclick="roxTogDocTab('i');">&quot;User Interface&quot; tab:</a></h4><span class="rox-doctab rox-doctab-i">
+<h3>Client-side uploader</h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select the preferred uploading client technology presented to your end users when this Upload Action is invoked.<br/><br/><b>Web</b> mode is recommended for maximum compatibility &mdash; if Silverlight plugin is installed, this mode may offer a file drop area and perform client-side zipping of uploaded files; if Silverlight or Flash plugin is installed, multiple files can be selected in a file browsing dialog at once.<br/><br/><b>Windows</b> mode launches a native Windows application (ClickOnce / .NET Framework 2.0+) directly from Internet Explorer (or Firefox with Microsoft .NET / ClickOnce plug-in) &mdash; this choice in some cases does not deploy properly to Vista-and-newer-Windows IE clients, and never to non-Windows / non-IE clients.</p>
+<ul>
+<li><b>Web Uploader</b><br/>&mdash; <i>supports all client browsers and operating systems (recommended, highest compatibility)</i></li>
+<li><b>Windows Uploader</b><br/>&mdash; <i>works mostly just with Windows clients and IE (legacy mode, least compatible)</i></li>
+</ul>
+<h3>Also show in Upload.aspx replacement page</h3>
+<p><b>(Check box option)</b></p><p>When clicking SharePoint&#39;s built-in, out-of-box &#39;Upload Document&#39; menu item (single-file upload), this always opens the Upload.aspx system page (which itself may or may not include another built-in, out-of-box &#39;Upload Multiple Documents&#39; link). Tick this check-box option to also offer this Upload Action on the Upload.aspx page. (Also requires activated <a href="?cfg=wss" target="_blank">"UploadZen Upload.aspx Replacement Page" Site Collection feature</a>.)</p>
+<h3>Show Mini Tutorial in the uploader</h3>
+<p><b>(Check box option)</b></p><p><b>Web Uploader:</b> The upload area displays a number of helpful hints whenever (and as long as) there are any files marked for upload.<br/><br/><b>Windows Uploader:</b> The UploadZen window displays a helpful Welcome page with Quick-Start steps whenever (and as long as) there are no files or folders marked for upload.<br/><br/>Untick this check box to never show the above Mini Tutorials to your users.</p>
+<h3>Show UploadZen link in the uploader</h3>
+<p><b>(Check box option)</b></p><p>Tick this check box for the uploader to show a link with a version number in the bottom right corner pointing to the UploadZen product web site.</p>
+<h3>Show Help link in the uploader</h3>
+<p><b>(Check box option)</b></p><p>The uploader shows a Help link in the bottom right corner pointing to select, end user-relevant documentation pages in this UploadZen Studio. Untick this check box to never show the Help link to your users.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-n"><a href="#" onclick="roxTogDocTab('n');">&quot;Web Uploader&quot; tab:</a></h4><span class="rox-doctab rox-doctab-n">
+<h3>If HTML5 is not supported, utilize client-side browser plugins</h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>The Web Uploader by default utilizes certain HTML5 features regarding file selection if the Web Browser used supports them, and only falls back to the specified plugins if not.
+
+The Web Uploader falls back to HTML4 (no selection of multiple-files in a single Browse File dialog) only if those plug-ins are not available either.</p>
+<ul>
+<li>Use Silverlight (and only if not available: use Flash)</li>
+<li>Use Flash (and only if not available: use Silverlight)</li>
+<li>Only use Silverlight</li>
+<li>Only use Flash</li>
+</ul>
+<h3>Overwrite existing files with the same name</h3>
+<p><b>(Check box option)</b></p><p>If ticked, uploading files will overwrite any pre-existing files with the same name in the target Document Library folder (but the uploader will highlight existing files prior to the upload so users are notified and can choose to remove the file from the upload). If unticked, if a file with the same name exists in the target Document Library folder, the uploaded file will be rejected by SharePoint.</p>
+<h3>Prior to uploading, change all file names to random unique sequences</h3>
+<p><b>(Check box option)</b></p><p>If ticked, this option will change the names of uploaded files to random, but unique sequences so that existing files will never be overwritten.</p>
+<h3>Replacement character</h3>
+<p><b>(Text box)</b></p><p>Specify a character or text used to replace the unsupported characters ~ " # % & * : < > ? / \ { | } in uploaded file or folder names. To simply remove (rather than replace) these characters, fully clear this setting. The default value is the underscore (_). (Thanks to this feature, your end users will never receive SharePoint&#39;s "The file name is invalid or the file is empty. A file name cannot contain any of the following characters..." message.)</p>
+<p>Default value for new Upload Actions:</p>
+<pre>_</pre>
+<h3>Auto-remove files marked for upload with blocked file extensions</h3>
+<p><b>(Check box option)</b></p><p>When users select files with name extensions that are "blocked by the administrator" (or by default) on the SharePoint server side (at the Web Application level [SPWebApplication.BlockedFileExtensions]), by default UploadZen will only warn about this (so users can remove the files from the listing) but will technically allow the upload, which SharePoint / IIS will however promptly refuse. Tick this option to have such files automatically removed from the listing when selected for upload, instead.<br/><br/><b>Note:</b> changes to blocked file extensions at the Web Application level are only picked up by UploadZen after all web front-end servers are IIS-reset or restarted.</p>
+<h3>File type filters (multi-selectable, no selection = no filters)</h3>
+<p><b>(Drop-down menu to pick from a configurable set of choices)</b></p><p>To restrict which types of files end users can upload via this Upload Action, select one or more file name extension filter sets. If end users then select files whose extensions do not match the selected filters, these files will not even be added to the Upload Files listing and consequently cannot be uploaded.<br/><br/>With the newest Silverlight / Flash versions, these filters even permeate the file browsing dialog and will be offered as choices in there. As a result, users cannot even see or select file types not allowed by the selected filter sets.<br/><br/>(If you need different or custom file name extension filters not offered here, customize or extend the pre-defined filter sets in the Web Uploader section of the Configuration page in UploadZen Studio.)</p>
+<p>The drop-down menu provides a set of choices that can be customized on the Configuration page of the UploadZen Studio.</p>
+<h3>Maximum file size (read description of this setting first)</h3>
+<p><b>(Text box)</b></p><p>You can optionally restrict the maximum size per file selected for upload. Files exceeding this limit will be automatically removed from the uploader file listing. Leave blank to allow files of any size.<br/><br/><b>Important:</b> the format for this setting is 10B, 100KB, or 1000MB. So use any integer number (no fractional, floats or real numbers) and B for bytes, KB for kilobytes or MB for megabytes, no spaces or other non-numeric characters. (For GB use MB multiplied by 1024, ie. for 2GB use 2048MB instead.)<br/><br/><b>Also note</b> that this setting is a limit for client-side file selection only. Independently of this setting, your SharePoint environment will be subject to server-side request length and upload file size limits on the IIS and SharePoint Web Application levels (refer to the UploadZen Deployment Checklist help topic for details on those limits). To allow uploads of files exceeding these server-side limits, you will need to enable Chunking below.</p>
+<h3>File chunk size (read description of this setting first)</h3>
+<p><b>(Text box)</b></p><p>To use this feature, you <b>NEED TO READ</b> the <i>"Preparing a Web Application for the Chunking feature"</i> section in the UploadZen Deployment Checklist help topic in additional to the following information.<br/><br/>While we highly encourage you to increase your server-side request length and upload file size limits as well as request time-outs (as described in the UploadZen Deployment Checklist help topic), you can use this setting to allow uploads of files whose size exceeds your server-side limits by splitting up such files into smaller separate individual chunks that will be put back together into the one original file by UploadZen at the server side once all chunks have been sent. If you choose to use this feature, you need to specify the file chunk size here and this should be slightly lower than your server-side request length / upload file size limits.<br/><br/><b>Example:</b> your server-side limits establish that the maximum upload file size is 50 MB. You can set the chunk size here to "48MB". Then when uploading a 110 MB file, this will be split up into three chunks (pre-upload on the client side), the first two being 48 MB each and the last one being 14 MB, none of which exceeds your server-side limits. UploadZen receives all three chunks and puts them back together to restore the original 110 MB file which is then placed into the target Document Library folder.<br/><br/><b>Important:</b> the format for this setting is 10B, 100KB, or 1000MB. So use any integer number (no fractional, floats or real numbers) and B for bytes, KB for kilobytes or MB for megabytes, no spaces or other non-numeric characters. (For GB use MB multiplied by 1024, ie. for 2GB use 2048MB instead.)</p>
+<h3>Auto-shrink images prior to upload (read description of this setting first)</h3>
+<p><b>(Text box)</b></p><p><b>This setting is only used if you specify three integer numbers separated by [,] commas</b>, no other characters. The first number is the maximum image width, the second number is the maximum image height, the third number is the image quality for additional file size compression (1 = worst, 100 = best). For example, if this setting is set to <b>320,240,90</b> then all uploaded images will be resized pre-upload, aspect ratio maintained so that neither the maximum width nor the maximum height is exceeded.</p>
+<h3>Offer end users selectable options for server-side ZIP extraction</h3>
+<p><b>(Check box option)</b></p><p>This allows users to select for each individual ZIP archive file marked for upload whether to keep the ZIP in the target Library as is, extract it in-place or extract it in a new sub-folder.</p>
+<h3>If Silverlight is used, offer client-side zipping</h3>
+<p><b>(Check box option)</b></p><p>This allows users to define ZIPs to be uploaded in place of the corresponding files marked for zipping. The ZIPs will be generated on the fly just prior to their upload.</p>
+<h3>If supported, offer a file drop area</h3>
+<p><b>(Check box option)</b></p><p>This allows users to add files to their upload by dragging them from their Explorer or Finder window onto the drop area.</p>
+<h3>If applicable, by default automatically check in uploaded files as follows</h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Only applies to Libraries that have check-out/check-in enabled. Select whether and how to automatically bulk check in uploaded files. Check-in will appear to have been done by the currently uploading user.</p>
+<ul>
+<li>No check-in (keep uploaded files checked out to uploading user)</li>
+<li>Check in as a minor new version (if minor versions are enabled)</li>
+<li>Check in as a major new version (if versions are enabled)</li>
+<li>Check in but keep previous version number (&quot;overwrite current version&quot;)</li>
+</ul>
+<h3>If applicable, allow end users to change the above default check-in per file</h3>
+<p><b>(Check box option)</b></p><p>Only applies to Libraries that have check-out/check-in enabled. If this option is ticked, end users can select for each upload file whether and how to check it in, prior to the upload. The user interface for that selection will for all files default to the check-in option selected above.</p>
+<h3>Allow users to launch the Windows Uploader from the Web Uploader</h3>
+<p><b>(Check box option)</b></p><p>Shows a link (for Windows clients with Internet Explorer) that launches the legacy Windows Uploader.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-z"><a href="#" onclick="roxTogDocTab('z');">&quot;Windows Uploader&quot; tab:</a></h4><span class="rox-doctab rox-doctab-z">
+<h3>Show &#39;Options&#39; tab in the Windows Uploader</h3>
+<p><b>(Check box option)</b></p><p>The Windows Uploader contains an &#39;Options&#39; tab that lets users review or customize certain user-specific client-side UploadZen settings (such as overwriting of existing files). Untick this check box to never show the Options tab to any users.</p>
+<h3>Unzipping of uploaded ZIP archive files</h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>UploadZen can just put an uploaded ZIP archive file into the current Document Library target folder as a single file, or extract all of its files and sub-folders in place.</p>
+<ul>
+<li>Let users decide (recommended)</li>
+<li>Never unzip</li>
+<li>Always unzip</li>
+</ul>
+<h3>Allow users to store their SharePoint log-in password on their local PC</h3>
+<p><b>(Check box option)</b></p><p>Uploading users may be prompted to type their SharePoint user name and password in certain circumstances (see documentation), and can optionally elect to have UploadZen log them in automatically in the future. This will store their encrypted password in their Windows Registry "Local User" hive. Untick this check box to never let your UploadZen users store their password.</p>
+<h3>Allow users to change the target folder</h3>
+<p><b>(Check box option)</b></p><p>The uploader will be initialized to upload to the current Document Library folder, but users can change to another target folder right from within the uploader prior to uploading or between uploads, without having to navigate to that folder first via SharePoint. Untick this check box to never allow users to change the target folder.</p>
+<h3>Allow users to change the target Document Library</h3>
+<p><b>(Check box option)</b></p><p>The uploader will be initialized to upload to the current Document Library, but users can change to another target Document Library right from within the uploader prior to uploading or between uploads, without having to navigate to that Document Library first via SharePoint. Untick this check box to never allow users to change the target Document Library.</p>
+</span>

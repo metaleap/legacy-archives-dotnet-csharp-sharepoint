@@ -1,0 +1,75 @@
+﻿<p>
+	PrintZen gives you print-friendly Views of your Lists, the easy way.</p>
+<h3>
+	How PrintZen commands and views work for SharePoint Lists</h3>
+<p>
+	In <b>SharePoint 2007</b> (WSS 3.0 and MOSS 2007) PrintZen integrates one or more
+	Print commands into the <i>Actions</i> menu of SharePoint List Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/sharepoint-list-data-print-menu-item.png"
+		title="" /></p>
+<p>
+	In <b>SharePoint 2013 and 2010</b> (Foundation and Server) PrintZen integrates one or more
+	print commands into the <i>View Formats</i>
+	section of the <i>List</i> ribbon tab:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 154px;" src="help/res/sharepoint-list-print-view-ribbon.png"
+		title="" /></p>
+<p>
+	In all SharePoint versions, PrintZen also integrates one or more <i>Print</i> commands into its own sub-menu within the out-of-box SharePoint <i>Site Actions</i> menu:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 900px;" src="help/res/sharepoint-web-part-print-view-site-actions.png"
+		title="" /></p>
+<p>
+	Clicking the menu item will open a print-friendly display of the current List View:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 431px;" src="help/res/sharepoint-list-data-print-popup.png"
+		title="" /></p>
+<h3>
+	Defining your Print View</h3>
+<p>
+	To make the above work, you need to tell PrintZen just a few preferences, by specifying
+	for a given print use case (which can then be re-invoked time and again) some so-called
+	<a href="?doc=itemref_PrintActions">Print View Definition Settings</a>, such as:</p>
+<ul>
+	<li>the title of the Print menu item,</li>
+	<li>the description of the Print menu item (optional),</li>
+	<li>whether to apply the current paging, sort order, folder selection or filters</li>
+	<li>the types of Lists (or the name of the List) compatible with this print view and
+		<a href="?doc=itemref_PrintActions">various other settings</a>.</li>
+</ul>
+<p>
+	To do so, you just need to create at least one rule on the <i>Print Views</i>
+	page available via Site Settings / PrintZen Studio / Print Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/sharepoint-list-data-print-actions.png"
+		title="" /></p>
+<p>
+	On the <i>Print Views</i> page, simply create and save a new rule item to finally
+	define your print view:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 818px;" src="help/res/sharepoint-list-data-print-definition.png"
+		title="" /></p>
+<p>
+	That&#39;s it! This print view you just defined is now available in the <i>Actions</i>
+	menu of the specified Lists, and clicking it will open a print-friendly view exactly
+	to your specifications, fully reflecting all of your <a href="?doc=itemref_PrintActions">
+		print view definition settings</a>.
+</p>
+<h3>
+	Designing your own custom Print Views</h3>
+<p>
+	Depending on your List printing use-cases, you may prefer to add additional content
+	elements to your Print Views. This can be achieved easily via the <a href="?doc=itemref_PrintActions#s13">
+		Web Part Page for Custom Design of Print View</a> option customizable for each
+	of your Print Views. By setting this to a Web Part page URL residing anywhere
+	inside the same SharePoint server farm environment, you can completely customize
+	the Print View as easily as you typically customize any other Web Part page. The
+	below screenshot shows a very simple example of what you can implement here:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 855px;" src="help/res/sharepoint-list-print-view-custom-design-web-part-page.png"
+		title="" /></p>

@@ -1,0 +1,138 @@
+﻿.rox-uploader
+{
+	background-color: #f9f9f9;
+	color: #404040;
+	border: 1px solid #c0c0c0;
+}
+.rox-uploader div.rox-itemtoolbar
+{
+	color: #808080;
+	padding: 6px 6px 9px 6px;
+}
+.rox-uploader div.rox-itemtoolbar b
+{
+	font-weight: normal;
+}
+.rox-uploader div.rox-itemtoolbar b strong
+{
+	display: inline-block;
+	background-color: InfoBackground;
+	color: InfoText;
+	padding: 0px 4px 0px 4px;
+}
+.rox-uploader div.rox-itemtoolbar a
+{
+	color: #0072bc;
+	font-weight: normal;
+	padding: 2px 8px 2px 20px;
+}
+.rox-uploader div.rox-itemtoolbar a:hover
+{
+	text-decoration: underline !important;
+}
+.rox-uploadbox
+{
+	clear: both;
+	padding: 0px 4px 8px 4px;
+}
+.rox-uploadbox fieldset
+{
+	font-size: 8pt;
+	padding: 4px 8px 4px 8px;
+}
+.rox-uploadbox fieldset a
+{
+	text-decoration: underline;
+}
+.rox-uploadbox fieldset legend
+{
+	color: #404040;
+}
+.rox-uploadbox fieldset div.rox-uploadfieldset
+{
+	padding: 16px 0px 0px 0px;
+}
+.rox-uploadfieldset-files ul
+{
+	color: #808080;
+	padding-left: 20px;
+}
+table.rox-uptable td, table.rox-uptable th
+{
+	border-bottom: 1px solid #c0c0c0;
+	border-right: 1px dotted #c0c0c0;
+	vertical-align: top;
+	text-align: left;
+	padding: 2px 4px 2px 4px;
+	white-space: nowrap;
+	white-space: nowrap;
+}
+.rox-uplfilesize
+{
+	color: #808080;
+	font-style: italic;
+	padding-left: 20px;
+	font-size: 7pt;
+	float: right;
+}
+table.rox-uptable th
+{
+	color: #808080;
+	font-weight: normal;
+}
+select.rox-uplzip
+{
+	color: #808080;
+	font-size: 7pt;
+}
+.roxup16
+{
+	text-decoration: none !important;
+	text-align: center;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: none;
+}
+a.roxzenlnk
+{
+	background-image: url('/_layouts/images/roxority_UploadZen/roxlogo16.png');
+}
+table.rox-uptable tr .roxup-onhover
+{
+	visibility: hidden;
+}
+table.rox-uptable tr:hover .roxup-onhover
+{
+	visibility: visible;
+}
+table.rox-uptable tr:hover a.roxup-delicon
+{
+	background-image: url('/_layouts/images/delete.gif');
+}
+table.rox-uptable tr:hover a.roxup-delicon span
+{
+	display: none;
+}
+table.rox-uptable tr:hover td
+{
+	background-color: #f0f0f0;
+}
+.roxuphashi2 .roxuphi2
+{
+	background-color: #ffbcbc;
+}
+.roxuphashi1 .roxuphi1
+{
+	background-color: #ffefbc;
+}
+.roxuphashi2 span.roxuphi2
+{
+	color: #000000;
+}
+.roxuphashi1 span.roxuphi1
+{
+	color: #000000;
+}

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="NovoPart.NovoPart, NovoPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b6d5915d7bace628" />
+      <importErrorMessage>Cannot import NovoPart Web Part.</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">NovoPart</property>
+        <property name="Description" type="string">Description for NovoPart</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

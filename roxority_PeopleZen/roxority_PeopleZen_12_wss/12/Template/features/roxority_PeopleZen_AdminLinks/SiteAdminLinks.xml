@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="PeopleZen Studio"
+        Sequence="81"
+        Description="" />
+	<CustomAction
+        Id="PeopleZenDataSources"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminDataSources;"
+		Sequence="10"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen/default.aspx?cfg=tools&amp;tool=Tool_DataSources" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenDataFieldFormats"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminDataFieldFormats;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen/default.aspx?cfg=tools&amp;tool=Tool_FieldFormats" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenConfig"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminConfig;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenWss"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminWss;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenToolLocalizer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminToolLocalizer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenToolTransfer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminToolTransfer;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenToolSiteUsers"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminToolSiteUsers;"
+		Sequence="16"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenLic"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="17"
+        Title="$Resources:roxority_PeopleZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="PeopleZenHelp"
+		RequireSiteAdministrator="TRUE"
+        GroupId="PeopleZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_PeopleZen,SiteAdminHelp;"
+		Sequence="18"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_PeopleZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

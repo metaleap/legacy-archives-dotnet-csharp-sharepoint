@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+		<type name="roxority_FilterZen.ServerExtensions.roxority_BusinessDataItemBuilderWebPart, roxority_FilterZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" />
+		<importErrorMessage>The ROXORITY FilterZen Business Data Item Builder Web Part requires Microsoft Office SharePoint Server Enterprise Edition and Business Data Connectivity Services (BCS/BDC).</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+		  <property name="Title" type="string">$Resources:roxority_FilterZen,BdcWebPart_Title</property>
+		  <property name="Description" type="string">$Resources:roxority_FilterZen,BdcWebPart_Desc</property>
+		  <property name="Group" type="string">[ROXORITY]</property>
+		  <property name="CatalogIconImageUrl">/_layouts/images/roxority_FilterZen/wp_filter.gif</property>
+	  </properties>
+    </data>
+  </webPart>
+</webParts>

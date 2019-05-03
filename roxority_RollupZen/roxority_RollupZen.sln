@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_RollupZen", "roxority_RollupZen\roxority_RollupZen.csproj", "{E2166D77-E843-4B10-AC14-51E15A445483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WspBuilder", "WspBuilder\WspBuilder.csproj", "{5DDA7B0C-64B6-4D89-B5CA-11496E18DAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_RollupZen_12", "roxority_RollupZen_12\roxority_RollupZen_12.csproj", "{BECA6217-E364-4469-B31B-54DF7EA012A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_RollupZen_12_wss", "roxority_RollupZen_12_wss\roxority_RollupZen_12_wss.csproj", "{4237EA5A-133C-4C27-9408-A4BD88FC297A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_RollupZen_wss", "roxority_RollupZen_wss\roxority_RollupZen_wss.csproj", "{E3A16E9F-E58F-45AB-BD6A-94E2BB34EDE1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2166D77-E843-4B10-AC14-51E15A445483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2166D77-E843-4B10-AC14-51E15A445483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDA7B0C-64B6-4D89-B5CA-11496E18DAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDA7B0C-64B6-4D89-B5CA-11496E18DAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECA6217-E364-4469-B31B-54DF7EA012A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECA6217-E364-4469-B31B-54DF7EA012A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECA6217-E364-4469-B31B-54DF7EA012A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECA6217-E364-4469-B31B-54DF7EA012A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4237EA5A-133C-4C27-9408-A4BD88FC297A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4237EA5A-133C-4C27-9408-A4BD88FC297A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4237EA5A-133C-4C27-9408-A4BD88FC297A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4237EA5A-133C-4C27-9408-A4BD88FC297A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A16E9F-E58F-45AB-BD6A-94E2BB34EDE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A16E9F-E58F-45AB-BD6A-94E2BB34EDE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A16E9F-E58F-45AB-BD6A-94E2BB34EDE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A16E9F-E58F-45AB-BD6A-94E2BB34EDE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

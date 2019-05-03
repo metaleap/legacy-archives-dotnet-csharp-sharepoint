@@ -1,0 +1,67 @@
+<p>
+	In a future release, ExportZen will offer a full-fledged SharePoint Timer Job integrated
+	into Central Administration for scheduling automated CSV List data exports. Even
+	in the current release however, the software provides a fully workable way for you
+	to start automating and scheduling exports immediately. This involves only a few
+	setup steps outlined in this topic.</p>
+<h3>
+	Running exports on Windows Server, outside of SharePoint:<a name="s0"></a></h3>
+<p>
+	When you successfully <a href="setup">deployed ExportZen to your SharePoint environment</a>,
+	an executable file <strong>ExportZen.exe</strong> also got deployed to the file
+	systems of your farm servers. The setup wizard (more specifically, the ExportZen
+	WSP solution package) placed this executable in your &quot;14 hive&quot; (or your
+	&quot;12 hive&quot; on SharePoint 2007), ie. the full executable path is most likely
+	<strong>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\LAYOUTS\roxority_ExportZen\ExportZen.exe</strong>
+	(or a localized equivalent path).</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 477px;" src="/storage/images/roxority_ExportZen/sharepoint-export-12-hive-14.png"
+		title="" /></p>
+<p>
+	Once you have <a href="?doc=intro#s2">defined a CSV export action</a>, this action
+	can also be invoked by the above command-line program. It takes three arguments:</p>
+<ol>
+	<li>The first argument needs to be &quot;quoted&quot; and specifies the full URL of
+		the List or Document Library to be exported: for example &quot;<i>http://our-sharepoint/projects/Lists/Tasks</i>&quot;.</li>
+	<li>The second argument needs to be &quot;quoted&quot; and specifies the name or ID
+		of your export action. You likely provided the name yourself initially when the
+		export action was set up, if unsure simply look it up on the <a href="itemref_ExportActions">
+			Export Actions page</a>.</li>
+	<li>The third argument is also specified in quotation marks and specifies the full path
+		of the exported .CSV file, to be stored directly in the SharePoint web front-end
+		server file system.</li>
+</ol>
+<p>
+	Of course, you&#39;ll need to run <i>ExportZen.exe</i> at all times:</p>
+<ul>
+	<li>with no more and no less than those three arguments, and</li>
+	<li>under a user account with read access to the List, read access to the <i>14 hive</i>
+		(or <i>12 hive</i>) and write access to the specified file system location.</li>
+</ul>
+<p>
+	However, other than that you may invoke the tool in any way you wish, and do with
+	its output file as you please.</p>
+<h3>
+	Use built-in Windows Server features for scheduling:<a name="s1"></a></h3>
+<p>
+	Once you have experimentally and interactively tested that your export also works
+	with the <i>ExportZen.exe</i> command-line utility too, you can schedule your exports
+	using just the <i>Task Scheduler</i> that&#39;s part of Windows Server. (Naturally,
+	the <i>Task Scheduler</i> service needs to auto-run for this.)
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 321px;" src="/storage/images/roxority_ExportZen/sharepoint-export-timer-job.png"
+		title="" /></p>
+<p>
+	Apart from setting
+	the path and arguments to <i>ExportZen.exe</i> as described in the above paragraph,
+	you should make sure the task:</p>
+<ul>
+	<li>will run under the appropriate user account,</li>
+	<li>is set to run regardless of whether that user is logged on interactively or not,
+		and</li>
+	<li>of course, has your desired schedule applied.</li>
+</ul>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 262px;" src="/storage/images/roxority_ExportZen/sharepoint-export-timer-job-task-scheduler.png"
+		title="" /></p>

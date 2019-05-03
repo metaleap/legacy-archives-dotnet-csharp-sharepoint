@@ -1,0 +1,87 @@
+﻿<h3>
+	About URL-overridable Settings</h3>
+<p>
+	When the <i>Override Web Part and filter settings from URL parameters</i> check
+	box is ticked (in Web Part settings), every Web Part setting is overridden by the
+	appropriate URL (query string) parameter value, if it exists. See the possible parameter
+	names and values below.</p>
+<div class="rox-info">
+	<b>Note:</b> a URL override of any given <i>Web Part setting</i> will affect <i>all</i>
+	<b>PeopleZen</b> User Profile Web Parts present on the current Web Part Page with
+	the <i>Override Web Part and filter settings from URL parameters</i> option ticked.</div>
+<h3>
+	Overridable Web Part Settings</h3>
+<ul>
+	<li><b>people_AllowSort</b> &mdash; overrides the <i>Allow interactive ad-hoc sorting</i>
+		setting (when using <i>List View</i>). A URL parameter value of &#39;1&#39; activates
+		the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_AllowView</b> &mdash; overrides the <i>Allow interactive view switching</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_CurUser</b> &mdash; overrides the <i>Show only the Current User profile</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_DateThisYear</b> &mdash; overrides the <i>Ignore year</i> setting used
+		for date-based filtering. A URL parameter value of &#39;1&#39; activates the setting,
+		&#39;0&#39; deactivates it.</li>
+	<li><b>people_FilterLive</b> &mdash; overrides the <i>Use Ajax-based live filtering</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_GroupByCounts</b> &mdash; overrides the <i>When grouping, sort by counts
+		instead of group values</i> setting. A URL parameter value of &#39;1&#39; activates
+		the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupDesc</b> &mdash; overrides the <i>When grouping, sort descending</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_GroupInteractive</b> &mdash; overrides the <i>Allow interactive ad-hoc
+		change of the grouping property</i> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupInteractiveDir</b> &mdash; overrides the <i>Allow interactive ad-hoc
+		change of grouping direction (ascending / descending)</i> setting. A URL parameter
+		value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_GroupProp</b> &mdash; overrides the <i>Group by property</i> setting.
+		The URL parameter value needs to the internal name of a User Profile property existing
+		in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_GroupShowCounts</b> &mdash; overrides the <i>Show counts in group headers</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_ImageHeight</b> &mdash; overrides the <i>Custom height of user profile
+		pictures</i> setting. Use a URL parameter value of &#39;0&#39; to fall back to CSS-supplied
+		defaults, or any higher number to specify the image height.</li>
+	<li><b>people_ListStyle</b> &mdash; overrides the <i>Display Style</i> setting. Use
+		a URL parameter value of &#39;1&#39; for <i>List View</i>, or &#39;0&#39; for <i>Tiles</i>.</li>
+	<li><b>people_LoaderAnim</b> &mdash; overrides the <i>Loading animation</i> setting.
+		Use a URL parameter value of &#39;k&#39; for <i>Progress bar</i>, &#39;l&#39; for
+		<i>Spinner</i>, or &#39;b&#39; for <i>None</i>.</li>
+	<li><b>people_NameMode</b> &mdash; overrides the <i>Render user names</i> setting. Use
+		a URL parameter value of &#39;0&#39; for <i>No</i>, &#39;1&#39; for <i>Yes, linked to
+			public profile</i>, &#39;2&#39; for <i>Yes, linked to personal page</i> or &#39;3&#39;
+		for <i>Yes, but do not link</i>.</li>
+	<li><b>people_PageSize</b> &mdash; overrides the <i>Paging</i> setting. A URL parameter
+		value of &#39;0&#39; (or any other number less than &#39;1&#39;) disables paging,
+		any higher number specifies the maximum number of profiles per page.</li>
+	<li><b>people_PictMode</b> &mdash; overrides the <i>Render user profile pictures</i>
+		setting. Use a URL parameter value of &#39;0&#39; for <i>No</i>, &#39;1&#39; for
+		<i>Yes, linked to public profile</i>, &#39;2&#39; for <i>Yes, linked to personal page</i>
+		or &#39;3&#39; for <i>Yes, but do not link</i>.</li>
+	<li><b>people_Presence</b> &mdash; overrides the <i>Indicate OCS / IM online presence</i>
+		setting. A URL parameter value of &#39;1&#39; activates the setting, &#39;0&#39;
+		deactivates it.</li>
+	<li><b>people_RowSize</b> &mdash; overrides the <i>In rows of...</i> setting (when using
+		<i>Tiles</i>). Use a URL parameter value of &#39;0&#39; (or any other number less
+		than &#39;1&#39;) to not enforce rows, or any higher number to specify the maximum
+		number of profiles per row.</li>
+	<li><b>people_SortDesc</b> &mdash; overrides the <i>Sort descending</i> setting. A URL
+		parameter value of &#39;1&#39; activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_SortProp</b> &mdash; overrides the <i>Sort by property</i> setting. The
+		URL parameter value needs to the internal name of a User Profile property existing
+		in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_TabInteractive</b> &mdash; overrides the <i>Allow interactive ad-hoc change
+		of the quick-filter tab property</i> setting. A URL parameter value of &#39;1&#39;
+		activates the setting, &#39;0&#39; deactivates it.</li>
+	<li><b>people_TabProp</b> &mdash; overrides the <i>Show tabs to quickly filter by</i>
+		setting. The URL parameter value needs to the internal name of a User Profile property
+		existing in your SharePoint environment (e.g. <i>SPS-Birthday</i>).</li>
+	<li><b>people_TileWidth</b> &mdash; overrides the <i>Tile width</i> setting. Use a CSS-compatible
+		width setting (such as for example 100px, 10%, 3cm...)</li>
+</ul>

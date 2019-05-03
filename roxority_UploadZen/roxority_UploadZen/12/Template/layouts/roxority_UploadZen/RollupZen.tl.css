@@ -1,0 +1,246 @@
+.rox-rollupitems, .rox-rollupitems td
+{
+clear: both;
+font-family: Tahoma, Verdana, Sans-Serif;
+}
+.rox-rollup
+{
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.rox-tabstrip
+{
+	margin-top: 8px;
+}
+.rox-tabstrip-fill
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	border-bottom: 1px solid #c4c4c4;
+}
+.rox-rollup-paging
+{
+	clear: both;
+	text-align: center;
+	padding: 4px;
+	color: #666666;
+	background-position: right center;
+	background-repeat:no-repeat;
+}
+.rox-rollup-topnav .rox-rollup-hastabs
+{
+	border-left: 1px solid #c4c4c4;
+	border-right: 1px solid #c4c4c4;
+	border-bottom: 1px dotted #c4c4c4;
+}
+.rox-rollup-topnav
+{
+	clear: both;
+}
+.rox-rollup-bottomnav
+{
+	clear: both;
+	border-top: 1px dotted #c4c4c4;
+}
+span.rox-vcard
+{
+	padding: 0px 5px 0px 5px;
+}
+span.rox-vcard img
+{
+	width: 14px;
+	height: 14px;
+	border: 0px none red;
+}
+.rox-rollup-bottomnav .rox-rollup-paging
+{
+	border-bottom: 0px none red;
+}
+.rox-rollup-paging b
+{
+	color: #000000;
+}
+.rox-usermail
+{
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+}
+.rox-usermail img
+{
+	border: 0px none red;
+}
+.rox-pageno, .rox-pagestep
+{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.rox-pagestep
+{
+	background-repeat: no-repeat;
+	background-position: 0px -1px;
+}
+a.rox-pageskip, a.rox-pageskip:link, a.rox-pageskip:active, a.rox-pageskip:hover, a.rox-pageskip:visited
+{
+	display: inline-block;
+	color: #000000 !important;
+	font-size: 7pt;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 1px;
+	padding-top: 0px;
+	background-position: 0px -2px;
+}
+a.rox-pagestep:hover
+{
+	text-decoration: none;
+}
+.rox-rollup-switcher
+{
+	text-align: left;
+	background-position: center center;
+}
+/* Box per Profile */
+.rox-rollupitem {
+float: left;
+padding: 8px;
+}
+
+.rox-rollupitems td .rox-rollupitem
+{
+	float: none;
+}
+
+/* Value of a Profile property */
+.rox-rollup-item {
+color: #606060;
+}
+.rox-rollupitem-fullname img
+{
+	border: 0px none red;
+}
+.rox-rollup-item > span
+{
+color: #303030;
+}
+div.rox-rollupitem-fullname
+{
+	text-align: center;
+}
+div.rox-rollupitem-fullname span.rox-rollup-item
+{
+color: #333333;
+}
+.rox-rollupitem-fullname {
+font-weight: bold;
+}
+/* Profile picture */
+.rox-rollupitem-picture, .rox-rollup-loader {
+text-align: center;
+background-repeat: no-repeat;
+background-position: right bottom;
+}
+.rox-loader
+{
+background-repeat: no-repeat;
+background-position: center center;
+}
+.rox-error
+{
+background-color: InfoBackground;
+color: InfoText;
+padding: 4px;
+}
+.rox-rollupitem-picture A, .rox-rollupitem-picture span
+{
+background-color: #ffffff;
+border: 1px solid #bbbbbb;
+padding: 2px;
+margin: 2px;
+display: inline-block;
+}
+.rox-image-error A, .rox-image-error span
+{
+border: 0px none #bbbbbb !important;
+}
+.rox-rollupitem-picture IMG {
+height: 72px;
+}
+table.rox-rollupitems .rox-rollupitem-picture a, table.rox-rollupitems .rox-rollupitem-picture span
+{
+padding: 0px;
+margin: 0px;
+}
+table.rox-rollupitems .rox-rollupitem-picture IMG 
+{
+height: 24px;
+}
+table.rox-rollupitems th .ms-vb
+{
+	color: #b2b2b2;
+}
+table.rox-rollupitems th .ms-vb a, .rox-rollupitems th .ms-vb a:visited, .rox-rollupitems th .ms-vb a:active
+{
+	color: #808080;
+}
+div.rox-tabprop
+{
+	float: left;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #c4c4c4;
+}
+span.rox-rollgroupprefix
+{
+	display: inline-block;
+	padding: 3px 5px 3px 5px;
+}
+span.rox-rollgroupcount, span.rox-rollgroup
+{
+	display: inline-block;
+	padding: 3px 0px 3px 0px;
+}
+a.rox-rollgroupdirlink
+{
+	display: inline-block;
+	padding: 0px 0px 2px 0px;
+}
+td.ms-gbhover span.rox-rollgroupcount, td.ms-gbhover span.rox-rollgroup
+{
+	padding: 0px 0px 1px 0px;
+}
+td.ms-gbhover a.rox-rollgroupdirlink
+{
+	padding: 0px 0px 0px 0px;
+}
+.rox-rollgroupprefix, .rox-rollgroupcount
+{
+	font-family: Tahoma, Sans-Serif;
+	font-weight: normal;
+	color: #808080;
+}
+div.ms-templatepickerdisabled
+{
+	color: #909090;
+}
+div.ms-templatepickerdisabled div
+{
+	xbackground: #ececec !important;
+	xpadding-bottom: 2px !important;
+	xborder-bottom: solid 1px #c4c4c4 !important;
+}
+.rox-rollup-paging, .rox-rollup-paging *, .rox-rollup-switcher, .rox-rollup-switcher *
+{
+	white-space: nowrap !important;
+}
+div.rox-rollup a.rollajaxlnk, div.rox-rollup a.rollajaxlnk:active, div.rox-rollup a.rollajaxlnk:hover, div.rox-rollup a.rollajaxlnk:link, div.rox-rollup a.rollajaxlnk:visited
+{
+	color: #0072bc !important;
+}
+roxhtml 
+{
+	display: none !important;
+}

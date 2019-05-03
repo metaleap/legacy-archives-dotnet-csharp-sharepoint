@@ -1,0 +1,9 @@
+﻿<solution id="4aea04a6-787a-4135-81a0-195e5946db1f" name="WebPart1">
+  <features>
+    <feature id="0478f8f9-fbdc-42f5-99ea-f6e8ec702606">
+      <featureElements>
+        <featureElement id="c3bd9af3-8df1-49bd-835b-36f5d64b060c" name="WebPart1" />
+      </featureElements>
+    </feature>
+  </features>
+</solution>

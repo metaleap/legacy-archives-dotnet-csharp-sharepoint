@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE91BE28-79D2-4C3A-8A31-463407C92D9C}</ProjectGuid>
+    <ProjectTypeGuids>{593B0543-81F6-4436-BA1E-4747859CAAE2};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>roxority_LookupZen</RootNamespace>
+    <AssemblyName>roxority_LookupZen</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>Properties\roxority.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>URL</StartAction>
+    <StartURL>http://localhost/</StartURL>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\roxority_Shared\roxority.SharePoint\ProductPage.cs">
+      <Link>roxority.SharePoint\ProductPage.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="roxority_LookupZen\roxority_LookupZen.Field.cs" />
+    <Compile Include="roxority_LookupZen\roxority_LookupZen.FieldControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\roxority_Shared\Templates\layouts\roxority_Shared\help\res\help.css">
+      <Link>Templates\layouts\roxority_LookupZen\help\res\help.css</Link>
+    </Content>
+    <Content Include="..\..\roxority_Shared\Templates\layouts\roxority_Shared\jQuery.js">
+      <Link>Templates\layouts\roxority_LookupZen\jQuery.js</Link>
+    </Content>
+    <Content Include="..\..\roxority_Shared\Templates\layouts\roxority_Shared\roxbase.js">
+      <Link>Templates\layouts\roxority_LookupZen\roxbase.js</Link>
+    </Content>
+    <Content Include="..\..\roxority_Shared\Templates\layouts\roxority_Shared\roxority.js">
+      <Link>Templates\layouts\roxority_LookupZen\roxority.js</Link>
+    </Content>
+    <Content Include="Templates\images\roxority_LookupZen\completeallwftasks.gif" />
+    <Content Include="Templates\images\roxority_LookupZen\ewr052.gif" />
+    <Content Include="Templates\images\roxority_LookupZen\feature.png" />
+    <Content Include="Templates\layouts\roxority_LookupZen\default.aspx">
+    </Content>
+    <Content Include="Templates\layouts\roxority_LookupZen\help\eula.html" />
+    <Content Include="Templates\layouts\roxority_LookupZen\help\farm_site_config.html" />
+    <Content Include="Templates\layouts\roxority_LookupZen\help\intro.html" />
+    <Content Include="Templates\layouts\roxority_LookupZen\help\release_notes.html" />
+    <Content Include="Templates\layouts\roxority_LookupZen\help\setup.html" />
+    <Content Include="Templates\xml\fldtypes_roxority_LookupZen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RootFiles\Resources\roxority_LookupZen.de.resx" />
+    <None Include="RootFiles\Resources\roxority_LookupZen.resx" />
+    <None Include="Properties\roxority.snk" />
+    <None Include="Templates\layouts\roxority_LookupZen\micro.rox" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.de.resx">
+      <Link>Properties\roxority_Shared.de.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\roxority_Shared\Properties\roxority_Shared.resx">
+      <Link>Properties\roxority_Shared.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent>copy "$(ProjectDir)RootFiles\Resources\$(ProjectName).resx" "$(ProjectDir)RootFiles\Resources\$(ProjectName).en-US.resx" /Y
+copy "$(ProjectDir)RootFiles\Resources\$(ProjectName).de.resx" "$(ProjectDir)RootFiles\Resources\$(ProjectName).de-DE.resx" /Y
+copy "$(ProjectDir)RootFiles\Resources\$(ProjectName).de.resx" "$(ProjectDir)RootFiles\Resources\$(ProjectName).de-AT.resx" /Y
+copy "$(ProjectDir)RootFiles\Resources\$(ProjectName).de.resx" "$(ProjectDir)RootFiles\Resources\$(ProjectName).de-CH.resx" /Y
+xcopy "$(ProjectDir)RootFiles\*" "$(SolutionDir)WspBuilder\12\" /E /Q /Y
+xcopy "$(ProjectDir)Templates\*" "$(SolutionDir)WspBuilder\12\template\" /E /Q /Y
+xcopy "$(SolutionDir)..\roxority_Shared\templates\layouts\roxority_Shared\*" "$(SolutionDir)WspBuilder\12\template\layouts\$(ProjectName)\" /E /Q /Y
+copy "$(TargetPath)" "$(SolutionDir)WspBuilder\gac\$(TargetFileName)" /Y
+copy "$(TargetDir)de\$(TargetName).resources.dll" "$(SolutionDir)WspBuilder\gac\$(TargetName).resources.dll" /Y
+copy "$(TargetDir)solution\xml\fldtypes_$(ProjectName).xml" "$(SolutionDir)WspBuilder\12\template\xml" /Y
+
+"C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\gacutil" /i "$(TargetDir)de\$(TargetName).resources.dll" /f
+xcopy "$(ProjectDir)RootFiles\*" "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\" /E /Q /Y
+
+rem xcopy "$(ProjectDir)Templates\layouts\*" "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\layouts\" /E /Q /Y
+rem xcopy "$(SolutionDir)..\roxority_Shared\templates\layouts\roxority_Shared\*" "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\layouts\$(ProjectName)\" /E /Q /Y
+rem xcopy "$(ProjectDir)Templates\controltemplates\*" "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\controltemplates\" /E /Q /Y
+rem xcopy "$(ProjectDir)Templates\images\*" "C:\Program Files\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\images\" /E /Q /Y
+
+rem "C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\gacutil" /i "$(TargetPath)" /f
+rem %25windir%25\system32\cscript.exe %25windir%25\system32\iisapp.vbs /a "SharePoint - 80" /r
+</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio />
+  </ProjectExtensions>
+</Project>

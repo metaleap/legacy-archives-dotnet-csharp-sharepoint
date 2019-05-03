@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="roxority_PeopleZen_PictureImport.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Conn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">LDAP://OU=Departments,DC=global,DC=local</Value>
+    </Setting>
+    <Setting Name="ConnUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConnPass" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConnAuth" Type="System.DirectoryServices.AuthenticationTypes" Scope="Application">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="ImportPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://roxority/_layouts/images/people</Value>
+    </Setting>
+    <Setting Name="SSPIgnorePrivacy" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SSPBackwardCompatible" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ConnProp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">thumbnailPhoto</Value>
+    </Setting>
+    <Setting Name="ImportExt" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.jpg</Value>
+    </Setting>
+    <Setting Name="SSPProp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">PictureURL</Value>
+    </Setting>
+    <Setting Name="SSPNameProp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AccountName</Value>
+    </Setting>
+    <Setting Name="ConnSearch" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(&amp;(SAMAccountName=$USERNAME$))</Value>
+    </Setting>
+    <Setting Name="ClearEmpty" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

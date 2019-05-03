@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="a01a1727-855f-4bca-b0f9-818c0a664777" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomAction
+		Id="roxoritySampleZen"
+	  RegistrationType="List"
+	  GroupId="ActionsMenu"
+	  Location="Microsoft.SharePoint.StandardMenu"
+		Sequence="10000"
+	  ControlAssembly="roxority_SampleZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01"
+	  ControlClass="roxority_SampleZen.SampleZenActionMenu">
+	</CustomAction>
+</Elements>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="3c3a7193-317a-4011-87c4-66de2184d134" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="WebParts" List="113" Url="_catalogs/wp">
+		<File Path="roxority_RollupZen.webpart" Url="roxority_RollupZen.webpart" Type="GhostableInLibrary">
+			<Property Name="Group" Value="[ROXORITY]" />
+		</File>
+	</Module>
+</Elements>

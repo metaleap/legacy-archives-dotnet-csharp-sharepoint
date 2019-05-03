@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>FilterZen BDC Item Builder Web Part</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>FilterZen BDC Item Builder Web Part</h1>
+<p>
+	<i>Note: this Web Part requires Microsoft Office SharePoint Server (MOSS) 2007 Enterprise
+		Edition with the Business Data Catalog (BDC) features enabled, and the <a href="moss_bdc_extensions_setup.html">FilterZen BDC Extensions</a> installed.</i></p>
+<p>
+	The <b>FilterZen</b> <i>BDC Business Data Item Builder</i> Web Part initially serves
+	the same purpose as the built-in Business Data Item Builder Web Part provided by
+	Microsoft Office SharePoint Server (MOSS) 2007 Enterprise Edition: to obtain the
+	ID of a Business Data Catalog (BDC) entity instance and broadcast that instance
+	to compatible Web Parts. However, the FilterZen BDC Business Data Item Builder Web
+	Part goes beyond the built-in equivalent Web Part in many ways:</p>
+<h3>
+	Obtaining the Entity Instance ID<a name="s0"></a></h3>
+<p>
+	The out-of-the-box Web Part can only ever obtain the required entity instance ID
+	from a pre-defined URL Parameter. The <b>FilterZen</b> Web Part obtains the required
+	entity instance ID from any connected Web Part. While you can achieve the original
+	behaviour by connecting to a URL (query string) Filter Web Part or a <b>FilterZen</b>
+	Filter Web Part with a Page Request / URL Filter, there are now innumerable ways of providing
+	the entity instance ID, including any built-in or custom FilterZen filter types
+	and the out-of-the-box provider Web Parts, for example List Views.</p>
+<p>
+	Simply choose your preferred entity instance ID provider Web Part from the <i>Connections</i>
+	/ <i>Get BDC Entity Instance ID From</i> sub-menu.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" src="help/res/bdc_business_data_item_builder_web_part.png"
+		style="height: 670px;" title="" /></p>
+<h3>
+	Sending the selected Entity Instance to BDC Web Parts<a name="s1"></a></h3>
+<p>
+	Simply select from the <i>Connections</i> / <i>Send Selected Item To</i> sub-menu
+	any <i>Business Data Actions</i> or <i>Business Data Item</i> Web Part to send the
+	entity instance associated with the current entity instance ID. You can only connect
+	to Web Parts that have been pre-configured for a specific Business Data Catalog
+	application and data type. For the <b>FilterZen</b> <i>BDC Business Data Item Builder</i>
+	Web Part to become aware of the Business Data Catalog application, data type and
+	entity columns to use, you need to make at least one such connection.</p>
+<h3>
+	Sending any Entity Instance Column values to any Web Parts<a name="s2"></a></h3>
+<p>
+	Once you have made at least one such connection and the <b>FilterZen</b> <i>BDC Business
+		Data Item Builder</i> Web Part became aware of the Business Data Catalog application,
+	data type and entity columns to use, you can now send live BDC column values of
+	the selected entity instance to any kind of consumer Web Part: simply select your
+	preferred consumer Web Parts from the <i>Connections</i> / <i>Provide values as data
+		row to</i> sub-menu.</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

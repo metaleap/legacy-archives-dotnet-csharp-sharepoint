@@ -1,0 +1,91 @@
+<p>Die folgenden Einstellungen finden administrative Benutzer auf der Seite <span id="roxconfiglink"><i>Konfiguration</i> im <i>PeopleZen-Studio</i>, welches Sie &uuml;ber Websiteeinstellungen / PeopleZen Studio / Konfigurationseinstellungen erreichen</span>.</p><p>Jede Einstellung hat einen globalen, &uuml;ber die gesamte Serverfarm hinweg geltenden Wert, der jeweils optional auf Websitesammlungsebene &uuml;berschrieben werden kann. Die folgenden Konfigurationseinstellungen stehen zur Verf&uuml;gung:</p>
+<h3>Sprache</h3>
+<p>PeopleZen wurde f&uuml;r verschiedene Sprachen lokalisiert. Zus&auml;tzlich zu Englisch und Deutsch werden hier alle Sprachen zur Auswahl angeboten, f&uuml;r die Sie eigene Teil&uuml;bersetzungen (unter Websiteeinstellungen / PeopleZen Studio / DIY-Benutzeroberfl&auml;chen-Lokalisierung) angefertigt haben. Diese Einstellung betrifft alle PeopleZen-Benutzeroberfl&auml;chen au&szlig;er Beschriftungen und Beschreibungen von Features, Listenvorlagen, Spaltentypen, Inhaltstypen oder Webpartvorlagen (diese werden von SharePoint immer direkt gem&auml;&szlig; der aktiven Website-Spracheinstellung geladen).</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i>:</p>
+<ul>
+<li><i>(Wie Site, oder Englisch)</i></li>
+<li><i>English</i></li>
+<li><i>Deutsch</i></li>
+</ul>
+<h3>Fensterziel f&#252;r Name/Titel-Links von Datens&#228;tzen</h3>
+<p>Vom PeopleZen-Webpart pro Datensatz generierte "Name/Titel"-Links werden in einem HTML-Zielfenster Ihrer Wahl ge&ouml;ffnet. Verwenden Sie <i>_self</i>, um diese Links im selben Browserfenster zu &ouml;ffnen, <i>_blank</i>, um sie in einem neuen Browserfenster zu &ouml;ffnen, <i>_modal</i>, um sie in einem modalen Popup-Dialogfenster zu &ouml;ffnen, <i>_popup</i> f&uuml;r ein "modales" seitenintegriertes Overlay-"Popup", oder geben Sie den Namen eines IFRAME- oder FRAME-Elements in Ihrer Webpartseite an.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>_popup</pre>
+<h3>HTML-Vorlage f&#252;r E-Mail-Adressen</h3>
+<p>Die vom PeopleZen-Webpart zu generierende HTML-Ausgabe f&uuml;r alle Datensatzfeldwerte, die E-Mail-Adressen repr&auml;sentieren. G&uuml;ltige Platzhalter: {0} f&uuml;r die E-Mail-Adresse, {1} f&uuml;r { und {2} f&uuml;r }.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>&lt;a href=&quot;mailto:{0}&quot;&gt;{0}&lt;/a&gt;</pre>
+<h3>HTML-Vorlage f&#252;r vCard-Exportlinks</h3>
+<p>Die vom PeopleZen-Webpart zu generierende HTML-Ausgabe f&uuml;r vCard-Exportlinks. G&uuml;ltige Platzhalter: {0} f&uuml;r die vCard-Export-URL, {1} f&uuml;r { und {2} f&uuml;r }.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>&lt;a href=&quot;{0}&quot;&gt;&lt;img src=&quot;/_layouts/images/outl.gif&quot;/&gt;&lt;/a&gt;</pre>
+<h3>HTML-Vorlage f&#252;r Datensatzfeld mit Wert</h3>
+<p>Die vom PeopleZen-Webpart (in der Kachel-Ansicht) zu generierende HTML-Ausgabe f&uuml;r jedes Datensatzfeld, das einen Wert enth&auml;lt. G&uuml;ltige Platzhalter: {0} f&uuml;r den Anzeigenamen des Datenfeldes, {1} f&uuml;r den Feldwert, {2} f&uuml;r den internen Namen des Feldes, {3} f&uuml;r { und {4} f&uuml;r }.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>{0}: &lt;span&gt;{1}&lt;/span&gt;</pre>
+<h3>HTML-Vorlage f&#252;r Datensatzfeld ohne Wert</h3>
+<p>Die vom PeopleZen-Webpart (in der Kachel-Ansicht) zu generierende HTML-Ausgabe f&uuml;r jedes Datensatzfeld, das keinen Wert hat. G&uuml;ltige Platzhalter: {0} f&uuml;r den Anzeigenamen des Datenfeldes, {1} f&uuml;r den Feldwert, {2} f&uuml;r den internen Namen des Feldes, {3} f&uuml;r { und {4} f&uuml;r }.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>{0}: &amp;mdash;</pre>
+<h3>Alle Datensatzfelder ohne Wert ausschlie&#223;en</h3>
+<p>Standardm&auml;&szlig;ig generiert das PeopleZen-Webpart (in der Kachel-Ansicht) ein HTML-Blockelement f&uuml;r jedes in den Webpart-Einstellungen angegebene Datenfeld, selbst wenn f&uuml;r das Feld im jeweiligen Datensatz (noch) kein Wert festgelegt wurde. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> diese Option an, um f&uuml;r leere Datensatzfelder &uuml;berhaupt keine HTML-Ausgabe (in der Kachel-Ansicht) zu generieren.</p>
+<h3>Trennzeichenfolge f&#252;r mehrwertige Datensatzfelder</h3>
+<p>Einige Datenfelder (wie z.B. <i>F&auml;higkeiten</i> oder <i>Verantwortlichkeiten</i> bei Farm-Benutzerprofilen) k&ouml;nnen mehrere Werte pro Datensatz erfassen. Geben Sie die Zeichenfolge ein, mittels derer diese Werte bei der Anzeige im PeopleZen-Webpart miteinander kombiniert werden.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>, </pre>
+<h3>Position der Navigationsleiste</h3>
+<p>Ihre PeopleZen-Webparts zeigen ggf. eine Navigationsleiste an, welche die Paginierung [Zur&uuml;ck | Weiter], die interaktive Ansichtsumschaltung [Kacheln | Liste] und/oder eine animierte Ladefortschrittsanzeige anzeigt. W&auml;hlen Sie aus, wo diese Navigationsleiste plaziert werden soll.</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i>:</p>
+<ul>
+<li><i>Oben (aber unterhalb der Schnellfilter-Reiter)</i></li>
+<li><i>Oben und unten</i></li>
+<li><i>Unten</i></li>
+</ul>
+<h3>Spaltenbeschriftung f&#252;r &#39;Name&#39;-Datenquellen-Spezialfeld</h3>
+<p>Legt die Standardspaltenbeschriftung f&uuml;r das Datenquellen-Spezialfeld &#39;Name&#39; in tabularen Listenansichten fest. Um keine Spaltenbeschriftung anzuzeigen, anstatt die Einstellung zu leeren, verwenden Sie drei Unterstriche: ___</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>Name</pre>
+<h3>Schwellenwert f&#252;r Reduzierung der Schnellfilter-Reiter</h3>
+<p>Schnellfilter-Reiter werden so generiert, da&szlig; jeder Reiter einem existierenden Feldwert entspricht. Dies ist vorteilhaft bei Mehrfachfeldern (wie z.B. F&auml;higkeiten, Verantwortlichkeiten etc. bei Farm-Benutzerprofilen), aber nicht zielf&uuml;hrend bei potentiell gro&szlig;en Wertemengen (Vorname, Nachname...) &mdash; daher werden bei Erreichen einer bestimmten Gesamtanzahl von Feldwerten die Reiter auf alphabetische oder numerische Indizes (A, B, C...) reduziert.<br/><br/>Geben Sie diese H&ouml;chstanzahl hier an. Geben Sie keine g&uuml;ltige Ganzzahl zwischen 2 und 50 ein, wird der Standardwert 16 verwendet.</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>16</pre>
+<h3>Den Schnellfilter-Reiter [Leer] immer ausblenden</h3>
+<p>Standardm&auml;&szlig;ig wird immer ein Schnellfilter-Reiter zur Anzeige der Datens&auml;tze mit fehlendem / leerem Feldwert hinzugef&uuml;gt (aber nur, falls solche existieren). Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> diese Option an, um diesen Schnellfilter-Reiter nie anzuzeigen.</p>
+<h3>Den Schnellfilter-Reiter [Alle] immer einblenden</h3>
+<p>Bei der Verwendung von Schnellfilter-Reitern wird standardm&auml;&szlig;ig der erste Reiter aktiviert, und Anwender haben keine M&ouml;glichkeit, "alle Datens&auml;tze, ungefiltert" auf einmal anzuzeigen. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> diese Option an, um einen weiteren [Alle]-Schnellfilter-Reiter anzuzeigen, der dies erm&ouml;glicht und dann auch voraktiviert wird.</p>
+<h3>Schnellfilter-Reiter immer in umgekehrter Sortierreihenfolge darstellen</h3>
+<p>Kreuzen Sie diese Option an, um die Schnellfilter-Reiter immer in absteigender (statt aufsteigender) Reihenfolge sortiert anzuzeigen.</p>
+<h3>Internationale Zeichen in Schnellfilter-Tabs normalisieren</h3>
+<p>Experimentieren Sie mit dieser Einstellungen, wenn die Ihren Schnellfilter-Tabs zugrundeliegenden Werte  nicht-ASCII / internationale Zeichen enthalten und Ihre Schnellfilter-Tabs unerwartet, seltsam oder unbenutzbar erscheinen.</p>
+<h3>Einbettung verbundener FilterZen-Webparts</h3>
+<p>Standardm&auml;&szlig;ig wird der interaktive Filterbereich eines FilterZen-Webparts visuell in das verbundene PeopleZen-Webpart eingebettet (nur bei f&uuml;r letzteres aktivierter Ajax-Livefilterung). Dies verbessert oft die Benutzerfreundlichkeit, aber Sie k&ouml;nnen dieses Verhalten hier bei Bedarf auch deaktivieren.</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i>:</p>
+<ul>
+<li><i>Ja (ohne oberen Rahmen)</i></li>
+<li><i>Ja</i></li>
+<li><i>Nein</i></li>
+</ul>
+<h3>Lokaler Textvergleichsmodus f&#252;r bestimmte Datenquellen-Verbindungsanbieter</h3>
+<p>F&uuml;r nicht datenquellenseitig, sondern SharePoint-seitig durch PeopleZen selbst durchgef&uuml;hrte Filterungen k&ouml;nnen Sie hier den Textvergleichsalgorithmus ausw&auml;hlen, der zur Filterung anhand von textuellen (statt numerischen oder datumsbasierten) Datenfeldwerten verwendet wird.</p>
+<p><strong>W&auml;hlen Sie aus folgenden Optionen</strong> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i>:</p>
+<ul>
+<li><i>Regionsneutral</i></li>
+<li><i>Aktuelle Regionseinstellung</i></li>
+<li><i>Ordinal</i></li>
+</ul>
+<h3>AJAX-basiertes &quot;tr&#228;ges Laden&quot; von Datens&#228;tzen erst nach Anzeige der Seite (normalerweise nicht vorteilhaft)</h3>
+<p>Falls nicht hierunter deaktiviert, werden bestimmte Endanwender-Interaktionen (vor- oder zur&uuml;ckbl&auml;ttern, Umsortierung, Umgruppierung oder Neufilterung) von PeopleZen auf AJAX-Basis ausgef&uuml;hrt, ohne da&szlig; die gesamte Seite f&uuml;r diese Interaktion jedes Mal neu geladen werden mu&szlig; &mdash; beim Erstaufruf der Seite wird die Initialanzeiges des PeopleZen-Webparts jedoch gleich w&auml;hrend des Seitenaufbaus geladen und vorbereitet. Solange dies nicht zu signifikanten (!) Performanceeinbu&szlig;en oder stark verl&auml;ngerte Seitenladezeiten f&uuml;hrt, ist dies auch der bevorzugte und benutzerfreundlichere Ansatz. Kreuzen Sie diese Option an, um die PeopleZen-Initialanzeige nie schon w&auml;hrend des Seitenaufbaus vorzubereiten und diese stattdessen erst nach dem vollst&auml;ndigen clientseitigen Laden der Seite &uuml;ber AJAX "tr&auml;ge" nachzuladen.</p>
+<h3>AJAX-basiertes Verhalten deaktivieren (nicht empfohlen)</h3>
+<p>Bestimmte Endanwender-Interaktionen (vor- oder zur&uuml;ckbl&auml;ttern, Umsortierung, Umgruppierung oder Neufilterung) werden von PeopleZen auf AJAX-Basis ausgef&uuml;hrt, ohne da&szlig; die gesamte Seite f&uuml;r diese Interaktion jedes Mal neu geladen werden mu&szlig;. Dieses generell benutzerfreundlichere Verhalten funktioniert jedoch in einigen seltenen FBA/ISA-Konstellationen oder anderen wenigen hochangepa&szlig;ten Enterprise-VPN bzw. Proxy-beeinflu&szlig;ten Umgebungen leider nicht. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> diese Option an, um alle AJAX-basierten Interaktionen umzustellen auf den klassischen, Seite-neuladenden "Postback"-Benutzerinteraktionsmodus.</p>
+<h3>ADO.NET-Datenbankverbindungsanbieter f&#252;r SQL-Datenzugriff</h3>
+<p>Geben Sie alle ADO.NET-Datenbankverbindungsanbieter an, die von Ihren Datenbank/SQL-Datenquellen unterst&uuml;tzt werden sollen (einen pro Zeile nach dem Muster "Anzeigename: voller Anbieter-IDbConnection-Typname, voller Assemblyname").</p>
+<p>Falls Sie diese Einstellung angepa&szlig;t haben, k&ouml;nnen Sie &uuml;ber den Link <b>Auf Standardwert zur&uuml;cksetzen</b> auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> folgenden Standardwert wiederherstellen:</p>
+<pre>SQL Server: System.Data.SqlClient.SqlConnection, System.Data<br/>Oracle: System.Data.OracleClient.OracleConnection, System.Data.OracleClient<br/>ODBC: System.Data.Odbc.OdbcConnection, System.Data<br/>OLE DB: System.Data.OleDb.OleDbConnection, System.Data</pre>
+<h3>Preferred SSP name for &#39;Farm User Profiles&#39; Data Sources (MOSS 2007 only; best left blank)</h3>
+<p>We recommend to leave this blank in order to use the runtime-default Shared Service Provider.</p>
+<h3>Experimental option (MOSS 2007 only) -- do not tick unless so instructed by ROXORITY</h3>
+<p>Experimental option (MOSS 2007 only) -- do not tick unless so instructed by ROXORITY technical support.</p>
+<h3>Keine Standardinstanzen f&#252;r PeopleZen-Konfiguratoren auf Websitesammlungsebene (NICHT empfohlen!)</h3>
+<p>Konfiguratoren sind Listen von Elementen, die das Verhalten dieser Software definieren bzw. anpassen (wie Export-Aktionen in ExportZen, Datenquellen und Datenfeldvorlagen in PeopleZen, Druckansichten und Druck-Launcher in PrintZen, Upload-Aktionen in UploadZen). Standardm&auml;&szlig;ig besitzt jede Websitesammlung f&uuml;r jeden Konfigurator ihre eigene, nicht entfernbare Standardinstanz , die angepa&szlig;t werden kann oder zu der weitere hinzugef&uuml;gt werden k&ouml;nnen. In sehr gro&szlig;en Serverfarmen mit 1000en von Websitesammlungen k&ouml;nnen diese Standardinstanzen eher hinderlich sein und der ausschlie&szlig;liche Einsatz von Instanzen auf Farmebene pr&auml;feriert werden. Kreuzen Sie diese Option an, um die Standardinstanz-pro-Websitesammlung zu deaktivieren.</p>
+<h3>Standardm&#228;&#223;ig keine Einbindung der jQuery-Bibliothek v1.8.3 (NICHT empfohlen)</h3>
+<p>Einige PeopleZen-Benutzeroberfl&auml;chen erfordern die jQuery-Bibliothek und binden diese in die entsprechenden Seiten ein. Mehrfacheinbindung von jQuery kann manchmal zu Problemen f&uuml;hren. Kreuzen Sie auf der Seite <i>Konfiguration</i> im <i>PeopleZen-Studio</i> diese Option an <i>nur</i>, wenn Ihre Masterseiten, Webpartseiten oder Drittanbietererweiterungen eigenst&auml;ndig, global (nicht nur in Einzelf&auml;llen) und unabh&auml;ngig von PeopleZen ebenfalls jQuery einbinden, um PeopleZen davon abzuhalten, jQuery einzubinden. Ist diese Option aktiviert, m&uuml;ssen Sie selbst&auml;ndig sicherstellen, dass jQuery (in einer Version neuer als 1.4 ABER &auml;lter als 1.9) in Seiten geladen wird, die PeopleZen-Benutzeroberfl&auml;chen enthalten, andernfalls wird PeopleZen unter Umst&auml;nden nicht mehr funktionieren. Dies ist eine globale Voreinstellung, die lokal ggf. noch einmal individuell &uuml;berschrieben werden kann.</p>

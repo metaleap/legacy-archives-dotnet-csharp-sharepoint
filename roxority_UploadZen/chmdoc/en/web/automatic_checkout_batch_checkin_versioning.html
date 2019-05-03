@@ -1,0 +1,67 @@
+<p>
+	UploadZen supports check-in and check-out for Document Libraries that have the <b>Require
+		documents to be checked out before they can be edited</b> setting set to <b>Yes</b>
+	(on the <b>Versioning Settings</b> page under <b>Document Library Settings</b>).
+</p>
+<h3>
+	UploadZen Web Uploader<a name="s0"></a></h3>
+<p>
+	You can select for each file whether and how it should be checked in after it was
+	successfully uploaded:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 414px;" src="/storage/images/roxority_UploadZen/sharepoint_flash_silverlight_upload_batch_checkin_automatic_checkout.png"
+		title="" /></p>
+<ul>
+	<li><b>No</b> &mdash; uploaded files stay checked out to you</li>
+	<li><b>As minor new version</b> &mdash; uploaded files are checked in. Overwritten,
+		previously existing files get a minor version number increment (ie. from 1.0 to
+		1.1 etc.) if the <b>Document Version History</b> for this Document Library is set
+		to <b>Create major and minor (draft) versions</b> (on the <b>Versioning Settings</b>
+		page under <b>Document Library Settings</b>).</li>
+	<li><b>As major new version</b> &mdash; uploaded files are checked in. Overwritten,
+		previously existing files get a manor version number increment (ie. from 1.0 to
+		2.0 etc.) <i>unless</i> the <b>Document Version History</b> for this Document Library
+		is set to <b>No versioning</b> (on the <b>Versioning Settings</b> page under <b>Document
+			Library Settings</b>).</li>
+	<li><b>Overwrite current version</b> &mdash; uploaded files are checked in but if the
+		file name already existed prior to the upload, the previous version number remains
+		unchanged.</li>
+</ul>
+<p>
+	To check in all files the same way, select the preferred setting for one file, then
+	click the
+	<img class="roxbuttonicon" src="/storage/images/checkall.gif" />
+	icon to <i>Set all files to this selection</i>.
+</p>
+<h3>
+	UploadZen Windows Uploader<a name="s1"></a></h3>
+<p>
+	In the legacy <a href="uploading_multiple_files">Windows Uploader</a>, prior
+	to your upload simply drop-down the menu next to the <b>Upload Files button:</b>
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 315px;" src="/storage/images/roxority_UploadZen/sharepoint_clickonce_upload_batch_checkin_automatic_checkout.png"
+		title="" /></p>
+<ul>
+	<li><b>Auto Check-Out</b> &mdash; tick this menu option to check out existing files
+		to you prior to overwriting them. This is necessary or existing files cannot be
+		overwritten.</li>
+	<li><b>Auto Check-In</b> &mdash; select whether uploaded files should be checked in
+		after they have been uploaded:
+		<ul>
+			<li><b>None</b> &mdash; uploaded files stay checked out to you</li>
+			<li><b>Minor versions</b> &mdash; uploaded files are checked in. Overwritten, previously
+				existing files get a minor version number increment (ie. from 1.0 to 1.1 etc.) if
+				the <b>Document Version History</b> for this Document Library is set to <b>Create major
+					and minor (draft) versions</b> (on the <b>Versioning Settings</b> page under
+				<b>Document Library Settings</b>).</li>
+			<li><b>Major versions</b> &mdash; uploaded files are checked in. Overwritten, previously
+				existing files get a manor version number increment (ie. from 1.0 to 2.0 etc.) <i>unless</i>
+				the <b>Document Version History</b> for this Document Library is set to <b>No versioning</b>
+				(on the <b>Versioning Settings</b> page under <b>Document Library Settings</b>).</li>
+			<li><b>Major versions</b> &mdash; uploaded files are checked in but if the file name
+				already existed prior to the upload, the previous version number remains unchanged.</li>
+		</ul>
+	</li>
+</ul>

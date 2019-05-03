@@ -1,0 +1,96 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\zup\docs\FilterZen-Help.chm
+Contents file=roxority_FilterZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_FilterZen.hhk
+Language=0x409 English (United States)
+Title=ROXORITY FilterZen  Product Documentation
+
+
+[FILES]
+help.tlhr.css
+jQuery.js
+help\res\top_up\loader.gif
+help\res\top_up\top_up-min.js
+help\res\top_up\dashboard\bottom_left.png
+help\res\top_up\dashboard\bottom_middle.png
+help\res\top_up\dashboard\bottom_right.png
+help\res\top_up\dashboard\close_link.png
+help\res\top_up\dashboard\controls.png
+help\res\top_up\dashboard\middle.png
+help\res\top_up\dashboard\middle_left.png
+help\res\top_up\dashboard\middle_right.png
+help\res\top_up\dashboard\next.png
+help\res\top_up\dashboard\previous.png
+help\res\top_up\dashboard\resize_link.png
+help\res\top_up\dashboard\sprite.png
+help\res\top_up\dashboard\top_left.png
+help\res\top_up\dashboard\top_middle.png
+help\res\top_up\dashboard\top_right.png
+help\res\top_up\jquery\fxc-clip.js
+help\res\top_up\jquery\fxc-clip.uic-resizable.js
+help\res\top_up\jquery\uic-resizable.fxc-clip.js
+help\res\top_up\jquery\uic-resizable.js
+help\res\adv_01.png
+help\res\adv_02.png
+help\res\adv_03.png
+help\res\adv_04.png
+help\res\bcs_bdc_business_data_item_builder_web_part.png
+help\res\bgtmp.tlhr.jpg
+help\res\filter_bcs_bdc_business_data_catalog.png
+help\res\filter_choice.png
+help\res\filter_date.png
+help\res\filter_list_lookup.png
+help\res\filter_page_field.png
+help\res\filter_sql_data_lookup.png
+help\res\filter_text.png
+help\res\filter_url_query_string.png
+help\res\filter_user.png
+help\res\help.tlhr.css
+help\res\roxlogo.tlhr.png
+help\res\roxority.tlhr.png
+help\res\setup01.png
+help\res\setup02.png
+help\res\setup03.png
+help\res\setup04.png
+help\res\setup05.png
+help\res\setup06.png
+help\res\setup07.png
+help\res\wpdialog.png
+help\res\wp_01.png
+help\res\wp_02.png
+help\res\wp_03.png
+help\res\wp_04.png
+help\res\wp_05.png
+help\res\wp_06.png
+help\res\wp_07.png
+intro.html
+star.gif
+setup.html
+webpart.html
+collapseplus.gif
+general.html
+hhelp.gif
+text_filters.html
+choice_filters.html
+date_filters.html
+list_lookup_filters.html
+user_filters.html
+page_field_filters.html
+url_query_string_filters.html
+sql_data_lookup_filters.html
+bcs_bdc_business_data_catalog_filters.html
+advanced.html
+how_tos.html
+bcs_bdc_business_data_item_builder_web_part.html
+farm_site_config.html
+ref_url_settings.html
+ref_css.html
+release_notes.html
+eula.html
+[INFOTYPES]
+

@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Enabling the FilterZen Server Extensions</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Enabling the FilterZen Server Extensions</h1>
+<h3>
+	What are the FilterZen Extensions for SharePoint Server?<a name="s0"></a></h3>
+<p>
+	The <i>FilterZen Extensions for SharePoint Server</i> are a separate Solution Package
+	(WSP) that extends an existing FilterZen installation by the following additional
+	capabilities for Microsoft Office SharePoint Server:</p>
+<ul>
+	<li>The <a href="bcs_bdc_business_data_catalog_filters.html">BCS/BDC Filter</a> type lets you
+		specify a Business Data lookup to determine a filter value dynamically, or to let
+		users pick one (similar to <a href="sql_data_lookup_filters.html">SQL Data Filters</a>
+		and <a href="list_lookup_filters.html">List Lookup Filters</a>, but with your BCS/BDC
+		External Content Type / Entity as the data source rather than a List or relational data table).</li>
+	<li>The <a href="bcs_bdc_business_data_item_builder_web_part.html">FilterZen BCS/BDC Business
+		Data Item Builder Web Part</a> offers an enhanced replacement to the out-of-the-box
+		Business Data Item Builder Web Part built into SharePoint Server.</li>
+	<li>The CAML Filtering mode (for using filter operators other than <i>Equals</i>) can
+		be used with the Business Data List and Related List Web Parts (however, all filters
+		are still only ever AND-combined with those Web Parts even when using the CAML Filtering
+		mode).</li>
+</ul>
+<p>
+	Note that even without these extensions installed, all <b>FilterZen</b> filter types
+	already work well with External Data / Business Data Columns as well as Business Data List or Related
+	List Web Parts. You do not need to enable the FilterZen Extensions for SharePoint
+	Server unless you are certain that you will need one or more of the features listed
+	above.</p>
+<h3>
+	How to Enable the Extensions<a name="s1"></a></h3>
+<p>
+	The <b>roxority_FilterZen.ServerExtensions.wsp Solution Package</b> is part of the
+	<b>roxority_FilterZen.zip</b> setup package. Copy the former to the file system
+	of the primary web front-end server for the server farm to which you <a href="setup.html">
+		successfully deployed FilterZen</a> previously. You need to add the WSP to your
+	server farm once by issuing an <i>addsolution</i> command to the <i>STSADM</i> command-line
+	utility:</p>
+<pre>
+	C:\Program Files\Common Files\Microsoft Shared\web server 
+	extensions\12\BIN&gt;stsadm -o addsolution -filename &quot;c:\my-temp\roxority_FilterZen.ServerExtensions.wsp&quot;</pre>
+<p>
+	Be sure to change &quot;c:\my-temp\...&quot; to the actual full path of the WSP
+	file. Once you have successfully installed the solution package, you still need
+	to deploy it to your desired web applications from Central Administration &rarr;
+	Operations &rarr; [Global Configuration] Solution Management &rarr; roxority_filterzen.portal.wsp.</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

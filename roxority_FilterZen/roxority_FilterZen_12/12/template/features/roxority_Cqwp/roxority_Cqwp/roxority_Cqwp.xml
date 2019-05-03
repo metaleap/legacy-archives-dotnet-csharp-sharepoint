@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="40da97dd-4f0c-4c54-9bd8-08c799ee0e56" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="WebParts" List="113" Url="_catalogs/wp">
+    <File Path="roxority_Cqwp\roxority_Cqwp.webpart" Url="roxority_Cqwp.webpart" Type="GhostableInLibrary">
+      <Property Name="Group" Value="[ROXORITY]" />
+    </File>
+  </Module>
+</Elements>

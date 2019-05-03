@@ -1,0 +1,80 @@
+<p>Die folgenden Einstellungen k&ouml;nnen f&uuml;r jede Export-Aktion durch administrative Benutzer auf der Seite <b>Export-Aktionen</b> in Ihrem <i>ExportZen Studio</i> vorgenommen werden; via Websiteeinstellungen / ExportZen Studio / Export-Aktionen:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">Register &quot;Men&#252;befehl und Integration&quot;:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name dieser Export-Aktion</h3>
+<p><b>(Texteingabefeld)</b></p><p>Dieser Name wird &uuml;blicherweise Endanwendern nirgends angezeigt, hilft Ihnen aber gegebenenfalls, die &Uuml;bersicht zu behalten.</p>
+<h3>Diese Export-Aktion ist...</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Websites)</b></p><p>Optional: w&auml;hlen Sie aus, in welchen Websites diese Export-Aktion verf&uuml;gbar sein wird. Standardm&auml;&szlig;ig steht Sie allen Websites zur Verf&uuml;gung und dies mu&szlig; normalerweise bei der Ersteinrichtung dieser Software auch vorerst nicht ge&auml;ndert werden. Nehmen Sie nur &Auml;nderungen vor, wenn Sie mit der in obigen Steuerelementen verwendeten Terminologie vertraut sind. Sollten Ihre &Auml;nderungen nicht die erwarteten Wirkungen erzielen, k&ouml;nnen Sie diese jederzeit auf "in allen Websites ohne Ausnahmen verf&uuml;gbar" zur&uuml;cksetzen und erneut inkrementell mit Ihren Ausnahmen experimentieren.</p>
+<p>Um eine Menge an SharePoint-Websites zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>verf&uuml;gbar in allen Websites</b> oder <b>verf&uuml;gbar in keinen Websites</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Websites aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Stammwebsite (der jeweils aktuellen Websitesammlung)</li>
+<li>Websites auf Basis der ausgew&auml;hlten Sitedefinitionen</li>
+<li>oder Websites mit den angegebenen Titeln, URL-Pfadfragmenten oder IDs.</li>
+</ul></p>
+<h3>ExportZen-Men&#252;befehl in folgenden Listen anzeigen</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Listen und Listenansichten)</b></p><p>W&auml;hlen Sie aus, in welchen Listen Endanwendern diese Exportaktion als Men&uuml;befehl angeboten wird (im SharePoint 2007 "Aktionen"-Toolbarmen&uuml; sowie im SharePoint 2010/2013-"Liste"-Ribbon unter "Verbinden und Exportieren"; jeweils nur bei au&szlig;erdem aktiviertem "ExportZen Listenintegration"-Websitesammlungsfeature und bei Listenansichten NUR, wenn deren "Toolbar Type"-Einstellung auf "Full" oder "Show" gesetzt ist, NICHT auf "Summary" oder "None").</p>
+<p>Um eine Menge an SharePoint-Listen zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Listen anzeigen</b> oder <b>in keinen Listen anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listen aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+</p><ul>
+<li>Listen der ausgew&auml;hlten Basistypen</li>
+<li>Listen der ausgew&auml;hlten Vorlagenarten</li>
+<li>Listen der ausgew&auml;hlten Basisvorlagen</li>
+<li>oder Listen mit den angegebenen Namen oder IDs.</li>
+</ul><p>
+Um eine Menge an SharePoint-Listenansichten zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Ansichten anzeigen</b> oder <b>in keinen Ansichten anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listenansichten aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Standardansicht</li>
+<li>versteckte Ansichten</li>
+<li>pers&ouml;nliche Ansichten</li>
+<li>oder Ansichten mit den angegebenen Namen oder IDs.</li>
+</ul></p>
+<h3>Beschriftung f&#252;r ExportZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Beschriftung dieser CSV-Exportaktion an, die im Export-Men&uuml;befehl f&uuml;r die oben angegebenen Listen angezeigt werden soll. (Geben Sie keine Beschriftung an, so wird der oben angegebene Name f&uuml;r diese Exportaktion verwendet, oder falls ebenfalls leer, ihre interne ID.)</p>
+<p>Standardwert f&#252;r neue Export-Aktionen:</p>
+<pre>$Resources:Tool_ExportActions_DefTitle</pre>
+<h3>Beschreibung f&#252;r ExportZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Beschreibung dieser CSV-Exportaktion an, die im Export-Men&uuml;befehl f&uuml;r die oben angegebenen Listen angezeigt werden soll.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><a href="#" onclick="roxTogDocTab('c');">Register &quot;Spaltenlayout und Exportinhalt&quot;:</a></h4><span class="rox-doctab rox-doctab-c">
+<h3>Exportspalten</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie die Namen der Listenspalten (einen pro Zeile) an, die in dieser Reihenfolge in von dieser Exportaktion generierten Ausgabe-CSV-Datendateien enthalten sein sollen. (Um eine Spalte im CSV-Export umzubenennen, geben Sie direkt nach dem Listenspaltennamen einen Doppelpunkt (:) und dann den CSV-Spaltennamen an.) Stellen Sie sicher, da&szlig; diese Spalten in der Exportliste enthalten sind; andernfalls werden die entsprechenden CSV-Spalten leer bleiben.<br/><br/>Falls Sie diese Einstellung leeren und freilassen, so verwendet der Export <b>alle</b> in der aktuellen Listenansicht angezeigten Spalten.</p>
+<p>Standardwert f&#252;r neue Export-Aktionen:</p>
+<pre>Title</pre>
+<h3>Versionsverlauf in separater Spalte mit exportieren</h3>
+<p><b>(Texteingabefeld)</b></p><p>Optional: falls ExportZen eine zus&auml;tzliche Spalte mit dem kompletten Versionsverlauf eines jeden Datensatzes (nur f&uuml;r oben angegebene Spalten, in einem einfachen Klartextformat) hinzuf&uuml;gen soll, geben Sie hierf&uuml;r Ihren gew&uuml;nschten CSV-Spaltennamen an. Freilassen, um keine Versionsverlaufsspalte hinzuzuf&uuml;gen.<br/><br/>Option wird ignoriert bei <a href="http://SharePoint-Tools.net/PeopleZen" target="&#39;_blank">Benutzerprofil-Export via PeopleZen</a>.</p>
+<h3>Versionsverlauf in einzelnen Zeilen mit exportieren (eine pro Version)</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Statt den gesamten Versionsverlauf in einer einzelnen Spalte zu speichern, k&ouml;nnen Sie auch jede Version im Verlauf in einer eigenen Zeile abbilden. Diese erscheinen dann direkt unterhalb der Zeile des eigentlichen Datensatzes in absteigender Sortierreihenfolge. In diesem Fall ben&ouml;tigen Sie jedoch eine eigene CSV-Spalte zur Kennzeichnung der Versionsnummer jedes Verlaufseintrags. Geben Sie den CSV-Spaltennamen (z.B. &#39;Version&#39;) <b>zwingend</b> direkt &uuml;ber dieser Option ein, wenn Sie sie ankreuzen.<br/><br/>Option wird ignoriert bei <a href="http://SharePoint-Tools.net/PeopleZen" target="&#39;_blank">Benutzerprofil-Export via PeopleZen</a>.</p>
+<h3>Keine Kopfzeile mit Spaltennamen in Export</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Standardm&auml;&szlig;ig beginnen ExportZen-Exporte immer mit einer Kopfzeile, die alle Spaltennamen kennzeichnet. Kreuzen Sie diese Option an, um nur rohe Datensatzzeilen (ohne diese Kopfzeile) zu exportieren.</p>
+<h3>Aktuelle Listenansicht exportieren</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Aktivieren Sie diese Option, um immer nur in der aktuell angezeigten Listenansicht enthaltene Elemente (gem&auml;&szlig; der Standardeinstellungen dieser Listenansicht gefiltert und sortiert &mdash; <b>ignoriert jedoch</b> benutzerseitig aktuell eingestellte Sortierung, Filter oder Paginierung) zu exportieren. Deaktivieren Sie diese Option, um immer alle Listenelemente in der Originalreihenfolge zu exportieren.<br/><br/>Option wird ignoriert bei <a href="http://SharePoint-Tools.net/PeopleZen" target="&#39;_blank">Benutzerprofil-Export via PeopleZen</a>.</p>
+<h3>Paginierung in PeopleZen-Exports ignorieren</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Selbst wenn das zu exportierende PeopleZen-Webpart paginiert ist, werden bei Aktivierung dieser Option immer alle zum Webpart geh&ouml;renden Benutzerprofile exportiert, nicht nur die auf der aktuell angezeigten Paginierungsseite enthaltenen.</p>
+<h3>Schnellfilter-Tabs in PeopleZen-Exports ignorieren</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Selbst wenn das zu exportierende PeopleZen-Webpart "getabbed" ist, werden bei Aktivierung dieser Option immer alle zum Webpart geh&ouml;renden Benutzerprofile exportiert, nicht nur die auf der aktuell angezeigten Registerkarte enthaltenen.</p>
+<h3>Aktuell angewendete Filter ber&#252;cksichtigen (nur FilterZen)</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls aktiviert, werden immer nur jene Listenelemente in den Export mit aufgenommen, die von den aktuell auf die jeweilige Listenansicht angewendeten Filtern zugelassen werden. (Es werden <b>nur</b> Filter unterst&uuml;tzt, die von einem verbundenen <a href="http://roxority.com/filterzen/" target="_blank">FilterZen-Filterwebpart</a> gesendet wurden.)</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-f"><a href="#" onclick="roxTogDocTab('f');">Register &quot;Formatierungsoptionen&quot;:</a></h4><span class="rox-doctab rox-doctab-f">
+<h3>Spaltenwertseparator</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie Semikolon nur, wenn Sie und Ihre Anwender diese CSV-Exporte ausschlie&szlig;lich in Microsoft Office Excel &ouml;ffnen werden <b>UND</b> die eingesetzte Excelversion alle kommaseparierten Spaltenwerte in einer einzelnen Zelle anzeigt (einige internationalisierte Excel-Versionen verhalten sich so, andere nicht).</p>
+<ul>
+<li><b>Komma</b><br/>&mdash; <i>empfohlener Standardwert f&#252;r die meisten CSV-verarbeitenden Apps</i></li>
+<li><b>Semikolon</b><br/>&mdash; <i>alternatives CSV-Format, von manchen internationalisierten Excelversionen erfordert</i></li>
+<li><b>Tabulator</b><br/>&mdash; <i>einige CSV-verarbeitende Apps erfordern Spaltenwerttrennung mit Tab-Zeichen</i></li>
+</ul>
+<h3>UNIX-typisches Escaping anwenden</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls deaktiviert, generiert ExportZen CSV-Dateien nach einem Escaping-Verfahren (f&uuml;r kritische Zeichen wie Kommata, Zeilenumbr&uuml;che und Anf&uuml;hrungszeichen), welches f&uuml;r Windows oder Office entwickelte Software m&ouml;glichst fehlerfrei einlesen kann. Kreuzen Sie diese Option an, um stattdessen ein UNIX-typisches Escaping-Verfahren anzuwenden (nicht empfohlen, au&szlig;er wenn Ihnen ein Nicht-Office-Programm Probleme beim Einlesen Ihrer exportierten CSV-Dateien meldet).</p>
+<h3>Landeseinstellung</h3>
+<p><b>(Auswahl einer Landeseinstellung)</b></p><p>Legen Sie optional hier fest, nach welcher Landeseinstellung Zahlen und Datumswerte in diesem Export repr&auml;sentiert werden. Beispielsweise werden Datumswerte vielleicht im US-Format in SharePoint gespeichert (z.B. aufgrund Ihrer Server-Installation), die Nutzer des Exports jedoch verwenden ggf. eine anderssprachige Excel-Version (z.B. Deutsch), welche dann die faktisch-korrekten, aber US-formatierten Datumswerte schlicht mi&szlig;verstehen und mi&szlig;repr&auml;sentieren w&uuml;rde. Behalten Sie hier zun&auml;chst die Standardeinstellungen, und experimentieren Sie dann bei unerw&uuml;nschten Ergebnissen nach Bedarf.</p>
+<p>Das Auswahlfeld bietet alle bekannten Landeseinstellungen. Sie k&ouml;nnen au&szlig;erdem aus folgenden "dynamischen", zur Laufzeit ermittelten Landeseinstellungen w&auml;hlen:
+</p><ul>
+<li>Serverseitige &#39;aktuelle&#39; Regionaleinstellung &mdash;  die aktuell als Standard zu verwendende Landeseinstellung der Windows- bzw. ASP.NET-Installation auf dem Server</li>
+<li>Website-Regionaleinstellung &mdash; verwendet die unter Websiteeinstellungen / Regionale Einstellungen getroffene Auswahl</li>
+<li>Benutzerkonten-Regionaleinstellung &mdash; verwendet f&uuml;r jeden Benutzer die unter Meine Einstellungen / Meine regionalen Einstellungen getroffene Auswahl</li>
+<li>Serverseitige Installations-Regionaleinstellung &mdash; die Landeseinstellung der Windows-Installation auf dem Server</li>
+<li>Browser-Regionaleinstellung &mdash; verwendet die vom Browser als &#39;bevorzugt&#39; angedeutete Landeseinstellung</li>
+</ul>
+<p>Die standardm&auml;&szlig;ige Vorauswahl lautet: <i>Serverseitige &#39;aktuelle&#39; Regionaleinstellung</i>.</p>
+<h3>Exportkodierung</h3>
+<p><b>(Auswahl einer Textkodierung)</b></p><p>Experimentieren Sie mit verschiedenen Kodierungen nur dann, wenn Ihre Exporte internationale Sonderzeichen oder Umlaute enthalten, die von der importierenden externen Software nicht korrekt dargestellt werden. Ist dies der Fall, sind die Unicode- und UTF-Kodierungen zun&auml;chst die empfohlenen Testkandidaten, bevor andere Kodierungen probiert werden. Behalten Sie aber wie gesagt die Standard-Einstellung bei, <b>AUSSER</b> wenn Ihre exportierten Inhalte von der externen Software, die diesen Export im Produktivsystem konsumieren soll, nicht korrekt dekodiert werden.</p>
+<p>Das Auswahlfeld bietet alle bekannten Textkodierungen. Die standardm&auml;&szlig;ige Vorauswahl ist: <i>Serverseitige Standardkodierung</i>, d.h. die auf dem Server f&uuml;r die Windows- bzw. ASP.NET-Installation definierte Standardkodierung.</p>
+<h3>UTF-8 Bytereihenfolge-Markierung voranstellen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Kreuzen Sie diese Option <b>NUR</b> an, wenn Sie hier&uuml;ber die UTF-8-Kodierung ausgew&auml;hlt haben <b>UND</b> Ihre exportierten Inhalte von der externen Software, die diesen Export im Produktivsystem konsumieren soll, immer noch nicht korrekt dekodiert werden. Empfohlen, um UTF-8-Exports in Excel zu &ouml;ffnen.</p>
+</span>

@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>"How Do I...?" Recipes</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2010 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>"How Do I...?" Recipes</h1>
+<h3>Disabling the UploadZen menu item for a particular Site Collection<a name="s0"></a></h3>
+<p>
+	Open the <i>Product Configuration</i> page 
+	in the <i>UploadZen Product Center</i> for the Site Collection that <b>UploadZen</b> should be 
+	disabled for, and locate the check boxes for the following two <a href="farm_site_config.html#s3">configuration 
+	settings</a>:</p>
+<ul>
+	<li>Don&#39;t hide the &#39;Upload Multiple Documents&#39; out-of-the-box menu item even when UploadZen is available</li>
+	<li>Never show the &#39;Upload Multiple Files&#39; UploadZen menu item</li>
+</ul>
+<p>
+	Do not tick these check boxes just yet (this would disable <b>UploadZen</b> 
+	throughout your server-farm). Next to each check box, un-tick the <i>Use farm 
+	setting</i> 
+	check box, then tick the check box that now shows directly underneath.</p>
+<h3>Disabling the UploadZen menu item for the entire server farm, except a particular Site Collection<a name="s1"></a></h3>
+<p>
+	Open the <i>Product Configuration</i> page 
+	in the <i>UploadZen Product Center</i> for the one Site Collection that 
+	<b>UploadZen</b> should be 
+	enabled for, and locate check boxes for the two <a href="farm_site_config.html#s3">configuration 
+	settings</a> mentioned in the above section. Tick both check boxes, then next to 
+	each check box, un-tick the <i>Use farm setting</i> check box and for both 
+	settings un-tick the check box that now shows directly underneath.</p>
+<h3>Linking to the UploadZen window launcher manually<a name="s2"></a></h3>
+<p>
+	While the <b>UploadZen</b> <i>Upload Multiple Files</i> menu item is automatically 
+	integrated into the <i>Upload</i> menu of Document Libraries (subject to client-side 
+	.NET Framework availability and <a href="farm_site_config.html#s4">server-side 
+	configuration settings</a>), depending on your circumstances you may want to invoke the <b>UploadZen</b> 
+	window in other ways. You can do so simply by redirecting users to a URL 
+	conforming to the pattern
+	<i>http://SERVER/_layouts/roxority_UploadZen/help/app/roxUp.application?PARAMS</i>, 
+	where:</p>
+<ul>
+	<li>you replace the <i>SERVER</i> part with the domain name, machine name 
+		or virtual host name (and port number if applicable) of the SharePoint Web 
+		Application hosting the target Document Library.<ul>
+			<li>It is important to <i>never</i> use in place of <i>SERVER</i> any fully 
+				qualified 
+		site collection URLs or web site URLs, but instead to <i>always</i> use only the domain, 
+				machine or virtual host name so that the root <i>_layouts</i> virtual folder of your Web Application 
+				will be addressed.</li>
+			<li>For example, if your web site URL is <i>http://our_sharepoint/sites/test/docs/</i>, 
+				to link to <i>roxUp.application</i> you should <b>neither</b> use
+				<i>http://our_sharepoint/sites/test/docs/_layouts/...</i> <b>nor</b> <i>http://our_sharepoint/sites/test/_layouts/...</i> &mdash; you should just use <i>http://our_sharepoint/_layouts/...</i> 
+				Even if there is <i>no such</i> SharePoint site collection or web site, such a link will work, and <i>_layouts</i> paths that are 
+				<i>not</i> at the URL root will not.</li>
+		</ul>
+	</li>
+	<li>you replace <i>PARAMS</i> with a URL query string, ie. a series of <i>
+		name=value</i> pairs joined by &amp; characters. Supply at least the required <i>s</i>, <i>l</i> 
+		and <i>f</i> parameters, the others optionally as needed:<ul>
+			<li><b>s</b>: the full URL of the SharePoint web site containing the Document 
+				Library (required)</li>
+			<li><b>l</b>: the name of the initial target Document Library (required)</li>
+			<li><b>f</b>: the Document Library-relative path to the initial target Document 
+				Library folder (required; leave blank for root folder)</li>
+			<li><b>t</b>: the title of the SharePoint web site containing the Document Library</li>
+			<li><b>cl</b>: <i>1</i> to allow users to change to another target Document Library 
+				directly inside the <b>UploadZen</b> window, <i>0</i> to never allow this</li>
+			<li><b>cf</b>: <i>1</i> to allow users to change to another target Document Library 
+				folder directly inside the <b>UploadZen</b> window, <i>0</i> to never allow this</li>
+			<li><b>w</b>: <i>1</i> if the current SharePoint web application uses <i>Windows 
+				Integrated Authentication</i> mode, <i>0</i> if it is in <i>Forms-based Authentication</i> 
+				(FBA) mode</li>
+			<li><b>z</b>: Unzipping of uploaded ZIP archive files. <b>UploadZen</b> can just put an uploaded ZIP archive file into the current Document Library target folder as a single file, or extract all of its files and sub-folders in place. 
+				<i>0</i> to let users decide for themselves, <i>1</i> to always unzip, or <i>2</i> to never unzip on the SharePoint server side.</li>
+			<li><b>c</b>: <i>1</i> to show, <i>0</i> to hide the <i>Settings</i> tab in the <b>
+				UploadZen</b> window</li>
+			<li><b>d</b>: <i>1</i> to disable, <i>0</i> to allow users to store their encrypted SharePoint log-in password in the Windows Registry</li>
+			<li><b>li</b>: the current <b>UploadZen</b> license. <i>l</i> for Lite, <i>b</i> for Basic or
+				<i>u</i> for Ultimate. (This is ignored / redetermined at the server side and 
+				mainly exists just for the GUI to reflect the possible features currently 
+				available.)</li>
+			<li><b>be</b>: all file extensions blocked for upload on the SharePoint web 
+				application level (<i>SPWebApplication.BlockedFileExtensions</i>), separated by 
+				comma</li>
+		</ul>
+	</li>
+</ul>
+<div class="rox-info">
+	<strong>Note:</strong> the <i>cl</i>, <i>cf</i>, <i>z</i>, <i>c</i> and <i>d</i> parameters 
+	correspond to <a href="farm_site_config.html#s6">server-side configuration settings documented here</a>. If you do not specify 
+	these parameters, the <b>UploadZen</b> window will <i>not</i> use the current server-side configuration 
+	settings but factory defaults.</div>
+<p>
+	<i>Example:</i> you want to create a link to the <b>UploadZen</b> window to upload 
+	files to the <i>Project Templates/Our Team</i> folder in the <i>Our Docs</i> Document Library 
+	located in the <i>http://oursharepoint/sites/DocCenter/Projects/</i> web site. 
+	The following link would do this &mdash; without the line breaks included here 
+	only for better readability:</p>
+<pre>
+	http://oursharepoint/_layouts/roxority_UploadZen/help/app/roxUp.application<br />?s=http%3A%2F%2Foursharepoint%2Fsites%2fDocCenter%2fProjects<br />&amp;l=Our%20Docs<br />&amp;f=Project%20Templates%2fOur%20Team</pre>
+<p>
+	If you are generating your links through your own server-side code or client 
+	script, it is recommended that you also specify a <b>u</b> URL query string 
+	parameter with the current user login name. The <b>u</b> parameter will ensure:</p>
+<ul>
+	<li>that the user name text box for logging in <i>Forms-based Authentication</i> (FBA) 
+		users from the <b>UploadZen</b> window is already filled out correctly, saving 
+		them time and potentially avoiding confusion,</li>
+	<li>and that users who are currently logged in to SharePoint with user credentials 
+		other than their current Windows user account will stay under those alternative 
+		credentials even when uploading from <b>UploadZen</b>.</li>
+</ul>
+
+
+
+
+
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2010 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

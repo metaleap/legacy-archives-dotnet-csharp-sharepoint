@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Solution Installation</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY LookupZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Solution Installation</h1>
+<h3>
+	1. The LookupZen Setup Package<a name="s0"></a></h3>
+<p>
+	The <b>LookupZen</b> setup package (the <a href="http://roxority.com/storage/sharepoint/lookupzen/roxority_LookupZen.zip">
+		roxority_LookupZen.zip</a> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>setup.exe</b> - A graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling <b>LookupZen</b> to and from a SharePoint
+		server farm, to be run by an Administrator user on the primary SharePoint farm or
+		web front-end server.</li>
+	<li><b>docs</b> - A folder containing this product documentation in Microsoft Compiled
+		HTML (CHM) and plain HTML formats.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>setup.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<div class="rox-info">
+	Extract the setup package to any file-system folder. Do not just run <b>setup.exe</b>
+	directly from inside the setup archive &mdash; it needs to run from a file system
+	directory that also contains all the supporting files from the setup archive.</div>
+<h3>
+	2. Installing the LookupZen Solution Package<a name="s1"></a></h3>
+<p>
+	Run <b>setup.exe</b> and when the <i>Welcome</i> screen is displayed, click <i>Next</i>
+	to start a series of system checks. To proceed with the installation, all system
+	checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	<b>LookupZen</b> to. You can also de-select those Site Collections you <i>do not</i>
+	want the setup wizard, upon successful deployment, to <i>activate</i> the <i>LookupZen
+		Action Definitions List</i> Feature immediately for you on. (Even when <b>LookupZen</b>
+	is deployed in a Web Application, before you can add and start using CSV data export
+	actions on List View Pages inside a web site, the LookupZen Action Definitions List
+	<i>Feature</i> needs to be <i>activated</i> for the parent Site Collection, as described
+	in the <i>Feature Activation</i> section below. For now, the setup wizard performs
+	these activations for you, depending on your selections.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup02.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Note:</b> regardless of your selections, the <b>LookupZen</b> Solution Package
+	will always be deployed globally across all Web Applications. Your selections only
+	affect in which Site Collections the Setup wizard will activate the <i>LookupZen Action
+		Definitions List</i> Feature immediately for you.</div>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start using the <b>LookupZen</b>
+	<i>LookupZen Action Definitions List</i> on Web Sites inside the previously selected
+	Site Collections immediately, as described in the <a href="intro.html">Using the LookupZen
+		CSV Data Export Feature for SharePoint Lists</a> introductory topic.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<a name="s2"></a></h3>
+<p>
+	The <i>LookupZen Action Definitions List</i> is a <i>SharePoint Site
+		Collection-scoped Feature</i>, which needs to be &#39;activated&#39; on each
+	Site Collection it is to be used in.</p>
+<ol>
+	<li>Select <i>Site Settings</i> from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root Web <i>Site Settings</i>
+		page now showing, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page should contain a row titled <b>LookupZen
+		Action Definitions List</b>. Click the <i>Activate</i> button to make the List available
+		inside this site collection; or click the <i>Deactivate</i> button to disable the
+		List throughout this site collection.
+		<div class="rox-docpic">
+			<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/res/setup06.png"
+				title="" /></div>
+	</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY LookupZen  Product Documentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

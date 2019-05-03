@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="0478f8f9-fbdc-42f5-99ea-f6e8ec702606" Title="WebPart1" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="WebPart1\WebPart1.xml" />
+    <ElementFile Location="WebPart1\WebPart1.webpart" />
+  </ElementManifests>
+</Feature>

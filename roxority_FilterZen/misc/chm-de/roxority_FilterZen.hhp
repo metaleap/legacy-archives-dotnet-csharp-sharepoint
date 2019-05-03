@@ -1,0 +1,56 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.0
+Compiled file=..\..\WspBuilder\setup\doc\dokumentation.chm
+Contents file=roxority_FilterZen.hhc
+Default topic=intro.html
+Display compile progress=No
+Full-text search=Yes
+Index file=roxority_FilterZen.hhk
+Language=0x407 German (Germany)
+Title=ROXORITY FilterZen Produktdokumentation
+
+
+[FILES]
+help.css
+jQuery.js
+help\de\res\.DS_Store
+help\de\res\adv_01.png
+help\de\res\adv_02.png
+help\de\res\adv_03.png
+help\de\res\adv_04.png
+help\de\res\setup01.png
+help\de\res\setup02.png
+help\de\res\setup03.png
+help\de\res\setup04.png
+help\de\res\setup05.png
+help\de\res\setup06.png
+help\de\res\setup07.png
+help\de\res\wpdialog.png
+help\de\res\wplist_01.png
+help\de\res\wplist_02.png
+help\de\res\wplist_03.png
+help\de\res\wplist_04.png
+help\de\res\wp_01.png
+help\de\res\wp_02.png
+help\de\res\wp_03.png
+intro.html
+star.gif
+hhelp.gif
+setup.html
+webpart.html
+general.html
+text_filters.html
+choice_filters.html
+date_filters.html
+list_lookup_filters.html
+user_filters.html
+page_field_filters.html
+url_query_string_filters.html
+advanced.html
+exclaim.gif
+ref_url_settings.html
+ref_css.html
+eula.html
+[INFOTYPES]
+

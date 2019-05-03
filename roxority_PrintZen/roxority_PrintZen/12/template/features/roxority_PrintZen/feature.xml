@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="57da3e74-36ae-4fc7-bc4a-6c803f3c23f7" Title="$Resources:roxority_PrintZen,Feature_Title" Description="$Resources:roxority_PrintZen,Feature_Desc" Creator="ROXORITY.com" ActivateOnDefault="TRUE" AutoActivateInCentralAdmin="FALSE" AlwaysForceInstall="TRUE" SolutionId="dce8c469-2132-425b-9065-151f090ea138" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" ReceiverAssembly="roxority_PrintZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Element.xml" />
+	</ElementManifests>
+</Feature>

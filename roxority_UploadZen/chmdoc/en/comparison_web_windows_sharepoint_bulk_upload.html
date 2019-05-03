@@ -1,0 +1,213 @@
+<html>
+	<head>
+		<title>Web vs. Windows Uploader</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Web vs. Windows Uploader</h1>
+<p>
+	All UploadZen <a href="itemref_UploadActions.html">Upload Actions</a> technically support two uploader modes:</p>
+<ul>
+	<li><a href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">Web Uploader</a>
+		&mdash; the default, recommended, &quot;new&quot; uploader mode supporting the widest
+		range of client browsers and operating systems.</li>
+	<li><a href="uploading_multiple_files.html">Windows Uploader</a> &mdash; the &quot;old&quot;,
+		deprecated mode included and supported only for legacy UploadZen installations. For new installations,
+		<i>Web Uploader</i> is the recommended mode.</li>
+</ul>
+<table class="roxtable">
+	<thead>
+		<tr>
+			<th>
+				&nbsp;
+			</th>
+			<th>
+				Web Uploader
+			</th>
+			<th>
+				Windows Uploader
+			</th>
+		</tr>
+	</thead>
+	<tr>
+		<td>
+			Summary
+		</td>
+		<td>
+			Primary UploadZen mode, receives full support, maintenance and future enhancements
+		</td>
+		<td>
+			Legacy UploadZen mode, will not receive future enhancements
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported <b>SharePoint versions</b> and editions
+		</td>
+		<td>
+			SharePoint 2010 Foundation (SPF),<br />SharePoint 2010 Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+		<td>
+			SharePoint 2010 Foundation (SPF),<br />SharePoint 2010 Server (SPS)<br />WSS 3.0, MOSS 2007
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Client-side <b>plugin requirement</b>
+		</td>
+		<td>
+			Adobe Flash 10 (or higher) &mdash; <i>or</i> &mdash; Microsoft Silverlight 4 (or higher)
+		</td>
+		<td>
+			Internet Explorer: none (needs .NET)<br />Firefox: .NET Framework Assistant
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>operating systems</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Windows XP and 2003 only, with .NET Framework 2.0 or higher installed
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Supported client-side <b>web browsers</b>
+		</td>
+		<td>
+			All
+		</td>
+		<td>
+			Internet Explorer 6 - 8, or Firefox
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Automatic check-out / <b>batch check-in</b>
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Overwrite existing files
+		</td>
+		<td>
+			Yes by default, can turn off
+		</td>
+		<td>
+			No by default, can turn on
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Server-side extraction</b> of uploaded ZIP archive files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Client-side zipping</b> of files prior to upload
+		</td>
+		<td>
+			Silverlight: yes, Flash: no
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Chunking</b> for large files
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Auto-<b>resize images</b> prior to upload
+		</td>
+		<td>
+			Yes
+		</td>
+		<td>
+			No
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Show <b>preview thumbnails</b> of upload files
+		</td>
+		<td>
+			No
+		</td>
+		<td>
+			Yes
+		</td>
+	</tr>
+</table>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

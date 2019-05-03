@@ -1,0 +1,264 @@
+<html>
+	<head>
+		<title>Deployment Checklist</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Deployment Checklist</h1>
+<h3>
+	Review Server-side Upload Limits<a name="s0"></a></h3>
+<p>
+	To support bulk-uploads of large file sets, you may want to review the maximums
+	currently supported by your SharePoint server farm.</p>
+<ul>
+	<li>Review the <i>Maximum Upload Size</i> setting on the <i>Web Application General
+		Settings</i> page under <i>Central Administration</i> &rarr; <i>Application Management</i>
+		&rarr; <i>SharePoint Web Application Management</i>.</li>
+	<li>Internet Information Services (IIS) respects the ASP.NET maximum request length
+		setting, pre-empting even the above SharePoint Web Application <i>Maximum Upload Size</i>
+		setting. The maximum request length setting is stored and can be modified manually
+		in the <i>&lt;wwwroot&gt;\wss\VirtualDirectories\&lt;webapp&gt;\web.config</i> file
+		(on each web front-end server) by locating the <i>&lt;httpRuntime&gt;</i> node and
+		editing the <i>maxRequestLength</i> attribute value.<ul>
+			<li>The stored attribute value represents KB &mdash; divide by 1024 to get the value
+				represented in MB (for example, the default value 51200 represents 50 MB). If you
+				decide you want to change the setting to a different MB value, multiply that one
+				with 1024 and store the result as the new attribute value.</li>
+		</ul>
+	</li>
+	<li>To prevent a large file upload from timing out before completion, review and customize
+		if required the <i>Request execution timeout (seconds)</i> setting on the <i>Application</i>
+		tab in the <i>ASP.NET Configuration Settings</i> dialog box by opening the <i>Properties</i>
+		dialog box for the SharePoint Web Application in <i>Internet Information Services (IIS)
+			Manager</i> on each SharePoint web front-end server and clicking <i>Edit Configuration</i>
+		on the <i>ASP.NET</i> tab.</li>
+</ul>
+<h3>
+	Preparing a Web Application for the Chunking feature<a name="s1"></a></h3>
+<p>
+	When chunking is used, UploadZen temporarily stores the individual file chunks in
+	the <b>_layouts/roxority_UploadZen/fc</b> virtual directory (before putting them
+	back together later on to add the original file to the target Document Library folder
+	when all chunks have been transferred). This typically corresponds to the <b>C:\Program
+		Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\LAYOUTS\roxority_UploadZen\fc\</b>
+	physical directory (12 instead of 14 for WSS 3.0 / MOSS 2007) &mdash; unless you
+	specified a different target storage folder for chunks on the <a href="farm_site_config.html">
+		Configuration</a> page.</p>
+<p>
+	When writing to and reading from this directory, UploadZen uses SharePoint code
+	elevation so the user account that will access directory will be identical to the
+	user account specified as the <b>Identity</b> for the IIS Application Pool (under
+	[app pool] / Advanced Settings / Process Model &mdash; more often than not this
+	is set to <b>Network Service</b>).
+</p>
+<p>
+	You <b>need to ensure</b> that read and write access to the file chunking temporary
+	storage folder (either <i>_layouts/roxority_UploadZen/fc</i> or a custom-configured
+	one) is <b>fully granted to the above user account</b>, ie. the IIS app pool identity.
+	Note:
+</p>
+<ul>
+	<li>the permissions to check or set are on the Windows Explorer / server-side storage
+		OS level rather than IIS / ASP.NET / web server or SharePoint-specific permissions.</li>
+	<li>in a multi-server farm environment, you would need to perform the above for all
+		<i>_layouts/roxority_UploadZen/fc</i> folders on all web front-end servers; <b>however:</b>
+	</li>
+	<li>in such an environment you <i>SHOULD</i> instead <a href="farm_site_config.html">
+		re-configure</a> the file chunk temporary storage directory to a central file-system
+		location such as a network drive, shared folder or other network-mapped location
+		since different chunks might otherwise end up in different <i>_layouts/roxority_UploadZen/fc</i>
+		folders on different servers and UploadZen could not put these back together to
+		complete the chunked upload as intended.</li>
+</ul>
+<h3>
+	Document Libraries and Other Libraries<a name="s2"></a></h3>
+<p>
+	No special preparation considerations apply to Document Libraries or other libraries.
+	All Library Views with a their <b>Toolbar Type</b> setting set to either <b>Full Toolbar</b>
+	or <b>Show Toolbar</b> provide your <a href="itemref_UploadActions.html">Upload Actions&#39;</a>
+	menu items and may hide the SharePoint <i>Upload Multiple Documents</i> menu item
+	if <a href="farm_site_config.html#s1">so configured</a>.</p>
+<h3>
+	XSL, Data Form, Data View Web Parts<a name="s3"></a></h3>
+<p>
+	If you have in use XSL / Data Form / Data View Web Parts that were created by converting
+	from an out-of-the-box Library View (for example using <i>SharePoint Designer</i>),
+	keep in mind that their menu structures are &quot;frozen&quot; at conversion time:</p>
+<ul>
+	<li>the <b>UploadZen</b> menu items will never be visible if <b>UploadZen</b> was not
+		activated at conversion time, and</li>
+	<li>the <b>UploadZen</b> menu items will always remain visible if <b>UploadZen</b> provided
+		active menu items at conversion time.</li>
+</ul>
+<p>
+	If you intend to create such Web Parts by converting from Views, uninstall or disable
+	<b>UploadZen</b> temporarily prior to the conversion. You can still generate your
+	own <i>Upload Multiple Files</i> links manually and add them to your pages for such
+	Web Parts or Document Libraries if desired.</p>
+<h3>
+	Secure Sockets Layer (SSL)<a name="s4"></a></h3>
+<p>
+	<b>UploadZen</b> will work fine over SSL, except when the browser raises a prompt
+	about the SSL certificate. The prompt can be raised when there is something wrong
+	with the certificate, such as when the site names do not match or the certificate
+	has expired. To make <b>UploadZen</b> work over an SSL connection, make sure that
+	the certificate is up-to-date, and that the certificate data matches the site data.
+</p>
+<h3>
+	Preparing a Web Application for the Windows Uploader mode<a name="s5"></a></h3>
+<div class="rox-info">
+	This section only applies to the legacy <a href="uploading_multiple_files.html">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</a> mode in production instead, and can safely skip this section.</div>
+<p>
+	UploadZen&#39;s legacy <b>Windows Uploader</b> only works for SharePoint site visitors
+	using Windows (XP or 2003 only, newer versions no longer support this mode) and
+	Internet Explorer (6 - 8 only) or Firefox (with the <a href="https://addons.mozilla.org/en-US/firefox/addon/9449"
+		target="_blank">Microsoft .NET Framework Assistant</a> installed).</p>
+<div class="rox-info" style="background-image: url('servicenotinstalled.gif');">
+	<strong>CAUTION:</strong> the legacy <i>Windows Uploader</i> mode will NOT work
+	out of the box for remote clients unless you take the additional administrative
+	steps outlined in this section.</div>
+<p>
+	As a minimum requirement for the legacy <i>Windows Uploader</i> mode to work for
+	remote clients (i.e. your users), you need to:</p>
+<ol>
+	<li>enable both the <i>Browse Directories</i> and the <i>Use Remote Interfaces</i> Site
+		Permissions on the <i>User permissions for Web application</i> page (in <i>Central Administration</i>
+		&rarr; <i>Application Management</i> &rarr; <i>Application Security</i> &mdash;
+		be sure you selected the correct target Web Application), as well as</li>
+	<li>perform the following steps in <i>Internet Information Services (IIS) Manager</i>
+		on <b>each SharePoint web front-end server</b>:</li>
+</ol>
+<ul>
+	<li>Locate the <i>_layouts/roxority_UploadZen/help</i> virtual directory in the IIS
+		Web Site corresponding to the SharePoint Web Application you want to <b>UploadZen</b>-enable.</li>
+	<li>If you&#39;re using IIS 6.0 on Windows 2003 server, or IIS 6.0 compatibility mode
+		on newer Windows versions :<ul>
+			<li>Open the <i>Properties</i> dialog box for the <i>_layouts/roxority_UploadZen/help</i>
+				virtual directory from its context menu and on the <i>Directory Security</i> tab,
+				in the <i>Authentication and access control</i> section, click the <i>Edit</i> button.</li>
+			<li>In the <i>Authentication Methods</i> dialog box, tick the <i>Enable anonymous access</i>
+				check box and click OK. Back in the <i>Properties</i> dialog box, click <i>OK</i>.
+				(If you are now prompted about applying your changes to child directories or files,
+				select all of them in the prompt dialog box and click <i>OK</i>.)</li>
+		</ul>
+		<p class="rox-docpic">
+			<img alt="" border="0" class="rox-docpic" style="height: 449px;" src="help/res/sharepoint-bulk-file-uploads-iis-configuration.png"
+				title="" />
+		</p>
+	</li>
+	<li>If you&#39;re using IIS 7.0 or higher, on Windows Vista, Windows 7, Windows 2008
+		Server or newer Windows operating systems:<ul>
+			<li>In the <i>Connections</i> side bar on the left, select the <i>_layouts/roxority_UploadZen/help</i>
+				virtual directory in the IIS Web Site corresponding to the SharePoint Web Application
+				you want to <b>UploadZen</b>-enable.</li>
+			<li>In <i>Features View</i>, double-click the <i>Authentication</i> icon in the <i>IIS</i>
+				group. In the <i>Authentication</i> list view, select <i>Anonymous Authentication</i>
+				and then click <i>Enable</i> in the <i>Actions</i> side bar on the right.</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	Granting anonymous read access exclusively to this virtual directory is acceptable
+	with regards to server security, since no sensitive information is ever stored underneath
+	the <i>help</i> virtual directory, nor does it at all expose access to any server-side
+	code anonymous users could ever invoke. Granting this anonymous read access is however
+	also <i>required</i> for the legacy <b>Windows Uploader</b> mode to work, as the
+	software is based on the Microsoft .NET Framework <i>ClickOnce</i> deployment technology,
+	the integration of which with both SharePoint and remote Internet Explorer users
+	with varying Windows versions, security and authentication settings more often than
+	not simply does not work without making this simple, safe and proven-to-work adjustment.</p>
+<p>
+	For remote <i>Internet Explorer</i> users, invoking a legacy <i>Windows Uploader</i>
+	mode <a href="itemref_UploadActions.html">Upload Action</a> is likely to produce
+	only HTTP 401 error messages <i>unless and until</i> you take the above steps for
+	all IIS Web Sites associated with your content Web Applications on all SharePoint
+	web front-end servers &mdash; even though the menu item is already available in
+	all Document Library <i>Upload</i> menus throughout your server farm immediately
+	after <a href="setup.html">solution installation</a>.</p>
+<h3>
+	Granting Web Service Access<a name="s6"></a></h3>
+<div class="rox-info">
+	This section only applies to the legacy <a href="uploading_multiple_files.html">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</a> mode in production instead, and can safely skip this section.</div>
+<p>
+	While running, the legacy <b>Windows Uploader</b> window will attempt to access
+	via HTTP / SOAP, under the user-specified credentials, the following XML Web Services:</p>
+<ul>
+	<li><i><s>http://site/_layouts/roxority_UploadZen/Files.asmx</s> http://site/_layouts/roxority_UploadZen/uploadzen.aspx</i></li>
+	<li><i>http://site/_vti_bin/Lists.asmx</i></li>
+	<li><i>http://site/_vti_bin/SiteData.asmx</i></li>
+	<li><i>http://site/_vti_bin/Authentication.asmx</i></li>
+</ul>
+<p>
+	It is the responsibility of the administrator deploying a legacy <b>Windows Uploader</b>
+	mode <a href="itemref_UploadActions.html">Upload Action</a> to make sure that remote
+	users are granted access to these interfaces. In most environments, completing the
+	<a href="#s4">steps outlined above</a> should be sufficient to grant this access.</p>
+<h3>
+	Proxy Authentication<a name="s7"></a></h3>
+<div class="rox-info">
+	This section only applies to the legacy <a href="uploading_multiple_files.html">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader.html">
+		Web Uploader</a> mode in production instead, and can safely skip this section.</div>
+<p>
+	For the legacy <b>Windows Uploader</b> mode to work with default proxy authentication
+	in a corporate setting, the <i>defaultProxy</i> element in the .NET Framework <i>machine.config</i>
+	file on all client computers (under <i>%WINDIR%\Microsoft.NET\Framework\&lt;version&gt;\CONFIG\</i>)
+	must be set to allow <i>System.Net</i> to use default security credentials. Alternatively,
+	you can configure <i>defaultProxy</i> on client computers to use a specific proxy
+	server.</p>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY UploadZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

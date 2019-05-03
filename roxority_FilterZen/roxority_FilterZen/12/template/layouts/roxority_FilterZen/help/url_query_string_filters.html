@@ -1,0 +1,29 @@
+﻿<p>
+		Use page request parameters to derive the filter value from the current Web Part 
+	Page HTTP request context:</p>
+<ul>
+	<li>URL parameters (HTTP GET)</li>
+	<li>Posted form values (HTTP POST)</li>
+	<li>Cookies or Server Variables</li>
+	<li>URL path fragments</li>
+</ul>
+<p>
+	The Page Request / URL Filter is capable of parsing various request parameter formats. 
+	Observe how the Matching URL format example area changes immediately in response 
+	to your changes to see exactly what kind of input the filter expects with the 
+	current setup. (In principle this applies even when using a request mode other 
+	than URL query string.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_url_query_string.png" title="" /></p>
+<h3>
+	Sub-Parameter Bundling</h3>
+<p>
+	If the specified request parameter bundles multiple name-value pairs in a single 
+	parameter value, an individual sub-parameter value can be derived by entering 
+	the sub-parameter name, if the parameter value conforms to the syntax that is 
+	also used by Microsoft Office SharePoint Server <i>Advanced Search</i> forms / results pages
+	<nobr>(<b style="background: Window; color: WindowText; border: solid 1px #ccc;">&nbsp;name:&quot;value&quot; 
+	name:&quot;value&quot; name:&quot;value&quot;&nbsp;</b> &mdash;</nobr>
+	filters are separated by spaces, names and values are separated by colons and values
+	are <i>always</i> in quotation marks, regardless of the column type).</p>
+

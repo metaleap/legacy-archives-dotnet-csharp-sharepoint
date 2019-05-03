@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<title>L&ouml;sungsinstallation und Feature-Aktivierung</title>
+		<link rel="stylesheet" type="text/css" href="help.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			var thumbSize = '96px';
+			jQuery(document).ready(function() {
+				var $pics = jQuery('img.rox-docpic');
+				$pics.each(function(index, elem) {
+					var $elem = jQuery(elem);
+					$elem.css('rheight', $elem.css('height')).css('height', thumbSize);
+				});
+				$pics.click(function() {
+					var $elem = jQuery(this);
+					if($elem.css('height') == thumbSize)
+						$elem.animate({ 'height': $elem.css('rheight') }, 'fast');
+					else
+						$elem.animate({ 'height': thumbSize }, 'slow');
+				});
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				page-break-before: always;
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 2px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+	<h1>L&ouml;sungsinstallation und Feature-Aktivierung</h1>
+<h3>
+	1. Das FilterZen-Setuppaket<a name="s0"></a></h3>
+<p>
+	Das <b>FilterZen</b>-Setuppaket (die <a href="http://roxority.com/storage/sharepoint/filterzen/roxority_FilterZen.zip">roxority_FilterZen.zip</a>-Datei) ist ein 
+	ZIP-Archiv und enth&auml;lt:</p>
+<ul>
+	<li><b>setup.exe</b> - Ein Installationsassistent mit graphischer Benutzeroberfl&auml;che (GUI) 
+		zur Installation und Bereitstellung, sowie zur R&uuml;ckstellung und Deinstallation 
+		von <b>FilterZen</b> auf einer SharePoint-Serverfarm, auszuf&uuml;hren durch einen Administrator-Benutzer 
+		auf dem prim&auml;ren SharePoint- Farm- oder Web-Frontend-Server.</li>
+	<li><b>doc</b> - Ein Ordner, der diese Produktdokumentation im Compiled HTML (CHM)- und Portable Document (PDF)-Format enth&auml;lt (Englisch und Deutsch).</li>
+	<li>Zus&auml;tzliche Unterst&uuml;tzungsdateien, die f&uuml;r die korrekte Ausf&uuml;hrung von <b>
+		setup.exe</b> <i>erforderlich</i> sind und nicht modifiziert oder entfernt 
+		werden d&uuml;rfen.</li>
+</ul>
+<div class="rox-info">
+	Extrahieren Sie das Setuppaket in ein beliebiges Dateisystemverzeichnis. F&uuml;hren 
+	Sie <b>setup.exe</b> nicht einfach direkt aus dem Setuppaket heraus aus &mdash; 
+	der Installationsassistent mu&szlig; von einem Dateisystemverzeichnis aus gestartet 
+	werden, welches auch alle anderen Unterst&uuml;tzungsdateien aus dem Setuppaket 
+	enth&auml;lt.</div>
+<h3>
+	2. Installieren des FilterZen-L&ouml;sungspakets<a name="s1"></a></h3>
+<p>
+	F&uuml;hren Sie <b>setup.exe</b> aus und klicken Sie im <i>Willkommen</i>-Fenster 
+	auf <i>Weiter</i>, um eine Reihe an Systemtests zu starten. Damit die 
+	Installation fortgesetzt werden kann, m&uuml;ssen alle Systemtests zu einem positiven 
+	Ergebnis kommen:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup01.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i> und w&auml;hlen Sie im folgenden Assistentenschritt die 
+	Webanwendungen aus, in denen <b>FilterZen</b> bereitgestellt werden soll. 
+	Unterhalb jeder ausgew&auml;hlten Webanwendung k&ouml;nnen Sie optional auch jene 
+	Websitesammlungen <i>abw&auml;hlen</i>, in denen der Installationsassistent das Webpartfeature <i>nicht</i> 
+	unmittelbar nach erfolgter Bereistellung automatisch f&uuml;r Sie <i>aktivieren</i> 
+	soll. (Selbst wenn <b>FilterZen</b> in einer Webanwendung bereitgestellt wurde, 
+	mu&szlig; das <b>FilterZen URL-Filter-Webpart</b>-<i>Feature</i> in einer 
+	Websitesammlung <i>aktiviert</i> werden, bevor das <b>FilterZen URL-Filter</b>-Webpart 
+	auf Webpartseiten einer Website eingesetzt werden kann, wie im Abschnitt <i>Aktivierung 
+	des Websitesammlungsfeatures</i> weiter unten beschrieben. F&uuml;r den aktuellen 
+	Schritt gen&uuml;gt aber die Kenntnis, das der Installationsassistent die 
+	Feature-Aktivierungen f&uuml;r Sie vornimmt, au&szlig;er bei explizit abgew&auml;hlten 
+	Websitesammlungen.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup02.png"
+		title="" /></p>
+<p>
+	Klicken Sie auf <i>Weiter</i>, um die Installation zu starten und warten Sie, 
+	bis die Bereitstellungsvorg&auml;nge und Feature-Aktivierung abgeschlossen wurden. 
+	Dieser Proze&szlig; kann einige Sekunden bis mehrere Minuten in Anspruch nehmen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup03.png"
+		title="" /></p>
+<p>
+	&Uuml;berpr&uuml;fen Sie nach Abschlu&szlig; der Bereitstellungsvorg&auml;nge und 
+	Feature-Aktivierungen das Installationslog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup04.png"
+		title="" /></p>
+<p>
+	Sobald Sie den Installationsassisten erfolgreich abgeschlossen haben, k&ouml;nnen Sie 
+	das <b>FilterZen
+		URL-Filter</b>-Webpart bereits auf Webpartseiten innerhalb der zuvor 
+	angew&auml;hlten Websitesammlungen einsetzen.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="help/de/res/setup05.png"
+		title="" /></p>
+<h3>
+	3. Aktivierung des Websitesammlungsfeatures<a name="s2"></a></h3>
+<p>
+	Das <b>FilterZen URL-Filter</b>-Webpart ist ein <i>SharePoint-Feature auf 
+	Websitesammlungsebene</i>, welches in jeder Websitesammlung, in der es 
+	eingesetzt werden soll, einmalig
+	&#39;aktiviert&#39; werden mu&szlig;.</p>
+<ol>
+	<li>Beginnen Sie auf der Webpartseite, auf der Sie das Webpart einsetzen wollen. 
+		W&auml;hlen Sie <i>Websiteeinstellungen</i> aus dem <i>Websiteaktionen</i>-Men&uuml; aus. </li>
+	<li>Die <i>Websiteeinstellungen</i>-Seite enth&auml;lt ganz rechts den Abschnitt <i>
+		Websitesammlungsverwaltung</i>. Klicken Sie hier auf <i>Websitesammlungsfeatures</i>. 
+		Falls dieser Link nicht existiert, klicken Sie stattdessen auf <i>Zu 
+		Websiteeinstellungen der obersten Ebene wechseln</i>, 
+		und klicken Sie auf der nun angezeigten <i>Websiteeinstellungen</i>-Seite der 
+		Stammwebsite auf <i>Websiteauflistungsfeatures</i> unterhalb des Abschnitts <i>
+		Websitesammlungsverwaltung</i>. </li>
+	<li>Die <i>Websitesammlungs-Features</i>-Seite sollte einen Eintrag namens <b>FilterZen URL-Filter-Webpart</b> 
+		enthalten.
+		<ul>
+			<li><b>Ist dieser Eintrag vorhanden</b>, dann klicken Sie auf <i>Aktivieren</i>, um das Webpart 
+				allen Websites, Webpartkatalogen und Webpartseiten dieser Websitesammlung zur 
+				Verf&uuml;gung zu stellen; oder klicken Sie auf <i>Deaktivieren</i>, um das Webpart 
+				in der gesamten Websitesammlung umgehend zu deaktivieren.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="help/de/res/setup06.png"
+						title="" /></div>
+			</li>
+			<li><b>Fehlt dieser Eintrag</b>, wurde das <b>FilterZen</b>-L&ouml;sungspaket in der 
+				&uuml;bergeordneten Webanwendung noch nicht <i>bereitgestellt</i>. Klicken Sie unter <i>
+				Vorg&auml;nge</i> in der <i>Zentraladministration</i> auf <i>L&ouml;sungsverwaltung</i> 
+				(unterhalb des <i>Globale Konfiguration</i>-Abschnitts). Klicken Sie auf der 
+				Seite <i>L&ouml;sungsverwaltung</i> auf <b>roxority_filterzen.wsp</b>, um die Seite 
+				<i>
+				Eigenschaften der L&ouml;sung</i> zu &ouml;ffnen. Klicken Sie auf <i>L&ouml;sung bereitstellen</i>, 
+				w&auml;hlen Sie die der betreffenden Websitesammlung &uuml;bergeordnete Webanwendung aus und 
+				klicken Sie auf <i>OK</i>.
+				(Die Bereitstellung wird an einen Zeitgeberauftrag delegiert, dessen geplanter 
+				Ausf&uuml;hrungszeitpunkt ebenfalls von Ihnen angegeben wurde. Der Abschlu&szlig; der 
+				Bereitstellung kann einige Minuten beanspruchen.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="help/de/res/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY FilterZen Produktdokumentation</b> (Copyright &copy; 2008-2009 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. Alle Rechte vorbehalten.)</div>
+</body>
+</html>

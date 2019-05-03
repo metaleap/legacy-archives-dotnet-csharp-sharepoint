@@ -1,0 +1,155 @@
+<h3>
+	1. The ExportZen Setup Package<a name="s0"></a></h3>
+<p>
+	The ExportZen setup package (the <a href="http://roxority.s3.amazonaws.com/roxority_ExportZen.zip">
+		roxority_ExportZen.zip</a> file) is a zipped archive containing:</p>
+<ul>
+	<li><b>Deploy.exe</b> &mdash; a graphical user interface (GUI) setup wizard for installing
+		and deploying, or retracting and uninstalling ExportZen to and from a SharePoint
+		server farm, <b>to be run by a farm administrator user</b> on the &quot;primary&quot;
+		SharePoint farm or web front-end server &mdash; in a multi-server farm environment,
+		that is the server hosting <i>Central Administration</i>.</li>
+	<li><b>docs</b> &mdash; a folder containing this product documentation in Microsoft
+		Compiled HTML (CHM) and plain HTML formats.</li>
+	<li><b>LegacyMigration.exe</b> &mdash; a graphical user interface (GUI) tool needed
+		<i>only</i> when you intend to install ExportZen 1.6 or higher on a SharePoint server
+		farm that any point had, or still has version 1.5 or lower installed. You will be
+		notified by <b>Deploy.exe</b> if you need to run the <a href="#s3">LegacyMigration.exe
+			tool</a>.</li>
+	<li>Additional supporting files that are <i>required</i> for <b>Deploy.exe</b> to run
+		and must neither be modified nor removed.</li>
+</ul>
+<h3>
+	2. Installing the ExportZen Solution Package<a name="s1"></a></h3>
+<p>
+	Run <b>Deploy.exe</b> (under user account credentials added to the <i>Farm Administrators</i>
+	group in <i>Central Administration</i>, on the &quot;primary&quot; SharePoint farm
+	or web front-end server &mdash; in a multi-server farm environment, that is the
+	server hosting <i>Central Administration</i>) and when the <i>Welcome</i> screen
+	is displayed, click <i>Next</i> to start a series of system checks. To proceed with
+	the installation, all system checks need to succeed:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="/storage/images/roxority_ExportZen/setup01.png"
+		title="" /></p>
+<p>
+	Click <i>Next</i> and on the following screen, select the Web Applications to deploy
+	ExportZen to. You can also de-select those Site Collections you <i>do not</i> want
+	the setup wizard, upon successful deployment, to <i>activate</i> the <a href="#s2">ExportZen
+		List Integration</a> feature immediately for you on.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="/storage/images/roxority_ExportZen/setup02.png"
+		title="" /></p>
+<div class="rox-info">
+	<b>Note:</b> even when ExportZen is deployed in a Web Application, before you can
+	offer your Export Actions to Lists a web site, the <b>ExportZen List Integration</b>
+	<i>Feature</i> needs to be <i>activated</i> for the parent Site Collection, as described
+	in the <i>Feature Activation</i> section below. For now, the setup wizard performs
+	these activations for you, depending on your selections.</div>
+<p>
+	Click <i>Next</i> to start the installation and wait for the deployment jobs and
+	Feature activation to complete. This process can take up to a few minutes.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="/storage/images/roxority_ExportZen/setup03.png"
+		title="" /></p>
+<p>
+	After deployment and Feature activation have completed, review the installation
+	log:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="/storage/images/roxority_ExportZen/setup04.png"
+		title="" /></p>
+<p>
+	Once you have successfully completed the setup wizard, you can start defining <i>Export
+		Actions</i> (via Site Settings / ExportZen Studio) immediately, as described
+	in the <a href="intro">Using the ExportZen CSV Data Export Feature for SharePoint
+		Lists</a> introductory topic.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 433px;" src="/storage/images/roxority_ExportZen/setup05.png"
+		title="" /></p>
+<h3>
+	3. Activating the Site Collection Feature<a name="s2"></a></h3>
+<p>
+	The <b>ExportZen List Integration</b> feature is a <i>SharePoint Site Collection-scoped
+		Feature</i>, which needs to be &#39;activated&#39; on each Site Collection it
+	is to be used in.</p>
+<p>
+	This feature needs to be activated if your Export Actions (defined under Site Settings
+	/ ExportZen Studio) should be offered to end users (via the &quot;Actions&quot;
+	List toolbar menu and the &quot;Connect and Export&quot; ribbon group) to facilitate
+	interactive invokation of your Export Actions.
+</p>
+<ol>
+	<li>Select <i>Site Settings</i> from the <i>Site Actions</i> menu. </li>
+	<li>The <i>Site Settings</i> page contains the <i>Site Collection Administration</i>
+		section. In this section, click the <i>Site collection features</i> link. If it
+		doesn&#39;t exist, click the <i>Go to top level site settings</i> link in the <i>Site
+			Collection Administration</i> section instead, and on the root Web <i>Site Settings</i>
+		page now showing, click the <i>Site collection Features</i> link inside the <i>Site
+			Collection Administration</i> section. </li>
+	<li>The <i>Site Collection Features</i> page (<b>not</b> the <i>Site Features</i> page!) should contain a row titled <b>ExportZen
+		List Integration</b>.
+		<ul>
+			<li>If it <b>does</b>, click the <i>Activate</i> button to make so-configured Export
+				Actions available to end users via the SharePoint List menus and ribbons inside
+				this Site Collection; or click the <i>Deactivate</i> button to disable the ExportZen
+				menus throughout this Site Collection.
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 380px;" src="/storage/images/roxority_ExportZen/setup06.png"
+						title="" /></div>
+			</li>
+			<li>If the row <b>doesn&#39;t</b> exist, the <b>ExportZen</b> solution package was not
+				yet deployed to this web application. On the <i>System Settings</i> page (<i>Operations</i>
+				in SharePoint 2007) in the <i>Central Administration</i>, click <i>Manage Farm Solutions</i>
+				(<i>Solution management</i> in SharePoint 2007). On the <i>Solution Management</i>
+				page, click <b>roxority_exportzen_xyz.wsp</b> (the <i>xyz</i> part will be different
+				depending on your SharePoint version) to open the <i>Solution Properties</i> page.
+				Click <i>Deploy Solution</i>, then select this Site Collection&#39;s parent web
+				application and click <i>OK</i>. (The deployment is delegated to a background job
+				scheduled to run either at the date and time specified, or as soon as possible.
+				Once started, it may take this job up to a few minutes to finish deployment.)
+				<div class="rox-docpic">
+					<img alt="" border="0" class="rox-docpic" style="height: 600px;" src="/storage/images/roxority_ExportZen/setup07.png"
+						title="" /></div>
+			</li>
+		</ul>
+	</li>
+</ol>
+<h3>
+	4. Upgrading from ExportZen 1.5 or lower to 1.6 or higher<a name="s3"></a></h3>
+<p>
+	The <b>LegacyMigration.exe</b> tool is needed if you intend to upgrade ExportZen
+	from a previously or currently installed version lower than 1.6, to 1.6 or higher.
+	<b>Deploy.exe</b> will detect whether the tool needs to be run in your environment,
+	and inform you accordingly.
+</p>
+<p>
+	If this upgrade scenario applies to you and you haven&#39;t uninstalled ExportZen
+	yet, <b>good &mdash; don&#39;t</b> do so until you have completed this tool successfully.
+</p>
+<p>
+	Prior to 1.6, ExportZen used its own List definition and custom field types so that
+	ExportZen action definitions could be set up by admins and power users. Starting
+	in 1.6, this overhead is no longer necessary, but keeping Lists and their Columns
+	based on these legacy types in your content database WOULD compromise your SharePoint
+	environment after upgrading to 1.6 because the underlying List definitions and Column
+	types are no longer there.
+</p>
+<p>
+	It is therefore <b>crucial</b> to not just recycle but fully delete these legacy
+	Lists. The <b>LegacyMigration.exe</b> tool first scans your entire SharePoint server
+	farm for these legacy Lists when you click the scan button on the left. This first
+	step is definitely completely harmless.
+</p>
+<p>
+	After the scan completes, all legacy Lists found are shown in the view on the left.
+	Click the Backup/Export button on the right to first save all your export action
+	definitions from your earlier installation to a file that you will be able to fully
+	import (via Site Settings / ExportZen Studio / Transfer Wizard) into ExportZen 1.6
+	or higher later after the upgrade has been performed. This button will then attempt
+	to delete all legacy Lists found, and will notify you about its success. All these
+	legacy Lists will need to be deleted or the ExportZen deployment wizard (Deploy.exe)
+	will simply refuse to perform the upgrade to 1.6 or higher.
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 596px;" src="/storage/images/roxority_ExportZen/sharepoint-list-export-legacy-migration-tool.png"
+		title="" /></p>
+</p>

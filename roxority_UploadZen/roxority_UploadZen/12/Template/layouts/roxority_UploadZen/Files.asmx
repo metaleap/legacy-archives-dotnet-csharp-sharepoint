@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" Class="roxority_UploadZen.Files, roxority_UploadZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" %>

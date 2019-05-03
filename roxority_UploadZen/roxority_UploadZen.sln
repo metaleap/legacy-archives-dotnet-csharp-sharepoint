@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WspBuilder", "WspBuilder\WspBuilder.csproj", "{95166D25-C023-4A01-95F9-BB8A02B20676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_UploadZen", "roxority_UploadZen\roxority_UploadZen.csproj", "{0A35E792-A975-4923-90BC-AD260CD9D580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxUp", "roxority_UploadZen_Uploader\roxUp.csproj", "{A7B43789-4915-4CC4-802A-3DC675893589}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_UploadZen_12", "roxority_UploadZen_12\roxority_UploadZen_12.csproj", "{8D613CA4-C88E-4F8D-9814-F92C71853288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roxority_UploadZen_wss", "roxority_UploadZen_wss\roxority_UploadZen_wss.csproj", "{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95166D25-C023-4A01-95F9-BB8A02B20676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95166D25-C023-4A01-95F9-BB8A02B20676}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95166D25-C023-4A01-95F9-BB8A02B20676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95166D25-C023-4A01-95F9-BB8A02B20676}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A35E792-A975-4923-90BC-AD260CD9D580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A35E792-A975-4923-90BC-AD260CD9D580}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A35E792-A975-4923-90BC-AD260CD9D580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A35E792-A975-4923-90BC-AD260CD9D580}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7B43789-4915-4CC4-802A-3DC675893589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7B43789-4915-4CC4-802A-3DC675893589}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7B43789-4915-4CC4-802A-3DC675893589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7B43789-4915-4CC4-802A-3DC675893589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7B43789-4915-4CC4-802A-3DC675893589}.Release|x86.ActiveCfg = Release|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D613CA4-C88E-4F8D-9814-F92C71853288}.Release|x86.ActiveCfg = Release|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAC60D3-F028-4B2E-A6F2-98E945A31F16}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

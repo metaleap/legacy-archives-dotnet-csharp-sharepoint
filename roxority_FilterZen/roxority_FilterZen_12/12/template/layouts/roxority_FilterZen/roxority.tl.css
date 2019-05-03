@@ -1,0 +1,679 @@
+img
+{
+	-ms-interpolation-mode: bicubic !important;
+}
+td.ms-TPSectionTD
+{
+	padding: 0px 0px 0px 0px !important;
+}
+.roxdiv .rox-topcontrols
+{
+	float: right;
+}
+roxhtml, .rox-takeout, .rox-greenbox
+{
+	display: none !important;
+}
+img.rox-docpic
+{
+	height: 96px !important;
+}
+.roxdiv .rox-topcontrols span.active-module
+{
+	color: #ffffff;
+	display: block;
+	float: left;
+	padding: 0px 4px 0px 4px !important;
+	height: 32px !important;
+	margin-right: 4px;
+	background: url('img/TopNavActive.png') no-repeat center top;
+}
+div#rox_topright
+{
+	position: absolute;
+	padding: 4px 0px 4px 24px;
+	top: 2px;
+	left: 700px;
+	width: 176px;
+}
+div#rox_sitehint
+{
+	background: url('/_layouts/roxority_FilterZen/img/ewr200l.gif');
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 32px;
+	left: 380px;
+}
+a.rox-sitehint
+{
+	color: #007744 !important;
+	text-decoration: none !important;
+	border-bottom: 1px dashed #007744;
+}
+.roxdiv div#navigationBottom
+{
+	display: block;
+	padding-left: 250px;
+}
+.roxdiv div#navigationBottom a:hover
+{
+	text-decoration: none;
+}
+.roxdiv div#navigationTop div.horizontalNavigationBar
+{
+	font-weight: bold;
+	color: #696969;
+	font-size: 16px;
+	letter-spacing: -1px;
+}
+.roxdiv div.section div.caption
+{
+	margin-bottom: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.roxdiv div.section div.roxcaptioninfo
+{
+	padding: 3px 3px 3px 24px;
+	color: #404040;
+	font-size: 11px;
+}
+.roxdiv div.section div.roxcaptioninfo a
+{
+	display: inline !important;
+	padding: 0px 0px 0px 0px !important;
+	text-decoration: underline !important;
+}
+.roxdiv div.header
+{
+	padding-top: 0px;
+}
+.roxdiv h2.document-title
+{
+	line-height: 56px;
+	padding-top: 0px;
+}
+.roxdiv td, .roxdiv li
+{
+	background-repeat: no-repeat;
+}
+.roxdiv span.rox-pagedesc
+{
+	line-height: 0px;
+	margin-top: 8px;
+	padding: 2px 2px 2px 2px !important;
+}
+.roxdiv a, .roxdiv a:link, .roxdiv a:active, .roxdiv a:visited, .roxdiv a:hover
+{
+	color: #004477;
+}
+.roxdiv span.rox-pagedesc a, .roxdiv span.rox-pagedesc a:link, .roxdiv span.rox-pagedesc a:active, .roxdiv span.rox-pagedesc a:hover, .roxdiv span.rox-pagedesc a:visited
+{
+	line-height: 0px !important;
+	margin-top: 0px !important;
+	color: #aa7744 !important;
+	padding: 0px 0px 0px 0px !important;
+}
+.roxdiv h3
+{
+	margin: 0px;
+	font-weight: normal;
+	border-bottom: #c0c0a0 1px dotted;
+	padding: 0px 0px 3px 4px;
+	margin: 0px 0px 16px 0px;
+	color: #909070;
+	font-size: 26px;
+	text-align: left;
+}
+.roxdiv h3 a, .roxdiv h3 a:hover, .roxdiv h3 a:active, .roxdiv h3 a:link, .roxdiv h3 a:visited
+{
+	text-decoration: none !important;
+	color: #909070 !important;
+	margin-left: 32px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	display: block;
+}
+.roxdiv .rox-info
+{
+	background-position: 4px 8px;
+}
+.roxdiv .rox-infosmall
+{
+	font-size: 8pt;
+	color: #505050;
+	line-height: 1.6em;
+}
+.roxdiv .rox-homecell ul
+{
+	/*
+	width: 240px;
+	overflow: hidden;
+	*/
+}
+.roxdiv .rox-homecell div
+{
+	padding-right: 16px;
+	font-size: 12px;
+}
+.roxdiv #rox_content pre, .roxdiv .rox-wssinfo
+{
+	margin-left: 20px;
+	background-color: InfoBackground;
+	color: InfoText;
+	border: 1px solid #cccccc;
+	padding: 8px;
+}
+.roxdiv .roxConfigDesc
+{
+	font-size: 11px;
+	background-color: InfoBackground;
+	color: InfoText;
+	border: 1px solid #cccccc;
+	padding: 4px;
+}
+.roxdiv td.ms-sectionline
+{
+	background-color: #cccccc;
+}
+.roxdiv td.ms-sectionline img
+{
+	display: block !important;
+}
+div#rox_content *.ms-descriptiontext
+{
+	font-family: Arial, Helvetica, Sans-Serif !important;
+}
+.roxdiv td.ms-descriptiontext, .roxdiv td.ms-authoringcontrols
+{
+	padding-top: 6px;
+	padding-bottom: 24px;
+}
+.roxdiv td.rox-homecell
+{
+	background-position: 0px 6px;
+}
+.roxdiv td.roxcfggroup
+{
+	cursor: pointer;
+	padding-left: 20px;
+	background-color: ButtonFace;
+	color: ButtonText;
+	background-image: url('/_layouts/images/collapseplus.gif');
+	background-position: left center;
+}
+.roxdiv .rox-wssinfo
+{
+	margin-left: 40px;
+	font-size: 11px;
+}
+.roxdiv .roxsub
+{
+	color: #808080;
+	font-size: 11px;
+}
+.roxdiv .roxsubinfo
+{
+	color: #909090;
+	font-size: 11px;
+	white-space: nowrap;
+}
+.roxdiv .rox-footerbig, .roxdiv .rox-footermedium
+{
+	text-align: center;
+	font-size: 16px;
+	color: #505050;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+.roxdiv .rox-footermedium
+{
+	color: #303030;
+	padding: 8px 0px 24px 0px;
+	font-size: 14px;
+}
+.roxdiv #pageFooter a, .roxdiv #pageFooter a:link, .roxdiv #pageFooter a:hover, .roxdiv #pageFooter a:link, .roxdiv #pageFooter a:visited
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+.rox-tooltable
+{
+	border-top: dotted 1px #c4c4c4;
+}
+table.ms-propertysheet td.ms-descriptiontext, table.ms-propertysheet td.ms-authoringcontrols
+{
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}
+div#rox_page_help table.ms-propertysheet td.ms-descriptiontext, div#rox_page_help table.ms-propertysheet td.ms-authoringcontrols
+{
+	border-bottom: solid 1px #c4c4c4;
+}
+.rox-tooltable td
+{
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+	border-bottom: dotted 1px #c4c4c4;
+}
+.rox-tooltable td.rox-toolcaption
+{
+	background-color: ButtonFace;
+	color: ButtonText;
+}
+.roxdiv #rox_content a, .roxdiv #rox_content a:active, .roxdiv #rox_content a:hover, .roxdiv #rox_content a:link, .roxdiv #rox_content a:visited, div.rox-toolpart a, div.rox-toolpart a:active, div.rox-toolpart a:hover, div.rox-toolpart a:link, div.rox-toolpart a:visited
+{
+	text-decoration: underline;
+}
+.roxdiv div.rox-input
+{
+	border: 1px solid #999999;
+	text-align: center;
+	font-weight: bold;
+	background-color: InfoBackground;
+	color: InfoText;
+}
+.roxdiv #licdiv ul li
+{
+	padding-left: 20px;
+	background-position: left 4px;
+}
+.roxdiv .lichead
+{
+	display: block;
+	padding: 4px;
+	text-align: center;
+	color: #ffffff;
+}
+.roxdiv .roxcfghead
+{
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.roxdiv a.roxcfgheadlink
+{
+	padding-right: 20px;
+	background: url('/_layouts/images/hhelp.gif') no-repeat right 4px;
+	display: block;
+	text-decoration: none !important;
+	color: #303030;
+	font-weight: bold !important;
+}
+span#roxtoolcopy
+{
+	font-size: 11px;
+	color: #606060;
+	font-weight: normal;
+}
+div.rox-toolpart
+{
+	background: #f9f9f9;
+	font-family: Arial, Helvetica, "Helvetica Neue", Sans-Serif;
+}
+div.rox-toolpart select, div.rox-toolpart input, div.rox-toolpart textarea
+{
+	font-family: Arial, Helvetica, "Helvetica Neue", Sans-Serif;
+	font-size: 11px;
+}
+.rox-UserSectionTitle
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #606060;
+}
+.rox-UserSectionTitle a img
+{
+	border: 0px none red;
+	margin-left: 4px;
+	width: 16px;
+	height: 16px;
+}
+.rox-UserSectionHead
+{
+	color: #606060;
+}
+.rox-UserSectionBody
+{
+}
+.rox-UserControlGroup
+{
+}
+.rox-UserDottedLine
+{
+	padding-top: 12px;
+	border-bottom: 1px dotted #606060;
+}
+.rox-wplicdiv
+{
+	padding: 8px 0px 8px 0px;
+}
+.rox-wplicdiv a img
+{
+	margin-left: 8px;
+}
+a#roxnavliclink, a#roxnavliclink:active, a#roxnavliclink:hover, a#roxnavliclink:link, a#roxnavliclink:visited
+{
+	margin-bottom: 8px;
+}
+a.rox-licinfo, a.rox-licinfo:active, a.rox-licinfo:link, a.rox-licinfo:visited, a#roxnavliclink, a#roxnavliclink:active, a#roxnavliclink:hover, a#roxnavliclink:link, a#roxnavliclink:visited
+{
+	text-decoration: none !important;
+}
+a.rox-licinfo, a.rox-licinfo:active, a.rox-licinfo:hover, a.rox-licinfo:link, a.rox-licinfo:visited
+{
+	white-space: nowrap;
+	text-align: center;
+	display: block;
+	color: #ffffff;
+	margin: 2px;
+	padding: 2px;
+}
+.rox-takeaway
+{
+	font-size: 0.8em;
+	text-align: left;
+	padding-left: 8px;
+	color: #4c4c4c;
+}
+.rox-takeaway th
+{
+	background: #f2f2f2 url('/_layouts/images/viewheadergrad.gif') repeat-x;
+	padding: 1px 4px 0px 6px;
+	color: #4c4c4c;
+	font-weight: normal;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.rox-takeaway tr.ms-alternating, .rox-takeaway tr.ms-alternating td.ms-vb2, .rox-takeaway tr.ms-alternating td.ms-vb, .rox-takeaway tr.ms-alternating td.ms-vb-user, .rox-takeaway tr.ms-alternating td.ms-vb-title
+{
+	background-color: #f9f9f9;
+}
+.rox-takeaway td.ms-vb2, .rox-takeaway td.ms-vb-user
+{
+	color: #000000;
+	padding: 3px 7px 4px 7px;
+	text-align: left;
+	vertical-align: top;
+}
+.rox-takeaway td.ms-vb-user
+{
+	padding: 2px 2px 0px 2px;
+}
+.rox-tabcell
+{
+	border: #c0c0c0 1px solid;
+	border-top: red 0px none;
+	padding: 8px;
+	background: #f0f0f0;
+}
+div.rox-itemtoolbar
+{
+	margin-top: 16px;
+	padding: 2px 8px 2px 8px;
+	background: #f0f0f0;
+}
+div.rox-itemtoolbar a
+{
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none !important;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+div.rox-itemtoolbar b
+{
+	float: left;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+a.rox-itemtoolbar, span.rox-itemtoolbar
+{
+	display: inline-block;
+}
+.rox-iteminst
+{
+	clear: both;
+	border-top: #c0c0c0 1px solid;
+	padding: 8px;
+	line-height: 1.6em;
+	font-size: 11px;
+	max-width: 640px;
+}
+a.rox-iteminst-title
+{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+}
+.rox-iteminst-desc
+{
+	color: #808080;
+}
+.rox-iteminst-desc span
+{
+	display: inline-block;
+	white-space: nowrap;
+	float: right;
+}
+.rox-iteminst-desc a
+{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px 2px 0px 2px;
+	line-height: 0px;
+}
+.rox-iteminst-more
+{
+	clear: both;
+}
+.rox-iteminst-more-prop
+{
+}
+.rox-iteminst-row
+{
+	clear: both;
+}
+.rox-iteminst-edit-box
+{
+	clear: both;
+	margin: 16px 12px 12px 12px;
+}
+.rox-iteminst-edit-head
+{
+	padding-left: 24px;
+}
+a.rox-iteminst-edit-tab
+{
+	display: inline-block;
+	float: left;
+	padding: 2px 4px 0px 4px;
+	border-bottom: 1px dotted #c0c0c0;
+}
+a.rox-iteminst-edit-tab-active
+{
+	border: 1px solid #c0c0c0;
+	border-bottom: 1px solid #f0f0f0;
+	background: #f0f0f0;
+	color: #000000 !important;
+	text-decoration: none !important;
+	font-weight: bold;
+}
+a.rox-iteminst-edit-close
+{
+	display: inline-block;
+	float: right;
+	text-decoration: none !important;
+	font-size: 18px;
+}
+.rox-iteminst-edit-prop
+{
+	clear: both;
+	background: #f0f0f0;
+	padding: 2px 8px 8px 2px;
+	border-left: 1px solid #c0c0c0;
+	border-right: 1px solid #c0c0c0;
+	border-bottom: 1px dotted #c0c0c0;
+}
+.rox-iteminst-edit-prop-name
+{
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+.rox-iteminst-edit-prop-val
+{
+	display: block;
+	clear: both;
+	padding: 0px 0px 0px 24px;
+}
+.rox-iteminst-edit-prop-val button
+{
+	font-size: 10px;
+	padding: 0px 4px 0px 4px;
+}
+.rox-iteminst-edit-String, .rox-iteminst-edit-Choice, .rox-iteminst-edit-Choice
+{
+	font-size: 11px;
+	width: 98%;
+	height: auto;
+}
+.rox-iteminst-edit-String-readonly
+{
+	background-color: #f0f0f0;
+}
+.rox-iteminst-edit-ListSet
+{
+	text-align: center;
+	padding: 8px;
+}
+.rox-iteminst-edit-ListSet-inner, .rox-iteminst-edit-ListSet-top
+{
+	background-color: InfoBackground;
+	color: InfoText;
+	border: 1px solid #c0c0c0;
+}
+.rox-iteminst-edit-ListSet-inner
+{
+	padding: 8px;
+	border-top: 0px none red;
+}
+.rox-iteminst-edit-ListSet-top
+{
+	border-bottom: 0px none red;
+}
+.rox-iteminst-edit-ListSet-picker
+{
+	background: #f0f0f0;
+	border: 1px solid #c0c0c0;
+	padding: 4px;
+}
+.rox-iteminst-edit-ListSet-exbox
+{
+	width: 46%;
+	overflow: hidden;
+	padding: 0px 12px 0px 4px;
+}
+.rox-iteminst-edit-ListSet-exbox select, .rox-iteminst-edit-ListSet-exbox input.rox-iteminst-edit-String, .rox-iteminst-edit-ListSet-exbox textarea
+{
+	width: 98%;
+}
+a.rox-iteminst-edit-Pick
+{
+	display: block;
+	float: right;
+	text-decoration: none !important;
+	width: 16px;
+	height: 16px;
+	background: url('/_layouts/roxority_FilterZen/img/choicebrowse.gif') no-repeat 0px 0px;
+}
+a.rox-iteminst-edit-Pick img
+{
+	display: block;
+}
+a.rox-iteminst-edit-prop-help
+{
+	display: inline-block;
+	float: right;
+}
+.rox-iteminst-edit-prop-desc
+{
+	color: #404040;
+	clear: both;
+	padding: 4px 0px 2px 24px;
+	line-height: 1.1em;
+	display: block;
+}
+.rox-iteminst-edit-buttons
+{
+	background-color: #e0e0e0;
+	border: 1px solid #c0c0c0;
+	border-top: 0px none red;
+	padding: 8px 8px 12px 26px;
+}
+div#rox_prodlogo
+{
+	width: 48px !important;
+	max-width: 48px !important;
+	min-width: 48px !important;
+	height: 48px !important;
+	max-height: 48px !important;
+	min-height: 48px !important;
+	overflow: hidden;
+	background: url('/_layouts/images/roxority_FilterZen/roxority_FilterZen.png') no-repeat center center;
+	position: absolute;
+	top: 70px;
+	left: 648px;
+	z-index: -10000;
+}
+.rox-dataprev
+{
+	background-color: Window;
+	color: WindowText;
+	padding: 8px;
+	border-bottom: 1px solid #c0c0c0;
+}
+.rox-dataprev a
+{
+	text-decoration: none !important;
+}
+.rox-dataprev-tools
+{
+	text-align: center;
+	background-color: InfoBackground;
+	color: InfoText;
+	border: 1px inset InactiveBorder;
+	padding: 4px;
+}
+.rox-dataprev-tools input
+{
+	font-size: 11px;
+}
+.rox-dataprev-hint
+{
+	text-align: center;
+	font-style: italic;
+	color: #404040;
+}
+span.rox-doctab
+{
+	display: none;
+}
+h4.rox-doctab
+{
+	background-color: #a8a8a0;
+}
+h4.rox-doctab a
+{
+	color: #ffffff !important;
+	display: block !important;
+}

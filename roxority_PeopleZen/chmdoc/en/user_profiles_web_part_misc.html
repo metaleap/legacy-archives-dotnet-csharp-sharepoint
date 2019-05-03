@@ -1,0 +1,125 @@
+<html>
+	<head>
+		<title>Miscellaneous Web Part Properties</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Miscellaneous Web Part Properties</h1>
+<p>
+	Select <i>Edit Web Part</i> from the PeopleZen Web Part menu and in the settings
+	tool-pane, scroll down to the <i>Miscellaneous</i> section:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 448px;" src="help/res/sharepoint_user_profiles_web_part_misc.png"
+		title="" /></p>
+<p>
+	At its top, this section lets you <b>specify a custom height (in pixels) of user profile
+		pictures</b>. This setting defaults to 0, which causes the Web Part to fall
+	back to the currently applicable CSS rules (by default, ie. unless you have CSS
+	customizations in place, 72 pixels in <i>Tiles View</i> or 24 pixels in <i>List View</i>).</p>
+<p>
+	Right below it you can choose to <b>offer the selected print-friendly view in the Web
+		Part menu</b> &mdash; this adds a <i>Print</i> command to the PeopleZen Web
+	Part menu. To be able to select a print-friendly view from this drop-down list,
+	<a target="_blank" href="http://SharePoint-Tools.net/PrintZen/">PrintZen</a> needs
+	to be installed in this SharePoint server farm:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 361px;" src="help/res/sharepoint-staff-directory-print-friendly-view-phone-listing-user-profiles-web-part.png"
+		title="" /></p>
+<p>
+	Right below it you can choose to <b>offer the selected CSV/Excel export in the Web Part
+		menu</b> &mdash; this adds an <i>Export</i> command to the PeopleZen Web Part
+	menu. To be able to select an export from this drop-down list, <a target="_blank"
+		href="http://SharePoint-Tools.net/ExportZen/">ExportZen</a> needs to be installed
+	in this SharePoint server farm.
+</p>
+<p>
+	The <b>Loading Animation</b> is shown to indicate that PeopleZen is currently refreshing
+	or reloading information to be displayed via AJAX, ie. without causing the rest
+	of the page to reload. This can occur when changing a filter or switching to another
+	quick-filter tab, paging forward or back, applying a new sort order, changing the
+	grouping field or direction, or changing the quick-tab filtering field. You
+	can choose between a <i>Progress Bar</i> animation, a <i>Spinner</i> animation or
+	select <i>(None)</i> to disable any loader animations.
+</p>
+<p>
+	When rendering both <b>user profile pictures</b> and <b>user names</b>, you can
+	customize whether to display them and if so, whether to link them to either the
+	<i>public profile</i> or the <i>personal page</i> of the user, or not at all.</p>
+<p>
+	Tick the <b>indicate online presence</b> check-box option just below if you want
+	to show a little marker next to the user name indicating the online/offline status
+	of the user in the currently available instant messaging infrastructure context,
+	if any (most likely, this will be Office Communications Server / OCS integrated
+	with MSN / Windows Live Messenger). Clicking the marker will bring up an Office
+	Communications menu (2007) or info popup (2010 products) for further details
+	about, or interaction with this person:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/sharepoint_user_profiles_web_part_im_ocs_presence.png"
+		title="" /></p>
+<p>
+	Tick the <b>Override Web Part settings from URL parameters</b> check-box option
+	if you intend to supply via URL Parameters any of <a href="ref_url_settings.html">PeopleZen&#39;s
+		URL-overridable Web Part properties</a>.
+</p>
+<!--
+<p>
+	For improved performance, PeopleZen <a href="?doc=farm_site_config#s14">maintains an
+		in-memory cache</a> of user profiles that gets refreshed with potential delays.
+	To see immediately how a changed user profile property value affects the Web Part,
+	tick the <b>Reset PeopleZen caches when I next click OK / Apply below</b> check-box
+	option. Caching is only used for the &quot;SPS/MOSS User Profiles Shared Service
+	Application&quot; mode, therefore this option does not apply to the &quot;SPF/WSS
+	Site Collection Accounts&quot; mode.
+</p>
+-->
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PeopleZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

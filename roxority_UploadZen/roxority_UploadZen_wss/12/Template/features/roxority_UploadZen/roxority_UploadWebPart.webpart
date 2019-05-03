@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+		<type name="roxority_UploadZen.roxority_UploadWebPart, roxority_UploadZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" />
+		<importErrorMessage>$Resources:roxority_roxority_UploadWebPart,WebPart_ImportError</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+		  <property name="Title" type="string">$Resources:roxority_UploadZen,UploadWebPart_Title</property>
+		  <property name="Description" type="string">$Resources:roxority_UploadZen,UploadWebPart_Desc</property>
+		  <property name="Group" type="string">[ROXORITY]</property>
+		  <property name="CatalogIconImageUrl">/_layouts/images/roxority_UploadZen/upload.png</property>
+	  </properties>
+    </data>
+  </webPart>
+</webParts>

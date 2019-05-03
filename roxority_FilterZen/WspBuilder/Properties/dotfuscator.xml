@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.1.dtd">
+<dotfuscator version="2.1">
+  <!--This is application generated code. Do not edit manually.-->
+  <global />
+  <input>
+    <asmlist>
+      <inputassembly>
+        <option>library</option>
+        <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_FilterZen\WspBuilder\gac" name="roxority_FilterZen.dll" />
+      </inputassembly>
+      <inputassembly>
+        <option>library</option>
+        <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_FilterZen\WspBuilder\gac" name="roxority_FilterZen.resources.dll" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\roxority_FilterZen\WspBuilder\gac" />
+  </output>
+  <renaming>
+    <excludelist>
+      <module name="roxority_FilterZen.resources.dll" assemblyname="roxority_FilterZen.resources" />
+      <namespace name="roxority_FilterZen.Properties" />
+      <type name="roxority.SharePoint.ProductPage/&lt;&gt;c__DisplayClass18`1&lt;T&gt;" />
+      <type name="roxority.SharePoint.ProductPage/&lt;&gt;c__DisplayClass1b`1&lt;T&gt;" />
+      <type name="roxority.SharePoint.ProductPage/&lt;&gt;c__DisplayClassb`1&lt;T&gt;" />
+    </excludelist>
+    <mapping>
+      <mapoutput overwrite="false">
+        <file dir="${configdir}\Dotfuscated" name="Map.xml" />
+      </mapoutput>
+    </mapping>
+  </renaming>
+</dotfuscator>

@@ -1,0 +1,17 @@
+div.roxdiv div#contentWrapper
+{
+width: 680px !important;
+overflow: hidden !important;
+}
+div.roxdiv div#roxlocchanges
+{
+position: absolute !important;
+}
+div.roxdiv div#pageFooterWrapper div#pageFooter
+{
+background-image: none !important;
+}
+div.rox-footermedium
+{
+color: #888b86 !important;
+}

@@ -1,0 +1,153 @@
+div#rox_page_info input.ms-input, .rox-input
+{
+	width: 380px !important;
+	margin: 4px 4px 4px 24px;
+	background: window;
+	padding: 2px;
+	color: WindowText;
+	border: solid 1px graytext;
+	text-align: center;
+	font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+img.roxbuttonicon
+{
+	margin: 0px 3px 0px 3px;
+	width: 16px !important;
+	height: 16px !important;
+}
+.roxadmintopic
+{
+	display: none;
+}
+input.ms-ButtonHeightWidth
+{
+	border: solid 1px graytext;
+	text-align: center;
+	font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+div#licdiv ul, div#licdiv ul li
+{
+	background-repeat: no-repeat;
+	background-position: left center;
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 3px;
+	padding: 3px;
+	white-space: nowrap;
+}
+b.lichead
+{
+	display: block;
+	color: #fff;
+	padding: 4px;
+	white-space: nowrap;
+}
+img
+{
+	-ms-interpolation-mode: bicubic !important;
+}
+td#GlobalTitleAreaImage
+{
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+img#onetidHeadbnnr0
+{
+	visibility: hidden;
+	width: 36px;
+	height: 36px;
+}
+img.rox-docpic
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: buttonface;
+	border: solid 1px buttonshadow;
+	cursor: hand;
+}
+.rox-docpic, .rox-docpic span
+{
+	color: buttontext;
+	text-align: center;
+}
+p.rox-docpic span
+{
+	display: block;
+}
+td
+{
+	font-family: Tahoma, sans-serif;
+	font-size: 8pt;
+}
+td.ms-descriptiontext, td.ms-authoringcontrols, td.ms-inputformcontrols
+{
+	padding: 8px !important;
+}
+td.ms-inputformcontrols
+{
+	width: auto !important;
+}
+table.ms-propertysheet a
+{
+	font-weight: normal !important;
+	text-decoration: underline;
+}
+table.ms-propertysheet td.ms-descriptionText fieldset
+{
+	margin: 12px;
+	padding: 12px;
+}
+table.ms-propertysheet td.ms-descriptionText fieldset table.ms-propertysheet
+{
+	margin-top: 12px;
+}
+.rox-info, div#licdiv ul
+{
+	background: infobackground url('/_layouts/images/star.gif') 4px 4px no-repeat;
+	color: infotext;
+	border: solid 1px #ccc;
+	padding: 4px 4px 4px 24px;
+}
+div#licdiv ul
+{
+	background-image: none;
+}
+#rox_page_help, #rox_page_info, #rox_page_help td, #rox_page_info td
+{
+	line-height: 16px;
+	font-size: 11px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Sans-Serif;
+}
+h2.ms-sitetitle, h3
+{
+	font-size: 20px;
+	font-family: "Lucida Grande", "Corbel", "Trebuchet MS", "Lucida Sans Unicode", Sans-Serif;
+}
+.rox-templatepickerspacer
+{
+	height: 23px;
+	border-bottom: 1px solid #c4c4c4;
+	font-size: 10px;
+	padding: 4px 2px 2px 2px;
+	text-align: right;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.rox-tabcontainer
+{
+	clear: both;
+	border: 1px solid #c4c4c4;
+	border-top: 0px none red;
+}
+div.rox-tabrow div div a, div.rox-tabrow div div a:hover, div.rox-tabrow div div a:link, div.rox-tabrow div div a:active, div.rox-tabrow div div a:visisted
+{
+	text-decoration: none !important;
+}
+div.rox-tabrow div.ms-templatepickerselected div a
+{
+	font-weight: bold !important;
+}

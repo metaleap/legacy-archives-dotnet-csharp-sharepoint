@@ -1,0 +1,61 @@
+<div class="rox-info">
+	This topic only applies to the legacy <a href="uploading_multiple_files">Windows
+		Uploader</a> mode and is for reference in legacy systems only. You will likely
+	use the newer (and default) <a href="sharepoint_flash_silverlight_clickonce_windows_uploader">
+		Web Uploader</a> mode in production instead, and can safely skip this topic.</div>
+<p>
+	The following settings are available to all users in the <b>UploadZen</b> window
+	on the <i>Settings</i> tab. <span class="roxadmintopic">Administrators can turn off
+		the <i>Settings</i> tab for some or all users via <a href="?doc=farm_site_config#s6">
+			the appropriate server-side configuration setting</a>.</span></p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 522px;" src="/storage/images/roxority_UploadZen/sharepoint-bulk-file-uploads-client-settings.png"
+		title="" /></p>
+<h3>
+	(General) Maximum picture file preview icons per folder<a name="s0"></a></h3>
+<p>
+	Picture files are represented by an icon showing a preview of their content but
+	this consumes additional system resources. Specify the maximum number of picture
+	files that a folder can contain before preview icons are turned off for that folder.
+	Use 0 to never show any preview icons.</p>
+<h3>
+	(General) Apply the [xyz] file filter when targeting a [xyz] Library<a name="s1"></a></h3>
+<p>
+	Choose &#39;Yes&#39; to automatically select a file filter for the local file browsing
+	area suitable for the target Document Library, or &#39;No&#39; to never automatically
+	change your file filters.</p>
+<h3>
+	(Upload) Overwrite existing files<a name="s2"></a></h3>
+<p>
+	Select &#39;Yes&#39; to overwrite files that already exist in the SharePoint Document
+	Library target folder under the given name, or &#39;No&#39; to not replace the existing
+	file and produce a warning message instead.</p>
+<h3>
+	(Upload) Replacement character<a name="s3"></a></h3>
+<p>
+	Specify a character or text used to replace each unwanted character, ie. &tilde;
+	&quot; # % &amp; * : &lt; &gt; ? / \ { | and } in uploaded file or folder names.
+	(Clear this to simply remove the unwanted characters.)</p>
+<h3>
+	Display/include files/folders if...<a name="s4"></a></h3>
+<p>
+	These four sections of 13 settings each control whether to show or hide in the local
+	file navigation area, or include or exclude in folder bulk uploads, file or folders
+	with certain characteristics:</p>
+<ul>
+	<li>(Access or Read Error) &mdash; whether to show/include files/folders that cannot
+		be accessed by the current user (default: <i>No</i>)<ul>
+			<li>Files / folders that cannot be accessed by the current user can never be included
+				in folder bulk uploads. For the inclusion sections, this setting controls whether
+				to ignore-and-skip those files / folders (if set to <i>No</i>) or show an error
+				message for each such file / folder (if set to <i>Yes</i>).</li>
+		</ul>
+	</li>
+	<li>(Empty) &mdash; whether to show/include files/folders that are empty (zero-byte
+		files or folders containing neither files nor sub-folders, default: <i>No</i>)</li>
+	<li>(Blocked) &mdash; whether to show/include files with extensions that are blocked
+		for upload at the SharePoint web application level (default: <i>No</i>)</li>
+	<li>[xyz] Attribute &mdash; whether to show/include files/folders for which the given
+		file system attribute is set (default: <i>Yes</i> except for <i>Hidden, Offline</i>,
+		<i>Sparse</i>, <i>System</i>, <i>Temporary</i>)</li>
+</ul>

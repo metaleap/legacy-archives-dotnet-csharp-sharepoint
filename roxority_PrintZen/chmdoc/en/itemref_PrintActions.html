@@ -1,0 +1,198 @@
+<html>
+	<head>
+		<title>Settings for Print Views</title>
+		<link rel="stylesheet" type="text/css" href="help.tlhr.css"/>
+		<script type="text/javascript" language="JavaScript" src="jQuery.js"></script>
+		<script type="text/javascript" language="JavaScript" src="help/res/top_up/top_up-min.js"></script>
+		<script type="text/javascript" language="JavaScript">
+			TopUp.images_path = 'help/res/top_up/';
+			jQuery(document).ready(function() {
+				jQuery('img.rox-docpic').wrap(function() { return '<a class="top_up" href="' + this.src + '" toptions="shaded = 0, modal = 0, overlayClose = 0, resizable = 0, effect = transform"/>'; });
+			});
+		</script>
+		<style type="text/css">
+			body {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				font-size: 12px;
+				background-color: #f0f0f0;
+				color: #303030;
+			}
+			a, a:visited, a:active, a:link, a:hover {
+				text-decoration: underline;
+				color: #cd3700;
+				font-weight: bold;
+			}
+			a:hover {
+				background-color: #cd3700;
+				color: #f0f0f0;
+			}
+			h1 {
+				font-family: "Lucida Grande", "Trebuchet MS", Sans-Serif;
+				margin-top: 4px;
+				margin-bottom: 32px;
+				background: #606060;
+				color: #f0f0f0;
+				text-align: center;
+				font-size: 24px;
+			}
+			.rox-info, div#licdiv ul {
+				background-image: url('star.gif');
+			}
+			.rox-header {
+				font-size: 10px;
+				text-align: right;
+				color: #606060;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="help/res/yukka.css" />
+	</head>
+<body>
+	<div class="rox-header"><b>ROXORITY PrintZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+	<h1>Settings for Print Views</h1>
+<p>The following settings can be customized for each Print View by administrative users on the <b>Print Views</b> page in your <i>PrintZen Studio</i>, accessible via Site Settings / PrintZen Studio / Print Views:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">&quot;Menu Item and Integration&quot; tab:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name for this Print View<a name="s0"></a></h3>
+<p><b>(Text box)</b></p><p>This name will typically not be visible on content pages to end users, but helps you stay organized.</p>
+<h3>This Print View is...<a name="s1"></a></h3>
+<p><b>(Descriptor for a set of SharePoint Web Sites)</b></p><p>Optionally select in which web sites this Print View will be available. By default, it will be available in all web sites and this usually does not need to be changed during your first explorations within this software. Only perform changes if you are familiar with the terminology presented in the above property editor. Should your changes not result in the expected outcome, you can always easily set this back to "all web sites, no exceptions" and then resume experimenting incrementally with your exceptions.</p>
+<p>To define the set of Web Sites, first select either <b>Available in all Web Sites</b> or <b>Available in no Web Sites</b>, then click the <b>except...</b> link to describe which web sites to exclude from that selection. You can exclude:
+<ul>
+<li>the root Web Site (of the respectively-current Site Collection)</li>
+<li>Web Sites based on the selected site definitions</li>
+<li>or Web Sites with the specified titles, URL path fragments or IDs.</li>
+</ul></p>
+<h3>Show PrintZen menu item in the following Lists<a name="s2"></a></h3>
+<p><b>(Descriptor for a set of SharePoint Lists and Views)</b></p><p>Select in which Lists this Print View will be offered as a menu item to end users (in the SharePoint 2007 "Actions" toolbar menu and in the SharePoint 2010 "View Format" List ribbon group; both only if the "PrintZen Menu Integration" Site Collection feature is activated too and for List Views, only with their Toolbar Type property set to Full or Show, not Summary or None).</p>
+<p>To define the set of Lists, first select either <b>Show in all Lists</b> or <b>Show in no Lists</b>, then click the <b>except...</b> link to describe which Lists to exclude from that selection. You can exclude:
+</p><ul>
+<li>Lists of the selected base types</li>
+<li>Lists of the selected template types</li>
+<li>Lists of the selected base templates</li>
+<li>or Lists with the specified names or IDs.</li>
+</ul><p>
+To define the set of Views, first select either <b>Show in all Views</b> or <b>Show in no Views</b>, then click the <b>except...</b> link to describe which Views to exclude from that selection. You can exclude:
+<ul>
+<li>the default View</li>
+<li>hidden Views</li>
+<li>personal Views</li>
+<li>or Views with the specified names or IDs.</li>
+</ul></p>
+<h3>Availability on View Item Properties (DispForm.aspx) form pages vs. Views<a name="s3"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>By default, the Print View will be offered in the ribbon and tool bar for the Lists selected above, in <i>both</i> the Views selected above <i>and every</i> of its <b>View Item</b> / <b>View Properties</b> (DispForm.aspx) List form pages (if the <b>PrintZen Menu Integration</b> Site Collection feature is activated). This option lets you restrict a Print View to be DispForm-only or View-only (with respect to the ribbon and/or tool bar), if required.</p>
+<ul>
+<li>Available for both, List item display forms and List Views (as selected above)</li>
+<li>Available only for List Views (as selected above), not in List item display forms</li>
+<li>Available only for List item display forms (as selected above), not in List Views</li>
+</ul>
+<h3>PrintZen menu item caption<a name="s4"></a></h3>
+<p><b>(Text box)</b></p><p>Specify the caption to be shown in menus for this Print View. (If you do not specify a caption, the above name for this Print View will be used, or if blank, its internal ID.)</p>
+<p>Default value for new Print Views:</p>
+<pre>$Resources:Tool_PrintActions_DefTitle</pre>
+<h3>PrintZen menu item description<a name="s5"></a></h3>
+<p><b>(Text box)</b></p><p>Specify the description to be shown in menus for this Print View.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-b"><a href="#" onclick="roxTogDocTab('b');">&quot;Supported Page Modes&quot; tab:</a></h4><span class="rox-doctab rox-doctab-b">
+<h3>Print View page mode for Document Library and List Views<a name="s6"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for List item display forms<a name="s7"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for Calendar Views<a name="s8"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for PeopleZen Web Parts<a name="s9"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for all other Web Parts<a name="s10"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>PrintZen page</b><br/>&mdash; <i>required if you're using a Custom Design for this Print View</i></li>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for Web Part zones<a name="s11"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+<h3>Print View page mode for full page contents<a name="s12"></a></h3>
+<p>Choose which type of page renders this Print View for this type of print target.<br/><br/>The <b>Original Page</b> mode shows the current source page but hides non-content artifacts (ribbon, navigation, quick launch etc.) and all content artifacts except those targeted by the end user&#39;s Print command. This page mode requires the <b>PrintZen Menu Integration</b> Site Collection feature to be activated.<br/><br/>The <b>PrintZen Page</b> mode is a PrintZen-provided custom blank page (showing only the end user-selected print target). If you&#39;re planning to use a <b>Custom Design</b>, this is <i>only</i> supported by the <b>PrintZen Page</b> mode.</p>
+<ul>
+<li><b>Original page</b><br/>&mdash; <i>opens the same page but hides everything except the print target</i></li>
+<li><b>None</b><br/>&mdash; <i>do not support this target type for this Print View</i></li>
+</ul>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-c"><a href="#" onclick="roxTogDocTab('c');">&quot;Print View and Contents&quot; tab:</a></h4><span class="rox-doctab rox-doctab-c">
+<h3>This Print View opens<a name="s13"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Select how you would like this Print View to be invoked in end user browsers.</p>
+<ul>
+<li><b>in a new pop-up window</b><br/>&mdash; <i>recommended (even for SharePoint 2010)</i></li>
+<li><b>in a modal pop-up overlay IFRAME</b><br/>&mdash; <i>(SharePoint 2010 only, not available in WSS 3.0 / MOSS 2007)</i></li>
+<li>in the current browser tab</li>
+</ul>
+<h3>In the Print View, show a Print Now button and brief instructions<a name="s14"></a></h3>
+<p><b>(Check box option)</b></p><p>This will not be included in the printed output, but may prove useful to your end users.<br/><br/>If you selected above that this Print View opens <b>in a modal pop-up overlay IFRAME (SharePoint 2010 only)</b>, then this option <b>cannot be turned off</b> and an info bar with a Print button will <b>always</b> be displayed in the Print View (but never in the final print-out).</p>
+<h3>Show the browser&#39;s printer selection dialog immediately<a name="s15"></a></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this option invokes the Print dialog automatically as soon as this Print View is opened.</p>
+<h3>[List Views with PrintZen page mode] Show current View<a name="s16"></a></h3>
+<p><b>(Check box option)</b></p><p>If ticked, this Print View only ever includes items included in the <i>currently displayed</i> List View (rather than the default View), applying the View-defined default sort orders and filters (but not currently user-applied live sort order, filters or paging); otherwise, all List items in the default View are displayed, pre-filtered and in the sort order prescribed by that View.</p>
+<h3>[List Views with PrintZen page mode] Apply current sort order<a name="s17"></a></h3>
+<p><b>(Check box option)</b></p><p>If ticked, uses the current sort order applied via the Column headers by the end user (if any), rather than the one pre-defined in the View.</p>
+<h3>[List Views with PrintZen page mode] Display folder contents<a name="s18"></a></h3>
+<p><b>(Drop-down menu to pick from a set of choices)</b></p><p>Choose how you want the current folder selected by the end user (if any) to be taken into account.</p>
+<ul>
+<li>Show only the items in the current folder, but no sub-folders</li>
+<li>Show only the items and folders in the current folder</li>
+<li>Show no folders, but all items from all folders and sub-folders</li>
+<li>Show all items, folders and sub-folders in this List</li>
+</ul>
+<h3>[List Views with PrintZen page mode] Apply current paging<a name="s19"></a></h3>
+<p><b>(Check box option)</b></p><p>If ticked, uses the current paging position of the end user, if any.</p>
+<h3>[List Views with PrintZen page mode] Apply current filters (FilterZen only)<a name="s20"></a></h3>
+<p><b>(Check box option)</b></p><p>If ticked, for List Views this Print Views only ever shows List items included in the filtering currently applied to the selected source List View. (<b>Only</b> supports filters supplied by a currently connected <a target="_blank" href="http://roxority.com/filterzen/">FilterZen Filter Web Part</a>.)</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-d"><a href="#" onclick="roxTogDocTab('d');">&quot;Custom Design&quot; tab:</a></h4><span class="rox-doctab rox-doctab-d">
+<h3>Web Part page for Custom Design of Print View<a name="s21"></a></h3>
+<p><b>(Text box)</b></p><p><b>ONLY supported for Print Views using the PrintZen page mode (see <i>Supported Page Modes</i> tab)!</b><br/><br/>By default, the Print View contains nothing but the selected print target(s). To include additional contents, you can create a custom Web Part Page (only the <i>Full Page, Vertical</i> Layout Template is supported) and specify its absolute or relative URL here (for example, <b>/Shared Documents/OurPrintView.aspx</b>). In this case, the print view will attempt to load and include all Web Parts on that page. That page will also need one additional placeholder Web Part of any kind (for example, a Content Editor Web Part, empty or not) with the title set precisely to PRINTZEN_TARGET, to indicate where the print target(s) should be located. This placeholder Web Part will not be included in the print-out, in its place, the print targets will be added instead.<br/><br/>Note: not all Web Parts may display as expected, since the Web Parts will be &quot;temporarily cloned&quot; in a different page context that is not technically a full-fledged Web Part page &mdash; so experiment for yourself. Web Part Connections, for example, are not currently supported.</p>
+<h3>Include Web Part page title bar<a name="s22"></a></h3>
+<p><b>(Check box option)</b></p><p>By default, PrintZen does not include the Title Bar Web Part that is almost always included in all custom Web Part pages, but very often not customized. Tick this option if you&#39;d like to include the Title Bar of the above Web Part page in this Print View.</p>
+<h3>Show placeholder names with current values<a name="s23"></a></h3>
+<p><b>(Check box option)</b></p><p>Shows in this Print View all placeholders that you can use for Web Part properties throughout the above custom Web Part page. (Not advisable for end-user printing, but temporarily highly useful while designing your custom Web Part page.)
+<br/><br/>
+Which placeholders are available and their values both greatly depend on the current context of the Web Part being printed. For your general reference, the following placeholders may usually be available, but we advise you to inspect their typical values and availability in your context interactively yourself by ticking this check-box option during the design phase.
+<ul>
+<li>{$PrintZen_WebPart_Title$} &mdash; the title of the Web Part being printed (all modes)</li>
+<li>{$PrintZen_List_Title$} &mdash; the title of the List being printed in List View mode (or the List containing the item properties being printed, in DispForm.aspx mode)</li>
+<li>{$PrintZen_Item_Title$} &mdash; the title of the List item whose properties being printed (if in DispForm.aspx mode)</li>
+<li>{$PrintZen_View_Title$} &mdash; the title of the View being printed (if in List View mode)</li>
+<li>{$PrintZen_Context_Title$} &mdash; the title of the List Item, List and View, or Web Part, depending on mode</li>
+<li>{$PrintZen_PrintAction_<i>xyz</i>$} &mdash; instead of <i>xyz</i>, various placeholders containing most settings of this Print View</li>
+<li>{$PrintZen_QueryString_a$} &mdash; the ID of this Print View</li>
+<li>{$PrintZen_QueryString_l$} &mdash; the ID of the Web Part being printed (in PeopleZen mode) or the ID of the List (in List View and DispForm.aspx modes)</li>
+<li>{$PrintZen_QueryString_View$} &mdash; the View ID (in List View mode), item ID (in DispForm.aspx mode) or the source Web Part page URL (in PeopleZen mode)</li>
+<li>{$PrintZen_TitleBar_Caption$} &mdash; the caption set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Description$} &mdash; the description set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Title$} &mdash; the title set for the Title Bar Web Part of the Web Part page specified above.</li>
+<li>{$PrintZen_TitleBar_Image$} &mdash; the image set for the Title Bar Web Part of the Web Part page specified above.</li>
+</ul></p>
+<h3>Add a &quot;ScriptManager&quot; control to the page (NOT recommended)<a name="s24"></a></h3>
+<p><b>(Check box option)</b></p><p>Under very rare and unlikely circumstances, using certain (non-ROXORITY) 3rd-party Web Parts on your custom design page will result in an error message that a ScriptManager control is required ("The control requires a ScriptManager on the page. The ScriptManager must appear before any controls that need it.").<br/><br/><b>ONLY</b> if you <i>do</i> receive the above error message should you tick this option: because if you tick it when it is not required, this will give your end users <b>another</b> kind of script warning and you&#39;ll want to avoid this.</p>
+</span>
+
+	<hr size="1" noshade="noshade"/>
+	<div class="rox-header"><b>ROXORITY PrintZen  Product Documentation</b> (Copyright &copy; 2008-2011 <a href="http://roxority.com" target="_blank">ROXORITY.com</a> Ltd. All rights reserved.)</div>
+</body>
+</html>

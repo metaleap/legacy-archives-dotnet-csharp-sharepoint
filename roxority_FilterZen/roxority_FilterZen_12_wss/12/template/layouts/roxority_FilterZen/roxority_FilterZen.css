@@ -1,0 +1,287 @@
+﻿.rox-achint
+{
+	border-top: 1px solid #c0c0c0;
+	color: InfoText;
+	background-color: InfoBackground;
+	padding: 4px;
+}
+.roxsectionlink
+{
+	border-bottom: 1px solid #cccccc;
+	text-align: center;
+	font-weight: bold;
+	padding: 4px;
+}
+.roxsectionlink a
+{
+	padding: 0px 0px 0px 20px;
+	background: url('/_layouts/images/arrowright_dark.gif') no-repeat left center;
+}
+.roxfilterouter
+{
+	display: block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('/_layouts/images/blank.gif');
+}
+.multiSelect
+{
+	display: inline-block !important;
+	text-overflow: ellipsis;
+	font-family: Verdana, Sans-Serif;
+	font-size: 8pt;
+	padding: 1px 20px 4px 2px !important;
+	vertical-align: middle;
+}
+div.multiSelectOptions
+{
+	overflow: scroll;
+}
+select.rox-multiselect
+{
+	visibility: hidden;
+}
+.rox-infobox
+{
+	background-color: InfoBackground;
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+	border: 1px solid #cccccc;
+	clear: both;
+	color: InfoText;
+	display: block;
+	margin-top: 4px;
+	padding: 4px 4px 4px 24px;
+	font-family: Tahoma, Verdana, Sans-Serif;
+}
+div.rox-acsecfield, div.rox-acsecfield *, div.rox-acsecfield b
+{
+	font-weight: normal !important;
+}
+.rox-licinfo
+{
+	text-align: center;
+	color: #ffffff;
+	margin: 4px 2px 4px 2px;
+	padding: 2px 4px 2px 4px;
+}
+a#roxListWizardLink
+{
+	display: inline-block;
+	float: right;
+}
+div#roxListWizard
+{
+	background-image: none;
+	padding-left: 4px;
+}
+div#roxListWizard fieldset
+{
+	background: ButtonFace;
+	color: #595959;
+	margin: 4px;
+	padding: 4px;
+}
+.rox-toolbar
+{
+	overflow: hidden;
+	white-space: nowrap;
+	background: url('/_layouts/images/globgrad.gif') 0px 0px repeat;
+}
+.rox-toolbar select
+{
+	font-size: 7pt;
+	margin: 1px;
+}
+a.rox-toolbutton
+{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px 1px 0px 1px;
+	text-align: center;
+}
+a.rox-toolbutton img
+{
+	border: 0px none red;
+	display: inline-block;
+}
+div#roxFilterDesc
+{
+	padding: 2px !important;
+}
+span#roxfiltereditor button.UserButton
+{
+	background-color: ButtonFace;
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: ButtonText;
+	display: inline-block;
+	padding: 0px 0px 0px 18px;
+}
+.rox-info, a.rox-info
+{
+	background-color: InfoBackground !important;
+	color: InfoText !important;
+}
+.rox-prop
+{
+	xmargin: 2px;
+	padding: 2px;
+}
+.rox-preview
+{
+	padding: 16px;
+	background-color: #ffffff;
+	color: #000000;
+}
+.rox-filter-button
+{
+	font-family: Tahoma, Verdana, Sans-Serif;
+	font-size: 8pt;
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: ButtonText;
+	padding-left: 14px;
+	margin: 0px 4px 0px 4px;
+	white-space: nowrap !important;
+}
+input.rox-filter-button, button.rox-filter-button
+{
+	background-color: ButtonFace;
+}
+span.rox-filter-button, input.rox-filter-button, a.rox-filter-button
+{
+	white-space: nowrap !important;
+}
+a.rox-filter-button
+{
+	display: inline-block;
+}
+.rox-filter-button-filter
+{
+	background-image: url('/_layouts/images/filter.gif');
+}
+.rox-filter-button-clear
+{
+	background-image: url('/_layouts/images/filteroff.gif');
+}
+a.rox-filter-icon-clear
+{
+	background-image: url('/_layouts/images/delete.gif');
+	display: inline-block;
+	background-position: 0px 2px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	max-width: 16px;
+	max-height: 16px;
+	min-width: 16px;
+	min-height: 16px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+span.rox-ifilter-datetime, span.rox-ifilter-datetime table
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+span#span_Preview, .urlspan
+{
+	white-space: nowrap;
+	overflow: scroll;
+	display: inline-block;
+	width:  302px;
+	border: 1px inset;
+	background-color: Window;
+	color: WindowText;
+	margin: 2px;
+	padding: 2px;
+}
+span.urlspan
+{
+	width:  250px;
+}
+.rox-ifilter-all
+{
+	display: block;
+	padding: 2px;
+}
+.rox-ifilter
+{
+	white-space: nowrap;
+	display: inline-block;
+	padding: 2px;
+}
+.rox-ifilter-label, .rox-ifilter-control
+{
+	display: inline;
+	padding: 2px;
+}
+.rox-ifilter-label-datetime
+{
+	margin-top: 6px;
+	padding-bottom: 0px !important;
+	display: inline-block !important;
+}
+.rox-ifilter-control-numeric input
+{
+	text-align: right;
+}
+span.rox-hilitematch, span#roxhilite
+{
+	background: #ffdd00;
+	font-weight: bold;
+	color: #000000;
+}
+span.roxfilterinner14 .ms-inputuserfield
+{
+	border: #828790 1px solid;
+}
+div.rox-multifilter
+{
+	padding: 3px 0px 3px 0px;
+}
+.rox-hidehidehide
+{
+	display: none !important;
+}
+div.rox-multifilter a img
+{
+	border: 0px none red;
+}
+div.rox-multibox div.rox-multifilter input.ms-input
+{
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+span.rox-multi-datepicker, span.rox-multi-userpicker
+{
+	display: inline-block;
+	margin-bottom: -6px;
+	height: 20px;
+}
+span.rox-multi-datepicker
+{
+	padding-right: 4px;
+}
+span.rox-multi-userpicker
+{
+	height: 22px;
+	margin-bottom: -7px;
+}
+select.rox-opsel
+{
+	width: 210px;
+}
+span.rox-multi-check-input
+{
+	display: inline-block;
+}
+div.rox-ifilter-header
+{
+	padding: 4px;
+	font-size: larger;
+	font-weight: bold;
+	color: #606060;
+}

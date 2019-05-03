@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature  Id="a1366967-ae3f-4653-b1ad-3d22029e4d88"
+          Title="NovoPart"
+          Description="Description for NovoPart"
+          Version="12.0.0.0"
+          Hidden="FALSE"
+          Scope="Site"
+          DefaultResourceFile="core"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ElementManifests>
+    <ElementManifest Location="elements.xml"/>
+    <ElementFile Location="NovoPart.webpart" />
+  </ElementManifests>
+</Feature>

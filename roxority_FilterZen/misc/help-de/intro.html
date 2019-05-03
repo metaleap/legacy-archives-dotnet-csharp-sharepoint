@@ -1,0 +1,56 @@
+﻿<p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart ermöglicht das Filtern anderer 
+	SharePoint-Webparts, wie zum Beispiel <i>Listenansicht-Webparts</i> und <i>Datenansicht-Webparts</i>, 
+	anhand der beim Seitenaufruf jeweils übergebenen Parameter in der 
+	Webpartseiten-URL.</p>
+<div class="rox-info" style="background-image: url('/_layouts/images/hhelp.gif');">
+	<b>Was sind URL-Parameter?</b>
+	<p>
+		URL-Parameter sind die Name-Wert-Paare in einer URL, die auf das &#39;?&#39; (Fragezeichen) 
+		folgen. Beispielsweise enthält die Google-Suche <a href="http://google.com/search?q=roxority&hl=de" target="_blank">http://google.com/search?q=roxority&hl=den</a> zwei URL-Parameter: die Suchanfrage &#39;q&#39; und die Spracheinstellung &#39;hl&#39;. 
+		<span id="urlsample" style="display: none;">Ein weiteres Beispiel: die aktuelle URL dieser Seite (<i style="white-space: nowrap;"
+			id="pageurl">[url]</i>) hat einen URL-Parameter &#39;doc&#39; mit dem Wert
+		&#39;intro&#39;.</span></p>
+	<script language="JavaScript" type="text/javascript">
+		if (location.href.indexOf('doc=intro') < 0) location.replace('?doc=intro');
+		jQuery('#pageurl').text(location.href);
+		jQuery('#urlsample').show(0);
+	</script>
+
+</div>
+<p>
+	Das <strong>FilterZen URL-Filter</strong>-Webpart ermöglicht das Filtern von:</p>
+<ul>
+	<li><b>Listen</b>, einschließlich vordefinierter Standardlisten wie <i>Ankündigungen</i>, 
+		<i>Kalender</i>,
+		<i>Hyperlinks</i>, <i>Aufgaben</i> sowie natürlich Ihrer eigenen <i>
+		Benutzerdefinierten Listen</i></li>
+	<li><b>Dokumentenbibliotheken</b>, inklusive <i>Freigegebene Dokumente</i>, <i>Formularbibliotheken</i>,
+		<i>Wikiseitenbibliotheken</i>, <i>Bildbibliotheken</i> und beliebige andere 
+		Dokumentenbibliotheken</li>
+	<li><b>Datenansichten</b> (diese werden zumeist mit <i>SharePoint Designer</i> 
+		erstellt und sind für gewöhnlich an Listendaten gebunden)</li>
+</ul>
+<div class="rox-info">
+	<b>Sie möchten Webpartfilter anwenden &mdash; aber nicht anhand von 
+	URL-Parametern?</b>
+	<p>
+		Das <b>FilterZen URL-Filter</b>-Webpart filtert Listen- und Datenansichten immer <i>
+		dynamisch</i>,
+		anhand sich potentiell ständig beliebig ändernder URL-Parameter. Wollen Sie 
+		hingegen einen <i>statischen</i> Filter realisieren, dessen immer gleicher, 
+		fixer Filterwert immer aktiv ist:</p>
+	<ul>
+		<li>wählen Sie bei einem <i>Listenansicht</i>-Webpart einfach <i>Bearbeiten</i> im 
+			Webpartmenü aus und klicken Sie dann auf <i>Aktuelle Ansicht bearbeiten</i> im 
+			Webparteinstellungen-Arbeitsbereich.</li>
+		<li>öffnen Sie bei einem <i>Datenansicht</i>-Webpart die Webpartseite in <i>SharePoint Designer</i> 
+			und legen Sie den Filter in den Webparteinstellungen fest.</li>
+	</ul>
+	<p>
+		Können Sie Ihre spezifischen Filteranforderungen weder mit <b>FilterZen</b>s URL-Parameterfilterung 
+		noch mit den Standard-Filterwebparts von <i>Microsoft Office SharePoint Server</i> (MOSS) umsetzen, lassen 
+		Sie uns das im <a href="http://roxority.com/filterzen-forum/">FilterZen-Diskussionsforum</a> 
+		wissen oder <a href="http://roxority.com/contact/">schreiben Sie uns direkt</a> 
+		— wir werden gerne versuchen, weiterzuhelfen.</p>
+</div>

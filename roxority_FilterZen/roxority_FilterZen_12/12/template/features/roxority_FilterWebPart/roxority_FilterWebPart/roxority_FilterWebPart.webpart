@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+	<webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+		<metaData>
+			<!--
+			The following Guid is used as a reference to the Web Part class, 
+			and it will be automatically replaced with actual type name at deployment time.
+			-->
+			<type name="roxority_FilterZen.roxority_FilterWebPart, roxority_FilterZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" />
+			<importErrorMessage>$Resources:roxority_FilterZen,WebPart_ImportError</importErrorMessage>
+		</metaData>
+		<data>
+			<properties>
+				<property name="Title" type="string">$Resources:roxority_FilterZen,FilterWebPart_Title</property>
+				<property name="Description" type="string">$Resources:roxority_FilterZen,FilterWebPart_Desc</property>
+				<property name="CatalogIconImageUrl">/_layouts/images/roxority_FilterZen/wp_filter.gif</property>
+			</properties>
+		</data>
+	</webPart>
+</webParts>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<CustomActionGroup
+        Id="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="UploadZen Studio"
+        Sequence="83"
+        Description="" />
+	<CustomAction
+        Id="UploadZenToolUploadActions"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminToolUploadActions;"
+		Sequence="11"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen/default.aspx?cfg=tools&amp;tool=Tool_UploadActions" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenConfig"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminConfig;"
+		Sequence="12"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen.aspx?cfg=cfg" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenWss"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminWss;"
+		Sequence="13"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen.aspx?cfg=wss" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenToolLocalizer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminToolLocalizer;"
+		Sequence="14"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen/default.aspx?cfg=tools&amp;tool=Tool_Localizer" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenToolTransfer"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminToolTransfer;"
+		Sequence="15"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen/default.aspx?cfg=tools&amp;tool=Tool_Transfer" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenToolSiteUsers"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminToolSiteUsers;"
+		Sequence="16"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen/default.aspx?cfg=tools&amp;tool=Tool_SiteUsers" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenLic"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+		Sequence="17"
+        Title="$Resources:roxority_UploadZen,SiteAdminLicense;"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen.aspx?cfg=lic" />
+	</CustomAction>
+	<CustomAction
+        Id="UploadZenHelp"
+		RequireSiteAdministrator="TRUE"
+        GroupId="UploadZen"
+        Location="Microsoft.SharePoint.SiteSettings"
+        Title="$Resources:roxority_UploadZen,SiteAdminHelp;"
+		Sequence="18"
+        Description="">
+		<UrlAction
+            Url="_layouts/roxority_UploadZen.aspx?doc=intro" />
+	</CustomAction>
+</Elements>

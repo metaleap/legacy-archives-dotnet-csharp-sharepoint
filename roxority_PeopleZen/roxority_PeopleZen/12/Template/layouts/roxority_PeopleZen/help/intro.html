@@ -1,0 +1,124 @@
+﻿<p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> offers you an incredibly easy
+	way to list richly formatted links to user profiles inside your SharePoint environment,
+	include relevant people data you choose, filter based on date properties or any
+	others, and display user profile pictures too.</p>
+<p>
+	After successfully completed <a href="?doc=setup">solution installation and feature
+		activation</a>, simply place the Web Part onto any SharePoint Page in the usual
+	way and, depending on the user profiles already set up in your server farm, you
+	will see something like the following:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 630px;" src="help/res/sharepoint-moss-people-web-part-user-profiles.png"
+		title="" /></p>
+<p>
+	To customize the <b>PeopleZen</b> <i>User Profiles Web Part</i>, simply select <i>Edit
+		Web Part</i> from the Web Part menu. In the current release, you can customize
+	for any given individual Web Part the following settings outlined below. (<b>PeopleZen</b>
+	also exposes additional <a href="?doc=farm_site_config">configuration settings on the
+		server farm or Site Collection level</a>.)</p>
+<h3>
+	Display Style</h3>
+<p>
+	PeopleZen currently supports two view modes.</p>
+<ul>
+	<li>The default view mode, pictured above, is called <i>Tiles</i>. It arranges user
+		profiles next to each other, and optionally into multiple rows each containing a
+		given maximum number (2 by default) of user profiles.</li>
+	<li>The second view mode, pictured below, is called <i>List View</i>. It resembles the
+		look and feel of the out-of-the-box SharePoint Document Library and List View tables:</li>
+</ul>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/sharepoint-people-web-part-user-profiles-table-list-view.png"
+		title="" /></p>
+<p>
+	To find out more:</p>
+<ul>
+	<li>See the <a href="?doc=user_profiles_web_part_display_style#s0">Display Style</a>
+		section</li>
+	<li>Learn about <a href="?doc=user_profiles_web_part_display_style#s1">further appearance
+		and design customizations</a></li>
+	<li>Also see the <a href="?doc=user_profiles_web_part_misc">Miscellaneous</a> section
+		as well as the <a href="?doc=farm_site_config">configuration settings</a> available
+		via <i>Site Settings</i> / <i>PeopleZen</i> / <i>Configuration Settings</i>.</li>
+</ul>
+<h3>
+	User Profile Properties</h3>
+<p>
+	The <b>PeopleZen</b> <i>User Profiles Web Part</i> always displays both the user
+	profile picture and the name of the user. You can specify additional profile properties
+	to be displayed per user. To find out more, see:</p>
+<ul>
+	<li><a href="?doc=web_part_user_profile_properties#s0">About SharePoint User Profile
+		Properties</a></li>
+	<li><a href="?doc=web_part_user_profile_properties#s1">Displaying User Profile Properties
+		in PeopleZen</a></li>
+	<li><a href="?doc=web_part_user_profile_properties#s2">How user names and profile pictures
+		are displayed (or hidden)</a></li>
+</ul>
+<h3>
+	Paging, Sorting, Grouping</h3>
+<p>
+	Simply specify the maximum number of user profiles to show at once, or specify 0
+	to always show all user profiles in the Web Part. Users can click <i>Next</i> and
+	<i>Previous</i> links inside the Web Part to &quot;page through&quot; all user profiles.
+	<a href="?doc=user_profiles_web_part_paging">To find out more, see the Paging section.</a></p>
+<p>
+	PeopleZen lets you pre-define a sort property and order, as well as a grouping property
+	and direction, and optionally lets end users change these interactively on-the-fly.
+	To find out more, see the <a href="?doc=user_profiles_web_part_sorting_grouping#s0">
+		Sorting</a> and <a href="?doc=user_profiles_web_part_sorting_grouping#s0">Grouping</a>
+	sections.</p>
+<h3>
+	Filtering, Tabbing and Search</h3>
+<p>
+	You can limit the user profiles to be displayed based on any user profile properties,
+	for example to create Web Parts such as <i>Newly Hired Employees</i> or <i>Upcoming
+		Colleague Birthdays</i>. To find out more, see:</p>
+<ul>
+	<li><a href="?doc=user_profiles_web_part_filtering_tabbing_search#s0">Global user name
+		filtering</a></li>
+	<li><a href="?doc=user_profiles_web_part_filtering_tabbing_search#s1">Simple built-in
+		filtering options and setting up quick-filter tabbing</a></li>
+	<li><a href="?doc=user_profiles_web_part_filtering_tabbing_search#s2">Adding search
+		and advanced filtering via connections</a></li>
+	<li><a href="http://roxority.com/sharepoint-zen/an-upcoming-birthdays-web-part-in-10-minutes.html"
+		target="_blank">An &quot;Upcoming Birthdays&quot; Web Part in 10 minutes</a> (tutorial
+		posted to our blog)</li>
+	<li><a target="_blank" href="http://roxority.com/peoplezen-forum/post/1047307">Filtering
+		PeopleZen by SharePoint Website User Group Memberships</a> (forum thread on our
+		website)</li>
+</ul>
+<!--
+<h3>
+	Data Source for User Information</h3>
+<p>
+	PeopleZen currently supports the following modes for loading user information:
+</p>
+<ul>
+	<li><b>User Profile Shared Service Application</b> — available on <i>SharePoint Server
+		2013 / 2010 (SPS)</i> and <i>2007 (MOSS)</i>, and requires:
+		<ul>
+			<li>for SPS 2013 / 2010: a fully configured User Profile Service Application (review this via
+				Central Administration / Service Applications; however, MySites are not necessarily
+				required)</li>
+			<li>for MOSS 2007: a Shared Service Provider (SSP) fully configured for User Profiles
+				(check this via Central Administration / SharedServices1 or similar / User profiles
+				and properties)</li>
+			<li>&mdash; however, <i>MySites</i> are not necessarily required in order for this 
+				PeopleZen mode to function.</li>
+			<li>To show some or all <i>Active Directory</i> user accounts (which PeopleZen can filter down
+				to a preferred sub-set if required), you need to configure the SPS/MOSS out-of-box user profile
+				import feature accordingly.</li>
+		</ul>
+	</li>
+	<li><b>Site Collection Accounts</b> — available on all SharePoint environments, including
+		the above as well as <i>SharePoint Foundation 2013 / 2010 (SPF)</i> and <i>Windows SharePoint
+			Services (WSS) 3.0</i>.
+		<ul>
+			<li>To show some or all <i>Active Directory</i> user accounts (which PeopleZen can filter down
+				to a preferred sub-set if required), you need to add these users to the Site Collection.</li>
+		</ul>
+	</li>
+</ul>
+-->

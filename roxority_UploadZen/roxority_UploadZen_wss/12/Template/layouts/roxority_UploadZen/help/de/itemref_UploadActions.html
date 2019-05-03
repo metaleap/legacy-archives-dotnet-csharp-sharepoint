@@ -1,0 +1,114 @@
+<p>Die folgenden Einstellungen k&ouml;nnen f&uuml;r jede Upload-Aktion durch administrative Benutzer auf der Seite <b>Upload-Aktionen</b> in Ihrem <i>UploadZen Studio</i> vorgenommen werden; via Websiteeinstellungen / UploadZen Studio / Upload-Aktionen:</p><span>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-a"><a href="#" onclick="roxTogDocTab('a');">Register &quot;Allgemein&quot;:</a></h4><span class="rox-doctab rox-doctab-a">
+<h3>Name dieser Upload-Aktion</h3>
+<p><b>(Texteingabefeld)</b></p><p>Dieser Name wird &uuml;blicherweise Endanwendern nirgends angezeigt, hilft Ihnen aber gegebenenfalls, die &Uuml;bersicht zu behalten.</p>
+<h3>Diese Upload-Aktion ist...</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Websites)</b></p><p>Optional: w&auml;hlen Sie aus, in welchen Websites diese Upload-Aktion verf&uuml;gbar sein wird. Standardm&auml;&szlig;ig steht Sie allen Websites zur Verf&uuml;gung und dies mu&szlig; normalerweise bei der Ersteinrichtung dieser Software auch vorerst nicht ge&auml;ndert werden. Nehmen Sie nur &Auml;nderungen vor, wenn Sie mit der in obigen Steuerelementen verwendeten Terminologie vertraut sind. Sollten Ihre &Auml;nderungen nicht die erwarteten Wirkungen erzielen, k&ouml;nnen Sie diese jederzeit auf "in allen Websites ohne Ausnahmen verf&uuml;gbar" zur&uuml;cksetzen und erneut inkrementell mit Ihren Ausnahmen experimentieren.</p>
+<p>Um eine Menge an SharePoint-Websites zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>verf&uuml;gbar in allen Websites</b> oder <b>verf&uuml;gbar in keinen Websites</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Websites aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Stammwebsite (der jeweils aktuellen Websitesammlung)</li>
+<li>Websites auf Basis der ausgew&auml;hlten Sitedefinitionen</li>
+<li>oder Websites mit den angegebenen Titeln, URL-Pfadfragmenten oder IDs.</li>
+</ul></p>
+<h3>UploadZen-Men&#252;befehl in folgenden Dokumentbibliotheken anzeigen</h3>
+<p><b>(Definierung einer Untermenge an SharePoint-Dokumentbibliotheken und Ansichten)</b></p><p>W&auml;hlen Sie aus, in welchen Dokumentbibliotheken Endanwendern diese Uploadaktion als Men&uuml;befehl angeboten wird (im SharePoint 2007 "Hochladen"-Toolbarmen&uuml; sowie in der SharePoint 2010/2013-Ribbongruppe "Bibliothek / Dokumente / Neu").</p>
+<p>Um eine Menge an SharePoint-Listen zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Listen anzeigen</b> oder <b>in keinen Listen anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listen aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+</p><ul>
+<li>Listen der ausgew&auml;hlten Basistypen</li>
+<li>Listen der ausgew&auml;hlten Vorlagenarten</li>
+<li>Listen der ausgew&auml;hlten Basisvorlagen</li>
+<li>oder Listen mit den angegebenen Namen oder IDs.</li>
+</ul><p>
+Um eine Menge an SharePoint-Listenansichten zu beschreiben, w&auml;hlen Sie zun&auml;chst entweder <b>in allen Ansichten anzeigen</b> oder <b>in keinen Ansichten anzeigen</b>, und klicken Sie dann auf den Link <b>au&szlig;er...</b>, um nun zu definieren, welche Listenansichten aus dieser Vorauswahl ausgeschlossen werden sollen. Ausgeschlossen werden k&ouml;nnen:
+<ul>
+<li>die Standardansicht</li>
+<li>versteckte Ansichten</li>
+<li>pers&ouml;nliche Ansichten</li>
+<li>oder Ansichten mit den angegebenen Namen oder IDs.</li>
+</ul></p>
+<h3>Beschriftung f&#252;r UploadZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Gibt die Beschriftung f&uuml;r diesen UploadZen-Men&uuml;- bzw. Ribbonbefehl &#39;Mehrere Dateien hochladen&#39; an.</p>
+<p>Standardwert f&#252;r neue Upload-Aktionen:</p>
+<pre>$Resources:Tool_UploadActions_DefTitle</pre>
+<h3>Beschreibung f&#252;r UploadZen-Men&#252;befehl</h3>
+<p><b>(Texteingabefeld)</b></p><p>Gibt die Beschreibung bzw. den Ribbon-Tooltip f&uuml;r diesen UploadZen-Men&uuml;- bzw. Ribbonbefehl &#39;Mehrere Dateien hochladen&#39; an.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-i"><a href="#" onclick="roxTogDocTab('i');">Register &quot;Benutzerschnittstelle&quot;:</a></h4><span class="rox-doctab rox-doctab-i">
+<h3>Clientseitiger Uploader</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>W&auml;hlen Sie die bevorzugte Clienttechnologie aus, die Ihren Endanwendern bei Aufruf dieser Upload-Aktion angeboten wird.<br/><br/>Der <b>Web</b>-Modus wird f&uuml;r maximale Kompatibilit&auml;t empfohlen &mdash; bei installiertem Silverlight-Plugin werden auch das client-seitige Verzippen hochzuladener Dateien sowie eine Drop-Ablage angeboten, bei installiertem Flash- oder Silverlight-Plugin k&ouml;nnen im Auswahldialog mehrere Dateien auf einmal ausgew&auml;hlt werden.<br/><br/>Der <b>Windows</b>-Modus startet eine native Windows-Anwendung (ClickOnce / .NET Framework 2.0+) direkt aus dem Internet Explorer (oder Firefox mit Microsoft .NET- / ClickOnce-Plugin) &mdash; funktioniert grunds&auml;tzlich nicht f&uuml;r Anwender ohne IE / Windows, und (je nach Konfiguration) "manchmal nicht" f&uuml;r Windows-Anwender unter Windows Vista oder neueren Versionen.</p>
+<ul>
+<li><b>Web Uploader</b><br/>&mdash; <i>unterst&#252;tzt alle Betriebssysteme und Browser (empfohlen; h&#246;chste Kompatibilit&#228;t)</i></li>
+<li><b>Windows Uploader</b><br/>&mdash; <i>funktioniert nur unter Windows mit IE (Legacymodus; geringste Kompatibilit&#228;t)</i></li>
+</ul>
+<h3>Auch auf Upload.aspx-Ersatzseite anbieten</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Beim Aufruf von SharePoints eingebauten "Dokument hochladen"-Men&uuml;befehl (Einzeldatei-Upload) wird immer die Systemseite Upload.aspx aufgerufen (welche ihrerseits einen SharePoint-eingebauten Link "Mehrere Dokumente hochladen" enthalten kann oder nicht). Kreuzen Sie diese Option an, wenn auf dieser Seite au&szlig;erdem diese Upload-Aktion angeboten werden soll. (Erfordert zudem die Aktivierung des <a href="?cfg=wss" target="_farm">Websitesammlungsfeatures "UploadZen Ersatzseite f&uuml;r Upload.aspx"</a>.)</p>
+<h3>Mini-Tutorium im Uploader anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p><b>Web-Uploader:</b> Das UploadZen-Areal zeigt, sobald (und solange wie) Dateien zum Upload markiert sind, einige hilfreiche Hinweise an.<br/><br/><b>Windows-Uploader:</b> Das UploadZen-Fenster zeigt eine hilfreiche Willkommensseite mit Schnellstartschritten an, immer wenn (und solange wie) keine Dateien oder Ordner zum Upload markiert sind.<br/><br/>Kreuzen Sie diese Option ab, um obige Mini-Tutorien nie anzuzeigen.</p>
+<h3>UploadZen-Link in Uploader anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Der Uploader zeigt rechts unten einen Link mit Versionsnummer, der zur UploadZen-Produktwebsite f&uuml;hrt. Kreuzen Sie diese Option ab, um diesen Link nie anzuzeigen.</p>
+<h3>Hilfe-Link in Uploader anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Der Uploader zeigt rechts unten einen Hilfe-Link, der zu ausgew&auml;hlten, f&uuml;r Endanwender relevante UploadZen-Hilfethemen in diesem UploadZen-Studio f&uuml;hrt. Kreuzen Sie diese Option ab, um den Hilfe-Link nie anzuzeigen.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-n"><a href="#" onclick="roxTogDocTab('n');">Register &quot;Web-Uploader&quot;:</a></h4><span class="rox-doctab rox-doctab-n">
+<h3>Falls kein HTML5-Browser, folgende clientseitige Browser-Plugins nutzen</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>Der Web-Uploader nutzt bestimmte HTML5-Features bzgl. Dateiauswahl, wenn diese vom verwendeten Webbrowser unterst&uuml;tzt werden---und greift auf die angegebenen Browser-Plugins nur dann zur&uuml;ck, wenn dies nicht der Fall ist.
+
+Stehen auch diese Plugins nicht zur Verf&uuml;gung, f&auml;llt der Web-Uploader auf HTML4 (keine Auswahl mehrerer Dateien in einem einzigen Dateiauswahl-Dialog) zur&uuml;ck.</p>
+<ul>
+<li>Silverlight verwenden (und nur wenn nicht verf&#252;gbar: Flash verwenden)</li>
+<li>Flash verwenden (und nur wenn nicht verf&#252;gbar: Silverlight verwenden)</li>
+<li>Nur Silverlight verwenden</li>
+<li>Nur Flash verwenden</li>
+</ul>
+<h3>Bestehende Dateien mit demselben Namen &#252;berschreiben</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls angekreuzt, &uuml;berschreiben hochgeladene Dateien bereits existierende Dateien mit demselben Namen im aktuellen Zielordner der Dokumentbibliothek (aber der Uploader hebt bereits bestehende Dateien noch vor dem Upload farblich hervor, so da&szlig; Anwender "vorgewarnt" sind und ggf. bei Bedarf die Datei noch aus dem Upload entfernen k&ouml;nnen). Falls abgekreuzt, werden Dateien von SharePoint zur&uuml;ckgewiesen, wenn im aktuellen Zielordner der Dokumentbibliothek bereits eine Datei mit demselben Namen besteht.</p>
+<h3>Dateien vor dem Upload mit eindeutigen/einmaligen Zufallsnamen versehen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Falls angekreuzt, benennt diese Option alle Dateien vor dem Upload um und verleiht ihnen zuf&auml;llige, aber einmalige bzw. eindeutige Dateinamen, so da&szlig; nie Konflikte mit bestehenden Dateinamen auftreten.</p>
+<h3>Ersetzungszeichen</h3>
+<p><b>(Texteingabefeld)</b></p><p>Geben Sie ein Zeichen oder eine Zeichenfolge an, mit der die nicht unterst&uuml;tzten Zeichen ~ " # % & * : < > ? / \ { | und } in hochgeladenen Datei- oder Ordnernamen ersetzt werden sollen. Um die ungewollten Zeichen einfach nur zu entfernen (statt zu ersetzen), diese Einstellung komplett leeren. Der Standardwert ist der Unterstrich (_).</p>
+<p>Standardwert f&#252;r neue Upload-Aktionen:</p>
+<pre>_</pre>
+<h3>Upload-Dateien mit gesperrten Erweiterungen automatisch entfernen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>W&auml;hlen Ihre Endanwender Dateien mit Namenserweiterungen (Dateiendungen), die serverseitig (auf SharePoint-Webanwendungsebene [SPWebApplication.BlockedFileExtensions]) "vom Administrator gesperrt" wurden (oder per Standardeinstellung), so zeigt UploadZen standardm&auml;&szlig;ig nur einen Warnhinweis, erlaubt aber technisch betrachtet den eigentlichen Upload, welcher in aller Regel jedoch dann von SharePoint bzw. IIS zur&uuml;ckgewiesen wird. Kreuzen Sie diese Option an, um stattdessen gesperrte Dateien direkt nach der Markierung zum Upload automatisch sofort wieder aus der Uploadauflistung zu entfernen, so da&szlig; diese zwar in der Dateiauswahl, jedoch faktisch gar nicht erst in der Uploadauflistung erscheinen.<br/><br/><b>Hinweis:</b> &Auml;nderungen an gesperrten Dateiendungen werden von UploadZen erst nach dem n&auml;chsten IIS-Reset oder Neustart aller Web-Frontendserver aufgegriffen.</p>
+<h3>Dateityp-Filter (Mehrfachauswahl, keine Auswahl = keine Filter)</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option aus einer konfigurierbaren Menge)</b></p><p>Um einzuschr&auml;nken, welche Dateitypen Endanwender &uuml;ber diese Upload-Aktion hochladen d&uuml;rfen, w&auml;hlen Sie ein oder mehrere Dateiendungs-Filtersets aus. W&auml;hlen Endanwender Dateien aus, deren Namenserweiterungen nicht den ausgew&auml;hlten Dateienendungs-Filtersets entsprechen, werden diese Dateien gar nicht erst zur Auflistung hochzuladender Dateien hinzugef&uuml;gt und k&ouml;nnen somit auch nicht hochgeladen werden.<br/><br/>Mit den neuesten Silverlight/Flash-Versionen werden Ihre Filtersets au&szlig;erdem bereits in den Dateiauswahldialog als ausw&auml;hlbare Optionen integriert. Von den hier ausgew&auml;hlten Filtersets nicht unterst&uuml;tzte Dateitypen werden in diesen neueren Durchsuchen-Dialogen bereits ausgeblendet und k&ouml;nnen gar nicht ausgew&auml;hlt werden.<br/><br/>(Falls Sie andere als die hier angebotenen Dateitypfilter ben&ouml;tigen, k&ouml;nnen Sie diese Standardauswahl im Abschnitt Web-Uploader auf der Seite Konfiguration im UploadZen-Studio vollst&auml;ndig anpassen oder erweitern.)</p>
+<p>Das Dropdown-Men&uuml; bietet eine Menge an Optionen zur Auswahl an, welche ihrerseits auf der Konfiguration-Seite im UploadZen-Studio angepa&szlig;t werden kann.</p>
+<h3>Maximale Dateigr&#246;&#223;e (erst Beschreibung dieser Einstellung lesen)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Sie k&ouml;nnen optional die maximale Gr&ouml;&szlig;e f&uuml;r zum Upload markierte Dateien einschr&auml;nken. Werden Dateien ausgew&auml;hlt, die diese Gr&ouml;&szlig;e &uuml;berschreiten, werden sie sofort wieder automatisch aus der Dateiauflistung des Uploaders entfernt. Freilassen, um Dateien beliebiger Gr&ouml;&szlig;e zuzulassen.<br/><br/><b>Wichtig:</b> das Format f&uuml;r diese Einstellung ist 10B, 100KB oder 1000MB. Sie k&ouml;nnen also eine beliebige Ganzzahl (keine Bruch- oder Gleitkommazahlen) angeben, gefolgt entweder von einem B f&uuml;r Bytes, KB f&uuml;r Kilobyte oder MB f&uuml;r Megabyte; keine Leerzeichen oder andere Zeichen sind zul&auml;ssig. (F&uuml;r GB verwenden Sie MB multipliziert mit 1024, z.B. f&uuml;r 2GB verwenden Sie stattdessen 2048MB.)<br/><br/><b>Beachten Sie auch:</b> diese Einstellung ist nur eine client-seitige Beschr&auml;nkung f&uuml;r die reine Dateiauswahl. Unabh&auml;ngig von dieser Einstellung ist Ihre SharePoint-Umgebung auch serverseitigen Gr&ouml;&szlig;enbeschr&auml;nkungen auf IIS- sowie SharePoint-Webanwendungsebene unterworfen (Details hierzu im UploadZen-Hilfethema "Deployment-Checkliste"). Um Uploads von Dateien, die Ihre serverseitigen Gr&ouml;&szlig;enbeschr&auml;nkungen &uuml;berschreiten zuzulassen, aktivieren Sie Dateist&uuml;ckelung weiter unten.</p>
+<h3>St&#252;ckelungsgr&#246;&#223;e (erst Beschreibung dieser Einstellung lesen)</h3>
+<p><b>(Texteingabefeld)</b></p><p>Zur Verwendung dieser Funktion <b>LESEN SIE UNBEDINGT</b> den Abschnitt <i>"Preparing a Web Application for the Chunking feature"</i> im UploadZen-Hilfethema <i>Deployment-Checkliste</i>, zus&auml;tzlich zu den folgenden Informationen.<br/><br/>Obschon wir Ihnen zun&auml;chst einmal dringlichst anempfehlen, Ihre serverseitigen Gr&ouml;&szlig;enbeschr&auml;nkungen f&uuml;r hochgeladene Dateien, sowie Anfrageumfang (request length) und Zeitlimits (timeouts) zu vergr&ouml;&szlig;ern (wie beschrieben im UploadZen-Hilfethema Deployment-Checkliste), k&ouml;nnen Sie bei Bedarf diese Einstellung verwenden, um Uploads von Dateien zuzulassen, deren Gr&ouml;&szlig;en Ihre serverseitigen Beschr&auml;nkungen &uuml;berschreiten, indem solche Dateien client-seitig in kleinere St&uuml;ckelungen aufgeteilt werden, die individuell nacheinander einzeln hochgeladen und serverseitig von UploadZen wieder zur Originaldatei zusammengesetzt werden. Entscheiden Sie sich f&uuml;r diese Funktionalit&auml;t, so m&uuml;ssen Sie hier die St&uuml;ckelungsgr&ouml;&szlig;e angeben und diese sollte leichter unter Ihren serverseitig konfigurierten Limits liegen.<br/><br><b>Beispiel:</b> Ihre serverseitigen Beschr&auml;nkungen geben eine H&ouml;chstdateigr&ouml;&szlig;e von 50 MB vor. Sie k&ouml;nnen hier die St&uuml;ckelungsgr&ouml;&szlig;e auf "48MB" festlegen. Erfolgt dann ein Upload einer 110 MB gro&szlig;en Datei, so wird diese in drei Einzelst&uuml;cke aufgeteilt (clientseitig noch vor dem Upload), die ersten beiden je 48 MB gro&szlig; und das letzte 14 MB gro&szlig;, womit jedes Einzelteil f&uuml;r sich unterhalb Ihrer Serverlimits bleibt. UploadZen erh&auml;lt serverseitig die drei Einzelteile und stellt aus diesen in der korrekten Reihenfolge die Originaldatei von 110 MB wieder her, welche erst dann im Dokumentbibliotheks-Zielorder abgelegt wird.<br/><br/><b>Wichtig:</b> das Format f&uuml;r diese Einstellung ist 10B, 100KB oder 1000MB. Sie k&ouml;nnen also eine beliebige Ganzzahl (keine Bruch- oder Gleitkommazahlen) angeben, gefolgt entweder von einem B f&uuml;r Bytes, KB f&uuml;r Kilobyte oder MB f&uuml;r Megabyte; keine Leerzeichen oder andere Zeichen sind zul&auml;ssig. (F&uuml;r GB verwenden Sie MB multipliziert mit 1024, z.B. f&uuml;r 2GB verwenden Sie stattdessen 2048MB.)</p>
+<h3>Bilder vor Upload automatisch verkleinern (erst Beschreibung lesen)</h3>
+<p><b>(Texteingabefeld)</b></p><p><b>Diese Einstellung wird nur verwendet, wenn Sie genau drei Ganzzahlen durch Kommata [,] getrennt angeben</b> (keine anderen Zeichen). Die erste Ganzzahl ist die Maximalbreite f&uuml;r Bilder, die zweite die Maximalh&ouml;he, die dritte die Bildqualit&auml;t f&uuml;r zus&auml;tzliche Bildkompression (1 = schlechteste, 100 = beste Qualit&auml;t). Beispielsweise w&uuml;rde die Einstellung <b>320,240,90</b> bedeuten: alle hochzuladenden Bilder werden vor dem Upload unter Beibehaltung der Seitenverh&auml;ltnisse so verkleinert, da&szlig; weder die Maximalbreite noch die Maximalh&ouml;he &uuml;berschritten werden.</p>
+<h3>Endanwendern Auswahloptionen zur serverseitigen Entzippung anbieten</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Diese Option erm&ouml;glicht Ihren Endanwendern, f&uuml;r jede hochzuladende ZIP-Archivdatei individuell auszuw&auml;hlen, ob die Datei im Originalzustand in der Zielbibliothek abgelegt werden soll, serverseitig komplett in den aktuellen Bibliotheksordner extrahiert werden soll, oder in einen neuen Unterorder extrahiert werden soll.</p>
+<h3>Bei Silverlight-Verwendung clientseitiges Verzippen anbieten</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Dies erm&ouml;glicht Ihren Anwendern, anstelle der entsprechend markierten Dateien hochzuladende ZIPs zu definieren. Die ZIP-Archive werden genau vor ihrem Hochladen dynamisch generiert.</p>
+<h3>Bei Silverlight-Verwendung eine Datei-Dropablage anbieten</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Dies erm&ouml;glicht Ihren Anwendern, ihren Uploads Dateien &uuml;ber Ziehen (aus einem Explorer- oder Finder-Fenster) und Ablegen (in der Dropablage) hinzuzuf&uuml;gen. <b>Hinweis:</b> diese Option kann kann zu minimalen visuellen "Nebenwirkungen" auf der Seite f&uuml;hren, die jedoch den Arbeitsflu&szlig; in keiner Weise beeintr&auml;chtigen.</p>
+<h3>Hochgeladene Dateien automatisch wie folgt einchecken</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>Betrifft nur Bibliotheken mit aktiviertem Ein-/Auschecken. W&auml;hlen Sie aus, ob und wie hochgeladene Dateien automatisch eingecheckt werden sollen. Der Checkin wird aus SharePoint-Sicht vom hochladenden Benutzer durchgef&uuml;hrt.</p>
+<ul>
+<li>Nicht einchecken (hochgeladene Dateien bleiben an den hochladenden Benutzer ausgecheckt)</li>
+<li>Als neue Nebenversion einchecken (wenn Nebenversionen aktiviert sind)</li>
+<li>Als neue Hauptversion einchecken (wenn Versionierung aktiviert ist)</li>
+<li>Einchecken aber alte Versionsnummer beibehalten (&quot;aktuelle Version &#252;berschreiben&quot;)</li>
+</ul>
+<h3>Endanwendern erlauben, obige Einchecken-Auswahl pro Datei anzupassen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Betrifft nur Bibliotheken mit aktiviertem Ein-/Auschecken. Ist diese Option angekreuzt, k&ouml;nnen Endanwender f&uuml;r jede hochzuladene Datei noch vor dem Upload ausw&auml;hlen, ob und wie diese eingecheckt werden soll. Die interaktive Auswahl hierf&uuml;r wird jeweils auf die hier&uuml;ber ausgew&auml;hlte Standardeinstellung initialisiert.</p>
+<h3>Aufruf des Windows-Uploaders aus dem Web-Uploader heraus anbieten</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Zeigt einen Link (f&uuml;r Windows-Anwender mit Internet Explorer), der UploadZens klassischen Windows-Uploader aufruft.</p>
+</span><h4 class="rox-h4 rox-doctab rox-doctab-z"><a href="#" onclick="roxTogDocTab('z');">Register &quot;Windows-Uploader&quot;:</a></h4><span class="rox-doctab rox-doctab-z">
+<h3>Registerkarte &#39;Optionen&#39; im Windows-Uploader anzeigen</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Der Windows-Uploader erlaubt zus&auml;tzlich auch noch die Einsicht oder Anpassung benutzerspezifischer, clientseitiger UploadZen-Einstellungen (z.B. &Uuml;berschreiben bestehender Dateien). Kreuzen Sie diese Option ab, um die Funktionalit&auml;t &#39;Optionen&#39; allen Benutzern vorzuenthalten.</p>
+<h3>Entpacken hochgeladener ZIP-Archivdateien</h3>
+<p><b>(Dropdown-Men&#252; zur Auswahl einer Option)</b></p><p>UploadZen kann hochgeladene ZIP-Archivdateien einfach im aktuellen Dokumentbibliotheks-Zielordner als einzelne Datei ablegen, oder an deren Stelle alle Dateien und Unterordner an diesem Ort extrahieren.</p>
+<ul>
+<li>Benutzer entscheiden lassen (empfohlen)</li>
+<li>Nie entpacken</li>
+<li>Immer entpacken</li>
+</ul>
+<h3>Anwendern erlauben, ihr SharePoint-Anmeldekennwort lokal zu speichern</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Hochladende Anwender werden unter Umst&auml;nden (siehe Dokumentation) gegebenenfalls nach ihrem Benutzernamen und Kennwort f&uuml;r SharePoint gefragt, und k&ouml;nnen hierbei optional entscheiden, von UploadZen in Zukunft immer automatisch mit den angegebenen Benutzerdaten bei SharePoint angemeldet zu werden. Dann jedoch wird das eingegebene SharePoint-Kennwort des Anwenders im &#39;Local User&#39;-Zweig der Windows-Registrierung verschl&uuml;sselt gespeichert. Kreuzen Sie diese Option ab, um das lokale Speichern des Kennworts nie zuzulassen.</p>
+<h3>Anwendern die Auswahl eines anderen Zielordners erlauben</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Der Uploader wird initial auf den aktuellen Dokumentbibliotheksordner als Upload-Ziel eingestellt. Anwender k&ouml;nnen allerdings vor oder zwischen Uploads einen anderen als den aktuellen Zielordner ausw&auml;hlen, ohne erst in SharePoint zu diesem Ordner navigieren zu m&uuml;ssen. Kreuzen Sie diese Option ab, um das &Auml;ndern des Zielordners nie zuzulassen.</p>
+<h3>Anwendern die Auswahl einer anderen Zieldokumentbibliothek erlauben</h3>
+<p><b>(Ankreuzbares Kontrollfeld)</b></p><p>Der Uploader wird initial auf die aktuelle Dokumentbibliothek als Upload-Ziel eingestellt. Anwender k&ouml;nnen allerdings vor oder zwischen Uploads eine andere als die aktuelle Zieldokumentbibliothek ausw&auml;hlen, ohne erst in SharePoint zu dieser Dokumentbibliothek navigieren zu m&uuml;ssen. Kreuzen Sie diese Option ab, um das &Auml;ndern der Zieldokumentbibliothek nie zuzulassen.</p>
+</span>

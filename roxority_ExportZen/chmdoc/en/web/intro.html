@@ -1,0 +1,82 @@
+<h3>
+	Why Export SharePoint List Data to CSV?<a name="s0"></a></h3>
+<p>
+	CSV stands for "comma-separated values" and is a seasoned, proven, stable and cross-platform
+	file format for exchanging data records of identical or similar structure. Most
+	advanced, industry-strength software systems can read in and import CSV data files
+	easily, including Microsoft Office Excel (for spread sheets) and Outlook (for contacts).
+	Utilizing the sophisticated, customizable CSV data export solution provided by ExportZen
+	can make your highly custom data transformation or migration processes and tasks
+	so much easier and faster to accomplish.</p>
+<h3>
+	How ExportZen CSV Data Exports work for SharePoint Lists<a name="s1"></a></h3>
+<p>
+	In <b>SharePoint 2007</b> (WSS 3.0 and MOSS 2007) ExportZen integrates one or more
+	Export actions into the <i>Actions</i> menu of SharePoint List Views:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 318px;" src="/storage/images/roxority_ExportZen/sharepoint-list-data-export-csv-menu-item.png"
+		title="" /></p>
+<p>
+	In <b>SharePoint 2010</b> (Foundation and Server) ExportZen integrates one or more
+	Export commands into its own <i>Export to CSV</i> menu inside the <i>Connect &amp; Export</i>
+	section of the <i>List</i> ribbon tab:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 140px;" src="/storage/images/roxority_ExportZen/csv-list-export-ribbon.png"
+		title="" /></p>
+<p>
+	Clicking the menu item will let users download the SharePoint List data as a CSV
+	file:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 266px;" src="/storage/images/roxority_ExportZen/sharepoint-list-data-export-csv-download.png"
+		title="" /></p>
+<p>
+	In addition to making CSV exports available interactively to end users as illustrated
+	above, you can also utilize the same ExportZen capabilities for <a href="scheduling_sharepoint_list_data_csv_exports">
+		scheduled automation of server-side, unsupervised, background List data exports</a>.</p>
+<h3>
+	Defining Your Export Action<a name="s2"></a></h3>
+<p>
+	To make the above work, you need to tell ExportZen just a few preferences, by specifying
+	for a given export use case (which can then be re-invoked time and again) some so-called
+	<a href="itemref_ExportActions">Export Action Definition Settings</a>, such
+	as:</p>
+<ul>
+	<li>the title of the Export menu item,</li>
+	<li>the description of the Export menu item (optional),</li>
+	<li>the Columns to be included in the exported CSV data file and</li>
+	<li>the types of Lists (or the name of the List) compatible with this export and <a
+		href="itemref_ExportActions">various other settings</a>.</li>
+</ul>
+<p>
+	To do so, you just need to create at least one rule on the <i>Export Actions</i>
+	page available via Site Settings / ExportZen Studio / Export Actions:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 388px;" src="/storage/images/roxority_ExportZen/sharepoint-list-data-export-csv-actions.png"
+		title="" /></p>
+<p>
+	On the <i>Export Actions</i> page, simply create and save a new rule item to finally
+	define your CSV Export action:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 898px;" src="/storage/images/roxority_ExportZen/sharepoint-list-data-export-csv-definition.png"
+		title="" /></p>
+<p>
+	That&#39;s it! This CSV Export action you just defined is now available in the <i>Actions</i>
+	menu of the specified Lists, and clicking it will download a CSV data file with
+	only those columns you specified, fully reflecting all of your <a href="itemref_ExportActions">
+		export action definition settings</a>.
+</p>
+<h3>
+	Export menu item not showing up? You can also link to your CSV export:<a name="s3"></a></h3>
+<p>
+	Your Export action may not show up in the <i>Actions</i> menu of SharePoint 2007
+	Document Libraries and other SharePoint 2007 Libraries, and in addition may not
+	show up in List <i>Actions</i> menus of heavily customized SharePoint 2007 environments.
+	(Such incidents have so far not yet been observed under SharePoint 2010 however.)
+	To direct users to a CSV export of a given List, simply give them a link to <b>http://your/web/site/url/_layouts/roxority_ExportZen/expo.aspx?exportlist=list_guid&amp;rule=youraction</b>
+	&mdash; replacing, of course, the <i>your/web/site/url</i> part with your SharePoint
+	Web Site URL, the <i>list_guid</i> URL parameter value with the GUID of the List
+	to be exported and the <i>youraction</i> URL parameter value with the name of your
+	export action.</p>

@@ -1,0 +1,121 @@
+﻿<p>
+	The following settings apply across all filter types.</p>
+<h3>
+	Column / Filter Name</h3>
+<p>
+	This name is the name used to identify a filter among other filters in your FilterZen
+	Filter Web Part. It is also the filter name sent to connected Web Parts.</p>
+<p>
+	Different kinds of Web Parts may vary in their requirements for filter names. When
+	connected to a <i>List View</i> Web Part (or a <i>Data View</i> Web Part whose data
+	source is a SharePoint list or document library), those out-of-the-box, filter-receiving
+	SharePoint Web Parts <i>require</i> the <b>FilterZen</b> Filter Web Part to send
+	filter names that correspond <i>exactly</i> to <b>internal</b> Column names (which
+	<i>never</i> change once a Column has been created) rather than their current display
+	names (<b>Column titles</b>, which <i>can</i> be changed by end-users at any time).</p>
+<div class="rox-info" style="background-image: url('/_layouts/images/hhelp.gif');">
+	The <i>internal name</i> of a Column is set when a it is first created, and it never
+	changes, even though the <i>Column title</i> might be changed repeatedly from SharePoint&#39;s
+	<i>Edit Column</i> page later on. The patterns for internal names vary: for some
+	built-in Columns from SharePoint&#39;s out-of-the-box List definitions there are
+	internal names such as <i>AssignedTo</i> for the <i>Tasks</i> List&#39;s &quot;Assigned
+	To&quot; Column, or <i>_ModerationComments</i> for any List&#39;s &quot;Approver
+	Comments&quot; Column. A user-created Column with an initial title of &quot;Test-Link&quot;
+	will get an internal name of <i>Test_x002d_Link</i>.</div>
+<p>
+	<b>FilterZen</b> cannot change this requirement (to send filter names corresponding
+	<i>exactly</i> to internal Colum names) &mdash; it was built right into SharePoint.
+	You therefore need to specify filter names corresponding to the internal Column
+	names.</p>
+<p>
+	To make this as easy as possible for you, we built a useful tool right into the
+	Web Part&#39;s configuration tool pane that empowers you to instantly figure out
+	the proper filter name to use for the Column you want to filter, that is, its <i>internal
+		Column name</i>. Once you expand this tool by clicking the <i>Filtering List Data</i>
+	link, you can immediately select the list you are filtering to see all its Columns.
+	Now select the Column and you will see its internal name. Just copy and paste it
+	into the <i>Column / filter name</i> text box, or click the <i>Use as filter name</i>
+	link:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 494px;" src="help/res/adv_01.png"
+		title="" />
+</p>
+<p>
+	If you are filtering a <i>Data View</i> Web Part sourcing its data from a list in
+	<i>another</i> web site or site collection, just enter the web site&#39;s URL in
+	the tool&#39;s text box and click <i>OK</i> to be able to locate the list in the
+	drop-down box.</p>
+<h3>
+	Enabling and Disabling Filters</h3>
+<p>
+	The <b>FilterZen</b> Filter Web Part only ever sends those of your filters that
+	are marked <i>enabled</i>. Tick or untick the <i>This filter is enabled</i> check
+	box to enable or disable a filter. You need to enter a <a href="#s0">filter name</a>
+	before you can enable a filter, because a filter name is required to send a filter
+	to conencted Web Parts.</p>
+<h3>
+	Default Filter Value</h3>
+<p>
+	All filter types that optionally support an <a href="#s5">interactive mode</a> (i.e.
+	all filter types except <a href="?doc=page_field_filters">Page Column Filter</a> and <a href="?doc=url_query_string_filters">Page Request / URL Filter</a>)
+	also have a setting to set a default filter value, even though they vary in their
+	semantics and user interface depending on the filter type. The default filter value
+	is the filter value initially sent, and in <a href="#s5">interactive mode</a>, also
+	the one initially presented to end users, which they may then change.</p>
+<h3>
+	About "Empty" Filter Values</h3>
+<p>
+	For each filter you create, you need to decide which approach to dealing with empty
+	filter values is optimal given the particular filtering context:</p>
+<ul>
+	<li><i>Empty = Empty or None</i> &mdash; if you <b>do</b> send empty filter values,
+		and a filter value is empty, the resulting behaviour of the filter receiver should
+		be to show only items where the specified Column has no value.</li>
+	<li><i>Empty = All (no filtering)</i> &mdash; if you <b>do not</b> send empty filter
+		values, and a filter value is empty, the filter will not be sent, usually resulting
+		in no filtering being applied to the specified Column and thus showing all items
+		as far as that Column is concerned.</li>
+</ul>
+<p>
+	Every filter type provides the <i>Send filter value even if empty</i> check box
+	to control this setting.</p>
+<h3>
+	Fallback Filter Value</h3>
+<p>
+	All filter types, including the non-<a href="#s5">interactive</a> ones, let you
+	specify an optional <i>fallback filter value</i> that will only ever be sent if
+	the filter value is <a href="#s3">empty</a>.</p>
+<h3>
+	&quot;Interactive&quot; Filters</h3>
+<p>
+	All filters except <a href="?doc=page_field_filters">Page Column Filters</a> and <a href="?doc=url_query_string_filters">Page Request / URL Filters</a> offer
+	an optional interactive mode that you can turn on or off via the <i>Allow users to enter/pick
+		a filter value</i> check box. In interactive mode, the <b>FilterZen</b> Filter
+	Web Part will render into the Web Part Page a visible, interactive user interface
+	control for changing the filter value of each interactive filter. This user interface
+	control will be a single-line text box for <a href="?doc=text_filters">Text Filters</a>, a date picker for
+	<a href="?doc=date_filters">Date Filters</a>, and a drop-down list for <a href="?doc=choice_filters">Choice Filters</a>,
+	<a href="?doc=list_lookup_filters">List Lookup Filters</a>, <a href="?doc=user_filters">User Filters</a>, <a href="?doc=sql_data_lookup_filters">SQL Data Filters</a> and <a href="?doc=bcs_bdc_business_data_catalog_filters">BDC Filters</a>. You can optionally specify a label text in the <i>filter label</i>
+	text box, which will then be prepended to the filtering user interface control by
+	the <b>FilterZen</b> Filter Web Part, to let your users know what this control is
+	actually for. There are also additional Web Part settings for <a href="?doc=advanced#s2">further 
+	customizing the appearance and behavior of all interactive filtering user 
+	controls</a>.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/adv_04.png"
+		title="" />
+</p>
+<h3>Pre-Filtering of Choice, List Lookup, SQL Data, BDC and User Filters</h3>
+<p>
+	Tick the <i>Pre-filtering &mdash; only offer pickable choices that also exist in a List column</i> check box 
+	in a <a href="?doc=choice_filters">Choice Filter</a>, <a href="?doc=list_lookup_filters">List Lookup Filter</a>, <a href="?doc=sql_data_lookup_filters">SQL Data Filter</a>, <a href="?doc=bcs_bdc_business_data_catalog_filters">BDC Filter</a> or <a href="?doc=user_filters">User Filter</a> editor to be able to enter 
+	a List View URL and an internal Column name both used to eliminate from the 
+	drop-down list of available choices all those that do not exist as exact values 
+	in the specified List Column.</p>
+<h3>Locking out specific filter values</h3>
+<p>In the drop-down list labelled <i>Always suppress certain filter values</i>, select an item other than <i>
+	Don&#39;t suppress any filter values</i> to show a multi-line text box allowing 
+	you to enter specific filter values. Your drop-down choice then controls whether 
+	the filter values entered are the only ones allowed to be sent (<i>Suppress all 
+	filter values except...</i>), or the only ones that should never be sent (<i>Suppress 
+	no filter values except...</i>).</p>

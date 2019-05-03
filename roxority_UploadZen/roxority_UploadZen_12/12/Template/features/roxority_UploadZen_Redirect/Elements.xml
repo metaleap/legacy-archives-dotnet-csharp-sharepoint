@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements Id="fd994eba-0a96-414c-8f30-e50d9ba4341d" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Control Id="AdditionalPageHead" Sequence="50" ControlSrc="/_controltemplates/roxority_UploadZen/Redirect.ascx" />
+</Elements>

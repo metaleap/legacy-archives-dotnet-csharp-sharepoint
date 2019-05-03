@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature Id="b1ed6348-6997-4c8c-b491-c948393164d5" Title="$Resources:roxority_RollupZen,Feature_Title" Description="$Resources:roxority_RollupZen,Feature_Desc" ImageUrl="roxority_RollupZen/feature.png" Creator="ROXORITY.com" ActivateOnDefault="TRUE" AutoActivateInCentralAdmin="FALSE" AlwaysForceInstall="TRUE" SolutionId="f4160f31-c537-46d0-8380-3e9fa5bfcdec" Scope="Site" Version="1.0.0.0" Hidden="FALSE" DefaultResourceFile="core" ReceiverAssembly="roxority_RollupZen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68349fdcd3484f01" ReceiverClass="roxority.SharePoint.FeatureReceiver" xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ElementManifests>
+		<ElementManifest Location="Element.xml" />
+		<ElementFile Location="roxority_RollupZen.webpart" />
+	</ElementManifests>
+</Feature>

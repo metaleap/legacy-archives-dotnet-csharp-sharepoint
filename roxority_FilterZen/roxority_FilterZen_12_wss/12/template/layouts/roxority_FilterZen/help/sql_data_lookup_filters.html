@@ -1,0 +1,45 @@
+﻿<p>Create a SQL data filter to send filters based on any data stored in 
+	ADO.NET-accessible data sources such as relational databases. Whether you let 
+	users pick a record set to use in interactive mode, or specify the data row to 
+	use directly, the filter value being sent is always the current, live value from 
+	the specified data source.</p>
+<h3>Data Source Connection</h3>
+<p>To connect to your data source, you select the data source provider to use and 
+	specify a connection string. If unsure, your database administrator can help you 
+	with this. The following ADO.NET data source providers can be used out of the 
+	box:</p>
+<ul>
+	<li><b>SQL Server</b> &mdash; the best option for connecting to any <i>Microsoft SQL Server</i> 
+		2000 or higher database (<i>System.Data.SqlClient</i>)</li>
+	<li><b>Oracle</b> &mdash; the best option for connecting to any <i>Oracle</i> 8.1 or higher 
+		database (<i>System.Data.OracleClient</i>)</li>
+	<li><b>ODBC</b> &mdash; the best option for connecting to any database via an <i>Open 
+		Database Connectivity</i> driver (<i>System.Data.Odbc</i>)</li>
+	<li><b>OLE DB</b> &mdash; the best option for connecting to a <i>Jet</i> database (Microsoft 
+		Access) or any other <i>OLEDB</i>-compatible database 
+		(<i>System.Data.OleDb</i>)</li>
+</ul>
+<p>
+	Data source providers can be added and removed on the <i>Configuration</i> 
+	page in the <i>FilterZen Studio</i> at<br />
+	<b>
+	http://farm_url/_layouts/roxority_FilterZen/default.aspx?cfg=cfg</b>.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" src="help/res/filter_sql_data_lookup.png" title="" /></p>
+<h3>SQL Query, Value Column and Display Column</h3>
+<p>
+	For the SQL data filter to obtain filter values from your data source, you need to specify, in SQL (or any other query language dialect supported by your data source provider), the query sent to the data source to fetch a result set of filter values. In order for this filter to work as expected, it is mandatory that the result set of filter values 
+	is guaranteed by your query to always be returned in a consistent sort order, so 
+	in SQL you should add an <i>ORDER BY</i> clause. Per the SQL standard, unless 
+	your query specifies the sort order explicitly, the default sort order of data 
+	rows is undefined and thus may change randomly at any time.</p>
+<p>
+	Your query will need to return a stream of record sets (which your query may 
+	also pre-filter and sort as preferred) with at least one data column. The name of 
+	the column containing the filter value may be identical to the database column 
+	or changed to another name by your query &mdash; however, you need to specify 
+	the result set column name to be used as the <i>value column</i>, i.e. the name 
+	of the column providing the filter value. In interactive mode, if you want to 
+	display to the user another column value than the one sent as the filter value, 
+	specify the name of the <i>display column</i>.</p>
+

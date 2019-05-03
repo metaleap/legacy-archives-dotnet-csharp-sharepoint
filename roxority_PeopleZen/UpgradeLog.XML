@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="roxority_PeopleZen">
+</Property><Property Name="Solution File" Value="C:\Users\roxor\Documents\Visual Studio 2010\Projects\roxority_PeopleZen\roxority_PeopleZen.sln">
+</Property><Property Name="Date" Value="Tuesday, May 04, 2010">
+</Property><Property Name="Time" Value="15:20 PM">
+</Property></Properties><Event ErrorLevel="0" Project="roxority_PeopleZen" Source="roxority_PeopleZen\roxority_PeopleZen.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="roxority_PeopleZen" Source="roxority_PeopleZen\roxority_PeopleZen.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Create600Users" Source="Create1000Users\Create600Users.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Create600Users" Source="Create1000Users\Create600Users.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="roxority_PeopleZen.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="roxority_PeopleZen.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="roxority_PeopleZen" Source="roxority_PeopleZen\roxority_PeopleZen.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="WspBuilder" Source="WspBuilder\WspBuilder.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Create600Users" Source="Create1000Users\Create600Users.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

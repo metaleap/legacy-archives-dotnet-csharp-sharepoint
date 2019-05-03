@@ -1,0 +1,36 @@
+﻿<p>
+	When dynamically generated or manually created interactive filters are present,
+	enabled and their filtering user controls are rendered into the <b>FilterZen</b>
+	Filter Web Part, it wraps them in HTML span elements decorated with the CSS class
+	names detailed below, allowing for full customizability of their visual appearance.
+	Unless otherwise noted, these elements are pre-styled in <b style="white-space: nowrap;">
+		/_layouts/roxority_FilterZen/roxority_FilterZen.css</b>.</p>
+<ul>
+	<li><b>span.rox-ifilter-all</b> &mdash; the entire surrounding area of the Web Part
+		output (except in Web Part Page edit mode, where further contextual information
+		is prepended to this element).</li>
+	<li><b>span.rox-ifilter-<i>webpartid</i></b> &mdash; the entire surrounding area of
+		all interactive filter user controls, but excluding <a href="?doc=advanced#s2">custom
+			HTML for manual re-filtering</a> (if any), where <i>webpartid</i> is the Web
+		Part ID. Not pre-styled.</li>
+	<li><b>span.rox-ifilter</b> &mdash; the surrounding area of an interactive filter user
+		control and its preceding caption label (if any).</li>
+	<li><b>span.rox-ifilter-label</b> &mdash; the caption label preceding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-control</b> &mdash; the area immediately surrounding an interactive
+		filter user control. Pre-styled only with <i>toolbar stylings applied</i>.</li>
+	<li><b>span.rox-ifilter-datetime</b> &mdash; the area immediately surrounding an interactive
+		Date filter user control (inside a <i>span.rox-ifilter-control</i>).</li>
+	<li><b>span.rox-ifilter-button</b> &mdash; the area surrounding custom HTML for manual
+		re-filtering, if any.</li>
+	<li><b>a.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i> links
+		from the predefined <i>Filter link</i> and <i>Filter and Clear All links</i> HTML
+		templates.</li>
+	<li><b>input.rox-ifilter-button</b> &mdash; the <i>Filter</i> or <i>Clear Filter</i>
+		buttons from the predefined <i>Filter button</i> and <i>Filter and Clear All buttons</i>
+		HTML templates.</li>
+	<li><b>a.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> link from the
+		predefined <i>Filter and Clear All links</i> HTML template.</li>
+	<li><b>input.rox-ifilter-button-clear</b> &mdash; the <i>Clear Filter</i> button from
+		the predefined <i>Filter and Clear All buttons</i> HTML template.</li>
+</ul>

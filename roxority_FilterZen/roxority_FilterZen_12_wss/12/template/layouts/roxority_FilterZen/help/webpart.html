@@ -1,0 +1,117 @@
+﻿<h3>1. It&#39;s a Web Part</h3>
+<p>
+	Filtering data, information, Lists, Libraries and other Web Parts with <b>FilterZen</b> 
+	always involves using the <b>FilterZen</b> Filter Web Part. It is the sole mechanism to 
+	define filters and connect them to your data.</p>
+<p>
+	That however does not necessarily imply that you can use <b>FilterZen</b> &quot;only on Web 
+	Part Pages&quot;. Technically and strictly speaking, it does &mdash; but more pages in 
+	SharePoint are Web Part Pages than you might know. In addition to the Web Part 
+	Pages you create yourself from the <i>Create</i> page (or by clicking <i>New</i> in a Document Library 
+	with the Web Part Page document template), all of the following types of 
+	SharePoint pages are actually Web Part Pages, so you can can customize their 
+	appearance and behavior by adding Web Parts to then:</p>
+<ul>
+	<li><b>All</b> (out-of-the-box <i>and</i> custom) List Views and Document Library Views</li>
+	<li>List Forms (<i>New</i>, <i>Edit</i>, <i>Display</i> &mdash; adding Web Parts to those forms cannot be done 
+		from the browser, but is possible from <i>SharePoint Designer</i>)</li>
+	<li>Home pages in most web site templates</li>
+	<li>Search Results pages in Microsoft Office SharePoint Server</li>
+	<li>Pages and tabs in Document and Meeting Workspace web sites</li>
+	<li>All pages in Blog and Wiki web sites</li>
+</ul>
+<p>
+	In all these places, you can use <b>FilterZen</b> to filter the information displayed.
+	After you have <a href="?doc=setup">installed the <b>FilterZen</b> solution package and activated the site collection feature</a>, 
+	you can add the <b>FilterZen</b> Filter Web Part to any Web Part Page in the accustomed way. After having
+	switched to page Edit Mode from the <i>Site Actions</i> menu and having clicked the <i>Add Web
+		Part</i> button in the Web Part Zone of your choice, you will find it in the
+	<i>Add Web Parts</i> dialog:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 387px;" src="help/res/wpdialog.png" title="" />
+</p>
+<p>
+	(If the Web Part is not available in the <i>Add Web Parts</i> dialog, 
+	(re)activate
+	the <b>FilterZen Filter Web Part</b> Feature under <i>Site Collection
+		Features</i>, as described in the last section of the <a href="?doc=setup">Solution Installation &amp; Feature Activation</a> chapter.</p>
+<p>
+	Add a <b>FilterZen</b> Filter Web Part to the Web Part Page that contains the 
+	<i>List View</i> or <i>Data View</i> web
+	part that you want to filter. (A <i>List View</i> Web Part is automatically created by SharePoint every
+	time you add a list or document library to a Web Part zone using the <i>Add Web Parts</i>
+	dialog or other page editing tools such as <i>SharePoint Designer</i>.)</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 135px;" src="help/res/wp_01.png" title="" />
+</p>
+<h3>2. Connect the Web Part</h3>
+<p>
+	The Web Part points out to you that it is not 'connected'. By 'connecting' the Web Part, you tell it which Web Parts
+	should receive the filters you will set up shortly. Connect it to to the 
+	<i>List View</i> or <i>Data View</i>
+	Web Parts on your Web Part Page that you want to filter by using the <i>Edit / Connections</i> Web Part menu:
+</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 239px;" src="help/res/wp_02.png" title="" />
+</p>
+<div class="rox-info">
+This notification, and 
+	other output produced by the <b>FilterZen</b> Filter Web Part is only ever rendered in 
+	Edit Mode by default, so that the Filter Web Part is invisible to page visitors 
+	(unless you have set up dynamically generated or manually created <a href="?doc=general#s5">interactive 
+	filters</a>).</div>
+<p>
+	After connecting the <b>FilterZen</b> Filter Web Part to at least one other Web Part, 
+	its appearance
+	changes to display relevant contextual status information and potentially 
+	helpful hints about your filters and its connections &mdash; again, only in Edit mode by default, keeping the Filter Web Part invisible to your visitors.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 440px;" src="help/res/wp_04.png" title="" />
+</p>
+<h3>3. Set up your filter(s)</h3>
+<p>
+	Once you have the <b>FilterZen</b> Filter Web 
+	Part <i>connected</i> to other Web Parts and have set up and enabled at least 
+	one filter for it, it will send them <i>filters</i>, each composed of a filter 
+	<i>name</i> and a 
+	filter <i>value</i>, whenever the Web Part Page is rendered, by 
+	determining the filter names and values from the context and logic provided by 
+	your individual filters. When 
+	connecting to <i>List View</i> or <i>Data View</i> Web Parts, the filter name ultimately 
+	corresponds to a Column name.</p>
+<p>
+	In this walk-through, we will filter a <i>
+	Tasks</i> List View to only display tasks assigned to the current user that are 
+	due &#39;tomorrow&#39;. To start, choose <i>Modify</i> in the <i>edit</i> Web Part 
+	menu. In the Web Part tool pane, in the <i>All Filters</i> section, select the type of 
+	filter you want to add to the Filter Web Part &mdash; to implement the filtering requirement outlined 
+	above, we will need both a <a href="?doc=date_filters">Date Filter</a> and a <a href="?doc=user_filters">User Filter</a> &mdash; and click the <img align="top" src="/_layouts/images/collapseplus.gif" />
+	<i>Add this new filter</i> icon. So start by selecting <i>Date Filter</i> and 
+	clicking the &#39;+&#39; icon:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 220px;" src="help/res/wp_03.png" title="" />
+</p>
+<p>This will bring up the embedded <a href="?doc=date_filters">Date Filter</a> editor right in 
+	the Web Part tool pane. Below, we have already set up the filter as this example requires it. 
+	This setup will filter the <i>Due Date</i> column (with the internal name <i>DueDate</i>) to 
+	only yield values representing &#39;tomorrow&#39;:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 412px;" src="help/res/wp_05.png" title="" />
+</p>
+<p>By saving the <i>DueDate</i> filter and then applying the Web Part modifications, the connected Web Part 
+	will be filtered accordingly already. Repeat the same steps as above, 
+	but this time select the <a href="?doc=user_filters">User Filter</a> type before clicking the &#39;+&#39; icon, 
+	to create the required user filter. The following set up will filter the
+	<i>Assigned To</i> column (with the internal name <i>AssignedTo</i>) by the 
+	current user:</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 350px;" src="help/res/wp_06.png" title="" />
+</p>
+<p>The only settings that are relevant to this very example are the <i>Column / filter 
+	name</i> setting at the top, and the <i>default filter value</i> setting just below. 
+	You may ignore the other <a href="?doc=user_filters">User Filter</a> settings (hidden from the above screenshot) for now, they are explained in the <a href="?doc=user_filters">User Filters</a> chapter.</p>
+<p>Once all filters and Web Part modifications have been saved, your connected Web Parts 
+	will again be filtered as specified.</p>
+<p class="rox-docpic">
+	<img alt="" border="0" class="rox-docpic" style="height: 430px;" src="help/res/wp_07.png" title="" />
+</p>
